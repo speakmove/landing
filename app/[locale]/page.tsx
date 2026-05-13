@@ -1,12 +1,25 @@
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { HomePage } from '@/pages/home';
+import { routing } from '@/shared/model/libs/i18n/routing';
 
 type TProps = {
   params: Promise<{ locale: string }>;
 };
 
-export default async function HomePage({ params }: TProps) {
+export async function generateMetadata({ params }: TProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'HomePage.meta' });
+  const languages = Object.fromEntries(routing.locales.map((l) => [l, `/${l}`]));
+  return {
+    title: t('title'),
+    description: t('description'),
+    alternates: { canonical: `/${locale}`, languages },
+  };
+}
+
+export default async function Page({ params }: TProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('MetaGlobal');
-  return <main className="p-8 text-2xl">{t('siteName')} — {locale}</main>;
+  return <HomePage />;
 }

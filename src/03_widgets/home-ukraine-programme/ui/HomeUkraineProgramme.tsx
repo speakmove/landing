@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Badge, CheckIcon, Container, Section } from '@/shared/ui';
+import { CheckIcon, Container, Section } from '@/shared/ui';
 
 type TPrice = {
   label: string;
