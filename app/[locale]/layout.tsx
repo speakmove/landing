@@ -1,9 +1,25 @@
 import type { PropsWithChildren } from 'react';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import { setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
+import { SkipLink } from '@/shared/ui';
 import '../globals.css';
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700', '800', '900'],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains',
+  weight: ['500', '600'],
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -18,9 +34,12 @@ export default async function LocaleLayout({ children, params }: TProps) {
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <SkipLink>Перейти к содержимому</SkipLink>
+          <main id="main">{children}</main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
