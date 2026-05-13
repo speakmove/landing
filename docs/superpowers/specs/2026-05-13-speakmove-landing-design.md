@@ -43,8 +43,6 @@ speakmove-landing/
 │   │   ├── how-it-works/page.tsx               → 02_pages/how-it-works
 │   │   ├── pricing/page.tsx                    → 02_pages/pricing
 │   │   ├── waitlist/page.tsx                   → 02_pages/waitlist
-│   │   ├── waitlist/welcome/page.tsx           → 02_pages/welcome-waitlist
-│   │   ├── waitlist/thank-you/page.tsx         → 02_pages/thank-you
 │   │   ├── privacy/page.tsx                    → 02_pages/privacy
 │   │   ├── not-found.tsx                       # 404 ВНУТРИ локали (с переводами)
 │   │   ├── error.tsx                           # 500/runtime errors per-locale ('use client')
@@ -74,8 +72,6 @@ speakmove-landing/
     │   ├── how-it-works/ui/HowItWorksPage.tsx
     │   ├── pricing/ui/PricingPage.tsx
     │   ├── waitlist/ui/WaitlistPage.tsx
-    │   ├── thank-you/ui/ThankYouPage.tsx
-    │   ├── welcome-waitlist/ui/WelcomeWaitlistPage.tsx
     │   ├── privacy/ui/PrivacyPage.tsx
     │   ├── not-found/ui/NotFoundPage.tsx       # импортируется в [locale]/not-found.tsx
     │   └── error/ui/ErrorPage.tsx              # импортируется в [locale]/error.tsx
@@ -95,7 +91,8 @@ speakmove-landing/
     │   │   ├── model/schema.ts                  # zod
     │   │   ├── model/types.ts                   # TWaitlistFormState, TWaitlistInput
     │   │   ├── model/initial-state.ts
-    │   │   └── ui/WaitlistForm.tsx              # 'use client', useActionState
+    │   │   ├── ui/WaitlistForm.tsx              # 'use client', useActionState
+    │   │   └── ui/SuccessBlock.tsx              # рендерится при state.success
     │   └── locale-switch/ui/LocaleSwitch.tsx
     ├── 05_entities/
     │   ├── brand/
@@ -166,8 +163,8 @@ speakmove-landing/
 | `how-it-works.html` | `/[locale]/how-it-works` | `02_pages/how-it-works` |
 | `pricing.html` | `/[locale]/pricing` | `02_pages/pricing` |
 | `waitlist.html` | `/[locale]/waitlist` | `02_pages/waitlist` |
-| `welcome-waitlist.html` | `/[locale]/waitlist/welcome` | `02_pages/welcome-waitlist` |
-| `thank-you.html` | `/[locale]/waitlist/thank-you` | `02_pages/thank-you` |
+| `welcome-waitlist.html` | — (исключено) | состояние внутри `waitlist-form` |
+| `thank-you.html` | — (исключено) | success-состояние формы `<SuccessBlock />` |
 | `privacy.html` | `/[locale]/privacy` | `02_pages/privacy` |
 | `404.html` | `[locale]/not-found.tsx` + `[...rest]/page.tsx` + `app/not-found.tsx` | `02_pages/not-found` |
 | `cookie-banner-demo.html` | — (исключено) | — |
@@ -266,6 +263,7 @@ export const config = {
 
 ```tsx
 // app/[locale]/layout.tsx
+import type { PropsWithChildren } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
@@ -275,10 +273,9 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-type TProps = {
-  children: React.ReactNode;
+type TProps = PropsWithChildren<{
   params: Promise<{ locale: string }>;
-};
+}>;
 
 export default async function LocaleLayout({ children, params }: TProps) {
   const { locale } = await params;
@@ -550,18 +547,44 @@ export const env = createEnv({
 });
 ```
 
-`.env.example`:
+`.env.example` (значения пустые — заполняются разработчиком локально и в проде):
 ```
-NEXT_PUBLIC_SITE_URL=https://speakmove.com
+NEXT_PUBLIC_SITE_URL=
 ```
 
 ## 9. Соглашения по коду
 
+### Типы
 - **Только `type`, без `interface`.**
 - **Все именованные типы — с префиксом `T`** (`TLocale`, `TWaitlistFormState`, `TPricingTier`, `TProps`, и т.д.).
   - Generic-параметры остаются как `T`, `U`, `K`, `V` (это разные кейсы).
   - Enforce через ESLint `@typescript-eslint/naming-convention`.
 - TypeScript `strict: true` + `noUncheckedIndexedAccess: true`.
+
+### React 19 идиомы
+- **Не использовать `React.*` префикс** — всё импортируется явно из `react` для лучшего bundle splitting и tree-shaking:
+  - `React.ReactNode` → `import type { ReactNode } from 'react'`
+  - `React.FC` — вообще не используем
+  - `React.useState` → `import { useState } from 'react'`
+- **`PropsWithChildren` вместо ручного `children: ReactNode`** в типах пропсов:
+  ```ts
+  import type { PropsWithChildren } from 'react';
+  type TProps = PropsWithChildren<{ variant?: 'primary' | 'secondary' }>;
+  ```
+- **Не использовать `forwardRef`** — в React 19 `ref` это обычный проп:
+  ```tsx
+  // ❌ старо
+  const Button = forwardRef<HTMLButtonElement, TProps>((props, ref) => ...);
+
+  // ✅ React 19
+  type TProps = ComponentPropsWithRef<'button'> & { variant?: 'primary' };
+  export function Button({ ref, variant, ...rest }: TProps) {
+    return <button ref={ref} {...rest} />;
+  }
+  ```
+- **Server Components по умолчанию** — `'use client'` ставим только когда нужны hooks, event handlers, или browser-only API.
+
+### FSD
 - Mobile-first: все стили начинаются от мобильных, `sm:`/`md:`/`lg:`/`xl:` для desktop.
 - Public API слоя FSD — только через index-файлы (`src/04_features/waitlist-form/index.ts` реэкспортит `WaitlistForm`).
 - Импорты НЕ пересекают слои наверх: `entities` не импортирует `widgets`, и т.д. (стандартное FSD-правило).
@@ -577,17 +600,43 @@ NEXT_PUBLIC_SITE_URL=https://speakmove.com
 
 ## 11. A11y
 
-В каждом `shared/ui` компоненте по умолчанию:
+**Базовое правило:** каждый интерактивный элемент (кнопка, ссылка, поле, открывающийся блок) и каждый layout-блок (landmark, секция) должен иметь полный набор a11y-атрибутов «из коробки» через `shared/ui`. Это не опциональный полишинг — это контракт компонентов.
 
-- **Button:** `type="button"` дефолт, `focus-visible:ring-2 ring-offset-2`, `disabled:opacity-50 disabled:cursor-not-allowed`, поддержка `aria-busy`.
-- **Input:** связан с `<Label htmlFor>`, поддержка `aria-invalid`, `aria-describedby`.
-- **Label:** `htmlFor` обязателен в типах (required prop).
-- **SkipLink:** `<a href="#main">` в начале body, visible on focus.
-- **`<main id="main">`** — landmark в layout.
-- **Контраст AA** — токены подобраны от исходника (зелёный #047857 на белом проходит AA).
-- **`prefers-reduced-motion`** — респектится во всех анимациях через `useReducedMotion` хук + `motion-safe:`/`motion-reduce:` утилиты Tailwind.
-- **Иерархия заголовков:** строго один `<h1>` на страницу, далее `<h2>`/`<h3>`.
-- **LocaleSwitch:** `<nav aria-label="Language">` с локализованными `<Link>` (next-intl) и `hreflang` атрибутами.
+### Интерактивные компоненты `shared/ui`
+
+| Компонент | Базовые требования |
+|---|---|
+| **Button** | `type="button"` по умолчанию; `focus-visible:outline-2 outline-offset-2`; `disabled:opacity-50 disabled:cursor-not-allowed`; поддержка `aria-busy`, `aria-pressed` (для toggle), `aria-expanded` (для disclosure); если внутри только иконка — обязательный `aria-label`; min-height 44px на мобайле (WCAG 2.5.5). |
+| **LinkButton / визуально-кнопка-ссылка** | Семантически `<a>` если ведёт на URL, `<button>` если триггерит действие. Внешние ссылки (`target="_blank"`) → обязательно `rel="noopener noreferrer"` + визуальная или `aria-label` подсказка «открывается в новой вкладке». |
+| **Link (next-intl `<Link>`)** | `aria-current="page"` для активной страницы в навигации; locale-aware из `createNavigation(routing)`. |
+| **Input** | Связан с `<Label htmlFor>` (всегда); `aria-invalid` при ошибке; `aria-describedby` ссылается на `FieldError` и/или hint; `autoComplete` всегда явно указан (например `email`, `name`, `off`); `inputMode` для числовых/телефонных полей. |
+| **Label** | `htmlFor` обязателен в типах (required prop). Невидимые лейблы — через `<VisuallyHidden>`, не через `placeholder`. |
+| **FieldError** | `role="alert"`, рендерит `string \| string[]` (массив — `<ul>` с буллетами). |
+| **HoneypotField** | Контейнер `aria-hidden="true"`, поле `tabIndex={-1}` + `autoComplete="off"`, визуально скрыто через `clip-path` (не `display:none` — Chrome иначе пропускает поле). |
+| **Card / FeatureCard / PricingCard / ScenarioCard** | Если карточка кликабельна целиком — оборачиваем во вложенный `<a>` с растяжимой зоной нажатия (`::after` overlay). Если внутри есть несколько действий — карточка не кликабельна, только конкретные элементы. Не нарушаем правило вложенности интерактивных элементов (`<a>` внутри `<a>`). |
+| **FaqItem (accordion)** | Используем нативный `<details>/<summary>` (a11y из коробки) ИЛИ свой паттерн с `aria-expanded`, `aria-controls`, `id` на панели. Клавиатура: Enter/Space раскрывает, Escape закрывает (если кастомный). |
+| **LocaleSwitch** | `<nav aria-label="Language">` обёртка; элементы — `<Link>` (не `<button>`) с атрибутами `hreflang={locale}` и `lang={locale}` (родной язык названия — «Українська», «English», «Русский»); активная локаль — `aria-current="true"`. |
+| **SkipLink** | `<a href="#main">` первым элементом `<body>`; visible only on focus (`sr-only focus:not-sr-only`); прыгает на `<main id="main">`. |
+| **Modal / Dialog (если появится)** | Нативный `<dialog>` с focus trap из браузера, или ARIA dialog pattern с `aria-modal`, `aria-labelledby`, восстановление фокуса после закрытия. |
+
+### Layout и навигация
+
+- `<main id="main">` — единственный landmark на странице.
+- `<header>`, `<footer>`, `<nav>` — семантически правильные landmarks; у нескольких `<nav>` обязательны `aria-label`.
+- Иерархия заголовков: ровно один `<h1>` на страницу, далее `<h2>` для секций, `<h3>` для подсекций. Пропускать уровни нельзя.
+- `lang` атрибут на `<html>` ставится из `params.locale`.
+
+### Motion и контраст
+
+- `prefers-reduced-motion` — респектится во всех анимациях через `useReducedMotion` хук + `motion-safe:`/`motion-reduce:` утилиты Tailwind.
+- Контраст AA — токены подобраны от исходника (зелёный #047857 на белом проходит AA для текста ≥14pt). Любые новые цвета проверяем через WebAIM contrast checker.
+- Никакой информации только через цвет — статусы/ошибки всегда сопровождаются иконкой или текстом.
+
+### Клавиатурная навигация
+
+- Все интерактивные элементы достижимы через Tab в логическом порядке (DOM-порядке).
+- Фокус всегда видим — `outline` не убираем через `outline: none` без замены.
+- Никаких `tabIndex` > 0 (нарушает естественный порядок); `tabIndex={-1}` только для программного фокуса (honeypot, focus trap).
 
 ## 12. SEO/Performance
 
@@ -647,11 +696,11 @@ NEXT_PUBLIC_SITE_URL=https://speakmove.com
 
 - `npm run dev` поднимает приложение на `localhost:3000`.
 - GET `/` 308-редиректит на `/ru`.
-- Каждая из 8 локализованных страниц рендерится для `/ru`, `/uk`, `/en`.
+- Каждая из 5 контентных страниц (`/`, `/how-it-works`, `/pricing`, `/waitlist`, `/privacy`) рендерится для `/ru`, `/uk`, `/en`.
 - Языковой переключатель в header работает: переключение между локалями сохраняет текущий путь.
 - Форма waitlist:
-  - Отправка валидных данных → success state.
-  - Невалидный email → красная ошибка ПОД полем, фокус остаётся, значение сохраняется.
+  - Отправка валидных данных → success state (`<SuccessBlock />` внутри той же страницы, без редиректа).
+  - Невалидный email → красная ошибка ПОД полем, фокус остаётся, значение сохраняется через `defaultValue={state.prev.email}`.
   - Симуляция server error → общая ошибка над формой, поля сохраняют значения.
   - Spam (заполнен honeypot) → silent success.
 - `npm run build` без ошибок и warning'ов.
@@ -661,6 +710,8 @@ NEXT_PUBLIC_SITE_URL=https://speakmove.com
 - Все страницы пререндерены статически (видно в build output).
 - Mobile-first вёрстка: на 375px нет горизонтального скролла, тапабельные элементы ≥ 44px.
 - Skip link виден при tab-нажатии.
+- Никаких `React.*` использований в коде (проверяется grep'ом и/или ESLint правилом).
+- Никаких `forwardRef` (React 19 — ref как обычный проп).
 
 ## 16. Out of scope (future iterations)
 
