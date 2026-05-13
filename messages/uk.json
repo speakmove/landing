@@ -1,0 +1,68 @@
+{
+  "common": {
+    "brand": "SpeakMove",
+    "navHowItWorks": "Як це працює",
+    "navAdvantages": "Переваги",
+    "navCompare": "Порівняння",
+    "navPricing": "Ціни",
+    "ctaPrimary": "Почати безкоштовно",
+    "ctaSecondary": "Як це працює",
+    "footerCopy": "© 2026 SpeakMove. Усі права захищено.",
+    "skipToContent": "Перейти до вмісту"
+  },
+  "languageSwitcher": {
+    "label": "Мова сайту",
+    "ru": "Русский",
+    "uk": "Українська",
+    "en": "English"
+  },
+  "home": {
+    "title": "SpeakMove — вчи мову, заробляй монети",
+    "description": "Telegram-бот для вивчення мов. Голосові діалоги, монети за уроки, виведення на картку. 15 хвилин на день.",
+    "heroBadge": "Telegram-бот · Без встановлення · Монети за кожен урок",
+    "heroH1": "Вчи мову — заробляй монети, які виводиш на картку.",
+    "heroLead": "Голосові діалоги, домашні завдання з x2 монет і структура за CEFR — прямо в Telegram. Англійська, німецька, норвезька. 15 хвилин на день.",
+    "heroBullet1": "3 мови",
+    "heroBullet2": "15 хв / день",
+    "heroBullet3": "від $7 / міс",
+    "heroBullet4": "0 встановлень"
+  },
+  "howItWorks": {
+    "title": "Як працює SpeakMove",
+    "description": "Кроки вивчення мови із SpeakMove."
+  },
+  "pricing": {
+    "title": "Ціни SpeakMove",
+    "description": "Тарифи та підписки SpeakMove."
+  },
+  "waitlist": {
+    "title": "Запис у waitlist — SpeakMove",
+    "description": "Отримай ранній доступ до SpeakMove.",
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "submit": "Отримати доступ",
+      "submitting": "Надсилання...",
+      "serverError": "Помилка сервера. Спробуйте пізніше.",
+      "successTitle": "Ви у списку!",
+      "successBody": "Ми напишемо, щойно відкриємо доступ.",
+      "honeypotLabel": "Не заповнюйте це поле"
+    }
+  },
+  "privacy": {
+    "title": "Політика конфіденційності",
+    "description": "Політика конфіденційності SpeakMove."
+  },
+  "notFound": {
+    "title": "Сторінку не знайдено",
+    "h1": "404",
+    "lead": "Такої сторінки немає. Можливо, вона переїхала або ви помилилися адресою.",
+    "cta": "На головну"
+  },
+  "error": {
+    "title": "Щось пішло не так",
+    "h1": "Помилка",
+    "lead": "Ми вже розбираємось. Спробуйте оновити сторінку.",
+    "cta": "Оновити"
+  }
+}
