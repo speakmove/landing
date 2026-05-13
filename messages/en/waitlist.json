@@ -1,0 +1,14 @@
+{
+  "title": "Nomen da in tabula — SpeakMove",
+  "description": "Voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa.",
+  "form": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Nomen da",
+    "submitting": "Transferendo...",
+    "serverError": "Vitium serventis. Retenta posterius.",
+    "successTitle": "In tabula nomen tuum!",
+    "successBody": "Scribemus cum accessum aperimus tibi.",
+    "honeypotLabel": "Hunc locum vaca"
+  }
+}
