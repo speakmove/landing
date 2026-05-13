@@ -5,8 +5,78 @@ type TProps = {
   message: TChatMessage;
 };
 
+/** Waveform bars — purely decorative */
+function WaveformBars({ variant }: { variant: 'bot' | 'me' }) {
+  const heights = [6, 14, 9, 18, 11, 16, 7, 13, 10, 15, 6];
+  const colorClass =
+    variant === 'me' ? 'bg-white/60' : 'bg-[color:var(--color-muted)]/50';
+
+  return (
+    <div className="flex items-center gap-0.5" aria-hidden="true">
+      {heights.map((h, i) => (
+        <span
+          key={i}
+          className={`block w-0.5 rounded-[1px] ${colorClass}`}
+          style={{ height: `${h}px` }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function ChatMessage({ message }: TProps) {
   const isMe = message.from === 'me';
+
+  if (message.type === 'voice') {
+    return (
+      <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
+        <div
+          className={[
+            'inline-flex items-center gap-2.5 rounded-[18px] px-3 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-[13px]',
+            isMe
+              ? 'rounded-br-[3px] bg-[color:var(--color-primary)] text-white'
+              : 'rounded-bl-[3px] bg-white text-[color:var(--color-ink)]',
+          ].join(' ')}
+          aria-label={`Голосовое сообщение${message.duration ? `, ${message.duration}` : ''}`}
+        >
+          <div
+            className={[
+              'w-6 h-6 rounded-full grid place-items-center text-[10px] flex-none',
+              isMe ? 'bg-white/20 text-white' : 'bg-[color:var(--color-primary-pale)] text-[color:var(--color-primary)]',
+            ].join(' ')}
+            aria-hidden="true"
+          >
+            ▶
+          </div>
+          <WaveformBars variant={isMe ? 'me' : 'bot'} />
+          {message.duration && (
+            <span
+              className={`font-mono text-[11.5px] ${isMe ? 'text-white/75' : 'text-[color:var(--color-muted)]'}`}
+            >
+              {message.duration}
+            </span>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  if (message.type === 'homework') {
+    return (
+      <div className="flex justify-start">
+        <div className="relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] rounded-bl-[3px] px-3 pb-1.5 pt-2.5 bg-[color:var(--color-surface)] shadow-[0_1px_2px_rgba(0,0,0,.06)] text-[12.5px] text-[color:var(--color-muted)]">
+          {message.text && (
+            <span className="font-medium leading-snug">{message.text}</span>
+          )}
+          {message.translation && (
+            <span className="text-[11px] text-[color:var(--color-muted)] leading-snug border-t border-[color:var(--color-line)] pt-1 mt-0.5">
+              {message.translation}
+            </span>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
@@ -18,7 +88,9 @@ export function ChatMessage({ message }: TProps) {
             : 'rounded-bl-[3px] bg-white text-[color:var(--color-ink)]',
         ].join(' ')}
       >
-        <span className="font-medium leading-snug">{message.text}</span>
+        {message.text && (
+          <span className="font-medium leading-snug">{message.text}</span>
+        )}
 
         {message.meta && (
           <span className="text-[11px] text-[color:var(--color-muted)] leading-none">
