@@ -3,8 +3,13 @@ import { Container, Section } from '@/shared/ui';
 import { ScheduleCard } from '@/entities/schedule-card';
 import type { TScheduleCard } from '@/entities/schedule-card';
 
-export async function HomeSchedule() {
-  const t = await getTranslations('HomePage.schedule');
+type TProps = {
+  namespace?: string;
+};
+
+export async function HomeSchedule({ namespace = 'HomePage.schedule' }: TProps) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const t = await getTranslations(namespace as any);
 
   const cards = t.raw('cards') as unknown as TScheduleCard[];
 
