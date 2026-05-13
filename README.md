@@ -52,3 +52,4 @@ src/06_shared/           # ui, model/hooks/utils/libs
 - Locales: `ru` (default), `uk`, `en`
 - All URLs prefixed: `/ru/...`, `/uk/...`, `/en/...`
 - Messages: `messages/{locale}.json`
+- Locale detection and redirects live in `proxy.ts` at the repo root (Next.js 16's rename of `middleware.ts`).
