@@ -5,6 +5,8 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
 import { SkipLink } from '@/shared/ui';
+import { SiteHeader } from '@/widgets/site-header';
+import { SiteFooter } from '@/widgets/site-footer';
 import '../globals.css';
 
 const inter = Inter({
@@ -38,7 +40,9 @@ export default async function LocaleLayout({ children, params }: TProps) {
       <body>
         <NextIntlClientProvider>
           <SkipLink>Перейти к содержимому</SkipLink>
+          <SiteHeader />
           <main id="main">{children}</main>
+          <SiteFooter />
         </NextIntlClientProvider>
       </body>
     </html>
