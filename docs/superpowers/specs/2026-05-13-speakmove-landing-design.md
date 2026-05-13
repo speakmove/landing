@@ -10,7 +10,9 @@
 **Источник:** `/Users/dmitriy/Desktop/mvp/01_lingocoin/html/`
 **Цель:** `/Users/dmitriy/Documents/GitHub/speakmove-landing/`
 
-Метатеги и тексты — заглушки, заменим позже по мере получения копирайта от заказчика.
+**Источник копирайта:** `/Users/dmitriy/Desktop/mvp/01_lingocoin/text/i18n.json` — детальный JSON (252 KB, 4000 строк) с реальными текстами на `ru` для всех страниц, и `en` для legal (Privacy/Terms/Cookies). Локали `uk` и недостающие `en` заполняются lorem-плейсхолдерами. Бренд LingoCoin везде меняется на SpeakMove. См. раздел §17 — расширенный mapping контента.
+
+**i18n-структура messages:** monolithic per-locale (`messages/ru.json`, `messages/uk.json`, `messages/en.json`), внутри — namespace'ы по странице (`HomePage`, `HowItWorksPage`, `PricingPage`, `WaitlistPage`, `ThankYouPage`, `NotFoundPage`, `PrivacyPage`, `TermsPage`, `CookiesPage`, `MetaGlobal`).
 
 ## 2. Стек
 
@@ -716,10 +718,164 @@ NEXT_PUBLIC_SITE_URL=
 ## 16. Out of scope (future iterations)
 
 - Реальный бэкенд waitlist (Resend / Supabase / Webhook).
+- Реальный бэкенд FOMO counter (polling `/api/waitlist/stats`) — на старте hardcoded значения.
+- Анимация phone preview (auto-scroll сообщений, typing-индикатор живой) — статичный мок.
+- Интерактивный scenario picker с подменой phone preview под выбранный сценарий — статичные карточки.
+- Интерактивный schedule picker (выбор schedule) — статичные карточки.
+- Cookie consent banner (страница `/cookies` создаётся, но без баннера на сайте).
+- `/about` страница — оставлено как TODO в footer.
 - Тёмная тема.
-- Аналитика и cookie banner (GDPR).
+- Аналитика (GA / Plausible / Vercel Analytics).
 - CSP с nonce.
 - Rate limiting на server action.
 - Локализованные slug'и (`/ru/цены` vs `/en/pricing`) — пока все локали используют английские пути.
-- Динамический OG image generation.
-- Реальные мета-теги и тексты (заглушки до получения копирайта).
+- Динамический OG image generation (используется заглушка).
+
+---
+
+## 17. Расширенный content-mapping (i18n.json → компоненты)
+
+> Этот раздел **дополняет и переопределяет** разделы §3 (структура папок) и §4 (маршрутизация). Источник копирайта — `messages/{ru,uk,en}.json` (генерируется из `/Users/dmitriy/Desktop/mvp/01_lingocoin/text/i18n.json`).
+
+### 17.1 Полный список маршрутов
+
+| Маршрут | i18n namespace | 02_pages |
+|---|---|---|
+| `/[locale]` | `HomePage` | `home` |
+| `/[locale]/how-it-works` | `HowItWorksPage` | `how-it-works` |
+| `/[locale]/pricing` | `PricingPage` | `pricing` |
+| `/[locale]/waitlist` | `WaitlistPage` (+ `ThankYouPage` для success inline) | `waitlist` |
+| `/[locale]/privacy` | `PrivacyPage` | `privacy` |
+| `/[locale]/terms` | `TermsPage` | `terms` |
+| `/[locale]/cookies` | `CookiesPage` | `cookies` |
+| `/[locale]/not-found` (catch-all) | `NotFoundPage` | `not-found` |
+| `/[locale]/error` | (`MetaGlobal.error` или fallback) | `error` |
+
+`MetaGlobal` namespace — глобальные мета-теги (используется в `generateMetadata` корневого layout как `metadataBase`, og defaults и т.п.).
+
+> `/about` — оставлено в footer как TODO-ссылка (href="#" или nofollow); страницу пока не делаем.
+
+### 17.2 Контракт shared/ui (расширение §11)
+
+В дополнение к перечисленным в §3:
+
+- **Tabs** (`shared/ui/Tabs`) — `role="tablist"`, клавиатура (Left/Right/Home/End), `aria-selected`, `aria-controls`. Нужен для billing toggle на PricingPage.
+- **Disclosure / Accordion** — используем нативный `<details>/<summary>` через entity `faq-item` (см. §11), но также применим для других expandable секций.
+- **StatGrid** — небольшой компонент-обёртка для отображения "значение / лейбл" пар (используется на HowItWorksPage hero stats).
+- **Markdown inline** (`shared/ui/Markdown` или helper-функция) — минимальный рендер `**bold**` и `` `code` `` из строк (используется в FAQ ответах из i18n.json). Достаточно простой замены через regex без полноценной markdown-библиотеки.
+
+### 17.3 Расширенный список entities (`05_entities/`)
+
+| Entity | Используется в | Поля |
+|---|---|---|
+| `brand/Logo`, `brand/BrandCoin` | header/footer/везде | (без изменений из §3) |
+| `scenario-card` | HomePage hero | `{ id, title, subtitle }` |
+| `chat-message` | hero phone preview, flow phone preview | `{ from: 'bot' \| 'me', text, translation?, meta?, reward?, highlight? }` |
+| `float-bubble` | hero phone preview | `{ title, subtitle }` |
+| `advantage-tile` | HomePage advantages | `{ id, title, description, badge?, items?, certificateName?, vizEquals?, vizCap? }` (с union по сценарию) |
+| `homework-item` | advantage-tile (homework variant) | `{ label, reward }` |
+| `cefr-level` | HomePage advantages + HowItWorksPage cefr | `{ code, title, subtitle, weeks?, active? }` |
+| `step-card` | HomePage howItWorks + HowItWorksPage flow | `{ num, title, description, tag?, tagStyle? }` |
+| `schedule-card` | HomePage schedule + HowItWorksPage schedule | `{ id, badge?, title, subtitle, description, days, activeDays, weekTotal?, streakNote? }` |
+| `comparison-row` | HomePage compare + PricingPage compare | `{ feature, values }` |
+| `pricing-plan` | HomePage pricing + PricingPage plans | `{ id, name, badge?, wasPrice, price, note?, features, excluded?, cta, ctaStyle }` |
+| `gift-card-option` | PricingPage coinEconomics | `{ flag, name }` |
+| `coin-flow-row` | HowItWorksPage coinLoop + PricingPage coinEconomics | `{ what, amount, usd? }` |
+| `smart-criterion` | HowItWorksPage smart | `{ letter, eng, title, description }` |
+| `privacy-card` | HowItWorksPage privacy | `{ id, title, description, badge? }` |
+| `faq-item` | PricingPage faq | `{ id, question, answer }` |
+
+### 17.4 Расширенный список widgets (`03_widgets/`)
+
+**Chrome (использованы во всех страницах):**
+- `site-header` — навигация, LocaleSwitch, CTA «Занять место»
+- `site-footer` — brand, tagline, legal-блок (длинный), links (4), social-links (5)
+
+**Home-only:**
+- `home-hero` — двухколонная компоновка: левая колонка (eyebrow chips, заголовок с акцентом `before/accent/after`, описание, CTA-пара, meta points, scenario picker grid) + правая колонка `home-phone-preview`
+- `home-phone-preview` — статичный iPhone-мок с Telegram-чатом (4 сообщения + float-bubbles)
+- `home-advantages` — 5-тайл grid (5 `advantage-tile` различных типов: voice / coins / cefr / homework / certificate)
+- `home-how-it-works` — упрощённая 4-step grid `step-card`'ов (overview; полная версия — на HowItWorksPage)
+- `home-schedule` — `schedule-picker` с 2 карточками (статичный)
+- `home-compare` — competitor `comparison-table` (6 колонок: Duolingo, Speak.com, Practika.ai, Репетитор, SpeakMove)
+- `home-pricing-teaser` — 3-tier `pricing-tier-grid` с monthly/yearly toggle (упрощённая версия; полная — PricingPage)
+- `home-ukraine-programme` — Ukraine-discount секция с flag + price-comparison table + qualification list
+- `final-cta-with-fomo` — финальный CTA с hardcoded FOMO-счётчиком (используется также на HowItWorksPage)
+
+**How-it-works-only:**
+- `page-hero-with-stats` — breadcrumb + title + description + 4-stat grid (используется также на PricingPage в варианте без stats)
+- `flow-section-with-phone` — 7-step `step-card` колонка + правая `home-phone-preview` (тот же widget)
+- `cefr-progression` — 5-level вертикальная progression (`cefr-level`'ы) + side panel с markdown-bullets (6 элементов)
+- `smart-criteria-grid` — 5 `smart-criterion` карточек
+- `coin-economy-grid` — earn/redeem 2-колонка таблицы (`coin-flow-row` × N) + footnote
+- `privacy-feature-grid` — 6 `privacy-card`'ов
+
+**Pricing-only:**
+- `pricing-hero` — breadcrumb + title + description + billing toggle + FOMO-callout
+- `pricing-tier-grid` — 3-card grid с monthly/yearly switcher (`pricing-plan`'ы)
+- `pricing-feature-comparison-table` — feature-by-plan table с группировкой `groups[].rows[].values[]`
+- `coin-economics-section` — earn-table + withdrawal block (rate, conversion, grid 6, routes 4, callout)
+- `pricing-faq-section` — accordion `faq-item`'ов (12 элементов), с email-контактом в шапке
+
+**Waitlist:**
+- `waitlist-page-content` — заголовок + описание + `<WaitlistForm/>` (форма из §6)
+- `<SuccessBlock/>` (внутри waitlist-form) — рендерится при `state.success`, использует тексты из `ThankYouPage` namespace
+
+**Legal pages (Privacy/Terms/Cookies):**
+- `legal-page-layout` — единый шаблон: hero (title + last-updated), TOC (опционально), markdown-like рендер секций. Контент из `messages/{locale}/PrivacyPage|TermsPage|CookiesPage` (структура контента из `i18n.json` source).
+
+### 17.5 Использование namespace'ов в коде
+
+Все компоненты получают переводы через `useTranslations`/`getTranslations` с корневыми namespace'ами из i18n:
+
+```tsx
+// 03_widgets/home-hero/ui/HomeHero.tsx
+const t = await getTranslations('HomePage.hero');
+return <h1>{t('title.before')}<span>{t('title.accent')}</span>{t('title.after')}</h1>;
+```
+
+```tsx
+// 03_widgets/site-header/ui/SiteHeader.tsx
+// nav-копия есть в HomePage.nav, HowItWorksPage.nav, PricingPage.nav... — все идентичны.
+// Решение: берём из `HomePage.nav` как канонического источника (deduplication).
+// При необходимости позже выделим в `MetaGlobal.nav`.
+const t = await getTranslations('HomePage.nav');
+```
+
+### 17.6 Интерактивность по компонентам
+
+| Widget / feature | Интерактив | Реализация |
+|---|---|---|
+| `LocaleSwitch` | да | client component, locale-aware `Link` из next-intl |
+| `pricing-hero` billing toggle | **да** | `'use client'`, `useState<'monthly' \| 'yearly'>` |
+| `pricing-tier-grid` billing toggle | **да** | Реализован через React Context или поднятие state в `pricing-page` |
+| `WaitlistForm` | **да** | `useActionState`, server action, см. §6 |
+| `pricing-faq-section` accordion | да (native) | `<details>/<summary>` |
+| `home-phone-preview`, `flow-section-with-phone` phone | **нет** | Статичный мок без анимации |
+| `final-cta-with-fomo` counter | **нет на старте** | Hardcoded `current=157`, `total=200` из i18n (или передаются как пропсы) |
+| `home-schedule` / `flow schedule` | **нет** | Статичные две карточки |
+| `home-hero` scenario picker | **нет** | Статичные две карточки, без подмены контента |
+
+### 17.7 Markdown-формат в FAQ
+
+`PricingPage.faq.items[].answer` содержит маркеры `**bold**` и `` `code` ``. Простой helper:
+
+```tsx
+// src/06_shared/ui/InlineMarkdown/InlineMarkdown.tsx
+function renderInline(text: string) {
+  // Заменяем **x** на <strong>x</strong> и `x` на <code>x</code> через regex.
+  // Возвращаем массив React-узлов.
+}
+```
+
+Без полноценного markdown-парсера — поддержка только этих двух токенов. Если в i18n появится больше (списки, ссылки) — расширим.
+
+### 17.8 Обновлённый acceptance criteria
+
+Дополняем §15:
+- 8 контентных страниц (вместо 5): `/`, `/how-it-works`, `/pricing`, `/waitlist`, `/privacy`, `/terms`, `/cookies` + 404.
+- Все три локали (`ru`, `uk`, `en`) рендерят все страницы без ошибок `MISSING_MESSAGE`.
+- Билинг-toggle на PricingPage переключает все 3 plan'а синхронно.
+- FAQ accordion на PricingPage открывается/закрывается клавиатурой (Enter/Space, нативный `<details>`).
+- `home-phone-preview` рендерится без CLS (mock сообщения в статичной разметке).
+- На мобильном (375px) phone preview помещается в hero без overflow.
