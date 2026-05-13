@@ -1,8 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import { Badge, Container, Section, ArrowRightIcon } from '@/shared/ui';
 
-export async function FinalCtaWithFomo() {
-  const t = await getTranslations('HomePage.finalCta');
+type TProps = {
+  namespace?: string;
+};
+
+export async function FinalCtaWithFomo({ namespace = 'HomePage.finalCta' }: TProps) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const t = await getTranslations(namespace as any);
 
   const fomoCurrent = t.raw('fomo.current') as unknown as number;
   const fomoTotal = t.raw('fomo.total') as unknown as number;
@@ -52,7 +57,7 @@ export async function FinalCtaWithFomo() {
               </span>
             </span>
             <span className="text-[13px] text-[color:var(--color-muted)]">
-              {/* TODO(i18n): hoist to messages/ru.json HomePage.finalCta.fomo.label */}
+              {/* TODO(i18n): hoist to messages/ru.json finalCta.fomo.label */}
               мест занято
             </span>
           </div>
