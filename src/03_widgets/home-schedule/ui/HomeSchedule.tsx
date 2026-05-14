@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
-import { Container, Section } from '@/shared/ui';
+import { Container, Section, SectionHead } from '@/shared/ui';
 import { ScheduleCard } from '@/entities/schedule-card';
+import { ANCHORS } from '@/shared/config';
 import type { TScheduleCard } from '@/entities/schedule-card';
 
 type TProps = {
@@ -14,29 +15,25 @@ export const HomeSchedule = async ({ namespace = 'HomePage.schedule' }: TProps) 
   const cards = t.raw('cards') as unknown as TScheduleCard[];
 
   return (
-    <Section id="schedule" ariaLabelledBy="schedule-heading">
+    <Section
+      id={ANCHORS.schedule}
+      ariaLabelledBy="schedule-heading"
+      className="bg-surface px-5"
+    >
       <Container>
-        <div className="mb-10 max-w-160">
-          <span className="inline-block mb-3 rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
-            {t('kicker')}
-          </span>
-          <h2
-            id="schedule-heading"
-            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-3"
-          >
-            {t('title')}
-          </h2>
-          <p className="text-[17px] text-muted leading-relaxed">
-            {t('subtitle')}
-          </p>
-        </div>
+        <SectionHead
+          kicker={t('kicker')}
+          title={t('title')}
+          titleId="schedule-heading"
+          subtitle={t('subtitle')}
+        />
 
-        <div className="grid gap-4 md:grid-cols-2">
-          {cards.map((card) => (
-            <ScheduleCard key={card.id} card={card} />
+        <div className="mx-auto grid max-w-[820px] gap-4 sm:grid-cols-2">
+          {cards.map((card, idx) => (
+            <ScheduleCard key={card.id} card={card} defaultActive={idx === 0} />
           ))}
         </div>
       </Container>
     </Section>
   );
-}
+};

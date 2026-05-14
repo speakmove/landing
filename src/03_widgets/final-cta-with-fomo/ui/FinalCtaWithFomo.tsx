@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { Badge, Container, Section, ArrowRightIcon } from '@/shared/ui';
-import { URLS } from '@/shared/config';
+import { ButtonLink, Container, Section } from '@/shared/ui';
+import { PATHS, ANCHORS } from '@/shared/config';
 
 type TProps = {
   namespace?: string;
@@ -12,70 +12,56 @@ export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TPro
 
   const fomoCurrent = t.raw('fomo.current') as unknown as number;
   const fomoTotal = t.raw('fomo.total') as unknown as number;
+  const pct = Math.min(100, Math.round((fomoCurrent / fomoTotal) * 1000) / 10);
 
   return (
     <Section
-      id="cta"
+      id={ANCHORS.cta}
       ariaLabelledBy="final-cta-heading"
-      className="bg-primary-pale"
+      className="px-5 py-16 md:py-22"
     >
       <Container>
-        <div className="max-w-160 mx-auto text-center flex flex-col items-center gap-6">
-          {/* Bonus callout */}
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            <Badge tone="gold">{t('bonus.badge')}</Badge>
-            <span className="text-sm text-ink font-medium">
-              {t('bonus.text')}
-            </span>
-          </div>
-
-          {/* Title */}
+        <div className="final-panel px-6 py-14 text-center sm:px-12 sm:py-16">
           <h2
             id="final-cta-heading"
-            className="text-[clamp(1.9rem,4vw,2.9rem)] font-extrabold leading-tight tracking-[-0.025em] text-ink"
+            className="mx-0 mb-3.5 font-extrabold leading-[1.1] tracking-[-0.025em] text-ink"
+            style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
           >
             {t('title')}
           </h2>
-
-          {/* Subtitle */}
-          <p className="text-[17px] text-muted leading-relaxed">
+          <p className="mx-auto mb-7 max-w-[560px] text-[17px] leading-relaxed text-muted">
             {t('subtitle')}
           </p>
 
-          {/* FOMO counter */}
-          <div className="inline-flex items-center gap-3 rounded-full border border-primary bg-white px-5 py-2.5">
-            <span
-              className="relative flex h-2.5 w-2.5 shrink-0"
-              aria-hidden="true"
-            >
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
-            </span>
-            <span className="text-sm font-semibold text-ink tabular-nums">
-              {fomoCurrent}
-              <span className="text-muted font-normal">
-                {' / '}{fomoTotal}
-              </span>
-            </span>
-            <span className="text-xs text-muted">
-              {t('fomo.label')}
-            </span>
-          </div>
-
-          {/* CTA button */}
-          <a
-            href={URLS.telegramBot}
-            rel="noopener noreferrer"
-            className="inline-flex min-h-14 items-center gap-2 rounded-xl bg-primary px-8 text-[17px] font-bold text-white shadow-[0_4px_14px_color-mix(in_oklab,var(--color-primary)_40%,transparent)] transition-all hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-[0_6px_20px_color-mix(in_oklab,var(--color-primary)_35%,transparent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          >
+          <ButtonLink href={PATHS.waitlist} variant="primary" size="lg">
             {t('cta')}
-            <ArrowRightIcon size={18} />
-          </a>
+          </ButtonLink>
 
-          {/* Meta line */}
-          <p className="text-xs text-muted">{t('meta')}</p>
+          <div className="mt-4 text-[13.5px] text-muted">{t('meta')}</div>
+
+          <div className="mx-auto mt-6 max-w-[480px]">
+            <div
+              role="progressbar"
+              aria-valuemin={0}
+              aria-valuemax={fomoTotal}
+              aria-valuenow={fomoCurrent}
+              aria-label={t('fomo.label')}
+              className="h-2.5 overflow-hidden rounded-full bg-[#eceee8]"
+            >
+              <div
+                className="h-full rounded-full bg-linear-to-r from-primary to-primary-hover"
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+            <div className="mt-2 flex justify-between font-mono text-xs font-semibold text-muted">
+              <span className="tabular-nums">
+                {fomoCurrent} / {fomoTotal}
+              </span>
+              <span>{t('fomo.label')}</span>
+            </div>
+          </div>
         </div>
       </Container>
     </Section>
   );
-}
+};

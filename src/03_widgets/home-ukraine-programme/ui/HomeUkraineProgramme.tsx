@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { CheckIcon, Container, Section } from '@/shared/ui';
+import { ButtonLink, CheckIcon, Container, Section } from '@/shared/ui';
+import { ANCHORS, PATHS } from '@/shared/config';
 
 type TPrice = {
   label: string;
@@ -22,98 +23,98 @@ export const HomeUkraineProgramme = async () => {
 
   return (
     <Section
-      id="ukraine-programme"
+      id={ANCHORS.ukraine}
       ariaLabelledBy="ukraine-heading"
-      className="bg-surface"
+      className="px-5 py-16 md:py-22"
     >
       <Container>
-        <div className="max-w-190 mx-auto">
-          {/* Header */}
-          <div className="mb-8">
+        <div className="mx-auto max-w-[760px]">
+          <div className="mb-8 flex items-center gap-3">
             <span className="text-3xl" role="img" aria-label={t('flagAriaLabel')}>
               {t('flag')}
             </span>
-            <span className="ml-3 inline-block mb-3 rounded-full border border-line bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
-              {t('kicker')}
-            </span>
-            <h2
-              id="ukraine-heading"
-              className="mt-3 text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-3"
-            >
-              {t('title')}
-            </h2>
-            <p className="text-base text-muted leading-relaxed">
-              {t('subtitle')}
-            </p>
+            <span className="section-eyebrow !mb-0">{t('kicker')}</span>
           </div>
 
-          {/* Price comparison table */}
-          <div className="mb-8">
-            <h3 className="text-sm font-bold text-ink mb-3">
+          <h2
+            id="ukraine-heading"
+            className="mb-3 font-extrabold leading-[1.1] tracking-[-0.02em] text-ink"
+            style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+          >
+            {t('title')}
+          </h2>
+          <p className="mb-8 text-base leading-relaxed text-muted">{t('subtitle')}</p>
+
+          <div className="mb-8 overflow-hidden rounded-[18px] border border-line bg-white shadow-(--shadow-soft)">
+            <h3 className="border-b border-line bg-[#fafbf8] px-4 py-3 text-sm font-bold text-ink">
               {t('pricesTitle')}
             </h3>
-            <div className="overflow-x-auto -mx-5 px-5">
-              <table className="w-full min-w-[480px] border-collapse text-xs">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[480px] border-collapse text-sm">
                 <caption className="sr-only">{t('pricesTitle')}</caption>
                 <thead>
-                  <tr className="border-b border-line">
-                    <th scope="col" className="py-2 px-3 text-left font-semibold text-muted">
+                  <tr>
+                    <th scope="col" className="border-b border-line px-4 py-3 text-left font-semibold text-muted">
                       {tableHeader.label}
                     </th>
-                    <th scope="col" className="py-2 px-3 text-center font-semibold text-muted">
+                    <th scope="col" className="border-b border-line px-4 py-3 text-center font-semibold text-muted">
                       {tableHeader.standard}
                     </th>
-                    <th scope="col" className="py-2 px-3 text-center font-bold text-primary">
+                    <th scope="col" className="border-b border-line bg-primary-pale px-4 py-3 text-center font-bold text-primary-ink">
                       {tableHeader.ua}
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {prices.map((price, i) => (
-                    <tr
-                      key={i}
-                      className="border-b border-line last:border-0"
-                    >
-                      <th
-                        scope="row"
-                        className="py-2.5 px-3 text-left font-medium text-ink"
-                      >
-                        {price.label}
-                      </th>
-                      <td className="py-2.5 px-3 text-center text-muted">
-                        {price.standard}
-                      </td>
-                      <td className="py-2.5 px-3 text-center font-semibold text-primary">
-                        {price.ua}
-                      </td>
-                    </tr>
-                  ))}
+                  {prices.map((price, i) => {
+                    const isLast = i === prices.length - 1;
+                    return (
+                      <tr key={price.label}>
+                        <th
+                          scope="row"
+                          className={`px-4 py-3 text-left font-medium text-ink ${
+                            isLast ? '' : 'border-b border-line'
+                          }`}
+                        >
+                          {price.label}
+                        </th>
+                        <td
+                          className={`px-4 py-3 text-center text-muted ${
+                            isLast ? '' : 'border-b border-line'
+                          }`}
+                        >
+                          {price.standard}
+                        </td>
+                        <td
+                          className={`bg-primary-pale px-4 py-3 text-center font-bold text-primary-ink ${
+                            isLast ? '' : 'border-b border-line'
+                          }`}
+                        >
+                          {price.ua}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
           </div>
 
-          {/* Features list */}
-          <div className="mb-8">
-            <ul className="flex flex-col gap-2">
-              {features.map((feat) => (
-                <li key={feat} className="flex items-start gap-2 text-sm text-ink">
-                  <CheckIcon size={15} className="mt-0.5 text-primary shrink-0" />
-                  {feat}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="mb-8 flex flex-col gap-2.5">
+            {features.map((feat) => (
+              <li key={feat} className="flex items-start gap-2 text-[14.5px] text-ink">
+                <CheckIcon size={15} strokeWidth={3} className="mt-0.5 flex-none text-primary" />
+                {feat}
+              </li>
+            ))}
+          </ul>
 
-          {/* Qualification steps */}
-          <div className="mb-8 rounded-2xl border border-line bg-white p-5">
-            <h3 className="text-sm font-bold text-ink mb-3">
-              {qualification.title}
-            </h3>
-            <ol className="flex flex-col gap-2 list-none p-0 m-0">
+          <div className="mb-8 rounded-[18px] border border-line bg-white p-5 shadow-(--shadow-soft)">
+            <h3 className="mb-3 text-sm font-bold text-ink">{qualification.title}</h3>
+            <ol className="m-0 flex list-none flex-col gap-2.5 p-0">
               {qualification.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-ink">
-                  <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-primary text-white text-[11px] font-bold mt-0.5">
+                <li key={item} className="flex items-start gap-3 text-sm text-ink">
+                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-primary text-[11px] font-bold text-white">
                     {i + 1}
                   </span>
                   {item}
@@ -122,20 +123,13 @@ export const HomeUkraineProgramme = async () => {
             </ol>
           </div>
 
-          {/* Disclaimer */}
-          <p className="mb-7 text-xs italic text-muted leading-relaxed">
-            {t('disclaimer')}
-          </p>
+          <p className="mb-7 text-xs leading-relaxed italic text-muted">{t('disclaimer')}</p>
 
-          {/* CTA */}
-          <a
-            href="#cta"
-            className="inline-flex min-h-13 items-center gap-2 rounded-xl bg-primary px-8 text-base font-semibold text-white transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          >
+          <ButtonLink href={PATHS.waitlist} variant="primary" size="lg">
             {t('cta')}
-          </a>
+          </ButtonLink>
         </div>
       </Container>
     </Section>
   );
-}
+};

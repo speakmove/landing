@@ -15,29 +15,30 @@ export const FooterNav = async () => {
   const links = t.raw('links') as unknown as TFooterLink[];
 
   return (
-    <nav aria-label="Footer">
-      <ul className="space-y-2 text-sm">
-        {links.map((item) => (
-          <li key={item.href}>
-            {isExternal(item.href) ? (
-              <a
-                href={item.href}
-                className="text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                rel="noopener noreferrer"
-              >
-                {item.label}
-              </a>
-            ) : (
-              <Link
-                href={item.href}
-                className="text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              >
-                {item.label}
-              </Link>
-            )}
-          </li>
-        ))}
-      </ul>
+    <nav
+      aria-label="Footer"
+      className="flex flex-wrap gap-x-7 gap-y-2.5 text-[14px] text-muted md:justify-center"
+    >
+      {links.map((item) =>
+        isExternal(item.href) ? (
+          <a
+            key={item.href}
+            href={item.href}
+            className="transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            rel="noopener noreferrer"
+          >
+            {item.label}
+          </a>
+        ) : (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            {item.label}
+          </Link>
+        ),
+      )}
     </nav>
   );
 };

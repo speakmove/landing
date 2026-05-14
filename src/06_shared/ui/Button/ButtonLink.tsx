@@ -1,12 +1,16 @@
-import type { ComponentPropsWithRef } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { cn } from '@/shared/model/libs/cn';
+import { Link } from '@/shared/model/libs/i18n/navigation';
 
 type TVariant = 'primary' | 'outline' | 'ghost';
 type TSize = 'sm' | 'md' | 'lg';
 
-type TProps = ComponentPropsWithRef<'button'> & {
+type TLinkProps = ComponentPropsWithoutRef<typeof Link>;
+
+type TProps = Omit<TLinkProps, 'children'> & {
   variant?: TVariant;
   size?: TSize;
+  children: ReactNode;
 };
 
 const variantClass: Record<TVariant, string> = {
@@ -21,9 +25,7 @@ const sizeClass: Record<TSize, string> = {
   lg: 'btn-lg',
 };
 
-export const Button = ({
-  ref,
-  type = 'button',
+export const ButtonLink = ({
   variant = 'primary',
   size = 'md',
   className,
@@ -31,13 +33,11 @@ export const Button = ({
   ...rest
 }: TProps) => {
   return (
-    <button
-      ref={ref}
-      type={type}
-      className={cn('btn', variantClass[variant], sizeClass[size], className)}
+    <Link
       {...rest}
+      className={cn('btn', variantClass[variant], sizeClass[size], className)}
     >
       {children}
-    </button>
+    </Link>
   );
 };

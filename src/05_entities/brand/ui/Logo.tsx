@@ -8,14 +8,16 @@ type TProps = {
 export const Logo = async ({ className }: TProps) => {
   const t = await getTranslations('HomePage.nav');
   return (
-    <span className={cn('inline-flex items-center gap-2.5 text-lg font-extrabold tracking-tight', className)}>
-      <span
-        aria-hidden="true"
-        className="grid h-7 w-7 place-items-center rounded-full bg-linear-to-br from-gold-accent to-gold text-[11px] font-extrabold text-white"
-      >
+    <span
+      className={cn(
+        'inline-flex items-center gap-2.5 text-lg font-extrabold tracking-tight text-ink',
+        className,
+      )}
+    >
+      <span aria-hidden="true" className="brand-coin">
         {t('brandCoinLabel')}
       </span>
       <span>{t('brand')}</span>
     </span>
   );
-}
+};

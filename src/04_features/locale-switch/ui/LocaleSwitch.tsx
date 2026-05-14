@@ -10,32 +10,25 @@ export const LocaleSwitch = () => {
   const t = useTranslations('HomePage.nav.langToggle');
 
   return (
-    <nav aria-label={t('ariaLabel')}>
-      <ul className="flex items-center gap-0.5 rounded-full border border-line bg-white p-0.5 text-xs font-semibold">
-        {routing.locales.map((locale) => {
-          const isActive = locale === current;
-          return (
-            <li key={locale}>
-              <Link
-                href={pathname}
-                locale={locale}
-                hrefLang={locale}
-                lang={locale}
-                aria-current={isActive ? 'page' : undefined}
-                className={cn(
-                  'inline-flex min-h-7 items-center rounded-full px-2.5 transition-colors',
-                  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
-                  isActive
-                    ? 'bg-primary text-white'
-                    : 'text-muted hover:text-ink',
-                )}
-              >
-                {t(locale)}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+    <nav aria-label={t('ariaLabel')} className="lang-toggle" role="tablist">
+      {routing.locales.map((locale) => {
+        const isActive = locale === current;
+        return (
+          <Link
+            key={locale}
+            href={pathname}
+            locale={locale}
+            hrefLang={locale}
+            lang={locale}
+            role="tab"
+            aria-selected={isActive}
+            aria-current={isActive ? 'page' : undefined}
+            className={cn(isActive && 'is-active', !isActive && 'hover:text-ink')}
+          >
+            {t(locale)}
+          </Link>
+        );
+      })}
     </nav>
   );
-}
+};

@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
-import { CheckIcon, Container, Section } from '@/shared/ui';
+import { Container, Section, SectionHead } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
+import { ANCHORS } from '@/shared/config';
 import type { TComparisonRow } from '@/entities/comparison-row';
 
 export const HomeCompare = async () => {
@@ -10,47 +11,41 @@ export const HomeCompare = async () => {
   const columns = t.raw('columns') as unknown as string[];
   const rows = t.raw('rows') as unknown as TComparisonRow[];
   const highlightColumn = t('highlightColumn');
-  // TODO(schema): replace string-comparison with discriminated { kind: 'check'|'cross'|'text' } objects
   const checkmarkValues = tCommon.raw('checkmarkValues') as string[];
 
-  // Find the index of the SpeakMove column (the highlighted one)
   const highlightIdx = columns.indexOf(highlightColumn);
 
   return (
     <Section
-      id="compare"
+      id={ANCHORS.compare}
       ariaLabelledBy="compare-heading"
-      className="bg-surface"
+      className="px-5"
     >
       <Container>
-        <div className="mb-10 max-w-160">
-          <span className="inline-block mb-3 rounded-full border border-line bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
-            {t('kicker')}
-          </span>
-          <h2
-            id="compare-heading"
-            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-3"
-          >
-            {t('title')}
-          </h2>
-        </div>
+        <SectionHead
+          kicker={t('kicker')}
+          title={t('title')}
+          titleId="compare-heading"
+          subtitle={t.has('subtitle') ? t('subtitle') : undefined}
+        />
 
-        {/* Horizontal scroll wrapper for mobile */}
-        <div className="overflow-x-auto -mx-5 px-5">
-          <table className="w-full min-w-[640px] border-collapse text-sm">
+        <div className="overflow-x-auto rounded-[18px] border border-line bg-white shadow-(--shadow-soft)">
+          <table className="w-full min-w-[720px] border-collapse text-[14.5px]">
             <caption className="sr-only">{t('title')}</caption>
             <thead>
               <tr>
                 {columns.map((col, colIdx) => (
                   <th
-                    key={colIdx}
+                    key={col + colIdx}
                     scope="col"
                     className={cn(
-                      'py-3 px-4 text-left font-bold whitespace-nowrap',
-                      colIdx === 0 ? 'w-[200px] text-muted' : '',
+                      'border-b border-line px-3.5 py-4 text-[13px] font-bold',
+                      colIdx === 0 ? 'bg-[#fafbf8] text-left' : 'text-center',
                       colIdx === highlightIdx
-                        ? 'text-primary bg-primary-pale rounded-t-xl border-x border-t border-primary'
-                        : 'text-ink border-b border-line',
+                        ? 'bg-primary-pale text-primary-ink'
+                        : colIdx === 0
+                          ? ''
+                          : 'bg-[#fafbf8]',
                     )}
                   >
                     {col}
@@ -62,44 +57,33 @@ export const HomeCompare = async () => {
               {rows.map((row, rowIdx) => {
                 const isLast = rowIdx === rows.length - 1;
                 return (
-                  <tr
-                    key={rowIdx}
-                    className="border-b border-line last:border-0"
-                  >
+                  <tr key={row.feature}>
                     <th
                       scope="row"
-                      className="py-3 px-4 font-medium text-left text-ink whitespace-nowrap"
+                      className={cn(
+                        'px-3.5 py-4 text-left font-medium text-muted',
+                        !isLast && 'border-b border-line',
+                      )}
                     >
                       {row.feature}
                     </th>
                     {row.values.map((val, valIdx) => {
-                      const colIdx = valIdx + 1; // offset by 1 because col[0] is the feature label
+                      const colIdx = valIdx + 1;
                       const isHighlight = colIdx === highlightIdx;
+                      const isCheck = checkmarkValues.includes(val);
+                      const isDash = val === '—';
                       return (
                         <td
                           key={valIdx}
                           className={cn(
-                            'py-3 px-4 text-center',
-                            isHighlight
-                              ? cn(
-                                  'font-semibold text-primary-ink bg-primary-pale border-x border-primary',
-                                  isLast && 'rounded-b-xl border-b',
-                                )
-                              : 'text-muted',
+                            'px-3.5 py-4 text-center',
+                            !isLast && 'border-b border-line',
+                            isHighlight && 'bg-primary-pale font-bold text-primary-ink',
+                            !isHighlight && isCheck && 'font-bold text-primary',
+                            !isHighlight && isDash && 'text-faint',
                           )}
                         >
-                          {checkmarkValues.includes(val) ? (
-                            <span className="inline-flex items-center justify-center gap-1 text-primary font-semibold">
-                              <CheckIcon size={14} />
-                              {val}
-                            </span>
-                          ) : val === '—' ? (
-                            <span className="text-faint" aria-label={tCommon('unavailable')}>
-                              —
-                            </span>
-                          ) : (
-                            val
-                          )}
+                          {isCheck ? '✓' : val}
                         </td>
                       );
                     })}
@@ -110,11 +94,10 @@ export const HomeCompare = async () => {
           </table>
         </div>
 
-        {/* Footnote */}
-        <p className="mt-5 text-xs text-muted leading-relaxed">
+        <p className="mx-auto mt-5 max-w-[66%] text-center text-[10px] leading-[1.7] text-faint">
           {t('footnote')}
         </p>
       </Container>
     </Section>
   );
-}
+};
