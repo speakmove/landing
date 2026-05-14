@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Container, Section } from '@/shared/ui';
 import { BillingToggle, type TBillingValue } from '@/widgets/billing-toggle';
-import { PricingPlanCard } from '@/entities/pricing-plan';
+import { PricingPlanCard, type TPricingPlanAriaLabels } from '@/entities/pricing-plan';
 import type { TPricingPlan } from '@/entities/pricing-plan';
 
 type TFomoData = {
@@ -32,9 +32,10 @@ type TProps = {
   billingLabels: TBillingLabels;
   fomo: TFomoData;
   disclaimer: string;
+  planAriaLabels: TPricingPlanAriaLabels;
 };
 
-export const PricingInteractive = ({ hero, plans, billingLabels, fomo, disclaimer }: TProps) => {
+export const PricingInteractive = ({ hero, plans, billingLabels, fomo, disclaimer, planAriaLabels }: TProps) => {
   const [billing, setBilling] = useState<TBillingValue>('monthly');
 
   const countLabel = fomo.countLabel
@@ -90,7 +91,7 @@ export const PricingInteractive = ({ hero, plans, billingLabels, fomo, disclaime
         {/* 3-plan grid */}
         <div className="grid gap-5 md:grid-cols-3">
           {plans.map((plan) => (
-            <PricingPlanCard key={plan.id} plan={plan} billing={billing} />
+            <PricingPlanCard key={plan.id} plan={plan} billing={billing} ariaLabels={planAriaLabels} />
           ))}
         </div>
 

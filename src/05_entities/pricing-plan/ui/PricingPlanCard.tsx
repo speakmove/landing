@@ -1,4 +1,3 @@
-import { getTranslations } from 'next-intl/server';
 import { Badge, CheckIcon, VisuallyHidden } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
 import { URLS } from '@/shared/config';
@@ -6,10 +5,21 @@ import type { TPricingPlan } from '../model/types';
 
 type TBilling = 'monthly' | 'yearly';
 
+/**
+ * Serializable aria-label templates.
+ * Use {planName} as placeholder; the component replaces it with the actual plan name.
+ */
+export type TPricingPlanAriaLabels = {
+  featuresIncludedTemplate: string; // e.g. "Included in {planName}"
+  featuresExcludedTemplate: string; // e.g. "Not included in {planName}"
+  unavailable: string;              // e.g. "Not available:"
+};
+
 type TProps = {
   plan: TPricingPlan;
   billing: TBilling;
   className?: string;
+  ariaLabels: TPricingPlanAriaLabels;
 };
 
 const resolvePrice = (
@@ -20,8 +30,7 @@ const resolvePrice = (
   return raw;
 };
 
-export const PricingPlanCard = async ({ plan, billing, className }: TProps) => {
-  const tCommon = await getTranslations('Common');
+export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps) => {
   const priceRaw = plan.price[billing];
   const resolved = resolvePrice(priceRaw);
   const wasPrice = plan.wasPrice?.[billing];
@@ -30,6 +39,9 @@ export const PricingPlanCard = async ({ plan, billing, className }: TProps) => {
   const isPremium = plan.id === 'premium';
 
   const ctaVariant = plan.ctaStyle ?? 'primary';
+
+  const featuresIncludedLabel = ariaLabels.featuresIncludedTemplate.replace('{planName}', plan.name);
+  const featuresExcludedLabel = ariaLabels.featuresExcludedTemplate.replace('{planName}', plan.name);
 
   return (
     <article
@@ -84,7 +96,7 @@ export const PricingPlanCard = async ({ plan, billing, className }: TProps) => {
         )}
       </div>
 
-      <ul className="flex flex-col gap-2" aria-label={tCommon('aria.featuresIncluded', { planName: plan.name })}>
+      <ul className="flex flex-col gap-2" aria-label={featuresIncludedLabel}>
         {plan.features.map((feat) => (
           <li key={feat} className="flex items-start gap-2 text-sm text-ink">
             <CheckIcon size={15} className="mt-0.5 text-primary shrink-0" />
@@ -94,13 +106,13 @@ export const PricingPlanCard = async ({ plan, billing, className }: TProps) => {
       </ul>
 
       {plan.excluded && plan.excluded.length > 0 && (
-        <ul className="flex flex-col gap-1.5" aria-label={tCommon('aria.featuresExcluded', { planName: plan.name })}>
+        <ul className="flex flex-col gap-1.5" aria-label={featuresExcludedLabel}>
           {plan.excluded.map((excl) => (
             <li
               key={excl}
               className="flex items-start gap-2 text-xs text-muted line-through"
             >
-              <VisuallyHidden>{tCommon('unavailable')}</VisuallyHidden>
+              <VisuallyHidden>{ariaLabels.unavailable}</VisuallyHidden>
               {excl}
             </li>
           ))}

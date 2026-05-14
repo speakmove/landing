@@ -8,6 +8,7 @@ import type { TPricingPlan } from '@/entities/pricing-plan';
 
 export const PricingPage = async () => {
   const t = await getTranslations('PricingPage');
+  const tCommon = await getTranslations('Common');
 
   const plans = t.raw('plans') as unknown as TPricingPlan[];
   const disclaimer = t('disclaimer');
@@ -32,6 +33,14 @@ export const PricingPage = async () => {
     total: t.raw('hero.fomo.total') as unknown as number,
   };
 
+  // Pass serializable string templates so they can cross the server→client boundary.
+  // {planName} is replaced by PricingPlanCard at render time.
+  const planAriaLabels = {
+    featuresIncludedTemplate: tCommon.raw('aria.featuresIncluded') as string,
+    featuresExcludedTemplate: tCommon.raw('aria.featuresExcluded') as string,
+    unavailable: tCommon('unavailable'),
+  };
+
   return (
     <>
       <PricingInteractive
@@ -40,6 +49,7 @@ export const PricingPage = async () => {
         billingLabels={billingLabels}
         fomo={fomo}
         disclaimer={disclaimer}
+        planAriaLabels={planAriaLabels}
       />
       <PricingFeatureComparisonTable />
       <CoinEconomicsSection />
