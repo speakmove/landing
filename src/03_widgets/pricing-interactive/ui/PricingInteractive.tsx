@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Container, Section } from '@/shared/ui';
-import { BillingToggle, type TBillingValue } from '@/widgets/billing-toggle';
+import { BillingToggle, type TBillingValue } from '@/features/billing-toggle';
 import { PricingPlanCard, type TPricingPlanAriaLabels } from '@/entities/pricing-plan';
 import type { TPricingPlan } from '@/entities/pricing-plan';
 
