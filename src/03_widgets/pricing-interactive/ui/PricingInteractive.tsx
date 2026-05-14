@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Container, Section } from '@/shared/ui';
+import { Container } from '@/shared/ui';
 import { BillingToggle, type TBillingValue } from '@/features/billing-toggle';
 import { PricingPlanCard, type TPricingPlanAriaLabels } from '@/entities/pricing-plan';
 import type { TPricingPlan } from '@/entities/pricing-plan';
@@ -35,71 +35,104 @@ type TProps = {
   planAriaLabels: TPricingPlanAriaLabels;
 };
 
-export const PricingInteractive = ({ hero, plans, billingLabels, fomo, disclaimer, planAriaLabels }: TProps) => {
+export const PricingInteractive = ({
+  hero,
+  plans,
+  billingLabels,
+  fomo,
+  disclaimer,
+  planAriaLabels,
+}: TProps) => {
   const [billing, setBilling] = useState<TBillingValue>('monthly');
 
   const countLabel = fomo.countLabel
     .replace('{current}', String(fomo.current))
     .replace('{total}', String(fomo.total));
 
+  const pct = Math.min(100, Math.round((fomo.current / fomo.total) * 1000) / 10);
+
   return (
-    <Section id="pricing-hero" ariaLabelledBy="pricing-hero-heading">
-      <Container>
-        {/* Hero header */}
-        <div className="mb-10 text-center max-w-[680px] mx-auto flex flex-col items-center gap-5">
-          {/* Breadcrumb chip */}
-          <span className="inline-block rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
-            {hero.crumb}
-          </span>
+    <>
+      <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:pt-20">
+        <div aria-hidden="true" className="page-hero-bg" />
+        <Container className="px-0">
+          <div className="mx-auto max-w-[760px]">
+            <div className="section-eyebrow !mb-0">{hero.crumb}</div>
 
-          <h1
-            id="pricing-hero-heading"
-            className="text-[clamp(1.75rem,4vw,2.8rem)] font-extrabold leading-tight tracking-[-0.025em] text-ink"
-          >
-            {hero.title}
-          </h1>
+            <h1
+              id="pricing-hero-heading"
+              className="my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink"
+              style={{ fontSize: 'clamp(2.2rem, 4.4vw, 3.4rem)' }}
+            >
+              {hero.title}
+            </h1>
 
-          <p className="text-[17px] text-muted leading-relaxed max-w-[540px]">
-            {hero.description}
-          </p>
+            <p className="mx-auto max-w-[620px] text-pretty text-[18px] text-muted">
+              {hero.description}
+            </p>
 
-          {/* Billing toggle */}
-          <BillingToggle
-            value={billing}
-            onChange={setBilling}
-            monthlyLabel={billingLabels.monthly}
-            yearlyLabel={billingLabels.yearly}
-            yearlySaveLabel={billingLabels.yearlySaveLabel}
-          />
+            <div
+              className="mx-auto mt-6 max-w-[720px] rounded-[18px] bg-white px-5 py-4 text-left shadow-(--shadow-soft)"
+              style={{
+                border:
+                  '1px solid color-mix(in oklab, var(--color-primary) 35%, var(--color-line))',
+              }}
+            >
+              <div className="mb-2.5 flex items-center gap-2.5 text-[14.5px] font-bold text-ink">
+                <span aria-hidden="true" className="block h-2 w-2 rounded-full bg-primary" />
+                {fomo.title}
+              </div>
+              <div
+                role="progressbar"
+                aria-valuemin={0}
+                aria-valuemax={fomo.total}
+                aria-valuenow={fomo.current}
+                aria-label={fomo.title}
+                className="mb-2 h-2 overflow-hidden rounded-full bg-[#eceee8]"
+              >
+                <div
+                  className="h-full rounded-full bg-linear-to-r from-primary to-primary-hover"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+              <div className="flex justify-between font-mono text-[12.5px] font-semibold text-muted">
+                <span>{fomo.plansLine}</span>
+                <span className="tabular-nums">
+                  <span className="text-ink">{fomo.current}</span> / {fomo.total} —{' '}
+                  {countLabel.replace(`${fomo.current} / ${fomo.total}`, '').trim() ||
+                    fomo.countLabel.replace('{current}', '').replace('{total}', '').trim()}
+                </span>
+              </div>
+            </div>
 
-          {/* FOMO callout */}
-          <div className="w-full rounded-2xl border border-primary bg-primary-pale px-5 py-4 text-center">
-            <p className="text-sm font-bold text-ink mb-1">{fomo.title}</p>
-            <p className="text-xs text-muted mb-2">{fomo.plansLine}</p>
-            <div className="inline-flex items-center gap-2">
-              <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-              </span>
-              <span className="text-xs font-semibold text-ink tabular-nums">
-                {countLabel}
-              </span>
+            <div className="mt-9 inline-flex">
+              <BillingToggle
+                value={billing}
+                onChange={setBilling}
+                monthlyLabel={billingLabels.monthly}
+                yearlyLabel={billingLabels.yearly}
+                yearlySaveLabel={billingLabels.yearlySaveLabel}
+              />
             </div>
           </div>
-        </div>
+        </Container>
+      </header>
 
-        {/* 3-plan grid */}
-        <div className="grid gap-5 md:grid-cols-3">
-          {plans.map((plan) => (
-            <PricingPlanCard key={plan.id} plan={plan} billing={billing} ariaLabels={planAriaLabels} />
-          ))}
-        </div>
-
-        {/* Disclaimer */}
-        <p className="mt-6 text-center text-xs text-muted">
-          {disclaimer}
-        </p>
-      </Container>
-    </Section>
+      <section id="plans" className="px-5 pb-20">
+        <Container>
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {plans.map((plan) => (
+              <PricingPlanCard
+                key={plan.id}
+                plan={plan}
+                billing={billing}
+                ariaLabels={planAriaLabels}
+              />
+            ))}
+          </div>
+          <p className="mt-6 text-center text-[13.5px] text-muted">{disclaimer}</p>
+        </Container>
+      </section>
+    </>
   );
-}
+};

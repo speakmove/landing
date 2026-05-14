@@ -9,22 +9,20 @@ type TProps = {
 export const TableThead = ({ featureColLabel, colHeaders, highlightColumn }: TProps) => {
   return (
     <thead>
-      <tr className="border-b border-line bg-surface">
+      <tr>
         <th
           scope="col"
-          className="py-3 px-4 text-left font-semibold text-muted w-[40%]"
+          className="min-w-[260px] border-b border-line bg-[#fafbf8] px-3.5 py-3.5 text-left text-[13px] font-bold text-ink"
         >
-          {featureColLabel}
+          <span className="sr-only">{featureColLabel}</span>
         </th>
         {colHeaders.map((col) => (
           <th
             key={col}
             scope="col"
             className={cn(
-              'py-3 px-4 text-center font-bold',
-              col === highlightColumn
-                ? 'text-gold bg-gold-pale'
-                : 'text-ink',
+              'border-b border-line px-3.5 py-3.5 text-center text-[13px] font-bold',
+              col === highlightColumn ? 'bg-primary-pale text-primary-ink' : 'bg-[#fafbf8] text-ink',
             )}
           >
             {col}

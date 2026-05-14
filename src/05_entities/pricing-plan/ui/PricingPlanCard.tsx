@@ -1,18 +1,15 @@
-import { Badge, CheckIcon, VisuallyHidden } from '@/shared/ui';
+import { CheckIcon, VisuallyHidden } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
-import { URLS } from '@/shared/config';
+import { Link } from '@/shared/model/libs/i18n/navigation';
+import { PATHS } from '@/shared/config';
 import type { TPricingPlan } from '../model/types';
 
 type TBilling = 'monthly' | 'yearly';
 
-/**
- * Serializable aria-label templates.
- * Use {planName} as placeholder; the component replaces it with the actual plan name.
- */
 export type TPricingPlanAriaLabels = {
-  featuresIncludedTemplate: string; // e.g. "Included in {planName}"
-  featuresExcludedTemplate: string; // e.g. "Not included in {planName}"
-  unavailable: string;              // e.g. "Not available:"
+  featuresIncludedTemplate: string;
+  featuresExcludedTemplate: string;
+  unavailable: string;
 };
 
 type TProps = {
@@ -30,107 +27,126 @@ const resolvePrice = (
   return raw;
 };
 
+// TODO(currency): normalize price prefix per locale/region (backend signal needed).
+// For now we keep $ as the default and respect non-$ amounts already coming from i18n.
+const formatAmount = (raw: string): string => {
+  if (!raw) return raw;
+  if (raw.startsWith('$') || raw.startsWith('€') || raw.startsWith('£') || raw.startsWith('₴')) {
+    return raw;
+  }
+  return `$${raw}`;
+};
+
 export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps) => {
   const priceRaw = plan.price[billing];
   const resolved = resolvePrice(priceRaw);
   const wasPrice = plan.wasPrice?.[billing];
 
   const isPlus = plan.id === 'plus';
-  const isPremium = plan.id === 'premium';
 
-  const ctaVariant = plan.ctaStyle ?? 'primary';
-
-  const featuresIncludedLabel = ariaLabels.featuresIncludedTemplate.replace('{planName}', plan.name);
-  const featuresExcludedLabel = ariaLabels.featuresExcludedTemplate.replace('{planName}', plan.name);
+  const featuresIncludedLabel = ariaLabels.featuresIncludedTemplate.replace(
+    '{planName}',
+    plan.name,
+  );
+  const featuresExcludedLabel = ariaLabels.featuresExcludedTemplate.replace(
+    '{planName}',
+    plan.name,
+  );
 
   return (
     <article
       className={cn(
-        'relative flex flex-col gap-4 rounded-2xl border p-6',
+        'relative flex flex-col rounded-[28px] bg-white p-7 md:p-8',
         isPlus
-          ? 'border-primary shadow-[0_0_0_3px_color-mix(in_oklab,var(--color-primary)_15%,transparent)] bg-white'
-          : 'border-line bg-white shadow-(--shadow-soft)',
+          ? 'border border-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_12%,transparent),0_4px_10px_rgba(10,22,18,0.05),0_12px_32px_rgba(10,22,18,0.06)] lg:-translate-y-2'
+          : 'border border-line',
         className,
       )}
     >
-      {plan.badge && (
-        <Badge tone="primary" className="self-start">
+      {plan.badge ? (
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.04em] text-white">
           {plan.badge}
-        </Badge>
-      )}
+        </span>
+      ) : null}
 
-      <div>
-        <h3 className="text-lg font-bold text-ink mb-1">{plan.name}</h3>
-
-        {wasPrice && (
-          <p className="text-xs text-muted line-through mb-0.5">
-            {wasPrice}
-          </p>
+      <div
+        className={cn(
+          'text-base font-bold tracking-tight',
+          isPlus ? 'text-primary' : 'text-muted',
         )}
-
-        {resolved && (
-          <div className="flex items-baseline gap-1">
-            <span
-              className={cn(
-                'font-extrabold tracking-tight',
-                plan.id === 'free' ? 'text-[2rem]' : 'text-[2.2rem]',
-                isPremium
-                  ? 'text-gold'
-                  : 'text-ink',
-              )}
-            >
-              {resolved.amount.startsWith('$') ? resolved.amount : `$${resolved.amount}`}
-            </span>
-            {resolved.period && (
-              <span className="text-sm text-muted">
-                {resolved.period}
-              </span>
-            )}
-          </div>
-        )}
-
-        {plan.note && (
-          <p className="mt-1.5 text-xs text-muted leading-snug">
-            {plan.note}
-          </p>
-        )}
+      >
+        {plan.name}
       </div>
 
-      <ul className="flex flex-col gap-2" aria-label={featuresIncludedLabel}>
+      {plan.tagline ? (
+        <div className="mt-1 text-[13px] text-faint">{plan.tagline}</div>
+      ) : null}
+
+      {wasPrice ? (
+        <div className="mt-4 mb-0.5 text-[13px] text-faint line-through">{wasPrice}</div>
+      ) : null}
+
+      {resolved ? (
+        <div
+          className={cn(
+            'mb-1 flex items-baseline gap-1.5 text-[48px] font-extrabold leading-none tracking-[-0.03em] text-ink',
+            !wasPrice && 'mt-4',
+          )}
+        >
+          <span>{formatAmount(resolved.amount)}</span>
+          {resolved.period ? (
+            <span className="text-[15px] font-medium text-muted">{resolved.period}</span>
+          ) : null}
+        </div>
+      ) : null}
+
+      {plan.note ? (
+        <div className="mb-5 text-[13.5px] text-muted">{plan.note}</div>
+      ) : (
+        <div className="mb-5" />
+      )}
+
+      <ul
+        className="m-0 mb-6 flex flex-col gap-2.5 p-0 text-[14.5px] leading-snug"
+        aria-label={featuresIncludedLabel}
+      >
         {plan.features.map((feat) => (
-          <li key={feat} className="flex items-start gap-2 text-sm text-ink">
-            <CheckIcon size={15} className="mt-0.5 text-primary shrink-0" />
-            {feat}
+          <li key={feat} className="flex items-start gap-2.5 text-ink">
+            <CheckIcon size={16} strokeWidth={3} className="mt-0.5 flex-none text-primary" />
+            <span>{feat}</span>
+          </li>
+        ))}
+        {plan.excluded?.map((excl) => (
+          <li key={excl} className="flex items-start gap-2.5 text-faint">
+            <VisuallyHidden>{ariaLabels.unavailable}</VisuallyHidden>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              className="mt-0.5 flex-none"
+              aria-hidden="true"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            <span>{excl}</span>
           </li>
         ))}
       </ul>
 
-      {plan.excluded && plan.excluded.length > 0 && (
-        <ul className="flex flex-col gap-1.5" aria-label={featuresExcludedLabel}>
-          {plan.excluded.map((excl) => (
-            <li
-              key={excl}
-              className="flex items-start gap-2 text-xs text-muted line-through"
-            >
-              <VisuallyHidden>{ariaLabels.unavailable}</VisuallyHidden>
-              {excl}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <a
-        href={URLS.telegramBot}
-        rel="noopener noreferrer"
-        className={cn(
-          'mt-auto inline-flex min-h-11 items-center justify-center rounded-xl px-5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2',
-          ctaVariant === 'primary'
-            ? 'bg-primary text-white hover:bg-primary-hover focus-visible:outline-primary'
-            : 'border border-line-strong bg-white text-ink hover:bg-surface focus-visible:outline-primary',
-        )}
+      <Link
+        href={PATHS.waitlist}
+        className={cn('btn', isPlus ? 'btn-primary' : 'btn-outline', 'mt-auto')}
+        aria-label={`${plan.cta} — ${plan.name}`}
       >
         {plan.cta}
-      </a>
+      </Link>
+
+      {ariaLabels.unavailable && plan.excluded ? null : null}
+      <span hidden>{featuresExcludedLabel}</span>
     </article>
   );
-}
+};

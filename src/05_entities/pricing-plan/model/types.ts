@@ -2,6 +2,7 @@ export type TPricingPlan = {
   id: string;
   name: string;
   badge?: string;
+  tagline?: string;
   wasPrice?: { monthly?: string; yearly?: string };
   price: {
     monthly?: { amount: string; period: string } | string;

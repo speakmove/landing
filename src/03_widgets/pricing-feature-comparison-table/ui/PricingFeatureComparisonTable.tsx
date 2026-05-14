@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Container, Section } from '@/shared/ui';
+import { Container, Section, SectionHead } from '@/shared/ui';
 import { TableThead } from './TableThead';
 import { TableTbody } from './TableTbody';
 
@@ -37,25 +37,21 @@ export const PricingFeatureComparisonTable = async () => {
   const colHeaders = data.columns.slice(1) as [string, string, string];
 
   return (
-    <Section id="compare" ariaLabelledBy="compare-heading">
+    <Section
+      id="compare"
+      ariaLabelledBy="compare-heading"
+      className="bg-surface px-5 py-12 md:py-20"
+    >
       <Container>
-        <div className="mb-8 text-center max-w-150 mx-auto">
-          <span className="inline-block mb-3 rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
-            {data.kicker}
-          </span>
-          <h2
-            id="compare-heading"
-            className="text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-2"
-          >
-            {data.title}
-          </h2>
-          <p className="text-base text-muted leading-relaxed">
-            {data.subtitle}
-          </p>
-        </div>
+        <SectionHead
+          kicker={data.kicker}
+          title={data.title}
+          titleId="compare-heading"
+          subtitle={data.subtitle}
+        />
 
-        <div className="overflow-x-auto rounded-2xl border border-line">
-          <table className="w-full min-w-[560px] border-collapse text-sm">
+        <div className="overflow-x-auto rounded-[18px] border border-line bg-white shadow-(--shadow-soft)">
+          <table className="w-full min-w-[720px] border-collapse text-[14.5px]">
             <caption className="sr-only">{data.title}</caption>
             <TableThead
               featureColLabel={data.columns[0] || tCommon('table.feature')}

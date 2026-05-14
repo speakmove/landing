@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { cn } from '@/shared/model/libs/cn';
 
 type TCompareRow = {
@@ -16,55 +17,62 @@ type TProps = {
   highlightColumn: string;
 };
 
+const CHECK = '✓';
+
 export const TableTbody = ({ groups, colHeaders, highlightColumn }: TProps) => {
   return (
     <tbody>
-      {groups.map((group) => (
-        <>
-          <tr
-            key={`group-${group.name}`}
-            className="border-b border-line bg-surface"
-          >
+      {groups.map((group, gIdx) => (
+        <Fragment key={`group-${group.name}-${gIdx}`}>
+          <tr className="bg-primary-pale">
             <th
               colSpan={4}
               scope="colgroup"
-              className="py-2 px-4 text-left text-xs font-bold uppercase tracking-wider text-muted"
+              className="border-y-2 border-primary px-3.5 py-3.5 text-left text-[13px] font-extrabold uppercase tracking-[0.08em] text-primary-ink"
             >
               {group.name}
             </th>
           </tr>
-          {group.rows.map((row) => (
-            <tr
-              key={row.feature}
-              className="border-b border-line last:border-0 even:bg-surface/40"
-            >
-              <th
-                scope="row"
-                className="py-3 px-4 text-left font-normal text-ink"
-              >
-                {row.feature}
-              </th>
-              {row.values.map((val, i) => {
-                const colName = colHeaders[i];
-                const isHighlight = colName === highlightColumn;
-                return (
-                  <td
-                    key={i}
-                    className={cn(
-                      'py-3 px-4 text-center',
-                      isHighlight
-                        ? 'bg-gold-pale/30 text-ink font-medium'
-                        : 'text-muted',
-                      val === '—' && 'opacity-40',
-                    )}
-                  >
-                    {val}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </>
+          {group.rows.map((row, rIdx) => {
+            const isLastGroup = gIdx === groups.length - 1;
+            const isLastRow = rIdx === group.rows.length - 1;
+            const isLast = isLastGroup && isLastRow;
+            return (
+              <tr key={row.feature}>
+                <th
+                  scope="row"
+                  className={cn(
+                    'px-3.5 py-3.5 text-left font-medium text-muted',
+                    !isLast && 'border-b border-line',
+                  )}
+                >
+                  {row.feature}
+                </th>
+                {row.values.map((val, i) => {
+                  const colName = colHeaders[i];
+                  const isHighlight = colName === highlightColumn;
+                  const isCheck = val === '✓' || val === CHECK;
+                  const isDash = val === '—';
+                  return (
+                    <td
+                      key={`${row.feature}-${i}`}
+                      className={cn(
+                        'px-3.5 py-3.5 text-center',
+                        !isLast && 'border-b border-line',
+                        isHighlight && 'bg-primary-pale font-bold text-primary-ink',
+                        !isHighlight && isCheck && 'font-bold text-primary',
+                        !isHighlight && isDash && 'text-faint',
+                        !isHighlight && !isCheck && !isDash && 'text-ink',
+                      )}
+                    >
+                      {val}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </Fragment>
       ))}
     </tbody>
   );

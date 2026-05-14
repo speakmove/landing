@@ -53,47 +53,48 @@ export const BillingToggle = ({
     [value, onChange],
   );
 
+  const baseBtn =
+    'inline-flex items-center rounded-full px-4 py-2 text-[13.5px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
+  const activeBtn = 'bg-white text-ink shadow-[0_1px_3px_rgba(0,0,0,.08)]';
+  const inactiveBtn = 'text-muted hover:text-ink';
+
   return (
     <div
       role="tablist"
       aria-label={tCommon('aria.billingPeriod')}
       onKeyDown={handleKeyDown}
-      className="inline-flex rounded-xl border border-line bg-surface p-1 gap-1"
+      className="inline-flex items-center gap-1 rounded-full bg-[#f1f3ef] p-1"
     >
       <button
-        ref={(el) => { tabRefs.current[0] = el; }}
+        ref={(el) => {
+          tabRefs.current[0] = el;
+        }}
+        type="button"
         role="tab"
         aria-selected={value === 'monthly'}
+        aria-pressed={value === 'monthly'}
         tabIndex={value === 'monthly' ? 0 : -1}
         onClick={() => onChange('monthly')}
-        className={cn(
-          'min-h-9 rounded-lg px-4 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
-          value === 'monthly'
-            ? 'bg-white text-ink shadow-(--shadow-soft)'
-            : 'text-muted hover:text-ink',
-        )}
+        className={cn(baseBtn, value === 'monthly' ? activeBtn : inactiveBtn)}
       >
         {monthlyLabel}
       </button>
 
       <button
-        ref={(el) => { tabRefs.current[1] = el; }}
+        ref={(el) => {
+          tabRefs.current[1] = el;
+        }}
+        type="button"
         role="tab"
         aria-selected={value === 'yearly'}
+        aria-pressed={value === 'yearly'}
         tabIndex={value === 'yearly' ? 0 : -1}
         onClick={() => onChange('yearly')}
-        className={cn(
-          'min-h-9 rounded-lg px-4 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary flex items-center gap-2',
-          value === 'yearly'
-            ? 'bg-white text-ink shadow-(--shadow-soft)'
-            : 'text-muted hover:text-ink',
-        )}
+        className={cn(baseBtn, value === 'yearly' ? activeBtn : inactiveBtn, 'gap-1.5')}
       >
         {yearlyLabel}
-        <span className="rounded-full bg-gold-pale border border-gold px-2 py-0.5 text-[11px] font-bold text-ink">
-          {yearlySaveLabel}
-        </span>
+        <span className="text-[11px] font-bold text-primary">{yearlySaveLabel}</span>
       </button>
     </div>
   );
-}
+};
