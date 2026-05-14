@@ -4,7 +4,7 @@ export { Card } from './Card';
 export { Container } from './Container';
 export { FieldError } from './FieldError';
 export { HoneypotField } from './HoneypotField';
-export { ArrowRightIcon, CheckIcon, CoinIcon, Icon } from './Icon';
+export { ArrowRightIcon, CheckIcon, ClockIcon, CoinIcon, GiftIcon, Icon, MicIcon, PaperPlaneIcon, PlusIcon } from './Icon';
 export { InlineMarkdown } from './InlineMarkdown';
 export { Input } from './Input';
 export { Label } from './Label';

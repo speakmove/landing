@@ -15,13 +15,13 @@ export function ScheduleCard({ card }: TProps) {
       )}
 
       <div>
-        <h3 className="text-[18px] font-bold text-[color:var(--color-ink)] mb-1 leading-snug">
+        <h3 className="text-lg font-bold text-ink mb-1 leading-snug">
           {card.title}
         </h3>
-        <p className="text-[13px] text-[color:var(--color-muted)] font-medium">{card.subtitle}</p>
+        <p className="text-xs text-muted font-medium">{card.subtitle}</p>
       </div>
 
-      <p className="text-[14px] text-[color:var(--color-muted)] leading-relaxed">
+      <p className="text-sm text-muted leading-relaxed">
         {card.description}
       </p>
 
@@ -32,10 +32,10 @@ export function ScheduleCard({ card }: TProps) {
             <span
               key={day}
               className={[
-                'inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-[12px] font-semibold min-w-[36px]',
+                'inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-xs font-semibold min-w-[36px]',
                 isActive
-                  ? 'bg-[color:var(--color-primary)] text-white'
-                  : 'bg-[color:var(--color-surface)] text-[color:var(--color-muted)] border border-[color:var(--color-line)]',
+                  ? 'bg-primary text-white'
+                  : 'bg-surface text-muted border border-line',
               ].join(' ')}
             >
               {day}

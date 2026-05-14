@@ -25,18 +25,18 @@ export async function SiteFooter() {
   const socialLinks = t.raw('socialLinks') as unknown as TSocialLink[];
 
   return (
-    <footer className="mt-16 border-t border-[color:var(--color-line)] bg-white">
+    <footer className="mt-16 border-t border-line bg-white">
       <Container>
         <div className="grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link
               href="/"
               aria-label={t('brand')}
-              className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+              className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <Logo />
             </Link>
-            <p className="mt-4 max-w-[480px] text-sm leading-[1.55] text-[color:var(--color-muted)]">
+            <p className="mt-4 max-w-120 text-sm leading-[1.55] text-muted">
               {t('tagline')}
             </p>
           </div>
@@ -48,7 +48,7 @@ export async function SiteFooter() {
                   {isExternal(item.href) ? (
                     <a
                       href={item.href}
-                      className="text-[color:var(--color-muted)] hover:text-[color:var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+                      className="text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       rel="noopener noreferrer"
                     >
                       {item.label}
@@ -56,7 +56,7 @@ export async function SiteFooter() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-[color:var(--color-muted)] hover:text-[color:var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+                      className="text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       {item.label}
                     </Link>
@@ -67,7 +67,7 @@ export async function SiteFooter() {
           </nav>
 
           <div>
-            <p className="text-sm font-semibold text-[color:var(--color-ink)]">{t('socialTitle')}</p>
+            <p className="text-sm font-semibold text-ink">{t('socialTitle')}</p>
             <ul className="mt-3 flex flex-wrap gap-3 text-sm">
               {socialLinks.map((item) => (
                 <li key={item.id}>
@@ -76,7 +76,7 @@ export async function SiteFooter() {
                     aria-label={item.ariaLabel}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center rounded-lg border border-[color:var(--color-line)] px-3 text-[color:var(--color-muted)] hover:text-[color:var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+                    className="inline-flex min-h-9 items-center rounded-lg border border-line px-3 text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {item.label}
                   </a>
@@ -86,7 +86,7 @@ export async function SiteFooter() {
           </div>
         </div>
 
-        <div className="border-t border-[color:var(--color-line)] py-6 text-xs leading-relaxed text-[color:var(--color-faint)]">
+        <div className="border-t border-line py-6 text-xs leading-relaxed text-faint">
           <p>{t('legalEntity')}</p>
           <p className="mt-3">{t('researchNotice')}</p>
         </div>

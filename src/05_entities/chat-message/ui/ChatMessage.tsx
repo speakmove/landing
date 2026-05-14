@@ -9,7 +9,7 @@ type TProps = {
 function WaveformBars({ variant }: { variant: 'bot' | 'me' }) {
   const heights = [6, 14, 9, 18, 11, 16, 7, 13, 10, 15, 6];
   const colorClass =
-    variant === 'me' ? 'bg-white/60' : 'bg-[color:var(--color-muted)]/50';
+    variant === 'me' ? 'bg-white/60' : 'bg-muted/50';
 
   return (
     <div className="flex items-center gap-0.5" aria-hidden="true">
@@ -32,17 +32,17 @@ export function ChatMessage({ message }: TProps) {
       <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
         <div
           className={[
-            'inline-flex items-center gap-2.5 rounded-[18px] px-3 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-[13px]',
+            'inline-flex items-center gap-2.5 rounded-[18px] px-3 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
             isMe
-              ? 'rounded-br-[3px] bg-[color:var(--color-primary)] text-white'
-              : 'rounded-bl-[3px] bg-white text-[color:var(--color-ink)]',
+              ? 'rounded-br-[3px] bg-primary text-white'
+              : 'rounded-bl-[3px] bg-white text-ink',
           ].join(' ')}
           aria-label={`Голосовое сообщение${message.duration ? `, ${message.duration}` : ''}`}
         >
           <div
             className={[
               'w-6 h-6 rounded-full grid place-items-center text-[10px] flex-none',
-              isMe ? 'bg-white/20 text-white' : 'bg-[color:var(--color-primary-pale)] text-[color:var(--color-primary)]',
+              isMe ? 'bg-white/20 text-white' : 'bg-primary-pale text-primary',
             ].join(' ')}
             aria-hidden="true"
           >
@@ -51,7 +51,7 @@ export function ChatMessage({ message }: TProps) {
           <WaveformBars variant={isMe ? 'me' : 'bot'} />
           {message.duration && (
             <span
-              className={`font-mono text-[11.5px] ${isMe ? 'text-white/75' : 'text-[color:var(--color-muted)]'}`}
+              className={`font-mono text-[11.5px] ${isMe ? 'text-white/75' : 'text-muted'}`}
             >
               {message.duration}
             </span>
@@ -64,12 +64,12 @@ export function ChatMessage({ message }: TProps) {
   if (message.type === 'homework') {
     return (
       <div className="flex justify-start">
-        <div className="relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] rounded-bl-[3px] px-3 pb-1.5 pt-2.5 bg-[color:var(--color-surface)] shadow-[0_1px_2px_rgba(0,0,0,.06)] text-[12.5px] text-[color:var(--color-muted)]">
+        <div className="relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] rounded-bl-[3px] px-3 pb-1.5 pt-2.5 bg-surface shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs text-muted">
           {message.text && (
             <span className="font-medium leading-snug">{message.text}</span>
           )}
           {message.translation && (
-            <span className="text-[11px] text-[color:var(--color-muted)] leading-snug border-t border-[color:var(--color-line)] pt-1 mt-0.5">
+            <span className="text-[11px] text-muted leading-snug border-t border-line pt-1 mt-0.5">
               {message.translation}
             </span>
           )}
@@ -82,10 +82,10 @@ export function ChatMessage({ message }: TProps) {
     <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
       <div
         className={[
-          'relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] px-3 pb-1.5 pt-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-[13px]',
+          'relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] px-3 pb-1.5 pt-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
           isMe
             ? 'rounded-br-[3px] bg-[#dbf3c9] text-[#1a3a0e]'
-            : 'rounded-bl-[3px] bg-white text-[color:var(--color-ink)]',
+            : 'rounded-bl-[3px] bg-white text-ink',
         ].join(' ')}
       >
         {message.text && (
@@ -93,13 +93,13 @@ export function ChatMessage({ message }: TProps) {
         )}
 
         {message.meta && (
-          <span className="text-[11px] text-[color:var(--color-muted)] leading-none">
+          <span className="text-[11px] text-muted leading-none">
             {message.meta}
           </span>
         )}
 
         {message.translation && (
-          <span className="text-[11px] text-[color:var(--color-muted)] leading-snug border-t border-[color:var(--color-line)] pt-1 mt-0.5">
+          <span className="text-[11px] text-muted leading-snug border-t border-line pt-1 mt-0.5">
             {message.translation}
           </span>
         )}

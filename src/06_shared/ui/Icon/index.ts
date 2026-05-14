@@ -2,3 +2,8 @@ export { Icon } from './Icon';
 export { CheckIcon } from './Check';
 export { ArrowRightIcon } from './ArrowRight';
 export { CoinIcon } from './Coin';
+export { MicIcon } from './Mic';
+export { PaperPlaneIcon } from './PaperPlane';
+export { PlusIcon } from './Plus';
+export { GiftIcon } from './Gift';
+export { ClockIcon } from './Clock';

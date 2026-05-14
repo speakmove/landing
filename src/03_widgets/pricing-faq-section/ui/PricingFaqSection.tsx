@@ -10,21 +10,21 @@ export async function PricingFaqSection() {
   return (
     <Section id="faq" ariaLabelledBy="faq-heading">
       <Container>
-        <div className="mb-8 max-w-[600px]">
-          <span className="inline-block mb-3 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-3.5 py-1 text-[12px] font-semibold uppercase tracking-wider text-[color:var(--color-muted)]">
+        <div className="mb-8 max-w-150">
+          <span className="inline-block mb-3 rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
             {t('kicker')}
           </span>
           <h2
             id="faq-heading"
-            className="text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-tight tracking-[-0.02em] text-[color:var(--color-ink)] mb-2"
+            className="text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-2"
           >
             {t('title')}
           </h2>
-          <p className="text-[16px] text-[color:var(--color-muted)] leading-relaxed">
+          <p className="text-base text-muted leading-relaxed">
             {t('subtitle')}{' '}
             <a
               href={`mailto:${t('contactEmail')}`}
-              className="text-[color:var(--color-primary)] underline decoration-dotted hover:decoration-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+              className="text-primary underline decoration-dotted hover:decoration-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               {t('contactEmail')}
             </a>

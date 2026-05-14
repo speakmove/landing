@@ -11,7 +11,7 @@ export function ScenarioCard({ scenario }: TProps) {
       as="div"
       className="flex items-start gap-3.5 p-4 text-left transition hover:-translate-y-0.5"
     >
-      <span className="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-[color:var(--color-primary-pale)] text-[color:var(--color-primary-ink)]">
+      <span className="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary-pale text-primary-ink">
         <svg
           width="20"
           height="20"
@@ -28,10 +28,10 @@ export function ScenarioCard({ scenario }: TProps) {
         </svg>
       </span>
       <span className="flex-1">
-        <span className="block font-bold text-[15px] text-[color:var(--color-ink)] mb-0.5">
+        <span className="block font-bold text-sm text-ink mb-0.5">
           {scenario.title}
         </span>
-        <span className="block text-[13px] text-[color:var(--color-muted)] leading-snug">
+        <span className="block text-xs text-muted leading-snug">
           {scenario.subtitle}
         </span>
       </span>
@@ -44,7 +44,7 @@ export function ScenarioCard({ scenario }: TProps) {
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="ml-auto self-center text-[color:var(--color-faint)] flex-none"
+        className="ml-auto self-center text-faint flex-none"
         aria-hidden="true"
       >
         <path d="M9 18l6-6-6-6" />

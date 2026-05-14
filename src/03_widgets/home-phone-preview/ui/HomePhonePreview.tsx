@@ -27,7 +27,7 @@ export async function HomePhonePreview() {
 
       {/* iPhone frame */}
       <div
-        className="max-w-[320px] mx-auto rounded-[52px] p-[3.5px] shadow-[0_24px_60px_rgba(0,0,0,.22),0_0_0_1px_rgba(0,0,0,.06)] relative"
+        className="max-w-80 mx-auto rounded-[52px] p-[3.5px] shadow-[0_24px_60px_rgba(0,0,0,.22),0_0_0_1px_rgba(0,0,0,.06)] relative"
         style={{ background: 'linear-gradient(135deg,#6e6e72 0%,#2a2a2c 50%,#4a4a4d 100%)' }}
       >
         {/* Side buttons (purely decorative) */}
@@ -47,7 +47,7 @@ export async function HomePhonePreview() {
           >
             {/* iOS status bar */}
             <div className="flex items-center justify-between px-5 pt-3 pb-1 text-[#1a1a1a]">
-              <span className="font-bold text-[14px] tabular-nums">11:00</span>
+              <span className="font-bold text-sm tabular-nums">11:00</span>
               <div className="absolute left-1/2 top-3 -translate-x-1/2 inline-flex items-center gap-1 px-2.5 py-0.5 bg-[#1f3aa6] rounded-full">
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="white">
                   <path d="M22 2 L2 9 L11 13 L15 22 Z" />
@@ -89,7 +89,7 @@ export async function HomePhonePreview() {
                 </span>
               </div>
               <div className="flex-1 bg-[#f1f4dd]/95 rounded-full px-3 py-1 text-center">
-                <div className="font-extrabold text-[14px] leading-tight">{botName}</div>
+                <div className="font-extrabold text-sm leading-tight">{botName}</div>
                 <div className="text-[10.5px] text-[#6b7d4c] leading-tight">{botStatus}</div>
               </div>
               <div
@@ -113,7 +113,7 @@ export async function HomePhonePreview() {
               ))}
 
               {/* Voice input mock */}
-              <div className="mt-1 flex items-center gap-2 bg-white/90 rounded-full px-3 py-2 border border-[color:var(--color-line)]">
+              <div className="mt-1 flex items-center gap-2 bg-white/90 rounded-full px-3 py-2 border border-line">
                 <span className="w-6 h-6 rounded-full bg-red-500 flex items-center justify-center flex-none">
                   <svg
                     width="10"
@@ -128,7 +128,7 @@ export async function HomePhonePreview() {
                     <line x1="12" y1="19" x2="12" y2="22" stroke="white" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                 </span>
-                <span className="text-[12px] text-[color:var(--color-muted)] font-medium">
+                <span className="text-xs text-muted font-medium">
                   {micLabel}
                 </span>
                 <span className="ml-auto text-[11px] text-red-500 font-bold tabular-nums">
@@ -143,7 +143,7 @@ export async function HomePhonePreview() {
       {/* Float bubbles on mobile — below phone */}
       <div className="flex gap-3 mt-4 justify-center lg:hidden">
         {floatBubbles.map((bubble, i) => (
-          <FloatBubble key={i} bubble={bubble} className="flex-1 max-w-[160px]" />
+          <FloatBubble key={i} bubble={bubble} className="flex-1 max-w-40" />
         ))}
       </div>
     </div>

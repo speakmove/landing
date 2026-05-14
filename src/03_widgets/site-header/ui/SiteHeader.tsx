@@ -19,24 +19,24 @@ export async function SiteHeader() {
   const tLinks = await getTranslations('HomePage.nav.links');
 
   return (
-    <header className="sticky top-0 z-30 border-b border-[color:var(--color-line)] bg-white/85 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-line bg-white/85 backdrop-blur">
       <Container>
-        <div className="flex min-h-[64px] items-center gap-4 py-3">
+        <div className="flex min-h-16 items-center gap-4 py-3">
           <Link
             href="/"
             aria-label={t('brand')}
-            className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+            className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <Logo />
           </Link>
 
           <nav aria-label="Primary" className="ml-3 hidden lg:flex">
-            <ul className="flex gap-7 text-[14.5px] font-medium text-[color:var(--color-muted)]">
+            <ul className="flex gap-7 text-sm font-medium text-muted">
               {NAV_ITEMS.map((item) => (
                 <li key={item.key}>
                   <Link
                     href={item.href}
-                    className="transition-colors hover:text-[color:var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+                    className="transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {tLinks(item.key)}
                   </Link>

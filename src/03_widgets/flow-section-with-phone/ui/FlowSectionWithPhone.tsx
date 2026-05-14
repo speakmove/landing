@@ -16,7 +16,7 @@ function HowItWorksPhonePreview({ preview }: { preview: TPhonePreview }) {
   return (
     <div aria-hidden="true" className="lg:sticky lg:top-[88px]">
       <div
-        className="w-full max-w-[360px] mx-auto rounded-[36px] p-2.5 shadow-[0_40px_80px_rgba(10,22,18,.18),0_20px_40px_rgba(10,22,18,.14)]"
+        className="w-full max-w-90 mx-auto rounded-[36px] p-2.5 shadow-[0_40px_80px_rgba(10,22,18,.18),0_20px_40px_rgba(10,22,18,.14)]"
         style={{ background: '#0b1220' }}
       >
         <div
@@ -32,10 +32,10 @@ function HowItWorksPhonePreview({ preview }: { preview: TPhonePreview }) {
               SM
             </div>
             <div>
-              <div className="font-bold text-sm text-[color:var(--color-ink)]">
+              <div className="font-bold text-sm text-ink">
                 {preview.botName}
               </div>
-              <div className="text-[11.5px] text-[color:var(--color-muted)]">
+              <div className="text-[11.5px] text-muted">
                 {preview.botStatus}
               </div>
             </div>
@@ -64,17 +64,17 @@ export async function FlowSectionWithPhone() {
       <Container>
         {/* Section header */}
         <div className="max-w-[700px] mx-auto mb-12 text-center">
-          <span className="inline-block font-mono text-[12.5px] font-semibold text-[color:var(--color-primary)] tracking-[0.08em] uppercase mb-3">
+          <span className="inline-block font-mono text-xs font-semibold text-primary tracking-[0.08em] uppercase mb-3">
             {t('kicker')}
           </span>
           <h2
             id="flow-heading"
-            className="font-extrabold tracking-[-0.022em] mb-3 leading-[1.1] text-balance text-[color:var(--color-ink)]"
+            className="font-extrabold tracking-[-0.022em] mb-3 leading-[1.1] text-balance text-ink"
             style={{ fontSize: 'clamp(1.9rem, 3.3vw, 2.5rem)' }}
           >
             {t('title')}
           </h2>
-          <p className="text-[16.5px] text-[color:var(--color-muted)] text-pretty">
+          <p className="text-base text-muted text-pretty">
             {t('subtitle')}
           </p>
         </div>

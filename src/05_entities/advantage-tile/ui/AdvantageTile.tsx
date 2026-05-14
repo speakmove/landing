@@ -15,21 +15,21 @@ export function AdvantageTile({ tile, className }: TProps) {
         </Badge>
       )}
 
-      <h3 className="text-[17px] font-bold text-[color:var(--color-ink)] mb-2 leading-snug">
+      <h3 className="text-[17px] font-bold text-ink mb-2 leading-snug">
         {tile.title}
       </h3>
 
-      <p className="text-[14px] text-[color:var(--color-muted)] leading-relaxed mb-3">
+      <p className="text-sm text-muted leading-relaxed mb-3">
         {tile.description}
       </p>
 
       {tile.vizEquals && (
         <div className="mt-3 mb-2">
-          <span className="inline-block font-mono text-[15px] font-bold text-[color:var(--color-ink)] bg-[color:var(--color-gold-pale)] rounded-lg px-3 py-1.5 border border-[color:var(--color-gold)]">
+          <span className="inline-block font-mono text-sm font-bold text-ink bg-gold-pale rounded-lg px-3 py-1.5 border border-gold">
             {tile.vizEquals}
           </span>
           {tile.vizCap && (
-            <p className="mt-1.5 text-[12px] text-[color:var(--color-muted)]">{tile.vizCap}</p>
+            <p className="mt-1.5 text-xs text-muted">{tile.vizCap}</p>
           )}
         </div>
       )}
@@ -40,10 +40,10 @@ export function AdvantageTile({ tile, className }: TProps) {
             <li key={level}>
               <span
                 className={[
-                  'inline-block rounded-lg px-3 py-1 text-[13px] font-bold border',
+                  'inline-block rounded-lg px-3 py-1 text-xs font-bold border',
                   tile.currentLevel === level
-                    ? 'bg-[color:var(--color-primary)] text-white border-[color:var(--color-primary)]'
-                    : 'bg-[color:var(--color-surface)] text-[color:var(--color-muted)] border-[color:var(--color-line)]',
+                    ? 'bg-primary text-white border-primary'
+                    : 'bg-surface text-muted border-line',
                 ].join(' ')}
               >
                 {level}
@@ -58,9 +58,9 @@ export function AdvantageTile({ tile, className }: TProps) {
           {tile.items.map((item) => (
             <li
               key={item.label}
-              className="flex items-center justify-between text-[13px]"
+              className="flex items-center justify-between text-xs"
             >
-              <span className="text-[color:var(--color-ink)]">{item.label}</span>
+              <span className="text-ink">{item.label}</span>
               {item.reward && (
                 <Badge tone="gold" className="text-[11px]">
                   {item.reward}
@@ -72,17 +72,17 @@ export function AdvantageTile({ tile, className }: TProps) {
       )}
 
       {tile.certificateName && (
-        <div className="mt-3 rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-3">
-          <p className="text-[14px] font-bold text-[color:var(--color-ink)]">
+        <div className="mt-3 rounded-xl border border-line bg-surface p-3">
+          <p className="text-sm font-bold text-ink">
             {tile.certificateName}
           </p>
           {tile.certificateIssuer && (
-            <p className="text-[12px] text-[color:var(--color-muted)] mt-0.5">
+            <p className="text-xs text-muted mt-0.5">
               {tile.certificateIssuer}
             </p>
           )}
           {tile.certificateStatus && (
-            <p className="text-[11px] text-[color:var(--color-muted)] mt-1 italic">
+            <p className="text-[11px] text-muted mt-1 italic">
               {tile.certificateStatus}
             </p>
           )}

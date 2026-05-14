@@ -8,10 +8,10 @@ type TProps = {
 export async function Logo({ className }: TProps) {
   const t = await getTranslations('HomePage.nav');
   return (
-    <span className={cn('inline-flex items-center gap-2.5 text-[18px] font-extrabold tracking-tight', className)}>
+    <span className={cn('inline-flex items-center gap-2.5 text-lg font-extrabold tracking-tight', className)}>
       <span
         aria-hidden="true"
-        className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[color:var(--color-gold-accent)] to-[color:var(--color-gold)] text-[11px] font-extrabold text-white"
+        className="grid h-7 w-7 place-items-center rounded-full bg-linear-to-br from-gold-accent to-gold text-[11px] font-extrabold text-white"
       >
         {t('brandCoinLabel')}
       </span>

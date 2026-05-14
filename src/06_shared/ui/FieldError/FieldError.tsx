@@ -6,7 +6,7 @@ type TProps = {
   className?: string;
 };
 
-export function FieldError({ id, errors, className }: TProps) {
+export const FieldError = ({ id, errors, className }: TProps) => {
   if (!errors) return null;
   const list = Array.isArray(errors) ? errors : [errors];
   if (list.length === 0) return null;
@@ -25,4 +25,4 @@ export function FieldError({ id, errors, className }: TProps) {
       ))}
     </ul>
   );
-}
+};

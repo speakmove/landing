@@ -11,17 +11,17 @@ export async function SmartCriteriaGrid() {
     <Section id="smart" ariaLabelledBy="smart-heading">
       <Container>
         {/* Section header */}
-        <div className="max-w-[640px] mb-10">
-          <span className="inline-block mb-3 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-3.5 py-1 text-[12px] font-semibold uppercase tracking-wider text-[color:var(--color-muted)]">
+        <div className="max-w-160 mb-10">
+          <span className="inline-block mb-3 rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
             {t('kicker')}
           </span>
           <h2
             id="smart-heading"
-            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-[color:var(--color-ink)] mb-3"
+            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-3"
           >
             {t('title')}
           </h2>
-          <p className="text-[17px] text-[color:var(--color-muted)] leading-relaxed">
+          <p className="text-[17px] text-muted leading-relaxed">
             {t('subtitle')}
           </p>
         </div>

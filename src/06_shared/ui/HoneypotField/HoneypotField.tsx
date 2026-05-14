@@ -3,7 +3,7 @@ type TProps = {
   label?: string;
 };
 
-export function HoneypotField({ name, label = 'Do not fill this field' }: TProps) {
+export const HoneypotField = ({ name, label = 'Do not fill this field' }: TProps) => {
   return (
     <div
       aria-hidden="true"
@@ -21,4 +21,4 @@ export function HoneypotField({ name, label = 'Do not fill this field' }: TProps
       />
     </div>
   );
-}
+};

@@ -15,7 +15,7 @@ export async function HomeHero() {
   return (
     <Section
       id="hero"
-      className="relative overflow-hidden py-14 md:py-20 lg:pb-24 bg-[color:var(--color-surface)]"
+      className="relative overflow-hidden py-14 md:py-20 lg:pb-24 bg-surface"
     >
       {/* Subtle grid background */}
       <div
@@ -32,9 +32,9 @@ export async function HomeHero() {
           {/* Left column */}
           <div>
             {/* Eyebrow chip */}
-            <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-line)] bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold text-[color:var(--color-muted)] shadow-[var(--shadow-soft)] md:text-[13px]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold text-muted shadow-(--shadow-soft) md:text-xs">
               <span
-                className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-primary)]"
+                className="h-1.5 w-1.5 rounded-full bg-primary"
                 style={{
                   boxShadow: '0 0 0 4px color-mix(in oklab, var(--color-primary) 20%, transparent)',
                 }}
@@ -48,10 +48,10 @@ export async function HomeHero() {
               style={{ fontSize: 'clamp(2.2rem, 5.2vw, 4.1rem)' }}
             >
               {t('title.before')}
-              <span className="relative text-[color:var(--color-primary)]">
+              <span className="relative text-primary">
                 {t('title.accent')}
                 <span
-                  className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full bg-[color:var(--color-primary)] opacity-30"
+                  className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full bg-primary opacity-30"
                   aria-hidden="true"
                 />
               </span>
@@ -59,7 +59,7 @@ export async function HomeHero() {
             </h1>
 
             {/* Description */}
-            <p className="mb-7 max-w-[560px] text-[17px] leading-[1.55] text-[color:var(--color-muted)]">
+            <p className="mb-7 max-w-140 text-[17px] leading-[1.55] text-muted">
               {t('description')}
             </p>
 
@@ -67,26 +67,26 @@ export async function HomeHero() {
             <div className="mb-8 flex flex-wrap gap-3">
               <a
                 href="#cta"
-                className="inline-flex min-h-[52px] items-center gap-2 rounded-xl bg-[color:var(--color-primary)] px-6 text-base font-semibold text-white transition-colors hover:bg-[color:var(--color-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+                className="inline-flex min-h-13 items-center gap-2 rounded-xl bg-primary px-6 text-base font-semibold text-white transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 {t('ctas.primary')}
                 <ArrowRightIcon size={16} />
               </a>
               <Link
                 href="/#how-it-works"
-                className="inline-flex min-h-[52px] items-center gap-2 rounded-xl border border-[color:var(--color-line-strong)] bg-white px-6 text-base font-semibold text-[color:var(--color-ink)] transition-colors hover:bg-[color:var(--color-surface)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+                className="inline-flex min-h-13 items-center gap-2 rounded-xl border border-line-strong bg-white px-6 text-base font-semibold text-ink transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 {t('ctas.secondary')}
               </Link>
             </div>
 
             {/* Meta points */}
-            <div className="flex flex-wrap gap-4 text-[13.5px] text-[color:var(--color-muted)]">
+            <div className="flex flex-wrap gap-4 text-xs text-muted">
               {metaPoints.map((point) => (
                 <span key={point} className="inline-flex items-center gap-1.5 font-medium">
                   <CheckIcon
                     size={14}
-                    className="text-[color:var(--color-primary)] shrink-0"
+                    className="text-primary shrink-0"
                   />
                   {point}
                 </span>

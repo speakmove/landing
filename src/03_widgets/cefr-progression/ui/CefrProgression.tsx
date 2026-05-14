@@ -10,7 +10,7 @@ function BoldText({ text }: { text: string }) {
     <>
       {parts.map((part, i) =>
         i % 2 === 1 ? (
-          <strong key={i} className="text-[color:var(--color-ink)] font-semibold">
+          <strong key={i} className="text-ink font-semibold">
             {part}
           </strong>
         ) : (
@@ -37,17 +37,17 @@ export async function CefrProgression() {
       <Container>
         {/* Section header */}
         <div className="max-w-[700px] mx-auto mb-12 text-center">
-          <span className="inline-block font-mono text-[12.5px] font-semibold text-[color:var(--color-primary)] tracking-[0.08em] uppercase mb-3">
+          <span className="inline-block font-mono text-xs font-semibold text-primary tracking-[0.08em] uppercase mb-3">
             {t('kicker')}
           </span>
           <h2
             id="cefr-heading"
-            className="font-extrabold tracking-[-0.022em] mb-3 leading-[1.1] text-balance text-[color:var(--color-ink)]"
+            className="font-extrabold tracking-[-0.022em] mb-3 leading-[1.1] text-balance text-ink"
             style={{ fontSize: 'clamp(1.9rem, 3.3vw, 2.5rem)' }}
           >
             {t('title')}
           </h2>
-          <p className="text-[16.5px] text-[color:var(--color-muted)] text-pretty">
+          <p className="text-base text-muted text-pretty">
             {t('subtitle')}
           </p>
         </div>
@@ -64,17 +64,17 @@ export async function CefrProgression() {
           {/* Side panel */}
           <aside
             aria-labelledby="cefr-side-heading"
-            className="rounded-[18px] border border-[color:var(--color-line)] bg-white p-7 shadow-[var(--shadow-soft)]"
+            className="rounded-[18px] border border-line bg-white p-7 shadow-(--shadow-soft)"
           >
             <h3
               id="cefr-side-heading"
-              className="mb-3.5 text-[19px] font-bold tracking-[-0.01em] text-[color:var(--color-ink)]"
+              className="mb-3.5 text-lg font-bold tracking-[-0.01em] text-ink"
             >
               {side.title}
             </h3>
             <ul className="flex flex-col gap-2.5 text-sm">
               {side.items.map((item, i) => (
-                <li key={i} className="flex gap-2.5 items-start text-[color:var(--color-muted)] leading-relaxed">
+                <li key={i} className="flex gap-2.5 items-start text-muted leading-relaxed">
                   {/* Check icon — decorative */}
                   <svg
                     width="18"
@@ -85,7 +85,7 @@ export async function CefrProgression() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="flex-none mt-0.5 text-[color:var(--color-primary)] shrink-0"
+                    className="flex-none mt-0.5 text-primary shrink-0"
                     aria-hidden="true"
                   >
                     <polyline points="20 6 9 17 4 12" />

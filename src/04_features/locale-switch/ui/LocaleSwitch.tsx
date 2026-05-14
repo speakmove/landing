@@ -11,7 +11,7 @@ export function LocaleSwitch() {
 
   return (
     <nav aria-label={t('ariaLabel')}>
-      <ul className="flex items-center gap-0.5 rounded-full border border-[color:var(--color-line)] bg-white p-0.5 text-[12px] font-semibold">
+      <ul className="flex items-center gap-0.5 rounded-full border border-line bg-white p-0.5 text-xs font-semibold">
         {routing.locales.map((locale) => {
           const isActive = locale === current;
           return (
@@ -23,11 +23,11 @@ export function LocaleSwitch() {
                 lang={locale}
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
-                  'inline-flex min-h-[28px] items-center rounded-full px-2.5 transition-colors',
-                  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]',
+                  'inline-flex min-h-7 items-center rounded-full px-2.5 transition-colors',
+                  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
                   isActive
-                    ? 'bg-[color:var(--color-primary)] text-white'
-                    : 'text-[color:var(--color-muted)] hover:text-[color:var(--color-ink)]',
+                    ? 'bg-primary text-white'
+                    : 'text-muted hover:text-ink',
                 )}
               >
                 {t(locale)}

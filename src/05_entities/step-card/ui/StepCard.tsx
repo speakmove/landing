@@ -8,14 +8,14 @@ type TProps = {
 export function StepCard({ step }: TProps) {
   return (
     <Card as="article" className="flex flex-col gap-3">
-      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-[color:var(--color-primary)] text-white font-bold text-[15px] tabular-nums">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary text-white font-bold text-sm tabular-nums">
         {step.num}
       </div>
       <div>
-        <h3 className="text-[16px] font-bold text-[color:var(--color-ink)] mb-1.5 leading-snug">
+        <h3 className="text-base font-bold text-ink mb-1.5 leading-snug">
           {step.title}
         </h3>
-        <p className="text-[14px] text-[color:var(--color-muted)] leading-relaxed">
+        <p className="text-sm text-muted leading-relaxed">
           {step.description}
         </p>
       </div>

@@ -9,16 +9,16 @@ type TProps = PropsWithChildren<{
 }>;
 
 const toneClass: Record<TTone, string> = {
-  neutral: 'bg-white/85 border-[color:var(--color-line)] text-[color:var(--color-muted)]',
-  primary: 'bg-[color:var(--color-primary-pale)] border-[color:var(--color-primary)] text-[color:var(--color-primary-ink)]',
-  gold: 'bg-[color:var(--color-gold-pale)] border-[color:var(--color-gold)] text-[color:var(--color-ink)]',
+  neutral: 'bg-white/85 border-line text-muted',
+  primary: 'bg-primary-pale border-primary text-primary-ink',
+  gold: 'bg-gold-pale border-gold text-ink',
 };
 
-export function Badge({ tone = 'neutral', className, children }: TProps) {
+export const Badge = ({ tone = 'neutral', className, children }: TProps) => {
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-semibold md:text-[13px]',
+        'inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-semibold md:text-xs',
         toneClass[tone],
         className,
       )}
@@ -26,4 +26,4 @@ export function Badge({ tone = 'neutral', className, children }: TProps) {
       {children}
     </span>
   );
-}
+};

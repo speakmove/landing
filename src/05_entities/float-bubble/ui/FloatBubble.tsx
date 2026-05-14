@@ -1,3 +1,4 @@
+import { cn } from '@/shared/model/libs/cn';
 import type { TFloatBubble } from '../model/types';
 
 type TProps = {
@@ -5,21 +6,21 @@ type TProps = {
   className?: string;
 };
 
-export function FloatBubble({ bubble, className = '' }: TProps) {
+export const FloatBubble = ({ bubble, className = '' }: TProps) => {
   return (
     <div
       aria-hidden="true"
-      className={[
-        'rounded-xl border border-[color:var(--color-line)] bg-white px-3 py-2 shadow-[var(--shadow-mid)] text-left',
+      className={cn(
+        'rounded-xl border border-line bg-white px-3 py-2 shadow-(--shadow-mid) text-left',
         className,
-      ].join(' ')}
+      )}
     >
-      <p className="text-[13px] font-bold text-[color:var(--color-ink)] leading-tight">
+      <p className="text-xs font-bold text-ink leading-tight">
         {bubble.title}
       </p>
-      <p className="text-[11px] text-[color:var(--color-muted)] leading-tight mt-0.5">
+      <p className="text-[11px] text-muted leading-tight mt-0.5">
         {bubble.subtitle}
       </p>
     </div>
   );
-}
+};

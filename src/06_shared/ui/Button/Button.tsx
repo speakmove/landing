@@ -11,19 +11,19 @@ type TProps = ComponentPropsWithRef<'button'> & {
 
 const variantClass: Record<TVariant, string> = {
   primary:
-    'bg-[color:var(--color-primary)] text-white hover:bg-[color:var(--color-primary-hover)] focus-visible:outline-[color:var(--color-primary-ink)]',
+    'bg-primary text-white hover:bg-primary-hover focus-visible:outline-primary-ink',
   outline:
-    'border border-[color:var(--color-line-strong)] bg-white text-[color:var(--color-ink)] hover:bg-[color:var(--color-surface)] focus-visible:outline-[color:var(--color-primary)]',
-  ghost: 'bg-transparent text-[color:var(--color-ink)] hover:bg-[color:var(--color-surface)]',
+    'border border-line-strong bg-white text-ink hover:bg-surface focus-visible:outline-primary',
+  ghost: 'bg-transparent text-ink hover:bg-surface',
 };
 
 const sizeClass: Record<TSize, string> = {
-  sm: 'min-h-[36px] px-3 text-sm',
-  md: 'min-h-[44px] px-5 text-[15px]',
-  lg: 'min-h-[52px] px-6 text-base',
+  sm: 'min-h-9 px-3 text-sm',
+  md: 'min-h-11 px-5 text-sm',
+  lg: 'min-h-13 px-6 text-base',
 };
 
-export function Button({
+export const Button = ({
   ref,
   type = 'button',
   variant = 'primary',
@@ -31,7 +31,7 @@ export function Button({
   className,
   children,
   ...rest
-}: TProps) {
+}: TProps) => {
   return (
     <button
       ref={ref}
@@ -49,4 +49,4 @@ export function Button({
       {children}
     </button>
   );
-}
+};

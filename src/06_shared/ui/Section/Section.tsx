@@ -7,7 +7,7 @@ type TProps = PropsWithChildren<{
   ariaLabelledBy?: string;
 }>;
 
-export function Section({ id, className, ariaLabelledBy, children }: TProps) {
+export const Section = ({ id, className, ariaLabelledBy, children }: TProps) => {
   return (
     <section
       id={id}
@@ -17,4 +17,4 @@ export function Section({ id, className, ariaLabelledBy, children }: TProps) {
       {children}
     </section>
   );
-}
+};

@@ -14,14 +14,14 @@ export function SuccessBlockClient({ position, bonusThreshold = 15 }: TProps) {
 
   return (
     <Section>
-      <Container className="max-w-[720px]">
+      <Container className="max-w-180">
         <div
           role="status"
-          className="rounded-2xl border border-[color:var(--color-line)] bg-white p-8 text-center shadow-[var(--shadow-soft)]"
+          className="rounded-2xl border border-line bg-white p-8 text-center shadow-(--shadow-soft)"
         >
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[color:var(--color-primary-pale)]">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary-pale">
             <svg
-              className="h-8 w-8 text-[color:var(--color-primary)]"
+              className="h-8 w-8 text-primary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -32,17 +32,17 @@ export function SuccessBlockClient({ position, bonusThreshold = 15 }: TProps) {
             </svg>
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">{t('title')}</h1>
-          <p className="mt-3 text-[color:var(--color-muted)]">{t('subtitle')}</p>
+          <p className="mt-3 text-muted">{t('subtitle')}</p>
           {typeof position === 'number' ? (
-            <p className="mt-6 font-mono text-2xl font-bold text-[color:var(--color-primary)]">
+            <p className="mt-6 font-mono text-2xl font-bold text-primary">
               {t('positionTemplate', { position })}
             </p>
           ) : null}
           {eligible ? (
-            <div className="mt-8 rounded-2xl border border-[color:var(--color-gold)] bg-[color:var(--color-gold-pale)] p-6 text-left">
+            <div className="mt-8 rounded-2xl border border-gold bg-gold-pale p-6 text-left">
               <Badge tone="gold">{t('bonusBlock.badge')}</Badge>
               <h2 className="mt-3 text-xl font-bold">{t('bonusBlock.title')}</h2>
-              <p className="mt-2 text-sm text-[color:var(--color-ink)]">{t('bonusBlock.text')}</p>
+              <p className="mt-2 text-sm text-ink">{t('bonusBlock.text')}</p>
             </div>
           ) : null}
         </div>

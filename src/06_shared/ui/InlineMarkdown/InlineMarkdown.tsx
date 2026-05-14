@@ -12,10 +12,10 @@ type TProps = {
 
 const TOKEN_RE = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g;
 
-export function InlineMarkdown({ text }: TProps) {
+export const InlineMarkdown = ({ text }: TProps) => {
   const parts = text.split(TOKEN_RE).filter((part) => part.length > 0);
   return <>{parts.map((part, idx) => renderPart(part, idx))}</>;
-}
+};
 
 function renderPart(part: string, key: number): ReactNode {
   if (part.startsWith('**') && part.endsWith('**')) {
@@ -25,7 +25,7 @@ function renderPart(part: string, key: number): ReactNode {
     return (
       <code
         key={key}
-        className="rounded bg-[color:var(--color-surface)] px-1.5 py-0.5 font-mono text-[0.9em]"
+        className="rounded bg-surface px-1.5 py-0.5 font-mono text-[0.9em]"
       >
         {part.slice(1, -1)}
       </code>
@@ -39,7 +39,7 @@ function renderPart(part: string, key: number): ReactNode {
         <Link
           key={key}
           href={href}
-          className="text-[color:var(--color-primary)] underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+          className="text-primary underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           {label}
         </Link>
@@ -52,7 +52,7 @@ function renderPart(part: string, key: number): ReactNode {
           href={href}
           rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
           target={href.startsWith('http') ? '_blank' : undefined}
-          className="text-[color:var(--color-primary)] underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+          className="text-primary underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           {label}
         </a>

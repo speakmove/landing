@@ -5,6 +5,6 @@ type TProps = PropsWithChildren<{
   className?: string;
 }>;
 
-export function Container({ children, className }: TProps) {
+export const Container = ({ children, className }: TProps) => {
   return <div className={cn('mx-auto w-full max-w-[1180px] px-5', className)}>{children}</div>;
-}
+};

@@ -36,10 +36,10 @@ function parseConsentLabel(input: string): TConsentSegment[] {
 }
 
 const selectCls = [
-  'block w-full rounded-xl border bg-white px-4 py-2.5 text-[15px] text-[color:var(--color-ink)] outline-none transition-colors',
-  'min-h-[44px]',
-  'focus-visible:border-[color:var(--color-primary)] focus-visible:ring-2 focus-visible:ring-[color:var(--color-primary-pale)]',
-  'disabled:cursor-not-allowed disabled:bg-[color:var(--color-surface)]',
+  'block w-full rounded-xl border bg-white px-4 py-2.5 text-sm text-ink outline-none transition-colors',
+  'min-h-11',
+  'focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary-pale',
+  'disabled:cursor-not-allowed disabled:bg-surface',
 ].join(' ');
 
 export function WaitlistForm() {
@@ -237,7 +237,7 @@ export function WaitlistForm() {
                 selectCls,
                 state.fieldErrors['segment']
                   ? 'border-red-500 focus-visible:ring-red-100'
-                  : 'border-[color:var(--color-line-strong)]',
+                  : 'border-line-strong',
               )}
             >
               <option value="" disabled>
@@ -271,7 +271,7 @@ export function WaitlistForm() {
                 selectCls,
                 state.fieldErrors['lang']
                   ? 'border-red-500 focus-visible:ring-red-100'
-                  : 'border-[color:var(--color-line-strong)]',
+                  : 'border-line-strong',
               )}
             >
               <option value="">{tForm('fields.lang.placeholder')}</option>
@@ -282,7 +282,7 @@ export function WaitlistForm() {
               ))}
             </select>
           </div>
-          <p id={langHintId} className="mt-1.5 text-xs text-[color:var(--color-muted)]">
+          <p id={langHintId} className="mt-1.5 text-xs text-muted">
             {tForm('fields.lang.hint')}
           </p>
         </div>
@@ -309,7 +309,7 @@ export function WaitlistForm() {
                 selectCls,
                 state.fieldErrors['country']
                   ? 'border-red-500 focus-visible:ring-red-100'
-                  : 'border-[color:var(--color-line-strong)]',
+                  : 'border-line-strong',
               )}
             >
               <option value="" disabled>
@@ -326,14 +326,14 @@ export function WaitlistForm() {
             id={countryErrorId}
             errors={translateFieldErrors(state.fieldErrors['country'], 'country')}
           />
-          <p id={countryHintId} className="mt-1.5 text-xs text-[color:var(--color-muted)]">
+          <p id={countryHintId} className="mt-1.5 text-xs text-muted">
             {tForm('fields.country.hint')}
           </p>
         </div>
 
         {/* plan — radio group */}
         <fieldset>
-          <legend className="block text-sm font-medium text-[color:var(--color-ink)]">
+          <legend className="block text-sm font-medium text-ink">
             {tForm('fields.plan.label')}
             <span className="ml-1 text-red-500" aria-hidden="true">
               *
@@ -351,10 +351,10 @@ export function WaitlistForm() {
                   key={opt.value}
                   className={cn(
                     'relative flex cursor-pointer flex-col gap-1 rounded-xl border p-4 transition-colors',
-                    'has-[:checked]:border-[color:var(--color-primary)] has-[:checked]:bg-[color:var(--color-primary-pale)]',
+                    'has-[:checked]:border-primary has-[:checked]:bg-primary-pale',
                     state.fieldErrors['plan']
                       ? 'border-red-500'
-                      : 'border-[color:var(--color-line-strong)] hover:border-[color:var(--color-primary)]',
+                      : 'border-line-strong hover:border-primary',
                   )}
                 >
                   <input
@@ -366,8 +366,8 @@ export function WaitlistForm() {
                     disabled={pending}
                     className="sr-only"
                   />
-                  <span className="font-semibold text-[color:var(--color-ink)]">{opt.title}</span>
-                  <span className="text-sm text-[color:var(--color-muted)]">{opt.subtitle}</span>
+                  <span className="font-semibold text-ink">{opt.title}</span>
+                  <span className="text-sm text-muted">{opt.subtitle}</span>
                 </label>
               );
             })}
@@ -391,11 +391,11 @@ export function WaitlistForm() {
               aria-invalid={!!state.fieldErrors['consent']}
               aria-describedby={state.fieldErrors['consent'] ? consentErrorId : undefined}
               disabled={pending}
-              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-[color:var(--color-line-strong)] accent-[color:var(--color-primary)]"
+              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-line-strong accent-primary"
             />
             <label
               htmlFor="consent"
-              className="text-sm leading-snug text-[color:var(--color-muted)]"
+              className="text-sm leading-snug text-muted"
             >
               {consentSegments.map((seg, i) => {
                 if (seg.type === 'link') {
@@ -403,7 +403,7 @@ export function WaitlistForm() {
                     <Link
                       key={i}
                       href={seg.href}
-                      className="underline hover:text-[color:var(--color-ink)]"
+                      className="underline hover:text-ink"
                       onClick={(e) => e.stopPropagation()}
                     >
                       {seg.text}
@@ -433,7 +433,7 @@ export function WaitlistForm() {
           {/* TODO(i18n): add 'submitting' key to WaitlistPage.form */}
           {pending ? 'Отправка...' : tForm('submit')}
         </Button>
-        <p className="mt-3 text-center text-xs text-[color:var(--color-muted)]">
+        <p className="mt-3 text-center text-xs text-muted">
           {tForm('hint')}
         </p>
       </div>

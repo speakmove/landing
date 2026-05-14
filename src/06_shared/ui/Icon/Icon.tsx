@@ -7,7 +7,7 @@ type TProps = ComponentPropsWithRef<'svg'> & {
   children: ReactNode;
 };
 
-export function Icon({ ref, size = 16, label, className, children, ...rest }: TProps) {
+export const Icon = ({ ref, size = 16, label, className, children, ...rest }: TProps) => {
   const ariaProps = label
     ? { role: 'img' as const, 'aria-label': label }
     : { 'aria-hidden': true as const, focusable: false as const };
@@ -29,4 +29,4 @@ export function Icon({ ref, size = 16, label, className, children, ...rest }: TP
       {children}
     </svg>
   );
-}
+};

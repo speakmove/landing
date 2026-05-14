@@ -26,26 +26,26 @@ export async function LegalPageLayout({ namespace }: TProps) {
   return (
     <main id="main-content">
       <Section className="pb-0">
-        <Container className="max-w-[820px]">
+        <Container className="max-w-205">
           <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">{meta.title}</h1>
-          <p className="mt-4 text-[15px] text-[color:var(--color-muted)]">
+          <p className="mt-4 text-sm text-muted">
             <span>Effective: {meta.effectiveDate}</span>
             <span aria-hidden="true"> · </span>
             <span>Last updated: {meta.lastUpdated}</span>
           </p>
-          <p className="mt-6 leading-relaxed text-[color:var(--color-ink)]">{meta.intro}</p>
+          <p className="mt-6 leading-relaxed text-ink">{meta.intro}</p>
         </Container>
       </Section>
 
       <Section className="pt-10">
-        <Container className="max-w-[820px]">
-          <nav aria-label="Sections" className="mb-12 rounded-2xl border border-[color:var(--color-line)] bg-white p-5">
+        <Container className="max-w-205">
+          <nav aria-label="Sections" className="mb-12 rounded-2xl border border-line bg-white p-5">
             <ol className="grid gap-2 text-sm md:grid-cols-2">
               {sections.map((s) => (
                 <li key={s.id}>
                   <a
                     href={`#${s.id}`}
-                    className="text-[color:var(--color-muted)] hover:text-[color:var(--color-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-primary)]"
+                    className="text-muted hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {s.heading}
                   </a>
@@ -59,7 +59,7 @@ export async function LegalPageLayout({ namespace }: TProps) {
               <section key={section.id} id={section.id} aria-labelledby={`${section.id}-heading`}>
                 <h2
                   id={`${section.id}-heading`}
-                  className="text-xl font-bold text-[color:var(--color-ink)] md:text-2xl"
+                  className="text-xl font-bold text-ink md:text-2xl"
                 >
                   {section.heading}
                 </h2>
@@ -67,7 +67,7 @@ export async function LegalPageLayout({ namespace }: TProps) {
                   {section.body.map((block, idx) => {
                     if (typeof block === 'string') {
                       return (
-                        <p key={idx} className="leading-relaxed text-[color:var(--color-ink)]">
+                        <p key={idx} className="leading-relaxed text-ink">
                           <InlineMarkdown text={block} />
                         </p>
                       );
@@ -76,7 +76,7 @@ export async function LegalPageLayout({ namespace }: TProps) {
                       return (
                         <ul
                           key={idx}
-                          className="ml-5 list-disc space-y-2 text-[color:var(--color-ink)]"
+                          className="ml-5 list-disc space-y-2 text-ink"
                         >
                           {block.items.map((item, j) => (
                             <li key={j} className="leading-relaxed">

@@ -60,21 +60,21 @@ export async function WaitlistPage() {
         <Container className="max-w-[780px]">
           <div className="text-center">
             <Badge tone="primary">{kicker}</Badge>
-            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-[color:var(--color-ink)] md:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-ink md:text-5xl lg:text-6xl">
               {title}
             </h1>
-            <p className="mx-auto mt-5 max-w-[620px] text-[17px] leading-relaxed text-[color:var(--color-muted)]">
+            <p className="mx-auto mt-5 max-w-[620px] text-[17px] leading-relaxed text-muted">
               {description}
             </p>
           </div>
 
           {/* Bonus banner */}
-          <div className="mt-8 rounded-2xl border border-[color:var(--color-gold)] bg-[color:var(--color-gold-pale)] p-5">
+          <div className="mt-8 rounded-2xl border border-gold bg-gold-pale p-5">
             <div className="flex flex-wrap items-start gap-3">
               <Badge tone="gold">{bonusBadge}</Badge>
-              <p className="font-semibold text-[color:var(--color-ink)]">{bonusText}</p>
+              <p className="font-semibold text-ink">{bonusText}</p>
             </div>
-            <p className="mt-3 text-xs leading-relaxed text-[color:var(--color-muted)] italic">
+            <p className="mt-3 text-xs leading-relaxed text-muted italic">
               {bonusNote}
             </p>
           </div>
@@ -91,8 +91,8 @@ export async function WaitlistPage() {
             {perks.map((perk, i) => (
               <Card key={i} as="li" className="flex flex-col gap-2 p-5">
                 <PerkIcon name={perk.icon} />
-                <p className="font-semibold text-[color:var(--color-ink)]">{perk.title}</p>
-                <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
+                <p className="font-semibold text-ink">{perk.title}</p>
+                <p className="text-sm text-muted leading-relaxed">
                   {perk.subtitle}
                 </p>
               </Card>
@@ -103,15 +103,15 @@ export async function WaitlistPage() {
 
       {/* Form section */}
       <Section id="waitlist-form">
-        <Container className="max-w-[640px]">
+        <Container className="max-w-160">
           {/* Progress bar */}
-          <div className="mb-8 rounded-2xl border border-[color:var(--color-line)] bg-white p-5 shadow-[var(--shadow-soft)]">
+          <div className="mb-8 rounded-2xl border border-line bg-white p-5 shadow-(--shadow-soft)">
             <div className="flex items-center justify-between text-sm font-medium">
-              <span className="text-[color:var(--color-ink)]">{occupiedText}</span>
-              <span className="text-[color:var(--color-muted)]">{remainingText}</span>
+              <span className="text-ink">{occupiedText}</span>
+              <span className="text-muted">{remainingText}</span>
             </div>
             <div
-              className="relative mt-3 h-2.5 overflow-hidden rounded-full bg-[color:var(--color-line)]"
+              className="relative mt-3 h-2.5 overflow-hidden rounded-full bg-line"
               role="progressbar"
               aria-valuenow={current}
               aria-valuemin={0}
@@ -119,12 +119,12 @@ export async function WaitlistPage() {
               aria-label={occupiedText}
             >
               <div
-                className="absolute inset-y-0 left-0 rounded-full bg-[color:var(--color-primary)] transition-all"
+                className="absolute inset-y-0 left-0 rounded-full bg-primary transition-all"
                 style={{ width: `${Math.min(100, (current / total) * 100)}%` }}
               />
             </div>
             {bonusRemainingText ? (
-              <p className="mt-2 text-xs text-[color:var(--color-muted)]">{bonusRemainingText}</p>
+              <p className="mt-2 text-xs text-muted">{bonusRemainingText}</p>
             ) : null}
           </div>
 
@@ -132,11 +132,11 @@ export async function WaitlistPage() {
           <Card className="p-6 sm:p-8">
             <h2
               id="waitlist-form-title"
-              className="text-2xl font-extrabold tracking-tight text-[color:var(--color-ink)]"
+              className="text-2xl font-extrabold tracking-tight text-ink"
             >
               {formTitle}
             </h2>
-            <p className="mt-2 text-sm text-[color:var(--color-muted)]">{formSubtitle}</p>
+            <p className="mt-2 text-sm text-muted">{formSubtitle}</p>
             <div className="mt-6">
               <WaitlistForm />
             </div>

@@ -3,11 +3,11 @@ import { Icon } from './Icon';
 
 type TProps = Omit<ComponentProps<typeof Icon>, 'children'>;
 
-export const CoinIcon = (props: TProps) => {
+export const ClockIcon = (props: TProps) => {
   return (
     <Icon strokeWidth={2} {...props}>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M8 12h8M12 8v8" />
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
     </Icon>
   );
 };

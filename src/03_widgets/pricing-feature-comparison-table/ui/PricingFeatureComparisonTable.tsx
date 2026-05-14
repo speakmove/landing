@@ -36,29 +36,29 @@ export async function PricingFeatureComparisonTable() {
   return (
     <Section id="compare" ariaLabelledBy="compare-heading">
       <Container>
-        <div className="mb-8 text-center max-w-[600px] mx-auto">
-          <span className="inline-block mb-3 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-3.5 py-1 text-[12px] font-semibold uppercase tracking-wider text-[color:var(--color-muted)]">
+        <div className="mb-8 text-center max-w-150 mx-auto">
+          <span className="inline-block mb-3 rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
             {data.kicker}
           </span>
           <h2
             id="compare-heading"
-            className="text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-tight tracking-[-0.02em] text-[color:var(--color-ink)] mb-2"
+            className="text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-2"
           >
             {data.title}
           </h2>
-          <p className="text-[16px] text-[color:var(--color-muted)] leading-relaxed">
+          <p className="text-base text-muted leading-relaxed">
             {data.subtitle}
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-[color:var(--color-line)]">
-          <table className="w-full min-w-[560px] border-collapse text-[14px]">
+        <div className="overflow-x-auto rounded-2xl border border-line">
+          <table className="w-full min-w-[560px] border-collapse text-sm">
             <caption className="sr-only">{data.title}</caption>
             <thead>
-              <tr className="border-b border-[color:var(--color-line)] bg-[color:var(--color-surface)]">
+              <tr className="border-b border-line bg-surface">
                 <th
                   scope="col"
-                  className="py-3 px-4 text-left font-semibold text-[color:var(--color-muted)] w-[40%]"
+                  className="py-3 px-4 text-left font-semibold text-muted w-[40%]"
                 >
                   {data.columns[0] || 'Функция'}
                 </th>
@@ -69,8 +69,8 @@ export async function PricingFeatureComparisonTable() {
                     className={[
                       'py-3 px-4 text-center font-bold',
                       col === data.highlightColumn
-                        ? 'text-[color:var(--color-gold)] bg-[color:var(--color-gold-pale)]'
-                        : 'text-[color:var(--color-ink)]',
+                        ? 'text-gold bg-gold-pale'
+                        : 'text-ink',
                     ].join(' ')}
                   >
                     {col}
@@ -83,12 +83,12 @@ export async function PricingFeatureComparisonTable() {
                 <>
                   <tr
                     key={`group-${group.name}`}
-                    className="border-b border-[color:var(--color-line)] bg-[color:var(--color-surface)]"
+                    className="border-b border-line bg-surface"
                   >
                     <th
                       colSpan={4}
                       scope="colgroup"
-                      className="py-2 px-4 text-left text-[12px] font-bold uppercase tracking-wider text-[color:var(--color-muted)]"
+                      className="py-2 px-4 text-left text-xs font-bold uppercase tracking-wider text-muted"
                     >
                       {group.name}
                     </th>
@@ -96,11 +96,11 @@ export async function PricingFeatureComparisonTable() {
                   {group.rows.map((row) => (
                     <tr
                       key={row.feature}
-                      className="border-b border-[color:var(--color-line)] last:border-0 even:bg-[color:var(--color-surface)]/40"
+                      className="border-b border-line last:border-0 even:bg-surface/40"
                     >
                       <th
                         scope="row"
-                        className="py-3 px-4 text-left font-normal text-[color:var(--color-ink)]"
+                        className="py-3 px-4 text-left font-normal text-ink"
                       >
                         {row.feature}
                       </th>
@@ -113,9 +113,9 @@ export async function PricingFeatureComparisonTable() {
                             className={[
                               'py-3 px-4 text-center',
                               isHighlight
-                                ? 'bg-[color:var(--color-gold-pale)]/30 text-[color:var(--color-ink)] font-medium'
-                                : 'text-[color:var(--color-muted)]',
-                              val === '—' ? 'text-[color:var(--color-muted)] opacity-40' : '',
+                                ? 'bg-gold-pale/30 text-ink font-medium'
+                                : 'text-muted',
+                              val === '—' ? 'text-muted opacity-40' : '',
                             ].join(' ')}
                           >
                             {val}

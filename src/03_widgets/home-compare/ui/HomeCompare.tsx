@@ -16,16 +16,16 @@ export async function HomeCompare() {
     <Section
       id="compare"
       ariaLabelledBy="compare-heading"
-      className="bg-[color:var(--color-surface)]"
+      className="bg-surface"
     >
       <Container>
-        <div className="mb-10 max-w-[640px]">
-          <span className="inline-block mb-3 rounded-full border border-[color:var(--color-line)] bg-white px-3.5 py-1 text-[12px] font-semibold uppercase tracking-wider text-[color:var(--color-muted)]">
+        <div className="mb-10 max-w-160">
+          <span className="inline-block mb-3 rounded-full border border-line bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
             {t('kicker')}
           </span>
           <h2
             id="compare-heading"
-            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-[color:var(--color-ink)] mb-3"
+            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-3"
           >
             {t('title')}
           </h2>
@@ -33,7 +33,7 @@ export async function HomeCompare() {
 
         {/* Horizontal scroll wrapper for mobile */}
         <div className="overflow-x-auto -mx-5 px-5">
-          <table className="w-full min-w-[640px] border-collapse text-[14px]">
+          <table className="w-full min-w-[640px] border-collapse text-sm">
             <caption className="sr-only">{t('title')}</caption>
             <thead>
               <tr>
@@ -43,10 +43,10 @@ export async function HomeCompare() {
                     scope="col"
                     className={[
                       'py-3 px-4 text-left font-bold whitespace-nowrap',
-                      colIdx === 0 ? 'w-[200px] text-[color:var(--color-muted)]' : '',
+                      colIdx === 0 ? 'w-[200px] text-muted' : '',
                       colIdx === highlightIdx
-                        ? 'text-[color:var(--color-primary)] bg-[color:var(--color-primary-pale)] rounded-t-xl border-x border-t border-[color:var(--color-primary)]'
-                        : 'text-[color:var(--color-ink)] border-b border-[color:var(--color-line)]',
+                        ? 'text-primary bg-primary-pale rounded-t-xl border-x border-t border-primary'
+                        : 'text-ink border-b border-line',
                     ].join(' ')}
                   >
                     {col}
@@ -60,11 +60,11 @@ export async function HomeCompare() {
                 return (
                   <tr
                     key={rowIdx}
-                    className="border-b border-[color:var(--color-line)] last:border-0"
+                    className="border-b border-line last:border-0"
                   >
                     <th
                       scope="row"
-                      className="py-3 px-4 font-medium text-left text-[color:var(--color-ink)] whitespace-nowrap"
+                      className="py-3 px-4 font-medium text-left text-ink whitespace-nowrap"
                     >
                       {row.feature}
                     </th>
@@ -78,14 +78,14 @@ export async function HomeCompare() {
                             'py-3 px-4 text-center',
                             isHighlight
                               ? [
-                                  'font-semibold text-[color:var(--color-primary-ink)] bg-[color:var(--color-primary-pale)] border-x border-[color:var(--color-primary)]',
+                                  'font-semibold text-primary-ink bg-primary-pale border-x border-primary',
                                   isLast ? 'rounded-b-xl border-b' : '',
                                 ].join(' ')
-                              : 'text-[color:var(--color-muted)]',
+                              : 'text-muted',
                           ].join(' ')}
                         >
                           {val === 'Да' || val === 'Есть' || val === 'Полный' ? (
-                            <span className="inline-flex items-center justify-center gap-1 text-[color:var(--color-primary)] font-semibold">
+                            <span className="inline-flex items-center justify-center gap-1 text-primary font-semibold">
                               <svg
                                 width="14"
                                 height="14"
@@ -102,7 +102,7 @@ export async function HomeCompare() {
                               {val}
                             </span>
                           ) : val === '—' ? (
-                            <span className="text-[color:var(--color-faint)]" aria-label="Недоступно">
+                            <span className="text-faint" aria-label="Недоступно">
                               —
                             </span>
                           ) : (
@@ -119,7 +119,7 @@ export async function HomeCompare() {
         </div>
 
         {/* Footnote */}
-        <p className="mt-5 text-[12px] text-[color:var(--color-muted)] leading-relaxed">
+        <p className="mt-5 text-xs text-muted leading-relaxed">
           {t('footnote')}
         </p>
       </Container>

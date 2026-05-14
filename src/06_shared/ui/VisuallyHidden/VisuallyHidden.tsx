@@ -4,11 +4,11 @@ type TProps<T extends ElementType = 'span'> = {
   as?: T;
 } & Omit<ComponentPropsWithRef<T>, 'as'>;
 
-export function VisuallyHidden<T extends ElementType = 'span'>({
+export const VisuallyHidden = <T extends ElementType = 'span'>({
   as,
   className = '',
   ...rest
-}: TProps<T>) {
+}: TProps<T>) => {
   const Tag = as ?? 'span';
   return (
     <Tag
@@ -17,4 +17,4 @@ export function VisuallyHidden<T extends ElementType = 'span'>({
       {...(rest as object)}
     />
   );
-}
+};

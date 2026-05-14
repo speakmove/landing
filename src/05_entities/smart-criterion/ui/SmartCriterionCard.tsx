@@ -11,20 +11,20 @@ export function SmartCriterionCard({ criterion }: TProps) {
       <div className="flex items-center gap-3">
         <div
           aria-hidden="true"
-          className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-[color:var(--color-primary)] text-white font-extrabold text-[22px] font-mono"
+          className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-primary text-white font-extrabold text-[22px] font-mono"
         >
           {criterion.letter}
         </div>
         <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-[color:var(--color-muted)] font-mono">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-muted font-mono">
             {criterion.eng}
           </div>
-          <div className="font-bold text-[17px] text-[color:var(--color-ink)] leading-tight">
+          <div className="font-bold text-[17px] text-ink leading-tight">
             {criterion.title}
           </div>
         </div>
       </div>
-      <p className="text-[14px] text-[color:var(--color-muted)] leading-relaxed">
+      <p className="text-sm text-muted leading-relaxed">
         {criterion.description}
       </p>
     </Card>
