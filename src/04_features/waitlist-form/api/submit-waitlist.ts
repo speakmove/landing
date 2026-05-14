@@ -37,7 +37,7 @@ export async function submitWaitlist(
   }
 
   try {
-    console.log('[waitlist:stub]', parsed.data);
+    console.log('[waitlist:stub] received submission', { email: parsed.data.email });
     // Stub: assign position 158 (current+1 from WaitlistPage.form.progress.current=157)
     return { success: true, position: 158, errors: [], fieldErrors: {}, prev };
   } catch (error) {
