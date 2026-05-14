@@ -14,6 +14,7 @@ type TQualification = {
 
 export const HomeUkraineProgramme = async () => {
   const t = await getTranslations('HomePage.ukrainianProgramme');
+  const tableHeader = t.raw('tableHeader') as { label: string; standard: string; ua: string };
 
   const prices = t.raw('prices') as unknown as TPrice[];
   const features = t.raw('features') as unknown as string[];
@@ -29,7 +30,7 @@ export const HomeUkraineProgramme = async () => {
         <div className="max-w-190 mx-auto">
           {/* Header */}
           <div className="mb-8">
-            <span className="text-3xl" role="img" aria-label="Прапор України">
+            <span className="text-3xl" role="img" aria-label={t('flagAriaLabel')}>
               {t('flag')}
             </span>
             <span className="ml-3 inline-block mb-3 rounded-full border border-line bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
@@ -57,16 +58,13 @@ export const HomeUkraineProgramme = async () => {
                 <thead>
                   <tr className="border-b border-line">
                     <th scope="col" className="py-2 px-3 text-left font-semibold text-muted">
-                      {/* TODO(i18n): hoist to messages/ru.json HomePage.ukrainianProgramme.tableHeader.label */}
-                      Тариф
+                      {tableHeader.label}
                     </th>
                     <th scope="col" className="py-2 px-3 text-center font-semibold text-muted">
-                      {/* TODO(i18n): hoist to messages/ru.json HomePage.ukrainianProgramme.tableHeader.standard */}
-                      Стандарт
+                      {tableHeader.standard}
                     </th>
                     <th scope="col" className="py-2 px-3 text-center font-bold text-primary">
-                      {/* TODO(i18n): hoist to messages/ru.json HomePage.ukrainianProgramme.tableHeader.ua */}
-                      Для України
+                      {tableHeader.ua}
                     </th>
                   </tr>
                 </thead>

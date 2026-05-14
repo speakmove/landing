@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { cn } from '@/shared/model/libs/cn';
 import { Badge } from '@/shared/ui';
 import type { TChatMessage } from '../model/types';
@@ -25,7 +26,8 @@ const WaveformBars = ({ variant }: { variant: 'bot' | 'me' }) => {
   );
 }
 
-export const ChatMessage = ({ message }: TProps) => {
+export const ChatMessage = async ({ message }: TProps) => {
+  const tCommon = await getTranslations('Common');
   const isMe = message.from === 'me';
 
   if (message.type === 'voice') {
@@ -38,7 +40,7 @@ export const ChatMessage = ({ message }: TProps) => {
               ? 'rounded-br-[3px] bg-primary text-white'
               : 'rounded-bl-[3px] bg-white text-ink',
           )}
-          aria-label={`Голосовое сообщение${message.duration ? `, ${message.duration}` : ''}`}
+          aria-label={`${tCommon('aria.voiceMessage')}${message.duration ? `, ${message.duration}` : ''}`}
         >
           <div
             className={cn(

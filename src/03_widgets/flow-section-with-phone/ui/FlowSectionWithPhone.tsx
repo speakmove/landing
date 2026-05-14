@@ -55,6 +55,7 @@ const HowItWorksPhonePreview = ({ preview }: { preview: TPhonePreview }) => {
 
 export const FlowSectionWithPhone = async () => {
   const t = await getTranslations('HowItWorksPage.flow');
+  const tCommon = await getTranslations('Common');
 
   const steps = t.raw('steps') as unknown as TStep[];
   const phonePreview = t.raw('phonePreview') as unknown as TPhonePreview;
@@ -82,7 +83,7 @@ export const FlowSectionWithPhone = async () => {
         {/* Two-column: steps + phone */}
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Ordered list of steps */}
-          <ol className="flex flex-col gap-3" aria-label="Шаги пользовательского пути">
+          <ol className="flex flex-col gap-3" aria-label={tCommon('aria.flowSteps')}>
             {steps.map((step) => (
               <StepCard key={step.num} step={step} />
             ))}

@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { cn } from '@/shared/model/libs/cn';
 import { Badge, Card } from '@/shared/ui';
 import type { TAdvantageTile } from '../model/types';
@@ -7,7 +8,8 @@ type TProps = {
   className?: string;
 };
 
-export const AdvantageTile = ({ tile, className }: TProps) => {
+export const AdvantageTile = async ({ tile, className }: TProps) => {
+  const tCommon = await getTranslations('Common');
   return (
     <Card as="article" className={className}>
       {tile.badge && (
@@ -36,7 +38,7 @@ export const AdvantageTile = ({ tile, className }: TProps) => {
       )}
 
       {tile.levels && tile.levels.length > 0 && (
-        <ul className="flex flex-wrap gap-2 mt-2" aria-label="Уровни CEFR">
+        <ul className="flex flex-wrap gap-2 mt-2" aria-label={tCommon('aria.cefrLevels')}>
           {tile.levels.map((level) => (
             <li key={level}>
               <span
@@ -55,7 +57,7 @@ export const AdvantageTile = ({ tile, className }: TProps) => {
       )}
 
       {tile.items && tile.items.length > 0 && (
-        <ul className="mt-2 flex flex-col gap-1.5" aria-label="Задания">
+        <ul className="mt-2 flex flex-col gap-1.5" aria-label={tCommon('aria.tasks')}>
           {tile.items.map((item) => (
             <li
               key={item.label}

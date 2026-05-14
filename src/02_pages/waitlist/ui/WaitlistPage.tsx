@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Badge, Card, Container, Section } from '@/shared/ui';
+
 import { WaitlistForm } from '@/features/waitlist-form';
 
 type TPerk = {
@@ -28,6 +29,7 @@ const PerkIcon = ({ name }: { name: string }) => {
 
 export const WaitlistPage = async () => {
   const t = await getTranslations('WaitlistPage');
+  const tCommon = await getTranslations('Common');
 
   const kicker = t('hero.kicker');
   const title = t('hero.title');
@@ -86,7 +88,7 @@ export const WaitlistPage = async () => {
         <Container>
           <ul
             className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label="Преимущества раннего доступа"
+            aria-label={tCommon('aria.earlyAccessPerks')}
           >
             {perks.map((perk, i) => (
               <Card key={i} as="li" className="flex flex-col gap-2 p-5">

@@ -507,7 +507,13 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (111)"
       },
       "disclaimer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "cta": "Lorem ipsum dolor sit amet 112"
+      "cta": "Lorem ipsum dolor sit amet 112",
+      "tableHeader": {
+        "label": "Plan",
+        "standard": "Standard",
+        "ua": "For Ukraine"
+      },
+      "flagAriaLabel": "Ukrainian flag"
     },
     "finalCta": {
       "title": "Lorem ipsum 113",
@@ -523,7 +529,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "Lorem ipsum 119"
+        "format": "Lorem ipsum 119",
+        "label": "seats taken"
       }
     },
     "footer": {
@@ -1178,7 +1185,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "Lorem ipsum 289"
+        "format": "Lorem ipsum 289",
+        "label": "seats taken"
       }
     },
     "footer": {
@@ -2015,7 +2023,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "Lorem ipsum 481"
+        "format": "Lorem ipsum 481",
+        "label": "seats taken"
       }
     },
     "footer": {
@@ -2483,7 +2492,8 @@
         "network": "Lorem ipsum dolor sit amet 583",
         "serverError": "Lorem ipsum dolor sit amet 584",
         "consentRequired": "Lorem ipsum dolor sit amet 585"
-      }
+      },
+      "submitting": "Submitting..."
     },
     "footer": {
       "brand": "SpeakMove",
@@ -3477,5 +3487,47 @@
       "privacyLabel": "Lorem ipsum 749",
       "cookiesLabel": "Lorem ipsum"
     }
+  },
+  "Common": {
+    "skipToContent": "Skip to content",
+    "submitting": "Submitting...",
+    "error": {
+      "title": "Something went wrong",
+      "lead": "We're looking into it. Try refreshing the page.",
+      "cta": "Refresh"
+    },
+    "checkmarkValues": [
+      "Yes",
+      "Available",
+      "Full"
+    ],
+    "unavailable": "Not available:",
+    "aria": {
+      "billingPeriod": "Billing period",
+      "privacyFeatures": "Security and privacy features",
+      "smartCriteria": "SMART criteria",
+      "faqList": "Frequently asked questions",
+      "statsGrid": "Key metrics",
+      "cefrLevels": "CEFR levels",
+      "flowSteps": "User journey steps",
+      "weekDays": "Days of the week",
+      "earlyAccessPerks": "Early access benefits",
+      "voiceMessage": "Voice message",
+      "featuresIncluded": "Included in {planName}",
+      "featuresExcluded": "Not included in {planName}",
+      "tasks": "Tasks"
+    },
+    "table": {
+      "action": "Action",
+      "amount": "Amount",
+      "coins": "Coins",
+      "earnCaption": "SM coin earning table",
+      "spendCaption": "SM coin to gift card exchange table",
+      "feature": "Feature"
+    },
+    "today": "Today",
+    "navSections": "Sections",
+    "effectiveLabel": "Effective:",
+    "lastUpdatedLabel": "Last updated:"
   }
 }

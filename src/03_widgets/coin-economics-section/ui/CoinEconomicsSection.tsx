@@ -20,6 +20,7 @@ type TWithdrawGridItem = {
 
 export const CoinEconomicsSection = async () => {
   const t = await getTranslations('PricingPage.coinEconomics');
+  const tCommon = await getTranslations('Common');
 
   const earnRows = t.raw('earn.rows') as unknown as TEarnRow[];
   const earnTotal = t.raw('earn.total') as unknown as TEarnTotal;
@@ -57,8 +58,8 @@ export const CoinEconomicsSection = async () => {
                 <caption className="sr-only">{t('earn.title')}</caption>
                 <thead>
                   <tr className="border-b border-line">
-                    <th scope="col" className="pb-2 text-left font-semibold text-muted">Действие</th>
-                    <th scope="col" className="pb-2 text-right font-semibold text-muted">Монеты</th>
+                    <th scope="col" className="pb-2 text-left font-semibold text-muted">{tCommon('table.action')}</th>
+                    <th scope="col" className="pb-2 text-right font-semibold text-muted">{tCommon('table.coins')}</th>
                     <th scope="col" className="pb-2 text-right font-semibold text-muted">USD</th>
                   </tr>
                 </thead>

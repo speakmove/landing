@@ -45,6 +45,7 @@ const selectCls = cn(
 export const WaitlistForm = () => {
   const tForm = useTranslations('WaitlistPage.form');
   const tErrors = useTranslations('WaitlistPage.form.errors');
+  const tCommon = useTranslations('Common');
   const bonusThreshold = tForm.raw('progress.bonusThreshold') as number;
 
   const [state, formAction, pending] = useActionState(submitWaitlist, initialState);
@@ -119,7 +120,7 @@ export const WaitlistForm = () => {
 
       {/* Live region for pending state */}
       <div role="status" aria-live="polite" className="sr-only">
-        {pending ? 'Отправка...' : ''}
+        {pending ? tCommon('submitting') : ''}
       </div>
 
       {/* General server errors */}
@@ -428,8 +429,7 @@ export const WaitlistForm = () => {
           disabled={pending}
           aria-disabled={pending}
         >
-          {/* TODO(i18n): add 'submitting' key to WaitlistPage.form */}
-          {pending ? 'Отправка...' : tForm('submit')}
+          {pending ? tCommon('submitting') : tForm('submit')}
         </Button>
         <p className="mt-3 text-center text-xs text-muted">
           {tForm('hint')}

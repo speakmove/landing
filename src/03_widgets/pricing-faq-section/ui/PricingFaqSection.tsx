@@ -5,6 +5,7 @@ import type { TFaqItem } from '@/entities/faq-item';
 
 export const PricingFaqSection = async () => {
   const t = await getTranslations('PricingPage.faq');
+  const tCommon = await getTranslations('Common');
   const items = t.raw('items') as unknown as TFaqItem[];
 
   return (
@@ -31,7 +32,7 @@ export const PricingFaqSection = async () => {
           </p>
         </div>
 
-        <ul className="max-w-[800px]" aria-label="Частые вопросы">
+        <ul className="max-w-[800px]" aria-label={tCommon('aria.faqList')}>
           {items.map((item) => (
             <FaqItem key={item.id} item={item} />
           ))}

@@ -58,8 +58,7 @@ export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TPro
               </span>
             </span>
             <span className="text-xs text-muted">
-              {/* TODO(i18n): hoist to messages/ru.json finalCta.fomo.label */}
-              мест занято
+              {t('fomo.label')}
             </span>
           </div>
 

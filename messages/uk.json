@@ -507,7 +507,13 @@
         "text": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (111)"
       },
       "disclaimer": "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      "cta": "Sed do eiusmod tempor incididunt 112"
+      "cta": "Sed do eiusmod tempor incididunt 112",
+      "tableHeader": {
+        "label": "Sed do eiusmod",
+        "standard": "Sed do eiusmod",
+        "ua": "Sed do eiusmod"
+      },
+      "flagAriaLabel": "Sed do eiusmod"
     },
     "finalCta": {
       "title": "Sed do eiusmod 113",
@@ -523,7 +529,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "Sed do eiusmod 119"
+        "format": "Sed do eiusmod 119",
+        "label": "Sed do eiusmod"
       }
     },
     "footer": {
@@ -1178,7 +1185,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "Sed do eiusmod 289"
+        "format": "Sed do eiusmod 289",
+        "label": "Sed do eiusmod"
       }
     },
     "footer": {
@@ -2015,7 +2023,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "Sed do eiusmod 481"
+        "format": "Sed do eiusmod 481",
+        "label": "Sed do eiusmod"
       }
     },
     "footer": {
@@ -2483,7 +2492,8 @@
         "network": "Sed do eiusmod tempor incididunt 583",
         "serverError": "Sed do eiusmod tempor incididunt 584",
         "consentRequired": "Sed do eiusmod tempor incididunt 585"
-      }
+      },
+      "submitting": "Sed do eiusmod..."
     },
     "footer": {
       "brand": "SpeakMove",
@@ -3477,5 +3487,47 @@
       "privacyLabel": "Sed do eiusmod 904",
       "cookiesLabel": "Sed do eiusmod"
     }
+  },
+  "Common": {
+    "skipToContent": "Sed do eiusmod tempor incididunt",
+    "submitting": "Sed do eiusmod...",
+    "error": {
+      "title": "Sed do eiusmod tempor incididunt",
+      "lead": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "cta": "Sed do eiusmod"
+    },
+    "checkmarkValues": [
+      "Да",
+      "Есть",
+      "Полний"
+    ],
+    "unavailable": "Sed do eiusmod:",
+    "aria": {
+      "billingPeriod": "Sed do eiusmod tempor incididunt",
+      "privacyFeatures": "Sed do eiusmod tempor incididunt ut labore",
+      "smartCriteria": "Sed do eiusmod SMART",
+      "faqList": "Sed do eiusmod tempor incididunt",
+      "statsGrid": "Sed do eiusmod tempor incididunt",
+      "cefrLevels": "Sed do eiusmod CEFR",
+      "flowSteps": "Sed do eiusmod tempor incididunt ut labore",
+      "weekDays": "Sed do eiusmod tempor",
+      "earlyAccessPerks": "Sed do eiusmod tempor incididunt",
+      "voiceMessage": "Sed do eiusmod tempor",
+      "featuresIncluded": "Sed do eiusmod {planName}",
+      "featuresExcluded": "Sed do eiusmod {planName}",
+      "tasks": "Sed do eiusmod"
+    },
+    "table": {
+      "action": "Sed do eiusmod",
+      "amount": "Sed do eiusmod",
+      "coins": "Sed do eiusmod",
+      "earnCaption": "Sed do eiusmod tempor incididunt SM",
+      "spendCaption": "Sed do eiusmod tempor incididunt SM",
+      "feature": "Sed do eiusmod"
+    },
+    "today": "Sed do eiusmod",
+    "navSections": "Sed do eiusmod",
+    "effectiveLabel": "Sed do eiusmod:",
+    "lastUpdatedLabel": "Sed do eiusmod:"
   }
 }

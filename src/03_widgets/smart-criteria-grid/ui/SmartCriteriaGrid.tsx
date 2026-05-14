@@ -5,6 +5,7 @@ import type { TSmartCriterion } from '@/entities/smart-criterion';
 
 export const SmartCriteriaGrid = async () => {
   const t = await getTranslations('HowItWorksPage.smart');
+  const tCommon = await getTranslations('Common');
   const criteria = t.raw('criteria') as unknown as TSmartCriterion[];
 
   return (
@@ -29,7 +30,7 @@ export const SmartCriteriaGrid = async () => {
         {/* Grid: 1-col mobile, 2-col md, 3-col lg */}
         <ul
           className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
-          aria-label="Критерии SMART"
+          aria-label={tCommon('aria.smartCriteria')}
         >
           {criteria.map((criterion) => (
             <li key={criterion.letter} className="contents">

@@ -5,6 +5,7 @@ import type { TPrivacyCard } from '@/entities/privacy-card';
 
 export const PrivacyFeatureGrid = async () => {
   const t = await getTranslations('HowItWorksPage.privacy');
+  const tCommon = await getTranslations('Common');
   const cards = t.raw('cards') as unknown as TPrivacyCard[];
 
   return (
@@ -29,7 +30,7 @@ export const PrivacyFeatureGrid = async () => {
         {/* Grid: 1-col mobile, 2-col md, 3-col lg */}
         <ul
           className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
-          aria-label="Функции безопасности и приватности"
+          aria-label={tCommon('aria.privacyFeatures')}
         >
           {cards.map((card) => (
             <li key={card.id} className="contents">

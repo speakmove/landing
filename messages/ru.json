@@ -507,7 +507,13 @@
         "text": "Cashback в gift cards доступний лише на Premium-плані (монети (SM) в Amazon/Visa Prepaid). Оскільки Tremendous не доставляє карти в Україну, українські Premium-користувачі замість cashback бачать одразу знижену ціну −30%. На Plus (місячному і річному) cashback не передбачено в принципі, тому знижки на нього немає."
       },
       "disclaimer": "SpeakMove (sole trader Dmytro Fenko, UK) залишає за собою право відмовити у застосуванні знижки при підозрі на шахрайство або невідповідність хоча б одного з трьох сигналів верифікації країни. Знижка не комбінується з іншими промоакціями.",
-      "cta": "Зайняти місце в ранньому доступі"
+      "cta": "Зайняти місце в ранньому доступі",
+      "tableHeader": {
+        "label": "Тариф",
+        "standard": "Стандарт",
+        "ua": "Для України"
+      },
+      "flagAriaLabel": "Прапор України"
     },
     "finalCta": {
       "title": "Занять место в раннем доступе",
@@ -523,7 +529,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "{current} / {total}"
+        "format": "{current} / {total}",
+        "label": "мест занято"
       }
     },
     "footer": {
@@ -1178,7 +1185,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "{current} / {total}"
+        "format": "{current} / {total}",
+        "label": "мест занято"
       }
     },
     "footer": {
@@ -2015,7 +2023,8 @@
         "current": 157,
         "total": 200,
         "bonusThreshold": 15,
-        "format": "{current} / {total}"
+        "format": "{current} / {total}",
+        "label": "мест занято"
       }
     },
     "footer": {
@@ -2483,7 +2492,8 @@
         "network": "Не получилось отправить — проверь интернет и попробуй ещё раз.",
         "serverError": "Что-то сломалось у нас. Попробуй через минуту или напиши на hi@speakmove.app.",
         "consentRequired": "Поставь галочку, чтобы продолжить."
-      }
+      },
+      "submitting": "Отправка..."
     },
     "footer": {
       "brand": "SpeakMove",
@@ -3477,5 +3487,47 @@
       "privacyLabel": "Политика конфиденциальности",
       "cookiesLabel": "Куки"
     }
+  },
+  "Common": {
+    "skipToContent": "Перейти к содержимому",
+    "submitting": "Отправка...",
+    "error": {
+      "title": "Что-то пошло не так",
+      "lead": "Мы уже разбираемся. Попробуйте обновить страницу.",
+      "cta": "Обновить"
+    },
+    "checkmarkValues": [
+      "Да",
+      "Есть",
+      "Полный"
+    ],
+    "unavailable": "Недоступно:",
+    "aria": {
+      "billingPeriod": "Период оплаты",
+      "privacyFeatures": "Функции безопасности и приватности",
+      "smartCriteria": "Критерии SMART",
+      "faqList": "Частые вопросы",
+      "statsGrid": "Ключевые показатели",
+      "cefrLevels": "Уровни CEFR",
+      "flowSteps": "Шаги пользовательского пути",
+      "weekDays": "Дни недели",
+      "earlyAccessPerks": "Преимущества раннего доступа",
+      "voiceMessage": "Голосовое сообщение",
+      "featuresIncluded": "Включено в {planName}",
+      "featuresExcluded": "Не включено в {planName}",
+      "tasks": "Задания"
+    },
+    "table": {
+      "action": "Действие",
+      "amount": "Сумма",
+      "coins": "Монеты",
+      "earnCaption": "Таблица заработка монет SM",
+      "spendCaption": "Таблица обмена монет SM на gift card",
+      "feature": "Функция"
+    },
+    "today": "Сегодня",
+    "navSections": "Sections",
+    "effectiveLabel": "Вступило в силу:",
+    "lastUpdatedLabel": "Последнее обновление:"
   }
 }

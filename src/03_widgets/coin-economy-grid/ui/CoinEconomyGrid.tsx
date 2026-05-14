@@ -39,10 +39,14 @@ const CoinTable = ({
   title,
   rows,
   captionLabel,
+  actionLabel,
+  amountLabel,
 }: {
   title: string;
   rows: TCoinFlowRow[];
   captionLabel: string;
+  actionLabel: string;
+  amountLabel: string;
 }) => {
   return (
     <div className="rounded-2xl border border-line bg-white shadow-(--shadow-soft) overflow-hidden">
@@ -57,13 +61,13 @@ const CoinTable = ({
               scope="col"
               className="px-5 py-2.5 text-left text-xs font-semibold uppercase tracking-wider text-muted"
             >
-              Действие
+              {actionLabel}
             </th>
             <th
               scope="col"
               className="px-5 py-2.5 text-right text-xs font-semibold uppercase tracking-wider text-muted"
             >
-              Сумма
+              {amountLabel}
             </th>
           </tr>
         </thead>
@@ -92,6 +96,7 @@ const CoinTable = ({
 
 export const CoinEconomyGrid = async () => {
   const t = await getTranslations('HowItWorksPage.coinLoop');
+  const tCommon = await getTranslations('Common');
   const earn = t.raw('earn') as unknown as TEarnData;
   const outcome = t.raw('outcome') as unknown as TOutcomeData;
 
@@ -119,13 +124,17 @@ export const CoinEconomyGrid = async () => {
           <CoinTable
             title={earn.title}
             rows={earn.rows}
-            captionLabel="Таблица заработка монет SM"
+            captionLabel={tCommon('table.earnCaption')}
+            actionLabel={tCommon('table.action')}
+            amountLabel={tCommon('table.amount')}
           />
           <div className="flex flex-col gap-4">
             <CoinTable
               title={outcome.title}
               rows={outcome.rows}
-              captionLabel="Таблица обмена монет SM на gift card"
+              captionLabel={tCommon('table.spendCaption')}
+              actionLabel={tCommon('table.action')}
+              amountLabel={tCommon('table.amount')}
             />
             {/* Footnote */}
             <p className="text-xs text-muted leading-relaxed italic px-1">

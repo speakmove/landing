@@ -28,6 +28,7 @@ type TSideData = {
 
 export const CefrProgression = async () => {
   const t = await getTranslations('HowItWorksPage.cefr');
+  const tCommon = await getTranslations('Common');
 
   const levels = t.raw('levels') as unknown as TCefrLevel[];
   const side = t.raw('side') as unknown as TSideData;
@@ -55,7 +56,7 @@ export const CefrProgression = async () => {
         {/* Two-column: levels list + side panel */}
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-9 items-start">
           {/* CEFR levels ordered list */}
-          <ol className="flex flex-col gap-2.5" aria-label="Уровни CEFR">
+          <ol className="flex flex-col gap-2.5" aria-label={tCommon('aria.cefrLevels')}>
             {levels.map((level) => (
               <CefrLevelRow key={level.code} level={level} />
             ))}

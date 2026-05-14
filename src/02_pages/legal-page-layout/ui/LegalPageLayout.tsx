@@ -20,6 +20,7 @@ type TProps = {
 
 export const LegalPageLayout = async ({ namespace }: TProps) => {
   const t = await getTranslations(namespace as never);
+  const tCommon = await getTranslations('Common');
   const meta = t.raw('meta') as unknown as TLegalMeta;
   const sections = t.raw('sections') as unknown as TLegalSection[];
 
@@ -29,9 +30,9 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
         <Container className="max-w-205">
           <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">{meta.title}</h1>
           <p className="mt-4 text-sm text-muted">
-            <span>Effective: {meta.effectiveDate}</span>
+            <span>{tCommon('effectiveLabel')} {meta.effectiveDate}</span>
             <span aria-hidden="true"> · </span>
-            <span>Last updated: {meta.lastUpdated}</span>
+            <span>{tCommon('lastUpdatedLabel')} {meta.lastUpdated}</span>
           </p>
           <p className="mt-6 leading-relaxed text-ink">{meta.intro}</p>
         </Container>
@@ -39,7 +40,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
 
       <Section className="pt-10">
         <Container className="max-w-205">
-          <nav aria-label="Sections" className="mb-12 rounded-2xl border border-line bg-white p-5">
+          <nav aria-label={tCommon('navSections')} className="mb-12 rounded-2xl border border-line bg-white p-5">
             <ol className="grid gap-2 text-sm md:grid-cols-2">
               {sections.map((s) => (
                 <li key={s.id}>

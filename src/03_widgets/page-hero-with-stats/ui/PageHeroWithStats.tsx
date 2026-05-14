@@ -8,6 +8,7 @@ type TStat = {
 
 export const PageHeroWithStats = async () => {
   const t = await getTranslations('HowItWorksPage.hero');
+  const tCommon = await getTranslations('Common');
   const stats = t.raw('stats') as unknown as TStat[];
 
   return (
@@ -34,7 +35,7 @@ export const PageHeroWithStats = async () => {
           {/* Stats grid */}
           <div
             className="flex flex-wrap gap-6 justify-center"
-            aria-label="Ключевые показатели"
+            aria-label={tCommon('aria.statsGrid')}
           >
             {stats.map((stat) => (
               <div

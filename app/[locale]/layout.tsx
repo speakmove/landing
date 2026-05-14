@@ -61,11 +61,12 @@ export default async function LocaleLayout({ children, params }: TProps) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
+  const tCommon = await getTranslations({ locale, namespace: 'Common' });
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
         <NextIntlClientProvider>
-          <SkipLink>Перейти к содержимому</SkipLink>
+          <SkipLink>{tCommon('skipToContent')}</SkipLink>
           <SiteHeader />
           <main id="main">{children}</main>
           <SiteFooter />

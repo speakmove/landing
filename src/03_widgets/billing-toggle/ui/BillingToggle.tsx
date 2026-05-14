@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useRef, type KeyboardEvent } from 'react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/shared/model/libs/cn';
 
 export type TBillingValue = 'monthly' | 'yearly';
@@ -22,6 +23,7 @@ export const BillingToggle = ({
   yearlyLabel,
   yearlySaveLabel,
 }: TProps) => {
+  const tCommon = useTranslations('Common');
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const handleKeyDown = useCallback(
@@ -54,7 +56,7 @@ export const BillingToggle = ({
   return (
     <div
       role="tablist"
-      aria-label="Период оплаты"
+      aria-label={tCommon('aria.billingPeriod')}
       onKeyDown={handleKeyDown}
       className="inline-flex rounded-xl border border-line bg-surface p-1 gap-1"
     >

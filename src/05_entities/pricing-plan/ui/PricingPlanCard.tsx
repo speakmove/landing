@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { Badge, CheckIcon, VisuallyHidden } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
 import { URLS } from '@/shared/config';
@@ -19,7 +20,8 @@ const resolvePrice = (
   return raw;
 };
 
-export const PricingPlanCard = ({ plan, billing, className }: TProps) => {
+export const PricingPlanCard = async ({ plan, billing, className }: TProps) => {
+  const tCommon = await getTranslations('Common');
   const priceRaw = plan.price[billing];
   const resolved = resolvePrice(priceRaw);
   const wasPrice = plan.wasPrice?.[billing];
@@ -82,7 +84,7 @@ export const PricingPlanCard = ({ plan, billing, className }: TProps) => {
         )}
       </div>
 
-      <ul className="flex flex-col gap-2" aria-label={`Включено в ${plan.name}`}>
+      <ul className="flex flex-col gap-2" aria-label={tCommon('aria.featuresIncluded', { planName: plan.name })}>
         {plan.features.map((feat) => (
           <li key={feat} className="flex items-start gap-2 text-sm text-ink">
             <CheckIcon size={15} className="mt-0.5 text-primary shrink-0" />
@@ -92,13 +94,13 @@ export const PricingPlanCard = ({ plan, billing, className }: TProps) => {
       </ul>
 
       {plan.excluded && plan.excluded.length > 0 && (
-        <ul className="flex flex-col gap-1.5" aria-label={`Не включено в ${plan.name}`}>
+        <ul className="flex flex-col gap-1.5" aria-label={tCommon('aria.featuresExcluded', { planName: plan.name })}>
           {plan.excluded.map((excl) => (
             <li
               key={excl}
               className="flex items-start gap-2 text-xs text-muted line-through"
             >
-              <VisuallyHidden>Недоступно:</VisuallyHidden>
+              <VisuallyHidden>{tCommon('unavailable')}</VisuallyHidden>
               {excl}
             </li>
           ))}

@@ -7,6 +7,7 @@ import type { TFloatBubble } from '@/entities/float-bubble';
 
 export const HomePhonePreview = async () => {
   const t = await getTranslations('HomePage.hero.phonePreview');
+  const tCommon = await getTranslations('Common');
 
   const messages = t.raw('messages') as unknown as TChatMessage[];
   const floatBubbles = t.raw('floatBubbles') as unknown as TFloatBubble[];
@@ -105,7 +106,7 @@ export const HomePhonePreview = async () => {
             <div className="flex-1 flex flex-col justify-end gap-1.5 px-2.5 pb-2">
               <div className="flex justify-center mb-1">
                 <span className="px-3 py-[3px] bg-[#5d8a47]/85 text-white text-[11px] font-semibold rounded-full">
-                  Сегодня
+                  {tCommon('today')}
                 </span>
               </div>
 

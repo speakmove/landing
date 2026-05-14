@@ -5,10 +5,13 @@ import type { TComparisonRow } from '@/entities/comparison-row';
 
 export const HomeCompare = async () => {
   const t = await getTranslations('HomePage.compare');
+  const tCommon = await getTranslations('Common');
 
   const columns = t.raw('columns') as unknown as string[];
   const rows = t.raw('rows') as unknown as TComparisonRow[];
   const highlightColumn = t('highlightColumn');
+  // TODO(schema): replace string-comparison with discriminated { kind: 'check'|'cross'|'text' } objects
+  const checkmarkValues = tCommon.raw('checkmarkValues') as string[];
 
   // Find the index of the SpeakMove column (the highlighted one)
   const highlightIdx = columns.indexOf(highlightColumn);
@@ -85,13 +88,13 @@ export const HomeCompare = async () => {
                               : 'text-muted',
                           )}
                         >
-                          {val === 'Да' || val === 'Есть' || val === 'Полный' ? (
+                          {checkmarkValues.includes(val) ? (
                             <span className="inline-flex items-center justify-center gap-1 text-primary font-semibold">
                               <CheckIcon size={14} />
                               {val}
                             </span>
                           ) : val === '—' ? (
-                            <span className="text-faint" aria-label="Недоступно">
+                            <span className="text-faint" aria-label={tCommon('unavailable')}>
                               —
                             </span>
                           ) : (

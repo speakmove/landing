@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { cn } from '@/shared/model/libs/cn';
 import { Badge, Card } from '@/shared/ui';
 import type { TScheduleCard } from '../model/types';
@@ -6,7 +7,8 @@ type TProps = {
   card: TScheduleCard;
 };
 
-export const ScheduleCard = ({ card }: TProps) => {
+export const ScheduleCard = async ({ card }: TProps) => {
+  const tCommon = await getTranslations('Common');
   return (
     <Card as="article" className="flex flex-col gap-4">
       {card.badge && (
@@ -26,7 +28,7 @@ export const ScheduleCard = ({ card }: TProps) => {
         {card.description}
       </p>
 
-      <div className="flex gap-1.5 flex-wrap" aria-label="Дни недели">
+      <div className="flex gap-1.5 flex-wrap" aria-label={tCommon('aria.weekDays')}>
         {card.days.map((day, i) => {
           const isActive = card.activeDays[i] ?? false;
           return (

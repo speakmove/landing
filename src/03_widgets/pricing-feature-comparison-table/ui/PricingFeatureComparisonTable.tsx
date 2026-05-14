@@ -23,6 +23,7 @@ type TCompareData = {
 
 export const PricingFeatureComparisonTable = async () => {
   const t = await getTranslations('PricingPage.compare');
+  const tCommon = await getTranslations('Common');
   const data = {
     kicker: t('kicker'),
     title: t('title'),
@@ -61,7 +62,7 @@ export const PricingFeatureComparisonTable = async () => {
                   scope="col"
                   className="py-3 px-4 text-left font-semibold text-muted w-[40%]"
                 >
-                  {data.columns[0] || 'Функция'}
+                  {data.columns[0] || tCommon('table.feature')}
                 </th>
                 {colHeaders.map((col) => (
                   <th

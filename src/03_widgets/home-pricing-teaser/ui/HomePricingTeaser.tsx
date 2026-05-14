@@ -21,6 +21,7 @@ type TPlan = {
 
 export const HomePricingTeaser = async () => {
   const t = await getTranslations('HomePage.pricing');
+  const tCommon = await getTranslations('Common');
 
   const plans = t.raw('plans') as unknown as TPlan[];
 
@@ -114,7 +115,7 @@ export const HomePricingTeaser = async () => {
                 </div>
 
                 {/* Features */}
-                <ul className="flex flex-col gap-2" aria-label={`Включено в ${plan.name}`}>
+                <ul className="flex flex-col gap-2" aria-label={tCommon('aria.featuresIncluded', { planName: plan.name })}>
                   {plan.features.map((feat) => (
                     <li key={feat} className="flex items-start gap-2 text-sm text-ink">
                       <CheckIcon
@@ -128,13 +129,13 @@ export const HomePricingTeaser = async () => {
 
                 {/* Excluded */}
                 {plan.excluded && plan.excluded.length > 0 && (
-                  <ul className="flex flex-col gap-1.5" aria-label={`Не включено в ${plan.name}`}>
+                  <ul className="flex flex-col gap-1.5" aria-label={tCommon('aria.featuresExcluded', { planName: plan.name })}>
                     {plan.excluded.map((excl) => (
                       <li
                         key={excl}
                         className="flex items-start gap-2 text-xs text-muted line-through"
                       >
-                        <VisuallyHidden>Недоступно:</VisuallyHidden>
+                        <VisuallyHidden>{tCommon('unavailable')}</VisuallyHidden>
                         {excl}
                       </li>
                     ))}
