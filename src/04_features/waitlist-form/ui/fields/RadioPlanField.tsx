@@ -53,6 +53,7 @@ export const RadioPlanField = ({
                 required
                 defaultChecked={isSelected}
                 disabled={disabled}
+                aria-label={`${opt.title} — ${opt.subtitle}`}
                 className="peer sr-only"
               />
               <span

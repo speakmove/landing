@@ -63,6 +63,7 @@ export const BillingToggle = ({
       role="tablist"
       aria-label={tCommon('aria.billingPeriod')}
       onKeyDown={handleKeyDown}
+      tabIndex={-1}
       className="inline-flex items-center gap-1 rounded-full bg-[#f1f3ef] p-1"
     >
       <button
@@ -72,7 +73,6 @@ export const BillingToggle = ({
         type="button"
         role="tab"
         aria-selected={value === 'monthly'}
-        aria-pressed={value === 'monthly'}
         tabIndex={value === 'monthly' ? 0 : -1}
         onClick={() => onChange('monthly')}
         className={cn(baseBtn, value === 'monthly' ? activeBtn : inactiveBtn)}
@@ -87,7 +87,6 @@ export const BillingToggle = ({
         type="button"
         role="tab"
         aria-selected={value === 'yearly'}
-        aria-pressed={value === 'yearly'}
         tabIndex={value === 'yearly' ? 0 : -1}
         onClick={() => onChange('yearly')}
         className={cn(baseBtn, value === 'yearly' ? activeBtn : inactiveBtn, 'gap-1.5')}
