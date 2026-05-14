@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from 'react';
+import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
@@ -25,6 +26,31 @@ const jetbrainsMono = JetBrains_Mono({
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'MetaGlobal' });
+  return {
+    title: {
+      default: t('defaultTitle'),
+      template: t('titleTemplate'),
+    },
+    description: t('defaultDescription'),
+    openGraph: {
+      siteName: t('siteName'),
+      type: 'website',
+      images: [{ url: '/opengraph-image', alt: t('ogImageAlt') }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: t('twitterHandle'),
+    },
+  };
 }
 
 type TProps = PropsWithChildren<{
