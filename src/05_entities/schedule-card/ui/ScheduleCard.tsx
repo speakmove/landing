@@ -1,3 +1,4 @@
+import { cn } from '@/shared/model/libs/cn';
 import { Badge, Card } from '@/shared/ui';
 import type { TScheduleCard } from '../model/types';
 
@@ -31,12 +32,12 @@ export const ScheduleCard = ({ card }: TProps) => {
           return (
             <span
               key={day}
-              className={[
+              className={cn(
                 'inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-xs font-semibold min-w-[36px]',
                 isActive
                   ? 'bg-primary text-white'
                   : 'bg-surface text-muted border border-line',
-              ].join(' ')}
+              )}
             >
               {day}
             </span>

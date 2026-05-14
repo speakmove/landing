@@ -35,12 +35,12 @@ const parseConsentLabel = (input: string): TConsentSegment[] => {
   return segments;
 }
 
-const selectCls = [
+const selectCls = cn(
   'block w-full rounded-xl border bg-white px-4 py-2.5 text-sm text-ink outline-none transition-colors',
   'min-h-11',
   'focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary-pale',
   'disabled:cursor-not-allowed disabled:bg-surface',
-].join(' ');
+);
 
 export const WaitlistForm = () => {
   const tForm = useTranslations('WaitlistPage.form');
@@ -103,12 +103,10 @@ export const WaitlistForm = () => {
     subtitle: string;
   }>;
 
-  const countryAriaDescribedBy = [
-    state.fieldErrors['country'] ? countryErrorId : '',
+  const countryAriaDescribedBy = cn(
+    state.fieldErrors['country'] && countryErrorId,
     countryHintId,
-  ]
-    .filter(Boolean)
-    .join(' ');
+  );
 
   return (
     <form

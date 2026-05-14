@@ -1,3 +1,4 @@
+import { cn } from '@/shared/model/libs/cn';
 import { Badge, Card } from '@/shared/ui';
 import type { TAdvantageTile } from '../model/types';
 
@@ -39,12 +40,12 @@ export const AdvantageTile = ({ tile, className }: TProps) => {
           {tile.levels.map((level) => (
             <li key={level}>
               <span
-                className={[
+                className={cn(
                   'inline-block rounded-lg px-3 py-1 text-xs font-bold border',
                   tile.currentLevel === level
                     ? 'bg-primary text-white border-primary'
                     : 'bg-surface text-muted border-line',
-                ].join(' ')}
+                )}
               >
                 {level}
               </span>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Badge, Container, Section } from '@/shared/ui';
+import { Badge, CheckIcon, Container, Section } from '@/shared/ui';
 
 type TProps = {
   position?: number;
@@ -20,16 +20,7 @@ export const SuccessBlockClient = ({ position, bonusThreshold = 15 }: TProps) =>
           className="rounded-2xl border border-line bg-white p-8 text-center shadow-(--shadow-soft)"
         >
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary-pale">
-            <svg
-              className="h-8 w-8 text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-              aria-hidden="true"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
+            <CheckIcon size={32} className="text-primary" />
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">{t('title')}</h1>
           <p className="mt-3 text-muted">{t('subtitle')}</p>

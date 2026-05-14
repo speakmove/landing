@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { MicIcon } from '@/shared/ui';
 import { ChatMessage } from '@/entities/chat-message';
 import { FloatBubble } from '@/entities/float-bubble';
 import type { TChatMessage } from '@/entities/chat-message';
@@ -115,18 +116,7 @@ export const HomePhonePreview = async () => {
               {/* Voice input mock */}
               <div className="mt-1 flex items-center gap-2 bg-white/90 rounded-full px-3 py-2 border border-line">
                 <span className="w-6 h-6 rounded-full bg-red-500 flex items-center justify-center flex-none">
-                  <svg
-                    width="10"
-                    height="10"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                    stroke="none"
-                    aria-hidden="true"
-                  >
-                    <rect x="9" y="2" width="6" height="12" rx="3" />
-                    <path d="M5 10a7 7 0 0 0 14 0" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
-                    <line x1="12" y1="19" x2="12" y2="22" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
+                  <MicIcon size={10} className="text-white" />
                 </span>
                 <span className="text-xs text-muted font-medium">
                   {micLabel}

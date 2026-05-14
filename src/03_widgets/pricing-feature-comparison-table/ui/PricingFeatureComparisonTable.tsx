@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section } from '@/shared/ui';
+import { cn } from '@/shared/model/libs/cn';
 
 type TCompareRow = {
   feature: string;
@@ -66,12 +67,12 @@ export const PricingFeatureComparisonTable = async () => {
                   <th
                     key={col}
                     scope="col"
-                    className={[
+                    className={cn(
                       'py-3 px-4 text-center font-bold',
                       col === data.highlightColumn
                         ? 'text-gold bg-gold-pale'
                         : 'text-ink',
-                    ].join(' ')}
+                    )}
                   >
                     {col}
                   </th>
@@ -110,13 +111,13 @@ export const PricingFeatureComparisonTable = async () => {
                         return (
                           <td
                             key={i}
-                            className={[
+                            className={cn(
                               'py-3 px-4 text-center',
                               isHighlight
                                 ? 'bg-gold-pale/30 text-ink font-medium'
                                 : 'text-muted',
-                              val === '—' ? 'text-muted opacity-40' : '',
-                            ].join(' ')}
+                              val === '—' && 'opacity-40',
+                            )}
                           >
                             {val}
                           </td>

@@ -1,3 +1,4 @@
+import { cn } from '@/shared/model/libs/cn';
 import { Badge } from '@/shared/ui';
 import type { TChatMessage } from '../model/types';
 
@@ -31,19 +32,19 @@ export const ChatMessage = ({ message }: TProps) => {
     return (
       <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
         <div
-          className={[
+          className={cn(
             'inline-flex items-center gap-2.5 rounded-[18px] px-3 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
             isMe
               ? 'rounded-br-[3px] bg-primary text-white'
               : 'rounded-bl-[3px] bg-white text-ink',
-          ].join(' ')}
+          )}
           aria-label={`Голосовое сообщение${message.duration ? `, ${message.duration}` : ''}`}
         >
           <div
-            className={[
+            className={cn(
               'w-6 h-6 rounded-full grid place-items-center text-[10px] flex-none',
               isMe ? 'bg-white/20 text-white' : 'bg-primary-pale text-primary',
-            ].join(' ')}
+            )}
             aria-hidden="true"
           >
             ▶
@@ -81,12 +82,12 @@ export const ChatMessage = ({ message }: TProps) => {
   return (
     <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
       <div
-        className={[
+        className={cn(
           'relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] px-3 pb-1.5 pt-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
           isMe
             ? 'rounded-br-[3px] bg-[#dbf3c9] text-[#1a3a0e]'
             : 'rounded-bl-[3px] bg-white text-ink',
-        ].join(' ')}
+        )}
       >
         {message.text && (
           <span className="font-medium leading-snug">{message.text}</span>

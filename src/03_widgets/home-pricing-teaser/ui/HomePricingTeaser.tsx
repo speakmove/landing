@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Badge, CheckIcon, Container, Section, VisuallyHidden } from '@/shared/ui';
+import { cn } from '@/shared/model/libs/cn';
 
 type TPlanPrice = string | { amount: string; period: string };
 
@@ -64,12 +65,12 @@ export const HomePricingTeaser = async () => {
             return (
               <article
                 key={plan.id}
-                className={[
+                className={cn(
                   'relative rounded-2xl border p-6 flex flex-col gap-4',
                   isPlus
                     ? 'border-primary shadow-[0_0_0_3px_color-mix(in_oklab,var(--color-primary)_15%,transparent)] bg-white'
                     : 'border-line bg-white shadow-(--shadow-soft)',
-                ].join(' ')}
+                )}
               >
                 {plan.badge && (
                   <Badge tone="primary" className="self-start">
@@ -90,13 +91,11 @@ export const HomePricingTeaser = async () => {
 
                   <div className="flex items-baseline gap-1">
                     <span
-                      className={[
+                      className={cn(
                         'font-extrabold tracking-tight',
                         isFreePlan ? 'text-[2rem]' : 'text-[2.2rem]',
-                        isPremium
-                          ? 'text-gold'
-                          : 'text-ink',
-                      ].join(' ')}
+                        isPremium ? 'text-gold' : 'text-ink',
+                      )}
                     >
                       {displayAmount}
                     </span>
@@ -145,12 +144,12 @@ export const HomePricingTeaser = async () => {
                 {/* CTA */}
                 <a
                   href="#cta"
-                  className={[
+                  className={cn(
                     'mt-auto inline-flex min-h-11 items-center justify-center rounded-xl px-5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2',
                     isPlus || isPremium
                       ? 'bg-primary text-white hover:bg-primary-hover focus-visible:outline-primary'
                       : 'border border-line-strong bg-white text-ink hover:bg-surface focus-visible:outline-primary',
-                  ].join(' ')}
+                  )}
                 >
                   {plan.cta}
                 </a>

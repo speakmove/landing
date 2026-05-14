@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { Container, Section } from '@/shared/ui';
+import { CheckIcon, Container, Section } from '@/shared/ui';
+import { cn } from '@/shared/model/libs/cn';
 import type { TComparisonRow } from '@/entities/comparison-row';
 
 export const HomeCompare = async () => {
@@ -41,13 +42,13 @@ export const HomeCompare = async () => {
                   <th
                     key={colIdx}
                     scope="col"
-                    className={[
+                    className={cn(
                       'py-3 px-4 text-left font-bold whitespace-nowrap',
                       colIdx === 0 ? 'w-[200px] text-muted' : '',
                       colIdx === highlightIdx
                         ? 'text-primary bg-primary-pale rounded-t-xl border-x border-t border-primary'
                         : 'text-ink border-b border-line',
-                    ].join(' ')}
+                    )}
                   >
                     {col}
                   </th>
@@ -74,31 +75,19 @@ export const HomeCompare = async () => {
                       return (
                         <td
                           key={valIdx}
-                          className={[
+                          className={cn(
                             'py-3 px-4 text-center',
                             isHighlight
-                              ? [
+                              ? cn(
                                   'font-semibold text-primary-ink bg-primary-pale border-x border-primary',
-                                  isLast ? 'rounded-b-xl border-b' : '',
-                                ].join(' ')
+                                  isLast && 'rounded-b-xl border-b',
+                                )
                               : 'text-muted',
-                          ].join(' ')}
+                          )}
                         >
                           {val === 'Да' || val === 'Есть' || val === 'Полный' ? (
                             <span className="inline-flex items-center justify-center gap-1 text-primary font-semibold">
-                              <svg
-                                width="14"
-                                height="14"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth={3}
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                aria-hidden="true"
-                              >
-                                <polyline points="20 6 9 17 4 12" />
-                              </svg>
+                              <CheckIcon size={14} />
                               {val}
                             </span>
                           ) : val === '—' ? (
