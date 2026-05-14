@@ -144,6 +144,7 @@ export const WaitlistForm = () => {
               id="firstName"
               name="firstName"
               type="text"
+              inputMode="text"
               autoComplete="given-name"
               placeholder={tForm('fields.firstName.placeholder')}
               required
@@ -169,6 +170,7 @@ export const WaitlistForm = () => {
               id="lastName"
               name="lastName"
               type="text"
+              inputMode="text"
               autoComplete="family-name"
               placeholder={tForm('fields.lastName.placeholder')}
               invalid={!!state.fieldErrors['lastName']}
@@ -197,6 +199,7 @@ export const WaitlistForm = () => {
               id="email"
               name="email"
               type="email"
+              inputMode="email"
               autoComplete="email"
               placeholder={tForm('fields.email.placeholder')}
               required
