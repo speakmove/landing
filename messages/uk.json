@@ -62,24 +62,24 @@
         "coinBalance": "127",
         "messages": [
           {
-            "from": "Sed do eiusmod",
+            "from": "bot",
             "text": "Sed do eiusmod tempor incididunt 18",
             "translation": "Sed do eiusmod tempor incididunt 19",
             "meta": "Sed do eiusmod 20"
           },
           {
-            "from": "Sed do eiusmod",
+            "from": "me",
             "text": "Sed do eiusmod tempor incididunt 21",
             "translation": "Sed do eiusmod tempor incididunt 22"
           },
           {
-            "from": "Sed do eiusmod",
+            "from": "bot",
             "text": "Sed do eiusmod 23",
             "translation": "Sed do eiusmod tempor incididunt 24",
             "reward": "+10 SM"
           },
           {
-            "from": "Sed do eiusmod",
+            "from": "bot",
             "text": "Sed do eiusmod tempor incididunt 25",
             "translation": "Sed do eiusmod 26",
             "highlight": "x2 монет"
@@ -392,7 +392,7 @@
           "price": {
             "monthly": {
               "amount": "12.99",
-              "period": "Sed do eiusmod"
+              "period": "/мес"
             },
             "yearly": {
               "amount": "129",
@@ -426,7 +426,7 @@
           "price": {
             "monthly": {
               "amount": "22.99",
-              "period": "Sed do eiusmod"
+              "period": "/мес"
             },
             "yearly": {
               "amount": "189",
@@ -451,7 +451,7 @@
       "footer": "Оплата картой или Telegram Stars · Минимум для обмена $10 ($5 для первых 200) · Cashback в gift cards без комиссии · Все цены включают VAT"
     },
     "ukrainianProgramme": {
-      "flag": "Sed do eiusmod",
+      "flag": "🇺🇦",
       "kicker": "Sed do eiusmod 93",
       "title": "Sed do eiusmod tempor incididunt 94",
       "subtitle": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (95)",
@@ -534,19 +534,19 @@
       "links": [
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/about"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/terms"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/privacy"
         },
         {
           "label": "Sed do eiusmod 120",
-          "href": "Sed do eiusmod 121"
+          "href": "mailto:hi@speakmove.app"
         }
       ],
       "socialTitle": "Sed do eiusmod 122",
@@ -555,31 +555,31 @@
           "id": "telegram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Telegram-канал SpeakMove",
-          "href": "Sed do eiusmod 123"
+          "href": "https://t.me/speakmove"
         },
         {
           "id": "instagram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Instagram SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 124"
+          "href": "https://instagram.com/speakmove"
         },
         {
           "id": "tiktok",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть TikTok SpeakMove",
-          "href": "Sed do eiusmod 125"
+          "href": "https://tiktok.com/@speakmove"
         },
         {
           "id": "youtube",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть YouTube-канал SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 126"
+          "href": "https://youtube.com/@speakmove"
         },
         {
           "id": "twitter",
-          "label": "Sed do eiusmod",
+          "label": "X",
           "ariaLabel": "Открыть X (Twitter) SpeakMove",
-          "href": "Sed do eiusmod 127"
+          "href": "https://x.com/speakmove"
         }
       ]
     },
@@ -589,12 +589,12 @@
       "keywords": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (128)",
       "ogTitle": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
       "ogDescription": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (129)",
-      "canonical": "Sed do eiusmod 130",
+      "canonical": "https://speakmove.app/",
       "ai": {
         "summary": "SpeakMove — Telegram-бот для изучения языка с голосовыми диалогами на основе AI. На старте — английский; немецкий и норвежский в roadmap. Пользователи получают монеты (SM) за каждый урок и обменивают их на подарочные карты Amazon или Visa Prepaid (курс: 100 SM = $1, минимальный обмен $10; $5 для первых 200 в раннем доступе). Для пользователей из Украины cashback заменён скидкой −30% на Premium. Структура обучения построена по системе CEFR (A1–C1). Сейчас SpeakMove — research-проект, оператор: Dmytro Fenko, UK sole trader (ICO № ZC141876). При запуске коммерческого продукта возможна смена формы на UK Ltd с уведомлением подписчиков waitlist.",
         "shortAnswer": "SpeakMove — это Telegram-бот для изучения языка, где за каждый урок начисляются монеты (SM), обмениваемые на подарочные карты Amazon или Visa Prepaid (100 SM = $1, минимум $10). Для Украины вместо cashback — скидка 30% на Premium.",
         "entity": {
-          "type": "Sed do eiusmod 131",
+          "type": "EducationalApplication",
           "category": "Sed do eiusmod 132",
           "platform": "Sed do eiusmod 133",
           "languages": [
@@ -718,18 +718,18 @@
         }
       },
       "structuredData": {
-        "@context": "Sed do eiusmod 170",
+        "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "Sed do eiusmod 171",
-            "@id": "Sed do eiusmod tempor incididunt 172",
+            "@id": "https://speakmove.app/#organization",
             "name": "SpeakMove",
-            "url": "Sed do eiusmod 173",
-            "logo": "Sed do eiusmod tempor incididunt 174",
+            "url": "https://speakmove.app",
+            "logo": "https://speakmove.app/og/logo.png",
             "foundingDate": "2026",
             "address": {
               "@type": "Sed do eiusmod 175",
-              "addressCountry": "Sed do eiusmod"
+              "addressCountry": "GB"
             },
             "sameAs": [
               "Sed do eiusmod 176",
@@ -746,7 +746,7 @@
           },
           {
             "@type": "Sed do eiusmod 184",
-            "@id": "Sed do eiusmod 185",
+            "@id": "https://speakmove.app/#app",
             "name": "SpeakMove",
             "applicationCategory": "Sed do eiusmod 186",
             "applicationSubCategory": "Sed do eiusmod 187",
@@ -763,28 +763,28 @@
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod",
                 "price": "0",
-                "priceCurrency": "Sed do eiusmod",
+                "priceCurrency": "USD",
                 "description": "1 диалог в день, без получения и вывода монет"
               },
               {
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod",
                 "price": "12.99",
-                "priceCurrency": "Sed do eiusmod",
-                "billingDuration": "Sed do eiusmod",
+                "priceCurrency": "USD",
+                "billingDuration": "P1M",
                 "description": "Sed do eiusmod tempor incididunt 191"
               },
               {
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod",
                 "price": "22.99",
-                "priceCurrency": "Sed do eiusmod",
-                "billingDuration": "Sed do eiusmod",
+                "priceCurrency": "USD",
+                "billingDuration": "P1M",
                 "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (192)"
               }
             ],
             "publisher": {
-              "@id": "Sed do eiusmod tempor incididunt 193"
+              "@id": "https://speakmove.app/#organization"
             }
           },
           {
@@ -890,28 +890,28 @@
         "botStatus": "Sed do eiusmod 222",
         "messages": [
           {
-            "from": "Sed do eiusmod",
+            "from": "bot",
             "text": "Sed do eiusmod tempor incididunt 223",
             "translation": "Sed do eiusmod 224"
           },
           {
-            "from": "Sed do eiusmod",
-            "type": "Sed do eiusmod",
+            "from": "bot",
+            "type": "voice",
             "duration": "0:04"
           },
           {
-            "from": "Sed do eiusmod",
-            "type": "Sed do eiusmod",
+            "from": "me",
+            "type": "voice",
             "duration": "0:03"
           },
           {
-            "from": "Sed do eiusmod",
+            "from": "bot",
             "text": "Sed do eiusmod tempor incididunt 225",
-            "reward": "Sed do eiusmod"
+            "reward": "+75"
           },
           {
-            "from": "Sed do eiusmod",
-            "type": "Sed do eiusmod",
+            "from": "bot",
+            "type": "homework",
             "text": "Sed do eiusmod tempor incididunt 226",
             "translation": "Sed do eiusmod 227"
           }
@@ -973,31 +973,31 @@
       "subtitle": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (246)",
       "criteria": [
         {
-          "letter": "Sed do eiusmod",
+          "letter": "S",
           "eng": "Sed do eiusmod",
           "title": "Sed do eiusmod",
           "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (247)"
         },
         {
-          "letter": "Sed do eiusmod",
+          "letter": "M",
           "eng": "Sed do eiusmod",
           "title": "Sed do eiusmod",
           "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (248)"
         },
         {
-          "letter": "Sed do eiusmod",
+          "letter": "A",
           "eng": "Sed do eiusmod",
           "title": "Sed do eiusmod",
           "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (249)"
         },
         {
-          "letter": "Sed do eiusmod",
+          "letter": "R",
           "eng": "Sed do eiusmod",
           "title": "Sed do eiusmod",
           "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (250)"
         },
         {
-          "letter": "Sed do eiusmod",
+          "letter": "T",
           "eng": "Sed do eiusmod",
           "title": "Sed do eiusmod",
           "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (251)"
@@ -1087,7 +1087,7 @@
           },
           {
             "what": "Sed do eiusmod 264",
-            "amount": "Sed do eiusmod"
+            "amount": "+100–100 SM"
           }
         ]
       },
@@ -1189,19 +1189,19 @@
       "links": [
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/about"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/terms"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/privacy"
         },
         {
           "label": "Sed do eiusmod 290",
-          "href": "Sed do eiusmod 291"
+          "href": "mailto:hi@speakmove.app"
         }
       ],
       "socialTitle": "Sed do eiusmod 292",
@@ -1210,31 +1210,31 @@
           "id": "telegram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Telegram-канал SpeakMove",
-          "href": "Sed do eiusmod 293"
+          "href": "https://t.me/speakmove"
         },
         {
           "id": "instagram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Instagram SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 294"
+          "href": "https://instagram.com/speakmove"
         },
         {
           "id": "tiktok",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть TikTok SpeakMove",
-          "href": "Sed do eiusmod 295"
+          "href": "https://tiktok.com/@speakmove"
         },
         {
           "id": "youtube",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть YouTube-канал SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 296"
+          "href": "https://youtube.com/@speakmove"
         },
         {
           "id": "twitter",
-          "label": "Sed do eiusmod",
+          "label": "X",
           "ariaLabel": "Открыть X (Twitter) SpeakMove",
-          "href": "Sed do eiusmod 297"
+          "href": "https://x.com/speakmove"
         }
       ]
     },
@@ -1244,7 +1244,7 @@
       "keywords": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (298)",
       "ogTitle": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
       "ogDescription": "7 шагов от первого «Start» до cashback в gift cards. Голосовой AI-диалог, ДЗ с x2 монет, CEFR A1 → C1. Без установки приложения.",
-      "canonical": "Sed do eiusmod tempor incididunt 299",
+      "canonical": "https://speakmove.app/how-it-works",
       "ai": {
         "summary": "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
         "shortAnswer": "SpeakMove работает как чат в Telegram: открываешь бота, выбираешь уровень, голосом проходишь AI-диалог (бот отвечает примерно за 2 секунды), получаешь монеты (SM) за каждый урок и на Premium обмениваешь их на подарочные карты Amazon Gift Card или Visa Prepaid (минимум $10, 100 SM = $1). Для пользователей из Украины cashback заменён скидкой −30% на Premium.",
@@ -1356,7 +1356,7 @@
         ]
       },
       "structuredData": {
-        "@context": "Sed do eiusmod 344",
+        "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "Sed do eiusmod 345",
@@ -1365,13 +1365,13 @@
                 "@type": "Sed do eiusmod",
                 "position": 1,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod 346"
+                "item": "https://speakmove.app/"
               },
               {
                 "@type": "Sed do eiusmod",
                 "position": 2,
                 "name": "Sed do eiusmod 347",
-                "item": "Sed do eiusmod tempor incididunt 348"
+                "item": "https://speakmove.app/how-it-works"
               }
             ]
           },
@@ -1379,10 +1379,10 @@
             "@type": "Sed do eiusmod",
             "name": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
             "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (349)",
-            "totalTime": "Sed do eiusmod",
+            "totalTime": "PT2M",
             "estimatedCost": {
               "@type": "Sed do eiusmod 350",
-              "currency": "Sed do eiusmod",
+              "currency": "USD",
               "value": "0"
             },
             "tool": [
@@ -1516,7 +1516,7 @@
         "price": {
           "monthly": {
             "amount": "12.99",
-            "period": "Sed do eiusmod"
+            "period": "/мес"
           },
           "yearly": {
             "amount": "129",
@@ -1551,7 +1551,7 @@
         "price": {
           "monthly": {
             "amount": "22.99",
-            "period": "Sed do eiusmod"
+            "period": "/мес"
           },
           "yearly": {
             "amount": "189",
@@ -1906,19 +1906,19 @@
         "routesTitle": "Sed do eiusmod 447",
         "routes": [
           {
-            "flag": "Sed do eiusmod",
+            "flag": "🛒",
             "name": "Sed do eiusmod"
           },
           {
-            "flag": "Sed do eiusmod",
+            "flag": "🛒",
             "name": "Sed do eiusmod"
           },
           {
-            "flag": "Sed do eiusmod",
+            "flag": "🛒",
             "name": "Sed do eiusmod"
           },
           {
-            "flag": "Sed do eiusmod",
+            "flag": "💳",
             "name": "Sed do eiusmod 448"
           }
         ],
@@ -1929,7 +1929,7 @@
       }
     },
     "faq": {
-      "kicker": "Sed do eiusmod",
+      "kicker": "FAQ",
       "title": "Sed do eiusmod tempor incididunt 450",
       "subtitle": "Sed do eiusmod tempor incididunt 451",
       "contactEmail": "Sed do eiusmod 452",
@@ -2026,19 +2026,19 @@
       "links": [
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/about"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/terms"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/privacy"
         },
         {
           "label": "Sed do eiusmod 482",
-          "href": "Sed do eiusmod 483"
+          "href": "mailto:hi@speakmove.app"
         }
       ],
       "socialTitle": "Sed do eiusmod 484",
@@ -2047,31 +2047,31 @@
           "id": "telegram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Telegram-канал SpeakMove",
-          "href": "Sed do eiusmod 485"
+          "href": "https://t.me/speakmove"
         },
         {
           "id": "instagram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Instagram SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 486"
+          "href": "https://instagram.com/speakmove"
         },
         {
           "id": "tiktok",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть TikTok SpeakMove",
-          "href": "Sed do eiusmod 487"
+          "href": "https://tiktok.com/@speakmove"
         },
         {
           "id": "youtube",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть YouTube-канал SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 488"
+          "href": "https://youtube.com/@speakmove"
         },
         {
           "id": "twitter",
-          "label": "Sed do eiusmod",
+          "label": "X",
           "ariaLabel": "Открыть X (Twitter) SpeakMove",
-          "href": "Sed do eiusmod 489"
+          "href": "https://x.com/speakmove"
         }
       ]
     },
@@ -2081,14 +2081,14 @@
       "keywords": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (490)",
       "ogTitle": "Цены SpeakMove — Free / Plus $12.99 / Premium $22.99 в раннем доступе",
       "ogDescription": "Прозрачная подписка. Free навсегда, Plus $12.99/мес, Premium $22.99/мес с выводом монет. Первые 200 фиксируют цену на 3 месяца после запуска.",
-      "ogImage": "Sed do eiusmod tempor incididunt 491",
+      "ogImage": "https://speakmove.app/og/pricing.png",
       "ogImageAlt": "Цены SpeakMove — три плана: Free, Plus $12.99, Premium $22.99",
-      "ogUrl": "Sed do eiusmod 492",
+      "ogUrl": "https://speakmove.app/pricing",
       "ogType": "Sed do eiusmod",
       "ogLocale": "Sed do eiusmod",
-      "twitterCard": "Sed do eiusmod 493",
-      "twitterImage": "Sed do eiusmod tempor incididunt 494",
-      "canonical": "Sed do eiusmod 495",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://speakmove.app/og/pricing.png",
+      "canonical": "https://speakmove.app/pricing",
       "robots": "Sed do eiusmod tempor incididunt 496",
       "ai": {
         "summary": "Страница цен SpeakMove — Telegram-бота для изучения языка. На старте — английский; немецкий и норвежский в roadmap. Описаны три плана подписки: Free (бесплатно навсегда, 1 голосовой диалог в день), Plus ($12.99/мес ранний доступ, $16.99 после 200 пользователей; до 90 мин голосовой практики в неделю, без рекламы, накопление монет (SM), сертификат при завершении уровня), Premium ($22.99/мес ранний доступ, $28.99 после; всё из Plus + домашние задания с x2 монет, cashback в gift cards Amazon Gift Card или Visa Prepaid, родительский дашборд в V1.1). Курс монет: 100 SM = $1, минимум для обмена $10 ($5 для первых 200), комиссия $0. Программа для Украины: cashback заменён скидкой −30% только на Premium. Оплата банковской картой (Stripe) или через Telegram Stars. Отмена в один тап. Сейчас SpeakMove — research-проект; оператор Dmytro Fenko, UK sole trader (ICO № ZC141876). При запуске возможна смена формы на UK Ltd с предварительным уведомлением подписчиков.",
@@ -2155,7 +2155,7 @@
         }
       },
       "structuredData": {
-        "@context": "Sed do eiusmod 516",
+        "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "Sed do eiusmod 517",
@@ -2164,13 +2164,13 @@
                 "@type": "Sed do eiusmod",
                 "position": 1,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod 518"
+                "item": "https://speakmove.app/"
               },
               {
                 "@type": "Sed do eiusmod",
                 "position": 2,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod 519"
+                "item": "https://speakmove.app/pricing"
               }
             ]
           },
@@ -2187,69 +2187,69 @@
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod",
                 "price": "0",
-                "priceCurrency": "Sed do eiusmod",
+                "priceCurrency": "USD",
                 "description": "1 голосовой диалог в день, 1 язык, базовый прогресс по уровням A1–A2",
-                "availability": "Sed do eiusmod 521"
+                "availability": "https://schema.org/InStock"
               },
               {
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod",
                 "price": "12.99",
-                "priceCurrency": "Sed do eiusmod",
+                "priceCurrency": "USD",
                 "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (522)",
                 "priceSpecification": {
                   "@type": "Sed do eiusmod 523",
                   "price": "12.99",
-                  "priceCurrency": "Sed do eiusmod",
+                  "priceCurrency": "USD",
                   "billingIncrement": 1,
-                  "unitCode": "Sed do eiusmod"
+                  "unitCode": "MON"
                 },
-                "availability": "Sed do eiusmod 524"
+                "availability": "https://schema.org/InStock"
               },
               {
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod 525",
                 "price": "129",
-                "priceCurrency": "Sed do eiusmod",
+                "priceCurrency": "USD",
                 "description": "Plus, оплата за год, $10.75/мес",
                 "priceSpecification": {
                   "@type": "Sed do eiusmod 526",
                   "price": "129",
-                  "priceCurrency": "Sed do eiusmod",
+                  "priceCurrency": "USD",
                   "billingIncrement": 1,
-                  "unitCode": "Sed do eiusmod"
+                  "unitCode": "ANN"
                 },
-                "availability": "Sed do eiusmod 527"
+                "availability": "https://schema.org/InStock"
               },
               {
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod",
                 "price": "22.99",
-                "priceCurrency": "Sed do eiusmod",
+                "priceCurrency": "USD",
                 "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (528)",
                 "priceSpecification": {
                   "@type": "Sed do eiusmod 529",
                   "price": "22.99",
-                  "priceCurrency": "Sed do eiusmod",
+                  "priceCurrency": "USD",
                   "billingIncrement": 1,
-                  "unitCode": "Sed do eiusmod"
+                  "unitCode": "MON"
                 },
-                "availability": "Sed do eiusmod 530"
+                "availability": "https://schema.org/InStock"
               },
               {
                 "@type": "Sed do eiusmod",
                 "name": "Sed do eiusmod 531",
                 "price": "189",
-                "priceCurrency": "Sed do eiusmod",
+                "priceCurrency": "USD",
                 "description": "Premium, оплата за год, $15.75/мес",
                 "priceSpecification": {
                   "@type": "Sed do eiusmod 532",
                   "price": "189",
-                  "priceCurrency": "Sed do eiusmod",
+                  "priceCurrency": "USD",
                   "billingIncrement": 1,
-                  "unitCode": "Sed do eiusmod"
+                  "unitCode": "ANN"
                 },
-                "availability": "Sed do eiusmod 533"
+                "availability": "https://schema.org/InStock"
               }
             ]
           },
@@ -2290,32 +2290,32 @@
       },
       "perks": [
         {
-          "icon": "Sed do eiusmod",
+          "icon": "gift",
           "title": "Sed do eiusmod 542",
           "subtitle": "Sed do eiusmod tempor incididunt 543"
         },
         {
-          "icon": "Sed do eiusmod",
+          "icon": "clock",
           "title": "15 минут в день",
           "subtitle": "Sed do eiusmod tempor incididunt 544"
         },
         {
-          "icon": "Sed do eiusmod",
+          "icon": "coin",
           "title": "Sed do eiusmod 545",
           "subtitle": "Sed do eiusmod tempor incididunt 546"
         },
         {
-          "icon": "Sed do eiusmod",
+          "icon": "flag",
           "title": "Sed do eiusmod tempor incididunt 547",
           "subtitle": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (548)"
         },
         {
-          "icon": "Sed do eiusmod",
+          "icon": "lock",
           "title": "Sed do eiusmod tempor incididunt 549",
           "subtitle": "Plus $12.99 вместо $16.99 · Premium $22.99 вместо $28.99. Только для первых 200. Срок отсчитывается от официального запуска; если запуск не состоится в течение 12 месяцев с момента регистрации в waitlist — программа аннулируется без обязательств с обеих сторон."
         },
         {
-          "icon": "Sed do eiusmod",
+          "icon": "users",
           "title": "Sed do eiusmod 550",
           "subtitle": "Sed do eiusmod tempor incididunt 551"
         }
@@ -2346,7 +2346,7 @@
         },
         "email": {
           "label": "Sed do eiusmod",
-          "placeholder": "Sed do eiusmod 558",
+          "placeholder": "ivan@example.com",
           "required": true
         },
         "segment": {
@@ -2399,11 +2399,11 @@
           "hint": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (571)",
           "options": [
             {
-              "value": "Sed do eiusmod",
+              "value": "UA",
               "label": "Sed do eiusmod tempor incididunt 572"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "DE",
               "label": "Sed do eiusmod"
             },
             {
@@ -2411,39 +2411,39 @@
               "label": "Sed do eiusmod 573"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "PL",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "CZ",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "NL",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "ES",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "IT",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "FR",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "IE",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "AT",
               "label": "Sed do eiusmod"
             },
             {
-              "value": "Sed do eiusmod",
+              "value": "US",
               "label": "Sed do eiusmod"
             },
             {
@@ -2493,19 +2493,19 @@
       "links": [
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/about"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/terms"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/privacy"
         },
         {
           "label": "Sed do eiusmod 586",
-          "href": "Sed do eiusmod 587"
+          "href": "mailto:hi@speakmove.app"
         }
       ],
       "socialTitle": "Sed do eiusmod 588",
@@ -2514,31 +2514,31 @@
           "id": "telegram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Telegram-канал SpeakMove",
-          "href": "Sed do eiusmod 589"
+          "href": "https://t.me/speakmove"
         },
         {
           "id": "instagram",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть Instagram SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 590"
+          "href": "https://instagram.com/speakmove"
         },
         {
           "id": "tiktok",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть TikTok SpeakMove",
-          "href": "Sed do eiusmod 591"
+          "href": "https://tiktok.com/@speakmove"
         },
         {
           "id": "youtube",
           "label": "Sed do eiusmod",
           "ariaLabel": "Открыть YouTube-канал SpeakMove",
-          "href": "Sed do eiusmod tempor incididunt 592"
+          "href": "https://youtube.com/@speakmove"
         },
         {
           "id": "twitter",
-          "label": "Sed do eiusmod",
+          "label": "X",
           "ariaLabel": "Открыть X (Twitter) SpeakMove",
-          "href": "Sed do eiusmod 593"
+          "href": "https://x.com/speakmove"
         }
       ]
     },
@@ -2548,14 +2548,14 @@
       "keywords": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (594)",
       "ogTitle": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
       "ogDescription": "Только для первых 200: Plus $12.99 и Premium $22.99 на 3 месяца с момента запуска. Один email — и место за тобой. Без спама и без карты.",
-      "ogImage": "Sed do eiusmod tempor incididunt 595",
+      "ogImage": "https://speakmove.app/og/waitlist.png",
       "ogImageAlt": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
-      "ogUrl": "Sed do eiusmod tempor incididunt 596",
+      "ogUrl": "https://speakmove.app/waitlist",
       "ogType": "Sed do eiusmod",
       "ogLocale": "Sed do eiusmod",
-      "twitterCard": "Sed do eiusmod 597",
-      "twitterImage": "Sed do eiusmod tempor incididunt 598",
-      "canonical": "Sed do eiusmod tempor incididunt 599",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://speakmove.app/og/waitlist.png",
+      "canonical": "https://speakmove.app/waitlist",
       "robots": "Sed do eiusmod tempor incididunt 600",
       "ai": {
         "summary": "Страница вейтлиста SpeakMove — формы регистрации в раннем доступе. Сейчас SpeakMove — research-проект; оператор Dmytro Fenko, UK sole trader (ICO № ZC141876). Доступ ограничен 200 пользователями: они фиксируют скидочные тарифы (Plus $12.99/мес вместо $16.99, Premium $22.99/мес вместо $28.99) на 3 месяца с момента официального запуска. Регистрация требует имя, email, сегмент (родитель ребёнка 6–14, взрослый для себя или оба) и страну (для определения тарифной программы — cashback в gift cards Amazon Gift Card / Visa Prepaid или скидка −30% для пользователей из Украины только на Premium; Plus в UA идёт по обычной цене). Поля «фамилия» и «целевой язык» необязательные. Карту вводить не нужно — оплата только при активации Plus или Premium после запуска. Первые 200 пользователей не платят за раннюю регистрацию. Уведомление об открытии доступа приходит на email одним письмом. После регистрации пользователь видит свой номер в очереди и может отписаться в один клик. Контроллер данных — Dmytro Fenko (UK sole trader, ICO № ZC141876). Обработка по UK GDPR / EU GDPR. Данные не продаются и не используются для рекламного таргетинга.",
@@ -2613,7 +2613,7 @@
         ]
       },
       "structuredData": {
-        "@context": "Sed do eiusmod 624",
+        "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "Sed do eiusmod 625",
@@ -2622,13 +2622,13 @@
                 "@type": "Sed do eiusmod",
                 "position": 1,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod 626"
+                "item": "https://speakmove.app/"
               },
               {
                 "@type": "Sed do eiusmod",
                 "position": 2,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod tempor incididunt 627"
+                "item": "https://speakmove.app/waitlist"
               }
             ]
           },
@@ -2636,18 +2636,18 @@
             "@type": "Sed do eiusmod",
             "name": "Sed do eiusmod SpeakMove 628",
             "description": "Регистрация в раннем доступе SpeakMove. Первые 200 пользователей фиксируют цену Plus $12.99/мес и Premium $22.99/мес на 3 месяца с момента запуска.",
-            "url": "Sed do eiusmod tempor incididunt 629",
+            "url": "https://speakmove.app/waitlist",
             "inLanguage": "Sed do eiusmod",
             "isPartOf": {
-              "@id": "Sed do eiusmod tempor incididunt 630"
+              "@id": "https://speakmove.app/#website"
             },
             "publisher": {
-              "@id": "Sed do eiusmod tempor incididunt 631"
+              "@id": "https://speakmove.app/#organization"
             },
             "potentialAction": {
               "@type": "Sed do eiusmod 632",
               "name": "Sed do eiusmod 633",
-              "target": "Sed do eiusmod tempor incididunt 634"
+              "target": "https://speakmove.app/waitlist"
             }
           },
           {
@@ -2669,37 +2669,37 @@
         "pricing": "Sed do eiusmod"
       },
       "linksHref": {
-        "howItWorks": "Sed do eiusmod 638",
-        "advantages": "Sed do eiusmod 639",
-        "compare": "Sed do eiusmod",
-        "pricing": "Sed do eiusmod"
+        "howItWorks": "/how-it-works",
+        "advantages": "/#advantages",
+        "compare": "/#compare",
+        "pricing": "/pricing"
       },
       "langToggle": {
         "ariaLabel": "Язык интерфейса",
         "active": "Sed do eiusmod",
         "options": [
           {
-            "code": "Sed do eiusmod",
+            "code": "ru",
             "label": "RU"
           },
           {
-            "code": "Sed do eiusmod",
+            "code": "uk",
             "label": "UK"
           },
           {
-            "code": "Sed do eiusmod",
+            "code": "en",
             "label": "EN"
           }
         ]
       },
       "cta": {
         "label": "Sed do eiusmod 640",
-        "href": "Sed do eiusmod"
+        "href": "/waitlist"
       }
     },
     "hero": {
       "_TODO_backend": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (641)",
-      "icon": "Sed do eiusmod",
+      "icon": "check",
       "title": "Sed do eiusmod 642",
       "subtitle": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (643)",
       "positionTemplate": "Sed do eiusmod tempor incididunt 644",
@@ -2715,7 +2715,7 @@
       "labels": {
         "locked": "Sed do eiusmod",
         "regular": "Sed do eiusmod 648",
-        "period": "Sed do eiusmod",
+        "period": "/мес",
         "lockedDescription": "Sed do eiusmod tempor incididunt 649",
         "regularDescription": "Sed do eiusmod tempor incididunt 650"
       },
@@ -2735,26 +2735,26 @@
     "share": {
       "label": "Sed do eiusmod 651",
       "shareText": "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      "shareUrl": "Sed do eiusmod 652",
+      "shareUrl": "https://speakmove.app",
       "buttons": [
         {
           "id": "telegram",
           "title": "Sed do eiusmod 653",
-          "icon": "Sed do eiusmod",
-          "hrefTemplate": "Sed do eiusmod tempor incididunt 654"
+          "icon": "telegram",
+          "hrefTemplate": "https://t.me/share/url?url={url}&text={text}"
         },
         {
           "id": "email",
           "title": "Sed do eiusmod 655",
-          "icon": "Sed do eiusmod",
+          "icon": "email",
           "subject": "SpeakMove",
           "body": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
-          "hrefTemplate": "Sed do eiusmod tempor incididunt 656"
+          "hrefTemplate": "mailto:?subject={subject}&body={body}"
         },
         {
           "id": "copy",
           "title": "Sed do eiusmod 657",
-          "icon": "Sed do eiusmod",
+          "icon": "link",
           "copyText": "Sed do eiusmod 658",
           "successMessage": "Sed do eiusmod 659"
         }
@@ -2763,12 +2763,12 @@
     "cta": {
       "primary": {
         "label": "Sed do eiusmod 660",
-        "href": "Sed do eiusmod",
-        "icon": "Sed do eiusmod"
+        "href": "/",
+        "icon": "arrow-right"
       },
       "secondary": {
         "label": "Sed do eiusmod 661",
-        "href": "Sed do eiusmod 662"
+        "href": "/how-it-works"
       }
     },
     "footer": {
@@ -2777,19 +2777,19 @@
       "links": [
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/about"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/terms"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/privacy"
         },
         {
           "label": "Sed do eiusmod 663",
-          "href": "Sed do eiusmod 664"
+          "href": "mailto:hi@speakmove.app"
         }
       ]
     },
@@ -2799,14 +2799,14 @@
       "keywords": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (666)",
       "ogTitle": "Sed do eiusmod SpeakMove 667",
       "ogDescription": "Скидочная цена $12.99/мес зафиксирована на 3 месяца с момента запуска. Поделись приглашением с друзьями — и помоги нам запустить раньше.",
-      "ogImage": "Sed do eiusmod tempor incididunt 668",
+      "ogImage": "https://speakmove.app/og/thank-you.png",
       "ogImageAlt": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
-      "ogUrl": "Sed do eiusmod tempor incididunt 669",
+      "ogUrl": "https://speakmove.app/thank-you",
       "ogType": "Sed do eiusmod",
       "ogLocale": "Sed do eiusmod",
-      "twitterCard": "Sed do eiusmod 670",
-      "twitterImage": "Sed do eiusmod tempor incididunt 671",
-      "canonical": "Sed do eiusmod tempor incididunt 672",
+      "twitterCard": "summary_large_image",
+      "twitterImage": "https://speakmove.app/og/thank-you.png",
+      "canonical": "https://speakmove.app/thank-you",
       "robots": "Sed do eiusmod 673",
       "ai": {
         "summary": "Страница подтверждения регистрации в вейтлист SpeakMove. Показывает зафиксированную раннюю цену ($12.99/мес для Plus) на 3 месяца с момента официального запуска и обычную цену после ($16.99/мес). Содержит кнопки шеринга в Telegram, по email и копирования ссылки speakmove.app, а также кнопки возврата на главную и перехода на страницу «Как работает». Отправляется пользователю после успешной регистрации в вейтлист и не предназначена для индексации в поиске.",
@@ -2822,7 +2822,7 @@
         ]
       },
       "structuredData": {
-        "@context": "Sed do eiusmod 678",
+        "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "Sed do eiusmod 679",
@@ -2831,19 +2831,19 @@
                 "@type": "Sed do eiusmod",
                 "position": 1,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod 680"
+                "item": "https://speakmove.app/"
               },
               {
                 "@type": "Sed do eiusmod",
                 "position": 2,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod tempor incididunt 681"
+                "item": "https://speakmove.app/waitlist"
               },
               {
                 "@type": "Sed do eiusmod",
                 "position": 3,
                 "name": "Sed do eiusmod",
-                "item": "Sed do eiusmod tempor incididunt 682"
+                "item": "https://speakmove.app/thank-you"
               }
             ]
           },
@@ -2851,13 +2851,13 @@
             "@type": "Sed do eiusmod",
             "name": "Sed do eiusmod SpeakMove 683",
             "description": "Подтверждение регистрации в вейтлист SpeakMove. Цена $12.99/мес зафиксирована на 3 месяца с момента запуска.",
-            "url": "Sed do eiusmod tempor incididunt 684",
+            "url": "https://speakmove.app/thank-you",
             "inLanguage": "Sed do eiusmod",
             "isPartOf": {
-              "@id": "Sed do eiusmod tempor incididunt 685"
+              "@id": "https://speakmove.app/#website"
             },
             "publisher": {
-              "@id": "Sed do eiusmod tempor incididunt 686"
+              "@id": "https://speakmove.app/#organization"
             }
           }
         ]
@@ -2877,15 +2877,15 @@
       "links": [
         {
           "label": "Sed do eiusmod 692",
-          "href": "Sed do eiusmod 693"
+          "href": "/how-it-works"
         },
         {
           "label": "Sed do eiusmod",
-          "href": "Sed do eiusmod"
+          "href": "/pricing"
         },
         {
           "label": "Sed do eiusmod 694",
-          "href": "Sed do eiusmod"
+          "href": "/waitlist"
         }
       ]
     },
@@ -2919,7 +2919,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (701)",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt 702",
               "Sed do eiusmod 703",
@@ -2939,7 +2939,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (711)",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (712)"
@@ -2952,7 +2952,7 @@
         "heading": "Sed do eiusmod 713",
         "body": [
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (714)",
@@ -2967,7 +2967,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt 717",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt 718",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (719)",
@@ -2985,7 +2985,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (725)",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (726)",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (727)",
@@ -3003,7 +3003,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt 733",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt 734",
               "Sed do eiusmod tempor incididunt 735",
@@ -3025,7 +3025,7 @@
           "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (744)",
           "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (745)",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (746)",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (747)",
@@ -3105,7 +3105,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt 767",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
               "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
@@ -3120,7 +3120,7 @@
         "body": [
           "Sed do eiusmod 770",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
               "Sed do eiusmod tempor incididunt 771",
@@ -3138,7 +3138,7 @@
         "body": [
           "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (777)",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (778)",
@@ -3162,7 +3162,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt 789",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt 790",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (791)",
@@ -3187,7 +3187,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (798)",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (799)",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (800)",
@@ -3259,7 +3259,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt 819",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (820)",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (821)"
@@ -3272,7 +3272,7 @@
         "heading": "Sed do eiusmod 822",
         "body": [
           {
-            "type": "Sed do eiusmod",
+            "type": "table",
             "headers": [
               "Sed do eiusmod 823",
               "Sed do eiusmod",
@@ -3334,7 +3334,7 @@
         "body": [
           "Sed do eiusmod tempor incididunt 843",
           {
-            "type": "Sed do eiusmod",
+            "type": "list",
             "items": [
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (844)",
               "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (845)",
@@ -3391,13 +3391,13 @@
     ],
     "author": "Sed do eiusmod SpeakMove 871",
     "contactEmail": "Sed do eiusmod 872",
-    "telegramBot": "Sed do eiusmod SpeakMove 873",
-    "ogImage": "Sed do eiusmod 874",
+    "telegramBot": "@SpeakMoveBot",
+    "ogImage": "/og/speakmove-og.png",
     "ogImageAlt": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
-    "twitterCard": "Sed do eiusmod 875",
-    "twitterHandle": "Sed do eiusmod",
-    "themeColor": "Sed do eiusmod",
-    "locale": "Sed do eiusmod",
+    "twitterCard": "summary_large_image",
+    "twitterHandle": "@speakmove",
+    "themeColor": "#059669",
+    "locale": "uk",
     "cookies": {
       "title": "Sed do eiusmod 876",
       "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (877)",
@@ -3405,9 +3405,9 @@
       "decline": "Sed do eiusmod 878",
       "settings": "Sed do eiusmod",
       "policyLinkLabel": "Sed do eiusmod 879",
-      "policyLinkHref": "Sed do eiusmod",
+      "policyLinkHref": "/cookies",
       "privacyLinkLabel": "Sed do eiusmod 880",
-      "privacyLinkHref": "Sed do eiusmod",
+      "privacyLinkHref": "/privacy",
       "_legalNote": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (881)"
     },
     "consent": {
@@ -3445,23 +3445,23 @@
     "social": {
       "telegram": {
         "label": "Sed do eiusmod",
-        "href": "Sed do eiusmod 895"
+        "href": "https://t.me/speakmove"
       },
       "instagram": {
         "label": "Sed do eiusmod",
-        "href": "Sed do eiusmod tempor incididunt 896"
+        "href": "https://instagram.com/speakmove"
       },
       "tiktok": {
         "label": "Sed do eiusmod",
-        "href": "Sed do eiusmod 897"
+        "href": "https://tiktok.com/@speakmove"
       },
       "youtube": {
         "label": "Sed do eiusmod",
-        "href": "Sed do eiusmod tempor incididunt 898"
+        "href": "https://youtube.com/@speakmove"
       },
       "twitter": {
         "label": "Sed do eiusmod",
-        "href": "Sed do eiusmod 899"
+        "href": "https://x.com/speakmove"
       }
     },
     "legal": {
