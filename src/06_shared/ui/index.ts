@@ -1,4 +1,5 @@
 export { Badge } from './Badge';
+export { PhoneFrame } from './PhoneFrame';
 export { Button } from './Button';
 export { Card } from './Card';
 export { Container } from './Container';
@@ -9,5 +10,6 @@ export { InlineMarkdown } from './InlineMarkdown';
 export { Input } from './Input';
 export { Label } from './Label';
 export { Section } from './Section';
+export { Select } from './Select';
 export { SkipLink } from './SkipLink';
 export { VisuallyHidden } from './VisuallyHidden';
