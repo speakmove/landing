@@ -5,6 +5,7 @@ export { Container } from './Container';
 export { FieldError } from './FieldError';
 export { HoneypotField } from './HoneypotField';
 export { ArrowRightIcon, CheckIcon, CoinIcon, Icon } from './Icon';
+export { InlineMarkdown } from './InlineMarkdown';
 export { Input } from './Input';
 export { Label } from './Label';
 export { Section } from './Section';
