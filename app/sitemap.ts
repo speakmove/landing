@@ -1,0 +1,28 @@
+import type { MetadataRoute } from 'next';
+import { routing } from '@/shared/model/libs/i18n/routing';
+import { env } from '@/shared/model/libs/env';
+
+const PATHS = [
+  '',
+  '/how-it-works',
+  '/pricing',
+  '/waitlist',
+  '/privacy',
+  '/terms',
+  '/cookies',
+] as const;
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  return PATHS.flatMap((path) =>
+    routing.locales.map((locale) => ({
+      url: `${base}/${locale}${path}`,
+      lastModified: new Date(),
+      alternates: {
+        languages: Object.fromEntries(
+          routing.locales.map((l) => [l, `${base}/${l}${path}`]),
+        ),
+      },
+    })),
+  );
+}
