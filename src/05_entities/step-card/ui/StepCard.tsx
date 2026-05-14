@@ -5,7 +5,7 @@ type TProps = {
   step: TStep;
 };
 
-export function StepCard({ step }: TProps) {
+export const StepCard = ({ step }: TProps) => {
   return (
     <Card as="article" className="flex flex-col gap-3">
       <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary text-white font-bold text-sm tabular-nums">

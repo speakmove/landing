@@ -7,7 +7,7 @@ import { CoinEconomyGrid } from '@/widgets/coin-economy-grid';
 import { PrivacyFeatureGrid } from '@/widgets/privacy-feature-grid';
 import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
 
-export function HowItWorksPage() {
+export const HowItWorksPage = () => {
   return (
     <main id="main-content">
       <PageHeroWithStats />

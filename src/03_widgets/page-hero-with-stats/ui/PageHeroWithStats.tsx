@@ -6,7 +6,7 @@ type TStat = {
   label: string;
 };
 
-export async function PageHeroWithStats() {
+export const PageHeroWithStats = async () => {
   const t = await getTranslations('HowItWorksPage.hero');
   const stats = t.raw('stats') as unknown as TStat[];
 

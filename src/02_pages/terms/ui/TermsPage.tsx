@@ -1,5 +1,5 @@
 import { LegalPageLayout } from '@/pages/legal-page-layout';
 
-export function TermsPage() {
+export const TermsPage = () => {
   return <LegalPageLayout namespace="TermsPage" />;
 }

@@ -17,7 +17,7 @@ export const InlineMarkdown = ({ text }: TProps) => {
   return <>{parts.map((part, idx) => renderPart(part, idx))}</>;
 };
 
-function renderPart(part: string, key: number): ReactNode {
+const renderPart = (part: string, key: number): ReactNode => {
   if (part.startsWith('**') && part.endsWith('**')) {
     return <strong key={key}>{part.slice(2, -2)}</strong>;
   }

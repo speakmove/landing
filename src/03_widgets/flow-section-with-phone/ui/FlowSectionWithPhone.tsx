@@ -12,7 +12,7 @@ type TPhonePreview = {
 };
 
 /** Minimal phone shell for HowItWorks page — no floatBubbles needed */
-function HowItWorksPhonePreview({ preview }: { preview: TPhonePreview }) {
+const HowItWorksPhonePreview = ({ preview }: { preview: TPhonePreview }) => {
   return (
     <div aria-hidden="true" className="lg:sticky lg:top-[88px]">
       <div
@@ -53,7 +53,7 @@ function HowItWorksPhonePreview({ preview }: { preview: TPhonePreview }) {
   );
 }
 
-export async function FlowSectionWithPhone() {
+export const FlowSectionWithPhone = async () => {
   const t = await getTranslations('HowItWorksPage.flow');
 
   const steps = t.raw('steps') as unknown as TStep[];

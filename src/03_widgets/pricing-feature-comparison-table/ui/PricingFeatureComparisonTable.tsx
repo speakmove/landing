@@ -20,7 +20,7 @@ type TCompareData = {
   groups: TCompareGroup[];
 };
 
-export async function PricingFeatureComparisonTable() {
+export const PricingFeatureComparisonTable = async () => {
   const t = await getTranslations('PricingPage.compare');
   const data = {
     kicker: t('kicker'),

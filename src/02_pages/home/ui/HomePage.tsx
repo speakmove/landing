@@ -7,7 +7,7 @@ import { HomePricingTeaser } from '@/widgets/home-pricing-teaser';
 import { HomeUkraineProgramme } from '@/widgets/home-ukraine-programme';
 import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
 
-export function HomePage() {
+export const HomePage = () => {
   return (
     <main id="main-content">
       <HomeHero />

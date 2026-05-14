@@ -18,7 +18,7 @@ type TProps = {
   namespace: 'PrivacyPage' | 'TermsPage' | 'CookiesPage';
 };
 
-export async function LegalPageLayout({ namespace }: TProps) {
+export const LegalPageLayout = async ({ namespace }: TProps) => {
   const t = await getTranslations(namespace as never);
   const meta = t.raw('meta') as unknown as TLegalMeta;
   const sections = t.raw('sections') as unknown as TLegalSection[];

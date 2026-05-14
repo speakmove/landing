@@ -3,7 +3,7 @@ import { Container, Section } from '@/shared/ui';
 import { PrivacyFeatureCard } from '@/entities/privacy-card';
 import type { TPrivacyCard } from '@/entities/privacy-card';
 
-export async function PrivacyFeatureGrid() {
+export const PrivacyFeatureGrid = async () => {
   const t = await getTranslations('HowItWorksPage.privacy');
   const cards = t.raw('cards') as unknown as TPrivacyCard[];
 

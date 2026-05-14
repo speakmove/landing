@@ -4,7 +4,7 @@ import { Link, usePathname } from '@/shared/model/libs/i18n/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
 import { cn } from '@/shared/model/libs/cn';
 
-export function LocaleSwitch() {
+export const LocaleSwitch = () => {
   const current = useLocale();
   const pathname = usePathname();
   const t = useTranslations('HomePage.nav.langToggle');

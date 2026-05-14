@@ -5,7 +5,7 @@ type TProps = {
   reset: () => void;
 };
 
-export function ErrorPage({ reset }: TProps) {
+export const ErrorPage = ({ reset }: TProps) => {
   return (
     <Section>
       <Container className="max-w-160 text-center">

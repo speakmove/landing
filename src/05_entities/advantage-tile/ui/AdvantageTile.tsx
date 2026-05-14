@@ -6,7 +6,7 @@ type TProps = {
   className?: string;
 };
 
-export function AdvantageTile({ tile, className }: TProps) {
+export const AdvantageTile = ({ tile, className }: TProps) => {
   return (
     <Card as="article" className={className}>
       {tile.badge && (

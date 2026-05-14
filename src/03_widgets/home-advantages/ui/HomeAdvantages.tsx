@@ -3,7 +3,7 @@ import { Container, Section } from '@/shared/ui';
 import { AdvantageTile } from '@/entities/advantage-tile';
 import type { TAdvantageTile } from '@/entities/advantage-tile';
 
-export async function HomeAdvantages() {
+export const HomeAdvantages = async () => {
   const t = await getTranslations('HomePage.advantages');
 
   const tiles = t.raw('tiles') as unknown as TAdvantageTile[];

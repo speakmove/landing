@@ -3,7 +3,7 @@ import { Container, Section } from '@/shared/ui';
 import { FaqItem } from '@/entities/faq-item';
 import type { TFaqItem } from '@/entities/faq-item';
 
-export async function PricingFaqSection() {
+export const PricingFaqSection = async () => {
   const t = await getTranslations('PricingPage.faq');
   const items = t.raw('items') as unknown as TFaqItem[];
 

@@ -4,7 +4,7 @@ import { CefrLevelRow } from '@/entities/cefr-level';
 import type { TCefrLevel } from '@/entities/cefr-level';
 
 /** Parse **bold** markdown inline — pure React JSX, no unsafe HTML injection */
-function BoldText({ text }: { text: string }) {
+const BoldText = ({ text }: { text: string }) => {
   const parts = text.split('**');
   return (
     <>
@@ -26,7 +26,7 @@ type TSideData = {
   items: string[];
 };
 
-export async function CefrProgression() {
+export const CefrProgression = async () => {
   const t = await getTranslations('HowItWorksPage.cefr');
 
   const levels = t.raw('levels') as unknown as TCefrLevel[];

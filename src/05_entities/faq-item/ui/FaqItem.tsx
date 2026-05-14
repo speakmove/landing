@@ -5,7 +5,7 @@ type TProps = {
   item: TFaqItem;
 };
 
-export function FaqItem({ item }: TProps) {
+export const FaqItem = ({ item }: TProps) => {
   return (
     <li>
       <details className="group border-b border-line py-4">

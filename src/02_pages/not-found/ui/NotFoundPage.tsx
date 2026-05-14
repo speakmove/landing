@@ -1,13 +1,14 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { Button, Container, Section } from '@/shared/ui';
+import { PATHS } from '@/shared/config';
 
 type TSuggestionLink = {
   label: string;
   href: string;
 };
 
-export async function NotFoundPage() {
+export const NotFoundPage = async () => {
   const t = await getTranslations('NotFoundPage');
   const suggestionLinks = (t.raw('suggestions.links') as TSuggestionLink[]) ?? [];
   return (
@@ -20,7 +21,7 @@ export async function NotFoundPage() {
         <p className="mt-3 text-muted">{t('description')}</p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link href="/">
+          <Link href={PATHS.home}>
             <Button variant="primary" size="lg">
               {t('ctas.primary')}
             </Button>

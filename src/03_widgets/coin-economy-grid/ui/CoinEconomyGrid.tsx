@@ -18,7 +18,7 @@ type TOutcomeData = {
 };
 
 /** Parse **bold** markdown inline — pure React JSX */
-function BoldText({ text }: { text: string }) {
+const BoldText = ({ text }: { text: string }) => {
   const parts = text.split('**');
   return (
     <>
@@ -35,7 +35,7 @@ function BoldText({ text }: { text: string }) {
   );
 }
 
-function CoinTable({
+const CoinTable = ({
   title,
   rows,
   captionLabel,
@@ -43,7 +43,7 @@ function CoinTable({
   title: string;
   rows: TCoinFlowRow[];
   captionLabel: string;
-}) {
+}) => {
   return (
     <div className="rounded-2xl border border-line bg-white shadow-(--shadow-soft) overflow-hidden">
       <div className="px-5 py-4 border-b border-line bg-surface">
@@ -90,7 +90,7 @@ function CoinTable({
   );
 }
 
-export async function CoinEconomyGrid() {
+export const CoinEconomyGrid = async () => {
   const t = await getTranslations('HowItWorksPage.coinLoop');
   const earn = t.raw('earn') as unknown as TEarnData;
   const outcome = t.raw('outcome') as unknown as TOutcomeData;

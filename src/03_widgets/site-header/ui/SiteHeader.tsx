@@ -3,18 +3,19 @@ import { Link } from '@/shared/model/libs/i18n/navigation';
 import { Logo } from '@/entities/brand';
 import { Button, Container, ArrowRightIcon } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
+import { PATHS, ANCHORS } from '@/shared/config';
 
 type TLinkKey = 'howItWorks' | 'advantages' | 'compare' | 'pricing';
 type TNavItem = { key: TLinkKey; href: string };
 
 const NAV_ITEMS: TNavItem[] = [
-  { key: 'howItWorks', href: '/how-it-works' },
-  { key: 'advantages', href: '/#advantages' },
-  { key: 'compare', href: '/#compare' },
-  { key: 'pricing', href: '/pricing' },
+  { key: 'howItWorks', href: PATHS.howItWorks },
+  { key: 'advantages', href: `/#${ANCHORS.advantages}` },
+  { key: 'compare', href: `/#${ANCHORS.compare}` },
+  { key: 'pricing', href: PATHS.pricing },
 ];
 
-export async function SiteHeader() {
+export const SiteHeader = async () => {
   const t = await getTranslations('HomePage.nav');
   const tLinks = await getTranslations('HomePage.nav.links');
 
@@ -23,7 +24,7 @@ export async function SiteHeader() {
       <Container>
         <div className="flex min-h-16 items-center gap-4 py-3">
           <Link
-            href="/"
+            href={PATHS.home}
             aria-label={t('brand')}
             className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
@@ -51,7 +52,7 @@ export async function SiteHeader() {
             <LocaleSwitch />
           </div>
 
-          <Link href="/waitlist">
+          <Link href={PATHS.waitlist}>
             <Button size="sm">
               {t('cta')}
               <ArrowRightIcon size={14} />

@@ -14,7 +14,7 @@ type TConsentSegment =
   | { type: 'text'; value: string }
   | { type: 'link'; text: string; href: string };
 
-function parseConsentLabel(input: string): TConsentSegment[] {
+const parseConsentLabel = (input: string): TConsentSegment[] => {
   const segments: TConsentSegment[] = [];
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
   let lastIndex = 0;
@@ -42,7 +42,7 @@ const selectCls = [
   'disabled:cursor-not-allowed disabled:bg-surface',
 ].join(' ');
 
-export function WaitlistForm() {
+export const WaitlistForm = () => {
   const tForm = useTranslations('WaitlistPage.form');
   const tErrors = useTranslations('WaitlistPage.form.errors');
   const bonusThreshold = tForm.raw('progress.bonusThreshold') as number;

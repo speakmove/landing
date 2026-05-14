@@ -17,7 +17,7 @@ const PERK_ICON_MAP: Record<string, string> = {
   users: '👨‍👩‍👧',
 };
 
-function PerkIcon({ name }: { name: string }) {
+const PerkIcon = ({ name }: { name: string }) => {
   const emoji = PERK_ICON_MAP[name] ?? '✦';
   return (
     <span className="text-2xl" aria-hidden="true">
@@ -26,7 +26,7 @@ function PerkIcon({ name }: { name: string }) {
   );
 }
 
-export async function WaitlistPage() {
+export const WaitlistPage = async () => {
   const t = await getTranslations('WaitlistPage');
 
   const kicker = t('hero.kicker');

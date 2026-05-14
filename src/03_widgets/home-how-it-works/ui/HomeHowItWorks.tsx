@@ -3,7 +3,7 @@ import { Container, Section } from '@/shared/ui';
 import { StepCard } from '@/entities/step-card';
 import type { TStep } from '@/entities/step-card';
 
-export async function HomeHowItWorks() {
+export const HomeHowItWorks = async () => {
   const t = await getTranslations('HomePage.howItWorks');
 
   const steps = t.raw('steps') as unknown as TStep[];

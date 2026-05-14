@@ -6,7 +6,7 @@ type TProps = {
   label?: string;
 };
 
-export function BrandCoin({ className, size = 28, label }: TProps) {
+export const BrandCoin = ({ className, size = 28, label }: TProps) => {
   const ariaProps = label
     ? { role: 'img' as const, 'aria-label': label }
     : { 'aria-hidden': true as const };

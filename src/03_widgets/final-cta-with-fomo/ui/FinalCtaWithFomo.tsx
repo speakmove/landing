@@ -1,11 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 import { Badge, Container, Section, ArrowRightIcon } from '@/shared/ui';
+import { URLS } from '@/shared/config';
 
 type TProps = {
   namespace?: string;
 };
 
-export async function FinalCtaWithFomo({ namespace = 'HomePage.finalCta' }: TProps) {
+export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const t = await getTranslations(namespace as any);
 
@@ -64,7 +65,7 @@ export async function FinalCtaWithFomo({ namespace = 'HomePage.finalCta' }: TPro
 
           {/* CTA button */}
           <a
-            href="https://t.me/speakmove_bot"
+            href={URLS.telegramBot}
             rel="noopener noreferrer"
             className="inline-flex min-h-14 items-center gap-2 rounded-xl bg-primary px-8 text-[17px] font-bold text-white shadow-[0_4px_14px_color-mix(in_oklab,var(--color-primary)_40%,transparent)] transition-all hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-[0_6px_20px_color-mix(in_oklab,var(--color-primary)_35%,transparent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >

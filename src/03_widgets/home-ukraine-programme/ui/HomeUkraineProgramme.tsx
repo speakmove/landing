@@ -12,7 +12,7 @@ type TQualification = {
   items: string[];
 };
 
-export async function HomeUkraineProgramme() {
+export const HomeUkraineProgramme = async () => {
   const t = await getTranslations('HomePage.ukrainianProgramme');
 
   const prices = t.raw('prices') as unknown as TPrice[];

@@ -1,5 +1,5 @@
 import { LegalPageLayout } from '@/pages/legal-page-layout';
 
-export function PrivacyPage() {
+export const PrivacyPage = () => {
   return <LegalPageLayout namespace="PrivacyPage" />;
 }

@@ -4,7 +4,7 @@ import { FloatBubble } from '@/entities/float-bubble';
 import type { TChatMessage } from '@/entities/chat-message';
 import type { TFloatBubble } from '@/entities/float-bubble';
 
-export async function HomePhonePreview() {
+export const HomePhonePreview = async () => {
   const t = await getTranslations('HomePage.hero.phonePreview');
 
   const messages = t.raw('messages') as unknown as TChatMessage[];

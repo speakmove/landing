@@ -6,7 +6,7 @@ import { PricingFaqSection } from '@/widgets/pricing-faq-section';
 import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
 import type { TPricingPlan } from '@/entities/pricing-plan';
 
-export async function PricingPage() {
+export const PricingPage = async () => {
   const t = await getTranslations('PricingPage');
 
   const plans = t.raw('plans') as unknown as TPricingPlan[];

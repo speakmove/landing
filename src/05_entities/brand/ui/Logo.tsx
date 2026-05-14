@@ -5,7 +5,7 @@ type TProps = {
   className?: string;
 };
 
-export async function Logo({ className }: TProps) {
+export const Logo = async ({ className }: TProps) => {
   const t = await getTranslations('HomePage.nav');
   return (
     <span className={cn('inline-flex items-center gap-2.5 text-lg font-extrabold tracking-tight', className)}>

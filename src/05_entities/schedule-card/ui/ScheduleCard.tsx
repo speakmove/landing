@@ -5,7 +5,7 @@ type TProps = {
   card: TScheduleCard;
 };
 
-export function ScheduleCard({ card }: TProps) {
+export const ScheduleCard = ({ card }: TProps) => {
   return (
     <Card as="article" className="flex flex-col gap-4">
       {card.badge && (

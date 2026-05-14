@@ -3,9 +3,10 @@ import { Container, Section, CheckIcon, ArrowRightIcon } from '@/shared/ui';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { ScenarioCard } from '@/entities/scenario';
 import { HomePhonePreview } from '@/widgets/home-phone-preview';
+
 import type { TScenario } from '@/entities/scenario';
 
-export async function HomeHero() {
+export const HomeHero = async () => {
   const t = await getTranslations('HomePage.hero');
 
   const eyebrowItems = t.raw('eyebrow.items') as unknown as string[];
@@ -73,7 +74,7 @@ export async function HomeHero() {
                 <ArrowRightIcon size={16} />
               </a>
               <Link
-                href="/#how-it-works"
+                href={`/#how-it-works`}
                 className="inline-flex min-h-13 items-center gap-2 rounded-xl border border-line-strong bg-white px-6 text-base font-semibold text-ink transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 {t('ctas.secondary')}

@@ -34,7 +34,7 @@ type TProps = {
   disclaimer: string;
 };
 
-export function PricingInteractive({ hero, plans, billingLabels, fomo, disclaimer }: TProps) {
+export const PricingInteractive = ({ hero, plans, billingLabels, fomo, disclaimer }: TProps) => {
   const [billing, setBilling] = useState<TBillingValue>('monthly');
 
   const countLabel = fomo.countLabel

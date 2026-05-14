@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { Container } from '@/shared/ui';
 import { Logo } from '@/entities/brand';
+import { PATHS } from '@/shared/config';
 
 type TFooterLink = {
   label: string;
@@ -15,11 +16,11 @@ type TSocialLink = {
   href: string;
 };
 
-function isExternal(href: string): boolean {
+const isExternal = (href: string): boolean => {
   return /^(https?:)?\/\//.test(href) || href.startsWith('mailto:');
-}
+};
 
-export async function SiteFooter() {
+export const SiteFooter = async () => {
   const t = await getTranslations('HomePage.footer');
   const links = t.raw('links') as unknown as TFooterLink[];
   const socialLinks = t.raw('socialLinks') as unknown as TSocialLink[];
@@ -30,7 +31,7 @@ export async function SiteFooter() {
         <div className="grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link
-              href="/"
+              href={PATHS.home}
               aria-label={t('brand')}
               className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >

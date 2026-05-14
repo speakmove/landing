@@ -1,5 +1,6 @@
 import { Badge, CheckIcon, VisuallyHidden } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
+import { URLS } from '@/shared/config';
 import type { TPricingPlan } from '../model/types';
 
 type TBilling = 'monthly' | 'yearly';
@@ -10,15 +11,15 @@ type TProps = {
   className?: string;
 };
 
-function resolvePrice(
+const resolvePrice = (
   raw: { amount: string; period: string } | string | undefined,
-): { amount: string; period: string } | null {
+): { amount: string; period: string } | null => {
   if (!raw) return null;
   if (typeof raw === 'string') return { amount: raw, period: '' };
   return raw;
-}
+};
 
-export function PricingPlanCard({ plan, billing, className }: TProps) {
+export const PricingPlanCard = ({ plan, billing, className }: TProps) => {
   const priceRaw = plan.price[billing];
   const resolved = resolvePrice(priceRaw);
   const wasPrice = plan.wasPrice?.[billing];
@@ -105,7 +106,7 @@ export function PricingPlanCard({ plan, billing, className }: TProps) {
       )}
 
       <a
-        href="https://t.me/speakmove_bot"
+        href={URLS.telegramBot}
         rel="noopener noreferrer"
         className={cn(
           'mt-auto inline-flex min-h-11 items-center justify-center rounded-xl px-5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2',

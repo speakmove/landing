@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Container, Section } from '@/shared/ui';
 import type { TComparisonRow } from '@/entities/comparison-row';
 
-export async function HomeCompare() {
+export const HomeCompare = async () => {
   const t = await getTranslations('HomePage.compare');
 
   const columns = t.raw('columns') as unknown as string[];

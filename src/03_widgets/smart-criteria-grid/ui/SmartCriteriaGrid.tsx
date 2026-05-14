@@ -3,7 +3,7 @@ import { Container, Section } from '@/shared/ui';
 import { SmartCriterionCard } from '@/entities/smart-criterion';
 import type { TSmartCriterion } from '@/entities/smart-criterion';
 
-export async function SmartCriteriaGrid() {
+export const SmartCriteriaGrid = async () => {
   const t = await getTranslations('HowItWorksPage.smart');
   const criteria = t.raw('criteria') as unknown as TSmartCriterion[];
 

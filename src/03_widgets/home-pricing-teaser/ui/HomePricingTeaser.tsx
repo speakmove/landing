@@ -18,7 +18,7 @@ type TPlan = {
   cta: string;
 };
 
-export async function HomePricingTeaser() {
+export const HomePricingTeaser = async () => {
   const t = await getTranslations('HomePage.pricing');
 
   const plans = t.raw('plans') as unknown as TPlan[];

@@ -6,7 +6,7 @@ type TProps = {
 };
 
 /** Waveform bars — purely decorative */
-function WaveformBars({ variant }: { variant: 'bot' | 'me' }) {
+const WaveformBars = ({ variant }: { variant: 'bot' | 'me' }) => {
   const heights = [6, 14, 9, 18, 11, 16, 7, 13, 10, 15, 6];
   const colorClass =
     variant === 'me' ? 'bg-white/60' : 'bg-muted/50';
@@ -24,7 +24,7 @@ function WaveformBars({ variant }: { variant: 'bot' | 'me' }) {
   );
 }
 
-export function ChatMessage({ message }: TProps) {
+export const ChatMessage = ({ message }: TProps) => {
   const isMe = message.from === 'me';
 
   if (message.type === 'voice') {

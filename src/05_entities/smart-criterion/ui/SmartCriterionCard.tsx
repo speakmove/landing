@@ -5,7 +5,7 @@ type TProps = {
   criterion: TSmartCriterion;
 };
 
-export function SmartCriterionCard({ criterion }: TProps) {
+export const SmartCriterionCard = ({ criterion }: TProps) => {
   return (
     <Card as="article" className="flex flex-col gap-4">
       <div className="flex items-center gap-3">

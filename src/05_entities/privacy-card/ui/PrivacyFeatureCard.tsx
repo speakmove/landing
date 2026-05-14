@@ -5,7 +5,7 @@ type TProps = {
   card: TPrivacyCard;
 };
 
-export function PrivacyFeatureCard({ card }: TProps) {
+export const PrivacyFeatureCard = ({ card }: TProps) => {
   return (
     <Card as="article" className="flex flex-col gap-3">
       <div className="flex items-start justify-between gap-2">

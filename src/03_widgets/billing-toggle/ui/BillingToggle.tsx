@@ -15,13 +15,13 @@ type TProps = {
 
 const OPTIONS: TBillingValue[] = ['monthly', 'yearly'];
 
-export function BillingToggle({
+export const BillingToggle = ({
   value,
   onChange,
   monthlyLabel,
   yearlyLabel,
   yearlySaveLabel,
-}: TProps) {
+}: TProps) => {
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const handleKeyDown = useCallback(

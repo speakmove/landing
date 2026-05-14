@@ -5,7 +5,7 @@ type TProps = {
   scenario: TScenario;
 };
 
-export function ScenarioCard({ scenario }: TProps) {
+export const ScenarioCard = ({ scenario }: TProps) => {
   return (
     <Card
       as="div"

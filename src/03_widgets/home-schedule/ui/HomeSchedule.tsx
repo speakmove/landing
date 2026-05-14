@@ -7,7 +7,7 @@ type TProps = {
   namespace?: string;
 };
 
-export async function HomeSchedule({ namespace = 'HomePage.schedule' }: TProps) {
+export const HomeSchedule = async ({ namespace = 'HomePage.schedule' }: TProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const t = await getTranslations(namespace as any);
 

@@ -8,7 +8,7 @@ type TProps = {
   bonusThreshold?: number;
 };
 
-export function SuccessBlockClient({ position, bonusThreshold = 15 }: TProps) {
+export const SuccessBlockClient = ({ position, bonusThreshold = 15 }: TProps) => {
   const t = useTranslations('ThankYouPage.hero');
   const eligible = typeof position === 'number' && position <= bonusThreshold;
 

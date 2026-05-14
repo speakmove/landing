@@ -18,7 +18,7 @@ type TWithdrawGridItem = {
   value: string;
 };
 
-export async function CoinEconomicsSection() {
+export const CoinEconomicsSection = async () => {
   const t = await getTranslations('PricingPage.coinEconomics');
 
   const earnRows = t.raw('earn.rows') as unknown as TEarnRow[];
