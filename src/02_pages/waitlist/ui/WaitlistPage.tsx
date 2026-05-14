@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Badge, Card, Container, Section } from '@/shared/ui';
-
+import { CheckIcon, ClockIcon, GiftIcon } from '@/shared/ui';
 import { WaitlistForm } from '@/features/waitlist-form';
 
 type TPerk = {
@@ -9,27 +8,33 @@ type TPerk = {
   subtitle: string;
 };
 
-const PERK_ICON_MAP: Record<string, string> = {
-  gift: '🎁',
-  clock: '⏱',
-  coin: '🪙',
-  flag: '🇺🇦',
-  lock: '🔒',
-  users: '👨‍👩‍👧',
-};
-
-const PerkIcon = ({ name }: { name: string }) => {
-  const emoji = PERK_ICON_MAP[name] ?? '✦';
+const renderPerkIcon = (name: string) => {
+  const base = 'grid h-[34px] w-[34px] flex-none place-items-center rounded-[10px] border border-line bg-white text-primary shadow-(--shadow-soft)';
+  if (name === 'clock' || name === 'gift') {
+    return (
+      <div className={base} aria-hidden="true">
+        {name === 'clock' ? <ClockIcon size={17} /> : <GiftIcon size={17} />}
+      </div>
+    );
+  }
+  if (name === 'coin') {
+    return (
+      <div className="grid h-[34px] w-[34px] flex-none place-items-center rounded-[10px] border border-line bg-white shadow-(--shadow-soft)">
+        <span className="coin md" aria-hidden="true">
+          <span>SM</span>
+        </span>
+      </div>
+    );
+  }
   return (
-    <span className="text-2xl" aria-hidden="true">
-      {emoji}
-    </span>
+    <div className={base} aria-hidden="true">
+      <CheckIcon size={17} strokeWidth={2.5} />
+    </div>
   );
-}
+};
 
 export const WaitlistPage = async () => {
   const t = await getTranslations('WaitlistPage');
-  const tCommon = await getTranslations('Common');
 
   const kicker = t('hero.kicker');
   const title = t('hero.title');
@@ -41,110 +46,79 @@ export const WaitlistPage = async () => {
 
   const current = t.raw('form.progress.current') as number;
   const total = t.raw('form.progress.total') as number;
-  const bonusThreshold = t.raw('form.progress.bonusThreshold') as number;
-  const bonusRemaining = Math.max(0, bonusThreshold - current);
+  const occupiedText = t('form.progress.occupiedTemplate', { count: current, total });
+  const remainingText = t('form.progress.remainingTemplate', { remaining: total - current });
+  const pct = Math.min(100, Math.round((current / total) * 1000) / 10);
 
   const formTitle = t('form.title');
   const formSubtitle = t('form.subtitle');
 
-  // Template substitutions
-  const occupiedText = t('form.progress.occupiedTemplate', { count: current, total });
-  const remainingText = t('form.progress.remainingTemplate', { remaining: total - current });
-  const bonusRemainingText =
-    bonusRemaining > 0
-      ? t('form.progress.bonusRemainingTemplate', { bonusRemaining })
-      : null;
-
   return (
-    <>
-      {/* Hero */}
-      <Section className="pb-8 pt-12 md:pb-10 md:pt-16">
-        <Container className="max-w-[780px]">
-          <div className="text-center">
-            <Badge tone="primary">{kicker}</Badge>
-            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-ink md:text-5xl lg:text-6xl">
-              {title}
-            </h1>
-            <p className="mx-auto mt-5 max-w-[620px] text-[17px] leading-relaxed text-muted">
-              {description}
-            </p>
-          </div>
+    <main className="mx-auto grid w-full max-w-[1200px] grid-cols-1 lg:grid-cols-2">
+      <div className="flex flex-col justify-center border-b border-line bg-surface px-7 py-12 lg:border-r lg:border-b-0 lg:px-14 lg:py-16">
+        <div className="section-eyebrow !mb-4">{kicker}</div>
 
-          {/* Bonus banner */}
-          <div className="mt-8 rounded-2xl border border-gold bg-gold-pale p-5">
-            <div className="flex flex-wrap items-start gap-3">
-              <Badge tone="gold">{bonusBadge}</Badge>
-              <p className="font-semibold text-ink">{bonusText}</p>
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-muted italic">
-              {bonusNote}
-            </p>
-          </div>
-        </Container>
-      </Section>
+        <h1
+          className="mb-4 font-extrabold leading-[1.1] tracking-tight text-balance text-ink"
+          style={{ fontSize: 'clamp(2rem, 3.2vw, 2.8rem)' }}
+        >
+          {title}
+        </h1>
+        <p className="mb-7 max-w-[440px] text-pretty text-[16px] leading-[1.65] text-muted">
+          {description}
+        </p>
 
-      {/* Perks grid */}
-      <Section className="py-8 md:py-10">
-        <Container>
-          <ul
-            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            aria-label={tCommon('aria.earlyAccessPerks')}
+        <div className="mb-9 rounded-2xl border border-gold bg-gold-pale p-5">
+          <div className="flex flex-wrap items-start gap-3">
+            <span className="inline-flex items-center rounded-full bg-gold-accent px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.04em] text-[#4a2e07]">
+              {bonusBadge}
+            </span>
+            <p className="m-0 text-sm font-semibold text-ink">{bonusText}</p>
+          </div>
+          <p className="mt-3 text-xs leading-relaxed italic text-muted">{bonusNote}</p>
+        </div>
+
+        <ul className="m-0 flex list-none flex-col gap-3.5 p-0">
+          {perks.map((perk, i) => (
+            <li key={`${perk.title}-${i}`} className="flex items-start gap-3 text-[15px]">
+              {renderPerkIcon(perk.icon)}
+              <div>
+                <div className="mb-0.5 font-semibold text-ink">{perk.title}</div>
+                <div className="text-[13px] text-muted">{perk.subtitle}</div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="flex flex-col justify-center px-7 py-12 lg:px-14 lg:py-16">
+        <div className="mb-7">
+          <div className="mb-1.5 flex justify-between font-mono text-xs font-semibold text-muted">
+            <span>{occupiedText}</span>
+            <span className="text-ink">{remainingText}</span>
+          </div>
+          <div
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={total}
+            aria-valuenow={current}
+            aria-label={occupiedText}
+            className="h-2 overflow-hidden rounded-full bg-surface"
           >
-            {perks.map((perk, i) => (
-              <Card key={i} as="li" className="flex flex-col gap-2 p-5">
-                <PerkIcon name={perk.icon} />
-                <p className="font-semibold text-ink">{perk.title}</p>
-                <p className="text-sm text-muted leading-relaxed">
-                  {perk.subtitle}
-                </p>
-              </Card>
-            ))}
-          </ul>
-        </Container>
-      </Section>
-
-      {/* Form section */}
-      <Section id="waitlist-form">
-        <Container className="max-w-160">
-          {/* Progress bar */}
-          <div className="mb-8 rounded-2xl border border-line bg-white p-5 shadow-(--shadow-soft)">
-            <div className="flex items-center justify-between text-sm font-medium">
-              <span className="text-ink">{occupiedText}</span>
-              <span className="text-muted">{remainingText}</span>
-            </div>
             <div
-              className="relative mt-3 h-2.5 overflow-hidden rounded-full bg-line"
-              role="progressbar"
-              aria-valuenow={current}
-              aria-valuemin={0}
-              aria-valuemax={total}
-              aria-label={occupiedText}
-            >
-              <div
-                className="absolute inset-y-0 left-0 rounded-full bg-primary transition-all"
-                style={{ width: `${Math.min(100, (current / total) * 100)}%` }}
-              />
-            </div>
-            {bonusRemainingText ? (
-              <p className="mt-2 text-xs text-muted">{bonusRemainingText}</p>
-            ) : null}
+              className="h-full rounded-full bg-linear-to-r from-primary to-primary-hover transition-[width] duration-500"
+              style={{ width: `${pct}%` }}
+            />
           </div>
+        </div>
 
-          {/* Form card */}
-          <Card className="p-6 sm:p-8">
-            <h2
-              id="waitlist-form-title"
-              className="text-2xl font-extrabold tracking-tight text-ink"
-            >
-              {formTitle}
-            </h2>
-            <p className="mt-2 text-sm text-muted">{formSubtitle}</p>
-            <div className="mt-6">
-              <WaitlistForm />
-            </div>
-          </Card>
-        </Container>
-      </Section>
-    </>
+        <div className="mb-1.5 text-[22px] font-extrabold tracking-tight text-ink">
+          {formTitle}
+        </div>
+        <div className="mb-7 text-[14.5px] text-muted">{formSubtitle}</div>
+
+        <WaitlistForm />
+      </div>
+    </main>
   );
-}
+};
