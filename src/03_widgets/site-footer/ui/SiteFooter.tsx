@@ -3,27 +3,12 @@ import { Link } from '@/shared/model/libs/i18n/navigation';
 import { Container } from '@/shared/ui';
 import { Logo } from '@/entities/brand';
 import { PATHS } from '@/shared/config';
-
-type TFooterLink = {
-  label: string;
-  href: string;
-};
-
-type TSocialLink = {
-  id: string;
-  label: string;
-  ariaLabel: string;
-  href: string;
-};
-
-const isExternal = (href: string): boolean => {
-  return /^(https?:)?\/\//.test(href) || href.startsWith('mailto:');
-};
+import { FooterNav } from '@/widgets/footer-nav';
+import { FooterSocialList } from '@/widgets/footer-social-list';
+import { FooterLegal } from '@/widgets/footer-legal';
 
 export const SiteFooter = async () => {
   const t = await getTranslations('HomePage.footer');
-  const links = t.raw('links') as unknown as TFooterLink[];
-  const socialLinks = t.raw('socialLinks') as unknown as TSocialLink[];
 
   return (
     <footer className="mt-16 border-t border-line bg-white">
@@ -42,56 +27,13 @@ export const SiteFooter = async () => {
             </p>
           </div>
 
-          <nav aria-label="Footer">
-            <ul className="space-y-2 text-sm">
-              {links.map((item) => (
-                <li key={item.href}>
-                  {isExternal(item.href) ? (
-                    <a
-                      href={item.href}
-                      className="text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                      rel="noopener noreferrer"
-                    >
-                      {item.label}
-                    </a>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <FooterNav />
 
-          <div>
-            <p className="text-sm font-semibold text-ink">{t('socialTitle')}</p>
-            <ul className="mt-3 flex flex-wrap gap-3 text-sm">
-              {socialLinks.map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={item.href}
-                    aria-label={item.ariaLabel}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-9 items-center rounded-lg border border-line px-3 text-muted hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterSocialList />
         </div>
 
-        <div className="border-t border-line py-6 text-xs leading-relaxed text-faint">
-          <p>{t('legalEntity')}</p>
-          <p className="mt-3">{t('researchNotice')}</p>
-        </div>
+        <FooterLegal />
       </Container>
     </footer>
   );
-}
+};
