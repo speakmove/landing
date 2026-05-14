@@ -1,0 +1,148 @@
+import { getTranslations } from 'next-intl/server';
+import { Badge, Card, Container, Section } from '@/shared/ui';
+import { WaitlistForm } from '@/features/waitlist-form';
+
+type TPerk = {
+  icon: string;
+  title: string;
+  subtitle: string;
+};
+
+const PERK_ICON_MAP: Record<string, string> = {
+  gift: '🎁',
+  clock: '⏱',
+  coin: '🪙',
+  flag: '🇺🇦',
+  lock: '🔒',
+  users: '👨‍👩‍👧',
+};
+
+function PerkIcon({ name }: { name: string }) {
+  const emoji = PERK_ICON_MAP[name] ?? '✦';
+  return (
+    <span className="text-2xl" aria-hidden="true">
+      {emoji}
+    </span>
+  );
+}
+
+export async function WaitlistPage() {
+  const t = await getTranslations('WaitlistPage');
+
+  const kicker = t('hero.kicker');
+  const title = t('hero.title');
+  const description = t('hero.description');
+  const bonusBadge = t('hero.bonusBanner.badge');
+  const bonusText = t('hero.bonusBanner.text');
+  const bonusNote = t('hero.bonusBanner.note');
+  const perks = t.raw('hero.perks') as TPerk[];
+
+  const current = t.raw('form.progress.current') as number;
+  const total = t.raw('form.progress.total') as number;
+  const bonusThreshold = t.raw('form.progress.bonusThreshold') as number;
+  const bonusRemaining = Math.max(0, bonusThreshold - current);
+
+  const formTitle = t('form.title');
+  const formSubtitle = t('form.subtitle');
+
+  // Template substitutions
+  const occupiedText = t('form.progress.occupiedTemplate', { count: current, total });
+  const remainingText = t('form.progress.remainingTemplate', { remaining: total - current });
+  const bonusRemainingText =
+    bonusRemaining > 0
+      ? t('form.progress.bonusRemainingTemplate', { bonusRemaining })
+      : null;
+
+  return (
+    <main id="main-content">
+      {/* Hero */}
+      <Section className="pb-8 pt-12 md:pb-10 md:pt-16">
+        <Container className="max-w-[780px]">
+          <div className="text-center">
+            <Badge tone="primary">{kicker}</Badge>
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-[color:var(--color-ink)] md:text-5xl lg:text-6xl">
+              {title}
+            </h1>
+            <p className="mx-auto mt-5 max-w-[620px] text-[17px] leading-relaxed text-[color:var(--color-muted)]">
+              {description}
+            </p>
+          </div>
+
+          {/* Bonus banner */}
+          <div className="mt-8 rounded-2xl border border-[color:var(--color-gold)] bg-[color:var(--color-gold-pale)] p-5">
+            <div className="flex flex-wrap items-start gap-3">
+              <Badge tone="gold">{bonusBadge}</Badge>
+              <p className="font-semibold text-[color:var(--color-ink)]">{bonusText}</p>
+            </div>
+            <p className="mt-3 text-xs leading-relaxed text-[color:var(--color-muted)] italic">
+              {bonusNote}
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Perks grid */}
+      <Section className="py-8 md:py-10">
+        <Container>
+          <ul
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            aria-label="Преимущества раннего доступа"
+          >
+            {perks.map((perk, i) => (
+              <Card key={i} as="li" className="flex flex-col gap-2 p-5">
+                <PerkIcon name={perk.icon} />
+                <p className="font-semibold text-[color:var(--color-ink)]">{perk.title}</p>
+                <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
+                  {perk.subtitle}
+                </p>
+              </Card>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+
+      {/* Form section */}
+      <Section id="waitlist-form">
+        <Container className="max-w-[640px]">
+          {/* Progress bar */}
+          <div className="mb-8 rounded-2xl border border-[color:var(--color-line)] bg-white p-5 shadow-[var(--shadow-soft)]">
+            <div className="flex items-center justify-between text-sm font-medium">
+              <span className="text-[color:var(--color-ink)]">{occupiedText}</span>
+              <span className="text-[color:var(--color-muted)]">{remainingText}</span>
+            </div>
+            <div
+              className="relative mt-3 h-2.5 overflow-hidden rounded-full bg-[color:var(--color-line)]"
+              role="progressbar"
+              aria-valuenow={current}
+              aria-valuemin={0}
+              aria-valuemax={total}
+              aria-label={occupiedText}
+            >
+              <div
+                className="absolute inset-y-0 left-0 rounded-full bg-[color:var(--color-primary)] transition-all"
+                style={{ width: `${Math.min(100, (current / total) * 100)}%` }}
+              />
+            </div>
+            {bonusRemainingText ? (
+              <p className="mt-2 text-xs text-[color:var(--color-muted)]">{bonusRemainingText}</p>
+            ) : null}
+          </div>
+
+          {/* Form card */}
+          <Card className="p-6 sm:p-8">
+            <h2
+              id="waitlist-form-title"
+              className="text-2xl font-extrabold tracking-tight text-[color:var(--color-ink)]"
+            >
+              {formTitle}
+            </h2>
+            <p className="mt-2 text-sm text-[color:var(--color-muted)]">{formSubtitle}</p>
+            <div className="mt-6">
+              <WaitlistForm />
+            </div>
+          </Card>
+        </Container>
+      </Section>
+    </main>
+  );
+}
