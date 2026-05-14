@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section } from '@/shared/ui';
-import { cn } from '@/shared/model/libs/cn';
+import { TableThead } from './TableThead';
+import { TableTbody } from './TableTbody';
 
 type TCompareRow = {
   feature: string;
@@ -56,82 +57,19 @@ export const PricingFeatureComparisonTable = async () => {
         <div className="overflow-x-auto rounded-2xl border border-line">
           <table className="w-full min-w-[560px] border-collapse text-sm">
             <caption className="sr-only">{data.title}</caption>
-            <thead>
-              <tr className="border-b border-line bg-surface">
-                <th
-                  scope="col"
-                  className="py-3 px-4 text-left font-semibold text-muted w-[40%]"
-                >
-                  {data.columns[0] || tCommon('table.feature')}
-                </th>
-                {colHeaders.map((col) => (
-                  <th
-                    key={col}
-                    scope="col"
-                    className={cn(
-                      'py-3 px-4 text-center font-bold',
-                      col === data.highlightColumn
-                        ? 'text-gold bg-gold-pale'
-                        : 'text-ink',
-                    )}
-                  >
-                    {col}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {data.groups.map((group) => (
-                <>
-                  <tr
-                    key={`group-${group.name}`}
-                    className="border-b border-line bg-surface"
-                  >
-                    <th
-                      colSpan={4}
-                      scope="colgroup"
-                      className="py-2 px-4 text-left text-xs font-bold uppercase tracking-wider text-muted"
-                    >
-                      {group.name}
-                    </th>
-                  </tr>
-                  {group.rows.map((row) => (
-                    <tr
-                      key={row.feature}
-                      className="border-b border-line last:border-0 even:bg-surface/40"
-                    >
-                      <th
-                        scope="row"
-                        className="py-3 px-4 text-left font-normal text-ink"
-                      >
-                        {row.feature}
-                      </th>
-                      {row.values.map((val, i) => {
-                        const colName = colHeaders[i];
-                        const isHighlight = colName === data.highlightColumn;
-                        return (
-                          <td
-                            key={i}
-                            className={cn(
-                              'py-3 px-4 text-center',
-                              isHighlight
-                                ? 'bg-gold-pale/30 text-ink font-medium'
-                                : 'text-muted',
-                              val === '—' && 'opacity-40',
-                            )}
-                          >
-                            {val}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </>
-              ))}
-            </tbody>
+            <TableThead
+              featureColLabel={data.columns[0] || tCommon('table.feature')}
+              colHeaders={colHeaders}
+              highlightColumn={data.highlightColumn}
+            />
+            <TableTbody
+              groups={data.groups}
+              colHeaders={colHeaders}
+              highlightColumn={data.highlightColumn}
+            />
           </table>
         </div>
       </Container>
     </Section>
   );
-}
+};
