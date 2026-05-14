@@ -9,7 +9,7 @@ import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
 
 export const HomePage = () => {
   return (
-    <main id="main-content">
+    <>
       <HomeHero />
       <HomeAdvantages />
       <HomeHowItWorks />
@@ -18,6 +18,6 @@ export const HomePage = () => {
       <HomePricingTeaser />
       <HomeUkraineProgramme />
       <FinalCtaWithFomo />
-    </main>
+    </>
   );
 }

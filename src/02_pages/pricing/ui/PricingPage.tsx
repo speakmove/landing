@@ -33,7 +33,7 @@ export const PricingPage = async () => {
   };
 
   return (
-    <main id="main-content">
+    <>
       <PricingInteractive
         hero={hero}
         plans={plans}
@@ -45,6 +45,6 @@ export const PricingPage = async () => {
       <CoinEconomicsSection />
       <PricingFaqSection />
       <FinalCtaWithFomo namespace="PricingPage.finalCta" />
-    </main>
+    </>
   );
 }

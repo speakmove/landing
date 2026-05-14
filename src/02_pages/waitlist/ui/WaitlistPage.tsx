@@ -56,7 +56,7 @@ export const WaitlistPage = async () => {
       : null;
 
   return (
-    <main id="main-content">
+    <>
       {/* Hero */}
       <Section className="pb-8 pt-12 md:pb-10 md:pt-16">
         <Container className="max-w-[780px]">
@@ -145,6 +145,6 @@ export const WaitlistPage = async () => {
           </Card>
         </Container>
       </Section>
-    </main>
+    </>
   );
 }

@@ -9,7 +9,7 @@ import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
 
 export const HowItWorksPage = () => {
   return (
-    <main id="main-content">
+    <>
       <PageHeroWithStats />
       <FlowSectionWithPhone />
       <CefrProgression />
@@ -18,6 +18,6 @@ export const HowItWorksPage = () => {
       <CoinEconomyGrid />
       <PrivacyFeatureGrid />
       <FinalCtaWithFomo namespace="HowItWorksPage.finalCta" />
-    </main>
+    </>
   );
 }

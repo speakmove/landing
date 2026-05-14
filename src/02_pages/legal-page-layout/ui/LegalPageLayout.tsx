@@ -25,7 +25,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
   const sections = t.raw('sections') as unknown as TLegalSection[];
 
   return (
-    <main id="main-content">
+    <>
       <Section className="pb-0">
         <Container className="max-w-205">
           <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">{meta.title}</h1>
@@ -99,6 +99,6 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
           </div>
         </Container>
       </Section>
-    </main>
+    </>
   );
 }
