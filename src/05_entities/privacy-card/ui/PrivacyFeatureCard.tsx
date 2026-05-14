@@ -1,4 +1,4 @@
-import { Badge, Card } from '@/shared/ui';
+import { Badge } from '@/shared/ui';
 import type { TPrivacyCard } from '../model/types';
 
 type TProps = {
@@ -7,20 +7,16 @@ type TProps = {
 
 export const PrivacyFeatureCard = ({ card }: TProps) => {
   return (
-    <Card as="article" className="flex flex-col gap-3">
+    <article className="card-hover flex h-full flex-col gap-3 rounded-[18px] border border-line bg-white p-6 shadow-(--shadow-soft)">
       <div className="flex items-start justify-between gap-2">
-        <h3 className="text-base font-bold text-ink leading-snug">
-          {card.title}
-        </h3>
-        {card.badge && (
+        <h3 className="text-base font-bold leading-snug text-ink">{card.title}</h3>
+        {card.badge ? (
           <Badge tone="neutral" className="flex-none">
             {card.badge}
           </Badge>
-        )}
+        ) : null}
       </div>
-      <p className="text-sm text-muted leading-relaxed">
-        {card.description}
-      </p>
-    </Card>
+      <p className="m-0 text-sm leading-relaxed text-muted">{card.description}</p>
+    </article>
   );
-}
+};

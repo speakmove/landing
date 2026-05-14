@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Container, Section } from '@/shared/ui';
+import { Container, Section, SectionHead } from '@/shared/ui';
 import { CoinFlowTable } from '@/entities/coin-flow-table';
 import type { TCoinFlowRow } from '@/entities/coin-flow-table';
 
@@ -14,7 +14,6 @@ type TOutcomeData = {
   footnote: string;
 };
 
-/** Parse **bold** markdown inline — pure React JSX */
 const BoldText = ({ text }: { text: string }) => {
   const parts = text.split('**');
   return (
@@ -26,7 +25,7 @@ const BoldText = ({ text }: { text: string }) => {
           </strong>
         ) : (
           <span key={i}>{part}</span>
-        )
+        ),
       )}
     </>
   );
@@ -39,26 +38,16 @@ export const CoinEconomyGrid = async () => {
   const outcome = t.raw('outcome') as unknown as TOutcomeData;
 
   return (
-    <Section id="coin-loop" ariaLabelledBy="coin-loop-heading">
+    <Section id="coin-loop" ariaLabelledBy="coin-loop-heading" className="px-5 py-12 md:py-16">
       <Container>
-        {/* Section header */}
-        <div className="max-w-160 mb-10">
-          <span className="inline-block mb-3 rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
-            {t('kicker')}
-          </span>
-          <h2
-            id="coin-loop-heading"
-            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-3"
-          >
-            {t('title')}
-          </h2>
-          <p className="text-[17px] text-muted leading-relaxed">
-            {t('subtitle')}
-          </p>
-        </div>
+        <SectionHead
+          kicker={t('kicker')}
+          title={t('title')}
+          titleId="coin-loop-heading"
+          subtitle={t('subtitle')}
+        />
 
-        {/* Two-column tables */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           <CoinFlowTable
             title={earn.title}
             rows={earn.rows}
@@ -74,8 +63,7 @@ export const CoinEconomyGrid = async () => {
               actionLabel={tCommon('table.action')}
               amountLabel={tCommon('table.amount')}
             />
-            {/* Footnote */}
-            <p className="text-xs text-muted leading-relaxed italic px-1">
+            <p className="px-1 text-xs leading-relaxed italic text-muted">
               <BoldText text={outcome.footnote} />
             </p>
           </div>

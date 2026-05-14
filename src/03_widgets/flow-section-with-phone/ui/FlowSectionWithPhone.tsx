@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { Container, Section } from '@/shared/ui';
-import { StepCard } from '@/entities/step-card';
+import { cn } from '@/shared/model/libs/cn';
+import { Container, Section, SectionHead } from '@/shared/ui';
 import type { TStep } from '@/entities/step-card';
 import type { TChatMessage } from '@/entities/chat-message';
 import { HowItWorksPhonePreview } from './HowItWorksPhonePreview';
@@ -19,36 +19,67 @@ export const FlowSectionWithPhone = async () => {
   const phonePreview = t.raw('phonePreview') as unknown as TPhonePreview;
 
   return (
-    <Section id="flow" ariaLabelledBy="flow-heading">
+    <Section id="flow" ariaLabelledBy="flow-heading" className="px-5 py-12 md:py-16">
       <Container>
-        {/* Section header */}
-        <div className="max-w-[700px] mx-auto mb-12 text-center">
-          <span className="inline-block font-mono text-xs font-semibold text-primary tracking-[0.08em] uppercase mb-3">
-            {t('kicker')}
-          </span>
-          <h2
-            id="flow-heading"
-            className="font-extrabold tracking-[-0.022em] mb-3 leading-[1.1] text-balance text-ink"
-            style={{ fontSize: 'clamp(1.9rem, 3.3vw, 2.5rem)' }}
-          >
-            {t('title')}
-          </h2>
-          <p className="text-base text-muted text-pretty">
-            {t('subtitle')}
-          </p>
-        </div>
+        <SectionHead
+          kicker={t('kicker')}
+          title={t('title')}
+          titleId="flow-heading"
+          subtitle={t('subtitle')}
+        />
 
-        {/* Two-column: steps + phone */}
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Ordered list of steps */}
-          <ol className="flex flex-col gap-3" aria-label={tCommon('aria.flowSteps')}>
-            {steps.map((step) => (
-              <StepCard key={step.num} step={step} />
-            ))}
+        <div className="grid items-start gap-8 lg:grid-cols-2">
+          <ol
+            className="relative m-0 list-none p-0 pl-11"
+            aria-label={tCommon('aria.flowSteps')}
+          >
+            <div
+              aria-hidden="true"
+              className="absolute left-[17px] top-2.5 bottom-2.5 w-0.5"
+              style={{
+                background:
+                  'linear-gradient(180deg, var(--color-primary) 0%, color-mix(in oklab, var(--color-primary) 30%, transparent) 100%)',
+              }}
+            />
+            {steps.map((step, idx) => {
+              const isLast = idx === steps.length - 1;
+              return (
+                <li
+                  key={step.num}
+                  className={cn('relative pt-1', isLast ? '' : 'pb-7')}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="absolute -left-11 top-0 grid h-9 w-9 place-items-center rounded-full border-2 border-primary bg-white font-mono text-sm font-bold text-primary shadow-[0_0_0_4px_var(--color-primary-pale)]"
+                  >
+                    {idx + 1}
+                  </span>
+                  <h3 className="m-0 mb-1.5 text-lg font-bold tracking-[-0.01em] text-ink">
+                    {step.title}
+                  </h3>
+                  <p className="m-0 text-[14.5px] leading-[1.55] text-muted">
+                    {step.description}
+                  </p>
+                  {step.tag ? (
+                    <span
+                      className={cn(
+                        'mt-2 inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 font-mono text-xs font-semibold',
+                        step.tagStyle === 'gold'
+                          ? 'bg-gold-pale text-[#7a5508]'
+                          : 'bg-primary-pale text-primary-ink',
+                      )}
+                    >
+                      {step.tag}
+                    </span>
+                  ) : null}
+                </li>
+              );
+            })}
           </ol>
 
-          {/* Phone preview */}
-          <HowItWorksPhonePreview preview={phonePreview} />
+          <div className="lg:sticky lg:top-[88px]">
+            <HowItWorksPhonePreview preview={phonePreview} />
+          </div>
         </div>
       </Container>
     </Section>

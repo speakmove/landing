@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Container, Section } from '@/shared/ui';
+import { Container, Section, SectionHead } from '@/shared/ui';
 import { PrivacyFeatureCard } from '@/entities/privacy-card';
 import type { TPrivacyCard } from '@/entities/privacy-card';
 
@@ -9,27 +9,21 @@ export const PrivacyFeatureGrid = async () => {
   const cards = t.raw('cards') as unknown as TPrivacyCard[];
 
   return (
-    <Section id="privacy" ariaLabelledBy="privacy-heading">
+    <Section
+      id="privacy"
+      ariaLabelledBy="privacy-heading"
+      className="bg-surface px-5 py-12 md:py-16"
+    >
       <Container>
-        {/* Section header */}
-        <div className="max-w-160 mb-10">
-          <span className="inline-block mb-3 rounded-full border border-line bg-surface px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-muted">
-            {t('kicker')}
-          </span>
-          <h2
-            id="privacy-heading"
-            className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink mb-3"
-          >
-            {t('title')}
-          </h2>
-          <p className="text-[17px] text-muted leading-relaxed">
-            {t('subtitle')}
-          </p>
-        </div>
+        <SectionHead
+          kicker={t('kicker')}
+          title={t('title')}
+          titleId="privacy-heading"
+          subtitle={t('subtitle')}
+        />
 
-        {/* Grid: 1-col mobile, 2-col md, 3-col lg */}
         <ul
-          className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
           aria-label={tCommon('aria.privacyFeatures')}
         >
           {cards.map((card) => (
@@ -41,4 +35,4 @@ export const PrivacyFeatureGrid = async () => {
       </Container>
     </Section>
   );
-}
+};

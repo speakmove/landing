@@ -1,4 +1,3 @@
-import { Card } from '@/shared/ui';
 import type { TSmartCriterion } from '../model/types';
 
 type TProps = {
@@ -7,26 +6,24 @@ type TProps = {
 
 export const SmartCriterionCard = ({ criterion }: TProps) => {
   return (
-    <Card as="article" className="flex flex-col gap-4">
+    <article className="card-hover flex h-full flex-col gap-4 rounded-[18px] border border-line bg-white p-6 shadow-(--shadow-soft)">
       <div className="flex items-center gap-3">
         <div
           aria-hidden="true"
-          className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-primary text-white font-extrabold text-[22px] font-mono"
+          className="grid h-12 w-12 flex-none place-items-center rounded-full bg-primary font-mono text-[22px] font-extrabold text-white"
         >
           {criterion.letter}
         </div>
         <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-muted font-mono">
+          <div className="font-mono text-[11px] font-semibold uppercase tracking-wider text-muted">
             {criterion.eng}
           </div>
-          <div className="font-bold text-[17px] text-ink leading-tight">
+          <div className="text-[17px] font-bold leading-tight text-ink">
             {criterion.title}
           </div>
         </div>
       </div>
-      <p className="text-sm text-muted leading-relaxed">
-        {criterion.description}
-      </p>
-    </Card>
+      <p className="m-0 text-sm leading-relaxed text-muted">{criterion.description}</p>
+    </article>
   );
-}
+};

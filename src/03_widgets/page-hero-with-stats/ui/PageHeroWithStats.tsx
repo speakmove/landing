@@ -12,42 +12,36 @@ export const PageHeroWithStats = async () => {
   const stats = t.raw('stats') as unknown as TStat[];
 
   return (
-    <header className="relative overflow-hidden pt-16 md:pt-20 pb-10 bg-primary-pale">
-      <Container>
-        <div className="text-center max-w-190 mx-auto">
-          {/* Breadcrumb / kicker chip */}
-          <div className="font-mono text-xs font-semibold text-primary tracking-[0.08em] uppercase mb-4">
-            {t('crumb')}
-          </div>
+    <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:pt-20">
+      <div aria-hidden="true" className="page-hero-bg" />
+      <Container className="px-0">
+        <div className="mx-auto max-w-[760px]">
+          <div className="section-eyebrow !mb-0">{t('crumb')}</div>
 
-          {/* H1 */}
-          <h1 className="font-extrabold tracking-tight leading-[1.08] text-balance text-ink mb-5"
+          <h1
+            className="my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink"
             style={{ fontSize: 'clamp(2.2rem, 4.4vw, 3.4rem)' }}
           >
             {t('title')}
           </h1>
 
-          {/* Description */}
-          <p className="text-lg text-muted max-w-160 mx-auto text-pretty mb-10">
+          <p className="mx-auto max-w-[640px] text-pretty text-[18px] text-muted">
             {t('description')}
           </p>
 
-          {/* Stats grid */}
           <div
-            className="flex flex-wrap gap-6 justify-center"
+            className="mt-7 flex flex-wrap justify-center gap-8"
             aria-label={tCommon('aria.statsGrid')}
           >
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="text-left px-5 border-l-2 border-primary"
+                className="border-l-2 border-primary px-5 text-left"
               >
-                <div className="font-mono font-extrabold text-2xl text-primary-ink tracking-[-0.01em]">
+                <div className="font-mono text-2xl font-extrabold tracking-[-0.01em] text-primary-ink">
                   {stat.value}
                 </div>
-                <div className="text-xs text-muted mt-0.5">
-                  {stat.label}
-                </div>
+                <div className="mt-0.5 text-[13px] text-muted">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -55,4 +49,4 @@ export const PageHeroWithStats = async () => {
       </Container>
     </header>
   );
-}
+};

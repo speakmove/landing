@@ -12,30 +12,28 @@ export const CefrLevelRow = ({ level }: TProps) => {
     <li
       aria-current={isActive ? 'step' : undefined}
       className={cn(
-        'grid grid-cols-[60px_1fr_auto] gap-3.5 items-center rounded-2xl border px-4 py-4 transition-shadow',
+        'grid grid-cols-[60px_1fr_auto] items-center gap-3.5 rounded-[14px] border bg-white px-4 py-4 transition-shadow',
         isActive
-          ? 'border-primary bg-white shadow-[0_0_0_3px_color-mix(in_oklab,var(--color-primary)_12%,transparent)]'
-          : 'border-line bg-white',
+          ? 'border-primary shadow-[0_0_0_3px_color-mix(in_oklab,var(--color-primary)_12%,transparent)]'
+          : 'border-line',
       )}
     >
-      <div className="font-mono font-extrabold text-xl text-primary px-2.5 py-1.5 bg-primary-pale rounded-[10px] text-center">
+      <div className="rounded-[10px] bg-primary-pale px-2.5 py-1.5 text-center font-mono text-xl font-extrabold text-primary">
         {level.code}
       </div>
 
       <div>
-        <div className="font-bold text-sm tracking-[-0.01em] text-ink">
+        <div className="text-[14.5px] font-bold tracking-[-0.01em] text-ink">
           {level.title}
         </div>
-        <div className="text-xs text-muted mt-0.5 leading-snug">
-          {level.subtitle}
-        </div>
+        <div className="mt-0.5 text-[13px] leading-snug text-muted">{level.subtitle}</div>
       </div>
 
-      {level.weeks && (
-        <div className="font-mono text-xs font-bold text-muted whitespace-nowrap text-right">
+      {level.weeks ? (
+        <div className="whitespace-nowrap text-right font-mono text-xs font-bold text-muted">
           {level.weeks}
         </div>
-      )}
+      ) : null}
     </li>
   );
 };
