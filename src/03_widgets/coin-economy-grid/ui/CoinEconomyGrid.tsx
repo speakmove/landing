@@ -1,10 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section } from '@/shared/ui';
-
-type TCoinFlowRow = {
-  what: string;
-  amount: string;
-};
+import { CoinFlowTable } from '@/entities/coin-flow-table';
+import type { TCoinFlowRow } from '@/entities/coin-flow-table';
 
 type TEarnData = {
   title: string;
@@ -33,66 +30,7 @@ const BoldText = ({ text }: { text: string }) => {
       )}
     </>
   );
-}
-
-const CoinTable = ({
-  title,
-  rows,
-  captionLabel,
-  actionLabel,
-  amountLabel,
-}: {
-  title: string;
-  rows: TCoinFlowRow[];
-  captionLabel: string;
-  actionLabel: string;
-  amountLabel: string;
-}) => {
-  return (
-    <div className="rounded-2xl border border-line bg-white shadow-(--shadow-soft) overflow-hidden">
-      <div className="px-5 py-4 border-b border-line bg-surface">
-        <h3 className="font-bold text-[17px] text-ink">{title}</h3>
-      </div>
-      <table className="w-full text-sm">
-        <caption className="sr-only">{captionLabel}</caption>
-        <thead>
-          <tr className="border-b border-line">
-            <th
-              scope="col"
-              className="px-5 py-2.5 text-left text-xs font-semibold uppercase tracking-wider text-muted"
-            >
-              {actionLabel}
-            </th>
-            <th
-              scope="col"
-              className="px-5 py-2.5 text-right text-xs font-semibold uppercase tracking-wider text-muted"
-            >
-              {amountLabel}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr
-              key={i}
-              className="border-b border-line last:border-0 hover:bg-surface transition-colors"
-            >
-              <th
-                scope="row"
-                className="px-5 py-3 text-left font-normal text-ink"
-              >
-                {row.what}
-              </th>
-              <td className="px-5 py-3 text-right font-mono font-semibold text-primary-ink whitespace-nowrap">
-                {row.amount}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
+};
 
 export const CoinEconomyGrid = async () => {
   const t = await getTranslations('HowItWorksPage.coinLoop');
@@ -121,7 +59,7 @@ export const CoinEconomyGrid = async () => {
 
         {/* Two-column tables */}
         <div className="grid md:grid-cols-2 gap-6">
-          <CoinTable
+          <CoinFlowTable
             title={earn.title}
             rows={earn.rows}
             captionLabel={tCommon('table.earnCaption')}
@@ -129,7 +67,7 @@ export const CoinEconomyGrid = async () => {
             amountLabel={tCommon('table.amount')}
           />
           <div className="flex flex-col gap-4">
-            <CoinTable
+            <CoinFlowTable
               title={outcome.title}
               rows={outcome.rows}
               captionLabel={tCommon('table.spendCaption')}
@@ -145,4 +83,4 @@ export const CoinEconomyGrid = async () => {
       </Container>
     </Section>
   );
-}
+};

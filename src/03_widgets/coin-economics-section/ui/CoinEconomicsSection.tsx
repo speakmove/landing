@@ -1,12 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section } from '@/shared/ui';
+import type { TCoinFlowRow } from '@/entities/coin-flow-table';
 import type { TGiftCardOption } from '@/entities/gift-card-option';
-
-type TEarnRow = {
-  what: string;
-  amount: string;
-  usd: string;
-};
 
 type TEarnTotal = {
   label: string;
@@ -22,7 +17,7 @@ export const CoinEconomicsSection = async () => {
   const t = await getTranslations('PricingPage.coinEconomics');
   const tCommon = await getTranslations('Common');
 
-  const earnRows = t.raw('earn.rows') as unknown as TEarnRow[];
+  const earnRows = t.raw('earn.rows') as unknown as TCoinFlowRow[];
   const earnTotal = t.raw('earn.total') as unknown as TEarnTotal;
   const withdrawGrid = t.raw('withdraw.grid') as unknown as TWithdrawGridItem[];
   const routes = t.raw('withdraw.routes') as unknown as TGiftCardOption[];
@@ -152,4 +147,4 @@ export const CoinEconomicsSection = async () => {
       </Container>
     </Section>
   );
-}
+};
