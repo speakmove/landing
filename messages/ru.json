@@ -57,46 +57,26 @@
         ]
       },
       "phonePreview": {
-        "botName": "SpeakMove · bot",
-        "botStatus": "печатает…",
-        "coinBalance": "127",
-        "messages": [
-          {
-            "from": "bot",
-            "text": "Let's practice! Where do you work?",
-            "translation": "Давай попрактикуемся! Где ты работаешь?",
-            "meta": "A2 · Listening & speaking"
-          },
-          {
-            "from": "me",
-            "text": "I work at a small café near the station.",
-            "translation": "Я работаю в маленьком кафе у станции."
-          },
-          {
-            "from": "bot",
-            "text": "Great pronunciation — 92%. ✓",
-            "translation": "Отличное произношение — 92%. ✓",
-            "reward": "+10 SM"
-          },
-          {
-            "from": "bot",
-            "text": "Homework ready: describe your morning.",
-            "translation": "Новое ДЗ: опиши своё утро.",
-            "highlight": "x2 монет"
-          }
-        ],
-        "micLabel": "Запись",
-        "micTime": "0:07",
-        "floatBubbles": [
-          {
-            "title": "100 SM = $1",
-            "subtitle": "Cashback за уроки"
-          },
-          {
-            "title": "7 дней подряд",
-            "subtitle": "+50 SM за серию"
-          }
-        ]
+        "botName": "SpeakMove",
+        "botStatus": "бот",
+        "coinBalance": "SM",
+        "today": "Сегодня",
+        "userText": "я не пойму",
+        "botPromptTitle": "\"I'd like a small coffee, please.\"",
+        "botPromptQuestion": "Показать перевод?",
+        "userVoiceDuration": "0:08",
+        "botVoiceDuration": "0:11",
+        "userVoiceTimestamp": "11:00 AM",
+        "botVoiceTimestamp": "11:00 AM",
+        "userTextTimestamp": "11:01 AM",
+        "botPromptTimestamp": "11:01 AM",
+        "inputPlaceholder": "Сообщение",
+        "langButtonUk": "🇺🇦  Українська",
+        "langButtonRu": "🇷🇺  Русский",
+        "sideCard1Title": "100 SM = $1",
+        "sideCard1Subtitle": "Вывод на карту",
+        "sideCard2Title": "Стрик: 7 дней",
+        "sideCard2Subtitle": "+50 SM бонус"
       }
     },
     "advantages": {

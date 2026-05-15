@@ -57,46 +57,26 @@
         ]
       },
       "phonePreview": {
-        "botName": "Sed do eiusmod SpeakMove 17",
-        "botStatus": "Sed do eiusmod",
-        "coinBalance": "127",
-        "messages": [
-          {
-            "from": "bot",
-            "text": "Sed do eiusmod tempor incididunt 18",
-            "translation": "Sed do eiusmod tempor incididunt 19",
-            "meta": "Sed do eiusmod 20"
-          },
-          {
-            "from": "me",
-            "text": "Sed do eiusmod tempor incididunt 21",
-            "translation": "Sed do eiusmod tempor incididunt 22"
-          },
-          {
-            "from": "bot",
-            "text": "Sed do eiusmod 23",
-            "translation": "Sed do eiusmod tempor incididunt 24",
-            "reward": "+10 SM"
-          },
-          {
-            "from": "bot",
-            "text": "Sed do eiusmod tempor incididunt 25",
-            "translation": "Sed do eiusmod 26",
-            "highlight": "x2 монет"
-          }
-        ],
-        "micLabel": "Sed do eiusmod",
-        "micTime": "0:07",
-        "floatBubbles": [
-          {
-            "title": "100 SM = $1",
-            "subtitle": "Sed do eiusmod 27"
-          },
-          {
-            "title": "7 дней подряд",
-            "subtitle": "+50 SM за серию"
-          }
-        ]
+        "botName": "SpeakMove",
+        "botStatus": "Lorem ipsum",
+        "coinBalance": "SM",
+        "today": "Lorem ipsum",
+        "userText": "Lorem ipsum",
+        "botPromptTitle": "I would like a small coffee, please.",
+        "botPromptQuestion": "Lorem ipsum?",
+        "userVoiceDuration": "0:08",
+        "botVoiceDuration": "0:11",
+        "userVoiceTimestamp": "11:00 AM",
+        "botVoiceTimestamp": "11:00 AM",
+        "userTextTimestamp": "11:01 AM",
+        "botPromptTimestamp": "11:01 AM",
+        "inputPlaceholder": "Lorem ipsum",
+        "langButtonUk": "Ukrainian",
+        "langButtonRu": "Russian",
+        "sideCard1Title": "100 SM = $1",
+        "sideCard1Subtitle": "Lorem ipsum",
+        "sideCard2Title": "Lorem 7",
+        "sideCard2Subtitle": "+50 SM"
       }
     },
     "advantages": {
