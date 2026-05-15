@@ -21,7 +21,7 @@ export const ConsentField = ({
   disabled,
 }: TProps) => {
   return (
-    <div>
+    <div className="mt-4 border-t border-line pt-4">
       <div className="flex items-start gap-3">
         <input
           id="consent"
