@@ -391,4 +391,22 @@
   details > summary::-webkit-details-marker {
     display: none;
   }
+
+  /* ---------- FAQ chevron (CSS-only rotated-square) ---------- */
+  .faq-details[open] {
+    border-color: color-mix(in oklab, var(--color-primary) 30%, var(--color-line));
+  }
+  .faq-summary::after {
+    content: '';
+    margin-left: auto;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--color-faint);
+    border-bottom: 2px solid var(--color-faint);
+    transform: rotate(45deg);
+    transition: transform 150ms ease-out;
+  }
+  .faq-details[open] .faq-summary::after {
+    transform: rotate(-135deg);
+  }
 }
