@@ -61,3 +61,5 @@
 10) const isExternal = (href: string): boolean => {
   15    return /^(https?:)?\/\//.test(href) || href.startsWith('mailto:');
   16  }; это лучше сделать в утилиту отдельно в shared 
+
+  11) снова у тебя много статичных стилей через []

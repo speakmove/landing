@@ -55,7 +55,7 @@ export const HomeCompare = async () => {
         />
 
         <div className="overflow-x-auto rounded-[18px] border border-line bg-white shadow-(--shadow-soft)">
-          <table className="w-full min-w-180 border-collapse text-[14.5px]">
+          <table className="w-full min-w-180 border-collapse text-[10px] md:text-[14.5px]">
             <caption className="sr-only">{t('title')}</caption>
             <thead>
               <tr>
@@ -64,7 +64,7 @@ export const HomeCompare = async () => {
                     key={col + colIdx}
                     scope="col"
                     className={cn(
-                      'border-b border-line px-3.5 py-4 text-[13px] font-bold',
+                      'border-b border-line px-3.5 py-4 text-[12px] md:text-[13px] font-bold',
                       colIdx === 0 ? 'bg-[#fafbf8] text-left' : 'text-center',
                       colIdx === highlightIdx
                         ? 'bg-primary-pale text-primary-ink'

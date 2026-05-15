@@ -54,7 +54,7 @@ export const TableTbody = ({ groups, colHeaders, highlightColumn }: TProps) => {
             <th
               colSpan={4}
               scope="colgroup"
-              className="border-y-2 border-primary px-3.5 py-3.5 text-left text-[13px] font-extrabold uppercase tracking-[0.08em] text-primary-ink"
+              className="border-y-2 border-primary px-3.5 py-3.5 text-left text-[10px] md:text-[13px] font-extrabold uppercase tracking-[0.08em] text-primary-ink"
             >
               {group.name}
             </th>
