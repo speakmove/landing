@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { CheckIcon, Container, Section, SectionHead } from '@/shared/ui';
 import { CefrLevelRow } from '@/entities/cefr-level';
+import { ANCHORS } from '@/shared/config';
 import type { TCefrLevel } from '@/entities/cefr-level';
 
 /** Parse **bold** markdown inline — pure React JSX, no unsafe HTML injection */
@@ -34,7 +35,7 @@ export const CefrProgression = async () => {
   const side = t.raw('side') as unknown as TSideData;
 
   return (
-    <Section id="cefr" ariaLabelledBy="cefr-heading" className="px-5 py-12 md:py-16">
+    <Section id={ANCHORS.cefr} ariaLabelledBy="cefr-heading" className="px-5 py-12 md:py-16">
       <Container>
         <SectionHead
           kicker={t('kicker')}

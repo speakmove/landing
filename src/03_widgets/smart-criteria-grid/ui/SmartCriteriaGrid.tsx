@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { SmartCriterionCard } from '@/entities/smart-criterion';
+import { ANCHORS } from '@/shared/config';
 import type { TSmartCriterion } from '@/entities/smart-criterion';
 
 export const SmartCriteriaGrid = async () => {
@@ -9,7 +10,7 @@ export const SmartCriteriaGrid = async () => {
   const criteria = t.raw('criteria') as unknown as TSmartCriterion[];
 
   return (
-    <Section id="smart" ariaLabelledBy="smart-heading" className="bg-surface px-5 py-12 md:py-16">
+    <Section id={ANCHORS.smart} ariaLabelledBy="smart-heading" className="bg-surface px-5 py-12 md:py-16">
       <Container>
         <SectionHead
           kicker={t('kicker')}

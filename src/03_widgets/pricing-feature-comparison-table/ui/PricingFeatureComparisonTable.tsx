@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section, SectionHead } from '@/shared/ui';
+import { ANCHORS } from '@/shared/config';
 import { TableThead } from './TableThead';
 import { TableTbody } from './TableTbody';
 
@@ -38,7 +39,7 @@ export const PricingFeatureComparisonTable = async () => {
 
   return (
     <Section
-      id="compare"
+      id={ANCHORS.compare}
       ariaLabelledBy="compare-heading"
       className="bg-surface px-5 py-12 md:py-20"
     >

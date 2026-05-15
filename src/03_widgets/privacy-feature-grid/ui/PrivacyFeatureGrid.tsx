@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { PrivacyFeatureCard } from '@/entities/privacy-card';
+import { ANCHORS } from '@/shared/config';
 import type { TPrivacyCard } from '@/entities/privacy-card';
 
 export const PrivacyFeatureGrid = async () => {
@@ -10,7 +11,7 @@ export const PrivacyFeatureGrid = async () => {
 
   return (
     <Section
-      id="privacy"
+      id={ANCHORS.privacy}
       ariaLabelledBy="privacy-heading"
       className="bg-surface px-5 py-12 md:py-16"
     >

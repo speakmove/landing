@@ -14,7 +14,7 @@ export const HomeHero = async () => {
   const scenarios = t.raw('scenarioPicker.cards') as unknown as TScenario[];
 
   return (
-    <header id="hero" className="relative overflow-hidden px-5 py-14 md:py-20 lg:pb-24">
+    <header id={ANCHORS.hero} className="relative overflow-hidden px-5 py-14 md:py-20 lg:pb-24">
       <div aria-hidden="true" className="hero-bg-grid" />
 
       <Container className="px-0">

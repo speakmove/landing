@@ -1,4 +1,5 @@
 export const ANCHORS = {
+  hero: 'hero',
   advantages: 'advantages',
   howItWorks: 'how-it-works',
   schedule: 'schedule',
@@ -7,4 +8,11 @@ export const ANCHORS = {
   ukraine: 'ukraine',
   faq: 'faq',
   cta: 'cta',
+  cefr: 'cefr',
+  flow: 'flow',
+  coinLoop: 'coin-loop',
+  coinEconomics: 'coin-economics',
+  smart: 'smart',
+  privacy: 'privacy',
+  plans: 'plans',
 } as const;

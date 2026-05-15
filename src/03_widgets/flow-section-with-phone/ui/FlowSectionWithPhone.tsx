@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { cn } from '@/shared/model/libs/cn';
 import { Container, Section, SectionHead } from '@/shared/ui';
+import { ANCHORS } from '@/shared/config';
 import type { TStep } from '@/entities/step-card';
 import type { TChatMessage } from '@/entities/chat-message';
 import { HowItWorksPhonePreview } from './HowItWorksPhonePreview';
@@ -19,7 +20,7 @@ export const FlowSectionWithPhone = async () => {
   const phonePreview = t.raw('phonePreview') as unknown as TPhonePreview;
 
   return (
-    <Section id="flow" ariaLabelledBy="flow-heading" className="px-5 py-12 md:py-16">
+    <Section id={ANCHORS.flow} ariaLabelledBy="flow-heading" className="px-5 py-12 md:py-16">
       <Container>
         <SectionHead
           kicker={t('kicker')}

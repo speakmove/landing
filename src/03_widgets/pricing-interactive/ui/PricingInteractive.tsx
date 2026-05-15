@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Container } from '@/shared/ui';
 import { BillingToggle, type TBillingValue } from '@/features/billing-toggle';
 import { PricingPlanCard, type TPricingPlanAriaLabels } from '@/entities/pricing-plan';
+import { ANCHORS } from '@/shared/config';
 import type { TPricingPlan } from '@/entities/pricing-plan';
 
 type TFomoData = {
@@ -118,7 +119,7 @@ export const PricingInteractive = ({
         </Container>
       </header>
 
-      <section id="plans" className="px-5 pb-20">
+      <section id={ANCHORS.plans} className="px-5 pb-20">
         <Container>
           <div className="mt-8 grid gap-5 lg:grid-cols-3">
             {plans.map((plan) => (

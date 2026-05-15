@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { CoinFlowTable } from '@/entities/coin-flow-table';
+import { ANCHORS } from '@/shared/config';
 import type { TCoinFlowRow } from '@/entities/coin-flow-table';
 
 type TEarnData = {
@@ -38,7 +39,7 @@ export const CoinEconomyGrid = async () => {
   const outcome = t.raw('outcome') as unknown as TOutcomeData;
 
   return (
-    <Section id="coin-loop" ariaLabelledBy="coin-loop-heading" className="px-5 py-12 md:py-16">
+    <Section id={ANCHORS.coinLoop} ariaLabelledBy="coin-loop-heading" className="px-5 py-12 md:py-16">
       <Container>
         <SectionHead
           kicker={t('kicker')}

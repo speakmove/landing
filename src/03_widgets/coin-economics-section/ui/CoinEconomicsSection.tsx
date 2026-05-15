@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, Section, SectionHead } from '@/shared/ui';
+import { ANCHORS } from '@/shared/config';
 import type { TCoinFlowRow } from '@/entities/coin-flow-table';
 import type { TGiftCardOption } from '@/entities/gift-card-option';
 
@@ -24,7 +25,7 @@ export const CoinEconomicsSection = async () => {
 
   return (
     <Section
-      id="coin-economics"
+      id={ANCHORS.coinEconomics}
       ariaLabelledBy="coin-economics-heading"
       className="px-5 py-12 md:py-20"
     >

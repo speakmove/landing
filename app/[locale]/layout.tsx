@@ -8,6 +8,7 @@ import { routing } from '@/shared/model/libs/i18n/routing';
 import { SkipLink } from '@/shared/ui';
 import { SiteHeader } from '@/widgets/site-header';
 import { SiteFooter } from '@/widgets/site-footer';
+import { ELEMENT_IDS } from '@/shared/config';
 import '../globals.css';
 
 const inter = Inter({
@@ -68,7 +69,7 @@ export default async function LocaleLayout({ children, params }: TProps) {
         <NextIntlClientProvider>
           <SkipLink>{tCommon('skipToContent')}</SkipLink>
           <SiteHeader />
-          <main id="main">{children}</main>
+          <main id={ELEMENT_IDS.main}>{children}</main>
           <SiteFooter />
         </NextIntlClientProvider>
       </body>
