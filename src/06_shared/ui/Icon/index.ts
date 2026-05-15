@@ -7,3 +7,8 @@ export { PaperPlaneIcon } from './PaperPlane';
 export { PlusIcon } from './Plus';
 export { GiftIcon } from './Gift';
 export { ClockIcon } from './Clock';
+export { ShieldIcon } from './Shield';
+export { LockIcon } from './Lock';
+export { UserPlusIcon } from './UserPlus';
+export { EditIcon } from './Edit';
+export { ExportIcon } from './Export';
