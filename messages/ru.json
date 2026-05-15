@@ -133,7 +133,10 @@
           "id": "homework",
           "title": "ДЗ с x2 монет",
           "description": "Выполнил задание — получил в 2 раза больше монет. Даже когда лень — каждое задание возвращается в виде cashback. Доступно на Premium-плане.",
-          "badge": "Новое",
+          "badge": {
+            "text": "Новое",
+            "kind": "new"
+          },
           "items": [
             {
               "label": "Новые слова",
@@ -153,7 +156,10 @@
           "id": "certificate",
           "title": "Сертификат уровня",
           "description": "При завершении A1–C1 получишь сертификат от **SpeakMove** (UK) — для резюме и LinkedIn. Это собственный (proprietary) сертификат SpeakMove, не аффилированный с Cambridge ESOL, Pearson или иными международными сертифицирующими органами. Сертификат — будущая фича: выдача начнётся после официального запуска продукта и регистрации SpeakMove Ltd. Партнёрство с международным валидатором — в более далёких планах.",
-          "badge": "Скоро",
+          "badge": {
+            "text": "Скоро",
+            "kind": "coming-soon"
+          },
           "certificateName": "SpeakMove Certificate",
           "certificateIssuer": "Issued by SpeakMove Ltd · Based in the United Kingdom (after product launch)",
           "certificateStatus": "Planned feature · SpeakMove Ltd (post-launch)"

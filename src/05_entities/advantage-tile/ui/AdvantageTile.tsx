@@ -64,6 +64,13 @@ const TILE_ICON_TONE: Record<string, string> = {
   certificate: 'bg-primary-pale text-primary',
 };
 
+/** Returns badge className based on the discriminated kind */
+const badgeClass = (kind: string | undefined): string => {
+  if (kind === 'coming-soon') return 'bg-primary-pale text-primary-ink';
+  // 'new' and 'feature' both use gold accent
+  return 'bg-gold-accent text-[#4a2e07]';
+};
+
 export const AdvantageTile = async ({ tile, className }: TProps) => {
   const tCommon = await getTranslations('Common');
   const IconCmp = TILE_ICONS[tile.id] ?? VoiceIcon;
@@ -80,14 +87,10 @@ export const AdvantageTile = async ({ tile, className }: TProps) => {
         <span
           className={cn(
             'absolute right-4.5 top-4.5 rounded-full px-2 py-1 text-[10.5px] font-extrabold uppercase tracking-[0.04em]',
-            tile.badge.toLowerCase().includes('скоро') ||
-              tile.badge.toLowerCase().includes('soon') ||
-              tile.badge.toLowerCase().includes('незабаром')
-              ? 'bg-primary-pale text-primary-ink'
-              : 'bg-gold-accent text-[#4a2e07]',
+            badgeClass(tile.badge.kind),
           )}
         >
-          {tile.badge}
+          {tile.badge.text}
         </span>
       ) : null}
 

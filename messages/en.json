@@ -133,7 +133,10 @@
           "id": "homework",
           "title": "Lorem ipsum 37",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (38)",
-          "badge": "Lorem ipsum",
+          "badge": {
+            "text": "Lorem ipsum",
+            "kind": "new"
+          },
           "items": [
             {
               "label": "Lorem ipsum",
@@ -153,7 +156,10 @@
           "id": "certificate",
           "title": "Lorem ipsum 39",
           "description": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "badge": "Lorem ipsum",
+          "badge": {
+            "text": "Lorem ipsum",
+            "kind": "coming-soon"
+          },
           "certificateName": "Lorem ipsum SpeakMove 40",
           "certificateIssuer": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
           "certificateStatus": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet."

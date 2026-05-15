@@ -133,7 +133,10 @@
           "id": "homework",
           "title": "Sed do eiusmod 37",
           "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (38)",
-          "badge": "Sed do eiusmod",
+          "badge": {
+            "text": "Sed do eiusmod",
+            "kind": "new"
+          },
           "items": [
             {
               "label": "Sed do eiusmod",
@@ -153,7 +156,10 @@
           "id": "certificate",
           "title": "Sed do eiusmod 39",
           "description": "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "badge": "Sed do eiusmod",
+          "badge": {
+            "text": "Sed do eiusmod",
+            "kind": "coming-soon"
+          },
           "certificateName": "Sed do eiusmod SpeakMove 40",
           "certificateIssuer": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
           "certificateStatus": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet."
