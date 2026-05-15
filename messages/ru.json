@@ -679,7 +679,65 @@
           "ariaLabel": "Открыть X (Twitter) SpeakMove",
           "href": "https://x.com/speakmove"
         }
-      ]
+      ],
+      "columns": [
+        {
+          "title": "Продукт",
+          "links": [
+            {
+              "label": "Как это работает",
+              "href": "/how-it-works"
+            },
+            {
+              "label": "Цены",
+              "href": "/pricing"
+            },
+            {
+              "label": "Сравнение",
+              "href": "/#compare"
+            }
+          ]
+        },
+        {
+          "title": "Компания",
+          "links": [
+            {
+              "label": "О проекте",
+              "href": "/about"
+            },
+            {
+              "label": "Контакт",
+              "href": "mailto:hi@speakmove.app"
+            }
+          ]
+        },
+        {
+          "title": "Документы",
+          "links": [
+            {
+              "label": "Приватность",
+              "href": "/privacy"
+            },
+            {
+              "label": "Условия",
+              "href": "/terms"
+            },
+            {
+              "label": "Куки",
+              "href": "/cookies"
+            }
+          ]
+        }
+      ],
+      "badges": [
+        {
+          "label": "ICO ZC141876 · UK"
+        },
+        {
+          "label": "GDPR-compliant"
+        }
+      ],
+      "copyright": "© 2026 SpeakMove. Все права защищены."
     },
     "meta": {
       "title": "SpeakMove — учи язык и получай cashback за прогресс",

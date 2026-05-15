@@ -57,3 +57,7 @@
 8) lastName не нужно в форме
 
 9) Honeypot называется website — самые продвинутые боты заполняют именно поле website. Переименуй в что-то менее ожидаемое: company_url, linkedin_profile.
+
+10) const isExternal = (href: string): boolean => {
+  15    return /^(https?:)?\/\//.test(href) || href.startsWith('mailto:');
+  16  }; это лучше сделать в утилиту отдельно в shared 

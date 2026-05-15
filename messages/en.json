@@ -709,7 +709,65 @@
           "ariaLabel": "Открыть X (Twitter) SpeakMove",
           "href": "https://x.com/speakmove"
         }
-      ]
+      ],
+      "columns": [
+        {
+          "title": "Product",
+          "links": [
+            {
+              "label": "How it works",
+              "href": "/how-it-works"
+            },
+            {
+              "label": "Pricing",
+              "href": "/pricing"
+            },
+            {
+              "label": "Comparison",
+              "href": "/#compare"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            {
+              "label": "About",
+              "href": "/about"
+            },
+            {
+              "label": "Contact",
+              "href": "mailto:hi@speakmove.app"
+            }
+          ]
+        },
+        {
+          "title": "Documents",
+          "links": [
+            {
+              "label": "Privacy",
+              "href": "/privacy"
+            },
+            {
+              "label": "Terms",
+              "href": "/terms"
+            },
+            {
+              "label": "Cookies",
+              "href": "/cookies"
+            }
+          ]
+        }
+      ],
+      "badges": [
+        {
+          "label": "ICO ZC141876 · UK"
+        },
+        {
+          "label": "GDPR-compliant"
+        }
+      ],
+      "copyright": "© 2026 SpeakMove. All rights reserved."
     },
     "meta": {
       "title": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",

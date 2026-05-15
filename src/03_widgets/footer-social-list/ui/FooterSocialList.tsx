@@ -35,7 +35,7 @@ export const FooterSocialList = async () => {
   const socialLinks = t.raw('socialLinks') as unknown as TSocialLink[];
 
   return (
-    <ul className="m-0 flex list-none gap-2 p-0 md:justify-end" aria-label={t('socialTitle')}>
+    <ul className="m-0 flex list-none gap-2 p-0" aria-label={t('socialTitle')}>
       {socialLinks.map((item) => (
         <li key={item.id}>
           <a

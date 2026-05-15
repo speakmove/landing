@@ -11,20 +11,26 @@ export const SiteFooter = async () => {
   const t = await getTranslations('HomePage.footer');
 
   return (
-    <footer className="border-t border-line px-5">
-      <Container className="px-4 py-8 md:py-10">
-        <div className="grid gap-6 md:grid-cols-3 md:items-center md:gap-8">
-          <Link
-            href={PATHS.home}
-            aria-label={t('brand')}
-            className="inline-flex items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          >
-            <Logo />
-          </Link>
+    <footer className="border-t border-line">
+      <Container className="py-10 md:py-14">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-10 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+          <div className="col-span-2 md:col-span-4 lg:col-span-1">
+            <Link
+              href={PATHS.home}
+              aria-label={t('brand')}
+              className="inline-flex items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <Logo />
+            </Link>
+            <p className="mt-4 max-w-72 text-[13.5px] leading-relaxed text-muted">
+              {t('tagline')}
+            </p>
+            <div className="mt-5">
+              <FooterSocialList />
+            </div>
+          </div>
 
           <FooterNav />
-
-          <FooterSocialList />
         </div>
 
         <FooterLegal />
