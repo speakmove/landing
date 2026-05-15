@@ -30,7 +30,7 @@ export const HomePhonePreview = async () => {
       <PhoneFrame>
         {/* Screen content with custom gradient background */}
         <div
-          className="flex-1 flex flex-col min-h-[640px]"
+          className="flex-1 flex flex-col min-h-160"
           style={{
             background: 'linear-gradient(160deg,#afc78f 0%,#c2d094 35%,#d4d895 65%,#c7c887 100%)',
           }}

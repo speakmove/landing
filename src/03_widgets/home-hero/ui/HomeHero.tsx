@@ -43,7 +43,7 @@ export const HomeHero = async () => {
             </h1>
 
             {/* Description */}
-            <p className="mb-7 max-w-[560px] text-[19px] leading-[1.55] text-muted">
+            <p className="mb-7 max-w-140 text-lg leading-[1.55] text-muted">
               {t('description')}
             </p>
 

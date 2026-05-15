@@ -33,7 +33,7 @@ export const PricingFaqSection = async () => {
         </p>
 
         <ul
-          className="mx-auto max-w-[800px] list-none p-0"
+          className="mx-auto max-w-200 list-none p-0"
           aria-label={tCommon('aria.faqList')}
         >
           {items.map((item) => (

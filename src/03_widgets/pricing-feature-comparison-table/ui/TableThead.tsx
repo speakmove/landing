@@ -12,7 +12,7 @@ export const TableThead = ({ featureColLabel, colHeaders, highlightColumn }: TPr
       <tr>
         <th
           scope="col"
-          className="min-w-[260px] border-b border-line bg-[#fafbf8] px-3.5 py-3.5 text-left text-[13px] font-bold text-ink"
+          className="min-w-65 border-b border-line bg-[#fafbf8] px-3.5 py-3.5 text-left text-[13px] font-bold text-ink"
         >
           <span className="sr-only">{featureColLabel}</span>
         </th>

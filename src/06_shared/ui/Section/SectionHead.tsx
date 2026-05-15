@@ -20,7 +20,7 @@ export const SectionHead = ({
   return (
     <div
       className={cn(
-        'mb-10 max-w-[680px] md:mb-12',
+        'mb-10 max-w-170 md:mb-12',
         align === 'center' ? 'mx-auto text-center' : 'text-left',
         className,
       )}

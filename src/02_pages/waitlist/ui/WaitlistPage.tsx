@@ -54,7 +54,7 @@ export const WaitlistPage = async () => {
   const formSubtitle = t('form.subtitle');
 
   return (
-    <main className="mx-auto grid w-full max-w-[1200px] grid-cols-1 lg:grid-cols-2">
+    <main className="mx-auto grid w-full max-w-300 grid-cols-1 lg:grid-cols-2">
       <div className="flex flex-col justify-center border-b border-line bg-surface px-7 py-12 lg:border-r lg:border-b-0 lg:px-14 lg:py-16">
         <div className="section-eyebrow !mb-4">{kicker}</div>
 
@@ -64,7 +64,7 @@ export const WaitlistPage = async () => {
         >
           {title}
         </h1>
-        <p className="mb-7 max-w-[440px] text-pretty text-[16px] leading-[1.65] text-muted">
+        <p className="mb-7 max-w-110 text-pretty text-[16px] leading-[1.65] text-muted">
           {description}
         </p>
 

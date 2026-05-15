@@ -15,7 +15,7 @@ export const PhoneFrame = ({ children }: PropsWithChildren) => {
       {/* Black bezel */}
       <div className="bg-black rounded-[48.5px] p-[1.5px]">
         <div
-          className="rounded-[47px] overflow-hidden flex flex-col min-h-[640px]"
+          className="rounded-[47px] overflow-hidden flex flex-col min-h-160"
         >
           {children}
         </div>

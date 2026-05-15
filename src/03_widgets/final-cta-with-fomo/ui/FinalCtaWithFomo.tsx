@@ -29,7 +29,7 @@ export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TPro
           >
             {t('title')}
           </h2>
-          <p className="mx-auto mb-7 max-w-[560px] text-[17px] leading-relaxed text-muted">
+          <p className="mx-auto mb-7 max-w-140 text-[17px] leading-relaxed text-muted">
             {t('subtitle')}
           </p>
 
@@ -39,7 +39,7 @@ export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TPro
 
           <div className="mt-4 text-[13.5px] text-muted">{t('meta')}</div>
 
-          <div className="mx-auto mt-6 max-w-[480px]">
+          <div className="mx-auto mt-6 max-w-120">
             <div
               role="progressbar"
               aria-valuemin={0}

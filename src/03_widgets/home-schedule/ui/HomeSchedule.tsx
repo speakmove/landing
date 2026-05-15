@@ -28,7 +28,7 @@ export const HomeSchedule = async ({ namespace = 'HomePage.schedule' }: TProps) 
           subtitle={t('subtitle')}
         />
 
-        <div className="mx-auto grid max-w-[820px] gap-4 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-205 gap-4 sm:grid-cols-2">
           {cards.map((card, idx) => (
             <ScheduleCard key={card.id} card={card} defaultActive={idx === 0} />
           ))}

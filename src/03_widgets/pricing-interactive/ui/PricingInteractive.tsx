@@ -56,7 +56,7 @@ export const PricingInteractive = ({
       <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:pt-20">
         <div aria-hidden="true" className="page-hero-bg" />
         <Container className="px-0">
-          <div className="mx-auto max-w-[760px]">
+          <div className="mx-auto max-w-190">
             <div className="section-eyebrow !mb-0">{hero.crumb}</div>
 
             <h1
@@ -67,12 +67,12 @@ export const PricingInteractive = ({
               {hero.title}
             </h1>
 
-            <p className="mx-auto max-w-[620px] text-pretty text-[18px] text-muted">
+            <p className="mx-auto max-w-155 text-pretty text-[18px] text-muted">
               {hero.description}
             </p>
 
             <div
-              className="mx-auto mt-6 max-w-[720px] rounded-[18px] bg-white px-5 py-4 text-left shadow-(--shadow-soft)"
+              className="mx-auto mt-6 max-w-180 rounded-[18px] bg-white px-5 py-4 text-left shadow-(--shadow-soft)"
               style={{
                 border:
                   '1px solid color-mix(in oklab, var(--color-primary) 35%, var(--color-line))',

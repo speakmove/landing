@@ -29,7 +29,7 @@ export const NotFoundPage = async () => {
         >
           {t('title')}
         </h1>
-        <p className="mx-auto mb-8 max-w-[540px] text-pretty text-[16.5px] text-muted">
+        <p className="mx-auto mb-8 max-w-135 text-pretty text-[16.5px] text-muted">
           {t('description')}
         </p>
 

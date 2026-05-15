@@ -28,7 +28,7 @@ export const HomeUkraineProgramme = async () => {
       className="px-5 py-16 md:py-22"
     >
       <Container>
-        <div className="mx-auto max-w-[760px]">
+        <div className="mx-auto max-w-190">
           <div className="mb-8 flex items-center gap-3">
             <span className="text-3xl" role="img" aria-label={t('flagAriaLabel')}>
               {t('flag')}
@@ -50,7 +50,7 @@ export const HomeUkraineProgramme = async () => {
               {t('pricesTitle')}
             </h3>
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[480px] border-collapse text-sm">
+              <table className="w-full min-w-120 border-collapse text-sm">
                 <caption className="sr-only">{t('pricesTitle')}</caption>
                 <thead>
                   <tr>

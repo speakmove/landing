@@ -56,7 +56,7 @@ export const CefrProgression = async () => {
           >
             <h3
               id="cefr-side-heading"
-              className="m-0 mb-3.5 text-[19px] font-bold tracking-[-0.01em] text-ink"
+              className="m-0 mb-3.5 text-lg font-bold tracking-[-0.01em] text-ink"
             >
               {side.title}
             </h3>

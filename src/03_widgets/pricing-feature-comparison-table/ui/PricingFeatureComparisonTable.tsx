@@ -51,7 +51,7 @@ export const PricingFeatureComparisonTable = async () => {
         />
 
         <div className="overflow-x-auto rounded-[18px] border border-line bg-white shadow-(--shadow-soft)">
-          <table className="w-full min-w-[720px] border-collapse text-[14.5px]">
+          <table className="w-full min-w-180 border-collapse text-[14.5px]">
             <caption className="sr-only">{data.title}</caption>
             <TableThead
               featureColLabel={data.columns[0] || tCommon('table.feature')}

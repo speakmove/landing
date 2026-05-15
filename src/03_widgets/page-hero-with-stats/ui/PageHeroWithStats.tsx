@@ -15,7 +15,7 @@ export const PageHeroWithStats = async () => {
     <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:pt-20">
       <div aria-hidden="true" className="page-hero-bg" />
       <Container className="px-0">
-        <div className="mx-auto max-w-[760px]">
+        <div className="mx-auto max-w-190">
           <div className="section-eyebrow !mb-0">{t('crumb')}</div>
 
           <h1
@@ -25,7 +25,7 @@ export const PageHeroWithStats = async () => {
             {t('title')}
           </h1>
 
-          <p className="mx-auto max-w-[640px] text-pretty text-[18px] text-muted">
+          <p className="mx-auto max-w-160 text-pretty text-[18px] text-muted">
             {t('description')}
           </p>
 
