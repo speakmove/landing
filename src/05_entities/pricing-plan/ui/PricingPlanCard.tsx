@@ -56,7 +56,7 @@ export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps
   return (
     <article
       className={cn(
-        'relative flex flex-col rounded-[28px] bg-white p-7 md:p-8',
+        'relative flex w-full min-w-0 flex-col rounded-[28px] bg-white p-7 md:p-8',
         isPlus
           ? 'border border-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_12%,transparent),0_4px_10px_rgba(10,22,18,0.05),0_12px_32px_rgba(10,22,18,0.06)] lg:-translate-y-2'
           : 'border border-line',

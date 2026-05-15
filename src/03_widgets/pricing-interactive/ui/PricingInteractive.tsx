@@ -120,9 +120,9 @@ export const PricingInteractive = ({
         </Container>
       </header>
 
-      <section id={ANCHORS.plans} className="px-5 pb-20">
+      <section id={ANCHORS.plans} className="pb-20">
         <Container>
-          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+          <div className="mt-8 grid w-full grid-cols-1 gap-5 lg:grid-cols-3">
             {plans.map((plan) => (
               <PricingPlanCard
                 key={plan.id}
