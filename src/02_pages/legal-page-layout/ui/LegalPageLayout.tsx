@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, InlineMarkdown } from '@/shared/ui';
+import { LegalToc } from '@/widgets/legal-toc';
 
 type TLegalSection = {
   id: string;
@@ -24,6 +25,8 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
   const meta = t.raw('meta') as unknown as TLegalMeta;
   const sections = t.raw('sections') as unknown as TLegalSection[];
 
+  const tocItems = sections.map((s) => ({ id: s.id, heading: s.heading }));
+
   return (
     <Container className="px-5">
       <header className="border-b border-line py-12">
@@ -47,24 +50,12 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
 
       <div className="grid items-start gap-12 py-12 lg:grid-cols-[220px_1fr]">
         <aside
-          aria-label={tCommon('navSections')}
           className="hidden text-[13.5px] lg:sticky lg:top-[88px] lg:block"
         >
           <h2 className="m-0 mb-3 text-[11px] font-bold uppercase tracking-[0.08em] text-faint">
             {tCommon('navSections')}
           </h2>
-          <ul className="m-0 flex list-none flex-col gap-0.5 p-0">
-            {sections.map((s) => (
-              <li key={s.id}>
-                <a
-                  href={`#${s.id}`}
-                  className="block rounded-lg px-2.5 py-1.5 font-medium text-muted transition hover:bg-surface hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                >
-                  {s.heading}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <LegalToc items={tocItems} ariaLabel={tCommon('navSections')} />
         </aside>
 
         <main className="text-[15.5px] leading-[1.6]">
