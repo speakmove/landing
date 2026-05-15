@@ -5,6 +5,7 @@ import { ButtonLink, Container, ArrowRightIcon } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
 import { PATHS } from '@/shared/config';
 import { HeaderNav } from '@/widgets/header-nav';
+import { HeaderMobileMenu } from '@/widgets/header-mobile-menu';
 
 export const SiteHeader = async () => {
   const t = await getTranslations('HomePage.nav');
@@ -25,14 +26,16 @@ export const SiteHeader = async () => {
 
           <div className="flex-1" />
 
-          <div className="hidden items-center gap-3 sm:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <LocaleSwitch />
           </div>
 
-          <ButtonLink href={PATHS.waitlist} size="sm">
+          <ButtonLink href={PATHS.waitlist} size="sm" className="hidden lg:inline-flex">
             {t('cta')}
             <ArrowRightIcon size={14} />
           </ButtonLink>
+
+          <HeaderMobileMenu />
         </div>
       </Container>
     </header>

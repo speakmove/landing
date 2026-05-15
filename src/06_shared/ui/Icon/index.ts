@@ -12,3 +12,5 @@ export { LockIcon } from './Lock';
 export { UserPlusIcon } from './UserPlus';
 export { EditIcon } from './Edit';
 export { ExportIcon } from './Export';
+export { BurgerIcon } from './Burger';
+export { CloseIcon } from './Close';

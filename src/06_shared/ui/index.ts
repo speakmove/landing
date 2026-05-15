@@ -7,8 +7,10 @@ export { FieldError } from './FieldError';
 export { HoneypotField } from './HoneypotField';
 export {
   ArrowRightIcon,
+  BurgerIcon,
   CheckIcon,
   ClockIcon,
+  CloseIcon,
   CoinIcon,
   EditIcon,
   ExportIcon,
