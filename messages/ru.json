@@ -260,91 +260,196 @@
         {
           "feature": "Без установки приложения",
           "values": [
-            "—",
-            "—",
-            "—",
-            "В Telegram",
-            "В Telegram"
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "text",
+              "text": "В Telegram"
+            },
+            {
+              "kind": "text",
+              "text": "В Telegram"
+            }
           ]
         },
         {
           "feature": "Голосовые AI-диалоги",
           "values": [
-            "только в Max ~$30/мес",
-            "Да",
-            "Да",
-            "Да",
-            "Да"
+            {
+              "kind": "text",
+              "text": "только в Max ~$30/мес"
+            },
+            {
+              "kind": "check"
+            },
+            {
+              "kind": "check"
+            },
+            {
+              "kind": "check"
+            },
+            {
+              "kind": "check"
+            }
           ]
         },
         {
           "feature": "Домашние задания · x2 монет",
           "values": [
-            "—",
-            "—",
-            "—",
-            "иногда",
-            "Да"
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "text",
+              "text": "иногда"
+            },
+            {
+              "kind": "check"
+            }
           ]
         },
         {
           "feature": "Детский режим 6–14",
           "values": [
-            "частично",
-            "—",
-            "—",
-            "Есть",
-            "Есть"
+            {
+              "kind": "text",
+              "text": "частично"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "check"
+            },
+            {
+              "kind": "check"
+            }
           ]
         },
         {
           "feature": "Cashback за прогресс",
           "values": [
-            "—",
-            "—",
-            "—",
-            "—",
-            "Gift cards · до 30% от подписки"
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "text",
+              "text": "Gift cards · до 30% от подписки"
+            }
           ]
         },
         {
           "feature": "Сертификат A1–C1",
           "values": [
-            "—",
-            "—",
-            "—",
-            "неформальный",
-            "Собственный (proprietary)"
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "text",
+              "text": "неформальный"
+            },
+            {
+              "kind": "text",
+              "text": "Собственный (proprietary)"
+            }
           ]
         },
         {
           "feature": "Прогресс по уровням A1–C1",
           "values": [
-            "—",
-            "—",
-            "частично",
-            "зависит",
-            "Полный"
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "text",
+              "text": "частично"
+            },
+            {
+              "kind": "text",
+              "text": "зависит"
+            },
+            {
+              "kind": "check"
+            }
           ]
         },
         {
           "feature": "Доступность 24/7",
           "values": [
-            "Да",
-            "Да",
-            "Да",
-            "—",
-            "Да"
+            {
+              "kind": "check"
+            },
+            {
+              "kind": "check"
+            },
+            {
+              "kind": "check"
+            },
+            {
+              "kind": "cross"
+            },
+            {
+              "kind": "check"
+            }
           ]
         },
         {
           "feature": "Цена / мес",
           "values": [
-            "Free · $7",
-            "$8–18",
-            "$9–19",
-            "$80–240+",
-            "Free · $12.99–28.99"
+            {
+              "kind": "text",
+              "text": "Free · $7"
+            },
+            {
+              "kind": "text",
+              "text": "$8–18"
+            },
+            {
+              "kind": "text",
+              "text": "$9–19"
+            },
+            {
+              "kind": "text",
+              "text": "$80–240+"
+            },
+            {
+              "kind": "text",
+              "text": "Free · $12.99–28.99"
+            }
           ]
         }
       ],
@@ -1601,65 +1706,123 @@
             {
               "feature": "Голосовые диалоги",
               "values": [
-                "1 / день",
-                "До 90 мин/нед",
-                "До 90 мин/нед"
+                {
+                  "kind": "text",
+                  "text": "1 / день"
+                },
+                {
+                  "kind": "text",
+                  "text": "До 90 мин/нед"
+                },
+                {
+                  "kind": "text",
+                  "text": "До 90 мин/нед"
+                }
               ]
             },
             {
               "feature": "Текстовые диалоги",
               "values": [
-                "Да",
-                "Да",
-                "Да"
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Распознавание произношения",
               "values": [
-                "Да",
-                "Да",
-                "Да"
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Домашние задания",
               "values": [
-                "—",
-                "—",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Языки в MVP",
               "values": [
-                "English",
-                "English",
-                "English"
+                {
+                  "kind": "text",
+                  "text": "English"
+                },
+                {
+                  "kind": "text",
+                  "text": "English"
+                },
+                {
+                  "kind": "text",
+                  "text": "English"
+                }
               ]
             },
             {
               "feature": "Уровни от A1 до C1",
               "values": [
-                "A1–A2",
-                "A1–C1",
-                "A1–C1"
+                {
+                  "kind": "text",
+                  "text": "A1–A2"
+                },
+                {
+                  "kind": "text",
+                  "text": "A1–C1"
+                },
+                {
+                  "kind": "text",
+                  "text": "A1–C1"
+                }
               ]
             },
             {
               "feature": "Контекст ситуаций (карьера, дети, переезд)",
               "values": [
-                "Базовый",
-                "Полный",
-                "Полный"
+                {
+                  "kind": "text",
+                  "text": "Базовый"
+                },
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Адаптация под возраст ребёнка 6–14",
               "values": [
-                "—",
-                "Есть",
-                "Есть"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             }
           ]
@@ -1670,73 +1833,136 @@
             {
               "feature": "Начисление монет за уроки",
               "values": [
-                "—",
-                "—",
-                "За все уроки"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "text",
+                  "text": "За все уроки"
+                }
               ]
             },
             {
               "feature": "Бонусы за дни подряд",
               "values": [
-                "—",
-                "Да",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "ДЗ с удвоением монет",
               "values": [
-                "—",
-                "—",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Welcome-бонус",
               "values": [
-                "—",
-                "+100 SM (копится)",
-                "+250 SM"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "text",
+                  "text": "+100 SM (копится)"
+                },
+                {
+                  "kind": "text",
+                  "text": "+250 SM"
+                }
               ]
             },
             {
               "feature": "Cashback в gift cards (Amazon / Visa Prepaid)",
               "values": [
-                "—",
-                "—",
-                "Доступен"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "text",
+                  "text": "Доступен"
+                }
               ]
             },
             {
               "feature": "Лимит cashback в месяц",
               "values": [
-                "—",
-                "—",
-                "До 30% от подписки"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "text",
+                  "text": "До 30% от подписки"
+                }
               ]
             },
             {
               "feature": "Срок жизни монет",
               "values": [
-                "—",
-                "12 мес",
-                "12 мес"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "text",
+                  "text": "12 мес"
+                },
+                {
+                  "kind": "text",
+                  "text": "12 мес"
+                }
               ]
             },
             {
               "feature": "Скидка −30% для Украины",
               "values": [
-                "—",
-                "—",
-                "На все Premium"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "text",
+                  "text": "На все Premium"
+                }
               ]
             },
             {
               "feature": "Минимальная сумма обмена",
               "values": [
-                "—",
-                "—",
-                "$10 / $5 для первых 200"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "text",
+                  "text": "$10 / $5 для первых 200"
+                }
               ]
             }
           ]
@@ -1747,33 +1973,57 @@
             {
               "feature": "Сертификат при завершении уровня",
               "values": [
-                "—",
-                "Да",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Родительский дашборд (V1.1)",
               "values": [
-                "—",
-                "—",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Еженедельный Telegram-отчёт родителям (V2)",
               "values": [
-                "—",
-                "—",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Уведомление родителю, если ребёнок пропускает занятия",
               "values": [
-                "—",
-                "—",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             }
           ]
@@ -1784,25 +2034,43 @@
             {
               "feature": "Реклама",
               "values": [
-                "Есть",
-                "Нет",
-                "Нет"
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                }
               ]
             },
             {
               "feature": "Пауза подписки без потери прогресса",
               "values": [
-                "—",
-                "Да",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             },
             {
               "feature": "Приоритетная поддержка",
               "values": [
-                "—",
-                "—",
-                "Да"
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "cross"
+                },
+                {
+                  "kind": "check"
+                }
               ]
             }
           ]
@@ -1813,33 +2081,69 @@
             {
               "feature": "Ранний доступ · месяц",
               "values": [
-                "Free",
-                "$12.99",
-                "$22.99"
+                {
+                  "kind": "text",
+                  "text": "Free"
+                },
+                {
+                  "kind": "text",
+                  "text": "$12.99"
+                },
+                {
+                  "kind": "text",
+                  "text": "$22.99"
+                }
               ]
             },
             {
               "feature": "После 200 пользователей · месяц",
               "values": [
-                "Free",
-                "$16.99",
-                "$28.99"
+                {
+                  "kind": "text",
+                  "text": "Free"
+                },
+                {
+                  "kind": "text",
+                  "text": "$16.99"
+                },
+                {
+                  "kind": "text",
+                  "text": "$28.99"
+                }
               ]
             },
             {
               "feature": "Год (ранний)",
               "values": [
-                "Free",
-                "$129 ($10.75/мес)",
-                "$189 ($15.75/мес)"
+                {
+                  "kind": "text",
+                  "text": "Free"
+                },
+                {
+                  "kind": "text",
+                  "text": "$129 ($10.75/мес)"
+                },
+                {
+                  "kind": "text",
+                  "text": "$189 ($15.75/мес)"
+                }
               ]
             },
             {
               "feature": "Год (после 200 пользователей)",
               "values": [
-                "Free",
-                "$169 ($14.08/мес)",
-                "$239 ($19.92/мес)"
+                {
+                  "kind": "text",
+                  "text": "Free"
+                },
+                {
+                  "kind": "text",
+                  "text": "$169 ($14.08/мес)"
+                },
+                {
+                  "kind": "text",
+                  "text": "$239 ($19.92/мес)"
+                }
               ]
             }
           ]
@@ -3496,12 +3800,6 @@
       "lead": "Мы уже разбираемся. Попробуйте обновить страницу.",
       "cta": "Обновить"
     },
-    "checkmarkValues": [
-      "Да",
-      "Есть",
-      "Полный"
-    ],
-    "unavailable": "Недоступно:",
     "aria": {
       "billingPeriod": "Период оплаты",
       "privacyFeatures": "Функции безопасности и приватности",

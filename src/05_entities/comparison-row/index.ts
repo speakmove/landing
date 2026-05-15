@@ -1,1 +1,1 @@
-export type { TComparisonRow } from './model/types';
+export type { TComparisonRow, TComparisonValue } from './model/types';

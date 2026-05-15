@@ -3,10 +3,11 @@ import { Container, Section, SectionHead } from '@/shared/ui';
 import { ANCHORS } from '@/shared/config';
 import { TableThead } from './TableThead';
 import { TableTbody } from './TableTbody';
+import type { TComparisonValue } from '@/entities/comparison-row';
 
 type TCompareRow = {
   feature: string;
-  values: [string, string, string];
+  values: [TComparisonValue, TComparisonValue, TComparisonValue];
 };
 
 type TCompareGroup = {

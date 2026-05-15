@@ -260,91 +260,226 @@
         {
           "feature": "Lorem ipsum 58",
           "values": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum 59",
           "values": [
-            "только в Max ~$30/мес",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
+            {
+              "kind": "text",
+              "text": "только в Max ~$30/мес"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum 60",
           "values": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum 61",
           "values": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum 62",
           "values": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum dolor sit amet 63"
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum dolor sit amet 63"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum 64",
           "values": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum 65",
-            "Lorem ipsum 66"
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum 65"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum 66"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum 67",
           "values": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum 68",
           "values": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            },
+            {
+              "kind": "text",
+              "text": "Lorem ipsum"
+            }
           ]
         },
         {
           "feature": "Lorem ipsum",
           "values": [
-            "Free · $7",
-            "$8–18",
-            "$9–19",
-            "$80–240+",
-            "Free · $12.99–28.99"
+            {
+              "kind": "text",
+              "text": "Free · $7"
+            },
+            {
+              "kind": "text",
+              "text": "$8–18"
+            },
+            {
+              "kind": "text",
+              "text": "$9–19"
+            },
+            {
+              "kind": "text",
+              "text": "$80–240+"
+            },
+            {
+              "kind": "text",
+              "text": "Free · $12.99–28.99"
+            }
           ]
         }
       ],
@@ -1601,65 +1736,137 @@
             {
               "feature": "Lorem ipsum 400",
               "values": [
-                "1 / день",
-                "Lorem ipsum 401",
-                "Lorem ipsum 402"
+                {
+                  "kind": "text",
+                  "text": "1 / день"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum 401"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum 402"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 403",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 404",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 405",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum",
               "values": [
-                "English",
-                "English",
-                "English"
+                {
+                  "kind": "text",
+                  "text": "English"
+                },
+                {
+                  "kind": "text",
+                  "text": "English"
+                },
+                {
+                  "kind": "text",
+                  "text": "English"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 406",
               "values": [
-                "Lorem ipsum",
-                "A1–C1",
-                "A1–C1"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "A1–C1"
+                },
+                {
+                  "kind": "text",
+                  "text": "A1–C1"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum dolor sit amet 407",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum dolor sit amet 408",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             }
           ]
@@ -1670,73 +1877,154 @@
             {
               "feature": "Lorem ipsum 410",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum 411"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum 411"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 412",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 413",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 414",
               "values": [
-                "Lorem ipsum",
-                "+100 SM (копится)",
-                "+250 SM"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "+100 SM (копится)"
+                },
+                {
+                  "kind": "text",
+                  "text": "+250 SM"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum dolor sit amet 415",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 416",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum 417"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum 417"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 418",
               "values": [
-                "Lorem ipsum",
-                "12 мес",
-                "12 мес"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "12 мес"
+                },
+                {
+                  "kind": "text",
+                  "text": "12 мес"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 419",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum 420"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum 420"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 421",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "$10 / $5 для первых 200"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "$10 / $5 для первых 200"
+                }
               ]
             }
           ]
@@ -1747,33 +2035,69 @@
             {
               "feature": "Lorem ipsum dolor sit amet 423",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 424",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum dolor sit amet 425",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum dolor sit amet 426",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             }
           ]
@@ -1784,25 +2108,52 @@
             {
               "feature": "Lorem ipsum",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum dolor sit amet 428",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 429",
               "values": [
-                "Lorem ipsum",
-                "Lorem ipsum",
-                "Lorem ipsum"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                }
               ]
             }
           ]
@@ -1813,33 +2164,69 @@
             {
               "feature": "Lorem ipsum 430",
               "values": [
-                "Lorem ipsum",
-                "$12.99",
-                "$22.99"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "$12.99"
+                },
+                {
+                  "kind": "text",
+                  "text": "$22.99"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum dolor sit amet 431",
               "values": [
-                "Lorem ipsum",
-                "$16.99",
-                "$28.99"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "$16.99"
+                },
+                {
+                  "kind": "text",
+                  "text": "$28.99"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 432",
               "values": [
-                "Lorem ipsum",
-                "$129 ($10.75/мес)",
-                "$189 ($15.75/мес)"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "$129 ($10.75/мес)"
+                },
+                {
+                  "kind": "text",
+                  "text": "$189 ($15.75/мес)"
+                }
               ]
             },
             {
               "feature": "Lorem ipsum 433",
               "values": [
-                "Lorem ipsum",
-                "$169 ($14.08/мес)",
-                "$239 ($19.92/мес)"
+                {
+                  "kind": "text",
+                  "text": "Lorem ipsum"
+                },
+                {
+                  "kind": "text",
+                  "text": "$169 ($14.08/мес)"
+                },
+                {
+                  "kind": "text",
+                  "text": "$239 ($19.92/мес)"
+                }
               ]
             }
           ]
@@ -3496,12 +3883,6 @@
       "lead": "We're looking into it. Try refreshing the page.",
       "cta": "Refresh"
     },
-    "checkmarkValues": [
-      "Yes",
-      "Available",
-      "Full"
-    ],
-    "unavailable": "Not available:",
     "aria": {
       "billingPeriod": "Billing period",
       "privacyFeatures": "Security and privacy features",

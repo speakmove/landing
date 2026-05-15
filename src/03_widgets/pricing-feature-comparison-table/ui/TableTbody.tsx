@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
 import { cn } from '@/shared/model/libs/cn';
+import type { TComparisonValue } from '@/entities/comparison-row';
 
 type TCompareRow = {
   feature: string;
-  values: [string, string, string];
+  values: [TComparisonValue, TComparisonValue, TComparisonValue];
 };
 
 type TCompareGroup = {
@@ -17,7 +18,32 @@ type TProps = {
   highlightColumn: string;
 };
 
-const CHECK = '✓';
+const renderValue = (val: TComparisonValue, isHighlight: boolean) => {
+  if (val.kind === 'check') {
+    return (
+      <span
+        className={cn(
+          'text-lg font-bold leading-none',
+          isHighlight ? 'text-primary-ink' : 'text-primary',
+        )}
+        aria-hidden="true"
+      >
+        ✓
+      </span>
+    );
+  }
+  if (val.kind === 'cross') {
+    return (
+      <span className="text-lg leading-none text-faint" aria-hidden="true">
+        —
+      </span>
+    );
+  }
+  if (val.kind === 'partial') {
+    return <span className="text-muted">{val.text}</span>;
+  }
+  return <span>{val.text}</span>;
+};
 
 export const TableTbody = ({ groups, colHeaders, highlightColumn }: TProps) => {
   return (
@@ -51,8 +77,8 @@ export const TableTbody = ({ groups, colHeaders, highlightColumn }: TProps) => {
                 {row.values.map((val, i) => {
                   const colName = colHeaders[i];
                   const isHighlight = colName === highlightColumn;
-                  const isCheck = val === '✓' || val === CHECK;
-                  const isDash = val === '—';
+                  const isCheck = val.kind === 'check';
+                  const isCross = val.kind === 'cross';
                   return (
                     <td
                       key={`${row.feature}-${i}`}
@@ -61,11 +87,11 @@ export const TableTbody = ({ groups, colHeaders, highlightColumn }: TProps) => {
                         !isLast && 'border-b border-line',
                         isHighlight && 'bg-primary-pale font-bold text-primary-ink',
                         !isHighlight && isCheck && 'font-bold text-primary',
-                        !isHighlight && isDash && 'text-faint',
-                        !isHighlight && !isCheck && !isDash && 'text-ink',
+                        !isHighlight && isCross && 'text-faint',
+                        !isHighlight && !isCheck && !isCross && 'text-ink',
                       )}
                     >
-                      {val}
+                      {renderValue(val, isHighlight)}
                     </td>
                   );
                 })}

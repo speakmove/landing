@@ -260,91 +260,226 @@
         {
           "feature": "Sed do eiusmod 58",
           "values": [
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod"
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod 59",
           "values": [
-            "только в Max ~$30/мес",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod"
+            {
+              "kind": "text",
+              "text": "только в Max ~$30/мес"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod 60",
           "values": [
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod"
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod 61",
           "values": [
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod"
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod 62",
           "values": [
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod tempor incididunt 63"
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod tempor incididunt 63"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod 64",
           "values": [
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod 65",
-            "Sed do eiusmod 66"
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod 65"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod 66"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod 67",
           "values": [
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod"
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod 68",
           "values": [
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod",
-            "Sed do eiusmod"
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            },
+            {
+              "kind": "text",
+              "text": "Sed do eiusmod"
+            }
           ]
         },
         {
           "feature": "Sed do eiusmod",
           "values": [
-            "Free · $7",
-            "$8–18",
-            "$9–19",
-            "$80–240+",
-            "Free · $12.99–28.99"
+            {
+              "kind": "text",
+              "text": "Free · $7"
+            },
+            {
+              "kind": "text",
+              "text": "$8–18"
+            },
+            {
+              "kind": "text",
+              "text": "$9–19"
+            },
+            {
+              "kind": "text",
+              "text": "$80–240+"
+            },
+            {
+              "kind": "text",
+              "text": "Free · $12.99–28.99"
+            }
           ]
         }
       ],
@@ -1601,65 +1736,137 @@
             {
               "feature": "Sed do eiusmod 400",
               "values": [
-                "1 / день",
-                "Sed do eiusmod 401",
-                "Sed do eiusmod 402"
+                {
+                  "kind": "text",
+                  "text": "1 / день"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod 401"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod 402"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 403",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 404",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 405",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod",
               "values": [
-                "English",
-                "English",
-                "English"
+                {
+                  "kind": "text",
+                  "text": "English"
+                },
+                {
+                  "kind": "text",
+                  "text": "English"
+                },
+                {
+                  "kind": "text",
+                  "text": "English"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 406",
               "values": [
-                "Sed do eiusmod",
-                "A1–C1",
-                "A1–C1"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "A1–C1"
+                },
+                {
+                  "kind": "text",
+                  "text": "A1–C1"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod tempor incididunt 407",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod tempor incididunt 408",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             }
           ]
@@ -1670,73 +1877,154 @@
             {
               "feature": "Sed do eiusmod 410",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod 411"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod 411"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 412",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 413",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 414",
               "values": [
-                "Sed do eiusmod",
-                "+100 SM (копится)",
-                "+250 SM"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "+100 SM (копится)"
+                },
+                {
+                  "kind": "text",
+                  "text": "+250 SM"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod tempor incididunt 415",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 416",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod 417"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod 417"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 418",
               "values": [
-                "Sed do eiusmod",
-                "12 мес",
-                "12 мес"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "12 мес"
+                },
+                {
+                  "kind": "text",
+                  "text": "12 мес"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 419",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod 420"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod 420"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 421",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "$10 / $5 для первых 200"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "$10 / $5 для первых 200"
+                }
               ]
             }
           ]
@@ -1747,33 +2035,69 @@
             {
               "feature": "Sed do eiusmod tempor incididunt 423",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 424",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod tempor incididunt 425",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod tempor incididunt 426",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             }
           ]
@@ -1784,25 +2108,52 @@
             {
               "feature": "Sed do eiusmod",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod tempor incididunt 428",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 429",
               "values": [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                }
               ]
             }
           ]
@@ -1813,33 +2164,69 @@
             {
               "feature": "Sed do eiusmod 430",
               "values": [
-                "Sed do eiusmod",
-                "$12.99",
-                "$22.99"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "$12.99"
+                },
+                {
+                  "kind": "text",
+                  "text": "$22.99"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod tempor incididunt 431",
               "values": [
-                "Sed do eiusmod",
-                "$16.99",
-                "$28.99"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "$16.99"
+                },
+                {
+                  "kind": "text",
+                  "text": "$28.99"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 432",
               "values": [
-                "Sed do eiusmod",
-                "$129 ($10.75/мес)",
-                "$189 ($15.75/мес)"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "$129 ($10.75/мес)"
+                },
+                {
+                  "kind": "text",
+                  "text": "$189 ($15.75/мес)"
+                }
               ]
             },
             {
               "feature": "Sed do eiusmod 433",
               "values": [
-                "Sed do eiusmod",
-                "$169 ($14.08/мес)",
-                "$239 ($19.92/мес)"
+                {
+                  "kind": "text",
+                  "text": "Sed do eiusmod"
+                },
+                {
+                  "kind": "text",
+                  "text": "$169 ($14.08/мес)"
+                },
+                {
+                  "kind": "text",
+                  "text": "$239 ($19.92/мес)"
+                }
               ]
             }
           ]
@@ -3496,12 +3883,6 @@
       "lead": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "cta": "Sed do eiusmod"
     },
-    "checkmarkValues": [
-      "Да",
-      "Есть",
-      "Полний"
-    ],
-    "unavailable": "Sed do eiusmod:",
     "aria": {
       "billingPeriod": "Sed do eiusmod tempor incididunt",
       "privacyFeatures": "Sed do eiusmod tempor incididunt ut labore",

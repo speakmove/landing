@@ -2,16 +2,41 @@ import { getTranslations } from 'next-intl/server';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
 import { ANCHORS } from '@/shared/config';
-import type { TComparisonRow } from '@/entities/comparison-row';
+import type { TComparisonRow, TComparisonValue } from '@/entities/comparison-row';
+
+const renderValue = (val: TComparisonValue, isHighlight: boolean) => {
+  if (val.kind === 'check') {
+    return (
+      <span
+        className={cn(
+          'text-lg font-bold leading-none',
+          isHighlight ? 'text-primary-ink' : 'text-primary',
+        )}
+        aria-hidden="true"
+      >
+        ✓
+      </span>
+    );
+  }
+  if (val.kind === 'cross') {
+    return (
+      <span className="text-lg leading-none text-faint" aria-hidden="true">
+        —
+      </span>
+    );
+  }
+  if (val.kind === 'partial') {
+    return <span className="text-muted">{val.text}</span>;
+  }
+  return <span>{val.text}</span>;
+};
 
 export const HomeCompare = async () => {
   const t = await getTranslations('HomePage.compare');
-  const tCommon = await getTranslations('Common');
 
   const columns = t.raw('columns') as unknown as string[];
   const rows = t.raw('rows') as unknown as TComparisonRow[];
   const highlightColumn = t('highlightColumn');
-  const checkmarkValues = tCommon.raw('checkmarkValues') as string[];
 
   const highlightIdx = columns.indexOf(highlightColumn);
 
@@ -70,8 +95,8 @@ export const HomeCompare = async () => {
                     {row.values.map((val, valIdx) => {
                       const colIdx = valIdx + 1;
                       const isHighlight = colIdx === highlightIdx;
-                      const isCheck = checkmarkValues.includes(val);
-                      const isDash = val === '—';
+                      const isCheck = val.kind === 'check';
+                      const isCross = val.kind === 'cross';
                       return (
                         <td
                           key={valIdx}
@@ -80,10 +105,10 @@ export const HomeCompare = async () => {
                             !isLast && 'border-b border-line',
                             isHighlight && 'bg-primary-pale font-bold text-primary-ink',
                             !isHighlight && isCheck && 'font-bold text-primary',
-                            !isHighlight && isDash && 'text-faint',
+                            !isHighlight && isCross && 'text-faint',
                           )}
                         >
-                          {isCheck ? '✓' : val}
+                          {renderValue(val, isHighlight)}
                         </td>
                       );
                     })}
