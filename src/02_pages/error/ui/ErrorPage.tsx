@@ -9,7 +9,7 @@ type TProps = {
 export const ErrorPage = ({ reset }: TProps) => {
   const t = useTranslations('Common.error');
   return (
-    <Section>
+    <Section className="flex min-h-[calc(100vh-4rem)] items-center justify-center">
       <Container className="max-w-160 text-center">
         <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">
           {t('title')}

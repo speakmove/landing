@@ -13,7 +13,7 @@ export const NotFoundPage = async () => {
 
   return (
     <section
-      className="relative flex flex-1 items-center overflow-hidden px-4 py-8 text-center md:py-10"
+      className="relative flex min-h-[calc(100vh-4rem)] flex-1 items-center justify-center overflow-hidden px-4 py-12 text-center md:py-16"
       style={{
         background:
           'radial-gradient(900px 460px at 50% -120px, var(--color-primary-pale) 0%, transparent 60%), #fff',
