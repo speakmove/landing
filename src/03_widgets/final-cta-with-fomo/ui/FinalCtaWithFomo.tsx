@@ -12,7 +12,8 @@ export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TPro
 
   const fomoCurrent = t.raw('fomo.current') as unknown as number;
   const fomoTotal = t.raw('fomo.total') as unknown as number;
-  const pct = Math.min(100, Math.round((fomoCurrent / fomoTotal) * 1000) / 10);
+  // 1 decimal place, clamped to [0, 100]
+  const pct = Math.min(100, Math.max(0, Number(((fomoCurrent / fomoTotal) * 100).toFixed(1))));
 
   return (
     <Section

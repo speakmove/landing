@@ -48,7 +48,8 @@ export const WaitlistPage = async () => {
   const total = t.raw('form.progress.total') as number;
   const occupiedText = t('form.progress.occupiedTemplate', { count: current, total });
   const remainingText = t('form.progress.remainingTemplate', { remaining: total - current });
-  const pct = Math.min(100, Math.round((current / total) * 1000) / 10);
+  // 1 decimal place, clamped to [0, 100]
+  const pct = Math.min(100, Math.max(0, Number(((current / total) * 100).toFixed(1))));
 
   const formTitle = t('form.title');
   const formSubtitle = t('form.subtitle');

@@ -50,7 +50,8 @@ export const PricingInteractive = ({
     .replace('{current}', String(fomo.current))
     .replace('{total}', String(fomo.total));
 
-  const pct = Math.min(100, Math.round((fomo.current / fomo.total) * 1000) / 10);
+  // 1 decimal place, clamped to [0, 100]
+  const pct = Math.min(100, Math.max(0, Number(((fomo.current / fomo.total) * 100).toFixed(1))));
 
   return (
     <>
