@@ -28,7 +28,7 @@ export const PricingPage = async () => {
   const fomo = {
     title: t('hero.fomo.title'),
     plansLine: t('hero.fomo.plansLine'),
-    countLabel: t('hero.fomo.countLabel'),
+    countLabel: t.raw('hero.fomo.countLabel') as string,
     current: t.raw('hero.fomo.current') as unknown as number,
     total: t.raw('hero.fomo.total') as unknown as number,
   };

@@ -1,20 +1,33 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
+import { useTranslations } from 'next-intl';
+import type { KeyboardEvent, Ref } from 'react';
 import { cn } from '@/shared/model/libs/cn';
 import type { TScheduleCard } from '../model/types';
 
 type TProps = {
   card: TScheduleCard;
-  defaultActive?: boolean;
+  selected: boolean;
+  onSelect: () => void;
+  onKeyDown: (e: KeyboardEvent<HTMLDivElement>) => void;
+  buttonRef: Ref<HTMLDivElement>;
 };
 
-export const ScheduleCard = async ({ card, defaultActive = false }: TProps) => {
-  const tCommon = await getTranslations('Common');
+export const ScheduleCard = ({ card, selected, onSelect, onKeyDown, buttonRef }: TProps) => {
+  const tCommon = useTranslations('Common');
   return (
-    <article
-      data-active={defaultActive ? 'true' : 'false'}
+    <div
+      ref={buttonRef}
+      role="radio"
+      aria-checked={selected}
+      tabIndex={selected ? 0 : -1}
+      onClick={onSelect}
+      onKeyDown={onKeyDown}
+      data-active={selected ? 'true' : 'false'}
       className={cn(
         'group/sched relative cursor-pointer rounded-[18px] border-2 border-line bg-white p-7 transition',
         'hover:-translate-y-0.5 hover:shadow-(--shadow-mid)',
+        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
         'data-[active=true]:border-primary',
         'data-[active=true]:shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_14%,transparent),0_4px_10px_rgba(10,22,18,0.05),0_12px_32px_rgba(10,22,18,0.06)]',
       )}
@@ -61,6 +74,6 @@ export const ScheduleCard = async ({ card, defaultActive = false }: TProps) => {
           );
         })}
       </div>
-    </article>
+    </div>
   );
 };

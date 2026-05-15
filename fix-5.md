@@ -1,0 +1,1 @@
+1) логика HomeSchedule должна быть в feature model hooks а не просто в ui widget 

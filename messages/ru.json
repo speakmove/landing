@@ -3815,11 +3815,13 @@
       "cefrLevels": "Уровни CEFR",
       "flowSteps": "Шаги пользовательского пути",
       "weekDays": "Дни недели",
+      "schedulePicker": "Выбор расписания занятий",
       "earlyAccessPerks": "Преимущества раннего доступа",
       "voiceMessage": "Голосовое сообщение",
       "featuresIncluded": "Включено в {planName}",
       "featuresExcluded": "Не включено в {planName}",
-      "tasks": "Задания"
+      "tasks": "Задания",
+      "notIncluded": "Не входит"
     },
     "table": {
       "action": "Действие",
@@ -3832,6 +3834,7 @@
     "today": "Сегодня",
     "navSections": "Sections",
     "effectiveLabel": "Вступило в силу:",
-    "lastUpdatedLabel": "Последнее обновление:"
+    "lastUpdatedLabel": "Последнее обновление:",
+    "unavailable": "Недоступно"
   }
 }

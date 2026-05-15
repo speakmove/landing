@@ -3898,11 +3898,13 @@
       "cefrLevels": "CEFR levels",
       "flowSteps": "User journey steps",
       "weekDays": "Days of the week",
+      "schedulePicker": "Pick a learning schedule",
       "earlyAccessPerks": "Early access benefits",
       "voiceMessage": "Voice message",
       "featuresIncluded": "Included in {planName}",
       "featuresExcluded": "Not included in {planName}",
-      "tasks": "Tasks"
+      "tasks": "Tasks",
+      "notIncluded": "Not included"
     },
     "table": {
       "action": "Action",
@@ -3915,6 +3917,7 @@
     "today": "Today",
     "navSections": "Sections",
     "effectiveLabel": "Effective:",
-    "lastUpdatedLabel": "Last updated:"
+    "lastUpdatedLabel": "Last updated:",
+    "unavailable": "Not available"
   }
 }
