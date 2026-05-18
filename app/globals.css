@@ -235,16 +235,30 @@
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(1200px 500px at 50% -200px, var(--color-primary-pale), transparent 70%),
-      linear-gradient(#fff, #fff);
+      radial-gradient(
+        900px 600px at 25% -10%,
+        color-mix(in oklab, var(--color-primary-pale) 95%, transparent) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        700px 500px at 85% 10%,
+        color-mix(in oklab, var(--color-gold-pale) 75%, transparent) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        1400px 600px at 50% -250px,
+        color-mix(in oklab, var(--color-primary) 14%, transparent) 0%,
+        transparent 70%
+      ),
+      linear-gradient(180deg, #ffffff 0%, #fbfbf6 100%);
   }
   .hero-bg-grid::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 48px 48px;
     -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
     mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
