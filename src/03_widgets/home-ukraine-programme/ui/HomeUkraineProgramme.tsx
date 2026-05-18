@@ -25,7 +25,7 @@ export const HomeUkraineProgramme = async () => {
     <Section
       id={ANCHORS.ukraine}
       ariaLabelledBy="ukraine-heading"
-      className="px-5 py-16 md:py-22"
+      className="py-16 md:py-22"
     >
       <Container>
         <div className="mx-auto max-w-190">

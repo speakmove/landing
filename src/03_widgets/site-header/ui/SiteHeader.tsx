@@ -11,7 +11,7 @@ export const SiteHeader = async () => {
   const t = await getTranslations('HomePage.nav');
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/80 bg-white/75 backdrop-blur-xl backdrop-saturate-[1.6]">
+    <header className="sticky top-0 z-50 border-b border-line/80 bg-white/75 px-5 backdrop-blur-xl backdrop-saturate-[1.6] md:px-6">
       <Container>
         <div className="flex h-16 items-center gap-6">
           <Link

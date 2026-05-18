@@ -41,11 +41,7 @@ export const HomeCompare = async () => {
   const highlightIdx = columns.indexOf(highlightColumn);
 
   return (
-    <Section
-      id={ANCHORS.compare}
-      ariaLabelledBy="compare-heading"
-      className="px-5"
-    >
+    <Section id={ANCHORS.compare} ariaLabelledBy="compare-heading">
       <Container>
         <SectionHead
           kicker={t('kicker')}

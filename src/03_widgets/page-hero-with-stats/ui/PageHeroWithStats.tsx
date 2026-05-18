@@ -12,9 +12,9 @@ export const PageHeroWithStats = async () => {
   const stats = t.raw('stats') as unknown as TStat[];
 
   return (
-    <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:pt-20">
+    <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:px-6 md:pt-20">
       <div aria-hidden="true" className="page-hero-bg" />
-      <Container className="px-0">
+      <Container>
         <div className="mx-auto max-w-190">
           <div className="section-eyebrow !mb-0">{t('crumb')}</div>
 

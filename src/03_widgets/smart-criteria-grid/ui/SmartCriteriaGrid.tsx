@@ -10,7 +10,7 @@ export const SmartCriteriaGrid = async () => {
   const criteria = t.raw('criteria') as unknown as TSmartCriterion[];
 
   return (
-    <Section id={ANCHORS.smart} ariaLabelledBy="smart-heading" className="bg-surface px-5 py-12 md:py-16">
+    <Section id={ANCHORS.smart} ariaLabelledBy="smart-heading" className="bg-surface py-12 md:py-16">
       <Container>
         <SectionHead
           kicker={t('kicker')}

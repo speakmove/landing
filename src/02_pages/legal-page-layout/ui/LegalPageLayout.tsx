@@ -28,7 +28,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
   const tocItems = sections.map((s) => ({ id: s.id, heading: s.heading }));
 
   return (
-    <Container className="px-5">
+    <Container className="px-5 md:px-6">
       <header className="border-b border-line py-12">
         <h1
           className="mb-3 font-extrabold leading-[1.1] tracking-tight text-ink"

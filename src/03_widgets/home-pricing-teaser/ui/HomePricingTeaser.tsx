@@ -37,7 +37,7 @@ export const HomePricingTeaser = async () => {
     <Section
       id={ANCHORS.pricing}
       ariaLabelledBy="pricing-heading"
-      className="bg-surface px-5 py-16 md:py-22"
+      className="bg-surface py-16 md:py-22"
     >
       <Container>
         <SectionHead

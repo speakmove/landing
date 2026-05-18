@@ -13,7 +13,7 @@ export const PricingFaqSection = async () => {
     <Section
       id={ANCHORS.faq}
       ariaLabelledBy="faq-heading"
-      className="bg-surface px-5 py-12 md:py-20"
+      className="bg-surface py-12 md:py-20"
     >
       <Container>
         <SectionHead

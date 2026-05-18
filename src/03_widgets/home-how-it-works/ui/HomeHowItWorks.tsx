@@ -10,11 +10,7 @@ export const HomeHowItWorks = async () => {
   const steps = t.raw('steps') as unknown as TStep[];
 
   return (
-    <Section
-      id={ANCHORS.howItWorks}
-      ariaLabelledBy="how-it-works-heading"
-      className="px-5"
-    >
+    <Section id={ANCHORS.howItWorks} ariaLabelledBy="how-it-works-heading">
       <Container>
         <SectionHead
           kicker={t('kicker')}

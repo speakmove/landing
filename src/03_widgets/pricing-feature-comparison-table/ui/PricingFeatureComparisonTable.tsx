@@ -42,7 +42,7 @@ export const PricingFeatureComparisonTable = async () => {
     <Section
       id={ANCHORS.compare}
       ariaLabelledBy="compare-heading"
-      className="bg-surface px-5 py-12 md:py-20"
+      className="bg-surface py-12 md:py-20"
     >
       <Container>
         <SectionHead

@@ -27,7 +27,7 @@ export const CoinEconomicsSection = async () => {
     <Section
       id={ANCHORS.coinEconomics}
       ariaLabelledBy="coin-economics-heading"
-      className="px-5 py-12 md:py-20"
+      className="py-12 md:py-20"
     >
       <Container>
         <SectionHead

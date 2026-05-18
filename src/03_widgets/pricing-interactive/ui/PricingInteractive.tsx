@@ -55,9 +55,9 @@ export const PricingInteractive = ({
 
   return (
     <>
-      <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:pt-20">
+      <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:px-6 md:pt-20">
         <div aria-hidden="true" className="page-hero-bg" />
-        <Container className="px-0">
+        <Container>
           <div className="mx-auto max-w-190">
             <div className="section-eyebrow !mb-0">{hero.crumb}</div>
 
@@ -120,7 +120,7 @@ export const PricingInteractive = ({
         </Container>
       </header>
 
-      <section id={ANCHORS.plans} className="pb-20">
+      <section id={ANCHORS.plans} className="px-5 pb-20 md:px-6">
         <Container>
           <div className="mt-8 grid w-full grid-cols-1 gap-5 lg:grid-cols-3">
             {plans.map((plan) => (

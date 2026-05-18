@@ -35,7 +35,7 @@ export const CefrProgression = async () => {
   const side = t.raw('side') as unknown as TSideData;
 
   return (
-    <Section id={ANCHORS.cefr} ariaLabelledBy="cefr-heading" className="px-5 py-12 md:py-16">
+    <Section id={ANCHORS.cefr} ariaLabelledBy="cefr-heading" className="py-12 md:py-16">
       <Container>
         <SectionHead
           kicker={t('kicker')}

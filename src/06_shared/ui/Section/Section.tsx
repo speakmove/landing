@@ -12,7 +12,7 @@ export const Section = ({ id, className, ariaLabelledBy, children }: TProps) => 
     <section
       id={id}
       aria-labelledby={ariaLabelledBy}
-      className={cn('py-14 md:py-20', className)}
+      className={cn('px-5 py-14 md:px-6 md:py-20', className)}
     >
       {children}
     </section>

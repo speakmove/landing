@@ -19,7 +19,7 @@ export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TPro
     <Section
       id={ANCHORS.cta}
       ariaLabelledBy="final-cta-heading"
-      className="px-5 py-16 md:py-22"
+      className="py-16 md:py-22"
     >
       <Container>
         <div className="final-panel px-6 py-14 text-center sm:px-12 sm:py-16">

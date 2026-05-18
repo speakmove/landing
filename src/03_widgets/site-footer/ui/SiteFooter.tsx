@@ -11,7 +11,7 @@ export const SiteFooter = async () => {
   const t = await getTranslations('HomePage.footer');
 
   return (
-    <footer className="border-t border-line">
+    <footer className="border-t border-line px-5 md:px-6">
       <Container className="py-10 md:py-14">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-10 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div className="col-span-2 md:col-span-4 lg:col-span-1">

@@ -20,7 +20,7 @@ export const FlowSectionWithPhone = async () => {
   const phonePreview = t.raw('phonePreview') as unknown as TPhonePreview;
 
   return (
-    <Section id={ANCHORS.flow} ariaLabelledBy="flow-heading" className="px-5 py-12 md:py-16">
+    <Section id={ANCHORS.flow} ariaLabelledBy="flow-heading" className="py-12 md:py-16">
       <Container>
         <SectionHead
           kicker={t('kicker')}
