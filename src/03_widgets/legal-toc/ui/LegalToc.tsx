@@ -20,7 +20,7 @@ export const LegalToc = ({ items, ariaLabel }: TProps) => {
                 aria-current={isActive ? 'true' : undefined}
                 className={cn(
                   'block rounded-lg px-2.5 py-1.5 font-medium text-muted transition hover:bg-surface hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
-                  isActive && 'font-semibold text-primary',
+                  isActive && 'bg-primary-pale font-semibold text-primary-ink',
                 )}
               >
                 {s.heading}
