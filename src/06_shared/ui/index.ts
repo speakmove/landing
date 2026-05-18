@@ -17,6 +17,8 @@ export {
   GiftIcon,
   Icon,
   LockIcon,
+  LogoHorizontal,
+  LogoMark,
   MicIcon,
   PaperPlaneIcon,
   PlusIcon,

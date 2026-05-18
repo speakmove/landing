@@ -14,3 +14,5 @@ export { EditIcon } from './Edit';
 export { ExportIcon } from './Export';
 export { BurgerIcon } from './Burger';
 export { CloseIcon } from './Close';
+export { LogoHorizontal } from './LogoHorizontal';
+export { LogoMark } from './LogoMark';
