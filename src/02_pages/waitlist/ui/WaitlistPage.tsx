@@ -65,7 +65,7 @@ export const WaitlistPage = async () => {
         >
           {title}
         </h1>
-        <p className="mb-7 max-w-110 text-pretty text-[16px] leading-[1.65] text-muted">
+        <p className="mb-7 max-w-110 text-pretty text-base leading-[1.65] text-muted">
           {description}
         </p>
 

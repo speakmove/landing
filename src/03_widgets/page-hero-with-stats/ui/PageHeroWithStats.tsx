@@ -25,7 +25,7 @@ export const PageHeroWithStats = async () => {
             {t('title')}
           </h1>
 
-          <p className="mx-auto max-w-160 text-pretty text-[18px] text-muted">
+          <p className="mx-auto max-w-160 text-pretty text-lg text-muted">
             {t('description')}
           </p>
 

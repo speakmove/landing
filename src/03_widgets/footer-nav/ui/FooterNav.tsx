@@ -27,7 +27,7 @@ export const FooterNav = async () => {
           <nav key={column.title} aria-labelledby={headingId} className="text-sm">
             <h3
               id={headingId}
-              className="mb-3 text-[12px] font-bold uppercase tracking-[0.06em] text-ink"
+              className="mb-3 text-xs font-bold uppercase tracking-[0.06em] text-ink"
             >
               {column.title}
             </h3>

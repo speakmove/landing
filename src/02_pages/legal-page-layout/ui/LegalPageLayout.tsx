@@ -36,7 +36,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
         >
           {meta.title}
         </h1>
-        <p className="m-0 text-[16px] text-muted">{meta.intro}</p>
+        <p className="m-0 text-base text-muted">{meta.intro}</p>
         <div className="mt-3 font-mono text-[13px] text-faint">
           <span>
             {tCommon('effectiveLabel')} {meta.effectiveDate}
@@ -58,7 +58,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
           <LegalToc items={tocItems} ariaLabel={tCommon('navSections')} />
         </aside>
 
-        <main className="text-[15.5px] leading-[1.6]">
+        <main className="text-[15.5px] leading-relaxed">
           {sections.map((section) => (
             <section
               key={section.id}

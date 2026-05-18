@@ -69,7 +69,7 @@ export const PricingInteractive = ({
               {hero.title}
             </h1>
 
-            <p className="mx-auto max-w-155 text-pretty text-[18px] text-muted">
+            <p className="mx-auto max-w-155 text-pretty text-lg text-muted">
               {hero.description}
             </p>
 

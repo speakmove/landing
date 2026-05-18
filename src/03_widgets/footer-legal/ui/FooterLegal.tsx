@@ -26,7 +26,7 @@ export const FooterLegal = async () => {
           </ul>
         ) : null}
       </div>
-      <div className="mt-4 space-y-3 text-[12px] leading-relaxed text-faint">
+      <div className="mt-4 space-y-3 text-xs leading-relaxed text-faint">
         <p>{t('legalEntity')}</p>
         <p>{t('researchNotice')}</p>
       </div>

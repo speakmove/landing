@@ -176,7 +176,7 @@ export const AdvantageTile = async ({ tile, className }: TProps) => {
           <div>
             <div className="text-[13.5px] font-bold text-ink">{tile.certificateName}</div>
             {tile.certificateStatus ? (
-              <div className="font-mono text-[12px] text-muted">{tile.certificateStatus}</div>
+              <div className="font-mono text-xs text-muted">{tile.certificateStatus}</div>
             ) : null}
           </div>
         </div>

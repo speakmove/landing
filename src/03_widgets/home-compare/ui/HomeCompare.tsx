@@ -60,7 +60,7 @@ export const HomeCompare = async () => {
                     key={col + colIdx}
                     scope="col"
                     className={cn(
-                      'border-b border-line px-3.5 py-4 text-[12px] md:text-[13px] font-bold',
+                      'border-b border-line px-3.5 py-4 text-xs md:text-[13px] font-bold',
                       colIdx === 0 ? 'bg-[#fafbf8] text-left' : 'text-center',
                       colIdx === highlightIdx
                         ? 'bg-primary-pale text-primary-ink'
