@@ -714,465 +714,304 @@
   },
   "PrivacyPage": {
     "meta": {
-      "title": "Sed do eiusmod 696",
-      "effectiveDate": "9 May 2026",
-      "lastUpdated": "9 May 2026",
-      "intro": "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+      "title": "Політика конфіденційності",
+      "effectiveDate": "19 травня 2026",
+      "lastUpdated": "19 травня 2026",
+      "intro": "Що ми зберігаємо, навіщо, і як ти можеш видалити свої дані.",
+      "description": "Політика конфіденційності SpeakMove: які дані ми зберігаємо, навіщо, у кого їх обробляємо і як ти можеш їх видалити. GDPR-compliant.",
+      "title_meta": "Політика конфіденційності · SpeakMove"
     },
     "sections": [
       {
-        "id": "who-we-are",
-        "heading": "Sed do eiusmod",
+        "id": "controller",
+        "heading": "Хто контролер даних",
         "body": [
-          "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (697)",
-          "Sed do eiusmod tempor incididunt 698",
-          "Sed do eiusmod tempor incididunt 699"
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адреса для service of documents: Weston-super-Mare, UK, BS23 1RH.",
+          "Зареєстрований у UK Information Commissioner's Office (ICO) як data controller. Реєстраційний номер **ZC141876** — перевірити можна на ico.org.uk.",
+          "Контакт з питань даних: **hi@speakmove.app**."
         ]
       },
       {
-        "id": "what-we-collect",
-        "heading": "Sed do eiusmod 700",
+        "id": "what",
+        "heading": "Що ми зберігаємо",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (701)",
+          "SpeakMove — Telegram-бот для тренування розмовної англійської. Мінімальний набір даних:",
           {
             "type": "list",
             "items": [
-              "Sed do eiusmod tempor incididunt 702",
-              "Sed do eiusmod 703",
-              "Sed do eiusmod 704",
-              "Sed do eiusmod tempor incididunt 705",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (706)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (707)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (708)"
+              "**Telegram ID** — для зв'язку акаунта з підпискою і прогресом",
+              "**Мова фідбеку** (українська або російська) — обираєш при першому запуску",
+              "**Голосові записи твоїх відповідей** — обробляються і **видаляються протягом 24 годин**",
+              "**Текстові транскрипти** голосу — для прогресу і історії сесій, можеш видалити в `/settings`",
+              "**Статус підписки** — керується через Stripe (id підписки, paid_until)"
             ]
           },
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (709)"
+          "Ми **не запитуємо** ім'я, прізвище, адресу, дату народження чи інші personal details."
         ]
       },
       {
-        "id": "lawful-basis",
-        "heading": "Sed do eiusmod tempor incididunt 710",
+        "id": "purpose",
+        "heading": "Навіщо ми це зберігаємо",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (711)",
+          "Щоб надавати тобі сервіс: вести розмову, давати фідбек рідною мовою, відстежувати прогрес, біллити підписку.",
+          "**Правова підстава** (GDPR Art. 6): виконання договору (надання послуг підписки) і legitimate interest (операційна підтримка сервісу)."
+        ]
+      },
+      {
+        "id": "processors",
+        "heading": "Sub-processors",
+        "body": [
+          "Щоб сервіс працював, частина даних проходить через зовнішніх провайдерів:",
           {
             "type": "list",
             "items": [
-              "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (712)"
+              "**Stripe** — обробка підписочних платежів (UK, GDPR-compliant)",
+              "**AI-провайдер для розпізнавання мови** — твій голос перетворюється на текст для подальшої обробки",
+              "**AI-провайдер для генерації відповідей** — текст транскрипту використовується для формування фідбеку і відповідей бота",
+              "**AI-провайдер для синтезу мови** — генерує голосову відповідь бота англійською",
+              "**Telegram** — месенджер, через який ти взаємодієш з ботом",
+              "**Хостинг-провайдер в EU** — application-логіка і база даних"
             ]
-          }
+          },
+          "Усі sub-processors GDPR-compliant і не використовують твої дані для власного навчання моделей. Конкретний список вендорів доступний за запитом — пиши на hi@speakmove.app."
         ]
       },
       {
         "id": "retention",
-        "heading": "Sed do eiusmod 713",
+        "heading": "Скільки ми зберігаємо",
         "body": [
           {
             "type": "list",
             "items": [
-              "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (714)",
-              "Sed do eiusmod 715"
+              "**Голосові записи**: до 24 годин після отримання. Використовуються лише для розпізнавання і видаляються автоматично",
+              "**Текстові транскрипти**: до моменту коли ти видалиш їх у `/settings`",
+              "**Telegram ID і статус підписки**: поки активний акаунт + 30 днів після скасування підписки",
+              "**Біллинг-історія (Stripe)**: 7 років — вимога UK tax law"
             ]
           }
         ]
       },
       {
-        "id": "who-we-share-with",
-        "heading": "Sed do eiusmod 716",
+        "id": "rights",
+        "heading": "Твої права",
         "body": [
-          "Sed do eiusmod tempor incididunt 717",
+          "За GDPR (Art. 15-22) у тебе є права:",
           {
             "type": "list",
             "items": [
-              "Sed do eiusmod tempor incididunt 718",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (719)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (720)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (721)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (722)"
+              "**Доступ** — отримати копію всіх твоїх даних",
+              "**Виправлення** — попросити виправити невірні дані",
+              "**Видалення** — попросити видалити всі твої дані (right to be forgotten)",
+              "**Перенос** — отримати свої дані у machine-readable форматі",
+              "**Обмеження** — попросити обмежити обробку",
+              "**Заперечення** — заперечити проти певних типів обробки"
             ]
           },
-          "Sed do eiusmod tempor incididunt 723"
+          "Щоб скористатися будь-яким правом — пиши на **hi@speakmove.app**. Відповім протягом 30 днів (зазвичай — протягом 48 годин).",
+          "Якщо вважаєш що ми порушуємо GDPR — скарга в **UK ICO**: ico.org.uk/make-a-complaint."
         ]
       },
       {
-        "id": "transfers",
-        "heading": "Sed do eiusmod tempor incididunt 724",
+        "id": "international",
+        "heading": "Передача даних за межі UK/EU",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (725)",
-          {
-            "type": "list",
-            "items": [
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (726)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (727)",
-              "Sed do eiusmod tempor incididunt 728",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (729)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (730)"
-            ]
-          },
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (731)"
-        ]
-      },
-      {
-        "id": "your-rights",
-        "heading": "Sed do eiusmod 732",
-        "body": [
-          "Sed do eiusmod tempor incididunt 733",
-          {
-            "type": "list",
-            "items": [
-              "Sed do eiusmod tempor incididunt 734",
-              "Sed do eiusmod tempor incididunt 735",
-              "Sed do eiusmod tempor incididunt 736",
-              "Sed do eiusmod tempor incididunt 737",
-              "Sed do eiusmod tempor incididunt 738",
-              "Sed do eiusmod tempor incididunt 739",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (740)"
-            ]
-          },
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (741)"
-        ]
-      },
-      {
-        "id": "complaints",
-        "heading": "Sed do eiusmod 742",
-        "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (743)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (744)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (745)",
-          {
-            "type": "list",
-            "items": [
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (746)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (747)",
-              "Sed do eiusmod tempor incididunt 748"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "no-sale",
-        "heading": "Sed do eiusmod 749",
-        "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (750)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (751)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (752)"
-        ]
-      },
-      {
-        "id": "age-limit",
-        "heading": "Sed do eiusmod 753",
-        "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (754)"
-        ]
-      },
-      {
-        "id": "migration",
-        "heading": "Sed do eiusmod tempor incididunt 755",
-        "body": [
-          "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (756)"
+          "Частина sub-processors (наприклад, AI-провайдери) можуть обробляти дані у США або інших юрисдикціях. Передачі захищені **Standard Contractual Clauses (SCCs)** або адекватними рішеннями UK/EU."
         ]
       },
       {
         "id": "changes",
-        "heading": "Sed do eiusmod 757",
+        "heading": "Зміни в політиці",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (758)"
+          "Якщо політика зміниться — оновимо дату \"Останнє оновлення\" вгорі сторінки. Для суттєвих змін — повідомлення через Telegram-бота або email.",
+          "SpeakMove зараз — V0 (рання версія). За результатами V0-тесту форма роботи може змінитися (UK Ltd) — повідомимо заздалегідь."
         ]
       },
       {
         "id": "contact",
-        "heading": "Sed do eiusmod",
+        "heading": "Контакт",
         "body": [
-          "Sed do eiusmod tempor incididunt 759"
+          "З будь-яких питань конфіденційності: **hi@speakmove.app**.",
+          "Або прямо в Telegram творцю: **@dmitriy**."
         ]
       }
     ]
   },
   "TermsPage": {
     "meta": {
-      "title": "Sed do eiusmod 760",
-      "effectiveDate": "9 May 2026",
-      "lastUpdated": "9 May 2026",
-      "intro": "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+      "title": "Умови використання",
+      "effectiveDate": "19 травня 2026",
+      "lastUpdated": "19 травня 2026",
+      "intro": "Договір між тобою та SpeakMove. Короткий і без юридичного жаргону де можливо.",
+      "description": "Умови використання SpeakMove: що надається, підписка £7.45/міс, скасування, обмеження, відповідальність. UK sole trader Dmytro Fenko.",
+      "title_meta": "Умови використання · SpeakMove"
     },
     "sections": [
       {
-        "id": "pre-launch",
-        "heading": "Sed do eiusmod 761",
+        "id": "operator",
+        "heading": "Хто оператор сервісу",
         "body": [
-          "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (762)"
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адреса: Weston-super-Mare, UK, BS23 1RH.",
+          "Зареєстрований у UK ICO як data controller (ZC141876). Контакт: **hi@speakmove.app**."
         ]
       },
       {
-        "id": "who-we-are",
-        "heading": "Sed do eiusmod tempor incididunt 763",
+        "id": "service",
+        "heading": "Що ми надаємо",
         "body": [
-          "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (764)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (765)"
+          "SpeakMove — Telegram-бот, який тренує розмовну англійську голосом на конкретні сценарії життя іммігранта в UK (дзвінок landlord, GP, work coach, job interview тощо).",
+          "Сервіс працює через Telegram-бота **@SpeakMoveBot**. Сайт speakmove.app — це маркетинг, а не точка входу в сервіс."
         ]
       },
       {
-        "id": "what-you-get",
-        "heading": "Sed do eiusmod 766",
+        "id": "subscription",
+        "heading": "Підписка і оплата",
         "body": [
-          "Sed do eiusmod tempor incididunt 767",
           {
             "type": "list",
             "items": [
-              "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-              "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (768)"
+              "**Free trial**: 7 днів доступу + 15 хвилин голосової практики. Картка не прив'язується. Закінчився trial — просто не купуєш підписку",
+              "**Pro підписка**: £7.45 на місяць через Stripe. Включає 60 хвилин voice-розмови на тиждень і всі 7 сценаріїв",
+              "Ліміти оновлюються щопонеділка 00:00 UTC",
+              "Ціна в GBP. Stripe конвертує автоматично з твоєї картки"
             ]
           }
         ]
       },
       {
-        "id": "no-guarantees",
-        "heading": "Sed do eiusmod 769",
+        "id": "cancel",
+        "heading": "Скасування і повернення",
         "body": [
-          "Sed do eiusmod 770",
-          {
-            "type": "list",
-            "items": [
-              "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet.",
-              "Sed do eiusmod tempor incididunt 771",
-              "Sed do eiusmod tempor incididunt 772",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (773)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (774)"
-            ]
-          },
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (775)"
+          "Скасування підписки — одним кліком у налаштуваннях Telegram або через **hi@speakmove.app**.",
+          "Після скасування доступ зберігається до кінця оплаченого періоду. Pro-rata refund не передбачено — для цього є **7-денний free trial без картки**, щоб ти міг переконатися що сервіс підходить."
         ]
       },
       {
-        "id": "paid-terms",
-        "heading": "Sed do eiusmod tempor incididunt 776",
+        "id": "acceptable",
+        "heading": "Acceptable use",
         "body": [
-          "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "Використовуючи SpeakMove, ти погоджуєшся:",
           {
             "type": "list",
             "items": [
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (777)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (778)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (779)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (780)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (781)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (782)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (783)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (784)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (785)",
-              "Минимум обмена: $5 для участников раннего доступа (первые 200), $10 для стандартных подписчиков.",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (786)"
+              "**Не використовувати** сервіс через автоматизовані скрипти, ботів або емулятори",
+              "**Не намагатися** відтворити або extract AI-логіку чи voice-контент в комерційних цілях",
+              "**Не публікувати** відтворений контент бота як свій власний продукт",
+              "**Не використовувати** сервіс для образ, спаму або незаконної активності"
             ]
           },
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (787)"
+          "У разі порушення ми можемо заблокувати доступ без повернення коштів."
         ]
       },
       {
-        "id": "acceptable-use",
-        "heading": "Sed do eiusmod 788",
+        "id": "availability",
+        "heading": "Доступність сервісу",
         "body": [
-          "Sed do eiusmod tempor incididunt 789",
-          {
-            "type": "list",
-            "items": [
-              "Sed do eiusmod tempor incididunt 790",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (791)",
-              "Sed do eiusmod tempor incididunt 792",
-              "Sed do eiusmod tempor incididunt 793"
-            ]
-          },
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (794)"
+          "SpeakMove зараз — **V0 (рання версія)**. Ми намагаємось тримати сервіс працюючим, але **не даємо SLA**. Можливі downtime'и, баги, зміни у сценаріях.",
+          "Якщо щось зламалось — пиши **@dmitriy** в Telegram. Намагаємось відповідати протягом 24 годин."
         ]
       },
       {
         "id": "ip",
-        "heading": "Sed do eiusmod tempor incididunt 795",
+        "heading": "Інтелектуальна власність",
         "body": [
-          "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (796)"
+          "Промпти, сценарії, voice-контент бота, код і дизайн сайту — власність Dmytro Fenko (SpeakMove).",
+          "**Твої голосові записи і транскрипти залишаються твоїми.** Ми використовуємо їх лише для надання сервісу (див. Privacy Policy). Ми не використовуємо твої дані для навчання моделей."
         ]
       },
       {
         "id": "liability",
-        "heading": "Sed do eiusmod tempor incididunt 797",
+        "heading": "Відповідальність",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (798)",
-          {
-            "type": "list",
-            "items": [
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (799)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (800)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (801)"
-            ]
-          }
+          "SpeakMove — освітній інструмент. **Ми не гарантуємо** що після використання ти заговориш вільно — це залежить від твоєї практики і багатьох факторів.",
+          "**Не використовуй SpeakMove як заміну:** репетитору із зворотним зв'язком, GP в медичних ситуаціях, юристу у legal-питаннях, work coach у реальних зустрічах.",
+          "Наша максимальна відповідальність обмежена сумою, яку ти заплатив за підписку за останні 12 місяців."
         ]
       },
       {
-        "id": "changes-to-terms",
-        "heading": "Sed do eiusmod 802",
+        "id": "law",
+        "heading": "Застосовне право",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (803)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (804)"
+          "Договір регулюється законом **England & Wales**. Спори — у судах **England & Wales**.",
+          "Якщо ти споживач у EU/UK, ніщо в цьому договорі не позбавляє тебе прав, гарантованих законом твоєї країни."
         ]
       },
       {
-        "id": "termination",
-        "heading": "Sed do eiusmod tempor incididunt 805",
+        "id": "changes",
+        "heading": "Зміни в умовах",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (806)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (807)"
-        ]
-      },
-      {
-        "id": "migration",
-        "heading": "Sed do eiusmod tempor incididunt 808",
-        "body": [
-          "Sed do eiusmod SpeakMove. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (809)"
-        ]
-      },
-      {
-        "id": "governing-law",
-        "heading": "Sed do eiusmod tempor incididunt 810",
-        "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (811)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (812)"
-        ]
-      },
-      {
-        "id": "contact",
-        "heading": "Sed do eiusmod",
-        "body": [
-          "Sed do eiusmod tempor incididunt 813"
+          "Якщо умови зміняться — оновимо дату \"Останнє оновлення\" і надішлемо повідомлення в Telegram-бота. Суттєві зміни набирають чинності через 14 днів."
         ]
       }
     ]
   },
   "CookiesPage": {
     "meta": {
-      "title": "Sed do eiusmod 814",
-      "effectiveDate": "9 May 2026",
-      "lastUpdated": "9 May 2026",
-      "intro": "Sed do eiusmod tempor incididunt SpeakMove. Dolor sit amet."
+      "title": "Політика cookies",
+      "effectiveDate": "19 травня 2026",
+      "lastUpdated": "19 травня 2026",
+      "intro": "Які cookies ми використовуємо на лендингу і як ти можеш їх відключити.",
+      "description": "Cookies на speakmove.app: лише essential для роботи сайту. Аналітика і маркетингові cookies — opt-in. PECR + GDPR compliant.",
+      "title_meta": "Політика cookies · SpeakMove"
     },
     "sections": [
       {
-        "id": "what-are-cookies",
-        "heading": "Sed do eiusmod 815",
+        "id": "scope",
+        "heading": "Що це",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (816)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (817)"
+          "Ця політика стосується **лише лендингу speakmove.app**. Сам сервіс працює в Telegram, і Telegram використовує свої власні cookies — про це читай у Telegram Privacy Policy.",
+          "**Telegram cookies — не наші.** Ми не контролюємо їх і не отримуємо доступу."
         ]
       },
       {
-        "id": "cookies-we-use",
-        "heading": "Sed do eiusmod tempor incididunt 818",
+        "id": "essential",
+        "heading": "Essential cookies (увімкнені завжди)",
         "body": [
-          "Sed do eiusmod tempor incididunt 819",
+          "Без них сайт не працює:",
           {
             "type": "list",
             "items": [
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (820)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (821)"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "cookie-table",
-        "heading": "Sed do eiusmod 822",
-        "body": [
-          {
-            "type": "table",
-            "headers": [
-              "Sed do eiusmod 823",
-              "Sed do eiusmod",
-              "Sed do eiusmod",
-              "Sed do eiusmod 824",
-              "Sed do eiusmod"
-            ],
-            "rows": [
-              [
-                "Sed do eiusmod 825",
-                "SpeakMove",
-                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (826)",
-                "12 месяцев",
-                "Sed do eiusmod 827"
-              ],
-              [
-                "Sed do eiusmod",
-                "Sed do eiusmod SpeakMove 828",
-                "Sed do eiusmod tempor incididunt 829",
-                "Sed do eiusmod tempor incididunt 830",
-                "Sed do eiusmod 831"
-              ],
-              [
-                "Sed do eiusmod",
-                "Sed do eiusmod SpeakMove 832",
-                "Sed do eiusmod tempor incididunt 833",
-                "Sed do eiusmod",
-                "Sed do eiusmod 834"
-              ],
-              [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod tempor incididunt 835",
-                "13 месяцев",
-                "Sed do eiusmod 836"
-              ],
-              [
-                "Sed do eiusmod",
-                "Sed do eiusmod",
-                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (837)",
-                "13 месяцев",
-                "Sed do eiusmod 838"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "third-party",
-        "heading": "Sed do eiusmod 839",
-        "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (840)",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (841)"
-        ]
-      },
-      {
-        "id": "how-to-control",
-        "heading": "Sed do eiusmod 842",
-        "body": [
-          "Sed do eiusmod tempor incididunt 843",
-          {
-            "type": "list",
-            "items": [
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (844)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (845)",
-              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (846)"
+              "**Language preference** (`NEXT_LOCALE`) — запам'ятовує обрану мову (RU / UA / EN)",
+              "**Cookie consent state** (`speakmove_cookie_consent`) — запам'ятовує твій вибір згоди на cookies, щоб не показувати банер знову"
             ]
           },
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (847)"
+          "Термін зберігання: до року. Не надсилаються третім сторонам."
         ]
       },
       {
-        "id": "changes",
-        "heading": "Sed do eiusmod 848",
+        "id": "analytics",
+        "heading": "Аналітика і маркетинг (opt-in)",
         "body": [
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. (849)"
+          "**Зараз у V0 ми не використовуємо analytics або marketing cookies.** Жодних Google Analytics, Meta Pixel, TikTok Pixel — поки що.",
+          "Коли додамо — вони **будуть завантажуватись лише після явної згоди** через cookie-банер. До згоди — жодних tracking-скриптів на сторінці."
+        ]
+      },
+      {
+        "id": "withdraw",
+        "heading": "Як відкликати згоду",
+        "body": [
+          "Зараз відкликати поки нічого, але коли будуть analytics cookies:",
+          {
+            "type": "list",
+            "items": [
+              "Очисти cookies сайту у налаштуваннях браузера — при наступному візиті cookie-банер з'явиться знову",
+              "Також можеш встановити browser-рівневу настройку Do Not Track — ми це поважаємо"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compliance",
+        "heading": "PECR і GDPR",
+        "body": [
+          "Згідно з **UK PECR** і **EU ePrivacy Directive** non-essential cookies вимагають явного opt-in. Ми це дотримуємось.",
+          "За **GDPR** твоя згода — granular (за категоріями), revocable (можеш відкликати), informed (ми пояснюємо навіщо)."
         ]
       },
       {
         "id": "contact",
-        "heading": "Sed do eiusmod",
+        "heading": "Питання",
         "body": [
-          "Sed do eiusmod tempor incididunt 850"
+          "З cookies, аналітики, твоїх прав: **hi@speakmove.app**."
         ]
       }
     ]

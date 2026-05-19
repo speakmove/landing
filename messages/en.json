@@ -714,465 +714,304 @@
   },
   "PrivacyPage": {
     "meta": {
-      "title": "Privacy Policy",
-      "effectiveDate": "9 May 2026",
-      "lastUpdated": "9 May 2026",
-      "intro": "This policy explains what personal data SpeakMove collects when you visit our website or join our waitlist, why we collect it, and what rights you have. We keep it short and in plain English."
+      "title": "Privacy policy",
+      "effectiveDate": "19 May 2026",
+      "lastUpdated": "19 May 2026",
+      "intro": "What we store, why, and how you can delete your data.",
+      "description": "SpeakMove privacy policy: what data we store, why, who processes it and how you can delete it. GDPR-compliant.",
+      "title_meta": "Privacy policy · SpeakMove"
     },
     "sections": [
       {
-        "id": "who-we-are",
-        "heading": "1. Who we are",
+        "id": "controller",
+        "heading": "Who is the data controller",
         "body": [
-          "This research project is operated by Dmytro Fenko (publishing as Dmitry Fenko), a UK sole trader trading as SpeakMove. I am the data controller for your personal data. The project does not meet the conditions in UK GDPR Article 37 that require a Data Protection Officer, so I have not appointed one — I handle every data protection matter personally.",
-          "I am registered with the UK Information Commissioner's Office (ICO) as a data controller and pay the annual data protection fee. My ICO registration number is ZC141876. You can verify it on the public register at ico.org.uk/ESDWebPages/Search.",
-          "Address for service of documents: Weston-super-Mare, UK, BS23 1RH.",
-          "Contact for privacy matters: hi@speakmove.app"
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address for service of documents: Weston-super-Mare, UK, BS23 1RH.",
+          "Registered with the UK Information Commissioner's Office (ICO) as a data controller. Registration number **ZC141876** — verify at ico.org.uk.",
+          "Data contact: **hi@speakmove.app**."
         ]
       },
       {
-        "id": "what-we-collect",
-        "heading": "2. What data we collect",
+        "id": "what",
+        "heading": "What we store",
         "body": [
-          "When you use our website or sign up to the waitlist, we may collect:",
+          "SpeakMove is a Telegram bot for practising spoken English. We keep a minimal data set:",
           {
             "type": "list",
             "items": [
-              "Email address (required to join the waitlist)",
-              "First name (required for the waitlist form)",
-              "Last name (optional)",
-              "Preferred language and user segment (optional, chosen from a dropdown)",
-              "IP address and browser metadata (collected automatically by our hosting provider and error tracking tool)",
-              "Google Analytics identifiers (e.g. _ga cookie) for visitor analytics",
-              "Sentry error context (e.g. browser type, operating system, stack traces — for debugging)"
+              "**Telegram ID** — to link your account to your subscription and progress",
+              "**Feedback language** (Russian or Ukrainian) — picked on first launch",
+              "**Voice recordings of your replies** — processed and **deleted within 24 hours**",
+              "**Text transcripts** of your speech — kept for progress and session history, you can delete them in `/settings`",
+              "**Subscription status** — managed via Stripe (subscription id, paid_until)"
             ]
           },
-          "We do not collect payment details, government IDs, or any special category data."
+          "We **don't ask** for your name, surname, address, date of birth or other personal details."
         ]
       },
       {
-        "id": "lawful-basis",
-        "heading": "3. Why we collect it and our lawful basis",
+        "id": "purpose",
+        "heading": "Why we store it",
         "body": [
-          "We rely on the following lawful bases under UK GDPR Article 6 (and EU GDPR Article 6 for EU/EEA users):",
+          "To deliver the service: hold the conversation, give you feedback in your native language, track progress, bill the subscription.",
+          "**Legal basis** (GDPR Art. 6): performance of a contract (subscription service) and legitimate interest (operational support of the service)."
+        ]
+      },
+      {
+        "id": "processors",
+        "heading": "Sub-processors",
+        "body": [
+          "Parts of your data flow through external providers so the service can work:",
           {
             "type": "list",
             "items": [
-              "Consent (Art. 6(1)(a)): We ask for your explicit consent when you submit the waitlist form. We use your email and name solely to notify you when SpeakMove launches. You can withdraw consent at any time.",
-              "Legitimate interests (Art. 6(1)(f)): We use Google Analytics to understand how visitors use our site, and Sentry to catch technical errors. We have assessed that our legitimate interest in maintaining a working, secure site does not override your interests or rights."
+              "**Stripe** — subscription payment processing (UK, GDPR-compliant)",
+              "**AI provider for speech recognition** — your voice is transcribed to text for downstream processing",
+              "**AI provider for reply generation** — the transcript text is used to generate feedback and the bot's replies",
+              "**AI provider for speech synthesis** — generates the bot's English voice reply",
+              "**Telegram** — the messenger you interact with the bot through",
+              "**EU hosting provider** — for application logic and the database"
             ]
-          }
+          },
+          "All sub-processors are GDPR-compliant and do not use your data to train their own models. A full vendor list is available on request — write to hi@speakmove.app."
         ]
       },
       {
         "id": "retention",
-        "heading": "4. How long we keep your data",
+        "heading": "How long we keep it",
         "body": [
           {
             "type": "list",
             "items": [
-              "Waitlist data (email, name, segment): until SpeakMove launches and we send our notification email, or until you withdraw consent — whichever comes first. We then delete your data within 90 days.",
-              "Google Analytics data: 14 months maximum (we use GA4's minimum retention setting).",
-              "Sentry error logs: 30 days."
+              "**Voice recordings**: up to 24 hours after receipt. Used only for transcription, deleted automatically",
+              "**Text transcripts**: until you delete them in `/settings`",
+              "**Telegram ID and subscription status**: while the account is active + 30 days after cancellation",
+              "**Billing history (Stripe)**: 7 years — required by UK tax law"
             ]
           }
         ]
       },
       {
-        "id": "who-we-share-with",
-        "heading": "5. Who we share your data with",
+        "id": "rights",
+        "heading": "Your rights",
         "body": [
-          "We share your data with the following third-party processors only where necessary:",
+          "Under GDPR (Art. 15–22) you have the rights to:",
           {
             "type": "list",
             "items": [
-              "Google LLC (Google Analytics 4) — visitor analytics. Data processed in the US.",
-              "Sentry (Functional Software, Inc.) — error tracking. Data processed in the US.",
-              "Vercel Inc. — website hosting and delivery. Data processed in the US and globally via edge network.",
-              "Hetzner Cloud GmbH (Germany) — VPS hosting (database for waitlist submissions). Data resides within the EU.",
-              "Telegram Messenger — our Telegram bot is registered but not yet functional. It responds with an automated message directing users to our waitlist."
+              "**Access** — get a copy of all your data",
+              "**Rectification** — ask us to correct inaccurate data",
+              "**Erasure** — ask us to delete all your data (right to be forgotten)",
+              "**Portability** — receive your data in a machine-readable format",
+              "**Restriction** — ask us to restrict processing",
+              "**Objection** — object to certain types of processing"
             ]
           },
-          "We do not sell your personal data to anyone, ever."
+          "To exercise any of these — email **hi@speakmove.app**. We'll respond within 30 days (usually within 48 hours).",
+          "If you believe we're breaching GDPR — you can complain to the **UK ICO**: ico.org.uk/make-a-complaint."
         ]
       },
       {
-        "id": "transfers",
-        "heading": "6. International data transfers",
+        "id": "international",
+        "heading": "Data transfers outside UK/EU",
         "body": [
-          "Some of our third-party processors are based outside the UK and EU. Here is how we protect your data in each case:",
-          {
-            "type": "list",
-            "items": [
-              "Google Analytics (US): transferred under the UK Extension to the EU–US Data Privacy Framework, recognised as adequate by the UK.",
-              "Sentry (US): transferred under a UK International Data Transfer Agreement (IDTA) or UK Addendum to EU Standard Contractual Clauses.",
-              "Vercel (US/global edge): transferred under UK IDTA.",
-              "Hetzner Cloud GmbH (Germany, EU) — data resides within the EU/EEA, no third-country transfer applies.",
-              "Telegram (international): we rely on controller-to-processor safeguards as appropriate."
-            ]
-          },
-          "If your data originates in the EU/EEA, it first lands in the UK (which holds EU adequacy status) and is then subject to the mechanisms listed above for any onward transfer."
-        ]
-      },
-      {
-        "id": "your-rights",
-        "heading": "7. Your rights",
-        "body": [
-          "Under UK GDPR (and EU GDPR for EU/EEA residents), you have the right to:",
-          {
-            "type": "list",
-            "items": [
-              "Access your data (Art. 15) — ask us what we hold about you.",
-              "Correct inaccurate data (Art. 16).",
-              "Delete your data (Art. 17) — also known as the right to be forgotten.",
-              "Restrict how we use your data (Art. 18).",
-              "Receive your data in a portable format (Art. 20).",
-              "Object to processing based on legitimate interests (Art. 21).",
-              "Withdraw consent at any time (Art. 7(3)) — this does not affect the lawfulness of processing before withdrawal."
-            ]
-          },
-          "To exercise any of these rights, email us at hi@speakmove.app. We will respond within one calendar month."
-        ]
-      },
-      {
-        "id": "complaints",
-        "heading": "8. How to complain",
-        "body": [
-          "If you are unhappy with how we handle your data, please contact us first at hi@speakmove.app and we will try to resolve it.",
-          "UK users: you also have the right to complain to the UK Information Commissioner's Office (ICO) — ico.org.uk.",
-          "EU/EEA users: you may complain directly to your national data protection authority. We have no EU establishment, so there is no single lead supervisory authority. You can contact:",
-          {
-            "type": "list",
-            "items": [
-              "Germany: Bundesbeauftragter für den Datenschutz und die Informationsfreiheit (BfDI) — bfdi.bund.de",
-              "France: Commission Nationale de l'Informatique et des Libertés (CNIL) — cnil.fr",
-              "Norway: Datatilsynet — datatilsynet.no"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "no-sale",
-        "heading": "9. We do not sell your data",
-        "body": [
-          "We do not sell, rent, or trade your personal data to any third party.",
-          "Это не относится к нашим техническим подрядчикам (data processors) — их полный список и роли указаны в разделе «Кому мы передаём данные» выше. Они обрабатывают данные строго по нашим инструкциям, в рамках Data Processing Agreement (DPA), и не имеют права использовать их в собственных целях.",
-          "Также мы можем раскрыть данные, если этого требует закон (судебный приказ, запрос компетентного органа) или для защиты наших прав в случае мошенничества и злоупотреблений."
-        ]
-      },
-      {
-        "id": "age-limit",
-        "heading": "10. Age limit",
-        "body": [
-          "Our waitlist and website are intended for users aged 16 and over. We apply the highest age threshold across our operating countries (16, as required in Germany and by EU standards). If you believe someone under 16 has submitted their data, please contact us at hi@speakmove.app and we will delete it promptly."
-        ]
-      },
-      {
-        "id": "migration",
-        "heading": "11. Future company migration",
-        "body": [
-          "We intend to incorporate SpeakMove as a UK limited company before launching paid features. If we do so, your personal data and our obligations under this policy will transfer to the successor entity.",
-          "We will give you at least 30 days' prior notice by email before any such transfer. You will have the right to object — including the right to request deletion of your data — before the transfer takes place."
+          "Some sub-processors (for example AI providers) may process data in the US or other jurisdictions. Transfers are protected by **Standard Contractual Clauses (SCCs)** or UK/EU adequacy decisions."
         ]
       },
       {
         "id": "changes",
-        "heading": "12. Changes to this policy",
+        "heading": "Changes to this policy",
         "body": [
-          "If we make material changes to this policy, we will notify waitlist members by email at least 14 days before the changes take effect. The 'Last updated' date at the top of this page will always reflect the most recent revision."
+          "If the policy changes, we'll update the \"Last updated\" date at the top of this page. For material changes — notification via the Telegram bot or email.",
+          "SpeakMove is currently V0 (early version). If V0 testing leads to a different legal structure (UK Ltd), we'll notify in advance."
         ]
       },
       {
         "id": "contact",
-        "heading": "13. Contact",
+        "heading": "Contact",
         "body": [
-          "For any privacy-related questions: hi@speakmove.app"
+          "Any privacy questions: **hi@speakmove.app**.",
+          "Or directly on Telegram: **@dmitriy**."
         ]
       }
     ]
   },
   "TermsPage": {
     "meta": {
-      "title": "Terms of Service",
-      "effectiveDate": "9 May 2026",
-      "lastUpdated": "9 May 2026",
-      "intro": "These terms govern your use of the SpeakMove website and waitlist. Please read them — they are short and written in plain English."
+      "title": "Terms of use",
+      "effectiveDate": "19 May 2026",
+      "lastUpdated": "19 May 2026",
+      "intro": "The agreement between you and SpeakMove. Short, and without legal jargon where possible.",
+      "description": "SpeakMove terms of use: what we provide, £7.45/mo subscription, cancellation, limits, liability. UK sole trader Dmytro Fenko.",
+      "title_meta": "Terms of use · SpeakMove"
     },
     "sections": [
       {
-        "id": "pre-launch",
-        "heading": "1. Pre-launch status",
+        "id": "operator",
+        "heading": "Who runs the service",
         "body": [
-          "SpeakMove is currently in pre-launch. There is no functional product available. The website provides information about the planned service and allows you to register your email address on a waitlist.",
-          "Joining the waitlist does not give you any rights to access a product, receive a service, or pay for anything. We will contact you when — and only if — we launch."
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address: Weston-super-Mare, UK, BS23 1RH.",
+          "Registered with UK ICO as a data controller (ZC141876). Contact: **hi@speakmove.app**."
         ]
       },
       {
-        "id": "who-we-are",
-        "heading": "2. Who you are contracting with",
+        "id": "service",
+        "heading": "What we provide",
         "body": [
-          "You are entering into these terms with Dmytro Fenko (publishing as Dmitry Fenko), a UK sole trader operating under the trading name SpeakMove. This is not a company. It is one person running a research and product-discovery project.",
-          "In accordance with the Companies Act 2006 and general UK transparency requirements: I am not incorporated as a limited company. There is no Companies House registration number. Address for service of documents: Weston-super-Mare, UK, BS23 1RH. Contact: hi@speakmove.app.",
-          "I intend to incorporate as a UK Limited Company before launching paid features. Until that happens, the individual named above is personally responsible for this service. If incorporation occurs, I will notify you by email at least 30 days in advance and you may object — including by requesting deletion of your data — before the transition takes effect."
+          "SpeakMove is a Telegram bot that trains your spoken English by voice on the specific situations of a UK immigrant's life (call to landlord, GP, work coach, job interview, etc.).",
+          "The service runs through the Telegram bot **@SpeakMoveBot**. The speakmove.app website is marketing, not the entry point to the service."
         ]
       },
       {
-        "id": "what-you-get",
-        "heading": "3. What you get",
+        "id": "subscription",
+        "heading": "Subscription and payment",
         "body": [
-          "By using this website and joining the waitlist, you get:",
           {
             "type": "list",
             "items": [
-              "Access to informational content about SpeakMove's planned features and pricing (this is not a binding offer).",
-              "A place on our email waitlist, meaning we will notify you when SpeakMove launches.",
-              "One email at launch. That is it — no ongoing marketing unless you separately opt in."
+              "**Free trial**: 7 days of access + 15 minutes of voice practice. No card needed. If the trial ends, just don't subscribe",
+              "**Pro subscription**: £7.45 per month via Stripe. Includes 60 minutes of voice conversation per week and all 7 scenarios",
+              "Limits reset every Monday at 00:00 UTC",
+              "Price is in GBP. Stripe converts automatically from your card"
             ]
           }
         ]
       },
       {
-        "id": "no-guarantees",
-        "heading": "4. What we do not promise",
+        "id": "cancel",
+        "heading": "Cancellation and refunds",
         "body": [
-          "We do not guarantee:",
-          {
-            "type": "list",
-            "items": [
-              "That SpeakMove will launch, or when.",
-              "That you will receive access to any product.",
-              "That prices shown on the site will remain unchanged.",
-              "Any service level, uptime, or performance standard — the website is informational only.",
-              "That our Telegram bot will become functional — it currently only sends an automated pre-launch reply."
-            ]
-          },
-          "The pricing shown on this site is indicative and informational only. It does not constitute a binding commercial offer."
+          "Cancel in one click in Telegram settings, or via **hi@speakmove.app**.",
+          "After cancellation, access is kept until the end of the paid period. Pro-rata refunds are not offered — that's what the **7-day free trial without a card** is for, so you can confirm the service fits."
         ]
       },
       {
-        "id": "paid-terms",
-        "heading": "5. Future terms for paid features (effective at launch)",
+        "id": "acceptable",
+        "heading": "Acceptable use",
         "body": [
-          "This section sets out terms that will apply only when SpeakMove launches paid subscriptions and starts charging users. Until launch, no payments are processed and these terms are informational.",
+          "By using SpeakMove you agree:",
           {
             "type": "list",
             "items": [
-              "All prices displayed on the site are VAT-inclusive. The price you see is the price you pay; applicable VAT or sales tax is included.",
-              "Subscriptions can be cancelled at any time from within the bot. Cancellation takes effect at the end of the current billing period and does not trigger any cancellation fee.",
-              "EU/UK consumers have a statutory 14-day cooling-off period after the initial subscription. A full refund will be issued upon request within this window, minus the monetary value of any cashback bonuses already redeemed.",
-              "Optional waiver of cooling-off (EU Consumer Rights Directive Article 16(m)): if the user expressly opts in at checkout to immediate commencement of digital services and expressly waives the right of withdrawal for digital content supplied with their prior express consent, the cooling-off right is forfeited upon the first successful charge. The user retains all other consumer rights, including the right to cancel future renewals at any time. Without this confirmation, payment cannot be completed via the waiver flow.",
-              "After the 14-day cooling-off, refunds for annual plans are issued pro-rata for full unused months only. Monthly subscriptions are non-refundable after the cooling-off window.",
-              "Cashback bonuses (SM) are a loyalty reward, not a financial instrument. They have no monetary value outside the platform and cannot be exchanged for fiat currency directly.",
-              "The maximum cashback that can accrue in any single calendar month is 30% of the user's monthly subscription price. Once reached, no further bonuses accrue until the next billing cycle.",
-              "Cashback bonuses expire 12 months from the date they are accrued. Expired bonuses cannot be redeemed.",
-              "Upon cancellation of a paid subscription, the user has 30 days to redeem any remaining bonuses. After this grace period, unredeemed bonuses are forfeited.",
-              "Minimum redemption thresholds: $5 for early access subscribers (first 200), $10 for standard subscribers.",
-              "Payment methods: bank card (via Stripe) or Telegram Stars. Stripe card payment is the primary checkout option."
+              "**Not to use** the service via automated scripts, bots or emulators",
+              "**Not to attempt** to reproduce or extract the AI logic or voice content for commercial purposes",
+              "**Not to publish** reproduced bot content as your own product",
+              "**Not to use** the service for harassment, spam or illegal activity"
             ]
           },
-          "We reserve the right to refuse cashback payouts where we have reasonable grounds to believe the user has engaged in fraud, multi-accounting, or abuse of the loyalty programme."
+          "Breach can lead to access being blocked without a refund."
         ]
       },
       {
-        "id": "acceptable-use",
-        "heading": "6. Acceptable use",
+        "id": "availability",
+        "heading": "Service availability",
         "body": [
-          "When using our website and waitlist, you must not:",
-          {
-            "type": "list",
-            "items": [
-              "Submit multiple email addresses to claim multiple waitlist places.",
-              "Use automated tools or bots to submit forms or scrape our site.",
-              "Attempt to gain unauthorised access to our systems.",
-              "Use our content or branding without permission."
-            ]
-          },
-          "We reserve the right to remove any waitlist entry we reasonably believe violates these rules."
+          "SpeakMove is currently **V0 (early version)**. We do our best to keep the service running but **don't offer an SLA**. Downtime, bugs and scenario changes are possible.",
+          "If something breaks — message **@dmitriy** on Telegram. We aim to reply within 24 hours."
         ]
       },
       {
         "id": "ip",
-        "heading": "7. Intellectual property",
+        "heading": "Intellectual property",
         "body": [
-          "All content on this website — including text, graphics, the SpeakMove name, logo, and brand — belongs to Dmytro Fenko, trading as SpeakMove, or is used with permission.",
-          "You may not copy, reproduce, or redistribute any of it without our written consent."
+          "The prompts, scenarios, bot voice content, code and site design are owned by Dmytro Fenko (SpeakMove).",
+          "**Your voice recordings and transcripts remain yours.** We use them only to deliver the service (see Privacy Policy). We don't use your data to train models."
         ]
       },
       {
         "id": "liability",
-        "heading": "8. Limitation of liability",
+        "heading": "Liability",
         "body": [
-          "This is a free, pre-launch informational service. To the fullest extent permitted by law:",
-          {
-            "type": "list",
-            "items": [
-              "We are not liable for any indirect, consequential, or special losses arising from your use of this website or waitlist.",
-              "Our total liability to you for any claim arising from this service is capped at £100.",
-              "Nothing in these terms limits liability for death or personal injury caused by negligence, or for fraud."
-            ]
-          }
+          "SpeakMove is an educational tool. **We don't guarantee** that you'll speak fluently after using it — that depends on your practice and many factors.",
+          "**Do not use SpeakMove as a substitute** for a tutor with feedback, a GP in medical situations, a lawyer in legal matters, or a work coach in real meetings.",
+          "Our maximum liability is limited to the subscription amount you paid in the past 12 months."
         ]
       },
       {
-        "id": "changes-to-terms",
-        "heading": "9. Changes to these terms",
+        "id": "law",
+        "heading": "Governing law",
         "body": [
-          "We may update these terms at any time during the pre-launch phase. If we make material changes, we will notify waitlist members by email at least 14 days before they take effect.",
-          "If you do not agree with the new terms, you can remove yourself from the waitlist at any time by contacting hi@speakmove.app."
+          "This agreement is governed by the laws of **England & Wales**. Disputes — in the courts of **England & Wales**.",
+          "If you are a consumer in the EU/UK, nothing in this agreement removes rights you have under your country's law."
         ]
       },
       {
-        "id": "termination",
-        "heading": "10. Termination and unsubscribing",
+        "id": "changes",
+        "heading": "Changes to these terms",
         "body": [
-          "You can remove yourself from the waitlist at any time by clicking the unsubscribe link in any email we send, or by emailing hi@speakmove.app.",
-          "We can remove your waitlist entry at any time, for any reason, including if we decide not to launch or if we believe you have violated these terms. We will not charge you anything in either case."
-        ]
-      },
-      {
-        "id": "migration",
-        "heading": "11. Future company migration",
-        "body": [
-          "We intend to incorporate SpeakMove as a UK limited company before launching paid features. When this happens, the benefit and obligations of these terms will transfer to the successor entity.",
-          "We will give you at least 30 days' prior notice by email. You will have the right to opt out and have your data deleted before the transfer."
-        ]
-      },
-      {
-        "id": "governing-law",
-        "heading": "12. Governing law and jurisdiction",
-        "body": [
-          "These terms are governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.",
-          "If you are a consumer resident in an EU or EEA country, nothing in these terms affects your right to rely on mandatory consumer protection laws of your home country, or to bring proceedings in the courts of your home country, as provided by Article 6 of the Rome I Regulation (EU 593/2008) and equivalent rules."
-        ]
-      },
-      {
-        "id": "contact",
-        "heading": "13. Contact",
-        "body": [
-          "For any questions about these terms: hi@speakmove.app"
+          "If the terms change, we'll update the \"Last updated\" date and send notification through the Telegram bot. Material changes take effect 14 days after notification."
         ]
       }
     ]
   },
   "CookiesPage": {
     "meta": {
-      "title": "Cookie Policy",
-      "effectiveDate": "9 May 2026",
-      "lastUpdated": "9 May 2026",
-      "intro": "This page explains what cookies the SpeakMove website uses, why, and how you can control them."
+      "title": "Cookies policy",
+      "effectiveDate": "19 May 2026",
+      "lastUpdated": "19 May 2026",
+      "intro": "Which cookies the landing page uses, and how to turn them off.",
+      "description": "Cookies on speakmove.app: only essentials for the site to work. Analytics and marketing cookies are opt-in. PECR + GDPR compliant.",
+      "title_meta": "Cookies policy · SpeakMove"
     },
     "sections": [
       {
-        "id": "what-are-cookies",
-        "heading": "1. What are cookies?",
+        "id": "scope",
+        "heading": "Scope",
         "body": [
-          "Cookies are small text files that a website saves on your device when you visit. They help the site remember information between pages or visits — like whether you have already accepted this cookie notice.",
-          "Some cookies are set by us; others are set by third-party services we use (such as Google Analytics)."
+          "This policy applies **only to the speakmove.app landing page**. The service itself runs inside Telegram, which has its own cookies — see the Telegram Privacy Policy.",
+          "**Telegram cookies aren't ours.** We don't control them and have no access to them."
         ]
       },
       {
-        "id": "cookies-we-use",
-        "heading": "2. Cookies we use",
+        "id": "essential",
+        "heading": "Essential cookies (always on)",
         "body": [
-          "We use two categories of cookies:",
+          "The site doesn't work without these:",
           {
             "type": "list",
             "items": [
-              "Strictly necessary — these make the website work. We do not need your consent to set them.",
-              "Analytics — these help us understand how visitors use the site. We only set them after you accept analytics cookies."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "cookie-table",
-        "heading": "3. Cookie details",
-        "body": [
-          {
-            "type": "table",
-            "headers": [
-              "Cookie name",
-              "Provider",
-              "Purpose",
-              "Duration",
-              "Category"
-            ],
-            "rows": [
-              [
-                "cookie_consent",
-                "SpeakMove",
-                "Stores your cookie consent choice so we do not ask again on every visit.",
-                "12 months",
-                "Strictly necessary"
-              ],
-              [
-                "session",
-                "SpeakMove / server",
-                "Maintains your session while you are on the site. Used for CSRF protection on form submissions.",
-                "Session (deleted when browser closes)",
-                "Strictly necessary"
-              ],
-              [
-                "csrf_token",
-                "SpeakMove / server",
-                "Protects form submissions against cross-site request forgery attacks.",
-                "Session",
-                "Strictly necessary"
-              ],
-              [
-                "_ga",
-                "Google LLC",
-                "Identifies unique visitors to the site for Google Analytics 4.",
-                "13 months",
-                "Analytics"
-              ],
-              [
-                "_ga_*",
-                "Google LLC",
-                "Stores and counts page views and session data for Google Analytics 4.",
-                "13 months",
-                "Analytics"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "third-party",
-        "heading": "4. Third-party cookies",
-        "body": [
-          "Google Analytics cookies (_ga, _ga_*) are set by Google LLC. Google processes analytics data in the US under the UK Extension to the EU–US Data Privacy Framework.",
-          "For more information on how Google uses data from sites that use its services, see: google.com/policies/privacy/partners"
-        ]
-      },
-      {
-        "id": "how-to-control",
-        "heading": "5. How to control cookies",
-        "body": [
-          "You have three ways to control cookies on this site:",
-          {
-            "type": "list",
-            "items": [
-              "Our cookie banner: when you first visit, you can accept all cookies, reject analytics cookies, or choose by category. Accepting and rejecting options are given equal prominence — there are no pre-ticked boxes.",
-              "Change your preference: you can update your choice at any time by clicking 'Cookie settings' in the footer.",
-              "Browser settings: most browsers let you block or delete cookies. Visit your browser's help pages for instructions. Note that blocking strictly necessary cookies may affect how the site works."
+              "**Language preference** (`NEXT_LOCALE`) — remembers your chosen language (RU / UA / EN)",
+              "**Cookie consent state** (`speakmove_cookie_consent`) — remembers your consent choice so the banner isn't shown again"
             ]
           },
-          "Withdrawing consent for analytics cookies stops new analytics data from being collected. It does not delete data already sent to Google Analytics before you withdrew."
+          "Retention: up to one year. Not shared with third parties."
         ]
       },
       {
-        "id": "changes",
-        "heading": "6. Changes to this policy",
+        "id": "analytics",
+        "heading": "Analytics and marketing (opt-in)",
         "body": [
-          "If we add new cookies or change how we use existing ones, we will update this page and, where required, ask for your consent again."
+          "**Right now in V0 we don't use any analytics or marketing cookies.** No Google Analytics, no Meta Pixel, no TikTok Pixel — yet.",
+          "When we add them, they will **only load after explicit consent** via the cookie banner. Until consent — no tracking scripts on the page."
+        ]
+      },
+      {
+        "id": "withdraw",
+        "heading": "Withdrawing consent",
+        "body": [
+          "Currently there's nothing to withdraw, but once analytics cookies exist:",
+          {
+            "type": "list",
+            "items": [
+              "Clear site cookies in your browser settings — on next visit the cookie banner will reappear",
+              "You can also set browser-level Do Not Track — we respect it"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compliance",
+        "heading": "PECR and GDPR",
+        "body": [
+          "Under **UK PECR** and the **EU ePrivacy Directive**, non-essential cookies require explicit opt-in. We follow this.",
+          "Under **GDPR** your consent is granular (by category), revocable (you can withdraw), informed (we explain why)."
         ]
       },
       {
         "id": "contact",
-        "heading": "7. Contact",
+        "heading": "Questions",
         "body": [
-          "Questions about our cookie use: hi@speakmove.app"
+          "For cookies, analytics or your rights: **hi@speakmove.app**."
         ]
       }
     ]
