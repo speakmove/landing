@@ -1,58 +1,28 @@
 import { getTranslations } from 'next-intl/server';
-import { PricingInteractive } from '@/widgets/pricing-interactive';
-import { PricingFeatureComparisonTable } from '@/widgets/pricing-feature-comparison-table';
-import { CoinEconomicsSection } from '@/widgets/coin-economics-section';
+import { Container } from '@/shared/ui';
 import { PricingFaqSection } from '@/widgets/pricing-faq-section';
 import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
-import type { TPricingPlan } from '@/entities/pricing-plan';
 
 export const PricingPage = async () => {
-  const t = await getTranslations('PricingPage');
-  const tCommon = await getTranslations('Common');
-
-  const plans = t.raw('plans') as unknown as TPricingPlan[];
-  const disclaimer = t('disclaimer');
-
-  const hero = {
-    crumb: t('hero.crumb'),
-    title: t('hero.title'),
-    description: t('hero.description'),
-  };
-
-  const billingLabels = {
-    monthly: t('hero.billingToggle.monthly'),
-    yearly: t('hero.billingToggle.yearly'),
-    yearlySaveLabel: t('hero.billingToggle.yearlySaveLabel'),
-  };
-
-  const fomo = {
-    title: t('hero.fomo.title'),
-    plansLine: t('hero.fomo.plansLine'),
-    countLabel: t.raw('hero.fomo.countLabel') as string,
-    current: t.raw('hero.fomo.current') as unknown as number,
-    total: t.raw('hero.fomo.total') as unknown as number,
-  };
-
-  // Pass serializable string templates so they can cross the server→client boundary.
-  // {planName} is replaced by PricingPlanCard at render time.
-  const planAriaLabels = {
-    featuresIncludedTemplate: tCommon.raw('aria.featuresIncluded') as string,
-    featuresExcludedTemplate: tCommon.raw('aria.featuresExcluded') as string,
-    unavailable: tCommon('unavailable'),
-  };
+  const t = await getTranslations('PricingPage.hero');
 
   return (
     <>
-      <PricingInteractive
-        hero={hero}
-        plans={plans}
-        billingLabels={billingLabels}
-        fomo={fomo}
-        disclaimer={disclaimer}
-        planAriaLabels={planAriaLabels}
-      />
-      <PricingFeatureComparisonTable />
-      <CoinEconomicsSection />
+      <header className="relative overflow-hidden px-5 pt-16 pb-10 text-center md:px-6 md:pt-20">
+        <div aria-hidden="true" className="page-hero-bg" />
+        <Container>
+          <div className="mx-auto max-w-190">
+            <div className="section-eyebrow !mb-0">{t('crumb')}</div>
+            <h1 className="h-display-page my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink">
+              {t('title')}
+            </h1>
+            <p className="mx-auto max-w-160 text-pretty text-lg text-muted">
+              {t('description')}
+            </p>
+          </div>
+        </Container>
+      </header>
+
       <PricingFaqSection />
       <FinalCtaWithFomo namespace="PricingPage.finalCta" />
     </>
