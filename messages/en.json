@@ -16,7 +16,7 @@
         "ru": "RU",
         "uk": "UA",
         "en": "EN",
-        "aria": "Change language"
+        "ariaLabel": "Change language"
       }
     },
     "hero": {
