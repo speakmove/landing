@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import { cn } from '@/shared/model/libs/cn';
 import {
   CheckIcon,
-  ClockIcon,
   CoinIcon,
   Icon,
   MicIcon,
@@ -51,8 +50,6 @@ const HEADER_TONE_BY_ID: Record<string, string> = {
   certificate: 'bg-primary-pale text-primary',
 };
 
-const FALLBACK_ICON = <ClockIcon size={20} />;
-
 const BADGE_TONE_BY_KIND: Record<string, string> = {
   'coming-soon': 'bg-primary-pale text-primary-ink',
   new: 'bg-gold-accent text-ink',
@@ -92,7 +89,7 @@ const renderVisual = (tile: TAdvantageTile): ReactNode =>
  * and delegates the in-tile visual to a per-id component from `./visuals`.
  */
 export const AdvantageTile = ({ tile, className }: TProps) => {
-  const icon = HEADER_ICON_BY_ID[tile.id] ?? FALLBACK_ICON;
+  const icon = HEADER_ICON_BY_ID[tile.id];
   const tone = HEADER_TONE_BY_ID[tile.id] ?? 'bg-primary-pale text-primary';
 
   return (
@@ -113,9 +110,11 @@ export const AdvantageTile = ({ tile, className }: TProps) => {
         </span>
       ) : null}
 
-      <div className={cn('grid h-10 w-10 place-items-center rounded-xl', tone)}>{icon}</div>
+      {icon ? (
+        <div className={cn('grid h-10 w-10 place-items-center rounded-xl', tone)}>{icon}</div>
+      ) : null}
 
-      <h3 className="mt-4 mb-2 text-xl font-bold text-ink">{tile.title}</h3>
+      <h3 className={cn(icon ? 'mt-4' : 'mt-0', 'mb-2 text-xl font-bold text-ink')}>{tile.title}</h3>
       <p className="m-0 text-sm leading-relaxed text-muted">{tile.description}</p>
 
       {renderVisual(tile)}

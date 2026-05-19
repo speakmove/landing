@@ -14,13 +14,12 @@ import {
 import { LocaleSwitch } from '@/features/locale-switch';
 import { ANCHORS, PATHS, URLS } from '@/shared/config';
 
-type TLinkKey = 'howItWorks' | 'advantages' | 'compare' | 'pricing';
+type TLinkKey = 'howItWorks' | 'advantages' | 'pricing';
 type TNavItem = { key: TLinkKey; href: string };
 
 const NAV_ITEMS: TNavItem[] = [
   { key: 'howItWorks', href: PATHS.howItWorks },
   { key: 'advantages', href: `/#${ANCHORS.advantages}` },
-  { key: 'compare', href: `/#${ANCHORS.compare}` },
   { key: 'pricing', href: PATHS.pricing },
 ];
 

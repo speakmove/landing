@@ -1,735 +1,230 @@
 {
   "HomePage": {
+    "meta": {
+      "title": "SpeakMove — Speaking practice for UK immigrants",
+      "description": "Train the conversations you avoid: landlord, GP, work coach, school, bank, interview. By voice, inside Telegram. 15 minutes a day. £7.45/mo, 7-day free trial without a card."
+    },
     "nav": {
       "brand": "SpeakMove",
-      "brandCoinLabel": "SM",
+      "cta": "Open the bot",
       "links": {
-        "howItWorks": "Lorem ipsum 1",
-        "advantages": "Lorem ipsum 2",
-        "compare": "Lorem ipsum",
-        "pricing": "Lorem ipsum"
+        "howItWorks": "How it works",
+        "advantages": "What's inside",
+        "pricing": "Pricing"
       },
       "langToggle": {
-        "ariaLabel": "Язык сайта",
         "ru": "RU",
-        "uk": "UK",
-        "en": "EN"
-      },
-      "cta": "Lorem ipsum 3"
+        "uk": "UA",
+        "en": "EN",
+        "aria": "Change language"
+      }
     },
     "hero": {
       "eyebrow": {
         "items": [
-          "Lorem ipsum 4",
-          "Lorem ipsum 5",
-          "Lorem ipsum 6"
+          "7 UK scenarios",
+          "15 min a day",
+          "Feedback in RU / UA"
         ]
       },
       "title": {
-        "before": "Lorem ipsum",
-        "accent": "Lorem ipsum 7",
-        "after": "Lorem ipsum 8"
+        "before": "",
+        "accent": "The conversations",
+        "after": " you avoid in English. Practise them 15 minutes a day."
       },
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (9)",
+      "description": "An AI partner that plays landlord, GP, work coach or HR. Voice dialogues in Telegram. Feedback in Russian or Ukrainian.",
       "ctas": {
-        "primary": "Lorem ipsum 10",
-        "secondary": "Lorem ipsum 11"
+        "primary": "Try one scenario — free",
+        "secondary": "How it works"
       },
       "metaPoints": [
-        "Lorem ipsum 12",
-        "15 мин / день",
-        "от $12.99 / мес",
-        "Lorem ipsum 13"
+        "7 days free",
+        "No card required",
+        "Cancel in one click"
       ],
       "scenarioPicker": {
-        "ariaLabel": "Выбери свой сценарий",
+        "ariaLabel": "Pick your first scenario to practise",
         "cards": [
           {
-            "id": "child",
-            "title": "Lorem ipsum 14",
-            "subtitle": "Lorem ipsum dolor sit amet 15"
+            "id": "landlord",
+            "title": "Phone call with landlord",
+            "subtitle": "Broken heating, contract renewal"
           },
           {
-            "id": "self",
-            "title": "Lorem ipsum",
-            "subtitle": "Lorem ipsum dolor sit amet 16"
+            "id": "gp",
+            "title": "GP appointment",
+            "subtitle": "Describe symptoms, ask for a referral"
+          },
+          {
+            "id": "interview",
+            "title": "Job interview",
+            "subtitle": "Tell me about yourself, your experience"
+          },
+          {
+            "id": "smalltalk",
+            "title": "Small talk with a colleague",
+            "subtitle": "Weekend plans, weather, sport"
+          },
+          {
+            "id": "official",
+            "title": "Call to bank or government",
+            "subtitle": "HMRC, council, DWP, lost card"
+          },
+          {
+            "id": "school",
+            "title": "Parents evening",
+            "subtitle": "Talk about your child's progress"
+          },
+          {
+            "id": "workcoach",
+            "title": "Work coach at Jobcentre",
+            "subtitle": "What you searched, which applications"
           }
         ]
       },
       "phonePreview": {
-        "botName": "SpeakMove · bot",
-        "botStatus": "typing…",
-        "coinBalance": "127",
+        "botName": "SpeakMove",
+        "botStatus": "AI partner · online",
+        "coinBalance": "",
         "today": "Today",
+        "inputPlaceholder": "Message",
+        "micLabel": "Record voice message",
         "messages": [
           {
             "from": "bot",
-            "text": "Let's practice! Where do you work?",
-            "translation": "A2 · Listening & speaking",
-            "meta": "A2 · Listening & speaking"
+            "text": "Hello, Riverside Surgery. How can I help you today?",
+            "meta": "voice · 0:04"
           },
           {
             "from": "me",
-            "text": "I work at a small café near the station.",
-            "translation": "I work at a small café near the station."
+            "text": "Hi, I want to book appointment because my back hurts since one week.",
+            "meta": "voice · 0:07"
           },
           {
             "from": "bot",
-            "text": "Great pronunciation — 92%. ✓",
-            "translation": "Great pronunciation — 92%. ✓",
-            "reward": "+10 SM"
+            "text": "Good! 'since one week' → 'for a week'. And usually people say 'I'd like to book' — sounds more polite.",
+            "translation": "Feedback"
           },
           {
             "from": "bot",
-            "text": "Homework ready: describe your morning.",
-            "translation": "New homework: describe your morning.",
-            "highlight": "x2 coins"
+            "text": "How long have you had this pain — is it constant?",
+            "meta": "voice · 0:03"
           }
         ],
-        "micLabel": "Recording",
-        "micTime": "0:07",
-        "inputPlaceholder": "Message",
         "floatBubbles": [
           {
-            "title": "100 SM = $1",
-            "subtitle": "Cashback on lessons"
+            "title": "AI partner",
+            "subtitle": "Real British accent"
           },
           {
-            "title": "7 days streak",
-            "subtitle": "+50 SM streak bonus"
+            "title": "Feedback in your language",
+            "subtitle": "Clear what to fix"
           }
         ]
       }
     },
     "advantages": {
-      "kicker": "Lorem ipsum SpeakMove 28",
-      "title": "Lorem ipsum dolor sit amet 29",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (30)",
+      "kicker": "What's inside",
+      "title": "Not Duolingo. Not Speak. Not a tutor.",
+      "subtitle": "Functional practice on the specific situations of UK life — not general 'English'.",
       "tiles": [
         {
           "id": "voice",
-          "title": "Lorem ipsum 31",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (32)"
+          "title": "Voice, not text",
+          "description": "Speaking is your weak point, so the whole product is voice. The bot speaks in a British accent, you reply by voice."
         },
         {
-          "id": "coins",
-          "title": "Lorem ipsum dolor sit amet 33",
-          "description": "100 SM = $1, минимум для обмена $10 (для первых 200 — $5). Накопил — обменял на Amazon Gift Card или Visa Prepaid. За календарный месяц начисляется максимум 30% от стоимости подписки — защита, чтобы cashback оставался стабильным для всех. Монеты живут 12 месяцев с момента начисления. Для Украины cashback заменён скидкой −30% на Premium.",
-          "vizEquals": "100 SM → $1",
-          "vizCap": "Lorem ipsum 34"
+          "id": "uk-scenarios",
+          "title": "7 UK life scenarios",
+          "description": "Landlord, GP, work coach, your child's school, bank, job interview, small talk. The conversations that actually happen to an immigrant in the UK."
         },
         {
-          "id": "cefr",
-          "title": "Lorem ipsum dolor sit amet 35",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (36)",
-          "levels": [
-            "A1",
-            "A2",
-            "B1",
-            "B2",
-            "C1"
-          ],
-          "currentLevel": "A2"
+          "id": "native-feedback",
+          "title": "Feedback in your native language",
+          "description": "The bot explains the mistake in Russian or Ukrainian — clear what to fix and why."
         },
         {
-          "id": "homework",
-          "title": "Lorem ipsum 37",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (38)",
-          "badge": {
-            "text": "Lorem ipsum",
-            "kind": "new"
-          },
-          "items": [
-            {
-              "label": "Lorem ipsum",
-              "reward": "+5 SM"
-            },
-            {
-              "label": "Lorem ipsum",
-              "reward": "+5 SM"
-            },
-            {
-              "label": "Lorem ipsum",
-              "reward": "+10 SM"
-            }
-          ]
+          "id": "in-telegram",
+          "title": "Right inside Telegram",
+          "description": "No app, no signup form. Open the bot — and speak. 2 minutes to start."
         },
         {
-          "id": "certificate",
-          "title": "Lorem ipsum 39",
-          "description": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "badge": {
-            "text": "Lorem ipsum",
-            "kind": "coming-soon"
-          },
-          "certificateName": "Lorem ipsum SpeakMove 40",
-          "certificateIssuer": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-          "certificateStatus": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet."
+          "id": "honest-pricing",
+          "title": "Transparent pricing",
+          "description": "£7.45 per month. 7 days free, no card. Cancel anytime in one click or via support."
         }
       ]
     },
     "howItWorks": {
-      "kicker": "Lorem ipsum",
-      "title": "Lorem ipsum 41",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (42)",
+      "kicker": "How you practise",
+      "title": "Three steps. 15 minutes. Right inside Telegram.",
+      "subtitle": "The cycle repeats 5–8 times per session. No grades, no stress, no 'right answers'.",
       "steps": [
         {
-          "num": "01",
-          "title": "Lorem ipsum 43",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (44)"
+          "num": "1",
+          "title": "Pick a scenario",
+          "description": "From 7 UK life situations, pick what's burning right now — landlord, GP, work coach, school."
         },
         {
-          "num": "02",
-          "title": "Lorem ipsum 45",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (46)"
+          "num": "2",
+          "title": "Listen to a voice message",
+          "description": "The bot sends a phrase in English at real British pace. Replay as many times as you like."
         },
         {
-          "num": "03",
-          "title": "Lorem ipsum 47",
-          "description": "15 минут в день: голосовой диалог, короткое ДЗ. Каждый ответ — это монеты и прогресс по CEFR."
+          "num": "3",
+          "title": "Reply by voice",
+          "description": "Your pace, with mistakes — that's normal. Nobody is grading you."
         },
         {
-          "num": "04",
-          "title": "Lorem ipsum 48",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (49)"
+          "num": "4",
+          "title": "Get feedback in your language",
+          "description": "Within 5–10 seconds — a short correction in Russian or Ukrainian. Then the dialogue continues."
         }
       ]
-    },
-    "schedule": {
-      "kicker": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet 50",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (51)",
-      "cards": [
-        {
-          "id": "15min",
-          "badge": "Lorem ipsum 52",
-          "title": "15 минут / день",
-          "subtitle": "6 дней в неделю · 1 день отдыха",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (53)",
-          "days": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
-          ],
-          "activeDays": [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            false
-          ]
-        },
-        {
-          "id": "30min",
-          "badge": "Lorem ipsum",
-          "title": "30 минут × 3 раза в неделю",
-          "subtitle": "Lorem ipsum dolor sit amet 54",
-          "description": "Lorem ipsum dolor sit amet 55",
-          "days": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
-          ],
-          "activeDays": [
-            true,
-            false,
-            true,
-            false,
-            true,
-            false,
-            true
-          ]
-        }
-      ]
-    },
-    "compare": {
-      "kicker": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet 56",
-      "subtitle": "Lorem ipsum dolor sit amet 57",
-      "columns": [
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "SpeakMove"
-      ],
-      "rows": [
-        {
-          "feature": "Lorem ipsum 58",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum 59",
-          "values": [
-            {
-              "kind": "text",
-              "text": "только в Max ~$30/мес"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum 60",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum 61",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum 62",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum dolor sit amet 63"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum 64",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum 65"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum 66"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum 67",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum 68",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            },
-            {
-              "kind": "text",
-              "text": "Lorem ipsum"
-            }
-          ]
-        },
-        {
-          "feature": "Lorem ipsum",
-          "values": [
-            {
-              "kind": "text",
-              "text": "Free · $7"
-            },
-            {
-              "kind": "text",
-              "text": "$8–18"
-            },
-            {
-              "kind": "text",
-              "text": "$9–19"
-            },
-            {
-              "kind": "text",
-              "text": "$80–240+"
-            },
-            {
-              "kind": "text",
-              "text": "Free · $12.99–28.99"
-            }
-          ]
-        }
-      ],
-      "highlightColumn": "SpeakMove",
-      "footnote": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "footnoteLink": "Lorem ipsum"
-    },
-    "pricing": {
-      "kicker": "Lorem ipsum 69",
-      "title": "Lorem ipsum dolor sit amet 70",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (71)",
-      "billingToggle": {
-        "monthly": "Lorem ipsum",
-        "yearly": "Lorem ipsum",
-        "yearlySave": "Lorem ipsum"
-      },
-      "plans": [
-        {
-          "id": "free",
-          "name": "Lorem ipsum",
-          "price": {
-            "monthly": "$0",
-            "yearly": "$0"
-          },
-          "note": "Lorem ipsum dolor sit amet 72",
-          "features": [
-            "1 голосовой диалог в день (~2–3 минуты)",
-            "1 язык на выбор"
-          ],
-          "excluded": [
-            "Lorem ipsum 73",
-            "Lorem ipsum",
-            "Lorem ipsum 74"
-          ],
-          "cta": "Lorem ipsum 75"
-        },
-        {
-          "id": "plus",
-          "name": "Lorem ipsum",
-          "badge": "Lorem ipsum 76",
-          "wasPrice": {
-            "monthly": "$16.99 / мес",
-            "yearly": "$169 / год"
-          },
-          "price": {
-            "monthly": {
-              "amount": "12.99",
-              "period": "/мес"
-            },
-            "yearly": {
-              "amount": "129",
-              "period": "/год · $10.75/мес"
-            }
-          },
-          "note": "$0.42 в день — дешевле чашки кофе. И каждый день — урок по CEFR.",
-          "features": [
-            "Lorem ipsum dolor sit amet 77",
-            "1 язык",
-            "Lorem ipsum",
-            "Lorem ipsum 78",
-            "Lorem ipsum dolor sit amet 79",
-            "Lorem ipsum dolor sit amet 80",
-            "+100 SM welcome-бонус (копится, активируется при апгрейде)"
-          ],
-          "excluded": [
-            "Lorem ipsum dolor sit amet 81",
-            "Lorem ipsum",
-            "Lorem ipsum 82"
-          ],
-          "cta": "Lorem ipsum 83"
-        },
-        {
-          "id": "premium",
-          "name": "Lorem ipsum",
-          "wasPrice": {
-            "monthly": "$28.99 / мес",
-            "yearly": "$239 / год"
-          },
-          "price": {
-            "monthly": {
-              "amount": "22.99",
-              "period": "/мес"
-            },
-            "yearly": {
-              "amount": "189",
-              "period": "/год · $15.75/мес"
-            }
-          },
-          "note": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (84)",
-          "features": [
-            "Lorem ipsum",
-            "Lorem ipsum dolor sit amet 85",
-            "Lorem ipsum 86",
-            "Lorem ipsum dolor sit amet 87",
-            "Lorem ipsum dolor sit amet 88",
-            "Lorem ipsum 89",
-            "Lorem ipsum dolor sit amet 90",
-            "Lorem ipsum 91",
-            "+250 SM welcome-бонус"
-          ],
-          "cta": "Lorem ipsum 92"
-        }
-      ],
-      "footer": "Оплата картой или Telegram Stars · Минимум для обмена $10 ($5 для первых 200) · Cashback в gift cards без комиссии · Все цены включают VAT"
-    },
-    "ukrainianProgramme": {
-      "flag": "🇺🇦",
-      "kicker": "Lorem ipsum 93",
-      "title": "Lorem ipsum dolor sit amet 94",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (95)",
-      "pricesTitle": "Lorem ipsum 96",
-      "prices": [
-        {
-          "label": "Lorem ipsum 97",
-          "standard": "$12.99/міс",
-          "ua": "$12.99/міс — без знижки"
-        },
-        {
-          "label": "Lorem ipsum 98",
-          "standard": "$16.99/міс",
-          "ua": "$16.99/міс — без знижки"
-        },
-        {
-          "label": "Lorem ipsum 99",
-          "standard": "$129/рік",
-          "ua": "$129/рік — без знижки"
-        },
-        {
-          "label": "Lorem ipsum 100",
-          "standard": "$22.99/міс",
-          "ua": "$15.99/міс — знижка −30%"
-        },
-        {
-          "label": "Lorem ipsum 101",
-          "standard": "$28.99/міс",
-          "ua": "$19.99/міс — знижка −30%"
-        },
-        {
-          "label": "Lorem ipsum 102",
-          "standard": "$189/рік",
-          "ua": "$129/рік — знижка −30%"
-        }
-      ],
-      "features": [
-        "Lorem ipsum dolor sit amet 103",
-        "Lorem ipsum dolor sit amet 104",
-        "Lorem ipsum dolor sit amet 105",
-        "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet."
-      ],
-      "qualification": {
-        "title": "Lorem ipsum 106",
-        "items": [
-          "Lorem ipsum dolor sit amet 107",
-          "Lorem ipsum 108",
-          "Lorem ipsum dolor sit amet 109"
-        ]
-      },
-      "fallback": {
-        "title": "Lorem ipsum 110",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (111)"
-      },
-      "disclaimer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "cta": "Lorem ipsum dolor sit amet 112",
-      "tableHeader": {
-        "label": "Plan",
-        "standard": "Standard",
-        "ua": "For Ukraine"
-      },
-      "flagAriaLabel": "Ukrainian flag"
     },
     "finalCta": {
-      "title": "Lorem ipsum 113",
-      "subtitle": "Первые 200 — фиксируют цену на 3 месяца с момента запуска: Plus $12.99 вместо $16.99, Premium $22.99 вместо $28.99. После — стандартные тарифы.",
-      "bonus": {
-        "badge": "Lorem ipsum 114",
-        "text": "Lorem ipsum dolor sit amet 115"
-      },
-      "cta": "Lorem ipsum 116",
-      "meta": "Lorem ipsum dolor sit amet 117",
+      "title": "Open the bot. Try one scenario.",
+      "subtitle": "2 minutes to start. 15 minutes for the first session. Then up to you.",
+      "cta": "Open SpeakMove in Telegram",
+      "meta": "7 days free · No card · Cancel in one click or via support",
       "fomo": {
-        "_TODO_backend": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (118)",
-        "current": 157,
-        "total": 200,
-        "bonusThreshold": 15,
-        "format": "Lorem ipsum 119",
-        "label": "seats taken"
+        "label": "V0 test progress",
+        "current": 0,
+        "total": 3,
+        "plansLine": ""
       }
     },
     "footer": {
       "brand": "SpeakMove",
-      "tagline": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "legalEntity": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "researchNotice": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "links": [
-        {
-          "label": "Lorem ipsum",
-          "href": "/about"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/terms"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/privacy"
-        },
-        {
-          "label": "Lorem ipsum 120",
-          "href": "mailto:hi@speakmove.app"
-        }
-      ],
-      "socialTitle": "Lorem ipsum 122",
+      "tagline": "Voice English practice on UK scenarios. V0 — early version. Direct line to me in Telegram.",
+      "copyright": "© 2026 Dmytro Fenko, trading as SpeakMove.",
+      "legalEntity": "Operator: Dmytro Fenko, UK sole trader, trading as SpeakMove. Registered with the UK Information Commissioner's Office (ICO) as a data controller, registration number ZC141876 (verify at ico.org.uk). Contact: hi@speakmove.app.",
+      "researchNotice": "SpeakMove is currently V0 (early version). Depending on V0 test results the legal form may change (UK Ltd) — we'll notify by email or in TG in advance.",
+      "socialTitle": "We're on social",
       "socialLinks": [
         {
           "id": "telegram",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть Telegram-канал SpeakMove",
+          "label": "Telegram",
+          "ariaLabel": "Open the SpeakMove Telegram channel",
           "href": "https://t.me/speakmove"
         },
         {
           "id": "instagram",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть Instagram SpeakMove",
+          "label": "Instagram",
+          "ariaLabel": "Open SpeakMove Instagram",
           "href": "https://instagram.com/speakmove"
         },
         {
           "id": "tiktok",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть TikTok SpeakMove",
+          "label": "TikTok",
+          "ariaLabel": "Open SpeakMove TikTok",
           "href": "https://tiktok.com/@speakmove"
         },
         {
           "id": "youtube",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть YouTube-канал SpeakMove",
+          "label": "YouTube",
+          "ariaLabel": "Open SpeakMove YouTube channel",
           "href": "https://youtube.com/@speakmove"
-        },
-        {
-          "id": "twitter",
-          "label": "X",
-          "ariaLabel": "Открыть X (Twitter) SpeakMove",
-          "href": "https://x.com/speakmove"
         }
       ],
       "columns": [
@@ -745,26 +240,26 @@
               "href": "/pricing"
             },
             {
-              "label": "Comparison",
-              "href": "/#compare"
+              "label": "Open in Telegram",
+              "href": "https://t.me/speakmove_bot"
             }
           ]
         },
         {
-          "title": "Company",
+          "title": "Contact",
           "links": [
             {
-              "label": "About",
-              "href": "/about"
+              "label": "hi@speakmove.app",
+              "href": "mailto:hi@speakmove.app"
             },
             {
-              "label": "Contact",
-              "href": "mailto:hi@speakmove.app"
+              "label": "Telegram channel",
+              "href": "https://t.me/speakmove"
             }
           ]
         },
         {
-          "title": "Documents",
+          "title": "Legal",
           "links": [
             {
               "label": "Privacy",
@@ -788,2176 +283,246 @@
         {
           "label": "GDPR-compliant"
         }
-      ],
-      "copyright": "© 2026 SpeakMove. All rights reserved."
-    },
-    "meta": {
-      "title": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "description": "Telegram-бот для изучения английского. Голосовые диалоги, ДЗ с x2 монет, прогресс по CEFR. Cashback за уроки — Amazon Gift Card или Visa Prepaid. Для Украины — скидка 30% на Premium. От $12.99/мес в раннем доступе для первых 200 на 3 месяца с момента запуска. 15 минут в день.",
-      "keywords": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (128)",
-      "ogTitle": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "ogDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (129)",
-      "canonical": "https://speakmove.app/",
-      "ai": {
-        "summary": "SpeakMove — Telegram-бот для изучения языка с голосовыми диалогами на основе AI. На старте — английский; немецкий и норвежский в roadmap. Пользователи получают монеты (SM) за каждый урок и обменивают их на подарочные карты Amazon или Visa Prepaid (курс: 100 SM = $1, минимальный обмен $10; $5 для первых 200 в раннем доступе). Для пользователей из Украины cashback заменён скидкой −30% на Premium. Структура обучения построена по системе CEFR (A1–C1). Сейчас SpeakMove — research-проект, оператор: Dmytro Fenko, UK sole trader (ICO № ZC141876). При запуске коммерческого продукта возможна смена формы на UK Ltd с уведомлением подписчиков waitlist.",
-        "shortAnswer": "SpeakMove — это Telegram-бот для изучения языка, где за каждый урок начисляются монеты (SM), обмениваемые на подарочные карты Amazon или Visa Prepaid (100 SM = $1, минимум $10). Для Украины вместо cashback — скидка 30% на Premium.",
-        "entity": {
-          "type": "EducationalApplication",
-          "category": "Lorem ipsum 132",
-          "platform": "Lorem ipsum 133",
-          "languages": [
-            "Lorem ipsum 134",
-            "Lorem ipsum 135",
-            "Lorem ipsum 136"
-          ],
-          "framework": "Lorem ipsum 137",
-          "publisher": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-          "country": "Lorem ipsum 138",
-          "founded": "2026",
-          "pricingModel": "Freemium subscription (Free навсегда / Plus от $12.99/мес в раннем доступе, $16.99/мес далее / Premium от $22.99/мес в раннем доступе, $28.99/мес далее; ранние цены фиксируются для первых 200 пользователей на 3 месяца с момента запуска; для пользователей из Украины — скидка −30% на Premium)"
-        },
-        "keyFacts": [
-          "Lorem ipsum dolor sit amet 139",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (140)",
-          "Курс монет: 1 SM = $0.01, 100 SM = $1.",
-          "Минимальный обмен: $10 (1 000 SM). Для первых 200 в раннем доступе — $5 (500 SM).",
-          "Cashback доступен только на тарифе Premium ($22.99/мес в раннем доступе, $28.99/мес после).",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (141)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (142)",
-          "Lorem ipsum dolor sit amet 143",
-          "Plus ($12.99/мес в раннем доступе, $16.99/мес после первых 200): расширенный лимит практики, без рекламы, прогресс по CEFR, накопление бонусов (Plus — без cashback).",
-          "Premium ($22.99/мес в раннем доступе, $28.99/мес после первых 200): всё из Plus, ДЗ с x2 монет, cashback в gift cards. Полный родительский дашборд — V1.1; в V1 родителю приходит еженедельный email-отчёт о прогрессе ребёнка.",
-          "Lorem ipsum dolor sit amet 144",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (145)",
-          "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        ],
-        "useCases": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (146)",
-          "Lorem ipsum dolor sit amet 147",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (148)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (149)"
-        ],
-        "differentiators": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (150)",
-          "Lorem ipsum dolor sit amet 151",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (152)",
-          "Lorem ipsum dolor sit amet 153",
-          "Lorem ipsum dolor sit amet 154",
-          "Lorem ipsum dolor sit amet 155"
-        ],
-        "comparedTo": [
-          {
-            "competitor": "Lorem ipsum",
-            "differenceVsSpeakMove": "Duolingo требует установки приложения; в бесплатной версии и в Super ($14/мес) есть только голосовые упражнения по типу «повтори фразу», а полноценные AI-диалоги доступны только на тарифе Duolingo Max (~$30/мес — в 4 раза дороже SpeakMove Plus). Монеты Duolingo виртуальные и не конвертируются в деньги, нет четкой CEFR-структуры с измеримой прогрессией."
-          },
-          {
-            "competitor": "Lorem ipsum",
-            "differenceVsSpeakMove": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (156)"
-          },
-          {
-            "competitor": "Lorem ipsum",
-            "differenceVsSpeakMove": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (157)"
-          },
-          {
-            "competitor": "Lorem ipsum",
-            "differenceVsSpeakMove": "Репетитор стоит $80–240+ в месяц (vs $22.99 у Premium в раннем доступе / $28.99 после первых 200), привязан к расписанию, не работает 24/7."
-          }
-        ],
-        "faq": [
-          {
-            "question": "Lorem ipsum SpeakMove 158",
-            "answer": "SpeakMove — это Telegram-бот для изучения языка с голосовыми AI-диалогами. На старте — английский. За каждый урок пользователь получает монеты (SM), которые на тарифе Premium можно обменять на подарочные карты Amazon или Visa Prepaid. Курс — 100 SM = $1; за календарный месяц начисляется до 30% от стоимости подписки. Для пользователей из Украины cashback заменён прямой скидкой 30% только на Premium (Plus идёт по обычной цене — на нём cashback и так не предусмотрен)."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "answer": "За каждый голосовой диалог начисляется +5 SM на Plus и +10 SM на Premium; за домашние задания (только Premium) — те же +10 SM; за 7 дней подряд — бонус +25 SM (Plus) / +50 SM (Premium); за 30 дней подряд — +100 / +200 SM. Курс: 100 SM = $1. За календарный месяц начисляется максимум 30% от стоимости месячной подписки — защита, чтобы cashback оставался стабильным для всех. Минимальный обмен — $10 (1 000 SM); для первых 200 пользователей в раннем доступе — $5 (500 SM). Обмен доступен только на тарифе Premium. Варианты подарочных карт: Amazon (DE / UK / .COM) или Visa Prepaid (универсальная). Монеты живут 12 месяцев с момента начисления. Для пользователей из Украины cashback заменён скидкой 30% на Premium."
-          },
-          {
-            "question": "Lorem ipsum SpeakMove 159",
-            "answer": "Бесплатный план: 1 диалог в день, без накопления монет. Plus: $12.99/мес в раннем доступе ($16.99/мес после первых 200) — расширенная практика, прогресс по CEFR, сертификат при завершении уровня. Premium: $22.99/мес в раннем доступе ($28.99/мес после первых 200) — всё из Plus + ДЗ с x2 монет, cashback в gift cards (Amazon или Visa Prepaid). Полный родительский дашборд появится в V1.1; в первом релизе родитель получает еженедельный email-отчёт о прогрессе ребёнка. Для пользователей из Украины — скидка −30% на Premium-планы. Plus (месячный и годовой) идёт по обычной цене. Скидочная цена раннего доступа фиксируется на 3 месяца с момента запуска."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (160)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 161",
-            "answer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (162)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "answer": "Главное отличие — монеты в SpeakMove обмениваются на реальные подарочные карты Amazon или Visa Prepaid, тогда как в Duolingo они виртуальны. Кроме того, SpeakMove работает прямо в Telegram без установки приложения, и полноценные голосовые AI-диалоги доступны уже на тарифе Plus за $12.99/мес в раннем доступе ($16.99/мес после первых 200) — в Duolingo они есть только на Duolingo Max (~$30/мес, в 3 раза дороже). Для пользователей из Украины SpeakMove предлагает скидку 30% на Premium вместо cashback."
-          },
-          {
-            "question": "Lorem ipsum 163",
-            "answer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 164",
-            "answer": "Lorem ipsum dolor sit amet 165"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 166",
-            "answer": "Первые 200 пользователей фиксируют скидочные цены (Plus $12.99 вместо $16.99, Premium $22.99 вместо $28.99) на 3 месяца с момента официального запуска. После этого периода действуют стандартные тарифы."
-          },
-          {
-            "question": "Lorem ipsum 167",
-            "answer": "Да — за каждый календарный месяц максимум 30% от стоимости месячной подписки начисляется в виде монет (для Premium $22.99 — это до 690 SM ≈ $6.90). Этот лимит — защита, чтобы cashback оставался устойчивым для всех учеников. Накопленные монеты переходят в следующий месяц и копятся до порога обмена ($10, для первых 200 — $5). Срок жизни монет — 12 месяцев с момента начисления."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 168",
-            "answer": "Монеты живут 12 месяцев с момента начисления; после отмены подписки — ещё 30 дней на вывод накопленного. Если хочешь удалить аккаунт раньше и у тебя на счёте есть монеты — напиши в поддержку, на Premium-плане поможем вывести при балансе от $10 (1 000 SM)."
-          }
-        ],
-        "robots": "Lorem ipsum dolor sit amet 169",
-        "aiBots": {
-          "GPTBot": "Lorem ipsum",
-          "OAI-SearchBot": "Lorem ipsum",
-          "ChatGPT-User": "Lorem ipsum",
-          "ClaudeBot": "Lorem ipsum",
-          "anthropic-ai": "Lorem ipsum",
-          "PerplexityBot": "Lorem ipsum",
-          "Google-Extended": "Lorem ipsum",
-          "Bingbot": "Lorem ipsum"
-        }
-      },
-      "structuredData": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Lorem ipsum 171",
-            "@id": "https://speakmove.app/#organization",
-            "name": "SpeakMove",
-            "url": "https://speakmove.app",
-            "logo": "https://speakmove.app/og/logo.png",
-            "foundingDate": "2026",
-            "address": {
-              "@type": "Lorem ipsum 175",
-              "addressCountry": "GB"
-            },
-            "sameAs": [
-              "Lorem ipsum 176",
-              "Lorem ipsum dolor sit amet 177",
-              "Lorem ipsum 178",
-              "Lorem ipsum dolor sit amet 179",
-              "Lorem ipsum 180"
-            ],
-            "contactPoint": {
-              "@type": "Lorem ipsum 181",
-              "email": "Lorem ipsum 182",
-              "contactType": "Lorem ipsum 183"
-            }
-          },
-          {
-            "@type": "Lorem ipsum 184",
-            "@id": "https://speakmove.app/#app",
-            "name": "SpeakMove",
-            "applicationCategory": "Lorem ipsum 186",
-            "applicationSubCategory": "Lorem ipsum 187",
-            "operatingSystem": "Lorem ipsum dolor sit amet 188",
-            "inLanguage": [
-              "Lorem ipsum"
-            ],
-            "teaches": [
-              "Lorem ipsum 189"
-            ],
-            "educationalLevel": "Lorem ipsum 190",
-            "offers": [
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum",
-                "price": "0",
-                "priceCurrency": "USD",
-                "description": "1 диалог в день, без получения и вывода монет"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum",
-                "price": "12.99",
-                "priceCurrency": "USD",
-                "billingDuration": "P1M",
-                "description": "Lorem ipsum dolor sit amet 191"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum",
-                "price": "22.99",
-                "priceCurrency": "USD",
-                "billingDuration": "P1M",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (192)"
-              }
-            ],
-            "publisher": {
-              "@id": "https://speakmove.app/#organization"
-            }
-          },
-          {
-            "@type": "Lorem ipsum",
-            "mainEntity": "Lorem ipsum dolor sit amet 194"
-          }
-        ]
-      }
+      ]
     }
   },
   "HowItWorksPage": {
-    "nav": {
-      "brand": "SpeakMove",
-      "brandCoinLabel": "SM",
-      "links": {
-        "howItWorks": "Lorem ipsum 195",
-        "advantages": "Lorem ipsum 196",
-        "compare": "Lorem ipsum",
-        "pricing": "Lorem ipsum"
-      },
-      "langToggle": {
-        "ariaLabel": "Язык сайта",
-        "ru": "RU",
-        "uk": "UK",
-        "en": "EN"
-      },
-      "cta": "Lorem ipsum 197"
+    "meta": {
+      "title": "How SpeakMove works — Voice training on UK scenarios",
+      "description": "15 minutes of voice conversation a day. 7 scenarios for UK immigrants. Feedback in Russian or Ukrainian. Right in Telegram, no app."
     },
     "hero": {
-      "crumb": "Lorem ipsum 198",
-      "title": "Lorem ipsum dolor sit amet 199",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (200)",
+      "crumb": "How it works",
+      "title": "15 minutes of voice conversation a day. On the situations that actually happen to an immigrant in the UK.",
+      "description": "A voice AI partner inside Telegram. No app, no signup form. Just open the bot and speak.",
       "stats": [
         {
-          "value": "Lorem ipsum",
-          "label": "Lorem ipsum 201"
+          "value": "7",
+          "label": "UK life scenarios"
         },
         {
-          "value": "15 мин",
-          "label": "Lorem ipsum 202"
+          "value": "15",
+          "label": "minutes a day"
         },
         {
-          "value": "Lorem ipsum",
-          "label": "Lorem ipsum 203"
-        },
-        {
-          "value": "$10",
-          "label": "Lorem ipsum 204"
+          "value": "RU / UA",
+          "label": "feedback in your language"
         }
       ]
     },
     "flow": {
-      "kicker": "Lorem ipsum 205",
-      "title": "Lorem ipsum 206",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (207)",
+      "kicker": "Inside a session",
+      "title": "One cycle is two minutes. A session is 5–8 cycles.",
+      "subtitle": "You won't learn the language in one session. But in 30 sessions you'll notice one or two specific situations have stopped scaring you.",
       "steps": [
         {
           "num": "1",
-          "title": "Lorem ipsum 208",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (209)",
-          "tag": "Lorem ipsum"
+          "title": "The bot sends a voice message",
+          "description": "An English phrase, real pace, real British accent. Replay as many times as you like."
         },
         {
           "num": "2",
-          "title": "Lorem ipsum dolor sit amet 210",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (211)",
-          "tag": "Lorem ipsum"
+          "title": "You record a reply",
+          "description": "By voice, in English. With mistakes — that's normal. Your pace."
         },
         {
           "num": "3",
-          "title": "Lorem ipsum dolor sit amet 212",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (213)",
-          "tag": "Lorem ipsum 214"
+          "title": "See the transcript",
+          "description": "What got transcribed from your speech — you can fix it or replay."
         },
         {
           "num": "4",
-          "title": "Lorem ipsum dolor sit amet 215",
-          "description": "Lorem ipsum dolor sit amet 216",
-          "tag": "+10 SM за диалог",
-          "tagStyle": "Lorem ipsum"
-        },
-        {
-          "num": "5",
-          "title": "Lorem ipsum 217",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (218)",
-          "tag": "+5 SM за ДЗ"
-        },
-        {
-          "num": "6",
-          "title": "Lorem ipsum dolor sit amet 219",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (220)",
-          "tag": "+50 SM за 7 дней"
-        },
-        {
-          "num": "7",
-          "title": "Lorem ipsum dolor sit amet 221",
-          "description": "Premium: 1 000 SM = $10 (500 SM = $5 для первых 200), обмен на Amazon Gift Card (DE / UK / .COM) или Visa Prepaid (универсальная). Доставка по email до 48 часов в V1, мгновенно в V1.1. Для пользователей из Украины cashback заменён скидкой −30% на Premium.",
-          "tag": "Lorem ipsum"
+          "title": "Get feedback in your language",
+          "description": "A short correction in Russian or Ukrainian (1–2 lines), then the bot's next phrase."
         }
       ],
       "phonePreview": {
         "botName": "SpeakMove",
-        "botStatus": "Lorem ipsum 222",
+        "botStatus": "GP appointment · online",
         "messages": [
           {
             "from": "bot",
-            "text": "Lorem ipsum dolor sit amet 223",
-            "translation": "Lorem ipsum 224"
-          },
-          {
-            "from": "bot",
-            "type": "voice",
-            "duration": "0:04"
+            "text": "Hello, Riverside Surgery. How can I help you today?",
+            "meta": "voice · 0:04"
           },
           {
             "from": "me",
-            "type": "voice",
-            "duration": "0:03"
+            "text": "Hi, I want to book appointment because my back hurts since one week.",
+            "meta": "voice · 0:07"
           },
           {
             "from": "bot",
-            "text": "Lorem ipsum dolor sit amet 225",
-            "reward": "+75"
+            "text": "Good! 'since one week' → 'for a week'. And usually people say 'I'd like to book' — sounds more polite.",
+            "translation": "Feedback"
           },
           {
             "from": "bot",
-            "type": "homework",
-            "text": "Lorem ipsum dolor sit amet 226",
-            "translation": "Lorem ipsum 227"
+            "text": "How long have you had this pain — is it constant?",
+            "meta": "voice · 0:03"
           }
         ]
-      }
-    },
-    "cefr": {
-      "kicker": "Lorem ipsum 228",
-      "title": "Lorem ipsum dolor sit amet 229",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (230)",
-      "levels": [
-        {
-          "code": "A1",
-          "title": "Lorem ipsum",
-          "subtitle": "Lorem ipsum dolor sit amet 231",
-          "weeks": "Lorem ipsum"
-        },
-        {
-          "code": "A2",
-          "title": "Lorem ipsum",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (232)",
-          "weeks": "Lorem ipsum",
-          "active": true
-        },
-        {
-          "code": "B1",
-          "title": "Lorem ipsum 233",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (234)",
-          "weeks": "Lorem ipsum"
-        },
-        {
-          "code": "B2",
-          "title": "Lorem ipsum 235",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (236)",
-          "weeks": "Lorem ipsum"
-        },
-        {
-          "code": "C1",
-          "title": "Lorem ipsum",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (237)",
-          "weeks": "Lorem ipsum"
-        }
-      ],
-      "side": {
-        "title": "Lorem ipsum 238",
-        "items": [
-          "Lorem ipsum dolor sit amet 239",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (240)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (241)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (242)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (243)",
-          "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        ]
-      }
-    },
-    "smart": {
-      "kicker": "Lorem ipsum 244",
-      "title": "Lorem ipsum dolor sit amet 245",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (246)",
-      "criteria": [
-        {
-          "letter": "S",
-          "eng": "Lorem ipsum",
-          "title": "Lorem ipsum",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (247)"
-        },
-        {
-          "letter": "M",
-          "eng": "Lorem ipsum",
-          "title": "Lorem ipsum",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (248)"
-        },
-        {
-          "letter": "A",
-          "eng": "Lorem ipsum",
-          "title": "Lorem ipsum",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (249)"
-        },
-        {
-          "letter": "R",
-          "eng": "Lorem ipsum",
-          "title": "Lorem ipsum",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (250)"
-        },
-        {
-          "letter": "T",
-          "eng": "Lorem ipsum",
-          "title": "Lorem ipsum",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (251)"
-        }
-      ]
-    },
-    "schedule": {
-      "kicker": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet 252",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (253)",
-      "cards": [
-        {
-          "id": "15min",
-          "badge": "Lorem ipsum 254",
-          "title": "15 мин × 6 дней",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (255)",
-          "days": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
-          ],
-          "activeDays": [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            false
-          ],
-          "weekTotal": "90 мин",
-          "streakNote": "Lorem ipsum 256"
-        },
-        {
-          "id": "30min",
-          "title": "30 мин × 3 дня в неделю",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (257)",
-          "days": [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum"
-          ],
-          "activeDays": [
-            true,
-            false,
-            true,
-            false,
-            true,
-            false,
-            true
-          ],
-          "weekTotal": "90 мин",
-          "streakNote": "Lorem ipsum 258"
-        }
-      ]
-    },
-    "coinLoop": {
-      "kicker": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet 259",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (260)",
-      "earn": {
-        "title": "1 · Зарабатываешь",
-        "rows": [
-          {
-            "what": "Lorem ipsum 261",
-            "amount": "+10 SM"
-          },
-          {
-            "what": "Lorem ipsum 262",
-            "amount": "+5 SM × 2"
-          },
-          {
-            "what": "7 дней подряд",
-            "amount": "+50 SM"
-          },
-          {
-            "what": "Lorem ipsum 263",
-            "amount": "+100 SM"
-          },
-          {
-            "what": "Lorem ipsum 264",
-            "amount": "+100–100 SM"
-          }
-        ]
-      },
-      "outcome": {
-        "title": "2 · Обмениваешь на gift card",
-        "rows": [
-          {
-            "what": "100 SM",
-            "amount": "= $1"
-          },
-          {
-            "what": "1 000 SM · минимум",
-            "amount": "= $10"
-          },
-          {
-            "what": "500 SM · минимум для первых 200",
-            "amount": "= $5"
-          },
-          {
-            "what": "Lorem ipsum 265",
-            "amount": "Lorem ipsum 266"
-          },
-          {
-            "what": "Lorem ipsum 267",
-            "amount": "$0"
-          },
-          {
-            "what": "Lorem ipsum",
-            "amount": "Lorem ipsum"
-          },
-          {
-            "what": "Lorem ipsum",
-            "amount": "Lorem ipsum"
-          }
-        ],
-        "footnote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (268)"
       }
     },
     "privacy": {
-      "kicker": "Lorem ipsum 269",
-      "title": "Lorem ipsum dolor sit amet 270",
-      "subtitle": "Lorem ipsum dolor sit amet 271",
+      "kicker": "How time is counted",
+      "title": "Transparent — how 15 minutes works.",
+      "subtitle": "No hidden rules. No 'fair use' in small print.",
       "cards": [
         {
+          "id": "voice-time",
+          "title": "Time counts only when you speak",
+          "description": "Listening to the bot doesn't count. Re-recording a phrase doesn't count either. No surprises."
+        },
+        {
+          "id": "weekly-limit",
+          "title": "Free trial — 15 minutes over 7 days",
+          "description": "One pool of minutes across all 7 scenarios. On Pro it's 60 minutes per week, reset every Monday."
+        },
+        {
+          "id": "pause",
+          "title": "Pause on the fly",
+          "description": "If you stop mid-session, the timer stops. You'll continue tomorrow, minutes won't burn."
+        },
+        {
+          "id": "voice-storage",
+          "title": "Voice recordings deleted in 24h",
+          "description": "Audio is transcribed and deleted. The transcript is kept for your progress — you can delete it in /settings."
+        },
+        {
           "id": "gdpr",
-          "title": "Lorem ipsum 272",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (273)"
+          "title": "GDPR-compliant",
+          "description": "Data isn't shared with third parties. Full deletion on request — one email to hi@speakmove.app."
         },
         {
-          "id": "encryption",
-          "title": "Lorem ipsum",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (274)"
-        },
-        {
-          "id": "consent",
-          "title": "Lorem ipsum 275",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (276)"
-        },
-        {
-          "id": "moderation",
-          "title": "Lorem ipsum 277",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (278)"
-        },
-        {
-          "id": "cancel",
-          "title": "Lorem ipsum 279",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (280)"
-        },
-        {
-          "id": "export",
-          "title": "Lorem ipsum 281",
-          "badge": "Lorem ipsum",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (282)"
+          "id": "v0-honesty",
+          "title": "This is V0",
+          "description": "Early version. Not every scenario is perfectly polished, bugs are possible. Direct line to me in TG — message me, I'll fix it."
         }
       ]
     },
     "finalCta": {
-      "title": "Lorem ipsum 283",
-      "subtitle": "Первые 200 — фиксируют цену на 3 месяца с момента запуска: Plus $12.99 вместо $16.99, Premium $22.99 вместо $28.99. После — стандартные тарифы.",
-      "bonus": {
-        "badge": "Lorem ipsum 284",
-        "text": "Lorem ipsum dolor sit amet 285"
-      },
-      "cta": "Lorem ipsum 286",
-      "meta": "Lorem ipsum dolor sit amet 287",
+      "title": "Open the bot. Try one scenario.",
+      "subtitle": "2 minutes to start. 15 minutes for the first session.",
+      "cta": "Open SpeakMove in Telegram",
+      "meta": "7 days free · No card · Cancel in one click or via support",
       "fomo": {
-        "_TODO_backend": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (288)",
-        "current": 157,
-        "total": 200,
-        "bonusThreshold": 15,
-        "format": "Lorem ipsum 289",
-        "label": "seats taken"
-      }
-    },
-    "footer": {
-      "brand": "SpeakMove",
-      "tagline": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "legalEntity": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "researchNotice": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "links": [
-        {
-          "label": "Lorem ipsum",
-          "href": "/about"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/terms"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/privacy"
-        },
-        {
-          "label": "Lorem ipsum 290",
-          "href": "mailto:hi@speakmove.app"
-        }
-      ],
-      "socialTitle": "Lorem ipsum 292",
-      "socialLinks": [
-        {
-          "id": "telegram",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть Telegram-канал SpeakMove",
-          "href": "https://t.me/speakmove"
-        },
-        {
-          "id": "instagram",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть Instagram SpeakMove",
-          "href": "https://instagram.com/speakmove"
-        },
-        {
-          "id": "tiktok",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть TikTok SpeakMove",
-          "href": "https://tiktok.com/@speakmove"
-        },
-        {
-          "id": "youtube",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть YouTube-канал SpeakMove",
-          "href": "https://youtube.com/@speakmove"
-        },
-        {
-          "id": "twitter",
-          "label": "X",
-          "ariaLabel": "Открыть X (Twitter) SpeakMove",
-          "href": "https://x.com/speakmove"
-        }
-      ]
-    },
-    "meta": {
-      "title": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "description": "Открой Telegram и начни говорить. Голосовые AI-диалоги, ДЗ с x2 монет, прогресс по CEFR A1 → C1. Cashback в Amazon Gift Card или Visa Prepaid от $10. Для Украины — скидка 30%. Без установки приложения.",
-      "keywords": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (298)",
-      "ogTitle": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "ogDescription": "7 шагов от первого «Start» до cashback в gift cards. Голосовой AI-диалог, ДЗ с x2 монет, CEFR A1 → C1. Без установки приложения.",
-      "canonical": "https://speakmove.app/how-it-works",
-      "ai": {
-        "summary": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "shortAnswer": "SpeakMove работает как чат в Telegram: открываешь бота, выбираешь уровень, голосом проходишь AI-диалог (бот отвечает примерно за 2 секунды), получаешь монеты (SM) за каждый урок и на Premium обмениваешь их на подарочные карты Amazon Gift Card или Visa Prepaid (минимум $10, 100 SM = $1). Для пользователей из Украины cashback заменён скидкой −30% на Premium.",
-        "keyFacts": [
-          "Lorem ipsum dolor sit amet 300",
-          "Lorem ipsum dolor sit amet 301",
-          "Lorem ipsum dolor sit amet 302",
-          "Lorem ipsum dolor sit amet 303",
-          "Lorem ipsum dolor sit amet 304",
-          "Lorem ipsum dolor sit amet 305",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (306)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (307)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (308)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (309)",
-          "Курс монет: 100 SM = $1, минимальный обмен — 1 000 SM = $10. Для первых 200 в раннем доступе — 500 SM = $5.",
-          "Комиссия за обмен: $0 (Tremendous gift cards идут без удержаний).",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (310)",
-          "Lorem ipsum dolor sit amet 311",
-          "Lorem ipsum dolor sit amet 312",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (313)"
-        ],
-        "howToSteps": [
-          {
-            "name": "Lorem ipsum 314",
-            "text": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet."
-          },
-          {
-            "name": "Lorem ipsum 315",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (316)"
-          },
-          {
-            "name": "Lorem ipsum dolor sit amet 317",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (318)"
-          },
-          {
-            "name": "Lorem ipsum dolor sit amet 319",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (320)"
-          },
-          {
-            "name": "Lorem ipsum dolor sit amet 321",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (322)"
-          },
-          {
-            "name": "Lorem ipsum 323",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (324)"
-          },
-          {
-            "name": "Lorem ipsum 325",
-            "text": "На Premium: при балансе от 1 000 SM ($10; для первых 200 — 500 SM / $5) выбрать карту — Amazon Gift Card (DE / UK / .COM) или Visa Prepaid (универсальная). Доставка по email в течение 48 часов в V1, мгновенно в V1.1. Для пользователей из Украины cashback заменён скидкой −30% на Premium."
-          }
-        ],
-        "faq": [
-          {
-            "question": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "answer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 326",
-            "answer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 327",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (328)"
-          },
-          {
-            "question": "Lorem ipsum 329",
-            "answer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 330",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (331)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 332",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (333)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 334",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (335)"
-          },
-          {
-            "question": "Lorem ipsum 336",
-            "answer": "Голосовой диалог даёт +10 SM, домашнее задание +5 SM (×2 на Premium = +10 SM), 7 дней подряд +50 SM, переход на новый уровень +100 SM, достижения и бонусы +100–100 SM. Курс: 100 SM = $1."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 337",
-            "answer": "Обмен доступен только на тарифе Premium. Минимальная сумма — 1 000 SM ($10); для первых 200 пользователей в раннем доступе — 500 SM ($5). Комиссия — $0. Варианты: Amazon Gift Card (DE / UK / .COM по локали страны) или Visa Prepaid (универсальная — везде, где принимают Visa). Доставка по email в течение 48 часов в V1, мгновенно в V1.1. Для пользователей из Украины cashback заменён скидкой −30% на Premium — без обмена монет."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (338)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 339",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (340)"
-          },
-          {
-            "question": "Lorem ipsum 341",
-            "answer": "Монеты живут 12 месяцев с момента начисления — копи до порога вывода ($10 = 1 000 SM) в своём темпе. После отмены подписки — ещё 30 дней на вывод накопленного."
-          },
-          {
-            "question": "Lorem ipsum 342",
-            "answer": "Да — за каждый календарный месяц максимум 30% от стоимости месячной подписки начисляется в виде монет (для Premium $22.99 — это до 690 SM ≈ $6.90). Лимит защищает стабильность cashback для всех учеников. Накопленное переходит в следующий месяц до порога обмена ($10, для первых 200 — $5)."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 343",
-            "answer": "Монеты живут 12 месяцев с момента начисления; после отмены подписки — ещё 30 дней на вывод накопленного. Если хочешь удалить аккаунт раньше и у тебя на счёте есть монеты — напиши в поддержку, на Premium-плане поможем вывести при балансе от $10 (1 000 SM)."
-          }
-        ]
-      },
-      "structuredData": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Lorem ipsum 345",
-            "itemListElement": [
-              {
-                "@type": "Lorem ipsum",
-                "position": 1,
-                "name": "Lorem ipsum",
-                "item": "https://speakmove.app/"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 2,
-                "name": "Lorem ipsum 347",
-                "item": "https://speakmove.app/how-it-works"
-              }
-            ]
-          },
-          {
-            "@type": "Lorem ipsum",
-            "name": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (349)",
-            "totalTime": "PT2M",
-            "estimatedCost": {
-              "@type": "Lorem ipsum 350",
-              "currency": "USD",
-              "value": "0"
-            },
-            "tool": [
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum"
-              }
-            ],
-            "step": [
-              {
-                "@type": "Lorem ipsum",
-                "position": 1,
-                "name": "Lorem ipsum 351",
-                "text": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 2,
-                "name": "Lorem ipsum 352",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (353)"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 3,
-                "name": "Lorem ipsum 354",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (355)"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 4,
-                "name": "Lorem ipsum dolor sit amet 356",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (357)"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 5,
-                "name": "Lorem ipsum dolor sit amet 358",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (359)"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 6,
-                "name": "Lorem ipsum 360",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (361)"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 7,
-                "name": "Lorem ipsum 362",
-                "text": "На тарифе Premium при балансе от 1 000 SM ($10; для первых 200 — 500 SM / $5) выбрать подарочную карту — Amazon Gift Card (DE / UK / .COM) или Visa Prepaid (универсальная). Доставка по email в течение 48 часов в V1, мгновенно в V1.1. Комиссия $0. Для пользователей из Украины cashback заменён скидкой −30% на Premium."
-              }
-            ]
-          },
-          {
-            "@type": "Lorem ipsum",
-            "mainEntity": "Lorem ipsum dolor sit amet 363"
-          }
-        ]
+        "label": "V0 test progress",
+        "current": 0,
+        "total": 3,
+        "plansLine": ""
       }
     }
   },
   "PricingPage": {
-    "nav": {
-      "brand": "SpeakMove",
-      "brandCoinLabel": "SM",
-      "links": {
-        "howItWorks": "Lorem ipsum 364",
-        "advantages": "Lorem ipsum 365",
-        "compare": "Lorem ipsum",
-        "pricing": "Lorem ipsum"
-      },
-      "langToggle": {
-        "ariaLabel": "Язык сайта",
-        "ru": "RU",
-        "uk": "UK",
-        "en": "EN"
-      },
-      "cta": "Lorem ipsum 366"
+    "meta": {
+      "title": "SpeakMove pricing — £7.45/mo, 7 days free, no card",
+      "description": "One plan: £7.45 per month. 60 minutes of voice practice per week. 7 days free without a card. Cancel in one click."
     },
     "hero": {
-      "crumb": "Lorem ipsum 367",
-      "title": "Бесплатно — навсегда. Платно — от $12.99 в месяц.",
-      "description": "Бесплатный план живёт всегда. Plus — это $0.40 в день, Premium — стоимость одного часа с репетитором, но на месяц практики. Оплата картой или Telegram Stars. Отмена одним нажатием.",
-      "fomo": {
-        "title": "Lorem ipsum dolor sit amet 368",
-        "plansLine": "Plus: $12.99 → $16.99 · Premium: $22.99 → $28.99",
-        "countLabel": "Lorem ipsum dolor sit amet 369",
-        "current": 157,
-        "total": 200
-      },
-      "billingToggle": {
-        "monthly": "Lorem ipsum",
-        "yearly": "Lorem ipsum",
-        "yearlySaveLabel": "Lorem ipsum"
-      }
-    },
-    "plans": [
-      {
-        "id": "free",
-        "name": "Lorem ipsum",
-        "ideal": "Lorem ipsum 370",
-        "price": {
-          "monthly": "$0",
-          "yearly": "$0"
-        },
-        "note": "Lorem ipsum dolor sit amet 371",
-        "features": [
-          "Lorem ipsum dolor sit amet 372",
-          "1 язык на выбор",
-          "Lorem ipsum dolor sit amet 373",
-          "Lorem ipsum"
-        ],
-        "excluded": [
-          "Lorem ipsum 374",
-          "Lorem ipsum",
-          "Lorem ipsum 375",
-          "Lorem ipsum 376"
-        ],
-        "cta": "Lorem ipsum 377",
-        "ctaStyle": "Lorem ipsum"
-      },
-      {
-        "id": "plus",
-        "name": "Lorem ipsum",
-        "badge": "Lorem ipsum 378",
-        "ideal": "Lorem ipsum dolor sit amet 379",
-        "wasPrice": {
-          "monthly": "$16.99 / мес",
-          "yearly": "$169 / год"
-        },
-        "price": {
-          "monthly": {
-            "amount": "12.99",
-            "period": "/мес"
-          },
-          "yearly": {
-            "amount": "129",
-            "period": "/год · $10.75/мес"
-          }
-        },
-        "note": "Lorem ipsum dolor sit amet 380",
-        "features": [
-          "Lorem ipsum dolor sit amet 381",
-          "1 язык на выбор",
-          "Lorem ipsum",
-          "Lorem ipsum dolor sit amet 382",
-          "Lorem ipsum dolor sit amet 383",
-          "Lorem ipsum dolor sit amet 384",
-          "+100 SM welcome-бонус (копится, активируется при апгрейде на Premium)"
-        ],
-        "excluded": [
-          "Lorem ipsum",
-          "Lorem ipsum dolor sit amet 385"
-        ],
-        "cta": "Lorem ipsum 386",
-        "ctaStyle": "Lorem ipsum"
-      },
-      {
-        "id": "premium",
-        "name": "Lorem ipsum",
-        "ideal": "Lorem ipsum dolor sit amet 387",
-        "wasPrice": {
-          "monthly": "$28.99 / мес",
-          "yearly": "$239 / год"
-        },
-        "price": {
-          "monthly": {
-            "amount": "22.99",
-            "period": "/мес"
-          },
-          "yearly": {
-            "amount": "189",
-            "period": "/год · $15.75/мес"
-          }
-        },
-        "note": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (388)",
-        "features": [
-          "Lorem ipsum",
-          "Lorem ipsum 389",
-          "Lorem ipsum dolor sit amet 390",
-          "Lorem ipsum dolor sit amet 391",
-          "Lorem ipsum dolor sit amet 392",
-          "Lorem ipsum 393",
-          "Lorem ipsum dolor sit amet 394",
-          "Lorem ipsum dolor sit amet 395",
-          "+250 SM welcome-бонус"
-        ],
-        "cta": "Lorem ipsum 396",
-        "ctaStyle": "Lorem ipsum"
-      }
-    ],
-    "disclaimer": "Оплата картой или Telegram Stars · Минимум для обмена $10 ($5 для первых 200) · Комиссия $0 · Отмена одним нажатием · Все цены включают VAT",
-    "compare": {
-      "kicker": "Lorem ipsum 397",
-      "title": "Lorem ipsum 398",
-      "subtitle": "Lorem ipsum dolor sit amet 399",
-      "columns": [
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum"
-      ],
-      "highlightColumn": "Lorem ipsum",
-      "groups": [
-        {
-          "name": "Lorem ipsum",
-          "rows": [
-            {
-              "feature": "Lorem ipsum 400",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "1 / день"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum 401"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum 402"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 403",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 404",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 405",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "English"
-                },
-                {
-                  "kind": "text",
-                  "text": "English"
-                },
-                {
-                  "kind": "text",
-                  "text": "English"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 406",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "A1–C1"
-                },
-                {
-                  "kind": "text",
-                  "text": "A1–C1"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum dolor sit amet 407",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum dolor sit amet 408",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Lorem ipsum 409",
-          "rows": [
-            {
-              "feature": "Lorem ipsum 410",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum 411"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 412",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 413",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 414",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "+100 SM (копится)"
-                },
-                {
-                  "kind": "text",
-                  "text": "+250 SM"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum dolor sit amet 415",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 416",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum 417"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 418",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "12 мес"
-                },
-                {
-                  "kind": "text",
-                  "text": "12 мес"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 419",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum 420"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 421",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "$10 / $5 для первых 200"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Lorem ipsum dolor sit amet 422",
-          "rows": [
-            {
-              "feature": "Lorem ipsum dolor sit amet 423",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 424",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum dolor sit amet 425",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum dolor sit amet 426",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Lorem ipsum 427",
-          "rows": [
-            {
-              "feature": "Lorem ipsum",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum dolor sit amet 428",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 429",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Lorem ipsum",
-          "rows": [
-            {
-              "feature": "Lorem ipsum 430",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "$12.99"
-                },
-                {
-                  "kind": "text",
-                  "text": "$22.99"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum dolor sit amet 431",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "$16.99"
-                },
-                {
-                  "kind": "text",
-                  "text": "$28.99"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 432",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "$129 ($10.75/мес)"
-                },
-                {
-                  "kind": "text",
-                  "text": "$189 ($15.75/мес)"
-                }
-              ]
-            },
-            {
-              "feature": "Lorem ipsum 433",
-              "values": [
-                {
-                  "kind": "text",
-                  "text": "Lorem ipsum"
-                },
-                {
-                  "kind": "text",
-                  "text": "$169 ($14.08/мес)"
-                },
-                {
-                  "kind": "text",
-                  "text": "$239 ($19.92/мес)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "coinEconomics": {
-      "kicker": "Lorem ipsum 434",
-      "title": "Lorem ipsum dolor sit amet 435",
-      "subtitle": "Курс фиксированный (100 SM = $1). Лимит начисления — до 30% от стоимости месячной подписки. Ниже — активный месяц на Premium при 90 мин голосовой практики в неделю.",
-      "earn": {
-        "title": "Lorem ipsum 436",
-        "rows": [
-          {
-            "what": "24 диалога × +10",
-            "amount": "+240 SM",
-            "usd": "≈ $2.40"
-          },
-          {
-            "what": "12 ДЗ × +10 (x2 на Premium)",
-            "amount": "+120 SM",
-            "usd": "≈ $1.20"
-          },
-          {
-            "what": "4 серии 7 дней × +50",
-            "amount": "+200 SM",
-            "usd": "≈ $2.00"
-          },
-          {
-            "what": "Lorem ipsum 437",
-            "amount": "+60 SM",
-            "usd": "≈ $0.60"
-          }
-        ],
-        "total": {
-          "label": "Lorem ipsum 438",
-          "amount": "~620 SM ≈ $6.20"
-        },
-        "note": "За месяц активной учёбы — около $6.20 (620 SM). Это в пределах лимита 30% от Premium-подписки ($6.90 для $22.99/мес). Накопленное переходит в следующий месяц — до минимума обмена ($10) около 2 месяцев; для первых 200 в раннем доступе порог $5 — обмен возможен после первого месяца. Premium-подписчики обменивают на Amazon Gift Card или Visa Prepaid. Для пользователей из Украины cashback заменён скидкой −30% на Premium."
-      },
-      "withdraw": {
-        "title": "Lorem ipsum 439",
-        "rateBig": "1 SM",
-        "rateLabel": "= $0.01 (фиксированный курс)",
-        "conversion": "100 SM = $1 · 500 SM = $5 · 1 000 SM = $10",
-        "grid": [
-          {
-            "label": "Lorem ipsum 440",
-            "value": "$10 ($5 для первых 200)"
-          },
-          {
-            "label": "Lorem ipsum 441",
-            "value": "Lorem ipsum 442"
-          },
-          {
-            "label": "Lorem ipsum 443",
-            "value": "12 месяцев + 30 дней после отмены"
-          },
-          {
-            "label": "Lorem ipsum",
-            "value": "$0"
-          },
-          {
-            "label": "Lorem ipsum 444",
-            "value": "Lorem ipsum dolor sit amet 445"
-          },
-          {
-            "label": "Lorem ipsum",
-            "value": "Lorem ipsum 446"
-          }
-        ],
-        "routesTitle": "Lorem ipsum 447",
-        "routes": [
-          {
-            "flag": "🛒",
-            "name": "Lorem ipsum"
-          },
-          {
-            "flag": "🛒",
-            "name": "Lorem ipsum"
-          },
-          {
-            "flag": "🛒",
-            "name": "Lorem ipsum"
-          },
-          {
-            "flag": "💳",
-            "name": "Lorem ipsum 448"
-          }
-        ],
-        "callout": {
-          "label": "Lorem ipsum",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (449)"
-        }
-      }
+      "crumb": "Pricing",
+      "title": "One plan. £7.45 per month.",
+      "description": "7 days free, no card. 60 minutes of voice conversation per week. Cancel in one click or via support."
     },
     "faq": {
       "kicker": "FAQ",
-      "title": "Lorem ipsum dolor sit amet 450",
-      "subtitle": "Lorem ipsum dolor sit amet 451",
-      "contactEmail": "Lorem ipsum 452",
+      "title": "Common questions",
+      "subtitle": "Don't see yours? Message me, I'll reply personally.",
+      "contactEmail": "hi@speakmove.app",
       "items": [
         {
-          "id": "free",
-          "question": "Lorem ipsum dolor sit amet 453",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (454)"
+          "id": "free-trial",
+          "question": "What's the 7-day free trial without a card?",
+          "answer": "7 days of access to all 7 scenarios + 15 minutes of voice conversation. No card to add. When the trial ends, just don't buy a subscription."
         },
         {
-          "id": "plus-vs-premium-withdraw",
-          "question": "Lorem ipsum dolor sit amet 455",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (456)"
+          "id": "minutes",
+          "question": "How are 60 minutes a week counted?",
+          "answer": "Only the time **you speak**. Listening to the bot doesn't count. Re-recording a phrase doesn't count either. The limit resets every Monday."
         },
         {
-          "id": "x2-homework",
-          "question": "Lorem ipsum 457",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (458)"
-        },
-        {
-          "id": "currencies",
-          "question": "Lorem ipsum dolor sit amet 459",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (460)"
-        },
-        {
-          "id": "monthly-coins",
-          "question": "Lorem ipsum dolor sit amet 461",
-          "answer": "Активный Premium-пользователь собирает **~620 SM ≈ $6.20** при 90 мин практики в неделю (см. таблицу выше). Это в пределах лимита 30% от Premium-подписки ($6.90 для $22.99/мес). За ~2 месяца регулярных занятий это уже минимум для вывода ($10); для первых 200 при пороге $5 — после первого месяца. Монеты живут 12 месяцев с момента начисления — накапливаются, пока ты учишься."
-        },
-        {
-          "id": "cashback-cap",
-          "question": "Lorem ipsum 462",
-          "answer": "Да. За каждый календарный месяц максимум 30% от стоимости месячной подписки начисляется в виде монет. Для Premium $22.99 — это до 690 SM (~$6.90) в месяц, для $28.99 — до 870 SM (~$8.70). Если ты учишься очень активно и упираешься в потолок — следующие монеты начнут начисляться с 1-го числа следующего месяца. Это защита, чтобы cashback оставался стабильным для всех, а не уходил только сверхактивным. Накопленное за прошлые месяцы переходит дальше и не сгорает (срок жизни — 12 месяцев)."
-        },
-        {
-          "id": "certificate",
-          "question": "Lorem ipsum 463",
-          "answer": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "id": "feedback-language",
+          "question": "What language is the feedback in?",
+          "answer": "Russian or Ukrainian — you choose when you first launch the bot. You can change it in /settings."
         },
         {
           "id": "cancel",
-          "question": "Lorem ipsum 464",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (465)"
+          "question": "How do I cancel?",
+          "answer": "In **one click** in Telegram settings. Or message support — I'll reply personally."
         },
         {
-          "id": "family",
-          "question": "Lorem ipsum 466",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (467)"
+          "id": "refund",
+          "question": "What if I don't like it after 3 days of the trial?",
+          "answer": "Just don't subscribe. No card on file, nothing will be charged. Feel free to message me what didn't work — it matters."
         },
         {
-          "id": "child-data",
-          "question": "Lorem ipsum 468",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (469)"
+          "id": "currency",
+          "question": "Supported currencies?",
+          "answer": "Charged in GBP via Stripe. Stripe converts automatically from your card — works with EU and UK cards."
         },
         {
-          "id": "pause",
-          "question": "Lorem ipsum dolor sit amet 470",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (471)"
+          "id": "voice-security",
+          "question": "How are voice recordings secured?",
+          "answer": "Recordings are transcribed and **deleted within 24 hours**. We keep the transcript for your progress — you can delete it in /settings."
         },
         {
-          "id": "limit-90min",
-          "question": "Lorem ipsum dolor sit amet 472",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (473)"
+          "id": "data",
+          "question": "What about my data?",
+          "answer": "GDPR-compliant. We don't share with third parties. Delete request — one email to hi@speakmove.app."
         },
         {
-          "id": "account-delete",
-          "question": "Lorem ipsum dolor sit amet 474",
-          "answer": "Монеты живут 12 месяцев с момента начисления; после отмены подписки — ещё 30 дней на вывод. Если удалил аккаунт раньше и у тебя были монеты — напиши в поддержку в течение этого срока, на Premium-плане поможем вывести при балансе от $10 (1 000 SM)."
+          "id": "accent",
+          "question": "Does the bot understand a Slavic accent in English?",
+          "answer": "Yes. Trained across many accents. If something is mis-transcribed, you'll see the transcript and can replay."
+        },
+        {
+          "id": "v0",
+          "question": "This is V0 — what does that mean?",
+          "answer": "Early version. Not every scenario is perfectly polished, bugs are possible. Direct line to me — message in TG and I'll fix it."
         }
       ]
     },
     "finalCta": {
-      "title": "Lorem ipsum 475",
-      "subtitle": "Первые 200 — фиксируют цену на 3 месяца с момента запуска: Plus $12.99 вместо $16.99, Premium $22.99 вместо $28.99. После — стандартные тарифы.",
-      "bonus": {
-        "badge": "Lorem ipsum 476",
-        "text": "Lorem ipsum dolor sit amet 477"
-      },
-      "cta": "Lorem ipsum 478",
-      "meta": "Lorem ipsum dolor sit amet 479",
+      "title": "7 days free. No card.",
+      "subtitle": "If it doesn't land, just don't subscribe. No card on file, nothing will be charged.",
+      "cta": "Start the 7-day free trial",
+      "meta": "No card · Cancel in one click or via support",
       "fomo": {
-        "_TODO_backend": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (480)",
-        "current": 157,
-        "total": 200,
-        "bonusThreshold": 15,
-        "format": "Lorem ipsum 481",
-        "label": "seats taken"
-      }
-    },
-    "footer": {
-      "brand": "SpeakMove",
-      "tagline": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "legalEntity": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "researchNotice": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "links": [
-        {
-          "label": "Lorem ipsum",
-          "href": "/about"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/terms"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/privacy"
-        },
-        {
-          "label": "Lorem ipsum 482",
-          "href": "mailto:hi@speakmove.app"
-        }
-      ],
-      "socialTitle": "Lorem ipsum 484",
-      "socialLinks": [
-        {
-          "id": "telegram",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть Telegram-канал SpeakMove",
-          "href": "https://t.me/speakmove"
-        },
-        {
-          "id": "instagram",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть Instagram SpeakMove",
-          "href": "https://instagram.com/speakmove"
-        },
-        {
-          "id": "tiktok",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть TikTok SpeakMove",
-          "href": "https://tiktok.com/@speakmove"
-        },
-        {
-          "id": "youtube",
-          "label": "Lorem ipsum",
-          "ariaLabel": "Открыть YouTube-канал SpeakMove",
-          "href": "https://youtube.com/@speakmove"
-        },
-        {
-          "id": "twitter",
-          "label": "X",
-          "ariaLabel": "Открыть X (Twitter) SpeakMove",
-          "href": "https://x.com/speakmove"
-        }
-      ]
-    },
-    "meta": {
-      "title": "Цены SpeakMove — Free, Plus $12.99, Premium $22.99 в раннем доступе",
-      "description": "Free навсегда. В раннем доступе для первых 200 — Plus $12.99/мес и Premium $22.99/мес на 3 месяца с момента запуска (далее $16.99 и $28.99). До 90 мин голосовой практики в неделю, ДЗ с x2 монет, cashback в Amazon Gift Card или Visa Prepaid. Для Украины — скидка 30% на Premium. Картой, криптой или Telegram Stars. Отмена в один тап.",
-      "keywords": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (490)",
-      "ogTitle": "Цены SpeakMove — Free / Plus $12.99 / Premium $22.99 в раннем доступе",
-      "ogDescription": "Прозрачная подписка. Free навсегда, Plus $12.99/мес, Premium $22.99/мес с выводом монет. Первые 200 фиксируют цену на 3 месяца после запуска.",
-      "ogImage": "https://speakmove.app/og/pricing.png",
-      "ogImageAlt": "Цены SpeakMove — три плана: Free, Plus $12.99, Premium $22.99",
-      "ogUrl": "https://speakmove.app/pricing",
-      "ogType": "Lorem ipsum",
-      "ogLocale": "Lorem ipsum",
-      "twitterCard": "summary_large_image",
-      "twitterImage": "https://speakmove.app/og/pricing.png",
-      "canonical": "https://speakmove.app/pricing",
-      "robots": "Lorem ipsum dolor sit amet 496",
-      "ai": {
-        "summary": "Страница цен SpeakMove — Telegram-бота для изучения языка. На старте — английский; немецкий и норвежский в roadmap. Описаны три плана подписки: Free (бесплатно навсегда, 1 голосовой диалог в день), Plus ($12.99/мес ранний доступ, $16.99 после 200 пользователей; до 90 мин голосовой практики в неделю, без рекламы, накопление монет (SM), сертификат при завершении уровня), Premium ($22.99/мес ранний доступ, $28.99 после; всё из Plus + домашние задания с x2 монет, cashback в gift cards Amazon Gift Card или Visa Prepaid, родительский дашборд в V1.1). Курс монет: 100 SM = $1, минимум для обмена $10 ($5 для первых 200), комиссия $0. Программа для Украины: cashback заменён скидкой −30% только на Premium. Оплата банковской картой (Stripe) или через Telegram Stars. Отмена в один тап. Сейчас SpeakMove — research-проект; оператор Dmytro Fenko, UK sole trader (ICO № ZC141876). При запуске возможна смена формы на UK Ltd с предварительным уведомлением подписчиков.",
-        "shortAnswer": "У SpeakMove три плана: Free бесплатно навсегда (1 диалог в день), Plus $12.99/мес (до 90 мин голосовой практики в неделю, сертификат при завершении уровня, копи бонусы за уроки), Premium $22.99/мес (всё из Plus + ДЗ с x2 монет, cashback в Amazon Gift Card или Visa Prepaid). Первые 200 пользователей фиксируют цену на 3 месяца после запуска. Для пользователей из Украины — скидка −30% на Premium вместо cashback.",
-        "keyFacts": [
-          "Free: $0 навсегда, 1 голосовой диалог в день, базовый прогресс A1–A2, без получения монет, с рекламой.",
-          "Plus: $12.99/мес в раннем доступе ($16.99 после 200 пользователей), $129/год = $10.75/мес (стандарт $169/год). До 90 мин голосовой практики в неделю, без рекламы, полный прогресс A1–C1, сертификат при завершении уровня, накопление монет (SM), +100 SM welcome-бонус.",
-          "Premium: $22.99/мес в раннем доступе ($28.99 после 200 пользователей), $189/год = $15.75/мес (стандарт $239/год). Всё из Plus + ДЗ с x2 монет, cashback в gift cards (Amazon или Visa Prepaid), родительский дашборд (V1.1), +250 SM welcome-бонус.",
-          "Программа для Украины: −30% на Premium (любой — месячный/годовой/ранний/стандарт). Plus (месячный и годовой) идёт по обычной цене (на нём cashback и так нет). Premium ранний $15.99/мес, Premium стандарт $19.99/мес, Premium годовой $129.",
-          "Курс монет: 1 SM = $0.01, 100 SM = $1, 1 000 SM = $10.",
-          "Минимум для обмена: $10 (1 000 SM). Для первых 200 в раннем доступе — $5 (500 SM). Комиссия $0.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (497)",
-          "Lorem ipsum dolor sit amet 498",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (499)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (500)",
-          "Lorem ipsum dolor sit amet 501",
-          "Активный Premium-пользователь собирает ~620 SM ≈ $6.20 за месяц при 90 мин практики в неделю (в пределах лимита 30% от подписки $22.99 = $6.90) — до минимума обмена ($10) около 2 месяцев; для первых 200 при пороге $5 — после первого месяца.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (502)"
-        ],
-        "faq": [
-          {
-            "question": "Lorem ipsum SpeakMove 503",
-            "answer": "Free бесплатно навсегда (1 голосовой диалог в день), Plus $12.99/мес ($129/год), Premium $22.99/мес ($189/год). Первые 200 пользователей фиксируют скидочную цену на 3 месяца с момента запуска. После — Plus $16.99/мес, Premium $28.99/мес."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 504",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (505)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "answer": "За голосовой диалог начисляется +10 SM, за ДЗ +5 SM (×2 на Premium = +10 SM), за 7 дней подряд +50 SM. Курс: 100 SM = $1. Минимальный обмен — $10 (1 000 SM); для первых 200 в раннем доступе — $5. Комиссия — $0. Обмен доступен только на тарифе Premium. Варианты: Amazon Gift Card (DE / UK / .COM) или Visa Prepaid (универсальная). Доставка по email до 48 часов в V1, мгновенно в V1.1. Для пользователей из Украины cashback заменён скидкой −30% на Premium."
-          },
-          {
-            "question": "Lorem ipsum 506",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (507)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 508",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (509)"
-          },
-          {
-            "question": "Lorem ipsum 510",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (511)"
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 512",
-            "answer": "Первые 200 пользователей фиксируют скидочные цены (Plus $12.99 вместо $16.99, Premium $22.99 вместо $28.99) на 3 месяца с момента официального запуска. После этого периода действуют стандартные тарифы."
-          },
-          {
-            "question": "Lorem ipsum dolor sit amet 513",
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (514)"
-          }
-        ],
-        "robots": "Lorem ipsum dolor sit amet 515",
-        "aiBots": {
-          "GPTBot": "Lorem ipsum",
-          "OAI-SearchBot": "Lorem ipsum",
-          "ChatGPT-User": "Lorem ipsum",
-          "ClaudeBot": "Lorem ipsum",
-          "anthropic-ai": "Lorem ipsum",
-          "PerplexityBot": "Lorem ipsum",
-          "Google-Extended": "Lorem ipsum",
-          "Bingbot": "Lorem ipsum"
-        }
-      },
-      "structuredData": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Lorem ipsum 517",
-            "itemListElement": [
-              {
-                "@type": "Lorem ipsum",
-                "position": 1,
-                "name": "Lorem ipsum",
-                "item": "https://speakmove.app/"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 2,
-                "name": "Lorem ipsum",
-                "item": "https://speakmove.app/pricing"
-              }
-            ]
-          },
-          {
-            "@type": "Lorem ipsum",
-            "name": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (520)",
-            "brand": {
-              "@type": "Brand",
-              "name": "SpeakMove"
-            },
-            "offers": [
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum",
-                "price": "0",
-                "priceCurrency": "USD",
-                "description": "1 голосовой диалог в день, 1 язык, базовый прогресс по уровням A1–A2",
-                "availability": "https://schema.org/InStock"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum",
-                "price": "12.99",
-                "priceCurrency": "USD",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (522)",
-                "priceSpecification": {
-                  "@type": "Lorem ipsum 523",
-                  "price": "12.99",
-                  "priceCurrency": "USD",
-                  "billingIncrement": 1,
-                  "unitCode": "MON"
-                },
-                "availability": "https://schema.org/InStock"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum 525",
-                "price": "129",
-                "priceCurrency": "USD",
-                "description": "Plus, оплата за год, $10.75/мес",
-                "priceSpecification": {
-                  "@type": "Lorem ipsum 526",
-                  "price": "129",
-                  "priceCurrency": "USD",
-                  "billingIncrement": 1,
-                  "unitCode": "ANN"
-                },
-                "availability": "https://schema.org/InStock"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum",
-                "price": "22.99",
-                "priceCurrency": "USD",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (528)",
-                "priceSpecification": {
-                  "@type": "Lorem ipsum 529",
-                  "price": "22.99",
-                  "priceCurrency": "USD",
-                  "billingIncrement": 1,
-                  "unitCode": "MON"
-                },
-                "availability": "https://schema.org/InStock"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "name": "Lorem ipsum 531",
-                "price": "189",
-                "priceCurrency": "USD",
-                "description": "Premium, оплата за год, $15.75/мес",
-                "priceSpecification": {
-                  "@type": "Lorem ipsum 532",
-                  "price": "189",
-                  "priceCurrency": "USD",
-                  "billingIncrement": 1,
-                  "unitCode": "ANN"
-                },
-                "availability": "https://schema.org/InStock"
-              }
-            ]
-          },
-          {
-            "@type": "Lorem ipsum",
-            "mainEntity": "Lorem ipsum dolor sit amet 534"
-          }
-        ]
-      }
-    }
-  },
-  "ThankYouPage": {
-    "nav": {
-      "brand": "SpeakMove",
-      "brandCoinLabel": "SM",
-      "links": {
-        "howItWorks": "Lorem ipsum 636",
-        "advantages": "Lorem ipsum 637",
-        "compare": "Lorem ipsum",
-        "pricing": "Lorem ipsum"
-      },
-      "linksHref": {
-        "howItWorks": "/how-it-works",
-        "advantages": "/#advantages",
-        "compare": "/#compare",
-        "pricing": "/pricing"
-      },
-      "langToggle": {
-        "ariaLabel": "Язык интерфейса",
-        "active": "Lorem ipsum",
-        "options": [
-          {
-            "code": "ru",
-            "label": "RU"
-          },
-          {
-            "code": "uk",
-            "label": "UK"
-          },
-          {
-            "code": "en",
-            "label": "EN"
-          }
-        ]
-      },
-      "cta": {
-        "label": "Lorem ipsum 640",
-        "href": "/waitlist"
-      }
-    },
-    "hero": {
-      "_TODO_backend": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (641)",
-      "icon": "check",
-      "title": "Lorem ipsum 642",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (643)",
-      "positionTemplate": "Lorem ipsum dolor sit amet 644",
-      "bonusBlock": {
-        "badge": "Lorem ipsum 645",
-        "title": "Lorem ipsum 646",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (647)"
-      }
-    },
-    "price": {
-      "default": "Lorem ipsum",
-      "queryParam": "Lorem ipsum",
-      "labels": {
-        "locked": "Lorem ipsum",
-        "regular": "Lorem ipsum 648",
-        "period": "/мес",
-        "lockedDescription": "Lorem ipsum dolor sit amet 649",
-        "regularDescription": "Lorem ipsum dolor sit amet 650"
-      },
-      "byPlan": {
-        "plus": {
-          "name": "Lorem ipsum",
-          "locked": "$12.99",
-          "regular": "$16.99"
-        },
-        "premium": {
-          "name": "Lorem ipsum",
-          "locked": "$22.99",
-          "regular": "$28.99"
-        }
-      }
-    },
-    "share": {
-      "label": "Lorem ipsum 651",
-      "shareText": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "shareUrl": "https://speakmove.app",
-      "buttons": [
-        {
-          "id": "telegram",
-          "title": "Lorem ipsum 653",
-          "icon": "telegram",
-          "hrefTemplate": "https://t.me/share/url?url={url}&text={text}"
-        },
-        {
-          "id": "email",
-          "title": "Lorem ipsum 655",
-          "icon": "email",
-          "subject": "SpeakMove",
-          "body": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-          "hrefTemplate": "mailto:?subject={subject}&body={body}"
-        },
-        {
-          "id": "copy",
-          "title": "Lorem ipsum 657",
-          "icon": "link",
-          "copyText": "Lorem ipsum 658",
-          "successMessage": "Lorem ipsum 659"
-        }
-      ]
-    },
-    "cta": {
-      "primary": {
-        "label": "Lorem ipsum 660",
-        "href": "/",
-        "icon": "arrow-right"
-      },
-      "secondary": {
-        "label": "Lorem ipsum 661",
-        "href": "/how-it-works"
-      }
-    },
-    "footer": {
-      "brand": "SpeakMove",
-      "copyright": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "links": [
-        {
-          "label": "Lorem ipsum",
-          "href": "/about"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/terms"
-        },
-        {
-          "label": "Lorem ipsum",
-          "href": "/privacy"
-        },
-        {
-          "label": "Lorem ipsum 663",
-          "href": "mailto:hi@speakmove.app"
-        }
-      ]
-    },
-    "meta": {
-      "title": "Lorem ipsum SpeakMove 665",
-      "description": "Ты в раннем доступе SpeakMove. Скидочная цена $12.99/мес зафиксирована на 3 месяца с момента запуска. Напишем на email, как только откроем доступ.",
-      "keywords": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (666)",
-      "ogTitle": "Lorem ipsum SpeakMove 667",
-      "ogDescription": "Скидочная цена $12.99/мес зафиксирована на 3 месяца с момента запуска. Поделись приглашением с друзьями — и помоги нам запустить раньше.",
-      "ogImage": "https://speakmove.app/og/thank-you.png",
-      "ogImageAlt": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "ogUrl": "https://speakmove.app/thank-you",
-      "ogType": "Lorem ipsum",
-      "ogLocale": "Lorem ipsum",
-      "twitterCard": "summary_large_image",
-      "twitterImage": "https://speakmove.app/og/thank-you.png",
-      "canonical": "https://speakmove.app/thank-you",
-      "robots": "Lorem ipsum 673",
-      "ai": {
-        "summary": "Страница подтверждения регистрации в вейтлист SpeakMove. Показывает зафиксированную раннюю цену ($12.99/мес для Plus) на 3 месяца с момента официального запуска и обычную цену после ($16.99/мес). Содержит кнопки шеринга в Telegram, по email и копирования ссылки speakmove.app, а также кнопки возврата на главную и перехода на страницу «Как работает». Отправляется пользователю после успешной регистрации в вейтлист и не предназначена для индексации в поиске.",
-        "shortAnswer": "Страница подтверждения после регистрации в вейтлист SpeakMove. Цена $12.99/мес зафиксирована за пользователем на 3 месяца с момента официального запуска (после — $16.99/мес стандартный тариф Plus).",
-        "keyFacts": [
-          "Lorem ipsum dolor sit amet 674",
-          "Зафиксированная цена для зарегистрированных в вейтлисте: $12.99/мес для Plus.",
-          "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-          "Обычная цена после периода фиксации: $16.99/мес для Plus.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (675)",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (676)",
-          "Lorem ipsum dolor sit amet 677"
-        ]
-      },
-      "structuredData": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Lorem ipsum 679",
-            "itemListElement": [
-              {
-                "@type": "Lorem ipsum",
-                "position": 1,
-                "name": "Lorem ipsum",
-                "item": "https://speakmove.app/"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 2,
-                "name": "Lorem ipsum",
-                "item": "https://speakmove.app/waitlist"
-              },
-              {
-                "@type": "Lorem ipsum",
-                "position": 3,
-                "name": "Lorem ipsum",
-                "item": "https://speakmove.app/thank-you"
-              }
-            ]
-          },
-          {
-            "@type": "Lorem ipsum",
-            "name": "Lorem ipsum SpeakMove 683",
-            "description": "Подтверждение регистрации в вейтлист SpeakMove. Цена $12.99/мес зафиксирована на 3 месяца с момента запуска.",
-            "url": "https://speakmove.app/thank-you",
-            "inLanguage": "Lorem ipsum",
-            "isPartOf": {
-              "@id": "https://speakmove.app/#website"
-            },
-            "publisher": {
-              "@id": "https://speakmove.app/#organization"
-            }
-          }
-        ]
+        "label": "V0 test progress",
+        "current": 0,
+        "total": 3,
+        "plansLine": ""
       }
     }
   },
   "NotFoundPage": {
     "code": "404",
-    "title": "Lorem ipsum 687",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (688)",
+    "title": "Page not found",
+    "description": "Maybe the link is outdated or we've moved the page. Head back to the home page, or open the bot directly.",
     "ctas": {
-      "primary": "Lorem ipsum 689",
-      "secondary": "Lorem ipsum 690"
+      "primary": "Back to home",
+      "secondary": "Open the bot in Telegram"
     },
     "suggestions": {
-      "title": "Lorem ipsum 691",
+      "title": "You might be looking for:",
       "links": [
         {
-          "label": "Lorem ipsum 692",
+          "label": "How it works",
           "href": "/how-it-works"
         },
         {
-          "label": "Lorem ipsum",
+          "label": "Pricing",
           "href": "/pricing"
         },
         {
-          "label": "Lorem ipsum 694",
-          "href": "/waitlist"
+          "label": "Open the bot",
+          "href": "https://t.me/speakmove_bot"
         }
       ]
     },
     "meta": {
-      "title": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "description": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "robots": "Lorem ipsum 695"
+      "title": "Page not found · SpeakMove",
+      "description": "Page not found. The link may be outdated. Head back to the SpeakMove home page.",
+      "robots": "noindex, follow"
     }
   },
   "PrivacyPage": {
@@ -3427,120 +992,45 @@
   },
   "MetaGlobal": {
     "siteName": "SpeakMove",
-    "tagline": "Lorem ipsum 696",
-    "defaultTitle": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-    "titleTemplate": "Lorem ipsum SpeakMove 697",
-    "defaultDescription": "Telegram-бот для изучения английского с cashback за прогресс — Amazon Gift Card или Visa Prepaid. Для пользователей из Украины — скидка 30% на Premium. 15 минут в день. От $12.99/мес.",
+    "tagline": "Speaking practice for real UK life situations",
+    "defaultTitle": "SpeakMove — Speaking practice for UK immigrants",
+    "titleTemplate": "%s · SpeakMove",
+    "defaultDescription": "Voice AI partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £7.45/mo, 7-day free trial, no card required.",
     "defaultKeywords": [
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Lorem ipsum dolor sit amet 698",
-      "Lorem ipsum 699",
-      "Lorem ipsum 700",
-      "Lorem ipsum dolor sit amet 701",
-      "Lorem ipsum 702",
-      "Lorem ipsum 703",
-      "Lorem ipsum 704",
-      "Lorem ipsum dolor sit amet 705",
-      "Lorem ipsum 706",
-      "Lorem ipsum 707",
-      "Lorem ipsum",
-      "Lorem ipsum dolor sit amet 708",
-      "Lorem ipsum 709",
-      "Lorem ipsum 710",
-      "Lorem ipsum 711",
-      "Lorem ipsum 712",
-      "Lorem ipsum 713",
-      "Lorem ipsum dolor sit amet 714",
-      "Lorem ipsum dolor sit amet 715"
+      "speakmove",
+      "english speaking practice UK",
+      "english for immigrants UK",
+      "telegram english bot",
+      "voice english practice",
+      "english for GP appointment",
+      "job interview english UK",
+      "work coach english practice",
+      "phone english practice",
+      "AI conversation partner english",
+      "british accent practice",
+      "english for care workers",
+      "speaking practice UK",
+      "english tutor alternative"
     ],
-    "author": "Lorem ipsum SpeakMove 716",
-    "contactEmail": "Lorem ipsum 717",
+    "author": "SpeakMove Team",
+    "contactEmail": "hi@speakmove.app",
     "telegramBot": "@SpeakMoveBot",
     "ogImage": "/og/speakmove-og.png",
-    "ogImageAlt": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
+    "ogImageAlt": "SpeakMove — Speaking practice for UK immigrants",
     "twitterCard": "summary_large_image",
     "twitterHandle": "@speakmove",
-    "themeColor": "#059669",
+    "themeColor": "#047857",
     "locale": "en",
     "cookies": {
-      "title": "Lorem ipsum 721",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (722)",
-      "accept": "Lorem ipsum",
-      "decline": "Lorem ipsum 723",
-      "settings": "Lorem ipsum",
-      "policyLinkLabel": "Lorem ipsum 724",
+      "title": "We use cookies",
+      "description": "Essential cookies are always on — the site doesn't work without them. Analytics, functional and marketing cookies are loaded only if you allow them. You can withdraw consent at any time.",
+      "accept": "Accept all",
+      "decline": "Essentials only",
+      "settings": "Customise",
+      "policyLinkLabel": "Cookies policy",
       "policyLinkHref": "/cookies",
-      "privacyLinkLabel": "Lorem ipsum 725",
-      "privacyLinkHref": "/privacy",
-      "_legalNote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. (726)"
-    },
-    "consent": {
-      "necessary": "Lorem ipsum 727",
-      "functional": "Lorem ipsum 728",
-      "analytics": "Lorem ipsum",
-      "marketing": "Lorem ipsum",
-      "necessaryDescription": "Lorem ipsum dolor sit amet 729",
-      "functionalDescription": "Lorem ipsum dolor sit amet 730",
-      "analyticsDescription": "Lorem ipsum dolor sit amet 731",
-      "marketingDescription": "Lorem ipsum dolor sit amet 732"
-    },
-    "loading": "Lorem ipsum",
-    "errors": {
-      "generic": "Lorem ipsum dolor sit amet 733",
-      "network": "Lorem ipsum dolor sit amet 734",
-      "validation": "Lorem ipsum dolor sit amet 735"
-    },
-    "buttons": {
-      "back": "Lorem ipsum",
-      "next": "Lorem ipsum",
-      "save": "Lorem ipsum",
-      "cancel": "Lorem ipsum",
-      "close": "Lorem ipsum",
-      "send": "Lorem ipsum"
-    },
-    "forms": {
-      "emailLabel": "Lorem ipsum",
-      "emailPlaceholder": "Lorem ipsum 736",
-      "nameLabel": "Lorem ipsum",
-      "namePlaceholder": "Lorem ipsum 737",
-      "required": "Lorem ipsum 738",
-      "invalidEmail": "Lorem ipsum dolor sit amet 739"
-    },
-    "social": {
-      "telegram": {
-        "label": "Lorem ipsum",
-        "href": "https://t.me/speakmove"
-      },
-      "instagram": {
-        "label": "Lorem ipsum",
-        "href": "https://instagram.com/speakmove"
-      },
-      "tiktok": {
-        "label": "Lorem ipsum",
-        "href": "https://tiktok.com/@speakmove"
-      },
-      "youtube": {
-        "label": "Lorem ipsum",
-        "href": "https://youtube.com/@speakmove"
-      },
-      "twitter": {
-        "label": "Lorem ipsum",
-        "href": "https://x.com/speakmove"
-      }
-    },
-    "legal": {
-      "company": "Lorem ipsum SpeakMove 745",
-      "operator": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "year": "2026",
-      "copyright": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "legalEntity": "Lorem ipsum dolor sit amet SpeakMove. Dolor sit amet.",
-      "icoRegistration": "Lorem ipsum 746",
-      "researchNotice": "Lorem ipsum SpeakMove. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "contactEmail": "Lorem ipsum 747",
-      "termsLabel": "Lorem ipsum 748",
-      "privacyLabel": "Lorem ipsum 749",
-      "cookiesLabel": "Lorem ipsum"
+      "privacyLinkLabel": "Privacy policy",
+      "privacyLinkHref": "/privacy"
     }
   },
   "Common": {

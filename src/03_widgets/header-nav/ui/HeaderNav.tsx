@@ -2,13 +2,12 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { PATHS, ANCHORS } from '@/shared/config';
 
-type TLinkKey = 'howItWorks' | 'advantages' | 'compare' | 'pricing';
+type TLinkKey = 'howItWorks' | 'advantages' | 'pricing';
 type TNavItem = { key: TLinkKey; href: string };
 
 const NAV_ITEMS: TNavItem[] = [
   { key: 'howItWorks', href: PATHS.howItWorks },
   { key: 'advantages', href: `/#${ANCHORS.advantages}` },
-  { key: 'compare', href: `/#${ANCHORS.compare}` },
   { key: 'pricing', href: PATHS.pricing },
 ];
 
