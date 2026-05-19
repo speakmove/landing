@@ -44,7 +44,7 @@ export const FlowSectionWithPhone = async () => {
                   {!isLast ? (
                     <span
                       aria-hidden="true"
-                      className="flow-step-line absolute left-[17px] top-11 bottom-0 w-0.5"
+                      className="flow-step-line absolute -left-7 top-12 bottom-3 w-0.5"
                     />
                   ) : null}
                   <span
