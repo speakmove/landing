@@ -1,17 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
-import { ScenarioCard } from '@/entities/scenario';
 import { HomePhonePreview } from '@/widgets/home-phone-preview';
 import { ANCHORS, URLS } from '@/shared/config';
-
-import type { TScenario } from '@/entities/scenario';
 
 export const HomeHero = async () => {
   const t = await getTranslations('HomePage.hero');
 
   const eyebrowItems = t.raw('eyebrow.items') as unknown as string[];
   const metaPoints = t.raw('metaPoints') as unknown as string[];
-  const scenarios = t.raw('scenarioPicker.cards') as unknown as TScenario[];
 
   return (
     <header id={ANCHORS.hero} className="relative overflow-hidden px-5 py-14 md:px-6 md:py-20 lg:pb-24">
@@ -64,17 +60,6 @@ export const HomeHero = async () => {
                   <CheckIcon size={14} className="text-primary shrink-0" strokeWidth={3} />
                   {point}
                 </span>
-              ))}
-            </div>
-
-            {/* Scenario picker */}
-            <div
-              className="mt-8 grid gap-3 sm:grid-cols-2"
-              role="group"
-              aria-label={t('scenarioPicker.ariaLabel')}
-            >
-              {scenarios.map((scenario) => (
-                <ScenarioCard key={scenario.id} scenario={scenario} />
               ))}
             </div>
           </div>

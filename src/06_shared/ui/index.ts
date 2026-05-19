@@ -27,6 +27,8 @@ export {
   LockIcon,
   LogoHorizontal,
   LogoMark,
+  MapPinIcon,
+  MessageCircleIcon,
   MicIcon,
   MinusIcon,
   PaperPlaneIcon,

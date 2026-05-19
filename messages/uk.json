@@ -30,11 +30,11 @@
       "title": {
         "before": "",
         "accent": "Розмови",
-        "after": ", яких ти уникаєш англійською. Тренуй їх 15 хвилин на день."
+        "after": ", яких ти уникаєш англійською."
       },
       "description": "AI-співрозмовник говорить як landlord, GP, work coach або HR. Голосові діалоги в Telegram. Фідбек українською або російською.",
       "ctas": {
-        "primary": "Спробуй один сценарій — безкоштовно",
+        "primary": "Спробувати безкоштовно",
         "secondary": "Як працює"
       },
       "metaPoints": [
@@ -42,46 +42,6 @@
         "Без картки",
         "Скасування одним кліком"
       ],
-      "scenarioPicker": {
-        "ariaLabel": "Обери перший сценарій для тренування",
-        "cards": [
-          {
-            "id": "landlord",
-            "title": "Phone call з landlord",
-            "subtitle": "Зламане опалення, продовження контракту"
-          },
-          {
-            "id": "gp",
-            "title": "GP appointment",
-            "subtitle": "Описати симптоми, попросити referral"
-          },
-          {
-            "id": "interview",
-            "title": "Job interview",
-            "subtitle": "Tell me about yourself, your experience"
-          },
-          {
-            "id": "smalltalk",
-            "title": "Small talk з колегою",
-            "subtitle": "Weekend plans, weather, sport"
-          },
-          {
-            "id": "official",
-            "title": "Дзвінок у банк або держорган",
-            "subtitle": "HMRC, council, DWP, втрачена картка"
-          },
-          {
-            "id": "school",
-            "title": "Parents evening",
-            "subtitle": "Обговорити успішність дитини"
-          },
-          {
-            "id": "workcoach",
-            "title": "Work coach у Jobcentre",
-            "subtitle": "Що шукав, які applications відправив"
-          }
-        ]
-      },
       "phonePreview": {
         "botName": "SpeakMove",
         "botStatus": "AI partner · online",
@@ -102,12 +62,17 @@
           },
           {
             "from": "bot",
-            "text": "Добре! 'since one week' → 'for a week'. І зазвичай кажуть 'I'd like to book' — звучить ввічливіше.",
+            "text": "Майже. 'I want to book' → 'I'd like to book' (ввічливіше). І 'since one week' → 'for a week'.",
             "translation": "UA фідбек"
           },
           {
+            "from": "me",
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
+            "meta": "voice · 0:08"
+          },
+          {
             "from": "bot",
-            "text": "How long have you had this pain — is it constant?",
+            "text": "Of course. Is the pain getting worse, or staying the same?",
             "meta": "voice · 0:03"
           }
         ],
@@ -185,14 +150,8 @@
     "finalCta": {
       "title": "Відкрий бота. Спробуй один сценарій.",
       "subtitle": "2 хвилини на старт. 15 хвилин на першу сесію. Далі — твоя справа.",
-      "cta": "Відкрити SpeakMove у Telegram",
-      "meta": "7 днів безкоштовно · Без картки · Скасування одним кліком або через техпідтримку",
-      "fomo": {
-        "label": "Прогрес V0-тесту",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Відкрити в Telegram",
+      "meta": "7 днів безкоштовно · Без картки · Скасування одним кліком або через техпідтримку"
     },
     "footer": {
       "brand": "SpeakMove",
@@ -388,7 +347,7 @@
         "Фідбек українською або російською",
         "Cancel anytime одним кліком"
       ],
-      "cta": "Відкрити бота — 7 днів безкоштовно",
+      "cta": "Відкрити бота",
       "seeDetailsLabel": "Деталі та FAQ →",
       "footnote": "Без картки · Скасування одним кліком або через техпідтримку"
     }
@@ -424,23 +383,33 @@
       "steps": [
         {
           "num": "1",
-          "title": "Бот шле voice",
-          "description": "Англійська фраза, реальний темп, реальний британський акцент. Можеш переслухати скільки хочеш."
+          "title": "Відкриваєш бота і обираєш сценарій",
+          "description": "`/start` → меню з 7 тем → натискаєш GP, landlord, work coach або іншу тему що болить зараз."
         },
         {
           "num": "2",
-          "title": "Ти записуєш відповідь",
-          "description": "Голосом, англійською. З помилками — це норма. Темп твій."
+          "title": "Бот задає контекст",
+          "description": "\"You're at GP reception. Goal: book an appointment for your back pain.\" Розумієш хто ти, де і навіщо."
         },
         {
           "num": "3",
-          "title": "Бачиш транскрипт",
-          "description": "Що розпізналось з твоєї мови — можеш виправити або переслухати."
+          "title": "Бот шле voice-фразу",
+          "description": "Англійська фраза, реальний темп, реальний британський акцент. Можеш переслухати скільки хочеш."
         },
         {
           "num": "4",
-          "title": "Отримуєш фідбек рідною",
-          "description": "Коротка правка українською або російською (1-2 рядки), потім наступна фраза бота."
+          "title": "Ти записуєш відповідь",
+          "description": "Голосом, англійською. З помилками — це норма. Темп твій, ніхто не квапить."
+        },
+        {
+          "num": "5",
+          "title": "Бачиш транскрипт",
+          "description": "Що розпізналось з твоєї мови. Можеш виправити одруківки або переслухати перед відправкою."
+        },
+        {
+          "num": "6",
+          "title": "Фідбек рідною + наступна фраза",
+          "description": "Коротка правка українською або російською (1-2 рядки), потім бот продовжує діалог."
         }
       ],
       "phonePreview": {
@@ -510,14 +479,8 @@
     "finalCta": {
       "title": "Відкрий бота. Спробуй один сценарій.",
       "subtitle": "2 хвилини на старт. 15 хвилин на першу сесію.",
-      "cta": "Відкрити SpeakMove у Telegram",
-      "meta": "7 днів безкоштовно · Без картки · Скасування одним кліком або через техпідтримку",
-      "fomo": {
-        "label": "Прогрес V0-тесту",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Відкрити в Telegram",
+      "meta": "7 днів безкоштовно · Без картки · Скасування одним кліком або через техпідтримку"
     }
   },
   "PricingPage": {
@@ -591,14 +554,8 @@
     "finalCta": {
       "title": "7 днів безкоштовно. Без картки.",
       "subtitle": "Якщо не зайде — просто не купуєш підписку. Картка не прив'язана, нічого не спишеться.",
-      "cta": "Почати з безкоштовних 7 днів",
-      "meta": "Без картки · Скасування одним кліком або через техпідтримку",
-      "fomo": {
-        "label": "Прогрес V0-тесту",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Почати безкоштовно",
+      "meta": "Без картки · Скасування одним кліком або через техпідтримку"
     },
     "plan": {
       "badge": "Pro",
@@ -614,7 +571,7 @@
         "Pause-on-the-fly — виходиш, таймер стоїть",
         "Cancel anytime одним кліком"
       ],
-      "cta": "Почати з безкоштовних 7 днів",
+      "cta": "Почати безкоштовно",
       "footnote": "Без картки · Скасування в налаштуваннях Telegram або через техпідтримку"
     },
     "unitEconomics": {

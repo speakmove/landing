@@ -4,7 +4,11 @@ import {
   CheckIcon,
   CoinIcon,
   Icon,
+  MapPinIcon,
+  MessageCircleIcon,
   MicIcon,
+  ShieldIcon,
+  TelegramIcon,
 } from '@/shared/ui';
 import type { TAdvantageTile } from '../model/types';
 import {
@@ -22,6 +26,10 @@ type TProps = {
 
 const HEADER_ICON_BY_ID: Record<string, ReactNode> = {
   voice: <MicIcon size={20} />,
+  'uk-scenarios': <MapPinIcon size={20} />,
+  'native-feedback': <MessageCircleIcon size={20} />,
+  'in-telegram': <TelegramIcon size={20} />,
+  'honest-pricing': <ShieldIcon size={20} />,
   coins: <CoinIcon size={20} />,
   cefr: (
     <Icon size={20} strokeWidth={2}>
@@ -44,6 +52,10 @@ const HEADER_ICON_BY_ID: Record<string, ReactNode> = {
 
 const HEADER_TONE_BY_ID: Record<string, string> = {
   voice: 'bg-primary-pale text-primary',
+  'uk-scenarios': 'bg-gold-pale text-gold',
+  'native-feedback': 'bg-primary-pale text-primary',
+  'in-telegram': 'bg-primary-pale text-primary',
+  'honest-pricing': 'bg-gold-pale text-gold',
   coins: 'bg-gold-pale text-gold',
   cefr: 'bg-primary-pale text-primary',
   homework: 'bg-gold-pale text-gold',

@@ -18,6 +18,8 @@ export { InstagramIcon } from './Instagram';
 export { LockIcon } from './Lock';
 export { LogoHorizontal } from './LogoHorizontal';
 export { LogoMark } from './LogoMark';
+export { MapPinIcon } from './MapPin';
+export { MessageCircleIcon } from './MessageCircle';
 export { MicIcon } from './Mic';
 export { MinusIcon } from './Minus';
 export { PaperPlaneIcon } from './PaperPlane';

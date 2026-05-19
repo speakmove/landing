@@ -30,11 +30,11 @@
       "title": {
         "before": "",
         "accent": "The conversations",
-        "after": " you avoid in English. Practise them 15 minutes a day."
+        "after": " you avoid in English."
       },
       "description": "An AI partner that plays landlord, GP, work coach or HR. Voice dialogues in Telegram. Feedback in Russian or Ukrainian.",
       "ctas": {
-        "primary": "Try one scenario — free",
+        "primary": "Try it free",
         "secondary": "How it works"
       },
       "metaPoints": [
@@ -42,46 +42,6 @@
         "No card required",
         "Cancel in one click"
       ],
-      "scenarioPicker": {
-        "ariaLabel": "Pick your first scenario to practise",
-        "cards": [
-          {
-            "id": "landlord",
-            "title": "Phone call with landlord",
-            "subtitle": "Broken heating, contract renewal"
-          },
-          {
-            "id": "gp",
-            "title": "GP appointment",
-            "subtitle": "Describe symptoms, ask for a referral"
-          },
-          {
-            "id": "interview",
-            "title": "Job interview",
-            "subtitle": "Tell me about yourself, your experience"
-          },
-          {
-            "id": "smalltalk",
-            "title": "Small talk with a colleague",
-            "subtitle": "Weekend plans, weather, sport"
-          },
-          {
-            "id": "official",
-            "title": "Call to bank or government",
-            "subtitle": "HMRC, council, DWP, lost card"
-          },
-          {
-            "id": "school",
-            "title": "Parents evening",
-            "subtitle": "Talk about your child's progress"
-          },
-          {
-            "id": "workcoach",
-            "title": "Work coach at Jobcentre",
-            "subtitle": "What you searched, which applications"
-          }
-        ]
-      },
       "phonePreview": {
         "botName": "SpeakMove",
         "botStatus": "AI partner · online",
@@ -102,12 +62,17 @@
           },
           {
             "from": "bot",
-            "text": "Good! 'since one week' → 'for a week'. And usually people say 'I'd like to book' — sounds more polite.",
+            "text": "Almost! 'I want to book' → 'I'd like to book' (more polite). And use 'for' with durations: 'for a week'.",
             "translation": "Feedback"
           },
           {
+            "from": "me",
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
+            "meta": "voice · 0:08"
+          },
+          {
             "from": "bot",
-            "text": "How long have you had this pain — is it constant?",
+            "text": "Of course. Is the pain getting worse, or staying the same?",
             "meta": "voice · 0:03"
           }
         ],
@@ -185,14 +150,8 @@
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
       "subtitle": "2 minutes to start. 15 minutes for the first session. Then up to you.",
-      "cta": "Open SpeakMove in Telegram",
-      "meta": "7 days free · No card · Cancel in one click or via support",
-      "fomo": {
-        "label": "V0 test progress",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Open in Telegram",
+      "meta": "7 days free · No card · Cancel in one click or via support"
     },
     "footer": {
       "brand": "SpeakMove",
@@ -388,7 +347,7 @@
         "Feedback in Russian or Ukrainian",
         "Cancel anytime in one click"
       ],
-      "cta": "Open the bot — 7 days free",
+      "cta": "Open the bot",
       "seeDetailsLabel": "See details and FAQ →",
       "footnote": "No card · Cancel in one click or via support"
     }
@@ -424,23 +383,33 @@
       "steps": [
         {
           "num": "1",
+          "title": "Open the bot, pick a scenario",
+          "description": "`/start` → a menu of 7 topics → tap GP, landlord, work coach or whichever is burning right now."
+        },
+        {
+          "num": "2",
+          "title": "The bot sets the context",
+          "description": "\"You're at GP reception. Goal: book an appointment for your back pain.\" You know who you are, where you are and why."
+        },
+        {
+          "num": "3",
           "title": "The bot sends a voice message",
           "description": "An English phrase, real pace, real British accent. Replay as many times as you like."
         },
         {
-          "num": "2",
-          "title": "You record a reply",
-          "description": "By voice, in English. With mistakes — that's normal. Your pace."
-        },
-        {
-          "num": "3",
-          "title": "See the transcript",
-          "description": "What got transcribed from your speech — you can fix it or replay."
-        },
-        {
           "num": "4",
-          "title": "Get feedback in your language",
-          "description": "A short correction in Russian or Ukrainian (1–2 lines), then the bot's next phrase."
+          "title": "You record a reply",
+          "description": "By voice, in English. With mistakes — that's normal. Your pace, nobody's rushing you."
+        },
+        {
+          "num": "5",
+          "title": "See the transcript",
+          "description": "What got transcribed from your speech. You can fix typos or replay before sending."
+        },
+        {
+          "num": "6",
+          "title": "Feedback in your language + next line",
+          "description": "A short correction in Russian or Ukrainian (1–2 lines), then the bot continues the dialogue."
         }
       ],
       "phonePreview": {
@@ -510,14 +479,8 @@
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
       "subtitle": "2 minutes to start. 15 minutes for the first session.",
-      "cta": "Open SpeakMove in Telegram",
-      "meta": "7 days free · No card · Cancel in one click or via support",
-      "fomo": {
-        "label": "V0 test progress",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Open in Telegram",
+      "meta": "7 days free · No card · Cancel in one click or via support"
     }
   },
   "PricingPage": {
@@ -591,14 +554,8 @@
     "finalCta": {
       "title": "7 days free. No card.",
       "subtitle": "If it doesn't land, just don't subscribe. No card on file, nothing will be charged.",
-      "cta": "Start the 7-day free trial",
-      "meta": "No card · Cancel in one click or via support",
-      "fomo": {
-        "label": "V0 test progress",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Start free",
+      "meta": "No card · Cancel in one click or via support"
     },
     "plan": {
       "badge": "Pro",
@@ -614,7 +571,7 @@
         "Pause on the fly — step away, timer stops",
         "Cancel anytime in one click"
       ],
-      "cta": "Start with 7 days free",
+      "cta": "Start free",
       "footnote": "No card · Cancel in Telegram settings or via support"
     },
     "unitEconomics": {

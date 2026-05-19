@@ -30,11 +30,11 @@
       "title": {
         "before": "",
         "accent": "Разговоры",
-        "after": ", которых ты избегаешь по-английски. Тренируй их 15 минут в день."
+        "after": ", которых ты избегаешь по-английски"
       },
       "description": "AI-собеседник говорит как landlord, GP, work coach или HR. Голосовые диалоги в Telegram. Фидбек на русском или украинском.",
       "ctas": {
-        "primary": "Попробуй один сценарий — бесплатно",
+        "primary": "Попробовать бесплатно",
         "secondary": "Как работает"
       },
       "metaPoints": [
@@ -42,46 +42,6 @@
         "Без карты",
         "Отмена в один клик"
       ],
-      "scenarioPicker": {
-        "ariaLabel": "Выбери первый сценарий для тренировки",
-        "cards": [
-          {
-            "id": "landlord",
-            "title": "Phone call с landlord",
-            "subtitle": "Сломанное отопление, продление контракта"
-          },
-          {
-            "id": "gp",
-            "title": "GP appointment",
-            "subtitle": "Описать симптомы, попросить referral"
-          },
-          {
-            "id": "interview",
-            "title": "Job interview",
-            "subtitle": "Tell me about yourself, your experience"
-          },
-          {
-            "id": "smalltalk",
-            "title": "Small talk с коллегой",
-            "subtitle": "Weekend plans, weather, sport"
-          },
-          {
-            "id": "official",
-            "title": "Звонок в банк или госорган",
-            "subtitle": "HMRC, council, DWP, потерянная карта"
-          },
-          {
-            "id": "school",
-            "title": "Parents evening",
-            "subtitle": "Обсудить успеваемость ребёнка"
-          },
-          {
-            "id": "workcoach",
-            "title": "Work coach в Jobcentre",
-            "subtitle": "Что искал, какие applications отправил"
-          }
-        ]
-      },
       "phonePreview": {
         "botName": "SpeakMove",
         "botStatus": "AI partner · online",
@@ -102,12 +62,17 @@
           },
           {
             "from": "bot",
-            "text": "Хорошо! 'since one week' → 'for a week'. И обычно говорят 'I'd like to book' — звучит вежливее.",
+            "text": "Почти. 'I want to book' → 'I'd like to book' (вежливее). И 'since one week' → 'for a week'.",
             "translation": "RU фидбек"
           },
           {
+            "from": "me",
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
+            "meta": "voice · 0:08"
+          },
+          {
             "from": "bot",
-            "text": "How long have you had this pain — is it constant?",
+            "text": "Of course. Is the pain getting worse, or staying the same?",
             "meta": "voice · 0:03"
           }
         ],
@@ -185,14 +150,8 @@
     "finalCta": {
       "title": "Открой бота. Попробуй один сценарий.",
       "subtitle": "2 минуты на старт. 15 минут на первую сессию. Дальше — твоё дело.",
-      "cta": "Открыть SpeakMove в Telegram",
-      "meta": "7 дней бесплатно · Без карты · Отмена в один клик или через техподдержку",
-      "fomo": {
-        "label": "Прогресс V0-теста",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Открыть в Telegram",
+      "meta": "7 дней бесплатно · Без карты · Отмена в один клик или через техподдержку"
     },
     "footer": {
       "brand": "SpeakMove",
@@ -388,7 +347,7 @@
         "Фидбек на русском или украинском",
         "Cancel anytime в один клик"
       ],
-      "cta": "Открыть бота — 7 дней бесплатно",
+      "cta": "Открыть бота",
       "seeDetailsLabel": "Смотреть детали и FAQ →",
       "footnote": "Без карты · Отмена в один клик или через техподдержку"
     }
@@ -424,23 +383,33 @@
       "steps": [
         {
           "num": "1",
-          "title": "Бот шлёт voice",
-          "description": "Английская фраза, реальный темп, реальный британский акцент. Можешь переслушать сколько хочешь."
+          "title": "Открываешь бота и выбираешь сценарий",
+          "description": "`/start` → меню из 7 тем → тыкаешь GP, landlord, work coach или другую тему которая болит сейчас."
         },
         {
           "num": "2",
-          "title": "Ты записываешь ответ",
-          "description": "Голосом, на английском. С ошибками — это норма. Темп твой."
+          "title": "Бот задаёт контекст",
+          "description": "\"You're at GP reception. Goal: book an appointment for your back pain.\" Понимаешь кто ты, где и зачем."
         },
         {
           "num": "3",
-          "title": "Видишь транскрипт",
-          "description": "Что распозналось из твоей речи — можешь поправить или переслушать."
+          "title": "Бот шлёт voice-фразу",
+          "description": "Английская фраза, реальный темп, реальный британский акцент. Можешь переслушать сколько хочешь."
         },
         {
           "num": "4",
-          "title": "Получаешь фидбек на родном",
-          "description": "Короткая правка на русском или украинском (1-2 строки), потом следующая фраза бота."
+          "title": "Ты записываешь ответ",
+          "description": "Голосом, на английском. С ошибками — это норма. Темп твой, никто не торопит."
+        },
+        {
+          "num": "5",
+          "title": "Видишь транскрипт",
+          "description": "Что распозналось из твоей речи. Можешь поправить опечатки или переслушать перед отправкой."
+        },
+        {
+          "num": "6",
+          "title": "Фидбек на родном + следующая фраза",
+          "description": "Короткая правка на русском или украинском (1-2 строки), потом бот продолжает диалог."
         }
       ],
       "phonePreview": {
@@ -510,14 +479,8 @@
     "finalCta": {
       "title": "Открой бота. Попробуй один сценарий.",
       "subtitle": "2 минуты на старт. 15 минут на первую сессию.",
-      "cta": "Открыть SpeakMove в Telegram",
-      "meta": "7 дней бесплатно · Без карты · Отмена в один клик или через техподдержку",
-      "fomo": {
-        "label": "Прогресс V0-теста",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Открыть в Telegram",
+      "meta": "7 дней бесплатно · Без карты · Отмена в один клик или через техподдержку"
     }
   },
   "PricingPage": {
@@ -591,14 +554,8 @@
     "finalCta": {
       "title": "7 дней бесплатно. Без карты.",
       "subtitle": "Если не зайдёт — просто не покупаешь подписку. Карта не привязана, ничего не спишется.",
-      "cta": "Начать с бесплатных 7 дней",
-      "meta": "Без карты · Отмена в один клик или через техподдержку",
-      "fomo": {
-        "label": "Прогресс V0-теста",
-        "current": 0,
-        "total": 3,
-        "plansLine": ""
-      }
+      "cta": "Начать бесплатно",
+      "meta": "Без карты · Отмена в один клик или через техподдержку"
     },
     "plan": {
       "badge": "Pro",
@@ -614,7 +571,7 @@
         "Pause-on-the-fly — выходишь, таймер стоит",
         "Cancel anytime в один клик"
       ],
-      "cta": "Начать с бесплатных 7 дней",
+      "cta": "Начать бесплатно",
       "footnote": "Без карты · Отмена в настройках Telegram или через техподдержку"
     },
     "unitEconomics": {
