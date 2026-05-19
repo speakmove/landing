@@ -4,8 +4,13 @@ import { FaqItem } from '@/entities/faq-item';
 import { ANCHORS } from '@/shared/config';
 import type { TFaqItem } from '@/entities/faq-item';
 
-export const PricingFaqSection = async () => {
-  const t = await getTranslations('PricingPage.faq');
+type TProps = {
+  namespace: string;
+};
+
+export const FaqSection = async ({ namespace }: TProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const t = await getTranslations(namespace as any);
   const tCommon = await getTranslations('Common');
   const items = t.raw('items') as unknown as TFaqItem[];
 

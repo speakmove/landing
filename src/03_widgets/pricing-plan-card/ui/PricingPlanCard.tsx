@@ -21,13 +21,19 @@ export const PricingPlanCard = async () => {
             >
               {t('name')}
             </h2>
-            <div className="mt-5 flex items-baseline justify-center gap-1">
-              <span className="text-5xl font-extrabold tracking-tight text-ink">
-                {t('price')}
+
+            <div className="mt-6 flex items-baseline justify-center gap-2">
+              <span className="text-6xl font-extrabold tracking-tight text-primary-ink">
+                {t('perDay')}
               </span>
-              <span className="text-muted">{t('period')}</span>
+              <span className="text-lg font-semibold text-muted">
+                {t('perDayUnit')}
+              </span>
             </div>
-            <p className="mt-2 text-13-5 text-muted">{t('subprice')}</p>
+            <p className="mt-1.5 m-0 font-mono text-13-5 text-muted">
+              {t('perMonth')}
+            </p>
+            <p className="mt-2 m-0 text-13 text-faint">{t('subprice')}</p>
           </header>
 
           <ul className="mt-7 m-0 list-none space-y-3 p-0">

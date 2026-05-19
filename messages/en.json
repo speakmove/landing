@@ -377,8 +377,8 @@
     },
     "hero": {
       "crumb": "How it works",
-      "title": "15 minutes of voice conversation a day. On the situations that actually happen to an immigrant in the UK.",
-      "description": "A voice AI partner inside Telegram. No app, no signup form. Just open the bot and speak.",
+      "title": "15 minutes by voice. On UK scenarios.",
+      "description": "Real British accent. Feedback in your language. Right inside Telegram.",
       "stats": [
         {
           "value": "7",
@@ -499,6 +499,64 @@
       "subtitle": "2 minutes to start. 15 minutes for the first session.",
       "cta": "Open in Telegram",
       "meta": "7 days free · No card · Cancel in one click or via support"
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "How it works — the details",
+      "subtitle": "Technical and practical questions. Don't see yours? Message me.",
+      "contactEmail": "hi@speakmove.app",
+      "items": [
+        {
+          "id": "accent",
+          "question": "What accent does the bot use?",
+          "answer": "British. Neutral RP, no regional dialects. To help you get used to different voices, the bot varies intonation between scenarios."
+        },
+        {
+          "id": "level",
+          "question": "What if my English is really weak?",
+          "answer": "Scenarios adapt to your level: the bot speaks slower, simplifies phrases, gives you more pauses. You can start with one scenario (say, GP) and take your time."
+        },
+        {
+          "id": "understand",
+          "question": "What if the bot doesn't understand me?",
+          "answer": "You'll see the transcript of what was recognised — you can replay and re-record. Recognition handles accents, but if a phrase is unclear, the easiest fix is to re-record calmly."
+        },
+        {
+          "id": "replay",
+          "question": "How many times can I replay a voice message?",
+          "answer": "As many as you want. Replays don't count against your minutes — they aren't counted at all."
+        },
+        {
+          "id": "pause",
+          "question": "Can I pause mid-session?",
+          "answer": "Yes. Close the bot — the timer stops. Open it tomorrow — you continue from the same spot. The bot remembers the context of your last conversation."
+        },
+        {
+          "id": "british-vs-american",
+          "question": "British or American English?",
+          "answer": "British — because we're about UK scenarios. Feedback uses UK forms ('flat' not 'apartment', 'GP' not 'family doctor', 'queue' not 'line')."
+        },
+        {
+          "id": "minute-counted",
+          "question": "What counts as a minute?",
+          "answer": "Only the time when **you speak** into the mic. Listening to the bot — doesn't count. Replaying — doesn't count. Transcript and feedback — don't count. Just your speaking time."
+        },
+        {
+          "id": "without-telegram",
+          "question": "Can I use it without Telegram?",
+          "answer": "Not right now. The service runs only through the Telegram bot. A web version is on the table after the V0 test, if there are paying users."
+        },
+        {
+          "id": "history",
+          "question": "Can I go back to old conversations?",
+          "answer": "Yes. `/history` lists your most recent sessions with all your voice messages and the bot's feedback. You can replay and track progress."
+        },
+        {
+          "id": "beginners",
+          "question": "Is this suitable for beginners?",
+          "answer": "Depends on your level. If you've never spoken English at all, take a basic grammar course first. If you can put together a simple sentence, SpeakMove will help you build into confident conversation."
+        }
+      ]
     }
   },
   "PricingPage": {
@@ -508,8 +566,13 @@
     },
     "hero": {
       "crumb": "Pricing",
-      "title": "One plan. £7.45 per month.",
-      "description": "7 days free, no card. 60 minutes of voice conversation per week. Cancel in one click or via support."
+      "title": "Less than a coffee a day.",
+      "description": "One plan. 7 days free, no card. Cancel in one click.",
+      "perDay": "£0.25",
+      "perDayUnit": "/ day",
+      "perMonth": "= £7.45 per month",
+      "cta": "Start free",
+      "ctaFootnote": "No card · Cancel in one click or via support"
     },
     "faq": {
       "kicker": "FAQ",
@@ -578,8 +641,9 @@
     "plan": {
       "badge": "Pro",
       "name": "One plan for everything",
-      "price": "£7.45",
-      "period": "/ mo",
+      "perDay": "£0.25",
+      "perDayUnit": "/ day",
+      "perMonth": "= £7.45 per month",
       "subprice": "No hidden charges",
       "features": [
         "60 minutes of voice conversation per week",

@@ -505,6 +505,11 @@
   .h-display-hero {
     font-size: clamp(2.2rem, 5.2vw, 4.1rem);
   }
+  .h-display-price {
+    font-size: clamp(4rem, 12vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
   .h-display-page {
     font-size: clamp(2.2rem, 4.4vw, 3.4rem);
   }
