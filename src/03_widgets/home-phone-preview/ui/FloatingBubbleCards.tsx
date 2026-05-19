@@ -6,7 +6,7 @@ type TProps = {
   bubbles: TPhoneFloatBubble[];
 };
 
-const POSITIONS = ['absolute -left-7 top-32', 'absolute -right-5 bottom-15'] as const;
+const POSITIONS = ['absolute -left-7 top-32', 'absolute -right-6 bottom-15'] as const;
 const ICON_BG = [
   'bg-gold-pale text-gold-mid',
   'bg-primary-pale text-primary-ink',
