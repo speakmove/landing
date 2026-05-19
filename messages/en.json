@@ -284,6 +284,113 @@
           "label": "GDPR-compliant"
         }
       ]
+    },
+    "painMirror": {
+      "eyebrow": "Sound familiar?",
+      "lines": [
+        "You put off the GP appointment because you don't know how to describe the symptoms.",
+        "You cross the street when a neighbour wants to chat about the weather.",
+        "On a job interview you give shorter answers than you could — afraid you'll trip over a phrase.",
+        "You stay quiet in a work coach meeting and nod, even when you don't understand."
+      ],
+      "bridge": "It's not your character. It's a skill you can train. 15 minutes a day, by voice, on the situations that actually happen to you."
+    },
+    "scenariosGrid": {
+      "kicker": "7 situations",
+      "title": "Practise the conversations that actually happen to an immigrant in the UK.",
+      "subtitle": "Every scenario is its own topic in the bot. Tap one — and it opens straight on that topic.",
+      "ctaLabel": "Practise",
+      "cards": [
+        {
+          "id": "landlord",
+          "title": "Phone call with landlord",
+          "aiRole": "AI = landlord",
+          "hook": "Call about broken heating, the tap, or a rent increase.",
+          "duration": "8 min"
+        },
+        {
+          "id": "gp",
+          "title": "GP appointment",
+          "aiRole": "AI = GP receptionist or GP",
+          "hook": "Describe symptoms, ask for a referral, answer questions.",
+          "duration": "10 min"
+        },
+        {
+          "id": "interview",
+          "title": "Job interview",
+          "aiRole": "AI = HR recruiter",
+          "hook": "Tell me about yourself, your experience, why this role.",
+          "duration": "15 min"
+        },
+        {
+          "id": "smalltalk",
+          "title": "Small talk with a colleague",
+          "aiRole": "AI = colleague in the kitchen",
+          "hook": "Weekend plans, weather, sport — the stuff you stay quiet about.",
+          "duration": "8 min"
+        },
+        {
+          "id": "official",
+          "title": "Call to bank or government",
+          "aiRole": "AI = customer service",
+          "hook": "HMRC, council tax, DWP, lost card — formal calls with security checks.",
+          "duration": "10 min"
+        },
+        {
+          "id": "school",
+          "title": "Parents evening",
+          "aiRole": "AI = your child's teacher",
+          "hook": "Talk about your child's progress, what to improve, how to help at home.",
+          "duration": "10 min"
+        },
+        {
+          "id": "workcoach",
+          "title": "Work coach at Jobcentre",
+          "aiRole": "AI = Universal Credit work coach",
+          "hook": "What you searched, which applications — without risk of sanctions.",
+          "duration": "12 min"
+        }
+      ]
+    },
+    "founders": {
+      "kicker": "Who's building this",
+      "title": "We're Dima and Katya. Same pain as you.",
+      "subtitle": "We trained with a tutor too. On lessons it went fine. With real British speakers — another story.",
+      "ctaLabel": "Message on Telegram",
+      "cards": [
+        {
+          "id": "dima",
+          "name": "Dima",
+          "role": "Co-founder · building the product",
+          "initials": "D",
+          "story": "Moved to the UK in 2022. Spent a year with a tutor — conversations flowed in lessons, it felt fine. But a real Brit speaks at a different pace, with a different accent, and doesn't wait for you to think. I still get lost when the speaker changes — you get used to one person, then you're back to zero with the next. That's why I'm building SpeakMove.",
+          "telegramHandle": "@dmitriy",
+          "telegramUrl": "https://t.me/dmitriy"
+        },
+        {
+          "id": "katya",
+          "name": "Katya",
+          "role": "Co-founder · growth and community",
+          "initials": "K",
+          "story": "Moved to the UK in 2022 with Dima. With my tutor I spoke freely, felt I was progressing. Then I went to a parents evening — the teacher spoke faster, I lost the thread, kept asking her to repeat, and felt embarrassed. With every new British person it's as if I'm starting from scratch.",
+          "telegramHandle": "@katya",
+          "telegramUrl": "https://t.me/katya"
+        }
+      ]
+    },
+    "pricingCard": {
+      "badge": "Pro",
+      "title": "One plan. £7.45 per month.",
+      "subtitle": "7 days free, no card required. 60 minutes of voice practice per week. All 7 scenarios.",
+      "features": [
+        "60 minutes of voice conversation per week",
+        "All 7 UK scenarios",
+        "Feedback in Russian or Ukrainian",
+        "Cancel anytime in one click"
+      ],
+      "cta": "Open the bot — 7 days free",
+      "seeDetailsLabel": "See details and FAQ →",
+      "footnote": "No card · Cancel in one click or via support"
     }
   },
   "HowItWorksPage": {
@@ -492,6 +599,86 @@
         "total": 3,
         "plansLine": ""
       }
+    },
+    "plan": {
+      "badge": "Pro",
+      "name": "One plan for everything",
+      "price": "£7.45",
+      "period": "/ mo",
+      "subprice": "No hidden charges",
+      "features": [
+        "60 minutes of voice conversation per week",
+        "All 7 UK life scenarios",
+        "British accent in voice replies",
+        "Feedback in Russian or Ukrainian",
+        "Pause on the fly — step away, timer stops",
+        "Cancel anytime in one click"
+      ],
+      "cta": "Start with 7 days free",
+      "footnote": "No card · Cancel in Telegram settings or via support"
+    },
+    "unitEconomics": {
+      "kicker": "Transparent",
+      "title": "Where your £7.45 goes.",
+      "subtitle": "Not marketing speak, not investor premium. Honest breakdown.",
+      "currency": "£",
+      "rows": [
+        {
+          "label": "Recognising your speech",
+          "amount": "0.40"
+        },
+        {
+          "label": "AI partner + feedback generation",
+          "amount": "2.00"
+        },
+        {
+          "label": "British voice synthesis for replies",
+          "amount": "3.20"
+        },
+        {
+          "label": "Payment processing",
+          "amount": "0.30"
+        },
+        {
+          "label": "Hosting and infrastructure",
+          "amount": "0.10"
+        }
+      ],
+      "costTotal": {
+        "label": "Cost",
+        "amount": "6.00"
+      },
+      "margin": {
+        "label": "What's left (for development + my time)",
+        "amount": "1.45"
+      },
+      "bottomLine": "At full usage about £1.45 goes to us — for development, support and time. If you use less than max, the margin is higher. This is V0, the margin is realistically thin, and we're not pretending we're profitable now."
+    },
+    "comparison": {
+      "kicker": "Compare",
+      "title": "Why £7.45 is a fair price for speaking practice.",
+      "blocks": [
+        {
+          "id": "tutor",
+          "name": "Tutor",
+          "price": "£15-20/hr",
+          "note": "4 sessions a month = £60-80. High quality, but only at scheduled times."
+        },
+        {
+          "id": "speak",
+          "name": "Speak app",
+          "price": "£14/mo",
+          "note": "General AI conversation. Won't teach you \"council tax\" or \"claimant commitment\"."
+        },
+        {
+          "id": "speakmove",
+          "name": "SpeakMove",
+          "price": "£7.45/mo",
+          "note": "8× cheaper than a tutor, half of Speak. UK scenarios only, voice only.",
+          "emphasis": true
+        }
+      ],
+      "closingLine": "We're not better than a tutor, and not better than Speak. We're different — functional practice on the specific situations of UK life. When you need to call your landlord or visit the GP, a tutor can't help in the moment. We can."
     }
   },
   "NotFoundPage": {
