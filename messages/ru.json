@@ -57,16 +57,6 @@
           },
           {
             "from": "me",
-            "text": "Hi, I want to book appointment because my back hurts since one week.",
-            "meta": "voice · 0:07"
-          },
-          {
-            "from": "bot",
-            "text": "Почти. 'I want to book' → 'I'd like to book' (вежливее). И 'since one week' → 'for a week'.",
-            "translation": "RU фидбек"
-          },
-          {
-            "from": "me",
             "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
             "meta": "voice · 0:08"
           },
@@ -74,6 +64,11 @@
             "from": "bot",
             "text": "Of course. Is the pain getting worse, or staying the same?",
             "meta": "voice · 0:03"
+          },
+          {
+            "from": "me",
+            "text": "It's a bit worse in the mornings.",
+            "meta": "voice · 0:05"
           }
         ],
         "floatBubbles": [
