@@ -44,7 +44,7 @@
       ],
       "phonePreview": {
         "botName": "SpeakMove",
-        "botStatus": "GP appointment · in conversation",
+        "botStatus": "AI partner · online",
         "coinBalance": "",
         "today": "Today",
         "inputPlaceholder": "Message",
@@ -52,37 +52,28 @@
         "messages": [
           {
             "from": "bot",
-            "kind": "voice",
-            "duration": "0:04",
-            "label": "Voice from bot",
-            "text": "Hello, Riverside Surgery. How can I help you today?"
+            "text": "Hello, Riverside Surgery. How can I help you today?",
+            "meta": "voice · 0:04"
           },
           {
             "from": "me",
-            "kind": "voice",
-            "duration": "0:07",
-            "label": "Your reply",
-            "text": "Hi, I want to book appointment because my back hurts since one week."
+            "text": "Hi, I want to book appointment because my back hurts since one week.",
+            "meta": "voice · 0:07"
           },
           {
             "from": "bot",
-            "kind": "feedback",
-            "label": "Feedback",
-            "text": "Almost. **'I want to book'** → **'I'd like to book'** (more polite). And **'since one week'** → **'for a week'** — use `for` with durations."
+            "text": "Almost! 'I want to book' → 'I'd like to book' (more polite). And use 'for' with durations: 'for a week'.",
+            "translation": "Feedback"
           },
           {
             "from": "me",
-            "kind": "voice",
-            "duration": "0:08",
-            "label": "Your reply — corrected",
-            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week."
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
+            "meta": "voice · 0:08"
           },
           {
             "from": "bot",
-            "kind": "voice",
-            "duration": "0:03",
-            "label": "Voice from bot",
-            "text": "Of course. Is the pain getting worse, or staying the same?"
+            "text": "Of course. Is the pain getting worse, or staying the same?",
+            "meta": "voice · 0:03"
           }
         ],
         "floatBubbles": [
@@ -94,14 +85,6 @@
             "title": "Feedback in your language",
             "subtitle": "Clear what to fix"
           }
-        ],
-        "typingLabel": "SpeakMove is typing feedback…",
-        "timestamps": [
-          "10:42",
-          "10:43",
-          "10:43",
-          "10:44",
-          "just now"
         ]
       }
     },

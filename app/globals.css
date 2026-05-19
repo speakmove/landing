@@ -675,24 +675,3 @@
   border-color: color-mix(in oklab, var(--color-primary) 30%, var(--color-line));
   box-shadow: var(--shadow-soft);
 }
-
-/* ---------- Hero phone-preview typing indicator ---------- */
-@keyframes tg-typing-pulse {
-  0%, 60%, 100% {
-    opacity: 0.3;
-    transform: translateY(0);
-  }
-  30% {
-    opacity: 1;
-    transform: translateY(-2px);
-  }
-}
-.tg-typing-dot {
-  animation: tg-typing-pulse 1.2s ease-in-out infinite;
-}
-.tg-typing-dot--2 {
-  animation-delay: 0.18s;
-}
-.tg-typing-dot--3 {
-  animation-delay: 0.36s;
-}

@@ -7,7 +7,6 @@ import { ChatBubble } from './ChatBubble';
 import { ChatInputBar } from './ChatInputBar';
 import { FloatingBubbleCards } from './FloatingBubbleCards';
 import { PhoneStatusBar } from './PhoneStatusBar';
-import { TypingIndicator } from './TypingIndicator';
 
 /**
  * Decorative iPhone 14 Pro mock-up of a Telegram chat with the bot.
@@ -24,9 +23,7 @@ export const HomePhonePreview = async () => {
   const today = t('today');
   const inputPlaceholder = t('inputPlaceholder');
   const micLabel = t('micLabel');
-  const typingLabel = t('typingLabel');
   const messages = t.raw('messages') as unknown as TPhoneMessage[];
-  const timestamps = t.raw('timestamps') as unknown as string[];
   const floatBubbles = t.raw('floatBubbles') as unknown as TPhoneFloatBubble[];
 
   return (
@@ -49,21 +46,15 @@ export const HomePhonePreview = async () => {
 
           <ChatHeader botName={botName} botStatus={botStatus} coinBalance={coinBalance} />
 
-          <div className="relative z-10 flex flex-1 flex-col justify-end gap-2 px-5 pb-2">
+          <div className="relative z-10 flex flex-1 flex-col justify-end gap-1.5 px-5 pb-2">
             <div className="mb-1 flex justify-center">
-              <span className="rounded-full bg-tg-date-pill px-3 py-[3px] text-[12px] font-semibold text-white backdrop-blur-sm">
+              <span className="rounded-full bg-[#5d8a47]/85 px-3 py-[3px] text-[12px] font-semibold text-white backdrop-blur-sm">
                 {today}
               </span>
             </div>
             {messages.map((message, idx) => (
-              <ChatBubble
-                key={idx}
-                message={message}
-                index={idx}
-                timestamp={timestamps[idx] ?? '11:00'}
-              />
+              <ChatBubble key={idx} message={message} index={idx} />
             ))}
-            <TypingIndicator label={typingLabel} />
           </div>
 
           <ChatInputBar placeholder={inputPlaceholder} ariaLabel={micLabel} />

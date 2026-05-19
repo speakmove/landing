@@ -44,7 +44,7 @@
       ],
       "phonePreview": {
         "botName": "SpeakMove",
-        "botStatus": "GP appointment · у розмові",
+        "botStatus": "AI partner · online",
         "coinBalance": "",
         "today": "Сьогодні",
         "inputPlaceholder": "Message",
@@ -52,37 +52,28 @@
         "messages": [
           {
             "from": "bot",
-            "kind": "voice",
-            "duration": "0:04",
-            "label": "Voice від бота",
-            "text": "Hello, Riverside Surgery. How can I help you today?"
+            "text": "Hello, Riverside Surgery. How can I help you today?",
+            "meta": "voice · 0:04"
           },
           {
             "from": "me",
-            "kind": "voice",
-            "duration": "0:07",
-            "label": "Твоя відповідь",
-            "text": "Hi, I want to book appointment because my back hurts since one week."
+            "text": "Hi, I want to book appointment because my back hurts since one week.",
+            "meta": "voice · 0:07"
           },
           {
             "from": "bot",
-            "kind": "feedback",
-            "label": "Фідбек українською",
-            "text": "Майже. **'I want to book'** → **'I'd like to book'** (ввічливіше). І **'since one week'** → **'for a week'** — з тривалістю використовується `for`."
+            "text": "Майже. 'I want to book' → 'I'd like to book' (ввічливіше). І 'since one week' → 'for a week'.",
+            "translation": "UA фідбек"
           },
           {
             "from": "me",
-            "kind": "voice",
-            "duration": "0:08",
-            "label": "Твоя відповідь — виправлена",
-            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week."
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
+            "meta": "voice · 0:08"
           },
           {
             "from": "bot",
-            "kind": "voice",
-            "duration": "0:03",
-            "label": "Voice від бота",
-            "text": "Of course. Is the pain getting worse, or staying the same?"
+            "text": "Of course. Is the pain getting worse, or staying the same?",
+            "meta": "voice · 0:03"
           }
         ],
         "floatBubbles": [
@@ -94,14 +85,6 @@
             "title": "Фідбек рідною",
             "subtitle": "Зрозуміло що виправляти"
           }
-        ],
-        "typingLabel": "SpeakMove друкує фідбек…",
-        "timestamps": [
-          "10:42",
-          "10:43",
-          "10:43",
-          "10:44",
-          "щойно"
         ]
       }
     },
