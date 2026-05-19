@@ -1,6 +1,7 @@
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { cn } from '@/shared/model/libs/cn';
 import { Link } from '@/shared/model/libs/i18n/navigation';
+import { isExternal } from '@/shared/model/utils';
 
 type TVariant = 'primary' | 'outline' | 'ghost';
 type TSize = 'sm' | 'md' | 'lg';
@@ -25,9 +26,6 @@ const sizeClass: Record<TSize, string> = {
   lg: 'btn-lg',
 };
 
-const isExternalHref = (href: TLinkProps['href']): href is string =>
-  typeof href === 'string' && /^(https?:|mailto:|tel:)/.test(href);
-
 export const ButtonLink = ({
   variant = 'primary',
   size = 'md',
@@ -37,7 +35,7 @@ export const ButtonLink = ({
 }: TProps) => {
   const classes = cn('btn', variantClass[variant], sizeClass[size], className);
 
-  if (isExternalHref(rest.href)) {
+  if (typeof rest.href === 'string' && isExternal(rest.href)) {
     return (
       <a
         href={rest.href}

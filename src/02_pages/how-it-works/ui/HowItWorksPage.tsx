@@ -1,4 +1,4 @@
-import { PageHeroWithStats } from '@/widgets/page-hero-with-stats';
+import { PageHero } from '@/widgets/page-hero';
 import { FlowSectionWithPhone } from '@/widgets/flow-section-with-phone';
 import { PrivacyFeatureGrid } from '@/widgets/privacy-feature-grid';
 import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
@@ -6,7 +6,7 @@ import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
 export const HowItWorksPage = () => {
   return (
     <>
-      <PageHeroWithStats />
+      <PageHero namespace="HowItWorksPage.hero" />
       <FlowSectionWithPhone />
       <PrivacyFeatureGrid />
       <FinalCtaWithFomo namespace="HowItWorksPage.finalCta" />
