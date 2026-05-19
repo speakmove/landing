@@ -38,7 +38,7 @@ export const CoinEconomicsSection = async () => {
         />
 
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-[18px] border border-line bg-white p-6 shadow-(--shadow-soft)">
+          <div className="rounded-card border border-line bg-white p-6 shadow-(--shadow-soft)">
             <h3 className="m-0 mb-4 text-base font-bold tracking-[-0.01em] text-ink">
               {t('earn.title')}
             </h3>
@@ -84,7 +84,7 @@ export const CoinEconomicsSection = async () => {
             <p className="mt-4 text-xs leading-relaxed text-muted">{t('earn.note')}</p>
           </div>
 
-          <div className="flex flex-col gap-5 rounded-[18px] border border-line bg-white p-6 shadow-(--shadow-soft)">
+          <div className="flex flex-col gap-5 rounded-card border border-line bg-white p-6 shadow-(--shadow-soft)">
             <h3 className="text-base font-bold tracking-[-0.01em] text-ink">
               {t('withdraw.title')}
             </h3>
@@ -103,7 +103,7 @@ export const CoinEconomicsSection = async () => {
             <dl className="grid grid-cols-2 gap-3">
               {withdrawGrid.map((item) => (
                 <div key={item.label} className="flex flex-col gap-0.5">
-                  <dt className="text-[11px] font-semibold uppercase tracking-wider text-muted">
+                  <dt className="text-mini font-semibold uppercase tracking-wider text-muted">
                     {item.label}
                   </dt>
                   <dd className="text-xs font-semibold text-ink">{item.value}</dd>

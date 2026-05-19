@@ -44,7 +44,6 @@ export const WaitlistForm = () => {
 
   const formErrorId = useId();
   const firstNameErrorId = useId();
-  const lastNameErrorId = useId();
   const emailErrorId = useId();
   const segmentErrorId = useId();
   const langHintId = useId();
@@ -101,7 +100,7 @@ export const WaitlistForm = () => {
       aria-describedby={generalErrors.length > 0 ? formErrorId : undefined}
       noValidate
     >
-      <HoneypotField name="website" />
+      <HoneypotField name="company_url" />
 
       {/* Live region for pending state */}
       <div role="status" aria-live="polite" className="sr-only">
@@ -129,21 +128,6 @@ export const WaitlistForm = () => {
           errors={translateFieldErrors(state.fieldErrors['firstName'], 'firstName')}
           errorId={firstNameErrorId}
           defaultValue={state.prev['firstName'] ?? ''}
-          disabled={pending}
-        />
-
-        <TextField
-          id="lastName"
-          name="lastName"
-          label={tForm('fields.lastName.label')}
-          placeholder={tForm('fields.lastName.placeholder')}
-          type="text"
-          inputMode="text"
-          autoComplete="family-name"
-          invalid={!!state.fieldErrors['lastName']}
-          errors={translateFieldErrors(state.fieldErrors['lastName'], 'lastName')}
-          errorId={lastNameErrorId}
-          defaultValue={state.prev['lastName'] ?? ''}
           disabled={pending}
         />
 

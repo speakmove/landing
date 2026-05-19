@@ -18,10 +18,11 @@ export const LogoHorizontal = ({ ref, className, label, ...rest }: TProps) => {
   return (
     <svg
       ref={ref}
-      viewBox="0 0 235 56"
-      width="134"
+      viewBox="0 0 220 56"
+      width="140"
       height="32"
       className={cn('inline-block shrink-0', className)}
+      preserveAspectRatio="xMinYMid meet"
       {...ariaProps}
       {...rest}
     >
@@ -42,8 +43,8 @@ export const LogoHorizontal = ({ ref, className, label, ...rest }: TProps) => {
         y="38"
         fontFamily="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
         fontWeight="800"
-        fontSize="32"
-        letterSpacing="-0.7"
+        fontSize="30"
+        letterSpacing="-0.5"
         fill="#0D1A12"
       >
         Speak

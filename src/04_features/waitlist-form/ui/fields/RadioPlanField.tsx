@@ -28,7 +28,7 @@ export const RadioPlanField = ({
 }: TProps) => {
   return (
     <fieldset className="m-0 p-0">
-      <legend className="block text-[13.5px] font-semibold text-ink">
+      <legend className="block text-13-5 font-semibold text-ink">
         {label}
         <span className="ml-1 text-red-500" aria-hidden="true">
           *
@@ -39,7 +39,7 @@ export const RadioPlanField = ({
         className="mt-2 flex flex-col gap-3"
       >
         {options.map((opt) => {
-          const isDefault = !prevValue && opt.value === 'plus';
+          const isDefault = !prevValue && opt.value === 'undecided';
           const isSelected = prevValue === opt.value || isDefault;
           return (
             <label
@@ -67,8 +67,8 @@ export const RadioPlanField = ({
                 )}
               />
               <span className="leading-tight">
-                <span className="block text-[15px] font-semibold text-ink">{opt.title}</span>
-                <span className="block text-[13px] leading-snug text-muted">
+                <span className="block text-15 font-semibold text-ink">{opt.title}</span>
+                <span className="block text-13 leading-snug text-muted">
                   {opt.subtitle}
                 </span>
               </span>

@@ -1,4 +1,4 @@
-import { CheckIcon, VisuallyHidden } from '@/shared/ui';
+import { CheckIcon, MinusIcon, VisuallyHidden } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { PATHS } from '@/shared/config';
@@ -56,7 +56,7 @@ export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps
   return (
     <article
       className={cn(
-        'relative flex w-full min-w-0 flex-col rounded-[28px] bg-white p-7 md:p-8',
+        'relative flex w-full min-w-0 flex-col rounded-card-lg bg-white p-7 md:p-8',
         isPlus
           ? 'border border-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_12%,transparent),0_4px_10px_rgba(10,22,18,0.05),0_12px_32px_rgba(10,22,18,0.06)] lg:-translate-y-2'
           : 'border border-line',
@@ -64,7 +64,7 @@ export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps
       )}
     >
       {plan.badge ? (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.04em] text-white">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3.5 py-1 text-11-5 font-bold uppercase tracking-[0.04em] text-white">
           {plan.badge}
         </span>
       ) : null}
@@ -79,11 +79,11 @@ export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps
       </div>
 
       {plan.tagline ? (
-        <div className="mt-1 text-[13px] text-faint">{plan.tagline}</div>
+        <div className="mt-1 text-13 text-faint">{plan.tagline}</div>
       ) : null}
 
       {wasPrice ? (
-        <div className="mt-4 mb-0.5 text-[13px] text-faint line-through">{wasPrice}</div>
+        <div className="mt-4 mb-0.5 text-13 text-faint line-through">{wasPrice}</div>
       ) : null}
 
       {resolved ? (
@@ -95,19 +95,19 @@ export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps
         >
           <span>{formatAmount(resolved.amount)}</span>
           {resolved.period ? (
-            <span className="text-[15px] font-medium text-muted">{resolved.period}</span>
+            <span className="text-15 font-medium text-muted">{resolved.period}</span>
           ) : null}
         </div>
       ) : null}
 
       {plan.note ? (
-        <div className="mb-5 text-[13.5px] text-muted">{plan.note}</div>
+        <div className="mb-5 text-13-5 text-muted">{plan.note}</div>
       ) : (
         <div className="mb-5" />
       )}
 
       <ul
-        className="m-0 mb-6 flex flex-col gap-2.5 p-0 text-[14.5px] leading-snug"
+        className="m-0 mb-6 flex flex-col gap-2.5 p-0 text-14-5 leading-snug"
         aria-label={featuresIncludedLabel}
       >
         {plan.features.map((feat) => (
@@ -119,19 +119,7 @@ export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps
         {plan.excluded?.map((excl) => (
           <li key={excl} className="flex items-start gap-2.5 text-faint">
             <VisuallyHidden>{ariaLabels.unavailable}</VisuallyHidden>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2.5}
-              strokeLinecap="round"
-              className="mt-0.5 flex-none"
-              aria-hidden="true"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
+            <MinusIcon size={16} className="mt-0.5 flex-none" />
             <span>{excl}</span>
           </li>
         ))}

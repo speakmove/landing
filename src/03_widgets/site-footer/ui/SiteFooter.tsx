@@ -22,7 +22,7 @@ export const SiteFooter = async () => {
             >
               <Logo />
             </Link>
-            <p className="mt-4 max-w-72 text-[13.5px] leading-relaxed text-muted">
+            <p className="mt-4 max-w-72 text-13-5 leading-relaxed text-muted">
               {t('tagline')}
             </p>
             <div className="mt-5">

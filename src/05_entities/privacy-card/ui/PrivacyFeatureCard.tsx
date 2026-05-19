@@ -29,9 +29,9 @@ export const PrivacyFeatureCard = ({ card }: TProps) => {
   const IconComponent = ICON_MAP[card.id] ?? ShieldIcon;
 
   return (
-    <article className="card-hover flex h-full flex-col rounded-[18px] border border-line bg-white p-6 shadow-(--shadow-soft)">
+    <article className="card-hover flex h-full flex-col rounded-card border border-line bg-white p-6 shadow-(--shadow-soft)">
       <div className="mb-3 flex items-start justify-between gap-2">
-        <span className="grid h-10 w-10 flex-none place-items-center rounded-[10px] bg-primary-pale text-primary">
+        <span className="grid h-10 w-10 flex-none place-items-center rounded-10 bg-primary-pale text-primary">
           <IconComponent size={20} />
         </span>
         {card.badge ? (

@@ -19,8 +19,7 @@ export const PageHeroWithStats = async () => {
           <div className="section-eyebrow !mb-0">{t('crumb')}</div>
 
           <h1
-            className="my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink"
-            style={{ fontSize: 'clamp(2.2rem, 4.4vw, 3.4rem)' }}
+            className="h-display-page my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink"
           >
             {t('title')}
           </h1>
@@ -41,7 +40,7 @@ export const PageHeroWithStats = async () => {
                 <div className="font-mono text-2xl font-extrabold tracking-[-0.01em] text-primary-ink">
                   {stat.value}
                 </div>
-                <div className="mt-0.5 text-[13px] text-muted">{stat.label}</div>
+                <div className="mt-0.5 text-13 text-muted">{stat.label}</div>
               </div>
             ))}
           </div>

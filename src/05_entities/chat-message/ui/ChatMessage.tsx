@@ -35,7 +35,7 @@ export const ChatMessage = async ({ message }: TProps) => {
       <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
         <div
           className={cn(
-            'inline-flex items-center gap-2.5 rounded-[18px] px-3 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
+            'inline-flex items-center gap-2.5 rounded-card px-3 py-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
             isMe
               ? 'rounded-br-[3px] bg-primary text-white'
               : 'rounded-bl-[3px] bg-white text-ink',
@@ -44,7 +44,7 @@ export const ChatMessage = async ({ message }: TProps) => {
         >
           <div
             className={cn(
-              'w-6 h-6 rounded-full grid place-items-center text-[10px] flex-none',
+              'w-6 h-6 rounded-full grid place-items-center text-10 flex-none',
               isMe ? 'bg-white/20 text-white' : 'bg-primary-pale text-primary',
             )}
             aria-hidden="true"
@@ -54,7 +54,7 @@ export const ChatMessage = async ({ message }: TProps) => {
           <WaveformBars variant={isMe ? 'me' : 'bot'} />
           {message.duration && (
             <span
-              className={`font-mono text-[11.5px] ${isMe ? 'text-white/75' : 'text-muted'}`}
+              className={`font-mono text-11-5 ${isMe ? 'text-white/75' : 'text-muted'}`}
             >
               {message.duration}
             </span>
@@ -67,12 +67,12 @@ export const ChatMessage = async ({ message }: TProps) => {
   if (message.type === 'homework') {
     return (
       <div className="flex justify-start">
-        <div className="relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] rounded-bl-[3px] px-3 pb-1.5 pt-2.5 bg-surface shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs text-muted">
+        <div className="relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-card rounded-bl-[3px] px-3 pb-1.5 pt-2.5 bg-surface shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs text-muted">
           {message.text && (
             <span className="font-medium leading-snug">{message.text}</span>
           )}
           {message.translation && (
-            <span className="text-[11px] text-muted leading-snug border-t border-line pt-1 mt-0.5">
+            <span className="text-mini text-muted leading-snug border-t border-line pt-1 mt-0.5">
               {message.translation}
             </span>
           )}
@@ -85,7 +85,7 @@ export const ChatMessage = async ({ message }: TProps) => {
     <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
       <div
         className={cn(
-          'relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-[18px] px-3 pb-1.5 pt-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
+          'relative inline-flex max-w-[85%] flex-col gap-0.5 rounded-card px-3 pb-1.5 pt-2.5 shadow-[0_1px_2px_rgba(0,0,0,.06)] text-xs',
           isMe
             ? 'rounded-br-[3px] bg-[#dbf3c9] text-[#1a3a0e]'
             : 'rounded-bl-[3px] bg-white text-ink',
@@ -96,25 +96,25 @@ export const ChatMessage = async ({ message }: TProps) => {
         )}
 
         {message.meta && (
-          <span className="text-[11px] text-muted leading-none">
+          <span className="text-mini text-muted leading-none">
             {message.meta}
           </span>
         )}
 
         {message.translation && (
-          <span className="text-[11px] text-muted leading-snug border-t border-line pt-1 mt-0.5">
+          <span className="text-mini text-muted leading-snug border-t border-line pt-1 mt-0.5">
             {message.translation}
           </span>
         )}
 
         {message.reward && (
-          <Badge tone="primary" className="mt-1 self-start text-[10px]">
+          <Badge tone="primary" className="mt-1 self-start text-10">
             {message.reward}
           </Badge>
         )}
 
         {message.highlight && (
-          <Badge tone="gold" className="mt-1 self-start text-[10px]">
+          <Badge tone="gold" className="mt-1 self-start text-10">
             {message.highlight}
           </Badge>
         )}

@@ -1,18 +1,15 @@
-import { cn } from '@/shared/model/libs/cn';
+import { Coin } from '@/shared/ui';
+import type { ComponentProps } from 'react';
 
-type TProps = {
-  className?: string;
-  label?: string;
+type TProps = Omit<ComponentProps<typeof Coin>, 'text'> & {
   text?: string;
 };
 
-export const BrandCoin = ({ className, label, text = 'SM' }: TProps) => {
-  const ariaProps = label
-    ? { role: 'img' as const, 'aria-label': label }
-    : { 'aria-hidden': true as const };
-  return (
-    <span {...ariaProps} className={cn('brand-coin', className)}>
-      {text}
-    </span>
-  );
+/**
+ * SpeakMove-branded coin — defaults to "SM" lettering.
+ * Thin wrapper over the shared generic `Coin` primitive so brand styling
+ * lives in one place inside the brand entity.
+ */
+export const BrandCoin = ({ text = 'SM', ...rest }: TProps) => {
+  return <Coin text={text} {...rest} />;
 };

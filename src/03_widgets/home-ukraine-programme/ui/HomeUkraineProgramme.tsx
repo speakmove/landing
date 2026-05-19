@@ -38,15 +38,14 @@ export const HomeUkraineProgramme = async () => {
 
           <h2
             id="ukraine-heading"
-            className="mb-3 font-extrabold leading-[1.1] tracking-[-0.02em] text-ink"
-            style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+            className="h-display-sub mb-3 font-extrabold leading-[1.1] tracking-[-0.02em] text-ink"
           >
             {t('title')}
           </h2>
           <p className="mb-8 text-base leading-relaxed text-muted">{t('subtitle')}</p>
 
-          <div className="mb-8 overflow-hidden rounded-[18px] border border-line bg-white shadow-(--shadow-soft)">
-            <h3 className="border-b border-line bg-[#fafbf8] px-4 py-3 text-sm font-bold text-ink">
+          <div className="mb-8 overflow-hidden rounded-card border border-line bg-white shadow-(--shadow-soft)">
+            <h3 className="border-b border-line bg-surface-soft px-4 py-3 text-sm font-bold text-ink">
               {t('pricesTitle')}
             </h3>
             <div className="overflow-x-auto">
@@ -102,19 +101,19 @@ export const HomeUkraineProgramme = async () => {
 
           <ul className="mb-8 flex flex-col gap-2.5">
             {features.map((feat) => (
-              <li key={feat} className="flex items-start gap-2 text-[14.5px] text-ink">
+              <li key={feat} className="flex items-start gap-2 text-14-5 text-ink">
                 <CheckIcon size={15} strokeWidth={3} className="mt-0.5 flex-none text-primary" />
                 {feat}
               </li>
             ))}
           </ul>
 
-          <div className="mb-8 rounded-[18px] border border-line bg-white p-5 shadow-(--shadow-soft)">
+          <div className="mb-8 rounded-card border border-line bg-white p-5 shadow-(--shadow-soft)">
             <h3 className="mb-3 text-sm font-bold text-ink">{qualification.title}</h3>
             <ol className="m-0 flex list-none flex-col gap-2.5 p-0">
               {qualification.items.map((item, i) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-ink">
-                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-primary text-[11px] font-bold text-white">
+                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-primary text-mini font-bold text-white">
                     {i + 1}
                   </span>
                   {item}

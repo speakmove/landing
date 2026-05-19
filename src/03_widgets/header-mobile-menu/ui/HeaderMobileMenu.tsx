@@ -8,6 +8,8 @@ import {
   BurgerIcon,
   ButtonLink,
   CloseIcon,
+  LogoHorizontal,
+  Portal,
 } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
 import { ANCHORS, PATHS } from '@/shared/config';
@@ -69,21 +71,22 @@ export const HeaderMobileMenu = () => {
         aria-expanded={open}
         aria-controls="mobile-menu"
         onClick={() => setOpen(true)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink transition hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:hidden"
+        className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full text-ink transition hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:hidden"
       >
         <BurgerIcon size={22} />
       </button>
 
       {open ? (
-        <div
-          id="mobile-menu"
-          role="dialog"
-          aria-modal="true"
-          aria-label={tCommon('aria.menu')}
-          className="fixed inset-0 z-[100] flex flex-col bg-white lg:hidden"
-        >
+        <Portal>
+          <div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={tCommon('aria.menu')}
+            className="fixed inset-0 z-[100] flex flex-col bg-white lg:hidden"
+          >
           <div className="flex h-16 items-center justify-between border-b border-line px-5">
-            <span className="text-base font-bold text-ink">{t('brand')}</span>
+            <LogoHorizontal label={t('brand')} />
             <button
               type="button"
               aria-label={tCommon('aria.closeMenu')}
@@ -127,7 +130,8 @@ export const HeaderMobileMenu = () => {
               <ArrowRightIcon size={14} />
             </ButtonLink>
           </div>
-        </div>
+          </div>
+        </Portal>
       ) : null}
     </>
   );

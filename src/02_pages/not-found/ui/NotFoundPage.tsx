@@ -13,19 +13,14 @@ export const NotFoundPage = async () => {
 
   return (
     <section
-      className="relative flex min-h-[calc(100vh-4rem)] flex-1 items-center justify-center overflow-hidden px-4 py-12 text-center md:py-16"
-      style={{
-        background:
-          'radial-gradient(900px 460px at 50% -120px, var(--color-primary-pale) 0%, transparent 60%), #fff',
-      }}
+      className="not-found-bg relative flex min-h-[calc(100vh-4rem)] flex-1 items-center justify-center overflow-hidden px-4 py-12 text-center md:py-16"
     >
       <div className="err-bignum" aria-hidden="true">
         {t('code')}
       </div>
       <Container className="relative z-10 w-full">
         <h1
-          className="mb-3.5 font-extrabold leading-[1.1] tracking-tight text-balance text-ink"
-          style={{ fontSize: 'clamp(2rem, 4.2vw, 3rem)' }}
+          className="h-display-section mb-3.5 font-extrabold leading-[1.1] tracking-tight text-balance text-ink"
         >
           {t('title')}
         </h1>

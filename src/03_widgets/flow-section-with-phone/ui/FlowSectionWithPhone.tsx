@@ -36,11 +36,7 @@ export const FlowSectionWithPhone = async () => {
           >
             <div
               aria-hidden="true"
-              className="absolute left-[17px] top-2.5 bottom-2.5 w-0.5"
-              style={{
-                background:
-                  'linear-gradient(180deg, var(--color-primary) 0%, color-mix(in oklab, var(--color-primary) 30%, transparent) 100%)',
-              }}
+              className="flow-step-line absolute left-[17px] top-2.5 bottom-2.5 w-0.5"
             />
             {steps.map((step, idx) => {
               const isLast = idx === steps.length - 1;
@@ -58,7 +54,7 @@ export const FlowSectionWithPhone = async () => {
                   <h3 className="m-0 mb-1.5 text-lg font-bold tracking-[-0.01em] text-ink">
                     {step.title}
                   </h3>
-                  <p className="m-0 text-[14.5px] leading-[1.55] text-muted">
+                  <p className="m-0 text-14-5 leading-[1.55] text-muted">
                     {step.description}
                   </p>
                   {step.tag ? (

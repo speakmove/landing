@@ -25,7 +25,7 @@ export const ScheduleCard = ({ card, selected, onSelect, onKeyDown, buttonRef }:
       onKeyDown={onKeyDown}
       data-active={selected ? 'true' : 'false'}
       className={cn(
-        'group/sched relative cursor-pointer rounded-[18px] border-2 border-line bg-white p-7 transition',
+        'group/sched relative cursor-pointer rounded-card border-2 border-line bg-white p-7 transition',
         'hover:-translate-y-0.5 hover:shadow-(--shadow-mid)',
         'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
         'data-[active=true]:border-primary',
@@ -37,7 +37,7 @@ export const ScheduleCard = ({ card, selected, onSelect, onKeyDown, buttonRef }:
           className={cn(
             'absolute right-4.5 top-4.5 rounded-full px-2.5 py-1 text-[10.5px] font-extrabold uppercase tracking-[0.04em]',
             'bg-line text-muted',
-            'group-data-[active=true]/sched:bg-gold-accent group-data-[active=true]/sched:text-[#4a2e07]',
+            'group-data-[active=true]/sched:bg-gold-accent group-data-[active=true]/sched:text-gold-deep',
           )}
         >
           {card.badge}
@@ -50,11 +50,11 @@ export const ScheduleCard = ({ card, selected, onSelect, onKeyDown, buttonRef }:
         </span>
         <div>
           <div className="text-lg font-bold leading-tight text-ink">{card.title}</div>
-          <div className="m-0 text-[13.5px] text-muted">{card.subtitle}</div>
+          <div className="m-0 text-13-5 text-muted">{card.subtitle}</div>
         </div>
       </div>
 
-      <p className="mb-4 text-[13.5px] leading-relaxed text-muted">{card.description}</p>
+      <p className="mb-4 text-13-5 leading-relaxed text-muted">{card.description}</p>
 
       <div className="flex gap-1.5" aria-label={tCommon('aria.weekDays')}>
         {card.days.map((day, i) => {
@@ -63,7 +63,7 @@ export const ScheduleCard = ({ card, selected, onSelect, onKeyDown, buttonRef }:
             <span
               key={day}
               className={cn(
-                'grid h-9 flex-1 place-items-center rounded-lg font-mono text-[11.5px] font-bold',
+                'grid h-9 flex-1 place-items-center rounded-lg font-mono text-11-5 font-bold',
                 isActive
                   ? 'border border-[color-mix(in_oklab,var(--color-primary)_30%,transparent)] bg-primary-pale text-primary-ink'
                   : 'bg-surface text-faint',

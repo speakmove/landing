@@ -57,26 +57,48 @@
         ]
       },
       "phonePreview": {
-        "botName": "SpeakMove",
-        "botStatus": "Lorem ipsum",
-        "coinBalance": "SM",
-        "today": "Lorem ipsum",
-        "userText": "Lorem ipsum",
-        "botPromptTitle": "I would like a small coffee, please.",
-        "botPromptQuestion": "Lorem ipsum?",
-        "userVoiceDuration": "0:08",
-        "botVoiceDuration": "0:11",
-        "userVoiceTimestamp": "11:00 AM",
-        "botVoiceTimestamp": "11:00 AM",
-        "userTextTimestamp": "11:01 AM",
-        "botPromptTimestamp": "11:01 AM",
-        "inputPlaceholder": "Lorem ipsum",
-        "langButtonUk": "Ukrainian",
-        "langButtonRu": "Russian",
-        "sideCard1Title": "100 SM = $1",
-        "sideCard1Subtitle": "Lorem ipsum",
-        "sideCard2Title": "Lorem 7",
-        "sideCard2Subtitle": "+50 SM"
+        "botName": "Lorem ipsum SpeakMove",
+        "botStatus": "Sed do eiusmod",
+        "coinBalance": "127",
+        "today": "Sed do eiusmod",
+        "messages": [
+          {
+            "from": "bot",
+            "text": "Lorem ipsum dolor sit amet consectetur.",
+            "translation": "Sed do eiusmod tempor incididunt ut labore.",
+            "meta": "A2 · Lorem ipsum"
+          },
+          {
+            "from": "me",
+            "text": "Ut enim ad minim veniam, quis nostrud exercitation.",
+            "translation": "Lorem ipsum dolor sit amet consectetur adipiscing."
+          },
+          {
+            "from": "bot",
+            "text": "Duis aute irure dolor — 92%. ✓",
+            "translation": "Sed do eiusmod tempor — 92%. ✓",
+            "reward": "+10 SM"
+          },
+          {
+            "from": "bot",
+            "text": "Lorem ipsum dolor sit amet.",
+            "translation": "Sed do eiusmod tempor incididunt.",
+            "highlight": "x2 монет"
+          }
+        ],
+        "micLabel": "Lorem ipsum",
+        "micTime": "0:07",
+        "inputPlaceholder": "Sed do eiusmod",
+        "floatBubbles": [
+          {
+            "title": "100 SM = $1",
+            "subtitle": "Lorem ipsum dolor"
+          },
+          {
+            "title": "Sed do eiusmod",
+            "subtitle": "+50 SM sed do eiusmod"
+          }
+        ]
       }
     },
     "advantages": {
@@ -2779,11 +2801,6 @@
           "placeholder": "Sed do eiusmod",
           "required": true
         },
-        "lastName": {
-          "label": "Sed do eiusmod",
-          "placeholder": "Sed do eiusmod",
-          "required": false
-        },
         "email": {
           "label": "Sed do eiusmod",
           "placeholder": "ivan@example.com",
@@ -2893,9 +2910,9 @@
           ]
         },
         "plan": {
-          "label": "Sed do eiusmod 575",
+          "label": "Lorem ipsum dolor sit amet — consectetur adipiscing?",
           "required": true,
-          "default": "Sed do eiusmod",
+          "default": "undecided",
           "options": [
             {
               "value": "Sed do eiusmod",
@@ -2906,6 +2923,11 @@
               "value": "Sed do eiusmod",
               "title": "Premium — $22.99/мес",
               "subtitle": "До 90 мин/нед + ДЗ ×2 + cashback в gift cards. Для Украины: $15.99/мес (−30%, без cashback)."
+            },
+            {
+              "value": "undecided",
+              "title": "Sed do eiusmod",
+              "subtitle": "Lorem ipsum dolor sit amet consectetur — adipiscing elit sed do eiusmod tempor."
             }
           ]
         },

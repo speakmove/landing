@@ -24,7 +24,7 @@ export const CoinFlowTable = ({
   return (
     <div className="rounded-2xl border border-line bg-white shadow-(--shadow-soft) overflow-hidden">
       <div className="px-5 py-4 border-b border-line bg-surface">
-        <h3 className="font-bold text-[17px] text-ink">{title}</h3>
+        <h3 className="font-bold text-17 text-ink">{title}</h3>
       </div>
       <table className="w-full text-sm">
         <caption className="sr-only">{captionLabel}</caption>

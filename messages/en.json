@@ -57,26 +57,48 @@
         ]
       },
       "phonePreview": {
-        "botName": "SpeakMove",
-        "botStatus": "bot",
-        "coinBalance": "SM",
+        "botName": "SpeakMove · bot",
+        "botStatus": "typing…",
+        "coinBalance": "127",
         "today": "Today",
-        "userText": "I don't get it",
-        "botPromptTitle": "\"I'd like a small coffee, please.\"",
-        "botPromptQuestion": "Show translation?",
-        "userVoiceDuration": "0:08",
-        "botVoiceDuration": "0:11",
-        "userVoiceTimestamp": "11:00 AM",
-        "botVoiceTimestamp": "11:00 AM",
-        "userTextTimestamp": "11:01 AM",
-        "botPromptTimestamp": "11:01 AM",
+        "messages": [
+          {
+            "from": "bot",
+            "text": "Let's practice! Where do you work?",
+            "translation": "A2 · Listening & speaking",
+            "meta": "A2 · Listening & speaking"
+          },
+          {
+            "from": "me",
+            "text": "I work at a small café near the station.",
+            "translation": "I work at a small café near the station."
+          },
+          {
+            "from": "bot",
+            "text": "Great pronunciation — 92%. ✓",
+            "translation": "Great pronunciation — 92%. ✓",
+            "reward": "+10 SM"
+          },
+          {
+            "from": "bot",
+            "text": "Homework ready: describe your morning.",
+            "translation": "New homework: describe your morning.",
+            "highlight": "x2 coins"
+          }
+        ],
+        "micLabel": "Recording",
+        "micTime": "0:07",
         "inputPlaceholder": "Message",
-        "langButtonUk": "Ukrainian",
-        "langButtonRu": "Russian",
-        "sideCard1Title": "100 SM = $1",
-        "sideCard1Subtitle": "Card payout",
-        "sideCard2Title": "Streak: 7 days",
-        "sideCard2Subtitle": "+50 SM bonus"
+        "floatBubbles": [
+          {
+            "title": "100 SM = $1",
+            "subtitle": "Cashback on lessons"
+          },
+          {
+            "title": "7 days streak",
+            "subtitle": "+50 SM streak bonus"
+          }
+        ]
       }
     },
     "advantages": {
@@ -2779,11 +2801,6 @@
           "placeholder": "Lorem ipsum",
           "required": true
         },
-        "lastName": {
-          "label": "Lorem ipsum",
-          "placeholder": "Lorem ipsum",
-          "required": false
-        },
         "email": {
           "label": "Lorem ipsum",
           "placeholder": "ivan@example.com",
@@ -2893,9 +2910,9 @@
           ]
         },
         "plan": {
-          "label": "Lorem ipsum 575",
+          "label": "Which plan are you leaning toward?",
           "required": true,
-          "default": "Lorem ipsum",
+          "default": "undecided",
           "options": [
             {
               "value": "Lorem ipsum",
@@ -2906,6 +2923,11 @@
               "value": "Lorem ipsum",
               "title": "Premium — $22.99/мес",
               "subtitle": "До 90 мин/нед + ДЗ ×2 + cashback в gift cards. Для Украины: $15.99/мес (−30%, без cashback)."
+            },
+            {
+              "value": "undecided",
+              "title": "I haven't decided",
+              "subtitle": "I'd like to try the product first. Show me all options after launch."
             }
           ]
         },

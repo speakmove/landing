@@ -63,8 +63,7 @@ export const PricingInteractive = ({
 
             <h1
               id="pricing-hero-heading"
-              className="my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink"
-              style={{ fontSize: 'clamp(2.2rem, 4.4vw, 3.4rem)' }}
+              className="h-display-page my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink"
             >
               {hero.title}
             </h1>
@@ -74,13 +73,9 @@ export const PricingInteractive = ({
             </p>
 
             <div
-              className="mx-auto mt-6 max-w-180 rounded-[18px] bg-white px-5 py-4 text-left shadow-(--shadow-soft)"
-              style={{
-                border:
-                  '1px solid color-mix(in oklab, var(--color-primary) 35%, var(--color-line))',
-              }}
+              className="pricing-fomo-border mx-auto mt-6 max-w-180 rounded-card bg-white px-5 py-4 text-left shadow-(--shadow-soft)"
             >
-              <div className="mb-2.5 flex items-center gap-2.5 text-[14.5px] font-bold text-ink">
+              <div className="mb-2.5 flex items-center gap-2.5 text-14-5 font-bold text-ink">
                 <span aria-hidden="true" className="block h-2 w-2 rounded-full bg-primary" />
                 {fomo.title}
               </div>
@@ -90,16 +85,16 @@ export const PricingInteractive = ({
                 aria-valuemax={fomo.total}
                 aria-valuenow={fomo.current}
                 aria-label={fomo.title}
-                className="mb-2 h-2 overflow-hidden rounded-full bg-[#eceee8]"
+                className="mb-2 h-2 overflow-hidden rounded-full bg-line-soft"
               >
                 <div
                   className="h-full rounded-full bg-linear-to-r from-primary to-primary-hover"
                   style={{ width: `${pct}%` }}
                 />
               </div>
-              <div className="flex justify-between font-mono text-[12.5px] font-semibold text-muted">
+              <div className="flex justify-between font-mono text-12-5 font-semibold text-muted">
                 <span>{fomo.plansLine}</span>
-                <span className="tabular-nums">
+                <span className="">
                   <span className="text-ink">{fomo.current}</span> / {fomo.total} —{' '}
                   {countLabel.replace(`${fomo.current} / ${fomo.total}`, '').trim() ||
                     fomo.countLabel.replace('{current}', '').replace('{total}', '').trim()}
@@ -132,7 +127,7 @@ export const PricingInteractive = ({
               />
             ))}
           </div>
-          <p className="mt-6 text-center text-[13.5px] text-muted">{disclaimer}</p>
+          <p className="mt-6 text-center text-13-5 text-muted">{disclaimer}</p>
         </Container>
       </section>
     </>

@@ -5,11 +5,7 @@ type TProps = {
 
 export const HoneypotField = ({ name, label = 'Do not fill this field' }: TProps) => {
   return (
-    <div
-      aria-hidden="true"
-      className="pointer-events-none absolute h-px w-px overflow-hidden whitespace-nowrap border-0 p-0"
-      style={{ clip: 'rect(0 0 0 0)', clipPath: 'inset(50%)' }}
-    >
+    <div aria-hidden="true" className="pointer-events-none sr-only">
       <label htmlFor={name}>{label}</label>
       <input
         id={name}

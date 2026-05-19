@@ -54,7 +54,7 @@ export const BillingToggle = ({
   );
 
   const baseBtn =
-    'inline-flex items-center rounded-full px-4 py-2 text-[13.5px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
+    'inline-flex items-center rounded-full px-4 py-2 text-13-5 font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
   const activeBtn = 'bg-white text-ink shadow-[0_1px_3px_rgba(0,0,0,.08)]';
   const inactiveBtn = 'text-muted hover:text-ink';
 
@@ -92,7 +92,7 @@ export const BillingToggle = ({
         className={cn(baseBtn, value === 'yearly' ? activeBtn : inactiveBtn, 'gap-1.5')}
       >
         {yearlyLabel}
-        <span className="text-[11px] font-bold text-primary">{yearlySaveLabel}</span>
+        <span className="text-mini font-bold text-primary">{yearlySaveLabel}</span>
       </button>
     </div>
   );

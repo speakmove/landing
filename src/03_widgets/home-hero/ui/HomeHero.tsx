@@ -22,7 +22,7 @@ export const HomeHero = async () => {
           {/* Left column */}
           <div>
             {/* Eyebrow chip */}
-            <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/85 px-3.5 py-1.5 text-[10px] font-semibold text-muted shadow-(--shadow-soft) md:text-[13px]">
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/85 px-3.5 py-1.5 text-10 font-semibold text-muted shadow-(--shadow-soft) md:text-13">
               <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_20%,transparent)]" />
               {eyebrowItems.map((item, idx) => (
                 <span key={item} className="inline-flex items-center gap-2.5">
@@ -34,8 +34,7 @@ export const HomeHero = async () => {
 
             {/* H1 */}
             <h1
-              className="mt-4 mb-5 font-extrabold leading-[1.03] tracking-[-0.025em] text-ink"
-              style={{ fontSize: 'clamp(2.2rem, 5.2vw, 4.1rem)' }}
+              className="h-display-hero mt-4 mb-5 font-extrabold leading-[1.03] tracking-[-0.025em] text-ink"
             >
               {t('title.before')}
               <span className="accent-underline">{t('title.accent')}</span>
@@ -59,7 +58,7 @@ export const HomeHero = async () => {
             </div>
 
             {/* Meta points */}
-            <div className="flex flex-wrap gap-5 text-[13.5px] text-muted">
+            <div className="flex flex-wrap gap-5 text-13-5 text-muted">
               {metaPoints.map((point) => (
                 <span key={point} className="inline-flex items-center gap-1.5 font-medium">
                   <CheckIcon size={14} className="text-primary shrink-0" strokeWidth={3} />

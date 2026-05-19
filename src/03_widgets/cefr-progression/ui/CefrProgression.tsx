@@ -53,7 +53,7 @@ export const CefrProgression = async () => {
 
           <aside
             aria-labelledby="cefr-side-heading"
-            className="rounded-[18px] border border-line bg-white p-7 shadow-(--shadow-soft)"
+            className="rounded-card border border-line bg-white p-7 shadow-(--shadow-soft)"
           >
             <h3
               id="cefr-side-heading"

@@ -33,7 +33,7 @@ export const SectionHead = ({
         {title}
       </h2>
       {subtitle ? (
-        <p className="m-0 text-pretty text-[17px] text-muted">{subtitle}</p>
+        <p className="m-0 text-pretty text-17 text-muted">{subtitle}</p>
       ) : null}
     </div>
   );

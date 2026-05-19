@@ -31,13 +31,12 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
     <Container className="px-5 md:px-6">
       <header className="border-b border-line py-12">
         <h1
-          className="mb-3 font-extrabold leading-[1.1] tracking-tight text-ink"
-          style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}
+          className="h-display-legal mb-3 font-extrabold leading-[1.1] tracking-tight text-ink"
         >
           {meta.title}
         </h1>
         <p className="m-0 text-base text-muted">{meta.intro}</p>
-        <div className="mt-3 font-mono text-[13px] text-faint">
+        <div className="mt-3 font-mono text-13 text-faint">
           <span>
             {tCommon('effectiveLabel')} {meta.effectiveDate}
           </span>
@@ -50,15 +49,15 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
 
       <div className="grid items-start gap-12 py-12 lg:grid-cols-[220px_1fr]">
         <aside
-          className="hidden text-[13.5px] lg:sticky lg:top-[88px] lg:block"
+          className="hidden text-13-5 lg:sticky lg:top-[88px] lg:block"
         >
-          <h2 className="m-0 mb-3 text-[11px] font-bold uppercase tracking-[0.08em] text-faint">
+          <h2 className="m-0 mb-3 text-mini font-bold uppercase tracking-[0.08em] text-faint">
             {tCommon('navSections')}
           </h2>
           <LegalToc items={tocItems} ariaLabel={tCommon('navSections')} />
         </aside>
 
-        <main className="text-[15.5px] leading-relaxed">
+        <div className="text-15-5 leading-relaxed">
           {sections.map((section) => (
             <section
               key={section.id}
@@ -98,7 +97,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
               })}
             </section>
           ))}
-        </main>
+        </div>
       </div>
     </Container>
   );

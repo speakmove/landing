@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/shared/model/libs/i18n/navigation';
+import { isExternal } from '@/shared/model/utils';
 
 type TFooterLink = {
   label: string;
@@ -9,10 +10,6 @@ type TFooterLink = {
 type TFooterColumn = {
   title: string;
   links: TFooterLink[];
-};
-
-const isExternal = (href: string): boolean => {
-  return /^(https?:)?\/\//.test(href) || href.startsWith('mailto:');
 };
 
 export const FooterNav = async () => {

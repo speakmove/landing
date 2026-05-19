@@ -9,7 +9,7 @@ type TPerk = {
 };
 
 const renderPerkIcon = (name: string) => {
-  const base = 'grid h-[34px] w-[34px] flex-none place-items-center rounded-[10px] border border-line bg-white text-primary shadow-(--shadow-soft)';
+  const base = 'grid h-[34px] w-[34px] flex-none place-items-center rounded-10 border border-line bg-white text-primary shadow-(--shadow-soft)';
   if (name === 'clock' || name === 'gift') {
     return (
       <div className={base} aria-hidden="true">
@@ -19,7 +19,7 @@ const renderPerkIcon = (name: string) => {
   }
   if (name === 'coin') {
     return (
-      <div className="grid h-[34px] w-[34px] flex-none place-items-center rounded-[10px] border border-line bg-white shadow-(--shadow-soft)">
+      <div className="grid h-[34px] w-[34px] flex-none place-items-center rounded-10 border border-line bg-white shadow-(--shadow-soft)">
         <span className="coin md" aria-hidden="true">
           <span>SM</span>
         </span>
@@ -55,13 +55,12 @@ export const WaitlistPage = async () => {
   const formSubtitle = t('form.subtitle');
 
   return (
-    <main className="mx-auto grid w-full max-w-300 grid-cols-1 lg:grid-cols-2">
+    <div className="mx-auto grid w-full max-w-300 grid-cols-1 lg:grid-cols-2">
       <div className="flex flex-col justify-center border-b border-line bg-surface px-7 py-12 lg:border-r lg:border-b-0 lg:px-14 lg:py-16">
         <div className="section-eyebrow !mb-4">{kicker}</div>
 
         <h1
-          className="mb-4 font-extrabold leading-[1.1] tracking-tight text-balance text-ink"
-          style={{ fontSize: 'clamp(2rem, 3.2vw, 2.8rem)' }}
+          className="h-display-mid mb-4 font-extrabold leading-[1.1] tracking-tight text-balance text-ink"
         >
           {title}
         </h1>
@@ -71,7 +70,7 @@ export const WaitlistPage = async () => {
 
         <div className="mb-9 rounded-2xl border border-gold bg-gold-pale p-5">
           <div className="flex flex-wrap items-start gap-3">
-            <span className="inline-flex items-center rounded-full bg-gold-accent px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.04em] text-[#4a2e07]">
+            <span className="inline-flex items-center rounded-full bg-gold-accent px-2.5 py-1 text-mini font-extrabold uppercase tracking-[0.04em] text-gold-deep">
               {bonusBadge}
             </span>
             <p className="m-0 text-sm font-semibold text-ink">{bonusText}</p>
@@ -81,11 +80,11 @@ export const WaitlistPage = async () => {
 
         <ul className="m-0 flex list-none flex-col gap-3.5 p-0">
           {perks.map((perk, i) => (
-            <li key={`${perk.title}-${i}`} className="flex items-start gap-3 text-[15px]">
+            <li key={`${perk.title}-${i}`} className="flex items-start gap-3 text-15">
               {renderPerkIcon(perk.icon)}
               <div>
                 <div className="mb-0.5 font-semibold text-ink">{perk.title}</div>
-                <div className="text-[13px] text-muted">{perk.subtitle}</div>
+                <div className="text-13 text-muted">{perk.subtitle}</div>
               </div>
             </li>
           ))}
@@ -113,13 +112,13 @@ export const WaitlistPage = async () => {
           </div>
         </div>
 
-        <div className="mb-1.5 text-[22px] font-extrabold tracking-tight text-ink">
+        <div className="mb-1.5 text-22 font-extrabold tracking-tight text-ink">
           {formTitle}
         </div>
-        <div className="mb-7 text-[14.5px] text-muted">{formSubtitle}</div>
+        <div className="mb-7 text-14-5 text-muted">{formSubtitle}</div>
 
         <WaitlistForm />
       </div>
-    </main>
+    </div>
   );
 };

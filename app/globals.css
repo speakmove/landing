@@ -22,6 +22,62 @@
   --shadow-soft: 0 1px 2px rgba(10, 22, 18, 0.04), 0 2px 8px rgba(10, 22, 18, 0.04);
   --shadow-mid: 0 4px 10px rgba(10, 22, 18, 0.05), 0 12px 32px rgba(10, 22, 18, 0.06);
   --shadow-deep: 0 10px 30px rgba(10, 22, 18, 0.08), 0 30px 60px rgba(10, 22, 18, 0.08);
+
+  /* Telegram-style phone mockup tokens (used only inside home-phone-preview widget) */
+  --color-tg-bubble-me: #dbf3c9;
+  --color-tg-bubble-me-ink: #0c1f04;
+  --color-tg-bubble-me-accent: #5b8a3b;
+  --color-tg-bubble-bot-ink: #1a1a1a;
+  --color-tg-bubble-bot-accent: #1f3aa6;
+  --color-tg-bubble-bot-muted: #5a6471;
+  --color-tg-timestamp-muted: #9aa0b3;
+  --color-tg-header-pill: rgba(241, 244, 221, 0.95);
+  --color-tg-header-pill-muted: #6b7d4c;
+  --color-tg-date-pill: rgba(93, 138, 71, 0.85);
+  --color-tg-input-pill: rgba(255, 255, 255, 0.75);
+  --color-tg-input-ink: #3a3f47;
+  --color-tg-input-muted: #6e7480;
+  --color-tg-input-placeholder: #6e7480;
+
+  /* Numeric scale tokens for non-Tailwind-default sizes (replaces `text-[15px]` style arbitraries) */
+  --text-10: 10px;
+  --text-10--line-height: 1;
+  --text-mini: 11px;
+  --text-mini--line-height: 1;
+  --text-11-5: 11.5px;
+  --text-11-5--line-height: 1;
+  --text-12-5: 12.5px;
+  --text-12-5--line-height: 1.3;
+  --text-13: 13px;
+  --text-13--line-height: 1.3;
+  --text-13-5: 13.5px;
+  --text-13-5--line-height: 1.3;
+  --text-14-5: 14.5px;
+  --text-14-5--line-height: 1.4;
+  --text-15: 15px;
+  --text-15--line-height: 1.45;
+  --text-15-5: 15.5px;
+  --text-15-5--line-height: 1.45;
+  --text-17: 17px;
+  --text-17--line-height: 1.5;
+  --text-22: 22px;
+  --text-22--line-height: 1.25;
+
+  /* Radii used in legacy mockups */
+  --radius-10: 10px;
+  --radius-14: 14px;
+  --radius-3: 3px;
+
+  /* Auxiliary colors used across legacy mockups */
+  --color-surface-soft: #fafbf8;
+  --color-line-soft: #eceee8;
+  --color-gold-deep: #4a2e07;
+  --color-gold-mid: #7a5a12;
+
+  /* Phone-frame side-button color */
+  --color-phone-dark: #1d1d1f;
+  /* Howitworks phone background swatch */
+  --color-ink-dark: #0b1220;
 }
 
 @layer base {
@@ -49,6 +105,43 @@
 }
 
 @layer components {
+  /* ---------- Telegram phone mockup ---------- */
+  .phone-frame {
+    aspect-ratio: 446 / 921;
+  }
+  .phone-screen {
+    top: 1.6%;
+    bottom: 1.6%;
+    left: 3.1%;
+    right: 3.1%;
+    border-radius: 36px;
+  }
+  .tg-screen-bg {
+    background: linear-gradient(160deg, #afc78f 0%, #c2d094 35%, #d4d895 65%, #c7c887 100%);
+  }
+  .tg-avatar-purple {
+    background: linear-gradient(135deg, #db8cfc 0%, #b06bf0 100%);
+  }
+  .tg-play-me {
+    background: var(--color-tg-bubble-me-accent);
+    box-shadow: 0 2px 5px color-mix(in oklab, var(--color-tg-bubble-me-accent) 25%, transparent);
+  }
+  .tg-play-bot {
+    background: var(--color-tg-bubble-bot-accent);
+    box-shadow: 0 2px 5px color-mix(in oklab, var(--color-tg-bubble-bot-accent) 25%, transparent);
+  }
+  .tg-bubble-shadow {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+  .tg-pill-shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  }
+  .tg-glass-pill {
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.08),
+      inset 0 0 0 0.5px rgba(255, 255, 255, 0.4);
+  }
+
   /* ---------- Brand coin (logo mark) ---------- */
   .brand-coin {
     width: 32px;
@@ -148,6 +241,8 @@
   .coin.lg { --coin-size: 28px; }
   .coin.xl { --coin-size: 36px; }
   .coin-2xl { --coin-size: 48px; }
+  .coin-3xl { --coin-size: 64px; }
+  .coin-4xl { --coin-size: 80px; }
 
   /* ---------- Buttons (pill-shaped, matching source) ---------- */
   .btn {
@@ -404,6 +499,155 @@
   }
   details > summary::-webkit-details-marker {
     display: none;
+  }
+
+  /* ---------- Fluid display headings (replaces inline `style={{fontSize: clamp(...) }}`) ---------- */
+  .h-display-hero {
+    font-size: clamp(2.2rem, 5.2vw, 4.1rem);
+  }
+  .h-display-page {
+    font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  }
+  .h-display-section {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  .h-display-legal {
+    font-size: clamp(28px, 4vw, 42px);
+  }
+  .h-display-mid {
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+  }
+  .h-display-sub {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+  }
+
+  /* ---------- Form controls base (replaces arbitrary `text-[15px] border-[1.5px] ...`) ---------- */
+  .input-base {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    border: 1.5px solid var(--color-line-strong);
+    background: #fff;
+    padding: 12px 16px;
+    font-size: var(--text-15);
+    line-height: 1.45;
+    color: var(--color-ink);
+    outline: none;
+    transition: border-color 150ms, box-shadow 150ms;
+  }
+  .input-base:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 12%, transparent);
+  }
+  .input-base-invalid {
+    border-color: #ef4444;
+  }
+  .input-base-invalid:focus {
+    box-shadow: 0 0 0 3px color-mix(in oklab, #ef4444 12%, transparent);
+  }
+
+  .select-base {
+    display: block;
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1.5px solid var(--color-line-strong);
+    background: #fff;
+    padding: 12px 16px;
+    min-height: 48px;
+    font-size: var(--text-15);
+    line-height: 1.45;
+    color: var(--color-ink);
+    outline: none;
+    transition: border-color 150ms, box-shadow 150ms;
+  }
+  .select-base:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 12%, transparent);
+  }
+  .select-base:disabled {
+    cursor: not-allowed;
+    background: var(--color-surface);
+  }
+  .select-base-invalid {
+    border-color: #ef4444;
+  }
+  .select-base-invalid:focus {
+    box-shadow: 0 0 0 3px color-mix(in oklab, #ef4444 12%, transparent);
+  }
+
+  /* ---------- Phone frame side-buttons ---------- */
+  .phone-side-btn {
+    position: absolute;
+    width: 3.5px;
+    border-radius: 2px;
+    background: var(--color-phone-dark);
+  }
+  .phone-side-btn--silent  { left: -3px; top: 112px; height: 24px; border-radius: 2px 0 0 2px; }
+  .phone-side-btn--vol-up  { left: -3px; top: 150px; height: 52px; border-radius: 2px 0 0 2px; }
+  .phone-side-btn--vol-dn  { left: -3px; top: 212px; height: 52px; border-radius: 2px 0 0 2px; }
+  .phone-side-btn--power   { right: -3px; top: 180px; height: 78px; border-radius: 0 2px 2px 0; }
+  .phone-frame-outer {
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 52px;
+    padding: 3.5px;
+    background: linear-gradient(135deg, #6e6e72 0%, #2a2a2c 50%, #4a4a4d 100%);
+    box-shadow:
+      0 24px 60px rgba(0, 0, 0, 0.22),
+      0 0 0 1px rgba(0, 0, 0, 0.06);
+    position: relative;
+  }
+  .phone-frame-bezel {
+    background: #000;
+    border-radius: 48.5px;
+    padding: 1.5px;
+  }
+  .phone-frame-screen {
+    border-radius: 47px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 40rem;
+  }
+
+  /* ---------- Doodle wallpaper layer ---------- */
+  .doodle-wallpaper {
+    opacity: 0.22;
+  }
+
+  /* ---------- 404 background ---------- */
+  .not-found-bg {
+    background:
+      radial-gradient(900px 460px at 50% -120px, var(--color-primary-pale) 0%, transparent 60%),
+      #fff;
+  }
+
+  /* ---------- Flow step vertical connector (between step circles) ---------- */
+  .flow-step-line {
+    background: linear-gradient(
+      180deg,
+      var(--color-primary) 0%,
+      color-mix(in oklab, var(--color-primary) 30%, transparent) 100%
+    );
+  }
+
+  /* ---------- HowItWorks phone (alt mockup with dark frame + soft screen) ---------- */
+  .howitworks-phone-outer {
+    background: var(--color-ink-dark);
+  }
+  .howitworks-phone-screen {
+    background: #eef2f0;
+    min-height: 520px;
+  }
+  .howitworks-avatar-grad {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  }
+
+  /* ---------- Pricing FOMO panel border ---------- */
+  .pricing-fomo-border {
+    border: 1px solid color-mix(in oklab, var(--color-primary) 35%, var(--color-line));
   }
 
   /* ---------- FAQ chevron (CSS-only rotated-square) ---------- */

@@ -18,7 +18,7 @@ export const FloatBubble = ({ bubble, className = '' }: TProps) => {
       <p className="text-xs font-bold text-ink leading-tight">
         {bubble.title}
       </p>
-      <p className="text-[11px] text-muted leading-tight mt-0.5">
+      <p className="text-mini text-muted leading-tight mt-0.5">
         {bubble.subtitle}
       </p>
     </div>

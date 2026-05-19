@@ -50,8 +50,8 @@ export const HomeCompare = async () => {
           subtitle={t.has('subtitle') ? t('subtitle') : undefined}
         />
 
-        <div className="overflow-x-auto rounded-[18px] border border-line bg-white shadow-(--shadow-soft)">
-          <table className="w-full min-w-180 border-collapse text-[10px] md:text-[14.5px]">
+        <div className="overflow-x-auto rounded-card border border-line bg-white shadow-(--shadow-soft)">
+          <table className="w-full min-w-180 border-collapse text-10 md:text-14-5">
             <caption className="sr-only">{t('title')}</caption>
             <thead>
               <tr>
@@ -60,13 +60,13 @@ export const HomeCompare = async () => {
                     key={col + colIdx}
                     scope="col"
                     className={cn(
-                      'border-b border-line px-3.5 py-4 text-xs md:text-[13px] font-bold',
-                      colIdx === 0 ? 'bg-[#fafbf8] text-left' : 'text-center',
+                      'border-b border-line px-3.5 py-4 text-xs md:text-13 font-bold',
+                      colIdx === 0 ? 'bg-surface-soft text-left' : 'text-center',
                       colIdx === highlightIdx
                         ? 'bg-primary-pale text-primary-ink'
                         : colIdx === 0
                           ? ''
-                          : 'bg-[#fafbf8]',
+                          : 'bg-surface-soft',
                     )}
                   >
                     {col}
@@ -115,7 +115,7 @@ export const HomeCompare = async () => {
           </table>
         </div>
 
-        <p className="mx-auto mt-5 max-w-[66%] text-center text-[10px] leading-[1.7] text-faint">
+        <p className="mx-auto mt-5 max-w-[66%] text-center text-10 leading-[1.7] text-faint">
           {t('footnote')}
         </p>
       </Container>

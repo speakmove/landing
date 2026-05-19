@@ -12,7 +12,6 @@ export async function submitWaitlist(
 
   const prev: TWaitlistFormState['prev'] = {
     firstName: raw['firstName'] ?? '',
-    lastName: raw['lastName'] ?? '',
     email: raw['email'] ?? '',
     segment: raw['segment'] ?? '',
     lang: raw['lang'] ?? '',
@@ -20,8 +19,9 @@ export async function submitWaitlist(
     plan: raw['plan'] ?? '',
   };
 
-  // Honeypot: silent success on bot fill
-  if (typeof raw['website'] === 'string' && raw['website'].length > 0) {
+  // Honeypot: field name disguised as a benign business URL field that advanced bots
+  // are more likely to fill than the obvious "website" name.
+  if (typeof raw['company_url'] === 'string' && raw['company_url'].length > 0) {
     console.warn('[waitlist:honeypot-triggered]');
     return { success: true, position: 999, errors: [], fieldErrors: {}, prev };
   }

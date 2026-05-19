@@ -3,6 +3,7 @@ import {
   ButtonLink,
   CheckIcon,
   Container,
+  MinusIcon,
   Section,
   SectionHead,
   VisuallyHidden,
@@ -69,14 +70,14 @@ export const HomePricingTeaser = async () => {
               <article
                 key={plan.id}
                 className={cn(
-                  'relative flex flex-col rounded-[28px] bg-white p-7',
+                  'relative flex flex-col rounded-card-lg bg-white p-7',
                   isPlus
                     ? 'border border-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_12%,transparent),0_4px_10px_rgba(10,22,18,0.05),0_12px_32px_rgba(10,22,18,0.06)] lg:-translate-y-1.5'
                     : 'border border-line',
                 )}
               >
                 {plan.badge ? (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3.5 py-1 text-[11.5px] font-bold uppercase tracking-[0.04em] text-white">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3.5 py-1 text-11-5 font-bold uppercase tracking-[0.04em] text-white">
                     {plan.badge}
                   </span>
                 ) : null}
@@ -91,7 +92,7 @@ export const HomePricingTeaser = async () => {
                 </div>
 
                 {plan.wasPrice ? (
-                  <div className="mt-4 mb-0.5 text-[13px] text-faint line-through">
+                  <div className="mt-4 mb-0.5 text-13 text-faint line-through">
                     {plan.wasPrice.monthly}
                   </div>
                 ) : null}
@@ -104,18 +105,18 @@ export const HomePricingTeaser = async () => {
                 >
                   <span>{displayAmount}</span>
                   {displayPeriod ? (
-                    <span className="text-[15px] font-medium text-muted">{displayPeriod}</span>
+                    <span className="text-15 font-medium text-muted">{displayPeriod}</span>
                   ) : null}
                 </div>
 
                 {plan.note ? (
-                  <div className="mb-5 text-[13.5px] text-muted">{plan.note}</div>
+                  <div className="mb-5 text-13-5 text-muted">{plan.note}</div>
                 ) : (
                   <div className="mb-5" />
                 )}
 
                 <ul
-                  className="m-0 mb-6 flex flex-col gap-2.5 p-0 text-[14.5px] leading-snug"
+                  className="m-0 mb-6 flex flex-col gap-2.5 p-0 text-14-5 leading-snug"
                   aria-label={tCommon('aria.featuresIncluded', { planName: plan.name })}
                 >
                   {plan.features.map((feat) => (
@@ -131,19 +132,7 @@ export const HomePricingTeaser = async () => {
                   {plan.excluded?.map((excl) => (
                     <li key={excl} className="flex items-start gap-2.5 text-faint">
                       <VisuallyHidden>{tCommon('unavailable')}</VisuallyHidden>
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2.5}
-                        strokeLinecap="round"
-                        className="mt-0.5 flex-none"
-                        aria-hidden="true"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                      </svg>
+                      <MinusIcon size={16} className="mt-0.5 flex-none" />
                       {excl}
                     </li>
                   ))}
@@ -163,7 +152,7 @@ export const HomePricingTeaser = async () => {
           })}
         </div>
 
-        <p className="mt-7 text-center text-[13.5px] text-muted">{t('footer')}</p>
+        <p className="mt-7 text-center text-13-5 text-muted">{t('footer')}</p>
       </Container>
     </Section>
   );

@@ -39,14 +39,14 @@ export const ScenarioCard = ({ scenario }: TProps) => {
         className={
           isChild
             ? 'grid h-10 w-10 flex-none place-items-center rounded-xl bg-primary-pale text-primary-ink'
-            : 'grid h-10 w-10 flex-none place-items-center rounded-xl bg-gold-pale text-[#7a5a12]'
+            : 'grid h-10 w-10 flex-none place-items-center rounded-xl bg-gold-pale text-gold-mid'
         }
       >
         {isChild ? <ChildIcon /> : <SelfIcon />}
       </span>
       <span className="flex-1">
-        <span className="mb-0.5 block text-[15px] font-bold text-ink">{scenario.title}</span>
-        <span className="block text-[13px] leading-snug text-muted">{scenario.subtitle}</span>
+        <span className="mb-0.5 block text-15 font-bold text-ink">{scenario.title}</span>
+        <span className="block text-13 leading-snug text-muted">{scenario.subtitle}</span>
       </span>
       <span className="ml-auto self-center text-faint">
         <ChevronRight />
