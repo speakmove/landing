@@ -247,12 +247,35 @@
     "painMirror": {
       "eyebrow": "Sound familiar?",
       "lines": [
-        "You put off the GP appointment because you don't know how to describe the symptoms.",
-        "You cross the street when a neighbour wants to chat about the weather.",
-        "On a job interview you give shorter answers than you could — afraid you'll trip over a phrase.",
-        "You stay quiet in a work coach meeting and nod, even when you don't understand."
+        {
+          "text": "You put off the GP appointment because you don't know how to describe the symptoms.",
+          "scenarioId": "gp",
+          "scenarioLabel": "GP appointment"
+        },
+        {
+          "text": "You cross the street when a neighbour wants to chat about the weather.",
+          "scenarioId": "smalltalk",
+          "scenarioLabel": "Small talk"
+        },
+        {
+          "text": "On a job interview you give shorter answers than you could — afraid you'll trip over a phrase.",
+          "scenarioId": "interview",
+          "scenarioLabel": "Job interview"
+        },
+        {
+          "text": "You stay quiet in a work coach meeting and nod, even when you don't understand.",
+          "scenarioId": "workcoach",
+          "scenarioLabel": "Work coach"
+        }
       ],
-      "bridge": "It's not your character. It's a skill you can train. 15 minutes a day, by voice, on the situations that actually happen to you."
+      "bridge": "It's not your character. It's a skill you can train. 15 minutes a day, by voice, on the situations that actually happen to you.",
+      "botReply": "We train this exactly — pick where to start",
+      "timeLabels": [
+        "today · 14:02",
+        "today · 14:05",
+        "today · 14:07",
+        "today · 14:10"
+      ]
     },
     "scenariosGrid": {
       "kicker": "7 situations",
