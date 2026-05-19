@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { ButtonLink, Container, Section } from '@/shared/ui';
-import { PATHS, ANCHORS } from '@/shared/config';
+import { ANCHORS, URLS } from '@/shared/config';
 
 type TProps = {
   namespace?: string;
@@ -33,7 +33,7 @@ export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TPro
             {t('subtitle')}
           </p>
 
-          <ButtonLink href={PATHS.waitlist} variant="primary" size="lg">
+          <ButtonLink href={URLS.telegramBot} variant="primary" size="lg">
             {t('cta')}
           </ButtonLink>
 

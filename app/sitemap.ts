@@ -6,7 +6,6 @@ const PATHS = [
   '',
   '/how-it-works',
   '/pricing',
-  '/waitlist',
   '/privacy',
   '/terms',
   '/cookies',

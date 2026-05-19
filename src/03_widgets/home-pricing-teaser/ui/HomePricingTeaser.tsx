@@ -9,7 +9,7 @@ import {
   VisuallyHidden,
 } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
-import { ANCHORS, PATHS } from '@/shared/config';
+import { ANCHORS, URLS } from '@/shared/config';
 
 type TPlanPrice = string | { amount: string; period: string };
 
@@ -139,7 +139,7 @@ export const HomePricingTeaser = async () => {
                 </ul>
 
                 <ButtonLink
-                  href={PATHS.waitlist}
+                  href={URLS.telegramBot}
                   variant={isPlus ? 'primary' : 'outline'}
                   className="mt-auto w-full"
                 >

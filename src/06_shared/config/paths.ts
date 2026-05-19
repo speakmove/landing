@@ -2,7 +2,6 @@ export const PATHS = {
   home: '/',
   howItWorks: '/how-it-works',
   pricing: '/pricing',
-  waitlist: '/waitlist',
   privacy: '/privacy',
   terms: '/terms',
   cookies: '/cookies',

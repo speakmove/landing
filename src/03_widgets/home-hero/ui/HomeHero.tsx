@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
 import { ScenarioCard } from '@/entities/scenario';
 import { HomePhonePreview } from '@/widgets/home-phone-preview';
-import { PATHS, ANCHORS } from '@/shared/config';
+import { ANCHORS, URLS } from '@/shared/config';
 
 import type { TScenario } from '@/entities/scenario';
 
@@ -48,7 +48,7 @@ export const HomeHero = async () => {
 
             {/* CTAs */}
             <div className="mb-8 flex flex-wrap gap-3">
-              <ButtonLink href={PATHS.waitlist} variant="primary" size="lg">
+              <ButtonLink href={URLS.telegramBot} variant="primary" size="lg">
                 {t('ctas.primary')}
                 <ArrowRightIcon size={16} />
               </ButtonLink>

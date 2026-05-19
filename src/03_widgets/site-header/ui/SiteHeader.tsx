@@ -3,7 +3,7 @@ import { Link } from '@/shared/model/libs/i18n/navigation';
 import { Logo } from '@/entities/brand';
 import { ButtonLink, Container, ArrowRightIcon } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
-import { PATHS } from '@/shared/config';
+import { PATHS, URLS } from '@/shared/config';
 import { HeaderNav } from '@/widgets/header-nav';
 import { HeaderMobileMenu } from '@/widgets/header-mobile-menu';
 
@@ -30,7 +30,7 @@ export const SiteHeader = async () => {
             <LocaleSwitch />
           </div>
 
-          <ButtonLink href={PATHS.waitlist} size="sm" className="hidden lg:inline-flex">
+          <ButtonLink href={URLS.telegramBot} size="sm" className="hidden lg:inline-flex">
             {t('cta')}
             <ArrowRightIcon size={14} />
           </ButtonLink>

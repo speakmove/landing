@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { ButtonLink, CheckIcon, Container, Section } from '@/shared/ui';
-import { ANCHORS, PATHS } from '@/shared/config';
+import { ANCHORS, URLS } from '@/shared/config';
 
 type TPrice = {
   label: string;
@@ -124,7 +124,7 @@ export const HomeUkraineProgramme = async () => {
 
           <p className="mb-7 text-xs leading-relaxed italic text-muted">{t('disclaimer')}</p>
 
-          <ButtonLink href={PATHS.waitlist} variant="primary" size="lg">
+          <ButtonLink href={URLS.telegramBot} variant="primary" size="lg">
             {t('cta')}
           </ButtonLink>
         </div>

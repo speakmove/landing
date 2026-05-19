@@ -12,7 +12,7 @@ import {
   Portal,
 } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
-import { ANCHORS, PATHS } from '@/shared/config';
+import { ANCHORS, PATHS, URLS } from '@/shared/config';
 
 type TLinkKey = 'howItWorks' | 'advantages' | 'compare' | 'pricing';
 type TNavItem = { key: TLinkKey; href: string };
@@ -120,7 +120,7 @@ export const HeaderMobileMenu = () => {
 
           <div className="border-t border-line p-5">
             <ButtonLink
-              href={PATHS.waitlist}
+              href={URLS.telegramBot}
               onClick={close}
               variant="primary"
               size="lg"

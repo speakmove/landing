@@ -1,7 +1,6 @@
 import { CheckIcon, MinusIcon, VisuallyHidden } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
-import { Link } from '@/shared/model/libs/i18n/navigation';
-import { PATHS } from '@/shared/config';
+import { URLS } from '@/shared/config';
 import type { TPricingPlan } from '../model/types';
 
 type TBilling = 'monthly' | 'yearly';
@@ -125,13 +124,15 @@ export const PricingPlanCard = ({ plan, billing, className, ariaLabels }: TProps
         ))}
       </ul>
 
-      <Link
-        href={PATHS.waitlist}
+      <a
+        href={URLS.telegramBot}
+        target="_blank"
+        rel="noopener noreferrer"
         className={cn('btn', isPlus ? 'btn-primary' : 'btn-outline', 'mt-auto')}
         aria-label={`${plan.cta} — ${plan.name}`}
       >
         {plan.cta}
-      </Link>
+      </a>
 
       {ariaLabels.unavailable && plan.excluded ? null : null}
       <span hidden>{featuresExcludedLabel}</span>

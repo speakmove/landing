@@ -25,6 +25,9 @@ const sizeClass: Record<TSize, string> = {
   lg: 'btn-lg',
 };
 
+const isExternalHref = (href: TLinkProps['href']): href is string =>
+  typeof href === 'string' && /^(https?:|mailto:|tel:)/.test(href);
+
 export const ButtonLink = ({
   variant = 'primary',
   size = 'md',
@@ -32,11 +35,23 @@ export const ButtonLink = ({
   children,
   ...rest
 }: TProps) => {
+  const classes = cn('btn', variantClass[variant], sizeClass[size], className);
+
+  if (isExternalHref(rest.href)) {
+    return (
+      <a
+        href={rest.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      {...rest}
-      className={cn('btn', variantClass[variant], sizeClass[size], className)}
-    >
+    <Link {...rest} className={classes}>
       {children}
     </Link>
   );
