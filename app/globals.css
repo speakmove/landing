@@ -651,9 +651,6 @@
   }
 
   /* ---------- FAQ chevron (CSS-only rotated-square) ---------- */
-  .faq-details[open] {
-    border-color: color-mix(in oklab, var(--color-primary) 30%, var(--color-line));
-  }
   .faq-summary::after {
     content: '';
     margin-left: auto;
@@ -667,4 +664,14 @@
   .faq-details[open] .faq-summary::after {
     transform: rotate(-135deg);
   }
+}
+
+/* ---------- FAQ details container (unlayered so it beats Tailwind utilities) ---------- */
+.faq-details {
+  border: 1px solid var(--color-line);
+  transition: border-color 150ms ease-out, box-shadow 150ms ease-out;
+}
+.faq-details[open] {
+  border-color: color-mix(in oklab, var(--color-primary) 30%, var(--color-line));
+  box-shadow: var(--shadow-soft);
 }
