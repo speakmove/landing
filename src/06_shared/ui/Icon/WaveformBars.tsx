@@ -7,6 +7,8 @@ type TProps = {
   thickness?: number;
   /** Vertical center of the canvas. Default 9. */
   centerY?: number;
+  /** When `none`, the SVG stretches to fill the container (used by decorative banners). */
+  preserveAspectRatio?: 'none' | 'xMidYMid meet' | 'xMidYMid slice';
   className?: string;
 };
 
@@ -20,6 +22,7 @@ export const WaveformBars = ({
   step = 3.2,
   thickness = 1.6,
   centerY = 9,
+  preserveAspectRatio,
   className,
 }: TProps) => {
   const width = bars.length * step;
@@ -29,6 +32,7 @@ export const WaveformBars = ({
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
+      preserveAspectRatio={preserveAspectRatio}
       className={className}
       aria-hidden="true"
       focusable="false"
