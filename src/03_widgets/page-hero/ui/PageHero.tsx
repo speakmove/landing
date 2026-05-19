@@ -36,22 +36,22 @@ export const PageHero = async ({ namespace }: TProps) => {
           </p>
 
           {stats.length > 0 ? (
-            <div
-              className="mt-7 flex flex-wrap justify-center gap-8"
+            <ul
+              className="mx-auto mt-7 m-0 grid max-w-2xl list-none grid-cols-3 gap-4 p-0 sm:gap-6"
               aria-label={tCommon('aria.statsGrid')}
             >
               {stats.map((stat) => (
-                <div
+                <li
                   key={stat.label}
-                  className="border-l-2 border-primary px-5 text-left"
+                  className="border-l-2 border-primary px-4 text-left sm:px-5"
                 >
                   <div className="font-mono text-2xl font-extrabold tracking-[-0.01em] text-primary-ink">
                     {stat.value}
                   </div>
                   <div className="mt-0.5 text-13 text-muted">{stat.label}</div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           ) : null}
         </div>
       </Container>

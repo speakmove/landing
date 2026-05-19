@@ -401,28 +401,28 @@
       "steps": [
         {
           "num": "1",
-          "title": "Open the bot, pick a scenario",
-          "description": "`/start` → a menu of 7 topics → tap GP, landlord, work coach or whichever is burning right now."
+          "title": "Open the bot",
+          "description": "`/start` → you're in SpeakMove. No app, no signup form — everything inside Telegram."
         },
         {
           "num": "2",
+          "title": "Choose — new topic or continue the last one",
+          "description": "New topic: pick from a menu of 7 scenarios (GP, landlord, work coach, …). Or pick up where you left off — the bot remembers your last conversation."
+        },
+        {
+          "num": "3",
           "title": "The bot sets the context",
           "description": "\"You're at GP reception. Goal: book an appointment for your back pain.\" You know who you are, where you are and why."
         },
         {
-          "num": "3",
+          "num": "4",
           "title": "The bot sends a voice message",
           "description": "An English phrase, real pace, real British accent. Replay as many times as you like."
         },
         {
-          "num": "4",
+          "num": "5",
           "title": "You record a reply",
           "description": "By voice, in English. With mistakes — that's normal. Your pace, nobody's rushing you."
-        },
-        {
-          "num": "5",
-          "title": "See the transcript",
-          "description": "What got transcribed from your speech. You can fix typos or replay before sending."
         },
         {
           "num": "6",

@@ -34,10 +34,6 @@ export const FlowSectionWithPhone = async () => {
             className="relative m-0 list-none p-0 pl-11"
             aria-label={tCommon('aria.flowSteps')}
           >
-            <div
-              aria-hidden="true"
-              className="flow-step-line absolute left-[17px] top-2.5 bottom-2.5 w-0.5"
-            />
             {steps.map((step, idx) => {
               const isLast = idx === steps.length - 1;
               return (
@@ -45,6 +41,12 @@ export const FlowSectionWithPhone = async () => {
                   key={step.num}
                   className={cn('relative pt-1', isLast ? '' : 'pb-7')}
                 >
+                  {!isLast ? (
+                    <span
+                      aria-hidden="true"
+                      className="flow-step-line absolute left-[17px] top-11 bottom-0 w-0.5"
+                    />
+                  ) : null}
                   <span
                     aria-hidden="true"
                     className="absolute -left-11 top-0 grid h-9 w-9 place-items-center rounded-full border-2 border-primary bg-white font-mono text-sm font-bold text-primary shadow-[0_0_0_4px_var(--color-primary-pale)]"

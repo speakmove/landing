@@ -52,10 +52,10 @@ const HEADER_ICON_BY_ID: Record<string, ReactNode> = {
 
 const HEADER_TONE_BY_ID: Record<string, string> = {
   voice: 'bg-primary-pale text-primary',
-  'uk-scenarios': 'bg-gold-pale text-gold',
+  'uk-scenarios': 'bg-primary-pale text-primary',
   'native-feedback': 'bg-primary-pale text-primary',
   'in-telegram': 'bg-primary-pale text-primary',
-  'honest-pricing': 'bg-gold-pale text-gold',
+  'honest-pricing': 'bg-primary-pale text-primary',
   coins: 'bg-gold-pale text-gold',
   cefr: 'bg-primary-pale text-primary',
   homework: 'bg-gold-pale text-gold',
