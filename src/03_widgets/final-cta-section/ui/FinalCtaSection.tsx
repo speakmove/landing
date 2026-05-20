@@ -6,7 +6,7 @@ type TProps = {
   namespace?: string;
 };
 
-export const FinalCtaWithFomo = async ({ namespace = 'HomePage.finalCta' }: TProps) => {
+export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const t = await getTranslations(namespace as any);
 

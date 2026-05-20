@@ -4,7 +4,7 @@ import { PricingPlanCard } from '@/widgets/pricing-plan-card';
 import { PricingUnitEconomics } from '@/widgets/pricing-unit-economics';
 import { PricingComparisonContext } from '@/widgets/pricing-comparison-context';
 import { FaqSection } from '@/widgets/faq-section';
-import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
+import { FinalCtaSection } from '@/widgets/final-cta-section';
 
 export const PricingPage = () => {
   return (
@@ -15,7 +15,7 @@ export const PricingPage = () => {
       <PricingUnitEconomics />
       <PricingComparisonContext />
       <FaqSection namespace="PricingPage.faq" />
-      <FinalCtaWithFomo namespace="PricingPage.finalCta" />
+      <FinalCtaSection namespace="PricingPage.finalCta" />
     </>
   );
 }

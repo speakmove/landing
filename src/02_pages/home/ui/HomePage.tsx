@@ -5,7 +5,7 @@ import { HomeScenariosGrid } from '@/widgets/home-scenarios-grid';
 import { HomeAdvantages } from '@/widgets/home-advantages';
 import { HomeFounderCards } from '@/widgets/home-founder-cards';
 import { HomePricingCard } from '@/widgets/home-pricing-card';
-import { FinalCtaWithFomo } from '@/widgets/final-cta-with-fomo';
+import { FinalCtaSection } from '@/widgets/final-cta-section';
 
 export const HomePage = () => {
   return (
@@ -17,7 +17,7 @@ export const HomePage = () => {
       <HomeAdvantages />
       <HomeFounderCards />
       <HomePricingCard />
-      <FinalCtaWithFomo />
+      <FinalCtaSection />
     </>
   );
 }
