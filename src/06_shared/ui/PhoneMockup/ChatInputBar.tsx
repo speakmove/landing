@@ -20,7 +20,7 @@ export const ChatInputBar = ({ placeholder, ariaLabel }: TProps) => {
       </span>
 
       <div className="tg-glass-pill flex h-10 flex-1 items-center justify-between gap-2 rounded-full bg-tg-input-pill pl-4 pr-3 backdrop-blur-md">
-        <span className="truncate text-sm leading-none text-tg-input-placeholder">{placeholder}</span>
+        <span className="truncate text-sm leading-none text-tg-input-muted">{placeholder}</span>
         <StickerTabIcon size={20} className="flex-none text-tg-input-muted" />
       </div>
 

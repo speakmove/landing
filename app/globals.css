@@ -37,7 +37,7 @@
   --color-tg-input-pill: rgba(255, 255, 255, 0.75);
   --color-tg-input-ink: #3a3f47;
   --color-tg-input-muted: #6e7480;
-  --color-tg-input-placeholder: #6e7480;
+  --color-tg-doodle: #2f4a18;
 
   /* Numeric scale tokens for non-Tailwind-default sizes (replaces `text-[15px]` style arbitraries) */
   --text-10: 10px;
@@ -68,16 +68,17 @@
   --radius-14: 14px;
   --radius-3: 3px;
 
-  /* Auxiliary colors used across legacy mockups */
+  /* Auxiliary surface and line tints */
   --color-surface-soft: #fafbf8;
+  --color-surface-warm: #fbfbf6;
+  --color-surface-cream: #fbf6e4;
   --color-line-soft: #eceee8;
+  --color-line-stronger: #b8bcb2;
   --color-gold-deep: #4a2e07;
   --color-gold-mid: #7a5a12;
 
   /* Phone-frame side-button color */
   --color-phone-dark: #1d1d1f;
-  /* Howitworks phone background swatch */
-  --color-ink-dark: #0b1220;
 }
 
 @layer base {
@@ -284,7 +285,7 @@
   }
   .btn-outline:hover:not(:disabled) {
     background: #fff;
-    border-color: #b8bcb2;
+    border-color: var(--color-line-stronger);
   }
   .btn-ghost {
     color: var(--color-muted);
@@ -345,7 +346,7 @@
         color-mix(in oklab, var(--color-primary) 14%, transparent) 0%,
         transparent 70%
       ),
-      linear-gradient(180deg, #ffffff 0%, #fbfbf6 100%);
+      linear-gradient(180deg, #ffffff 0%, var(--color-surface-warm) 100%);
   }
   .hero-bg-grid::before {
     content: '';
@@ -374,7 +375,7 @@
     background:
       radial-gradient(900px 500px at 15% 0%, color-mix(in oklab, var(--color-primary) 18%, transparent) 0%, transparent 60%),
       radial-gradient(700px 500px at 100% 100%, var(--color-gold-pale) 0%, transparent 55%),
-      linear-gradient(160deg, #ffffff 0%, var(--color-primary-pale) 55%, #fbf6e4 100%);
+      linear-gradient(160deg, #ffffff 0%, var(--color-primary-pale) 55%, var(--color-surface-cream) 100%);
     border: 1px solid color-mix(in oklab, var(--color-primary) 18%, var(--color-line));
     border-radius: var(--radius-card-lg);
     box-shadow: var(--shadow-mid);
@@ -389,7 +390,7 @@
     gap: 2px;
     padding: 4px;
     border-radius: 999px;
-    background: #f1f3ef;
+    background: var(--color-surface-warm);
     font-size: 12.5px;
     font-weight: 600;
     color: var(--color-muted);
@@ -447,7 +448,7 @@
     font-weight: 900;
     letter-spacing: -0.06em;
     line-height: 0.85;
-    background: linear-gradient(180deg, var(--color-primary-pale) 0%, #f1f3ef 60%, transparent 100%);
+    background: linear-gradient(180deg, var(--color-primary-pale) 0%, var(--color-surface-warm) 60%, transparent 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -619,6 +620,7 @@
 
   /* ---------- Doodle wallpaper layer ---------- */
   .doodle-wallpaper {
+    color: var(--color-tg-doodle);
     opacity: 0.22;
   }
 
@@ -640,7 +642,7 @@
 
   /* ---------- HowItWorks phone (alt mockup with dark frame + soft screen) ---------- */
   .howitworks-phone-outer {
-    background: var(--color-ink-dark);
+    background: var(--color-ink);
   }
   .howitworks-phone-screen {
     background: #eef2f0;

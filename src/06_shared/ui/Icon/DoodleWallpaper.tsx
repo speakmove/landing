@@ -9,7 +9,7 @@ export const DoodleWallpaper = () => {
       viewBox="0 0 360 720"
       preserveAspectRatio="xMidYMid slice"
       fill="none"
-      stroke="#2f4a18"
+      stroke="currentColor"
       strokeWidth={1.3}
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -26,12 +26,12 @@ export const DoodleWallpaper = () => {
       </g>
       <g transform="translate(280,90) rotate(-12)">
         <path d="M0 6 Q5 0 14 6 Q18 0 22 6 L22 12 Q18 18 14 12 Q5 18 0 12 Z" />
-        <circle cx="20" cy="6" r=".8" fill="#2f4a18" stroke="none" />
+        <circle cx="20" cy="6" r=".8" fill="currentColor" stroke="none" />
       </g>
       <g transform="translate(330,90) rotate(-5)">
         <circle cx="8" cy="8" r="8" />
-        <circle cx="5" cy="6" r=".8" fill="#2f4a18" stroke="none" />
-        <circle cx="11" cy="6" r=".8" fill="#2f4a18" stroke="none" />
+        <circle cx="5" cy="6" r=".8" fill="currentColor" stroke="none" />
+        <circle cx="11" cy="6" r=".8" fill="currentColor" stroke="none" />
         <path d="M4 10 Q8 14 12 10" />
       </g>
       <g transform="translate(310,180)">
@@ -68,8 +68,8 @@ export const DoodleWallpaper = () => {
       </g>
       <g transform="translate(280,360) rotate(-6)">
         <path d="M2 7 L0 0 L7 5 L13 5 L20 0 L18 7 Q20 14 10 16 Q0 14 2 7 Z" />
-        <circle cx="7" cy="9" r=".8" fill="#2f4a18" stroke="none" />
-        <circle cx="13" cy="9" r=".8" fill="#2f4a18" stroke="none" />
+        <circle cx="7" cy="9" r=".8" fill="currentColor" stroke="none" />
+        <circle cx="13" cy="9" r=".8" fill="currentColor" stroke="none" />
       </g>
       <g transform="translate(50,400)">
         <path d="M0 4 Q0 0 12 0 Q24 0 24 4 M0 6 L24 6 Q24 8 22 8 Q22 10 20 10 L4 10 Q2 10 2 8 Q0 8 0 6 M0 12 Q0 16 12 16 Q24 16 24 12" />
@@ -103,7 +103,7 @@ export const DoodleWallpaper = () => {
       </g>
       <g transform="translate(280,660) rotate(15)">
         <path d="M0 6 Q5 0 14 6 Q18 0 22 6 L22 12 Q18 18 14 12 Q5 18 0 12 Z" />
-        <circle cx="20" cy="6" r=".8" fill="#2f4a18" stroke="none" />
+        <circle cx="20" cy="6" r=".8" fill="currentColor" stroke="none" />
       </g>
       <g transform="translate(170,680)">
         <path d="M9 0 L11 6 L18 6 L12 10 L14 17 L9 13 L4 17 L6 10 L0 6 L7 6 Z" />
