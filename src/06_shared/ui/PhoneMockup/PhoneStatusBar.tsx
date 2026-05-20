@@ -1,4 +1,4 @@
-import { BatteryIcon, SignalBarsIcon } from '@/shared/ui';
+import { BatteryIcon, SignalBarsIcon } from '../Icon';
 
 type TProps = {
   time?: string;

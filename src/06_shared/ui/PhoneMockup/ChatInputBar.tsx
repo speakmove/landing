@@ -1,4 +1,4 @@
-import { MicIcon, PaperclipIcon, StickerTabIcon } from '@/shared/ui';
+import { MicIcon, PaperclipIcon, StickerTabIcon } from '../Icon';
 
 type TProps = {
   placeholder: string;

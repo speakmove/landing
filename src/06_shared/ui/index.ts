@@ -46,6 +46,15 @@ export {
   WaveformBars,
 } from './Icon';
 export { InlineMarkdown } from './InlineMarkdown';
+export {
+  PhoneMockup,
+  ChatBubble,
+  ChatHeader,
+  ChatInputBar,
+  PhoneStatusBar,
+  buildWaveformBars,
+} from './PhoneMockup';
+export type { TPhoneMessage, TPhoneFloatBubble } from './PhoneMockup';
 export { Input } from './Input';
 export { Label } from './Label';
 export { Portal } from './Portal';

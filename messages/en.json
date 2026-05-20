@@ -357,8 +357,8 @@
     },
     "pricingCard": {
       "badge": "Pro",
-      "title": "One plan. £7.45 per month.",
-      "subtitle": "7 days free, no card required. 60 minutes of voice practice per week. All 7 scenarios.",
+      "title": "Less than a coffee a day.",
+      "subtitle": "7 days free, no card. 60 minutes of voice practice per week.",
       "features": [
         "60 minutes of voice conversation per week",
         "All 7 UK scenarios",
@@ -367,7 +367,10 @@
       ],
       "cta": "Open the bot",
       "seeDetailsLabel": "See details and FAQ →",
-      "footnote": "No card · Cancel in one click or via support"
+      "footnote": "No card · Cancel in one click or via support",
+      "perDay": "£0.25",
+      "perDayUnit": "/ day",
+      "perMonth": "= £7.45 per month"
     }
   },
   "HowItWorksPage": {
@@ -432,27 +435,37 @@
       ],
       "phonePreview": {
         "botName": "SpeakMove",
-        "botStatus": "GP appointment · online",
+        "botStatus": "Landlord call · in conversation",
+        "today": "Today",
+        "inputPlaceholder": "Message",
+        "micLabel": "Record voice message",
         "messages": [
           {
             "from": "bot",
-            "text": "Hello, Riverside Surgery. How can I help you today?",
-            "meta": "voice · 0:04"
+            "kind": "voice",
+            "duration": "0:05",
+            "label": "Voice from bot",
+            "text": "Hi, this is Mark from Bayswater Property. You said you have an issue with the boiler?"
           },
           {
             "from": "me",
-            "text": "Hi, I want to book appointment because my back hurts since one week.",
-            "meta": "voice · 0:07"
+            "kind": "voice",
+            "duration": "0:07",
+            "label": "Your reply",
+            "text": "Yes, my boiler is not working since two days. We have no hot water."
           },
           {
             "from": "bot",
-            "text": "Good! 'since one week' → 'for a week'. And usually people say 'I'd like to book' — sounds more polite.",
-            "translation": "Feedback"
+            "kind": "correction",
+            "label": "Feedback",
+            "text": "Almost. ~~since two days~~ → **for two days** — use `for` with durations. Otherwise great!"
           },
           {
             "from": "bot",
-            "text": "How long have you had this pain — is it constant?",
-            "meta": "voice · 0:03"
+            "kind": "voice",
+            "duration": "0:04",
+            "label": "Voice from bot",
+            "text": "Got it. Did you try resetting it from the control panel?"
           }
         ]
       }

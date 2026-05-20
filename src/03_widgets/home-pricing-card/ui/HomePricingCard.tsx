@@ -22,7 +22,17 @@ export const HomePricingCard = async () => {
             {t('title')}
           </h2>
 
-          <p className="mt-3 m-0 max-w-lg text-pretty text-15-5 leading-relaxed text-muted">
+          <div className="mt-6 flex items-baseline justify-center gap-2">
+            <span className="text-5xl font-extrabold tracking-tight text-primary-ink md:text-6xl">
+              {t('perDay')}
+            </span>
+            <span className="text-base font-semibold text-muted md:text-lg">
+              {t('perDayUnit')}
+            </span>
+          </div>
+          <p className="mt-1.5 m-0 font-mono text-13-5 text-muted">{t('perMonth')}</p>
+
+          <p className="mt-4 m-0 max-w-lg text-pretty text-15-5 leading-relaxed text-muted">
             {t('subtitle')}
           </p>
 

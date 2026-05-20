@@ -6,11 +6,12 @@ type TProps = {
 };
 
 // Supports:
-// - **bold**      → <strong>
-// - `code`        → <code>
-// - [label](href) → <Link> for internal (starts with /) or <a> for external
+// - **bold**         → <strong>
+// - ~~strikethrough~~ → <s>
+// - `code`           → <code>
+// - [label](href)    → <Link> for internal (starts with /) or <a> for external
 
-const TOKEN_RE = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g;
+const TOKEN_RE = /(\*\*[^*]+\*\*|~~[^~]+~~|`[^`]+`|\[[^\]]+\]\([^)]+\))/g;
 
 export const InlineMarkdown = ({ text }: TProps) => {
   const parts = text.split(TOKEN_RE).filter((part) => part.length > 0);
@@ -20,6 +21,13 @@ export const InlineMarkdown = ({ text }: TProps) => {
 const renderPart = (part: string, key: number): ReactNode => {
   if (part.startsWith('**') && part.endsWith('**')) {
     return <strong key={key}>{part.slice(2, -2)}</strong>;
+  }
+  if (part.startsWith('~~') && part.endsWith('~~')) {
+    return (
+      <s key={key} className="text-muted opacity-75">
+        {part.slice(2, -2)}
+      </s>
+    );
   }
   if (part.startsWith('`') && part.endsWith('`')) {
     return (

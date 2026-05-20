@@ -3,21 +3,13 @@ import { cn } from '@/shared/model/libs/cn';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { ANCHORS } from '@/shared/config';
 import type { TStep } from '@/entities/step-card';
-import type { TChatMessage } from '@/entities/chat-message';
 import { HowItWorksPhonePreview } from './HowItWorksPhonePreview';
-
-type TPhonePreview = {
-  botName: string;
-  botStatus: string;
-  messages: TChatMessage[];
-};
 
 export const FlowSectionWithPhone = async () => {
   const t = await getTranslations('HowItWorksPage.flow');
   const tCommon = await getTranslations('Common');
 
   const steps = t.raw('steps') as unknown as TStep[];
-  const phonePreview = t.raw('phonePreview') as unknown as TPhonePreview;
 
   return (
     <Section id={ANCHORS.flow} ariaLabelledBy="flow-heading" className="py-12 md:py-16">
@@ -77,7 +69,7 @@ export const FlowSectionWithPhone = async () => {
           </ol>
 
           <div className="lg:sticky lg:top-[88px]">
-            <HowItWorksPhonePreview preview={phonePreview} />
+            <HowItWorksPhonePreview />
           </div>
         </div>
       </Container>

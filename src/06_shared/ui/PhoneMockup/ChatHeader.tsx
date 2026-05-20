@@ -1,16 +1,17 @@
-import { ChevronLeftIcon } from '@/shared/ui';
+import { ChevronLeftIcon } from '../Icon';
 
 type TProps = {
   botName: string;
   botStatus: string;
-  coinBalance: string;
+  coinBalance?: string;
 };
 
 /**
  * Telegram chat header strip: back chevron with unread count, bot title pill, avatar.
- * Pixel-matches source HTML mockup — colors come from `@theme` Telegram-mockup tokens.
+ * `coinBalance` is rendered inside the avatar circle when provided — used for the
+ * home-hero mockup where a small visual badge sits in the corner. Empty by default.
  */
-export const ChatHeader = ({ botName, botStatus, coinBalance }: TProps) => {
+export const ChatHeader = ({ botName, botStatus, coinBalance = '' }: TProps) => {
   return (
     <div className="relative z-10 mt-13 flex items-center gap-2 px-3 pb-1">
       <div className="tg-pill-shadow flex flex-none items-center gap-1 rounded-full bg-tg-header-pill py-2 pl-2.5 pr-2">

@@ -357,8 +357,8 @@
     },
     "pricingCard": {
       "badge": "Pro",
-      "title": "Один тариф. £7.45 в месяц.",
-      "subtitle": "7 дней бесплатно без карты. 60 минут голосовой практики в неделю. Все 7 сценариев.",
+      "title": "Меньше чашки кофе в день.",
+      "subtitle": "7 дней бесплатно без карты. 60 минут голосовой практики в неделю.",
       "features": [
         "60 минут voice-разговора в неделю",
         "Все 7 UK-сценариев",
@@ -367,7 +367,10 @@
       ],
       "cta": "Открыть бота",
       "seeDetailsLabel": "Смотреть детали и FAQ →",
-      "footnote": "Без карты · Отмена в один клик или через техподдержку"
+      "footnote": "Без карты · Отмена в один клик или через техподдержку",
+      "perDay": "£0.25",
+      "perDayUnit": "/ день",
+      "perMonth": "= £7.45 в месяц"
     }
   },
   "HowItWorksPage": {
@@ -432,27 +435,37 @@
       ],
       "phonePreview": {
         "botName": "SpeakMove",
-        "botStatus": "GP appointment · online",
+        "botStatus": "Landlord call · в разговоре",
+        "today": "Сегодня",
+        "inputPlaceholder": "Message",
+        "micLabel": "Записать голосовое",
         "messages": [
           {
             "from": "bot",
-            "text": "Hello, Riverside Surgery. How can I help you today?",
-            "meta": "voice · 0:04"
+            "kind": "voice",
+            "duration": "0:05",
+            "label": "Voice от бота",
+            "text": "Hi, this is Mark from Bayswater Property. You said you have an issue with the boiler?"
           },
           {
             "from": "me",
-            "text": "Hi, I want to book appointment because my back hurts since one week.",
-            "meta": "voice · 0:07"
+            "kind": "voice",
+            "duration": "0:07",
+            "label": "Твой ответ",
+            "text": "Yes, my boiler is not working since two days. We have no hot water."
           },
           {
             "from": "bot",
-            "text": "Хорошо! 'since one week' → 'for a week'. И обычно говорят 'I'd like to book' — звучит вежливее.",
-            "translation": "RU фидбек"
+            "kind": "correction",
+            "label": "Фидбек на русском",
+            "text": "Почти. ~~since two days~~ → **for two days** — `for` используется с длительностью. Иначе хорошо!"
           },
           {
             "from": "bot",
-            "text": "How long have you had this pain — is it constant?",
-            "meta": "voice · 0:03"
+            "kind": "voice",
+            "duration": "0:04",
+            "label": "Voice от бота",
+            "text": "Got it. Did you try resetting it from the control panel?"
           }
         ]
       }

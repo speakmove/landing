@@ -1,6 +1,6 @@
 import { CheckIcon, CoinIcon } from '@/shared/ui';
+import type { TPhoneFloatBubble } from '@/shared/ui';
 import { cn } from '@/shared/model/libs/cn';
-import type { TPhoneFloatBubble } from '../model/types';
 
 type TProps = {
   bubbles: TPhoneFloatBubble[];

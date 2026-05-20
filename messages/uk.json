@@ -357,8 +357,8 @@
     },
     "pricingCard": {
       "badge": "Pro",
-      "title": "Один тариф. £7.45 на місяць.",
-      "subtitle": "7 днів безкоштовно без картки. 60 хвилин голосової практики на тиждень. Усі 7 сценаріїв.",
+      "title": "Менше за чашку кави на день.",
+      "subtitle": "7 днів безкоштовно без картки. 60 хвилин голосової практики на тиждень.",
       "features": [
         "60 хвилин voice-розмови на тиждень",
         "Усі 7 UK-сценаріїв",
@@ -367,7 +367,10 @@
       ],
       "cta": "Відкрити бота",
       "seeDetailsLabel": "Деталі та FAQ →",
-      "footnote": "Без картки · Скасування одним кліком або через техпідтримку"
+      "footnote": "Без картки · Скасування одним кліком або через техпідтримку",
+      "perDay": "£0.25",
+      "perDayUnit": "/ день",
+      "perMonth": "= £7.45 на місяць"
     }
   },
   "HowItWorksPage": {
@@ -432,27 +435,37 @@
       ],
       "phonePreview": {
         "botName": "SpeakMove",
-        "botStatus": "GP appointment · online",
+        "botStatus": "Landlord call · у розмові",
+        "today": "Сьогодні",
+        "inputPlaceholder": "Message",
+        "micLabel": "Записати голосове",
         "messages": [
           {
             "from": "bot",
-            "text": "Hello, Riverside Surgery. How can I help you today?",
-            "meta": "voice · 0:04"
+            "kind": "voice",
+            "duration": "0:05",
+            "label": "Voice від бота",
+            "text": "Hi, this is Mark from Bayswater Property. You said you have an issue with the boiler?"
           },
           {
             "from": "me",
-            "text": "Hi, I want to book appointment because my back hurts since one week.",
-            "meta": "voice · 0:07"
+            "kind": "voice",
+            "duration": "0:07",
+            "label": "Твоя відповідь",
+            "text": "Yes, my boiler is not working since two days. We have no hot water."
           },
           {
             "from": "bot",
-            "text": "Добре! 'since one week' → 'for a week'. І зазвичай кажуть 'I'd like to book' — звучить ввічливіше.",
-            "translation": "UA фідбек"
+            "kind": "correction",
+            "label": "Фідбек українською",
+            "text": "Майже. ~~since two days~~ → **for two days** — `for` використовується з тривалістю. Інакше добре!"
           },
           {
             "from": "bot",
-            "text": "How long have you had this pain — is it constant?",
-            "meta": "voice · 0:03"
+            "kind": "voice",
+            "duration": "0:04",
+            "label": "Voice від бота",
+            "text": "Got it. Did you try resetting it from the control panel?"
           }
         ]
       }
