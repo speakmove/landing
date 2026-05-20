@@ -8,6 +8,7 @@ export { FieldError } from './FieldError';
 export { HoneypotField } from './HoneypotField';
 export {
   ArrowRightIcon,
+  BarChartIcon,
   BatteryIcon,
   BubbleTail,
   BurgerIcon,
@@ -17,6 +18,7 @@ export {
   ClockIcon,
   CloseIcon,
   CoinIcon,
+  DocumentIcon,
   DoodleWallpaper,
   DoubleCheckIcon,
   EditIcon,

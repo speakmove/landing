@@ -1,5 +1,6 @@
 export { Icon } from './Icon';
 export { ArrowRightIcon } from './ArrowRight';
+export { BarChartIcon } from './BarChart';
 export { BatteryIcon } from './Battery';
 export { BubbleTail } from './BubbleTail';
 export { BurgerIcon } from './Burger';
@@ -9,6 +10,7 @@ export { ChevronLeftIcon } from './ChevronLeft';
 export { ClockIcon } from './Clock';
 export { CloseIcon } from './Close';
 export { CoinIcon } from './Coin';
+export { DocumentIcon } from './Document';
 export { DoodleWallpaper } from './DoodleWallpaper';
 export { DoubleCheckIcon } from './DoubleCheck';
 export { EditIcon } from './Edit';
