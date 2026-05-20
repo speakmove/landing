@@ -29,7 +29,6 @@ export {
   LockIcon,
   LogoHorizontal,
   LogoMark,
-  MailIcon,
   MapPinIcon,
   MessageCircleIcon,
   MicIcon,
@@ -47,6 +46,7 @@ export {
   TikTokIcon,
   UserPlusIcon,
   WaveformBars,
+  YouTubeIcon,
 } from './Icon';
 export { InlineMarkdown } from './InlineMarkdown';
 export { JsonLd } from './JsonLd';

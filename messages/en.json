@@ -19,8 +19,7 @@
         "ariaLabel": "Change language"
       },
       "mobile": {
-        "followHeading": "Follow us",
-        "contactLabel": "Email us"
+        "followHeading": "Follow us"
       }
     },
     "hero": {

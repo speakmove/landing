@@ -3,34 +3,32 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/06_shared/model/libs/i18n/request.ts');
 
+const isDev = process.env.NODE_ENV !== 'production';
+
 /**
  * Content Security Policy.
  *
+ * Dev-mode caveat: React Refresh + Next.js HMR need code-eval at
+ * development time. The `unsafe-eval` keyword is appended to
+ * script-src ONLY when NODE_ENV !== 'production'. Production builds
+ * never see it.
+ *
  * - `default-src 'self'`: same-origin only by default.
- * - `script-src` and `style-src` allow 'unsafe-inline' because Next.js
- *   App Router emits inline scripts/styles for hydration, font loading
- *   and Tailwind v4 utility CSS. A future nonce-based version (via
- *   middleware) would tighten this further, but for an SSG marketing
- *   surface with no client mutation surface 'unsafe-inline' is the
- *   pragmatic V0 setting.
- * - `img-src` allows data: (Next/Image placeholders) and https: for
- *   future remote OG/social images.
- * - `font-src 'self' data:` covers next/font (locally served) and the
- *   data-URL fallbacks JetBrains Mono / Inter occasionally emit.
- * - `connect-src 'self'` — no external API calls on the marketing
- *   surface. Add hosts here when Stripe/analytics are wired up.
- * - `frame-ancestors 'none'` — site cannot be embedded (clickjacking).
- * - `form-action 'self'` — forms can only submit back to our domain.
- * - `base-uri 'self'` — prevents <base> injection from changing the
- *   resolution of relative URLs.
+ * - `script-src 'unsafe-inline'`: Next.js App Router emits inline
+ *   bootstrap/hydration scripts. A nonce-based variant via middleware
+ *   would tighten this further; pragmatic V0 setting for an SSG surface.
+ * - `style-src 'unsafe-inline'`: Tailwind v4 utility CSS + next/font.
+ * - `connect-src 'self'` (+ ws: in dev for Fast Refresh).
+ * - `frame-ancestors 'none'`, `form-action 'self'`, `base-uri 'self'`,
+ *   `object-src 'none'` — standard clickjacking + injection hardening.
  */
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https:",
   "font-src 'self' data:",
-  "connect-src 'self'",
+  `connect-src 'self'${isDev ? ' ws: http://localhost:*' : ''}`,
   "frame-ancestors 'none'",
   "form-action 'self'",
   "base-uri 'self'",

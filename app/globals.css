@@ -384,36 +384,6 @@
     overflow: hidden;
   }
 
-  /* ---------- Lang toggle (segmented pill) ---------- */
-  .lang-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 2px;
-    padding: 4px;
-    border-radius: 999px;
-    background: var(--color-surface-warm);
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--color-muted);
-  }
-  .lang-toggle a,
-  .lang-toggle button {
-    padding: 4px 10px;
-    border-radius: 999px;
-    transition: background 150ms, color 150ms, box-shadow 150ms;
-  }
-  .lang-toggle a:focus-visible,
-  .lang-toggle button:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-  }
-  .lang-toggle a.is-active,
-  .lang-toggle button.is-active {
-    background: #fff;
-    color: var(--color-ink);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-  }
-
   /* ---------- Footer social icon ---------- */
   .foot-soc {
     display: grid;
