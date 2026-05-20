@@ -1,18 +1,18 @@
 import { ChevronLeftIcon } from '../Icon';
+import { LogoMark } from '../Icon/LogoMark';
 
 type TProps = {
   botName: string;
   botStatus: string;
-  coinBalance?: string;
   /** Unread badge next to the back chevron. Hidden when 0 / undefined. */
   unreadCount?: number;
 };
 
 /**
  * Telegram chat header strip: back chevron with optional unread count,
- * bot title pill, avatar with optional coin badge.
+ * bot title pill, brand avatar (SpeakMove logo mark).
  */
-export const ChatHeader = ({ botName, botStatus, coinBalance = '', unreadCount }: TProps) => {
+export const ChatHeader = ({ botName, botStatus, unreadCount }: TProps) => {
   const showUnread = typeof unreadCount === 'number' && unreadCount > 0;
   return (
     <div className="relative z-10 mt-13 flex items-center gap-2 px-3 pb-1">
@@ -30,8 +30,8 @@ export const ChatHeader = ({ botName, botStatus, coinBalance = '', unreadCount }
         <div className="text-[0.7rem] leading-tight text-tg-header-pill-muted">{botStatus}</div>
       </div>
 
-      <div className="tg-pill-shadow tg-avatar-purple grid h-10 w-10 flex-none place-items-center rounded-full ring-2 ring-tg-header-pill">
-        <span className="text-xs font-extrabold text-white">{coinBalance}</span>
+      <div className="tg-pill-shadow grid h-10 w-10 flex-none place-items-center overflow-hidden rounded-full bg-white ring-2 ring-tg-header-pill">
+        <LogoMark size={32} />
       </div>
     </div>
   );
