@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { cn } from '@/shared/model/libs/cn';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { ANCHORS } from '@/shared/config';
@@ -9,7 +10,7 @@ export const FlowSectionWithPhone = async () => {
   const t = await getTranslations('HowItWorksPage.flow');
   const tCommon = await getTranslations('Common');
 
-  const steps = t.raw('steps') as unknown as TStep[];
+  const steps = getList<TStep>(t, 'steps');
 
   return (
     <Section id={ANCHORS.flow} ariaLabelledBy="flow-heading" className="py-12 md:py-16">

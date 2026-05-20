@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { isExternal } from '@/shared/model/utils';
 
@@ -14,7 +15,7 @@ type TFooterColumn = {
 
 export const FooterNav = async () => {
   const t = await getTranslations('HomePage.footer');
-  const columns = t.raw('columns') as unknown as TFooterColumn[];
+  const columns = getList<TFooterColumn>(t, 'columns');
 
   return (
     <>

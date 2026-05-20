@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { StepCard } from '@/entities/step-card';
 import { ANCHORS } from '@/shared/config';
@@ -7,7 +8,7 @@ import type { TStep } from '@/entities/step-card';
 export const HomeHowItWorks = async () => {
   const t = await getTranslations('HomePage.howItWorks');
 
-  const steps = t.raw('steps') as unknown as TStep[];
+  const steps = getList<TStep>(t, 'steps');
 
   return (
     <Section id={ANCHORS.howItWorks} ariaLabelledBy="how-it-works-heading">

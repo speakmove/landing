@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
 import { buildBotStartUrl } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
@@ -13,7 +14,7 @@ type TCard = {
 
 export const HomeScenariosGrid = async () => {
   const t = await getTranslations('HomePage.scenariosGrid');
-  const cards = t.raw('cards') as unknown as TCard[];
+  const cards = getList<TCard>(t, 'cards');
   const ctaLabel = t('ctaLabel');
 
   return (

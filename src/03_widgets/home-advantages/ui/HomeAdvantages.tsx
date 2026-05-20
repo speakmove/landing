@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { AdvantageTile } from '@/entities/advantage-tile';
 import { ANCHORS } from '@/shared/config';
@@ -15,7 +16,7 @@ const SPAN: Record<number, string> = {
 export const HomeAdvantages = async () => {
   const t = await getTranslations('HomePage.advantages');
 
-  const tiles = t.raw('tiles') as unknown as TAdvantageTile[];
+  const tiles = getList<TAdvantageTile>(t, 'tiles');
 
   return (
     <Section

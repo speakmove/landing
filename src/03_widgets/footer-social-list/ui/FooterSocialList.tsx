@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { getTranslations } from 'next-intl/server';
 import { InstagramIcon, TelegramIcon, ThreadsIcon, TikTokIcon } from '@/shared/ui';
 
@@ -18,7 +19,7 @@ const ICONS: Record<string, ReactElement> = {
 
 export const FooterSocialList = async () => {
   const t = await getTranslations('HomePage.footer');
-  const socialLinks = t.raw('socialLinks') as unknown as TSocialLink[];
+  const socialLinks = getList<TSocialLink>(t, 'socialLinks');
 
   return (
     <ul className="m-0 flex list-none gap-2 p-0" aria-label={t('socialTitle')}>

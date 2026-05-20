@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { CheckIcon, Container, Section } from '@/shared/ui';
 
 /**
@@ -9,7 +10,7 @@ import { CheckIcon, Container, Section } from '@/shared/ui';
  */
 export const PricingTrustStrip = async () => {
   const t = await getTranslations('PricingPage.trustStrip');
-  const items = t.raw('items') as unknown as string[];
+  const items = getList<string>(t, 'items');
 
   return (
     <Section className="px-5 py-2 md:px-6">

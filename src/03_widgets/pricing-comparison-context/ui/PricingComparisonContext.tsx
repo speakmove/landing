@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { cn } from '@/shared/model/libs/cn';
 import { Container, Section, SectionHead } from '@/shared/ui';
 
@@ -12,7 +13,7 @@ type TBlock = {
 
 export const PricingComparisonContext = async () => {
   const t = await getTranslations('PricingPage.comparison');
-  const blocks = t.raw('blocks') as unknown as TBlock[];
+  const blocks = getList<TBlock>(t, 'blocks');
 
   return (
     <Section ariaLabelledBy="comparison-heading" className="py-12 md:py-16">

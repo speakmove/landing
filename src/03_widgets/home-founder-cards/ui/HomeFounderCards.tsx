@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
 import { safeHrefOr } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
@@ -15,7 +16,7 @@ type TFounder = {
 
 export const HomeFounderCards = async () => {
   const t = await getTranslations('HomePage.founders');
-  const cards = t.raw('cards') as unknown as TFounder[];
+  const cards = getList<TFounder>(t, 'cards');
   const ctaLabel = t('ctaLabel');
 
   return (

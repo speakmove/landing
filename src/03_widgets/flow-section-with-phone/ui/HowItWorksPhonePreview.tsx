@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { PhoneMockup } from '@/shared/ui';
 import type { TPhoneMessage } from '@/shared/ui';
 
@@ -11,7 +12,7 @@ import type { TPhoneMessage } from '@/shared/ui';
  */
 export const HowItWorksPhonePreview = async () => {
   const t = await getTranslations('HowItWorksPage.flow.phonePreview');
-  const messages = t.raw('messages') as unknown as TPhoneMessage[];
+  const messages = getList<TPhoneMessage>(t, 'messages');
   const unreadCount = t.has('unreadCount')
     ? (t.raw('unreadCount') as unknown as number)
     : undefined;

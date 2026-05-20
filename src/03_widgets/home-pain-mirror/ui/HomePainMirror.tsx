@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, DoubleCheckIcon, Section } from '@/shared/ui';
 import { buildBotStartUrl } from '@/shared/model/utils';
 
@@ -10,8 +11,8 @@ type TLine = {
 
 export const HomePainMirror = async () => {
   const t = await getTranslations('HomePage.painMirror');
-  const lines = t.raw('lines') as unknown as TLine[];
-  const timeLabels = t.raw('timeLabels') as unknown as string[];
+  const lines = getList<TLine>(t, 'lines');
+  const timeLabels = getList<string>(t, 'timeLabels');
 
   return (
     <Section

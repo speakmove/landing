@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 
 type TBadge = {
   label: string;
@@ -6,7 +7,7 @@ type TBadge = {
 
 export const FooterLegal = async () => {
   const t = await getTranslations('HomePage.footer');
-  const badges = (t.raw('badges') as unknown as TBadge[] | undefined) ?? [];
+  const badges = getList<TBadge>(t, 'badges');
   const copyright = t.has('copyright') ? t('copyright') : t('tagline');
 
   return (

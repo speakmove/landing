@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { PrivacyFeatureCard } from '@/entities/privacy-card';
 import { ANCHORS } from '@/shared/config';
@@ -7,7 +8,7 @@ import type { TPrivacyCard } from '@/entities/privacy-card';
 export const PrivacyFeatureGrid = async () => {
   const t = await getTranslations('HowItWorksPage.privacy');
   const tCommon = await getTranslations('Common');
-  const cards = t.raw('cards') as unknown as TPrivacyCard[];
+  const cards = getList<TPrivacyCard>(t, 'cards');
 
   return (
     <Section

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList, getObject } from '@/shared/model/libs/i18n/get-list';
 import { Container, Section, SectionHead } from '@/shared/ui';
 
 type TRow = { label: string; amount: string };
@@ -8,9 +9,11 @@ export const PricingUnitEconomics = async () => {
   const t = await getTranslations('PricingPage.unitEconomics');
 
   const currency = t('currency');
-  const rows = t.raw('rows') as unknown as TRow[];
-  const costTotal = t.raw('costTotal') as unknown as TTotal;
-  const margin = t.raw('margin') as unknown as TTotal;
+  const rows = getList<TRow>(t, 'rows');
+  const costTotal = getObject<TTotal>(t, 'costTotal');
+  const margin = getObject<TTotal>(t, 'margin');
+
+  if (!costTotal || !margin) return null;
 
   return (
     <Section

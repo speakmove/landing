@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, Section, SectionHead } from '@/shared/ui';
 import { FaqItem } from '@/entities/faq-item';
 import { ANCHORS } from '@/shared/config';
@@ -12,7 +13,7 @@ export const FaqSection = async ({ namespace }: TProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const t = await getTranslations(namespace as any);
   const tCommon = await getTranslations('Common');
-  const items = t.raw('items') as unknown as TFaqItem[];
+  const items = getList<TFaqItem>(t, 'items');
 
   return (
     <Section

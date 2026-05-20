@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList, getObject } from '@/shared/model/libs/i18n/get-list';
 import { Container, InlineMarkdown } from '@/shared/ui';
 import { LegalToc } from '@/widgets/legal-toc';
 
@@ -22,8 +23,10 @@ type TProps = {
 export const LegalPageLayout = async ({ namespace }: TProps) => {
   const t = await getTranslations(namespace as never);
   const tCommon = await getTranslations('Common');
-  const meta = t.raw('meta') as unknown as TLegalMeta;
-  const sections = t.raw('sections') as unknown as TLegalSection[];
+  const meta = getObject<TLegalMeta>(t, 'meta');
+  const sections = getList<TLegalSection>(t, 'sections');
+
+  if (!meta) return null;
 
   const tocItems = sections.map((s) => ({ id: s.id, heading: s.heading }));
 

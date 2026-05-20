@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { ButtonLink, Container } from '@/shared/ui';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { PATHS, URLS } from '@/shared/config';
 
 type TSuggestionLink = {
@@ -9,7 +10,7 @@ type TSuggestionLink = {
 
 export const NotFoundPage = async () => {
   const t = await getTranslations('NotFoundPage');
-  const suggestionLinks = (t.raw('suggestions.links') as TSuggestionLink[]) ?? [];
+  const suggestionLinks = getList<TSuggestionLink>(t, 'suggestions.links');
 
   return (
     <section

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
 import { HomePhonePreview } from '@/widgets/home-phone-preview';
 import { ANCHORS, URLS } from '@/shared/config';
@@ -6,8 +7,8 @@ import { ANCHORS, URLS } from '@/shared/config';
 export const HomeHero = async () => {
   const t = await getTranslations('HomePage.hero');
 
-  const eyebrowItems = t.raw('eyebrow.items') as unknown as string[];
-  const metaPoints = t.raw('metaPoints') as unknown as string[];
+  const eyebrowItems = getList<string>(t, 'eyebrow.items');
+  const metaPoints = getList<string>(t, 'metaPoints');
 
   return (
     <header id={ANCHORS.hero} className="relative overflow-hidden px-5 py-14 md:px-6 md:py-20 lg:pb-24">

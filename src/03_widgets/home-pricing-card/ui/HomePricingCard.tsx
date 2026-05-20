@@ -1,11 +1,12 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { ArrowRightIcon, CheckIcon, Container, Section } from '@/shared/ui';
 import { ANCHORS, PATHS, URLS } from '@/shared/config';
 
 export const HomePricingCard = async () => {
   const t = await getTranslations('HomePage.pricingCard');
-  const features = t.raw('features') as unknown as string[];
+  const features = getList<string>(t, 'features');
 
   return (
     <Section id={ANCHORS.pricing} ariaLabelledBy="pricing-card-heading" className="py-12 md:py-16">

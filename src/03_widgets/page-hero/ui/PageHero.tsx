@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { cn } from '@/shared/model/libs/cn';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container } from '@/shared/ui';
 import { HeroWaveformDecoration } from './HeroWaveformDecoration';
 
@@ -20,8 +21,7 @@ export const PageHero = async ({ namespace, decoration }: TProps) => {
   const t = await getTranslations(namespace as any);
   const tCommon = await getTranslations('Common');
 
-  const rawStats = t.has('stats') ? (t.raw('stats') as unknown) : null;
-  const stats = Array.isArray(rawStats) ? (rawStats as TStat[]) : [];
+  const stats = getList<TStat>(t, 'stats');
 
   const hasWaveform = decoration === 'waveform';
 

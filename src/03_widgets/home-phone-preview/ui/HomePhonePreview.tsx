@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
 import { PhoneMockup } from '@/shared/ui';
 import type { TPhoneFloatBubble, TPhoneMessage } from '@/shared/ui';
 import { FloatingBubbleCards } from './FloatingBubbleCards';
@@ -10,8 +11,8 @@ import { FloatingBubbleCards } from './FloatingBubbleCards';
 export const HomePhonePreview = async () => {
   const t = await getTranslations('HomePage.hero.phonePreview');
 
-  const messages = t.raw('messages') as unknown as TPhoneMessage[];
-  const floatBubbles = t.raw('floatBubbles') as unknown as TPhoneFloatBubble[];
+  const messages = getList<TPhoneMessage>(t, 'messages');
+  const floatBubbles = getList<TPhoneFloatBubble>(t, 'floatBubbles');
   const unreadCount = t.has('unreadCount')
     ? (t.raw('unreadCount') as unknown as number)
     : undefined;
