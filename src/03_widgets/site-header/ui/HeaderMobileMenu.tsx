@@ -1,5 +1,6 @@
 'use client';
 
+import type { ReactElement } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import {
@@ -7,15 +8,28 @@ import {
   BurgerIcon,
   ButtonLink,
   CloseIcon,
+  InstagramIcon,
   LogoHorizontal,
+  MailIcon,
   Portal,
+  TelegramIcon,
+  ThreadsIcon,
+  TikTokIcon,
 } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
 import { ANCHORS, PATHS, URLS } from '@/shared/config';
+import { getList } from '@/shared/model/libs/i18n/get-list';
+import { isSafeHref } from '@/shared/model/utils';
 import { useMobileMenuState } from '../model/hooks/useMobileMenuState';
 
 type TLinkKey = 'howItWorks' | 'advantages' | 'pricing';
 type TNavItem = { key: TLinkKey; href: string };
+type TSocialLink = {
+  id: string;
+  label: string;
+  ariaLabel: string;
+  href: string;
+};
 
 const NAV_ITEMS: TNavItem[] = [
   { key: 'howItWorks', href: PATHS.howItWorks },
@@ -23,11 +37,23 @@ const NAV_ITEMS: TNavItem[] = [
   { key: 'pricing', href: PATHS.pricing },
 ];
 
+const SOCIAL_ICONS: Record<string, ReactElement> = {
+  instagram: <InstagramIcon size={22} />,
+  telegram: <TelegramIcon size={22} />,
+  tiktok: <TikTokIcon size={22} />,
+  threads: <ThreadsIcon size={22} />,
+};
+
 export const HeaderMobileMenu = () => {
   const t = useTranslations('HomePage.nav');
   const tLinks = useTranslations('HomePage.nav.links');
+  const tFooter = useTranslations('HomePage.footer');
   const tCommon = useTranslations('Common');
   const { open, openMenu, close, buttonRef, firstLinkRef } = useMobileMenuState();
+  const socialLinks = getList<TSocialLink>(tFooter, 'socialLinks').filter((s) =>
+    isSafeHref(s.href),
+  );
+  const contactHref = URLS.contactEmail;
 
   return (
     <>
@@ -82,6 +108,45 @@ export const HeaderMobileMenu = () => {
 
               <div className="mt-8">
                 <LocaleSwitch />
+              </div>
+
+              {socialLinks.length > 0 ? (
+                <div className="mt-10">
+                  <p className="m-0 mb-3 px-4 text-13 font-semibold uppercase tracking-wider text-muted">
+                    {t('mobile.followHeading')}
+                  </p>
+                  <ul className="m-0 flex list-none gap-2 px-4 p-0">
+                    {socialLinks.map((s) => (
+                      <li key={s.id}>
+                        <a
+                          href={s.href}
+                          aria-label={s.ariaLabel}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={close}
+                          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line text-ink transition hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        >
+                          {SOCIAL_ICONS[s.id.toLowerCase()] ?? (
+                            <span aria-hidden="true" className="text-13 font-semibold">
+                              {s.label[0]}
+                            </span>
+                          )}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
+              <div className="mt-6 px-4">
+                <a
+                  href={contactHref}
+                  onClick={close}
+                  className="inline-flex items-center gap-2 text-15 font-medium text-ink underline-offset-4 transition hover:text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  <MailIcon size={18} />
+                  {t('mobile.contactLabel')}
+                </a>
               </div>
             </nav>
 

@@ -14,31 +14,34 @@ import { routing } from '@/shared/model/libs/i18n/routing';
  */
 export const PricingHero = async () => {
   const t = await getTranslations('PricingPage.hero');
+  const tSd = await getTranslations('PricingPage.structuredData');
   const tMeta = await getTranslations('MetaGlobal');
 
   const siteUrl = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  const price = tSd('price');
+  const priceCurrency = tSd('priceCurrency');
   const productLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: tMeta('siteName'),
     description: tMeta('defaultDescription'),
-    applicationCategory: 'EducationalApplication',
-    operatingSystem: 'Telegram',
+    applicationCategory: tSd('applicationCategory'),
+    operatingSystem: tSd('operatingSystem'),
     inLanguage: routing.locales,
     url: `${siteUrl}/`,
     offers: {
       '@type': 'Offer',
-      price: '7.45',
-      priceCurrency: 'GBP',
+      price,
+      priceCurrency,
       priceSpecification: {
         '@type': 'UnitPriceSpecification',
-        price: '7.45',
-        priceCurrency: 'GBP',
-        unitText: 'MON',
+        price,
+        priceCurrency,
+        unitText: tSd('unitText'),
       },
       availability: 'https://schema.org/InStock',
       url: URLS.telegramBot,
-      eligibleRegion: { '@type': 'Country', name: 'United Kingdom' },
+      areaServed: tSd('areaServed'),
     },
   };
 

@@ -29,6 +29,7 @@ export {
   LockIcon,
   LogoHorizontal,
   LogoMark,
+  MailIcon,
   MapPinIcon,
   MessageCircleIcon,
   MicIcon,
@@ -61,7 +62,6 @@ export type { TPhoneMessage, TPhoneFloatBubble } from './PhoneMockup';
 export { Input } from './Input';
 export { Label } from './Label';
 export { Portal } from './Portal';
-export { ScrollToTopOnRouteChange } from './ScrollToTopOnRouteChange';
 export { Section, SectionHead } from './Section';
 export { Select } from './Select';
 export { SkipLink } from './SkipLink';

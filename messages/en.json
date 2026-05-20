@@ -17,6 +17,10 @@
         "uk": "UA",
         "en": "EN",
         "ariaLabel": "Change language"
+      },
+      "mobile": {
+        "followHeading": "Follow us",
+        "contactLabel": "Email us"
       }
     },
     "hero": {
@@ -122,7 +126,7 @@
     },
     "howItWorks": {
       "kicker": "How you practise",
-      "title": "Three steps. 15 minutes. Right inside Telegram.",
+      "title": "Four steps. 15 minutes. Right inside Telegram.",
       "subtitle": "The cycle repeats 5–8 times per session. No grades, no stress, no 'right answers'.",
       "steps": [
         {
@@ -258,7 +262,7 @@
           "scenarioLabel": "Small talk"
         },
         {
-          "text": "On a job interview you give shorter answers than you could — afraid you'll trip over a phrase.",
+          "text": "In a job interview you give shorter answers than you could — afraid you'll trip over a phrase.",
           "scenarioId": "interview",
           "scenarioLabel": "Job interview"
         },
@@ -385,7 +389,7 @@
     },
     "hero": {
       "crumb": "How it works",
-      "title": "15 minutes by voice. On UK scenarios.",
+      "title": "English speaking practice — 15 minutes by voice. On UK scenarios.",
       "description": "Real British accent. Feedback in your language. Right inside Telegram.",
       "stats": [
         {
@@ -591,13 +595,21 @@
     },
     "hero": {
       "crumb": "Pricing",
-      "title": "Less than a coffee a day.",
+      "title": "£7.45 a month — less than a coffee a day.",
       "description": "One plan. 7 days free, no card. Cancel in one click.",
       "perDay": "£0.25",
       "perDayUnit": "/ day",
       "perMonth": "= £7.45 per month",
       "cta": "Start free",
       "ctaFootnote": "No card · Cancel in one click or via support"
+    },
+    "structuredData": {
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Telegram",
+      "price": "7.45",
+      "priceCurrency": "GBP",
+      "unitText": "MON",
+      "areaServed": "GB"
     },
     "faq": {
       "kicker": "FAQ",
@@ -1098,6 +1110,10 @@
     "defaultKeywords": [
       "speakmove",
       "english speaking practice UK",
+      "english speaking practice online",
+      "conversational english practice",
+      "how to improve spoken english",
+      "english voice practice online",
       "english for immigrants UK",
       "telegram english bot",
       "voice english practice",
