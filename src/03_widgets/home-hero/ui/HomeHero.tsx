@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
-import { HomePhonePreview } from '@/widgets/home-phone-preview';
+import { HomePhonePreview } from './HomePhonePreview';
 import { ANCHORS, URLS } from '@/shared/config';
 
 export const HomeHero = async () => {
