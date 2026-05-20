@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { cn } from '@/shared/model/libs/cn';
 import { Link } from '@/shared/model/libs/i18n/navigation';
-import { isExternal } from '@/shared/model/utils';
+import { isExternalHref, isSafeHref } from '@/shared/model/utils';
 
 type TVariant = 'primary' | 'outline' | 'ghost';
 type TSize = 'sm' | 'md' | 'lg';
@@ -35,7 +35,12 @@ export const ButtonLink = ({
 }: TProps) => {
   const classes = cn('btn', variantClass[variant], sizeClass[size], className);
 
-  if (typeof rest.href === 'string' && isExternal(rest.href)) {
+  // Reject dangerous schemes before anything renders.
+  if (typeof rest.href === 'string' && !isSafeHref(rest.href)) {
+    return null;
+  }
+
+  if (typeof rest.href === 'string' && isExternalHref(rest.href)) {
     return (
       <a
         href={rest.href}

@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
-import { URLS, ANCHORS } from '@/shared/config';
+import { buildBotStartUrl } from '@/shared/model/utils';
+import { ANCHORS } from '@/shared/config';
 
 type TCard = {
   id: string;
@@ -33,7 +34,7 @@ export const HomeScenariosGrid = async () => {
           {cards.map((card) => (
             <li key={card.id} className="contents">
               <a
-                href={`${URLS.telegramBot}?start=${card.id}`}
+                href={buildBotStartUrl(card.id)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-hover group relative flex h-full flex-col rounded-card border border-line bg-white p-5 shadow-(--shadow-soft) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"

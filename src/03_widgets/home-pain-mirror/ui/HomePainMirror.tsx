@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Container, DoubleCheckIcon, Section } from '@/shared/ui';
-import { URLS } from '@/shared/config';
+import { buildBotStartUrl } from '@/shared/model/utils';
 
 type TLine = {
   text: string;
@@ -52,7 +52,7 @@ export const HomePainMirror = async () => {
                 {lines.map((line) => (
                   <li key={line.scenarioId}>
                     <a
-                      href={`${URLS.telegramBot}?start=${line.scenarioId}`}
+                      href={buildBotStartUrl(line.scenarioId)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center rounded-full border border-primary/30 bg-primary-pale px-3 py-1 text-13 font-semibold text-primary-ink transition-colors hover:bg-primary hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
