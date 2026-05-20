@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { Container, Section, SectionHead } from '@/shared/ui';
+import { Container, JsonLd, Section, SectionHead } from '@/shared/ui';
 import { FaqItem } from '@/entities/faq-item';
 import { ANCHORS } from '@/shared/config';
 import type { TFaqItem } from '@/entities/faq-item';
@@ -14,6 +14,22 @@ export const FaqSection = async ({ namespace }: TProps) => {
   const t = await getTranslations(namespace as any);
   const tCommon = await getTranslations('Common');
   const items = getList<TFaqItem>(t, 'items');
+
+  const faqLd =
+    items.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
 
   return (
     <Section
@@ -47,6 +63,7 @@ export const FaqSection = async ({ namespace }: TProps) => {
           ))}
         </ul>
       </Container>
+      {faqLd ? <JsonLd data={faqLd} /> : null}
     </Section>
   );
 };

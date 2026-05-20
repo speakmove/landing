@@ -46,6 +46,7 @@ export {
   WaveformBars,
 } from './Icon';
 export { InlineMarkdown } from './InlineMarkdown';
+export { JsonLd } from './JsonLd';
 export {
   PhoneMockup,
   ChatBubble,

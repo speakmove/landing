@@ -5,10 +5,11 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
-import { SkipLink } from '@/shared/ui';
+import { JsonLd, SkipLink } from '@/shared/ui';
 import { SiteHeader } from '@/widgets/site-header';
 import { SiteFooter } from '@/widgets/site-footer';
-import { ELEMENT_IDS } from '@/shared/config';
+import { ELEMENT_IDS, URLS } from '@/shared/config';
+import { env } from '@/shared/model/libs/env';
 import '../globals.css';
 
 const inter = Inter({
@@ -63,6 +64,30 @@ export default async function LocaleLayout({ children, params }: TProps) {
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const tCommon = await getTranslations({ locale, namespace: 'Common' });
+  const tMeta = await getTranslations({ locale, namespace: 'MetaGlobal' });
+
+  const siteUrl = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  const organizationLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: tMeta('siteName'),
+    url: `${siteUrl}/${locale}`,
+    logo: `${siteUrl}/brand/speakmove-logo.svg`,
+    description: tMeta('defaultDescription'),
+    sameAs: [
+      URLS.telegramChannel,
+      URLS.instagram,
+      URLS.tiktok,
+      URLS.youtube,
+      URLS.twitter,
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: tMeta('contactEmail'),
+    },
+  };
+
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
@@ -71,6 +96,7 @@ export default async function LocaleLayout({ children, params }: TProps) {
           <SiteHeader />
           <main id={ELEMENT_IDS.main}>{children}</main>
           <SiteFooter />
+          <JsonLd data={organizationLd} />
         </NextIntlClientProvider>
       </body>
     </html>
