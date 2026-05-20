@@ -1,4 +1,5 @@
 import { PricingHero } from '@/widgets/pricing-hero';
+import { PricingTrustStrip } from '@/widgets/pricing-trust-strip';
 import { PricingPlanCard } from '@/widgets/pricing-plan-card';
 import { PricingUnitEconomics } from '@/widgets/pricing-unit-economics';
 import { PricingComparisonContext } from '@/widgets/pricing-comparison-context';
@@ -9,6 +10,7 @@ export const PricingPage = () => {
   return (
     <>
       <PricingHero />
+      <PricingTrustStrip />
       <PricingPlanCard />
       <PricingUnitEconomics />
       <PricingComparisonContext />

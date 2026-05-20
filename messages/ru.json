@@ -49,26 +49,31 @@
         "today": "Сегодня",
         "inputPlaceholder": "Message",
         "micLabel": "Записать голосовое",
+        "unreadCount": 2,
         "messages": [
           {
             "from": "bot",
-            "text": "Hello, Riverside Surgery. How can I help you today?",
-            "meta": "voice · 0:04"
+            "kind": "voice",
+            "duration": "0:04",
+            "text": "Hello, Riverside Surgery. How can I help you today?"
           },
           {
             "from": "me",
-            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
-            "meta": "voice · 0:08"
+            "kind": "voice",
+            "duration": "0:08",
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week."
           },
           {
             "from": "bot",
-            "text": "Of course. Is the pain getting worse, or staying the same?",
-            "meta": "voice · 0:03"
+            "kind": "voice",
+            "duration": "0:03",
+            "text": "Of course. Is the pain getting worse, or staying the same?"
           },
           {
             "from": "me",
-            "text": "It's a bit worse in the mornings.",
-            "meta": "voice · 0:05"
+            "kind": "voice",
+            "duration": "0:05",
+            "text": "It's a bit worse in the mornings."
           }
         ],
         "floatBubbles": [
@@ -439,33 +444,40 @@
         "today": "Сегодня",
         "inputPlaceholder": "Message",
         "micLabel": "Записать голосовое",
+        "unreadCount": 1,
         "messages": [
           {
             "from": "bot",
             "kind": "voice",
             "duration": "0:05",
-            "label": "Voice от бота",
             "text": "Hi, this is Mark from Bayswater Property. You said you have an issue with the boiler?"
           },
           {
             "from": "me",
             "kind": "voice",
             "duration": "0:07",
-            "label": "Твой ответ",
             "text": "Yes, my boiler is not working since two days. We have no hot water."
           },
           {
             "from": "bot",
-            "kind": "correction",
-            "label": "Фидбек на русском",
-            "text": "Почти. ~~since two days~~ → **for two days** — `for` используется с длительностью. Иначе хорошо!"
+            "kind": "text",
+            "text": "Почти. ~~since two days~~ → **for two days** — `for` используется с длительностью."
           },
           {
             "from": "bot",
+            "kind": "text",
+            "text": "Скажи ещё раз с правильной формой 👇"
+          },
+          {
+            "from": "me",
             "kind": "voice",
-            "duration": "0:04",
-            "label": "Voice от бота",
-            "text": "Got it. Did you try resetting it from the control panel?"
+            "duration": "0:06",
+            "text": "My boiler has been broken for two days."
+          },
+          {
+            "from": "bot",
+            "kind": "text",
+            "text": "✓ Точно. Идём дальше."
           }
         ]
       }
@@ -731,6 +743,15 @@
         }
       ],
       "closingLine": "Это не лучше тьютора и не лучше Speak. Это другое — функциональная тренировка на конкретные ситуации жизни в UK. Когда тебе нужно позвонить landlord или сходить к GP — тьютор не поможет в момент. Тут — поможет."
+    },
+    "trustStrip": {
+      "items": [
+        "7 дней бесплатно",
+        "Без карты",
+        "Отмена в один клик",
+        "GDPR-compliant"
+      ],
+      "ariaLabel": "Гарантии и преимущества"
     }
   },
   "NotFoundPage": {

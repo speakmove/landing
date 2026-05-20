@@ -4,14 +4,17 @@ import type { TPhoneMessage } from '@/shared/ui';
 
 /**
  * Phone mock for the /how-it-works flow section. Re-uses the same iPhone
- * frame and Telegram chat chrome as the home hero, but the body is a richer
- * AI-coach dialogue: voice messages from both sides plus a text correction
- * bubble (Falabola/Maku pattern — strikethrough wrong, bold right, brief
- * explanation in the user's native language).
+ * frame and Telegram chat chrome as the home hero, but the body is a
+ * richer AI-coach dialogue: voice messages from both sides plus text
+ * bubbles for the correction and the praise (Falabola/Maku pattern —
+ * strikethrough wrong, bold right, brief native-language explanation).
  */
 export const HowItWorksPhonePreview = async () => {
   const t = await getTranslations('HowItWorksPage.flow.phonePreview');
   const messages = t.raw('messages') as unknown as TPhoneMessage[];
+  const unreadCount = t.has('unreadCount')
+    ? (t.raw('unreadCount') as unknown as number)
+    : undefined;
 
   return (
     <div className="relative mx-auto w-full max-w-[390px]" aria-hidden="true">
@@ -22,6 +25,7 @@ export const HowItWorksPhonePreview = async () => {
         inputPlaceholder={t('inputPlaceholder')}
         micLabel={t('micLabel')}
         messages={messages}
+        unreadCount={unreadCount}
       />
     </div>
   );

@@ -13,15 +13,17 @@ type TProps = {
   inputPlaceholder: string;
   micLabel: string;
   messages: TPhoneMessage[];
+  /** Unread badge in the Telegram chat header. Hidden when 0/undefined. */
+  unreadCount?: number;
 };
 
 /**
  * Decorative iPhone 14 Pro mock-up of a Telegram chat with the bot.
  * The whole element is `aria-hidden` — purely visual storytelling.
  * Frame: real PNG overlay (public/brand/iphone-frame.png).
- * Body: status bar, chat header, dated message list (voice and/or correction
- * bubbles), and the bottom input pill. Pages compose this with their own
- * overlays (floating cards, etc.) outside the frame.
+ * Body: status bar, chat header, dated message list (voice or text
+ * bubbles), and the bottom input pill. Pages compose this with their
+ * own overlays (floating cards, etc.) outside the frame.
  */
 export const PhoneMockup = ({
   botName,
@@ -30,6 +32,7 @@ export const PhoneMockup = ({
   inputPlaceholder,
   micLabel,
   messages,
+  unreadCount,
 }: TProps) => {
   return (
     <div className="phone-frame relative" aria-hidden="true">
@@ -48,7 +51,7 @@ export const PhoneMockup = ({
 
         <PhoneStatusBar />
 
-        <ChatHeader botName={botName} botStatus={botStatus} />
+        <ChatHeader botName={botName} botStatus={botStatus} unreadCount={unreadCount} />
 
         <div className="relative z-10 flex flex-1 flex-col justify-end gap-1.5 px-5 pb-2">
           <div className="mb-1 flex justify-center">

@@ -12,6 +12,9 @@ export const HomePhonePreview = async () => {
 
   const messages = t.raw('messages') as unknown as TPhoneMessage[];
   const floatBubbles = t.raw('floatBubbles') as unknown as TPhoneFloatBubble[];
+  const unreadCount = t.has('unreadCount')
+    ? (t.raw('unreadCount') as unknown as number)
+    : undefined;
 
   return (
     <div className="relative mx-auto w-full max-w-[390px]" aria-hidden="true">
@@ -22,6 +25,7 @@ export const HomePhonePreview = async () => {
         inputPlaceholder={t('inputPlaceholder')}
         micLabel={t('micLabel')}
         messages={messages}
+        unreadCount={unreadCount}
       />
       <FloatingBubbleCards bubbles={floatBubbles} />
     </div>

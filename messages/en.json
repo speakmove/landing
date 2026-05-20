@@ -49,26 +49,31 @@
         "today": "Today",
         "inputPlaceholder": "Message",
         "micLabel": "Record voice message",
+        "unreadCount": 2,
         "messages": [
           {
             "from": "bot",
-            "text": "Hello, Riverside Surgery. How can I help you today?",
-            "meta": "voice · 0:04"
+            "kind": "voice",
+            "duration": "0:04",
+            "text": "Hello, Riverside Surgery. How can I help you today?"
           },
           {
             "from": "me",
-            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week.",
-            "meta": "voice · 0:08"
+            "kind": "voice",
+            "duration": "0:08",
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week."
           },
           {
             "from": "bot",
-            "text": "Of course. Is the pain getting worse, or staying the same?",
-            "meta": "voice · 0:03"
+            "kind": "voice",
+            "duration": "0:03",
+            "text": "Of course. Is the pain getting worse, or staying the same?"
           },
           {
             "from": "me",
-            "text": "It's a bit worse in the mornings.",
-            "meta": "voice · 0:05"
+            "kind": "voice",
+            "duration": "0:05",
+            "text": "It's a bit worse in the mornings."
           }
         ],
         "floatBubbles": [
@@ -439,33 +444,40 @@
         "today": "Today",
         "inputPlaceholder": "Message",
         "micLabel": "Record voice message",
+        "unreadCount": 1,
         "messages": [
           {
             "from": "bot",
             "kind": "voice",
             "duration": "0:05",
-            "label": "Voice from bot",
             "text": "Hi, this is Mark from Bayswater Property. You said you have an issue with the boiler?"
           },
           {
             "from": "me",
             "kind": "voice",
             "duration": "0:07",
-            "label": "Your reply",
             "text": "Yes, my boiler is not working since two days. We have no hot water."
           },
           {
             "from": "bot",
-            "kind": "correction",
-            "label": "Feedback",
-            "text": "Almost. ~~since two days~~ → **for two days** — use `for` with durations. Otherwise great!"
+            "kind": "text",
+            "text": "Almost. ~~since two days~~ → **for two days** — use `for` with durations."
           },
           {
             "from": "bot",
+            "kind": "text",
+            "text": "Try again with the right form 👇"
+          },
+          {
+            "from": "me",
             "kind": "voice",
-            "duration": "0:04",
-            "label": "Voice from bot",
-            "text": "Got it. Did you try resetting it from the control panel?"
+            "duration": "0:06",
+            "text": "My boiler has been broken for two days."
+          },
+          {
+            "from": "bot",
+            "kind": "text",
+            "text": "✓ Spot on. Moving on."
           }
         ]
       }
@@ -731,6 +743,15 @@
         }
       ],
       "closingLine": "We're not better than a tutor, and not better than Speak. We're different — functional practice on the specific situations of UK life. When you need to call your landlord or visit the GP, a tutor can't help in the moment. We can."
+    },
+    "trustStrip": {
+      "items": [
+        "7 days free",
+        "No card",
+        "Cancel in one click",
+        "GDPR-compliant"
+      ],
+      "ariaLabel": "Guarantees and benefits"
     }
   },
   "NotFoundPage": {

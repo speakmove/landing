@@ -4,21 +4,25 @@ type TProps = {
   botName: string;
   botStatus: string;
   coinBalance?: string;
+  /** Unread badge next to the back chevron. Hidden when 0 / undefined. */
+  unreadCount?: number;
 };
 
 /**
- * Telegram chat header strip: back chevron with unread count, bot title pill, avatar.
- * `coinBalance` is rendered inside the avatar circle when provided — used for the
- * home-hero mockup where a small visual badge sits in the corner. Empty by default.
+ * Telegram chat header strip: back chevron with optional unread count,
+ * bot title pill, avatar with optional coin badge.
  */
-export const ChatHeader = ({ botName, botStatus, coinBalance = '' }: TProps) => {
+export const ChatHeader = ({ botName, botStatus, coinBalance = '', unreadCount }: TProps) => {
+  const showUnread = typeof unreadCount === 'number' && unreadCount > 0;
   return (
     <div className="relative z-10 mt-13 flex items-center gap-2 px-3 pb-1">
       <div className="tg-pill-shadow flex flex-none items-center gap-1 rounded-full bg-tg-header-pill py-2 pl-2.5 pr-2">
         <ChevronLeftIcon size={13} className="text-ink" />
-        <span className="grid h-4 w-4 place-items-center rounded-full bg-ink text-[0.625rem] font-bold leading-none text-white">
-          2
-        </span>
+        {showUnread ? (
+          <span className="grid h-4 w-4 place-items-center rounded-full bg-ink text-[0.625rem] font-bold leading-none text-white">
+            {unreadCount}
+          </span>
+        ) : null}
       </div>
 
       <div className="tg-pill-shadow flex-1 rounded-full bg-tg-header-pill px-4 py-1.5 text-center">
