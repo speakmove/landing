@@ -27,6 +27,7 @@ export const HomePhonePreview = async () => {
         micLabel={t('micLabel')}
         messages={messages}
         unreadCount={unreadCount}
+        priority
       />
       <FloatingBubbleCards bubbles={floatBubbles} />
     </div>

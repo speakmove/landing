@@ -381,7 +381,7 @@
   "HowItWorksPage": {
     "meta": {
       "title": "How SpeakMove works — Voice training on UK scenarios",
-      "description": "15 minutes of voice conversation a day. 7 scenarios for UK immigrants. Feedback in Russian or Ukrainian. Right in Telegram, no app."
+      "description": "How a SpeakMove session works: 15 minutes of voice conversation a day on UK scenarios — landlord, GP, work coach. British accent, feedback in your native language, AI coach in Telegram."
     },
     "hero": {
       "crumb": "How it works",
@@ -587,7 +587,7 @@
   "PricingPage": {
     "meta": {
       "title": "SpeakMove pricing — £7.45/mo, 7 days free, no card",
-      "description": "One plan: £7.45 per month. 60 minutes of voice practice per week. 7 days free without a card. Cancel in one click."
+      "description": "One plan: £7.45/mo or £0.25/day. 7-day free trial, no card. 60 minutes of voice practice per week across 7 UK life scenarios. Transparent unit economics, 10-question FAQ."
     },
     "hero": {
       "crumb": "Pricing",

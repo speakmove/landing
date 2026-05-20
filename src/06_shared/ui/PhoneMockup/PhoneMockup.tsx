@@ -15,6 +15,8 @@ type TProps = {
   messages: TPhoneMessage[];
   /** Unread badge in the Telegram chat header. Hidden when 0/undefined. */
   unreadCount?: number;
+  /** Hint that this mockup is the LCP candidate of the route — eagerly preloads the frame image. */
+  priority?: boolean;
 };
 
 /**
@@ -33,6 +35,7 @@ export const PhoneMockup = ({
   micLabel,
   messages,
   unreadCount,
+  priority = false,
 }: TProps) => {
   return (
     <div className="phone-frame relative" aria-hidden="true">
@@ -44,6 +47,7 @@ export const PhoneMockup = ({
         aria-hidden="true"
         className="pointer-events-none z-20 select-none object-contain"
         unoptimized
+        priority={priority}
       />
 
       <div className="phone-screen tg-screen-bg absolute flex flex-col overflow-hidden">

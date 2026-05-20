@@ -13,9 +13,10 @@ const NAV_ITEMS: TNavItem[] = [
 
 export const HeaderNav = async () => {
   const tLinks = await getTranslations('HomePage.nav.links');
+  const tCommon = await getTranslations('Common');
 
   return (
-    <nav aria-label="Primary" className="ml-3 hidden lg:flex">
+    <nav aria-label={tCommon('aria.primary')} className="ml-3 hidden lg:flex">
       <ul className="flex gap-7 text-sm font-medium text-muted">
         {NAV_ITEMS.map((item) => (
           <li key={item.key}>

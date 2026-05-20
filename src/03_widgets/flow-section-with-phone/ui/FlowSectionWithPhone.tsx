@@ -57,7 +57,7 @@ export const FlowSectionWithPhone = async () => {
                       className={cn(
                         'mt-2 inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 font-mono text-xs font-semibold',
                         step.tagStyle === 'gold'
-                          ? 'bg-gold-pale text-[#7a5508]'
+                          ? 'bg-gold-pale text-gold-mid'
                           : 'bg-primary-pale text-primary-ink',
                       )}
                     >

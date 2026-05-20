@@ -79,7 +79,7 @@ const VoiceBubble = ({ message, index }: { message: TPhoneMessage; index: number
 
         <span
           className={cn(
-            'inline-flex items-center gap-0.5 self-end whitespace-nowrap text-[0.6875rem] leading-none',
+            'inline-flex items-center gap-0.5 self-end whitespace-nowrap text-mini leading-none',
             isMe ? 'text-tg-bubble-me-accent' : 'text-tg-timestamp-muted',
           )}
         >
@@ -109,7 +109,7 @@ const TextBubble = ({ message }: { message: TPhoneMessage }) => {
         />
         <div
           className={cn(
-            'text-[0.8125rem] leading-snug',
+            'text-13 leading-snug',
             isMe ? 'text-tg-bubble-me-ink' : 'text-tg-bubble-bot-ink',
           )}
         >
@@ -117,7 +117,7 @@ const TextBubble = ({ message }: { message: TPhoneMessage }) => {
         </div>
         <span
           className={cn(
-            'mt-1 inline-flex items-center gap-0.5 justify-end self-end whitespace-nowrap text-[0.6875rem] leading-none float-right ml-2',
+            'mt-1 inline-flex items-center gap-0.5 justify-end self-end whitespace-nowrap text-mini leading-none float-right ml-2',
             isMe ? 'text-tg-bubble-me-accent' : 'text-tg-timestamp-muted',
           )}
         >
