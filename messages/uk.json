@@ -1134,45 +1134,25 @@
   },
   "Common": {
     "skipToContent": "Sed do eiusmod tempor incididunt",
-    "submitting": "Sed do eiusmod...",
     "error": {
       "title": "Sed do eiusmod tempor incididunt",
       "lead": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "cta": "Sed do eiusmod"
     },
     "aria": {
-      "billingPeriod": "Sed do eiusmod tempor incididunt",
       "privacyFeatures": "Sed do eiusmod tempor incididunt ut labore",
-      "smartCriteria": "Sed do eiusmod SMART",
       "faqList": "Sed do eiusmod tempor incididunt",
       "statsGrid": "Sed do eiusmod tempor incididunt",
       "cefrLevels": "Sed do eiusmod CEFR",
       "flowSteps": "Sed do eiusmod tempor incididunt ut labore",
-      "weekDays": "Sed do eiusmod tempor",
-      "schedulePicker": "Sed do eiusmod tempor incididunt",
       "openMenu": "Sed do eiusmod",
       "closeMenu": "Sed do eiusmod",
       "menu": "Sed do",
       "primary": "Sed do eiusmod",
-      "earlyAccessPerks": "Sed do eiusmod tempor incididunt",
-      "voiceMessage": "Sed do eiusmod tempor",
-      "featuresIncluded": "Sed do eiusmod {planName}",
-      "featuresExcluded": "Sed do eiusmod {planName}",
-      "tasks": "Sed do eiusmod",
-      "notIncluded": "Sed do eiusmod"
+      "tasks": "Sed do eiusmod"
     },
-    "table": {
-      "action": "Sed do eiusmod",
-      "amount": "Sed do eiusmod",
-      "coins": "Sed do eiusmod",
-      "earnCaption": "Sed do eiusmod tempor incididunt SM",
-      "spendCaption": "Sed do eiusmod tempor incididunt SM",
-      "feature": "Sed do eiusmod"
-    },
-    "today": "Sed do eiusmod",
     "navSections": "Sed do eiusmod",
     "effectiveLabel": "Sed do eiusmod:",
-    "lastUpdatedLabel": "Sed do eiusmod:",
-    "unavailable": "Sed do eiusmod"
+    "lastUpdatedLabel": "Sed do eiusmod:"
   }
 }

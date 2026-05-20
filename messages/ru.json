@@ -1134,45 +1134,25 @@
   },
   "Common": {
     "skipToContent": "Перейти к содержимому",
-    "submitting": "Отправка...",
     "error": {
       "title": "Что-то пошло не так",
       "lead": "Мы уже разбираемся. Попробуйте обновить страницу.",
       "cta": "Обновить"
     },
     "aria": {
-      "billingPeriod": "Период оплаты",
       "privacyFeatures": "Функции безопасности и приватности",
-      "smartCriteria": "Критерии SMART",
       "faqList": "Частые вопросы",
       "statsGrid": "Ключевые показатели",
       "cefrLevels": "Уровни CEFR",
       "flowSteps": "Шаги пользовательского пути",
-      "weekDays": "Дни недели",
-      "schedulePicker": "Выбор расписания занятий",
       "openMenu": "Открыть меню",
       "closeMenu": "Закрыть меню",
       "menu": "Меню",
       "primary": "Основная навигация",
-      "earlyAccessPerks": "Преимущества раннего доступа",
-      "voiceMessage": "Голосовое сообщение",
-      "featuresIncluded": "Включено в {planName}",
-      "featuresExcluded": "Не включено в {planName}",
-      "tasks": "Задания",
-      "notIncluded": "Не входит"
+      "tasks": "Задания"
     },
-    "table": {
-      "action": "Действие",
-      "amount": "Сумма",
-      "coins": "Монеты",
-      "earnCaption": "Таблица заработка монет SM",
-      "spendCaption": "Таблица обмена монет SM на gift card",
-      "feature": "Функция"
-    },
-    "today": "Сегодня",
     "navSections": "Sections",
     "effectiveLabel": "Вступило в силу:",
-    "lastUpdatedLabel": "Последнее обновление:",
-    "unavailable": "Недоступно"
+    "lastUpdatedLabel": "Последнее обновление:"
   }
 }
