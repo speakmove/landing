@@ -461,7 +461,7 @@
           {
             "from": "bot",
             "kind": "text",
-            "text": "They would understand you — that is the main thing. Small grammar tweak: ~~since two days~~ → **for two days**. Use `for` with durations."
+            "text": "**Well done!** They would understand you — that is the main thing. Small grammar tweak: ~~since two days~~ → **for two days**. Use `for` with durations."
           },
           {
             "from": "bot",
@@ -477,7 +477,7 @@
           {
             "from": "bot",
             "kind": "text",
-            "text": "Nice 👌 Sounds natural."
+            "text": "Great 👌 Sounds natural."
           }
         ]
       }
