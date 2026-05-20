@@ -4,8 +4,8 @@ import { Logo } from '@/entities/brand';
 import { ButtonLink, Container, ArrowRightIcon } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
 import { PATHS, URLS } from '@/shared/config';
-import { HeaderNav } from '@/widgets/header-nav';
-import { HeaderMobileMenu } from '@/widgets/header-mobile-menu';
+import { HeaderNav } from './HeaderNav';
+import { HeaderMobileMenu } from './HeaderMobileMenu';
 
 export const SiteHeader = async () => {
   const t = await getTranslations('HomePage.nav');

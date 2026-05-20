@@ -1,14 +1,46 @@
 import { getTranslations } from 'next-intl/server';
-import { ButtonLink, Container } from '@/shared/ui';
+import { ButtonLink, Container, JsonLd } from '@/shared/ui';
 import { URLS } from '@/shared/config';
+import { env } from '@/shared/model/libs/env';
+import { routing } from '@/shared/model/libs/i18n/routing';
 
 /**
  * /pricing hero with a per-day price reframe.
  * Big display "£0.25 / day" anchors visual attention; the real monthly
  * price sits underneath as a smaller equality so nothing is hidden.
+ *
+ * Emits a Product (SoftwareApplication) + Offer JSON-LD block so search
+ * engines and AI assistants can surface the price + free trial directly.
  */
 export const PricingHero = async () => {
   const t = await getTranslations('PricingPage.hero');
+  const tMeta = await getTranslations('MetaGlobal');
+
+  const siteUrl = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
+  const productLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tMeta('siteName'),
+    description: tMeta('defaultDescription'),
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Telegram',
+    inLanguage: routing.locales,
+    url: `${siteUrl}/`,
+    offers: {
+      '@type': 'Offer',
+      price: '7.45',
+      priceCurrency: 'GBP',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: '7.45',
+        priceCurrency: 'GBP',
+        unitText: 'MON',
+      },
+      availability: 'https://schema.org/InStock',
+      url: URLS.telegramBot,
+      eligibleRegion: { '@type': 'Country', name: 'United Kingdom' },
+    },
+  };
 
   return (
     <header className="relative overflow-hidden px-5 pt-16 pb-12 text-center md:px-6 md:pt-20 md:pb-20">
@@ -48,6 +80,7 @@ export const PricingHero = async () => {
           </div>
         </div>
       </Container>
+      <JsonLd data={productLd} />
     </header>
   );
 };

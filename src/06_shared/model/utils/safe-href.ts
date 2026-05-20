@@ -49,7 +49,7 @@ export const isSafeHref = (href: unknown): href is string => {
  * Use at any render boundary where the href comes from outside-the-codebase
  * data (i18n JSON, CMS, query params, etc.).
  */
-export const safeHrefOr = (href: unknown, fallback: string = '#'): string =>
+export const safeHrefOrFallback = (href: unknown, fallback: string = '#'): string =>
   isSafeHref(href) ? href : fallback;
 
 /**

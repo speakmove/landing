@@ -46,7 +46,6 @@ export const PhoneMockup = ({
         sizes="390px"
         aria-hidden="true"
         className="pointer-events-none z-20 select-none object-contain"
-        unoptimized
         priority={priority}
       />
 

@@ -3,9 +3,9 @@ import { Link } from '@/shared/model/libs/i18n/navigation';
 import { Container } from '@/shared/ui';
 import { Logo } from '@/entities/brand';
 import { PATHS } from '@/shared/config';
-import { FooterNav } from '@/widgets/footer-nav';
-import { FooterSocialList } from '@/widgets/footer-social-list';
-import { FooterLegal } from '@/widgets/footer-legal';
+import { FooterNav } from './FooterNav';
+import { FooterSocialList } from './FooterSocialList';
+import { FooterLegal } from './FooterLegal';
 
 export const SiteFooter = async () => {
   const t = await getTranslations('HomePage.footer');

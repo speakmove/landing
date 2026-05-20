@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
-import { safeHrefOr } from '@/shared/model/utils';
+import { safeHrefOrFallback } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
 
 type TFounder = {
@@ -57,7 +57,7 @@ export const HomeFounderCards = async () => {
               </p>
 
               <a
-                href={safeHrefOr(founder.telegramUrl)}
+                href={safeHrefOrFallback(founder.telegramUrl)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2 transition-[gap] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"

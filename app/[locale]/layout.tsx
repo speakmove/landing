@@ -5,7 +5,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
-import { JsonLd, SkipLink } from '@/shared/ui';
+import { JsonLd, ScrollToTopOnRouteChange, SkipLink } from '@/shared/ui';
 import { SiteHeader } from '@/widgets/site-header';
 import { SiteFooter } from '@/widgets/site-footer';
 import { ELEMENT_IDS, URLS } from '@/shared/config';
@@ -92,6 +92,7 @@ export default async function LocaleLayout({ children, params }: TProps) {
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
         <NextIntlClientProvider>
+          <ScrollToTopOnRouteChange />
           <SkipLink>{tCommon('skipToContent')}</SkipLink>
           <SiteHeader />
           <main id={ELEMENT_IDS.main}>{children}</main>
