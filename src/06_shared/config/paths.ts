@@ -5,6 +5,7 @@ export const PATHS = {
   privacy: '/privacy',
   terms: '/terms',
   cookies: '/cookies',
+  disclaimer: '/disclaimer',
 } as const;
 
 export type TPath = (typeof PATHS)[keyof typeof PATHS];

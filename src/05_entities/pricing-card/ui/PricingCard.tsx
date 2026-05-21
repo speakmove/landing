@@ -126,7 +126,7 @@ export const PricingCard = ({
 
       <p
         className={cn(
-          'mt-3 m-0 text-13 text-muted',
+          'mt-5 m-0 text-12-5 text-muted',
           isWide ? '' : 'text-center',
         )}
       >

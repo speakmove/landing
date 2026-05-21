@@ -3,7 +3,6 @@ import {
   HEADER_ICON_BY_ID,
   HEADER_TONE_BY_ID,
   badgeToneClass,
-  renderTileVisual,
 } from '../model/maps';
 import type { TAdvantageTile } from '../model/types';
 
@@ -12,11 +11,6 @@ type TProps = {
   className?: string;
 };
 
-/**
- * Bento-grid advantage tile. Header (optional icon + title + description +
- * optional badge) is rendered here; the in-tile visual and the tone/icon
- * mappings live in ../model/maps so the UI file stays focused.
- */
 export const AdvantageTile = ({ tile, className }: TProps) => {
   const icon = HEADER_ICON_BY_ID[tile.id];
   const tone = HEADER_TONE_BY_ID[tile.id] ?? 'bg-primary-pale text-primary';
@@ -49,8 +43,6 @@ export const AdvantageTile = ({ tile, className }: TProps) => {
         {tile.title}
       </h3>
       <p className="m-0 text-sm leading-relaxed text-muted">{tile.description}</p>
-
-      {renderTileVisual(tile)}
     </article>
   );
 };

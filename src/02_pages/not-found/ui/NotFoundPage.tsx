@@ -1,7 +1,8 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { ButtonLink, Container } from '@/shared/ui';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { PATHS, URLS } from '@/shared/config';
+import { PATHS } from '@/shared/config';
+import { buildBotUrl } from '@/shared/model/utils';
 
 type TSuggestionLink = {
   label: string;
@@ -10,6 +11,7 @@ type TSuggestionLink = {
 
 export const NotFoundPage = async () => {
   const t = await getTranslations('NotFoundPage');
+  const locale = await getLocale();
   const suggestionLinks = getList<TSuggestionLink>(t, 'suggestions.links');
 
   return (
@@ -33,7 +35,7 @@ export const NotFoundPage = async () => {
           <ButtonLink href={PATHS.home} variant="primary" size="lg">
             {t('ctas.primary')}
           </ButtonLink>
-          <a href={URLS.telegramBot} rel="noopener noreferrer" className="btn btn-outline btn-lg">
+          <a href={buildBotUrl(locale)} rel="noopener noreferrer" className="btn btn-outline btn-lg">
             {t('ctas.secondary')}
           </a>
         </div>

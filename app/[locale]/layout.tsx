@@ -10,6 +10,7 @@ import { SiteHeader } from '@/widgets/site-header';
 import { SiteFooter } from '@/widgets/site-footer';
 import { ELEMENT_IDS, URLS } from '@/shared/config';
 import { env } from '@/shared/model/libs/env';
+import { buildOrganizationLd } from '@/shared/model/libs/jsonld';
 import '../globals.css';
 
 const inter = Inter({
@@ -43,6 +44,9 @@ export async function generateMetadata({
       template: t('titleTemplate'),
     },
     description: t('defaultDescription'),
+    robots: env.NEXT_PUBLIC_INDEXABLE
+      ? undefined
+      : { index: false, follow: false, googleBot: { index: false, follow: false } },
     openGraph: {
       siteName: t('siteName'),
       type: 'website',
@@ -66,10 +70,8 @@ export default async function LocaleLayout({ children, params }: TProps) {
   const tCommon = await getTranslations({ locale, namespace: 'Common' });
   const tMeta = await getTranslations({ locale, namespace: 'MetaGlobal' });
 
-  const siteUrl = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
-  const organizationLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+  const siteUrl = env.NEXT_PUBLIC_SITE_URL;
+  const organizationLd = buildOrganizationLd({
     name: tMeta('siteName'),
     url: `${siteUrl}/${locale}`,
     logo: `${siteUrl}/brand/speakmove-logo.svg`,
@@ -81,12 +83,8 @@ export default async function LocaleLayout({ children, params }: TProps) {
       URLS.youtube,
       URLS.twitter,
     ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer support',
-      email: tMeta('contactEmail'),
-    },
-  };
+    contactEmail: tMeta('contactEmail'),
+  });
 
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>

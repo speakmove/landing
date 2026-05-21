@@ -1,14 +1,16 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/shared/model/libs/i18n/navigation';
 import { Logo } from '@/entities/brand';
 import { ButtonLink, Container, ArrowRightIcon } from '@/shared/ui';
 import { LocaleSwitch } from '@/features/locale-switch';
-import { PATHS, URLS } from '@/shared/config';
+import { PATHS } from '@/shared/config';
+import { buildBotUrl } from '@/shared/model/utils';
 import { HeaderNav } from './HeaderNav';
 import { HeaderMobileMenu } from './HeaderMobileMenu';
 
 export const SiteHeader = async () => {
   const t = await getTranslations('HomePage.nav');
+  const locale = await getLocale();
 
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-white/75 px-5 backdrop-blur-xl backdrop-saturate-[1.6] md:px-6">
@@ -30,7 +32,7 @@ export const SiteHeader = async () => {
             <LocaleSwitch />
           </div>
 
-          <ButtonLink href={URLS.telegramBot} size="sm" className="hidden lg:inline-flex">
+          <ButtonLink href={buildBotUrl(locale)} size="sm" className="hidden lg:inline-flex">
             {t('cta')}
             <ArrowRightIcon size={14} />
           </ButtonLink>

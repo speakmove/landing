@@ -106,10 +106,163 @@
   }
 }
 
+@keyframes shimmer-sweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(200%); }
+}
+
 @layer components {
+  /* ---------- Shimmer sweep — light highlight on primary CTA hover ---------- */
+  /*
+   * Applied directly on the button element so ::before renders above
+   * the button's own background-color (not behind a wrapper's child).
+   */
+  .shimmer-cta {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.32) 50%,
+      transparent 60%
+    );
+    transform: translateX(-100%);
+    pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    .shimmer-cta:hover::before {
+      animation: shimmer-sweep 1.2s ease-in-out;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .shimmer-cta::before {
+      animation: none !important;
+    }
+  }
+
+  /* ---------- Scenarios sticky scroll region ---------- */
+  /*
+   * `calc(100vh + 1600px)` gives exactly 200px of effective scroll per card
+   * (8 cards × 200px = 1600px) regardless of viewport height.
+   * Not expressible as a Tailwind utility without an arbitrary value.
+   */
+  .scenarios-scroll-region {
+    height: calc(100vh + 1600px);
+  }
+
   /* ---------- Telegram phone mockup ---------- */
   .phone-frame {
     aspect-ratio: 446 / 921;
+  }
+
+  /*
+   * Phone preview responsive wrapper.
+   * The frame and its content are designed at a fixed 390px width — text,
+   * pills and bubble sizes assume that base. On narrower viewports we scale
+   * the whole thing uniformly via CSS transform so proportions stay correct.
+   * Wrapper has explicit width and height (matching frame aspect 446:921);
+   * inner is absolutely placed at native 390px width and scaled to fit.
+   */
+  .phone-preview-wrap {
+    position: relative;
+    width: 280px;
+    height: 578px;
+    margin-inline: auto;
+  }
+  .phone-preview-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 805px;
+    transform-origin: top left;
+    transform: scale(0.7179);
+  }
+  @media (min-width: 640px) {
+    .phone-preview-wrap {
+      width: 320px;
+      height: 661px;
+    }
+    .phone-preview-inner {
+      transform: scale(0.8205);
+    }
+  }
+  @media (min-width: 1024px) {
+    .phone-preview-wrap {
+      width: 440px;
+      height: 908px;
+    }
+    .phone-preview-inner {
+      transform: scale(1.1282);
+    }
+  }
+
+  /*
+   * Scenarios variant — fits inside the sticky viewport alongside the section
+   * heading (≤520px tall so it clears typical 768px laptop heights).
+   */
+  .phone-preview-wrap.phone-preview-wrap--scenarios {
+    width: 220px;
+    height: 454px;
+  }
+  .phone-preview-wrap--scenarios .phone-preview-inner {
+    transform: scale(0.5641);
+  }
+  @media (min-width: 640px) {
+    .phone-preview-wrap.phone-preview-wrap--scenarios {
+      width: 248px;
+      height: 512px;
+    }
+    .phone-preview-wrap--scenarios .phone-preview-inner {
+      transform: scale(0.636);
+    }
+  }
+  @media (min-width: 1024px) {
+    .phone-preview-wrap.phone-preview-wrap--scenarios {
+      width: 260px;
+      height: 537px;
+    }
+    .phone-preview-wrap--scenarios .phone-preview-inner {
+      transform: scale(0.667);
+    }
+  }
+
+  /*
+   * Compact variant for /how-it-works — phone preview ~75% smaller than hero
+   * default so it sits in the flow next to step content without dominating.
+   */
+  .phone-preview-wrap.phone-preview-wrap--compact {
+    width: 240px;
+    height: 495px;
+  }
+  .phone-preview-wrap--compact .phone-preview-inner {
+    transform: scale(0.6154);
+  }
+  @media (min-width: 640px) {
+    .phone-preview-wrap.phone-preview-wrap--compact {
+      width: 270px;
+      height: 558px;
+    }
+    .phone-preview-wrap--compact .phone-preview-inner {
+      transform: scale(0.6923);
+    }
+  }
+  @media (min-width: 1024px) {
+    .phone-preview-wrap.phone-preview-wrap--compact {
+      width: 320px;
+      height: 661px;
+    }
+    .phone-preview-wrap--compact .phone-preview-inner {
+      transform: scale(0.8205);
+    }
   }
   .phone-screen {
     top: 1.6%;
@@ -131,6 +284,44 @@
   .tg-play-bot {
     background: var(--color-tg-bubble-bot-accent);
     box-shadow: 0 2px 5px color-mix(in oklab, var(--color-tg-bubble-bot-accent) 25%, transparent);
+  }
+  /*
+   * Subtle "voice playing" pulse on every voice-bubble play button.
+   * Suggests the chat is live without distracting from the rest of the
+   * mockup. Pulse desynced per-bubble via nth-of-type delay so they don't
+   * heartbeat in unison. Disabled under prefers-reduced-motion.
+   */
+  @keyframes voice-pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 2px 5px color-mix(in oklab, currentColor 25%, transparent);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 2px 10px color-mix(in oklab, currentColor 40%, transparent);
+    }
+  }
+  .tg-play-me,
+  .tg-play-bot {
+    animation: voice-pulse 2.4s ease-in-out infinite;
+  }
+  .tg-bubble-shadow:nth-of-type(2) .tg-play-me,
+  .tg-bubble-shadow:nth-of-type(2) .tg-play-bot {
+    animation-delay: 0.6s;
+  }
+  .tg-bubble-shadow:nth-of-type(3) .tg-play-me,
+  .tg-bubble-shadow:nth-of-type(3) .tg-play-bot {
+    animation-delay: 1.2s;
+  }
+  .tg-bubble-shadow:nth-of-type(4) .tg-play-me,
+  .tg-bubble-shadow:nth-of-type(4) .tg-play-bot {
+    animation-delay: 1.8s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tg-play-me,
+    .tg-play-bot {
+      animation: none;
+    }
   }
   .tg-bubble-shadow {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);

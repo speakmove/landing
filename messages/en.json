@@ -2,7 +2,7 @@
   "HomePage": {
     "meta": {
       "title": "SpeakMove — Speaking practice for UK immigrants",
-      "description": "Train the conversations you avoid: landlord, GP, work coach, school, bank, interview. By voice, inside Telegram. 15 minutes a day. £7.45/mo, 7-day free trial without a card."
+      "description": "Train the conversations you avoid: landlord, GP, work coach, school, bank, interview. By voice, inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial without a card."
     },
     "nav": {
       "brand": "SpeakMove",
@@ -25,7 +25,7 @@
     "hero": {
       "eyebrow": {
         "items": [
-          "7 UK scenarios",
+          "8 UK scenarios",
           "15 min a day",
           "Feedback in RU / UA"
         ]
@@ -48,6 +48,11 @@
       "phonePreview": {
         "botName": "SpeakMove",
         "botStatus": "Recording audio…",
+        "botStatuses": [
+          "Recording audio…",
+          "Processing…",
+          "Replying"
+        ],
         "coinBalance": "",
         "today": "Today",
         "inputPlaceholder": "Message",
@@ -103,8 +108,8 @@
         },
         {
           "id": "uk-scenarios",
-          "title": "7 UK life scenarios",
-          "description": "Landlord, GP, work coach, your child's school, bank, job interview, small talk. The conversations that actually happen to an immigrant in the UK."
+          "title": "8 UK life scenarios",
+          "description": "Landlord, GP, work coach, your child's school, bank, job interview, small talk, pharmacy. The conversations that actually happen to an immigrant in the UK."
         },
         {
           "id": "native-feedback",
@@ -119,7 +124,7 @@
         {
           "id": "honest-pricing",
           "title": "Transparent pricing",
-          "description": "£7.45 per month. 7 days free, no card. Cancel anytime in one click or via support."
+          "description": "£9.90 per month. 7 days free, no card. Cancel anytime in one click or via support."
         }
       ]
     },
@@ -131,7 +136,7 @@
         {
           "num": "1",
           "title": "Pick a scenario",
-          "description": "From 7 UK life situations, pick what's burning right now — landlord, GP, work coach, school."
+          "description": "From 8 UK life situations, pick what's burning right now — landlord, GP, work coach, school."
         },
         {
           "num": "2",
@@ -234,6 +239,10 @@
             {
               "label": "Cookies",
               "href": "/cookies"
+            },
+            {
+              "label": "Disclaimer",
+              "href": "/disclaimer"
             }
           ]
         }
@@ -281,7 +290,7 @@
       ]
     },
     "scenariosGrid": {
-      "kicker": "7 situations",
+      "kicker": "8 situations",
       "title": "Practise the conversations that actually happen to an immigrant in the UK.",
       "subtitle": "Every scenario is its own topic in the bot. Tap one — and it opens straight on that topic.",
       "ctaLabel": "Practise",
@@ -334,6 +343,13 @@
           "aiRole": "AI = Universal Credit work coach",
           "hook": "What you searched, which applications — without risk of sanctions.",
           "duration": "12 min"
+        },
+        {
+          "id": "pharmacy",
+          "title": "Pharmacy / Boots visit",
+          "aiRole": "AI = pharmacist at Boots",
+          "hook": "Pick up a prescription, ask about OTC for a cold or headache, check interactions.",
+          "duration": "8 min"
         }
       ]
     },
@@ -366,19 +382,19 @@
     "pricingCard": {
       "badge": "Pro",
       "title": "Less than a coffee a day.",
-      "subtitle": "7 days free, no card. 60 minutes of voice practice per week.",
+      "subtitle": "7 days free, no card. 15 minutes of voice practice per day.",
       "features": [
-        "60 minutes of voice conversation per week",
-        "All 7 UK scenarios",
+        "15 minutes of voice conversation per day",
+        "All 8 UK scenarios",
         "Feedback in Russian or Ukrainian",
         "Cancel anytime in one click"
       ],
       "cta": "Open the bot",
-      "seeDetailsLabel": "See details and FAQ →",
+      "seeDetailsLabel": "See details and FAQ",
       "footnote": "No card · Cancel in one click or via support",
-      "perDay": "£0.25",
+      "perDay": "£0.33",
       "perDayUnit": "/ day",
-      "perMonth": "= £7.45 per month"
+      "perMonth": "= £9.90 per month"
     }
   },
   "HowItWorksPage": {
@@ -418,7 +434,7 @@
         {
           "num": "2",
           "title": "Choose — new topic or continue the last one",
-          "description": "New topic: pick from a menu of 7 scenarios (GP, landlord, work coach, …). Or pick up where you left off — the bot remembers your last conversation."
+          "description": "New topic: pick from a menu of 8 scenarios (GP, landlord, work coach, pharmacy, …). Or pick up where you left off — the bot remembers your last conversation."
         },
         {
           "num": "3",
@@ -497,8 +513,8 @@
         },
         {
           "id": "weekly-limit",
-          "title": "Free trial — 15 minutes over 7 days",
-          "description": "One pool of minutes across all 7 scenarios. On Pro it's 60 minutes per week, reset every Monday."
+          "title": "Free trial — 15 minutes per day × 7 days",
+          "description": "15 minutes of speaking every day — up to 105 minutes of practice across the trial. On Pro it's the same 15 minutes per day, limit resets every 24 hours."
         },
         {
           "id": "pause",
@@ -589,23 +605,23 @@
   },
   "PricingPage": {
     "meta": {
-      "title": "SpeakMove pricing — £7.45/mo, 7 days free, no card",
-      "description": "One plan: £7.45/mo or £0.25/day. 7-day free trial, no card. 60 minutes of voice practice per week across 7 UK life scenarios. Transparent unit economics, 10-question FAQ."
+      "title": "SpeakMove pricing — £9.90/mo, 7 days free, no card",
+      "description": "One plan: £9.90/mo or £0.33/day. 7-day free trial, no card. 15 minutes of voice practice per day across 8 UK life scenarios. Transparent unit economics, 10-question FAQ."
     },
     "hero": {
       "crumb": "Pricing",
-      "title": "£7.45 a month — less than a coffee a day.",
+      "title": "£9.90 a month — less than a coffee a day.",
       "description": "One plan. 7 days free, no card. Cancel in one click.",
-      "perDay": "£0.25",
+      "perDay": "£0.33",
       "perDayUnit": "/ day",
-      "perMonth": "= £7.45 per month",
+      "perMonth": "= £9.90 per month",
       "cta": "Start free",
       "ctaFootnote": "No card · Cancel in one click or via support"
     },
     "structuredData": {
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Telegram",
-      "price": "7.45",
+      "price": "9.90",
       "priceCurrency": "GBP",
       "unitText": "MON",
       "areaServed": "GB"
@@ -619,12 +635,12 @@
         {
           "id": "free-trial",
           "question": "What's the 7-day free trial without a card?",
-          "answer": "7 days of access to all 7 scenarios + 15 minutes of voice conversation. No card to add. When the trial ends, just don't buy a subscription."
+          "answer": "7 days of access to all 8 scenarios × 15 minutes of voice conversation per day (up to 105 minutes of practice in total). No card to add. When the trial ends, just don't buy a subscription."
         },
         {
           "id": "minutes",
-          "question": "How are 60 minutes a week counted?",
-          "answer": "Only the time **you speak**. Listening to the bot doesn't count. Re-recording a phrase doesn't count either. The limit resets every Monday."
+          "question": "How are 15 minutes a day counted?",
+          "answer": "Only the time **you speak**. Listening to the bot doesn't count. Re-recording a phrase doesn't count either. The limit resets every 24 hours at midnight."
         },
         {
           "id": "feedback-language",
@@ -677,13 +693,13 @@
     "plan": {
       "badge": "Pro",
       "name": "One plan for everything",
-      "perDay": "£0.25",
+      "perDay": "£0.33",
       "perDayUnit": "/ day",
-      "perMonth": "= £7.45 per month",
+      "perMonth": "= £9.90 per month",
       "subprice": "No hidden charges",
       "features": [
-        "60 minutes of voice conversation per week",
-        "All 7 UK life scenarios",
+        "15 minutes of voice conversation per day",
+        "All 8 UK life scenarios",
         "British accent in voice replies",
         "Feedback in Russian or Ukrainian",
         "Pause on the fly — step away, timer stops",
@@ -694,44 +710,44 @@
     },
     "unitEconomics": {
       "kicker": "Transparent",
-      "title": "Where your £7.45 goes.",
+      "title": "Where your £9.90 goes.",
       "subtitle": "Not marketing speak, not investor premium. Honest breakdown.",
       "currency": "£",
       "rows": [
         {
           "label": "Recognising your speech",
-          "amount": "0.40"
+          "amount": "0.50"
         },
         {
           "label": "AI partner + feedback generation",
-          "amount": "2.00"
+          "amount": "0.50"
         },
         {
           "label": "British voice synthesis for replies",
-          "amount": "3.20"
+          "amount": "3.50"
         },
         {
           "label": "Payment processing",
-          "amount": "0.30"
+          "amount": "0.40"
         },
         {
           "label": "Hosting and infrastructure",
-          "amount": "0.10"
+          "amount": "0.20"
         }
       ],
       "costTotal": {
         "label": "Cost",
-        "amount": "6.00"
+        "amount": "5.10"
       },
       "margin": {
         "label": "What's left (for development + my time)",
-        "amount": "1.45"
+        "amount": "4.80"
       },
-      "bottomLine": "At full usage about £1.45 goes to us — for development, support and time. If you use less than max, the margin is higher. This is V0, the margin is realistically thin, and we're not pretending we're profitable now."
+      "bottomLine": "At full usage of 15 minutes per day about £4.80 goes to us — for development, support, my time and a buffer for V0 mistakes. If you don't speak every day, the margin is higher. Numbers shown at peak usage, without cache savings or volume discounts."
     },
     "comparison": {
       "kicker": "Compare",
-      "title": "Why £7.45 is a fair price for speaking practice.",
+      "title": "Why £9.90 is a fair price for speaking practice.",
       "blocks": [
         {
           "id": "tutor",
@@ -748,7 +764,7 @@
         {
           "id": "speakmove",
           "name": "SpeakMove",
-          "price": "£7.45/mo",
+          "price": "£9.90/mo",
           "note": "8× cheaper than a tutor, half of Speak. UK scenarios only, voice only.",
           "emphasis": true
         }
@@ -813,6 +829,32 @@
           "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address for service of documents: Weston-super-Mare, UK, BS23 1RH.",
           "Registered with the UK Information Commissioner's Office (ICO) as a data controller. Registration number **ZC141876** — verify at ico.org.uk.",
           "Data contact: **hi@speakmove.app**."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "heading": "Who can use the service",
+        "body": [
+          "SpeakMove is intended **for users aged 18 and over only**. The bot's scenarios (landlord call, GP, work coach, bank, job interview) are adult life situations.",
+          "By using the service you confirm you are **18 or over**. If we discover data was collected from a minor — we'll delete it and block the account."
+        ]
+      },
+      {
+        "id": "biometric",
+        "heading": "Voice recordings and biometric data",
+        "body": [
+          "Voice recordings are technically classified as **biometric data** under GDPR Art. 4(14). Important things to know:",
+          {
+            "type": "list",
+            "items": [
+              "Voice is used **only for speech-to-text recognition**. It is not used to identify you by your voice",
+              "Recordings are **deleted within 24 hours** after transcription",
+              "Voice **is not used** to train third-party AI models",
+              "Voice **is not shared** with third parties except the transcription sub-processor (see below)",
+              "You can **withdraw consent** at any time — cancelling the subscription stops voice processing"
+            ]
+          },
+          "Legal basis for voice processing: **performance of contract** (Art. 6(1)(b)) + **explicit consent** to speech processing (Art. 9(2)(a)) collected on first bot launch."
         ]
       },
       {
@@ -926,7 +968,7 @@
       "effectiveDate": "19 May 2026",
       "lastUpdated": "19 May 2026",
       "intro": "The agreement between you and SpeakMove. Short, and without legal jargon where possible.",
-      "description": "SpeakMove terms of use: what we provide, £7.45/mo subscription, cancellation, limits, liability. UK sole trader Dmytro Fenko.",
+      "description": "SpeakMove terms of use: what we provide, £9.90/mo subscription, cancellation, limits, liability. UK sole trader Dmytro Fenko.",
       "title_meta": "Terms of use · SpeakMove"
     },
     "sections": [
@@ -936,6 +978,14 @@
         "body": [
           "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address: Weston-super-Mare, UK, BS23 1RH.",
           "Registered with UK ICO as a data controller (ZC141876). Contact: **hi@speakmove.app**."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "heading": "Who can use the service (18+)",
+        "body": [
+          "SpeakMove is intended **for users aged 18 and over only**. By using the service you confirm you are 18 or over.",
+          "If we discover that a minor is using an account — we'll block access and delete the data. See also the \"Who can use the service\" section in the [Privacy Policy](/privacy)."
         ]
       },
       {
@@ -954,8 +1004,8 @@
             "type": "list",
             "items": [
               "**Free trial**: 7 days of access + 15 minutes of voice practice. No card needed. If the trial ends, just don't subscribe",
-              "**Pro subscription**: £7.45 per month via Stripe. Includes 60 minutes of voice conversation per week and all 7 scenarios",
-              "Limits reset every Monday at 00:00 UTC",
+              "**Pro subscription**: £9.90 per month via Stripe. Includes 15 minutes of voice conversation per day and all 8 scenarios",
+              "Limit resets every 24 hours at 00:00 UTC",
               "Price is in GBP. Stripe converts automatically from your card"
             ]
           }
@@ -1100,12 +1150,131 @@
       }
     ]
   },
+  "DisclaimerPage": {
+    "meta": {
+      "title": "Disclaimer",
+      "effectiveDate": "21 May 2026",
+      "lastUpdated": "21 May 2026",
+      "intro": "Service limits, AI accuracy, and where SpeakMove **doesn't fit**.",
+      "description": "SpeakMove disclaimer: AI can be wrong, the service does not replace a GP, lawyer, tutor or certification. 18+ only.",
+      "title_meta": "Disclaimer · SpeakMove"
+    },
+    "sections": [
+      {
+        "id": "what",
+        "heading": "What this page is",
+        "body": [
+          "This page is a short and honest warning about **what SpeakMove does not do**. If you plan to use the service for critical things (medical, legal, immigration paperwork) — read this before subscribing."
+        ]
+      },
+      {
+        "id": "ai-accuracy",
+        "heading": "AI can be wrong",
+        "body": [
+          "The SpeakMove bot runs on AI (large language model + speech recognition + speech synthesis). AI is **not perfect**:",
+          {
+            "type": "list",
+            "items": [
+              "The bot may give an **incorrect grammar correction** — especially in rare or complex constructions",
+              "The bot may **mis-recognise your accent** — especially with background noise or a weak microphone signal",
+              "The bot may give **inaccurate advice** about UK realities (council tax, immigration rules, employment law)",
+              "The AI voice is **not identical to a real British speaker** — it's a close but synthetic approximation"
+            ]
+          },
+          "**Verify critical information** against primary sources — UK Government (gov.uk), Citizens Advice, NHS, your actual landlord/employer."
+        ]
+      },
+      {
+        "id": "not-replacement",
+        "heading": "SpeakMove **does not replace**",
+        "body": [
+          "SpeakMove is a **conversation practice tool**. It does not replace:",
+          {
+            "type": "list",
+            "items": [
+              "**A tutor** giving real feedback on your speech, mistakes and progress",
+              "**A GP** in medical situations — if you have serious symptoms, call NHS 111 or see a GP",
+              "**A lawyer** for legal matters — immigration, contracts, disputes",
+              "**An immigration adviser** (UK OISC-registered) — for visa, ILR, citizenship",
+              "**A certification** (IELTS, Cambridge ESOL, Trinity GESE) — SpeakMove does not issue certificates and is not CEFR-aligned"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "voice-data",
+        "heading": "Voice data",
+        "body": [
+          "Your voice is **technically biometric data** under GDPR Art. 4(14). SpeakMove:",
+          {
+            "type": "list",
+            "items": [
+              "Uses voice **only for speech recognition** (speech-to-text)",
+              "**Deletes voice within 24 hours** after transcription",
+              "**Does not use** voice to train AI models",
+              "**Does not identify** you by your voice"
+            ]
+          },
+          "Details — in the [Privacy Policy](/privacy)."
+        ]
+      },
+      {
+        "id": "age",
+        "heading": "18+ only",
+        "body": [
+          "SpeakMove is **not intended for minors**. Scenarios (landlord call, GP, work coach, bank, job interview) are adult life situations.",
+          "If you are a parent and discovered a minor using the service — email **hi@speakmove.app** and we'll delete the data."
+        ]
+      },
+      {
+        "id": "no-guarantee",
+        "heading": "We do not guarantee results",
+        "body": [
+          "**We do not guarantee** that after using SpeakMove you will:",
+          {
+            "type": "list",
+            "items": [
+              "Speak fluently",
+              "Pass IELTS / a job interview",
+              "Get a visa / ILR / citizenship",
+              "Resolve your problem with a landlord / GP / DWP"
+            ]
+          },
+          "The result depends on **your practice, motivation and dozens of other factors**. The service is just a tool."
+        ]
+      },
+      {
+        "id": "liability",
+        "heading": "Liability limit",
+        "body": [
+          "SpeakMove's maximum liability is the subscription amount you paid in the last 12 months. We are not liable for:",
+          {
+            "type": "list",
+            "items": [
+              "Decisions you made based on AI advice",
+              "Mistakes in your real conversations with landlord/GP/employer",
+              "Stress, anxiety or other emotional impact from using the service",
+              "Downtime, bugs, V0-instabilities"
+            ]
+          },
+          "Details — in the [Terms of Use](/terms)."
+        ]
+      },
+      {
+        "id": "contact",
+        "heading": "Questions",
+        "body": [
+          "If anything is unclear — write to **hi@speakmove.app** or on Telegram **@dmitriy**."
+        ]
+      }
+    ]
+  },
   "MetaGlobal": {
     "siteName": "SpeakMove",
     "tagline": "Speaking practice for real UK life situations",
     "defaultTitle": "SpeakMove — Speaking practice for UK immigrants",
     "titleTemplate": "%s · SpeakMove",
-    "defaultDescription": "Voice AI partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £7.45/mo, 7-day free trial, no card required.",
+    "defaultDescription": "Voice AI partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial, no card required.",
     "defaultKeywords": [
       "speakmove",
       "english speaking practice UK",
@@ -1168,6 +1337,9 @@
     },
     "navSections": "Sections",
     "effectiveLabel": "Effective:",
-    "lastUpdatedLabel": "Last updated:"
+    "lastUpdatedLabel": "Last updated:",
+    "breadcrumb": {
+      "home": "Home"
+    }
   }
 }

@@ -1,5 +1,5 @@
-import { CheckIcon, CoinIcon } from '@/shared/ui';
-import type { TPhoneFloatBubble } from '@/shared/ui';
+import { CheckIcon, MicIcon } from '@/shared/ui';
+import type { TPhoneFloatBubble } from '@/entities/phone-mockup';
 import { cn } from '@/shared/model/libs/cn';
 
 type TProps = {
@@ -22,7 +22,7 @@ export const FloatingBubbleCards = ({ bubbles }: TProps) => {
       {bubbles.map((bubble, idx) => {
         const position = POSITIONS[idx] ?? POSITIONS[0];
         const bgClass = ICON_BG[idx] ?? ICON_BG[0];
-        const Icon = idx === 0 ? CoinIcon : CheckIcon;
+        const Icon = idx === 0 ? MicIcon : CheckIcon;
         return (
           <div
             key={bubble.title}

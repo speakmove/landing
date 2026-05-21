@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { PhoneMockup } from '@/shared/ui';
-import type { TPhoneMessage } from '@/shared/ui';
+import { PhoneMockup } from '@/entities/phone-mockup';
+import type { TPhoneMessage } from '@/entities/phone-mockup';
 
 /**
  * Phone mock for the /how-it-works flow section. Re-uses the same iPhone
@@ -18,16 +18,18 @@ export const HowItWorksPhonePreview = async () => {
     : undefined;
 
   return (
-    <div className="relative mx-auto w-full max-w-[390px]" aria-hidden="true">
-      <PhoneMockup
-        botName={t('botName')}
-        botStatus={t('botStatus')}
-        dateLabel={t('today')}
-        inputPlaceholder={t('inputPlaceholder')}
-        micLabel={t('micLabel')}
-        messages={messages}
-        unreadCount={unreadCount}
-      />
+    <div className="phone-preview-wrap phone-preview-wrap--compact" aria-hidden="true">
+      <div className="phone-preview-inner">
+        <PhoneMockup
+          botName={t('botName')}
+          botStatus={t('botStatus')}
+          dateLabel={t('today')}
+          inputPlaceholder={t('inputPlaceholder')}
+          micLabel={t('micLabel')}
+          messages={messages}
+          unreadCount={unreadCount}
+        />
+      </div>
     </div>
   );
 };

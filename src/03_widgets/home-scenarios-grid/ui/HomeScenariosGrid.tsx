@@ -1,7 +1,7 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
-import { buildBotStartUrl } from '@/shared/model/utils';
+import { buildBotUrl } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
 
 type TCard = {
@@ -14,6 +14,7 @@ type TCard = {
 
 export const HomeScenariosGrid = async () => {
   const t = await getTranslations('HomePage.scenariosGrid');
+  const locale = await getLocale();
   const cards = getList<TCard>(t, 'cards');
   const ctaLabel = t('ctaLabel');
 
@@ -35,7 +36,7 @@ export const HomeScenariosGrid = async () => {
           {cards.map((card) => (
             <li key={card.id} className="contents">
               <a
-                href={buildBotStartUrl(card.id)}
+                href={buildBotUrl(locale, card.id)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-hover group relative flex h-full flex-col rounded-card border border-line bg-white p-5 shadow-(--shadow-soft) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -49,13 +50,9 @@ export const HomeScenariosGrid = async () => {
                     {card.duration}
                   </span>
                 </div>
-                <p className="mt-1.5 m-0 text-13 font-medium text-primary">
-                  {card.aiRole}
-                </p>
-                <p className="mt-3 m-0 flex-1 text-14-5 leading-relaxed text-muted">
-                  {card.hook}
-                </p>
-                <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2 transition-[gap]">
+                <p className="m-0 mt-1.5 text-13 font-medium text-primary">{card.aiRole}</p>
+                <p className="m-0 mt-3 flex-1 text-14-5 leading-relaxed text-muted">{card.hook}</p>
+                <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-[gap] group-hover:gap-2">
                   {ctaLabel}
                   <ArrowRightIcon size={14} />
                 </div>

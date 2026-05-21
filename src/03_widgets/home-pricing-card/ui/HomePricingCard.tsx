@@ -1,11 +1,13 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, Section } from '@/shared/ui';
-import { ANCHORS, PATHS, URLS } from '@/shared/config';
+import { ANCHORS, PATHS } from '@/shared/config';
+import { buildBotUrl } from '@/shared/model/utils';
 import { PricingCard } from '@/entities/pricing-card';
 
 export const HomePricingCard = async () => {
   const t = await getTranslations('HomePage.pricingCard');
+  const locale = await getLocale();
   const features = getList<string>(t, 'features');
 
   return (
@@ -22,7 +24,7 @@ export const HomePricingCard = async () => {
           perMonth={t('perMonth')}
           features={features}
           primaryCtaLabel={t('cta')}
-          primaryCtaHref={URLS.telegramBot}
+          primaryCtaHref={buildBotUrl(locale)}
           secondaryLink={{ label: t('seeDetailsLabel'), href: PATHS.pricing }}
           footnote={t('footnote')}
         />

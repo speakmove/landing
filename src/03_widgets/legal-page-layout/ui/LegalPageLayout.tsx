@@ -17,7 +17,7 @@ type TLegalMeta = {
 };
 
 type TProps = {
-  namespace: 'PrivacyPage' | 'TermsPage' | 'CookiesPage';
+  namespace: 'PrivacyPage' | 'TermsPage' | 'CookiesPage' | 'DisclaimerPage';
 };
 
 export const LegalPageLayout = async ({ namespace }: TProps) => {

@@ -1,7 +1,7 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, DoubleCheckIcon, Section } from '@/shared/ui';
-import { buildBotStartUrl } from '@/shared/model/utils';
+import { buildBotUrl } from '@/shared/model/utils';
 
 type TLine = {
   text: string;
@@ -11,6 +11,7 @@ type TLine = {
 
 export const HomePainMirror = async () => {
   const t = await getTranslations('HomePage.painMirror');
+  const locale = await getLocale();
   const lines = getList<TLine>(t, 'lines');
   const timeLabels = getList<string>(t, 'timeLabels');
 
@@ -53,7 +54,7 @@ export const HomePainMirror = async () => {
                 {lines.map((line) => (
                   <li key={line.scenarioId}>
                     <a
-                      href={buildBotStartUrl(line.scenarioId)}
+                      href={buildBotUrl(locale, line.scenarioId)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center rounded-full border border-primary/30 bg-primary-pale px-3 py-1 text-13 font-semibold text-primary-ink transition-colors hover:bg-primary hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"

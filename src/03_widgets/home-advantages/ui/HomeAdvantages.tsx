@@ -15,7 +15,6 @@ const SPAN: Record<number, string> = {
 
 export const HomeAdvantages = async () => {
   const t = await getTranslations('HomePage.advantages');
-
   const tiles = getList<TAdvantageTile>(t, 'tiles');
 
   return (

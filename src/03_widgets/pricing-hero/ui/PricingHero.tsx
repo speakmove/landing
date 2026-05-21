@@ -1,12 +1,13 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { ButtonLink, Container, JsonLd } from '@/shared/ui';
-import { URLS } from '@/shared/config';
 import { env } from '@/shared/model/libs/env';
 import { routing } from '@/shared/model/libs/i18n/routing';
+import { buildBotUrl } from '@/shared/model/utils';
+import { buildSoftwareApplicationLd } from '@/shared/model/libs/jsonld';
 
 /**
  * /pricing hero with a per-day price reframe.
- * Big display "£0.25 / day" anchors visual attention; the real monthly
+ * Big display "£0.33 / day" anchors visual attention; the real monthly
  * price sits underneath as a smaller equality so nothing is hidden.
  *
  * Emits a Product (SoftwareApplication) + Offer JSON-LD block so search
@@ -16,34 +17,25 @@ export const PricingHero = async () => {
   const t = await getTranslations('PricingPage.hero');
   const tSd = await getTranslations('PricingPage.structuredData');
   const tMeta = await getTranslations('MetaGlobal');
+  const locale = await getLocale();
+  const botUrl = buildBotUrl(locale);
 
-  const siteUrl = env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
-  const price = tSd('price');
-  const priceCurrency = tSd('priceCurrency');
-  const productLd = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+  const siteUrl = env.NEXT_PUBLIC_SITE_URL;
+  const productLd = buildSoftwareApplicationLd({
     name: tMeta('siteName'),
     description: tMeta('defaultDescription'),
     applicationCategory: tSd('applicationCategory'),
     operatingSystem: tSd('operatingSystem'),
     inLanguage: routing.locales,
     url: `${siteUrl}/`,
-    offers: {
-      '@type': 'Offer',
-      price,
-      priceCurrency,
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price,
-        priceCurrency,
-        unitText: tSd('unitText'),
-      },
-      availability: 'https://schema.org/InStock',
-      url: URLS.telegramBot,
+    offer: {
+      price: tSd('price'),
+      priceCurrency: tSd('priceCurrency'),
+      unitText: tSd('unitText'),
+      botUrl,
       areaServed: tSd('areaServed'),
     },
-  };
+  });
 
   return (
     <header className="relative overflow-hidden px-5 pt-16 pb-12 text-center md:px-6 md:pt-20 md:pb-20">
@@ -76,10 +68,10 @@ export const PricingHero = async () => {
           </div>
 
           <div className="mt-8 flex flex-col items-center gap-3 md:mt-10">
-            <ButtonLink href={URLS.telegramBot} variant="primary" size="lg">
+            <ButtonLink href={botUrl} variant="primary" size="lg">
               {t('cta')}
             </ButtonLink>
-            <p className="m-0 text-13 text-muted">{t('ctaFootnote')}</p>
+            <p className="mt-3 m-0 text-12-5 text-muted">{t('ctaFootnote')}</p>
           </div>
         </div>
       </Container>

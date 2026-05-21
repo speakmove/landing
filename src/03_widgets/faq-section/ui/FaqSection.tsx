@@ -3,6 +3,7 @@ import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, JsonLd, Section, SectionHead } from '@/shared/ui';
 import { FaqItem } from '@/entities/faq-item';
 import { ANCHORS } from '@/shared/config';
+import { buildFaqLd } from '@/shared/model/libs/jsonld';
 import type { TFaqItem } from '@/entities/faq-item';
 
 type TProps = {
@@ -15,21 +16,7 @@ export const FaqSection = async ({ namespace }: TProps) => {
   const tCommon = await getTranslations('Common');
   const items = getList<TFaqItem>(t, 'items');
 
-  const faqLd =
-    items.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: items.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer,
-            },
-          })),
-        }
-      : null;
+  const faqLd = items.length > 0 ? buildFaqLd(items) : null;
 
   return (
     <Section

@@ -1,18 +1,21 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
+import { buildBotUrl } from '@/shared/model/utils';
 import { HomePhonePreview } from './HomePhonePreview';
-import { ANCHORS, URLS } from '@/shared/config';
+import { HeroBgParallax } from './HeroBgParallax';
+import { ANCHORS } from '@/shared/config';
 
 export const HomeHero = async () => {
   const t = await getTranslations('HomePage.hero');
+  const locale = await getLocale();
 
   const eyebrowItems = getList<string>(t, 'eyebrow.items');
   const metaPoints = getList<string>(t, 'metaPoints');
 
   return (
     <header id={ANCHORS.hero} className="relative overflow-hidden px-5 py-14 md:px-6 md:py-20 lg:pb-24">
-      <div aria-hidden="true" className="hero-bg-grid" />
+      <HeroBgParallax />
 
       <Container className="px-0">
         <div className="mt-4 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
@@ -45,7 +48,7 @@ export const HomeHero = async () => {
 
             {/* CTAs */}
             <div className="mb-8 flex flex-wrap gap-3">
-              <ButtonLink href={URLS.telegramBot} variant="primary" size="lg">
+              <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
                 {t('ctas.primary')}
                 <ArrowRightIcon size={16} />
               </ButtonLink>

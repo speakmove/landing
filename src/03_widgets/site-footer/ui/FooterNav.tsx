@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { Link } from '@/shared/model/libs/i18n/navigation';
+import { ActiveLink } from '@/shared/ui';
 import { isExternal } from '@/shared/model/utils';
 
 type TFooterLink = {
@@ -41,12 +41,13 @@ export const FooterNav = async () => {
                       {item.label}
                     </a>
                   ) : (
-                    <Link
+                    <ActiveLink
                       href={item.href}
                       className="transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      activeClassName="text-primary font-semibold"
                     >
                       {item.label}
-                    </Link>
+                    </ActiveLink>
                   )}
                 </li>
               ))}

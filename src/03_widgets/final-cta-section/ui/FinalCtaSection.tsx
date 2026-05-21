@@ -1,6 +1,7 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { ButtonLink, Container, Section } from '@/shared/ui';
-import { ANCHORS, URLS } from '@/shared/config';
+import { ANCHORS } from '@/shared/config';
+import { buildBotUrl } from '@/shared/model/utils';
 
 type TProps = {
   namespace?: string;
@@ -9,6 +10,7 @@ type TProps = {
 export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const t = await getTranslations(namespace as any);
+  const locale = await getLocale();
 
   return (
     <Section
@@ -28,7 +30,7 @@ export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProp
             {t('subtitle')}
           </p>
 
-          <ButtonLink href={URLS.telegramBot} variant="primary" size="lg">
+          <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
             {t('cta')}
           </ButtonLink>
 

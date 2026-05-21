@@ -58,7 +58,7 @@ export const PricingComparisonContext = async () => {
           ))}
         </ul>
 
-        <p className="mx-auto mt-7 max-w-2xl text-center text-pretty text-14-5 leading-relaxed text-muted">
+        <p className="mx-auto mt-7 max-w-2xl text-center text-pretty text-13 leading-relaxed text-muted">
           {t('closingLine')}
         </p>
       </Container>

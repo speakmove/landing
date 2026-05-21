@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/shared/model/libs/i18n/navigation';
 import { PATHS, ANCHORS } from '@/shared/config';
+import { ActiveLink } from '@/shared/ui';
 
 type TLinkKey = 'howItWorks' | 'advantages' | 'pricing';
 type TNavItem = { key: TLinkKey; href: string };
@@ -20,12 +20,13 @@ export const HeaderNav = async () => {
       <ul className="flex gap-7 text-sm font-medium text-muted">
         {NAV_ITEMS.map((item) => (
           <li key={item.key}>
-            <Link
+            <ActiveLink
               href={item.href}
               className="transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              activeClassName="text-primary font-semibold"
             >
               {tLinks(item.key)}
-            </Link>
+            </ActiveLink>
           </li>
         ))}
       </ul>
