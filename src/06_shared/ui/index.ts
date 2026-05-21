@@ -40,6 +40,7 @@ export { InlineMarkdown } from './InlineMarkdown';
 export { JsonLd } from './JsonLd';
 export { MOTION_DURATION, MOTION_EASE } from './motion';
 export { Portal } from './Portal';
+export { Reveal } from './Reveal';
 export { Section, SectionHead } from './Section';
 export { SkipLink } from './SkipLink';
 export { VisuallyHidden } from './VisuallyHidden';
