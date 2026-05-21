@@ -81,6 +81,16 @@
   --color-phone-dark: #1d1d1f;
 }
 
+:root {
+  --header-height: 64px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 56px;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
