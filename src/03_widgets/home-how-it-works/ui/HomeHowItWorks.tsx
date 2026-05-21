@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { Container, Section, SectionHead } from '@/shared/ui';
+import { Container, Reveal, Section, SectionHead } from '@/shared/ui';
 import { StepCard } from '@/entities/step-card';
 import { ANCHORS } from '@/shared/config';
 import type { TStep } from '@/entities/step-card';
@@ -20,13 +20,15 @@ export const HomeHowItWorks = async () => {
           subtitle={t('subtitle')}
         />
 
-        <ol className="grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step) => (
-            <li key={step.num}>
-              <StepCard step={step} />
-            </li>
-          ))}
-        </ol>
+        <Reveal variant="up">
+          <ol className="grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((step) => (
+              <li key={step.num}>
+                <StepCard step={step} />
+              </li>
+            ))}
+          </ol>
+        </Reveal>
       </Container>
     </Section>
   );

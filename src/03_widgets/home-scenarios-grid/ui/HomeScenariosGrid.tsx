@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
+import { ArrowRightIcon, Container, Reveal, Section, SectionHead } from '@/shared/ui';
 import { buildBotUrl } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
 
@@ -32,7 +32,8 @@ export const HomeScenariosGrid = async () => {
           subtitle={t('subtitle')}
         />
 
-        <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal variant="up">
+          <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((card) => (
             <li key={card.id} className="contents">
               <a
@@ -59,7 +60,8 @@ export const HomeScenariosGrid = async () => {
               </a>
             </li>
           ))}
-        </ul>
+          </ul>
+        </Reveal>
       </Container>
     </Section>
   );
