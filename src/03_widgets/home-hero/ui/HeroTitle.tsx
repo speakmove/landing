@@ -84,7 +84,7 @@ export const HeroTitle = ({ before, accent, after, className }: TProps) => {
       )}
       aria-label={fullText}
     >
-      <span aria-hidden="true">
+      <span aria-hidden="true" key={animate ? 'motion' : 'static'}>
         <Words words={beforeWords} startWordIndex={0} animate={animate} />
         <span
           className={cn('accent-underline', animate && 'is-drawn')}
