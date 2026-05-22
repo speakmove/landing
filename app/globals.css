@@ -524,6 +524,22 @@
     opacity: 0.35;
     border-radius: 6px;
     z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  .accent-underline.is-drawn::after {
+    animation: accent-draw 800ms cubic-bezier(0.22, 1, 0.36, 1) var(--accent-delay, 0s) forwards;
+  }
+
+  @keyframes accent-draw {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .accent-underline::after { transform: scaleX(1); }
+    .accent-underline.is-drawn::after { animation: none; }
   }
 
   /* ---------- Hero background (dotted/gridded radial) ---------- */
