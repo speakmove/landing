@@ -12,7 +12,8 @@ type TJourneyState = {
 };
 
 const SOURCE_SCALE = 1;
-const TARGET_SCALE = 0.8;
+// 0.6 ≈ ratio of .phone-preview-wrap--scenarios (260px lg) to --compact (440px lg)
+const TARGET_SCALE = 0.6;
 const SOURCE_ROTATE_Y = 0;
 const TARGET_ROTATE_Y = -6;
 

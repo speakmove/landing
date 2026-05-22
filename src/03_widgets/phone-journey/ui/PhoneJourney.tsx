@@ -37,27 +37,35 @@ export const PhoneJourney = () => {
   return (
     <div className="phone-journey-layer" aria-hidden="true" style={layerStyle}>
       <motion.div className="phone-journey-stage" style={stageStyle}>
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeContent.botName}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: shouldReduce ? 0 : MOTION_DURATION.base,
-              ease: MOTION_EASE.out,
-            }}
-          >
-            <PhoneMockup
-              botName={activeContent.botName}
-              botStatus="online"
-              dateLabel="Today"
-              inputPlaceholder="Message…"
-              micLabel="Voice message"
-              messages={activeContent.messages}
-            />
-          </motion.div>
-        </AnimatePresence>
+        {/* PhoneMockup needs the .phone-preview-wrap > .phone-preview-inner CSS
+         * scaffold to render at a non-zero size — its chat UI is designed at
+         * a fixed 390px base inside .phone-preview-inner. Without the wrappers
+         * the phone collapses and is invisible. */}
+        <div className="phone-preview-wrap phone-preview-wrap--compact">
+          <div className="phone-preview-inner">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeContent.botName}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: shouldReduce ? 0 : MOTION_DURATION.base,
+                  ease: MOTION_EASE.out,
+                }}
+              >
+                <PhoneMockup
+                  botName={activeContent.botName}
+                  botStatus="online"
+                  dateLabel="Today"
+                  inputPlaceholder="Message…"
+                  micLabel="Voice message"
+                  messages={activeContent.messages}
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
