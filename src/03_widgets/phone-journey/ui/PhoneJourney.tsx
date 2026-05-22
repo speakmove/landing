@@ -14,7 +14,9 @@ export const PhoneJourney = () => {
   const { activeContent } = usePhoneJourneyContext();
   const { x, y, scale, rotateY, visible } = usePhoneJourneyScroll();
 
-  if (!isDesktop || !activeContent) return null;
+  // Reduced-motion: skip the fixed-layer phone entirely. Without transform,
+  // .phone-journey-stage would render stuck at top-left of the viewport.
+  if (!isDesktop || !activeContent || shouldReduce) return null;
 
   // CSS custom-property bridge: --pj-x / --pj-y carry scroll-derived positions
   // into the CSS layer. Same pattern as Phase 2's --accent-delay.
