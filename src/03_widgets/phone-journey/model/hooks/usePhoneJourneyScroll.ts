@@ -55,12 +55,15 @@ export const usePhoneJourneyScroll = (): TJourneyState => {
         return;
       }
 
-      // Phone stays visible while source is registered. If the transform places
-      // it outside the viewport (e.g. scrolled past scenarios), the browser
-      // clips it naturally — no need for an explicit visibility flag, which
-      // was flaky during first-frame rect-stabilisation.
-      const vh = window.innerHeight;
-      const t = clamp01(1 - tRect.top / vh);
+      // Document-scroll-based interpolation: t advances continuously from the
+      // moment the source anchor is at the top of the page to when the target
+      // anchor is at the top. Phone moves smoothly across the whole journey
+      // instead of standing still until target enters the viewport.
+      const scrollY = window.scrollY;
+      const sourceDocY = sRect.top + scrollY;
+      const targetDocY = tRect.top + scrollY;
+      const distance = targetDocY - sourceDocY;
+      const t = distance > 0 ? clamp01((scrollY - sourceDocY) / distance) : 0;
 
       const sx = sRect.left + sRect.width / 2;
       const sy = sRect.top + sRect.height / 2;
