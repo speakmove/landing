@@ -123,6 +123,12 @@
   to   { transform: translateX(200%); }
 }
 
+@keyframes blob-drift {
+  0%   { transform: translate(-50%, -50%) translate(  0,    0); }
+  50%  { transform: translate(-50%, -50%) translate( 40px, -30px); }
+  100% { transform: translate(-50%, -50%) translate(-30px,  40px); }
+}
+
 @layer components {
   /* ---------- Shimmer sweep — light highlight on primary CTA hover ---------- */
   /*
@@ -578,6 +584,31 @@
     background-size: 48px 48px;
     -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
     mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
+  }
+
+  /* ---------- Hero ambient blob — soft drifting primary-color cloud ---------- */
+  .hero-ambient-blob {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in oklab, var(--color-primary) 18%, transparent),
+      transparent 70%
+    );
+    filter: blur(80px);
+    z-index: 1;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-ambient-blob {
+      animation: blob-drift 24s ease-in-out infinite alternate;
+    }
   }
 
   .page-hero-bg {
