@@ -578,6 +578,30 @@
     mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
   }
 
+  .hero-ambient-blob {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in oklab, var(--color-primary) 18%, transparent),
+      transparent 70%
+    );
+    filter: blur(80px);
+    z-index: 1;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-ambient-blob {
+      animation: blob-drift 24s ease-in-out infinite alternate;
+    }
+  }
+
   .page-hero-bg {
     position: absolute;
     inset: 0;
@@ -859,6 +883,12 @@
   .faq-details[open] .faq-summary::after {
     transform: rotate(-135deg);
   }
+}
+
+@keyframes blob-drift {
+  0%   { transform: translate(-50%, -50%) translate(0, 0); }
+  50%  { transform: translate(-50%, -50%) translate(40px, -30px); }
+  100% { transform: translate(-50%, -50%) translate(-30px, 40px); }
 }
 
 /* ---------- FAQ details container (unlayered so it beats Tailwind utilities) ---------- */
