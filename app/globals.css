@@ -123,12 +123,6 @@
   to   { transform: translateX(200%); }
 }
 
-@keyframes blob-drift {
-  0%   { transform: translate(-50%, -50%) translate(  0,    0); }
-  50%  { transform: translate(-50%, -50%) translate( 40px, -30px); }
-  100% { transform: translate(-50%, -50%) translate(-30px,  40px); }
-}
-
 @layer components {
   /* ---------- Shimmer sweep — light highlight on primary CTA hover ---------- */
   /*
@@ -586,7 +580,7 @@
     mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
   }
 
-  /* ---------- Hero ambient blob — soft drifting primary-color cloud ---------- */
+  /* ---------- Hero ambient blob — static primary-color cloud (desktop only) ---------- */
   .hero-ambient-blob {
     position: absolute;
     top: 30%;
@@ -605,9 +599,9 @@
     transform: translate(-50%, -50%);
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  @media (max-width: 1023px) {
     .hero-ambient-blob {
-      animation: blob-drift 24s ease-in-out infinite alternate;
+      display: none;
     }
   }
 
