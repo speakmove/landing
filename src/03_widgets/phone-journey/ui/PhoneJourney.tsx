@@ -1,29 +1,15 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
 import type { CSSProperties } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { PhoneMockup } from '@/entities/phone-mockup';
 import { MOTION_DURATION, MOTION_EASE } from '@/shared/ui';
 import { usePhoneJourneyContext } from '../model/store';
 import { usePhoneJourneyScroll } from '../model/hooks/usePhoneJourneyScroll';
-
-const subscribe = (cb: () => void) => {
-  if (typeof window === 'undefined') return () => {};
-  const mql = window.matchMedia('(min-width: 1024px)');
-  mql.addEventListener('change', cb);
-  return () => mql.removeEventListener('change', cb);
-};
-
-const getSnapshot = () => {
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia('(min-width: 1024px)').matches;
-};
-
-const getServerSnapshot = () => false;
+import { useIsDesktop } from '../model/hooks/useIsDesktop';
 
 export const PhoneJourney = () => {
-  const isDesktop = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const isDesktop = useIsDesktop();
   const shouldReduce = useReducedMotion();
   const { activeContent } = usePhoneJourneyContext();
   const { x, y, scale, rotateY, visible } = usePhoneJourneyScroll();

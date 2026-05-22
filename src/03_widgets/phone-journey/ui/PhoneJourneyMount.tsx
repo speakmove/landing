@@ -1,9 +1,9 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
 import type { CSSProperties, RefObject } from 'react';
 import { cn } from '@/shared/model/libs/cn';
 import { usePhoneJourneyAnchor } from '../model/hooks/usePhoneJourneyAnchor';
+import { useIsDesktop } from '../model/hooks/useIsDesktop';
 import type { TPhoneJourneyRole } from '../model/types';
 
 type TProps = {
@@ -13,22 +13,8 @@ type TProps = {
   aspect?: string;
 };
 
-const subscribe = (cb: () => void) => {
-  if (typeof window === 'undefined') return () => {};
-  const mql = window.matchMedia('(min-width: 1024px)');
-  mql.addEventListener('change', cb);
-  return () => mql.removeEventListener('change', cb);
-};
-
-const getSnapshot = () => {
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia('(min-width: 1024px)').matches;
-};
-
-const getServerSnapshot = () => false;
-
 export const PhoneJourneyMount = ({ role, className, aspect }: TProps) => {
-  const isDesktop = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const isDesktop = useIsDesktop();
   const ref = usePhoneJourneyAnchor(role);
 
   if (!isDesktop) return null;

@@ -913,6 +913,7 @@
   }
 
   /* ---------- PhoneJourney — single fixed-layer phone traveling hero → scenarios ---------- */
+  /* z-30: above hero content (z-10), below SiteHeader (z-50) */
   .phone-journey-layer {
     position: fixed;
     inset: 0;

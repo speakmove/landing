@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion, useMotionValueEvent, useReducedMotion, useScroll } from 'framer-motion';
 import { cn } from '@/shared/model/libs/cn';
 import { ArrowRightIcon, Container, MOTION_DURATION, MOTION_EASE, SectionHead } from '@/shared/ui';
@@ -27,6 +27,8 @@ export const ScenariosDesktopJourney = ({
   ctaLabel,
 }: TProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const sentinelRef = useRef<HTMLSpanElement | null>(null);
+  const intersectingRef = useRef(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const shouldReduce = useReducedMotion();
   const { setActiveContent } = usePhoneJourneyContext();
@@ -41,16 +43,43 @@ export const ScenariosDesktopJourney = ({
     setActiveIndex(idx);
   });
 
-  // Push active scenario content to PhoneJourney as the index changes.
+  const pushCurrent = useCallback(
+    (index: number) => {
+      const card = cards[index];
+      if (!card) return;
+      const content = SCENARIO_PHONE_CONTENT[card.id];
+      if (content) {
+        setActiveContent({ botName: content.botName, messages: content.messages });
+      }
+    },
+    [cards, setActiveContent],
+  );
+
+  // IO: claim ownership when target anchor enters viewport; relinquish silently on leave.
   useEffect(() => {
-    const card = cards[activeIndex];
-    if (!card) return;
-    const content = SCENARIO_PHONE_CONTENT[card.id];
-    if (content) {
-      setActiveContent({ botName: content.botName, messages: content.messages });
+    const el = sentinelRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        intersectingRef.current = entry?.isIntersecting ?? false;
+        if (entry?.isIntersecting) {
+          pushCurrent(activeIndex);
+        }
+        // On leave: do nothing — hero sentinel will claim ownership when source re-enters.
+      },
+      { threshold: 0 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- IO re-created only when sentinel mounts; activeIndex changes handled below
+  }, [pushCurrent]);
+
+  // Push updated content while target remains visible and scroll drives index changes.
+  useEffect(() => {
+    if (intersectingRef.current) {
+      pushCurrent(activeIndex);
     }
-    // Don't null content on unmount — Hero slot reclaims ownership when scrolled back.
-  }, [activeIndex, cards, setActiveContent]);
+  }, [activeIndex, pushCurrent]);
 
   return (
     <div ref={scrollRef} className="scenarios-scroll-region relative hidden lg:block">
@@ -64,11 +93,17 @@ export const ScenariosDesktopJourney = ({
           />
         </Container>
         <Container className="flex flex-1 items-center gap-12 pb-8">
-          <div className="flex-shrink-0">
+          <div className="relative flex-shrink-0">
             <PhoneJourneyMount
               role="target"
               className="phone-preview-wrap phone-preview-wrap--scenarios"
               aspect="9 / 19.5"
+            />
+            {/* Visibility sentinel: overlays anchor so IO fires when target enters/exits viewport */}
+            <span
+              ref={sentinelRef}
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0"
             />
           </div>
           <div className="flex flex-1 flex-col gap-2">
