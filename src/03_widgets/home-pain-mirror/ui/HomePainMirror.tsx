@@ -30,7 +30,7 @@ export const HomePainMirror = async () => {
             {t('eyebrow')}
           </h2>
 
-          <Reveal variant="up">
+          <Reveal variant="rise">
             <ul className="mt-8 m-0 list-none space-y-2 p-0">
               {lines.map((line, idx) => (
                 <li key={line.scenarioId} className="flex justify-end">

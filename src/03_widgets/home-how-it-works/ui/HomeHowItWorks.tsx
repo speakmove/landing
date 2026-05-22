@@ -21,7 +21,7 @@ export const HomeHowItWorks = async () => {
           subtitle={t('subtitle')}
         />
 
-        <Reveal variant="up">
+        <Reveal variant="cascade" stagger={0.08}>
           <ol className="grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => (
               <li key={step.num}>

@@ -32,7 +32,7 @@ export const HomeAdvantages = async () => {
           subtitle={t('subtitle')}
         />
 
-        <Reveal variant="up">
+        <Reveal variant="rise" stagger={0.07}>
           <div className="grid auto-rows-[minmax(200px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
             {tiles.map((tile, i) => (
               <AdvantageTile key={tile.id} tile={tile} className={SPAN[i]} />

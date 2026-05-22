@@ -3,9 +3,13 @@
 import { Children, isValidElement, useSyncExternalStore } from 'react';
 import type { PropsWithChildren, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import type { TargetAndTransition, Transition } from 'framer-motion';
 import { MOTION_EASE } from '@/shared/ui';
 
-type TVariant = 'up' | 'left' | 'right' | 'scale' | 'fade-only';
+// ease-out-quint per animate-skill cheatsheet — refined, smooth deceleration
+const EASE_OUT_QUINT = [0.23, 1, 0.32, 1] as const;
+
+type TVariant = 'up' | 'mask' | 'rise' | 'cascade' | 'fade-only';
 
 type TProps = PropsWithChildren<{
   variant?: TVariant;
@@ -15,26 +19,52 @@ type TProps = PropsWithChildren<{
   className?: string;
 }>;
 
-const INITIAL: Record<TVariant, Record<string, number>> = {
+// Initial hidden states per variant
+const INITIAL: Record<TVariant, TargetAndTransition> = {
   up: { opacity: 0, y: 24 },
-  left: { opacity: 0, x: -24 },
-  right: { opacity: 0, x: 24 },
-  scale: { opacity: 0, scale: 0.96 },
   'fade-only': { opacity: 0 },
+  // clip-path top-down reveal — crisp, modern
+  mask: { opacity: 0, clipPath: 'inset(0 0 100% 0)' },
+  // opacity + lift + scale + blur — premium, soft
+  rise: { opacity: 0, y: 32, scale: 0.96, filter: 'blur(8px)' },
+  // per-child: opacity + lift + skew — spring-driven, staggered
+  cascade: { opacity: 0, y: 24, skewY: 2 },
 };
 
-const FINAL: Record<TVariant, Record<string, number>> = {
+// Visible (in-view) target states per variant
+const FINAL: Record<TVariant, TargetAndTransition> = {
   up: { opacity: 1, y: 0 },
-  left: { opacity: 1, x: 0 },
-  right: { opacity: 1, x: 0 },
-  scale: { opacity: 1, scale: 1 },
   'fade-only': { opacity: 1 },
+  mask: { opacity: 1, clipPath: 'inset(0 0 0% 0)' },
+  rise: { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' },
+  cascade: { opacity: 1, y: 0, skewY: 0 },
+};
+
+// Durations per variant (seconds)
+const DURATION: Record<TVariant, number> = {
+  up: 0.6,
+  'fade-only': 0.6,
+  mask: 0.6,
+  rise: 0.7,
+  cascade: 0.5,
 };
 
 // useSyncExternalStore is the SSR-safe way to detect client mount without
 // triggering the react-hooks/set-state-in-effect lint rule.
 const subscribe = () => () => {};
 const useIsMounted = () => useSyncExternalStore(subscribe, () => true, () => false);
+
+const makeTweenTransition = (variant: TVariant, delay: number): Transition =>
+  variant === 'up'
+    ? { duration: DURATION[variant], delay, ease: MOTION_EASE.out }
+    : { duration: DURATION[variant], delay, ease: EASE_OUT_QUINT };
+
+const makeSpringTransition = (delay: number): Transition => ({
+  type: 'spring',
+  stiffness: 320,
+  damping: 28,
+  delay,
+});
 
 export const Reveal = ({
   variant = 'up',
@@ -51,6 +81,11 @@ export const Reveal = ({
     return <div className={className}>{children}</div>;
   }
 
+  const initial = INITIAL[variant];
+  const animate = FINAL[variant];
+  const isCascade = variant === 'cascade';
+
+  // Stagger path: each direct child gets its own motion wrapper
   if (stagger > 0) {
     const items = Children.toArray(children);
     return (
@@ -58,14 +93,14 @@ export const Reveal = ({
         {items.map((child, i) => (
           <motion.div
             key={isValidElement(child) && child.key != null ? child.key : i}
-            initial={INITIAL[variant]}
-            whileInView={FINAL[variant]}
+            initial={initial}
+            whileInView={animate}
             viewport={{ once, amount: 0.25 }}
-            transition={{
-              duration: 0.6,
-              delay: delay + i * stagger,
-              ease: MOTION_EASE.out,
-            }}
+            transition={
+              isCascade
+                ? makeSpringTransition(delay + i * stagger)
+                : makeTweenTransition(variant, delay + i * stagger)
+            }
           >
             {child as ReactNode}
           </motion.div>
@@ -77,10 +112,12 @@ export const Reveal = ({
   return (
     <motion.div
       className={className}
-      initial={INITIAL[variant]}
-      whileInView={FINAL[variant]}
+      initial={initial}
+      whileInView={animate}
       viewport={{ once, amount: 0.25 }}
-      transition={{ duration: 0.6, delay, ease: MOTION_EASE.out }}
+      transition={
+        isCascade ? makeSpringTransition(delay) : makeTweenTransition(variant, delay)
+      }
     >
       {children}
     </motion.div>

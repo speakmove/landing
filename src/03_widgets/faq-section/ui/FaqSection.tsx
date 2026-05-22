@@ -42,7 +42,7 @@ export const FaqSection = async ({ namespace }: TProps) => {
           </a>
         </p>
 
-        <Reveal variant="up">
+        <Reveal variant="up" stagger={0.04}>
           <ul
             className="mx-auto flex max-w-200 list-none flex-col gap-2.5 p-0"
             aria-label={tCommon('aria.faqList')}

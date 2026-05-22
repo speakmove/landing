@@ -34,7 +34,7 @@ export const HomeFounderCards = async () => {
           subtitle={t('subtitle')}
         />
 
-        <Reveal variant="up">
+        <Reveal variant="cascade" stagger={0.08}>
           <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2">
           {cards.map((founder) => (
             <li

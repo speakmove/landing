@@ -38,8 +38,8 @@ export const HomeScenariosGrid = async () => {
         />
 
         <Reveal
-          variant="up"
-          stagger={0.05}
+          variant="cascade"
+          stagger={0.06}
           className="m-0 mt-10 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2"
         >
           {cards.map((card) => (

@@ -20,7 +20,7 @@ export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProp
       className="py-16 md:py-22"
     >
       <Container>
-        <Reveal variant="up">
+        <Reveal variant="rise">
           <div className="final-panel px-6 py-14 text-center sm:px-12 sm:py-16">
             <h2
               id="final-cta-heading"
