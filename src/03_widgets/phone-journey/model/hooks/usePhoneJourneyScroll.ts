@@ -39,29 +39,27 @@ export const usePhoneJourneyScroll = (): TJourneyState => {
         setState((s) => ({ ...s, visible: false }));
         return;
       }
-      const vh = window.innerHeight;
       const sRect = sourceEl.getBoundingClientRect();
       const tRect = targetEl?.getBoundingClientRect();
 
-      const sourceInView = sRect.bottom > 0 && sRect.top < vh;
-      const targetInView = tRect ? tRect.bottom > 0 && tRect.top < vh : false;
-      const visible = sourceInView || targetInView;
-
       if (!tRect) {
+        // Only source registered — pin to source.
         setState({
           x: sRect.left + sRect.width / 2,
           y: sRect.top + sRect.height / 2,
           scale: SOURCE_SCALE,
           rotateY: SOURCE_ROTATE_Y,
-          visible,
+          visible: true,
         });
         return;
       }
 
-      // Journey progresses as the target slot scrolls from below the viewport to its resting spot.
-      // Interpolation t: 0 when target's top is at viewport bottom, 1 when target's top is at viewport top.
-      const denom = vh;
-      const t = clamp01(1 - tRect.top / denom);
+      // Phone stays visible while source is registered. If the transform places
+      // it outside the viewport (e.g. scrolled past scenarios), the browser
+      // clips it naturally — no need for an explicit visibility flag, which
+      // was flaky during first-frame rect-stabilisation.
+      const vh = window.innerHeight;
+      const t = clamp01(1 - tRect.top / vh);
 
       const sx = sRect.left + sRect.width / 2;
       const sy = sRect.top + sRect.height / 2;
@@ -73,7 +71,7 @@ export const usePhoneJourneyScroll = (): TJourneyState => {
         y: lerp(sy, ty, t),
         scale: lerp(SOURCE_SCALE, TARGET_SCALE, t),
         rotateY: lerp(SOURCE_ROTATE_Y, TARGET_ROTATE_Y, t),
-        visible,
+        visible: true,
       });
     };
 

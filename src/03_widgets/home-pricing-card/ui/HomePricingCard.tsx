@@ -14,7 +14,7 @@ export const HomePricingCard = async () => {
   return (
     <Section id={ANCHORS.pricing} ariaLabelledBy="pricing-card-heading" className="py-12 md:py-16">
       <Container>
-        <Reveal variant="mask">
+        <Reveal variant="rise">
           <PricingCard
             size="wide"
             titleId="pricing-card-heading"

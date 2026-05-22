@@ -9,7 +9,7 @@ import { MOTION_EASE } from '@/shared/ui';
 // ease-out-quint per animate-skill cheatsheet — refined, smooth deceleration
 const EASE_OUT_QUINT = [0.23, 1, 0.32, 1] as const;
 
-type TVariant = 'up' | 'mask' | 'rise' | 'cascade' | 'fade-only';
+type TVariant = 'up' | 'rise' | 'cascade' | 'fade-only';
 
 type TProps = PropsWithChildren<{
   variant?: TVariant;
@@ -23,8 +23,6 @@ type TProps = PropsWithChildren<{
 const INITIAL: Record<TVariant, TargetAndTransition> = {
   up: { opacity: 0, y: 24 },
   'fade-only': { opacity: 0 },
-  // clip-path top-down reveal — crisp, modern
-  mask: { opacity: 0, clipPath: 'inset(0 0 100% 0)' },
   // opacity + lift + scale + blur — premium, soft
   rise: { opacity: 0, y: 32, scale: 0.96, filter: 'blur(8px)' },
   // per-child: opacity + lift + skew — spring-driven, staggered
@@ -35,7 +33,6 @@ const INITIAL: Record<TVariant, TargetAndTransition> = {
 const FINAL: Record<TVariant, TargetAndTransition> = {
   up: { opacity: 1, y: 0 },
   'fade-only': { opacity: 1 },
-  mask: { opacity: 1, clipPath: 'inset(0 0 0% 0)' },
   rise: { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' },
   cascade: { opacity: 1, y: 0, skewY: 0 },
 };
@@ -44,7 +41,6 @@ const FINAL: Record<TVariant, TargetAndTransition> = {
 const DURATION: Record<TVariant, number> = {
   up: 0.6,
   'fade-only': 0.6,
-  mask: 0.6,
   rise: 0.7,
   cascade: 0.5,
 };
@@ -95,7 +91,7 @@ export const Reveal = ({
             key={isValidElement(child) && child.key != null ? child.key : i}
             initial={initial}
             whileInView={animate}
-            viewport={{ once, amount: 0.25 }}
+            viewport={{ once, amount: 0.1 }}
             transition={
               isCascade
                 ? makeSpringTransition(delay + i * stagger)
@@ -114,7 +110,7 @@ export const Reveal = ({
       className={className}
       initial={initial}
       whileInView={animate}
-      viewport={{ once, amount: 0.25 }}
+      viewport={{ once, amount: 0.1 }}
       transition={
         isCascade ? makeSpringTransition(delay) : makeTweenTransition(variant, delay)
       }
