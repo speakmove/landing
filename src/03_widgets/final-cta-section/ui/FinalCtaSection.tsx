@@ -1,6 +1,5 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { ButtonLink, Container, Section } from '@/shared/ui';
-import { Reveal } from '@/features/reveal';
 import { ANCHORS } from '@/shared/config';
 import { buildBotUrl } from '@/shared/model/utils';
 
@@ -20,28 +19,23 @@ export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProp
       className="py-16 md:py-22"
     >
       <Container>
-        <Reveal variant="rise">
-          <div className="final-panel px-6 py-14 text-center sm:px-12 sm:py-16">
-            <h2
-              id="final-cta-heading"
-              className="h-display-section mx-0 mb-3.5 font-extrabold leading-[1.1] tracking-[-0.025em] text-ink"
-            >
-              {t('title')}
-            </h2>
-            <p className="mx-auto mb-7 max-w-140 text-17 leading-relaxed text-muted">
-              {t('subtitle')}
-            </p>
+        <div className="final-panel px-6 py-14 text-center sm:px-12 sm:py-16">
+          <h2
+            id="final-cta-heading"
+            className="h-display-section mx-0 mb-3.5 font-extrabold leading-[1.1] tracking-[-0.025em] text-ink"
+          >
+            {t('title')}
+          </h2>
+          <p className="mx-auto mb-7 max-w-140 text-17 leading-relaxed text-muted">
+            {t('subtitle')}
+          </p>
 
-            <span className="relative inline-block">
-              <span className="cta-pulse-glow" aria-hidden="true" />
-              <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
-                {t('cta')}
-              </ButtonLink>
-            </span>
+          <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
+            {t('cta')}
+          </ButtonLink>
 
-            <div className="mt-4 text-13-5 text-muted">{t('meta')}</div>
-          </div>
-        </Reveal>
+          <div className="mt-4 text-13-5 text-muted">{t('meta')}</div>
+        </div>
       </Container>
     </Section>
   );

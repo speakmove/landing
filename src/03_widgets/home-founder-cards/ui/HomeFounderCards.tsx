@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
-import { Reveal } from '@/features/reveal';
 import { safeHrefOrFallback } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
 
@@ -34,8 +33,7 @@ export const HomeFounderCards = async () => {
           subtitle={t('subtitle')}
         />
 
-        <Reveal variant="cascade" stagger={0.08}>
-          <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2">
+        <ul className="m-0 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2">
           {cards.map((founder) => (
             <li
               key={founder.id}
@@ -69,8 +67,7 @@ export const HomeFounderCards = async () => {
               </a>
             </li>
           ))}
-          </ul>
-        </Reveal>
+        </ul>
       </Container>
     </Section>
   );

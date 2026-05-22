@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, Section, SectionHead } from '@/shared/ui';
-import { Reveal } from '@/features/reveal';
 import { AdvantageTile } from '@/entities/advantage-tile';
 import { ANCHORS } from '@/shared/config';
 import type { TAdvantageTile } from '@/entities/advantage-tile';
@@ -32,13 +31,11 @@ export const HomeAdvantages = async () => {
           subtitle={t('subtitle')}
         />
 
-        <Reveal variant="rise" stagger={0.07}>
-          <div className="grid auto-rows-[minmax(200px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
-            {tiles.map((tile, i) => (
-              <AdvantageTile key={tile.id} tile={tile} className={SPAN[i]} />
-            ))}
-          </div>
-        </Reveal>
+        <div className="grid auto-rows-[minmax(200px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
+          {tiles.map((tile, i) => (
+            <AdvantageTile key={tile.id} tile={tile} className={SPAN[i]} />
+          ))}
+        </div>
       </Container>
     </Section>
   );

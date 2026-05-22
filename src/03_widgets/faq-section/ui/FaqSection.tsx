@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container, JsonLd, Section, SectionHead } from '@/shared/ui';
-import { Reveal } from '@/features/reveal';
 import { FaqItem } from '@/entities/faq-item';
 import { ANCHORS } from '@/shared/config';
 import { buildFaqLd } from '@/shared/model/libs/jsonld';
@@ -42,16 +41,14 @@ export const FaqSection = async ({ namespace }: TProps) => {
           </a>
         </p>
 
-        <Reveal variant="up" stagger={0.04}>
-          <ul
-            className="mx-auto flex max-w-200 list-none flex-col gap-2.5 p-0"
-            aria-label={tCommon('aria.faqList')}
-          >
-            {items.map((item) => (
-              <FaqItem key={item.id} item={item} />
-            ))}
-          </ul>
-        </Reveal>
+        <ul
+          className="mx-auto flex max-w-200 list-none flex-col gap-2.5 p-0"
+          aria-label={tCommon('aria.faqList')}
+        >
+          {items.map((item) => (
+            <FaqItem key={item.id} item={item} />
+          ))}
+        </ul>
       </Container>
       {faqLd ? <JsonLd data={faqLd} /> : null}
     </Section>
