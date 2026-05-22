@@ -39,24 +39,27 @@ export const usePhoneJourneyScroll = (): TJourneyState => {
         setState((s) => ({ ...s, visible: false }));
         return;
       }
+      const vh = window.innerHeight;
       const sRect = sourceEl.getBoundingClientRect();
       const tRect = targetEl?.getBoundingClientRect();
 
+      const sourceInView = sRect.bottom > 0 && sRect.top < vh;
+      const targetInView = tRect ? tRect.bottom > 0 && tRect.top < vh : false;
+      const visible = sourceInView || targetInView;
+
       if (!tRect) {
-        // Only source visible — stay glued to source.
         setState({
           x: sRect.left + sRect.width / 2,
           y: sRect.top + sRect.height / 2,
           scale: SOURCE_SCALE,
           rotateY: SOURCE_ROTATE_Y,
-          visible: true,
+          visible,
         });
         return;
       }
 
       // Journey progresses as the target slot scrolls from below the viewport to its resting spot.
       // Interpolation t: 0 when target's top is at viewport bottom, 1 when target's top is at viewport top.
-      const vh = window.innerHeight;
       const denom = vh;
       const t = clamp01(1 - tRect.top / denom);
 
@@ -70,7 +73,7 @@ export const usePhoneJourneyScroll = (): TJourneyState => {
         y: lerp(sy, ty, t),
         scale: lerp(SOURCE_SCALE, TARGET_SCALE, t),
         rotateY: lerp(SOURCE_ROTATE_Y, TARGET_ROTATE_Y, t),
-        visible: true,
+        visible,
       });
     };
 
