@@ -31,9 +31,12 @@ export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProp
               {t('subtitle')}
             </p>
 
-            <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
-              {t('cta')}
-            </ButtonLink>
+            <span className="relative inline-block">
+              <span className="cta-pulse-glow" aria-hidden="true" />
+              <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
+                {t('cta')}
+              </ButtonLink>
+            </span>
 
             <div className="mt-4 text-13-5 text-muted">{t('meta')}</div>
           </div>
