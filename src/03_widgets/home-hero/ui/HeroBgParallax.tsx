@@ -6,15 +6,15 @@ export const HeroBgParallax = () => {
   const shouldReduce = useReducedMotion();
   const { scrollY } = useScroll();
 
-  // y: grid drifts down (appears behind content), scale: zooms out as you scroll.
-  // Both effects together make the parallax clearly visible.
-  const y = useTransform(scrollY, [0, 800], [0, 160]);
+  const y = useTransform(scrollY, [0, 800], [0, 320]);
+  const opacity = useTransform(scrollY, [0, 800], [1, 0.4]);
+  const scale = useTransform(scrollY, [0, 800], [1, 1.15]);
 
   return (
     <motion.div
       aria-hidden="true"
       className="hero-bg-grid"
-      style={shouldReduce ? undefined : { y }}
+      style={shouldReduce ? undefined : { y, opacity, scale }}
     />
   );
 };
