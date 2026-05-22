@@ -28,14 +28,16 @@ const useIsMounted = () => useSyncExternalStore(subscribe, () => true, () => fal
 
 type TWordsProps = {
   words: string[];
-  startIndex: number;
+  startWordIndex: number;
   animate: boolean;
 };
 
-const Words = ({ words, startIndex, animate }: TWordsProps) =>
-  words.map((chunk, i) => {
-    if (chunk.trim().length === 0) return <span key={`s-${startIndex + i}`}>{chunk}</span>;
-    const wordIndex = startIndex + i;
+const Words = ({ words, startWordIndex, animate }: TWordsProps) => {
+  let wordOffset = 0;
+  return words.map((chunk, i) => {
+    if (chunk.trim().length === 0) return <span key={`s-${startWordIndex}-${i}`}>{chunk}</span>;
+    const wordIndex = startWordIndex + wordOffset;
+    wordOffset += 1;
     return (
       <motion.span
         key={`w-${wordIndex}`}
@@ -52,6 +54,7 @@ const Words = ({ words, startIndex, animate }: TWordsProps) =>
       </motion.span>
     );
   });
+};
 
 export const HeroTitle = ({ before, accent, after, className }: TProps) => {
   const mounted = useIsMounted();
@@ -61,7 +64,9 @@ export const HeroTitle = ({ before, accent, after, className }: TProps) => {
   const beforeWords = splitWords(before);
   const accentWords = splitWords(accent);
   const afterWords = splitWords(after);
-  const totalWordCount = countWords(beforeWords) + countWords(accentWords) + countWords(afterWords);
+  const beforeWordCount = countWords(beforeWords);
+  const accentWordCount = countWords(accentWords);
+  const totalWordCount = beforeWordCount + accentWordCount + countWords(afterWords);
   const underlineDelay = totalWordCount * WORD_DELAY + 0.2;
 
   const fullText = `${before}${accent}${after}`;
@@ -80,16 +85,16 @@ export const HeroTitle = ({ before, accent, after, className }: TProps) => {
       aria-label={fullText}
     >
       <span aria-hidden="true">
-        <Words words={beforeWords} startIndex={0} animate={animate} />
+        <Words words={beforeWords} startWordIndex={0} animate={animate} />
         <span
           className={cn('accent-underline', animate && 'is-drawn')}
           style={accentStyle}
         >
-          <Words words={accentWords} startIndex={beforeWords.length} animate={animate} />
+          <Words words={accentWords} startWordIndex={beforeWordCount} animate={animate} />
         </span>
         <Words
           words={afterWords}
-          startIndex={beforeWords.length + accentWords.length}
+          startWordIndex={beforeWordCount + accentWordCount}
           animate={animate}
         />
       </span>
