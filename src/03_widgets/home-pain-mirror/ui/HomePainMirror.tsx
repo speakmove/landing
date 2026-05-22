@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { Container, DoubleCheckIcon, Reveal, Section } from '@/shared/ui';
+import { Container, DoubleCheckIcon, Section } from '@/shared/ui';
+import { Reveal } from '@/features/reveal';
 import { buildBotUrl } from '@/shared/model/utils';
 
 type TLine = {

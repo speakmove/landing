@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { ArrowRightIcon, Container, Reveal, Section, SectionHead } from '@/shared/ui';
+import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
+import { Reveal } from '@/features/reveal';
 import { safeHrefOrFallback } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
 

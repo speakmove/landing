@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { Container, Reveal, Section, SectionHead } from '@/shared/ui';
+import { Container, Section, SectionHead } from '@/shared/ui';
+import { Reveal } from '@/features/reveal';
 import { StepCard } from '@/entities/step-card';
 import { ANCHORS } from '@/shared/config';
 import type { TStep } from '@/entities/step-card';

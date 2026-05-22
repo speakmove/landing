@@ -1,5 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { ButtonLink, Container, Reveal, Section } from '@/shared/ui';
+import { ButtonLink, Container, Section } from '@/shared/ui';
+import { Reveal } from '@/features/reveal';
 import { ANCHORS } from '@/shared/config';
 import { buildBotUrl } from '@/shared/model/utils';
 

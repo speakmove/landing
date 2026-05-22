@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { Container, JsonLd, Reveal, Section, SectionHead } from '@/shared/ui';
+import { Container, JsonLd, Section, SectionHead } from '@/shared/ui';
+import { Reveal } from '@/features/reveal';
 import { FaqItem } from '@/entities/faq-item';
 import { ANCHORS } from '@/shared/config';
 import { buildFaqLd } from '@/shared/model/libs/jsonld';

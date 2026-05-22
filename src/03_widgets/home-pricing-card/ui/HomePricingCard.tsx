@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { Container, Reveal, Section } from '@/shared/ui';
+import { Container, Section } from '@/shared/ui';
+import { Reveal } from '@/features/reveal';
 import { ANCHORS, PATHS } from '@/shared/config';
 import { buildBotUrl } from '@/shared/model/utils';
 import { PricingCard } from '@/entities/pricing-card';

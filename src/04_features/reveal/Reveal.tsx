@@ -3,7 +3,7 @@
 import { Children, isValidElement, useSyncExternalStore } from 'react';
 import type { PropsWithChildren, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { MOTION_EASE } from '../motion';
+import { MOTION_EASE } from '@/shared/ui';
 
 type TVariant = 'up' | 'left' | 'right' | 'scale' | 'fade-only';
 
