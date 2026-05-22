@@ -16,6 +16,8 @@ const readHeaderHeight = (): number => {
 
 export const LenisProvider = ({ children }: PropsWithChildren) => {
   useEffect(() => {
+    // MQ state is sampled once at mount. Resize/reduced-motion changes mid-session do
+    // not toggle Lenis — acceptable for a landing page.
     if (typeof window === 'undefined') return;
     const isDesktop = window.matchMedia(DESKTOP_QUERY).matches;
     const isReduced = window.matchMedia(REDUCED_QUERY).matches;

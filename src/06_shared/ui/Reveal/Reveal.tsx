@@ -1,6 +1,6 @@
 'use client';
 
-import { Children, isValidElement } from 'react';
+import { Children, isValidElement, useSyncExternalStore } from 'react';
 import type { PropsWithChildren, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { MOTION_EASE } from '../motion';
@@ -31,6 +31,11 @@ const FINAL: Record<TVariant, Record<string, number>> = {
   'fade-only': { opacity: 1 },
 };
 
+// useSyncExternalStore is the SSR-safe way to detect client mount without
+// triggering the react-hooks/set-state-in-effect lint rule.
+const subscribe = () => () => {};
+const useIsMounted = () => useSyncExternalStore(subscribe, () => true, () => false);
+
 export const Reveal = ({
   variant = 'up',
   delay = 0,
@@ -40,8 +45,9 @@ export const Reveal = ({
   children,
 }: TProps) => {
   const shouldReduce = useReducedMotion();
+  const mounted = useIsMounted();
 
-  if (shouldReduce) {
+  if (shouldReduce || !mounted) {
     return <div className={className}>{children}</div>;
   }
 
