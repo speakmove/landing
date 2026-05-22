@@ -79,6 +79,9 @@
 
   /* Phone-frame side-button color */
   --color-phone-dark: #1d1d1f;
+
+  /* PhoneJourney scenarios spacer — 8 scroll stops × viewport height */
+  --height-journey-spacer: 800vh;
 }
 
 :root {
@@ -907,6 +910,26 @@
   }
   .faq-details[open] .faq-summary::after {
     transform: rotate(-135deg);
+  }
+
+  /* ---------- PhoneJourney — single fixed-layer phone traveling hero → scenarios ---------- */
+  .phone-journey-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+  }
+  .phone-journey-stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+    perspective: 1200px;
+    will-change: transform, opacity;
+  }
+  /* Anchor placeholder used by PhoneJourneyMount — reserves aspect-ratio space via --pj-aspect bridge. */
+  .phone-journey-anchor {
+    aspect-ratio: var(--pj-aspect, 9 / 19.5);
   }
 }
 

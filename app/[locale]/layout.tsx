@@ -6,6 +6,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
 import { JsonLd, LenisProvider, SkipLink } from '@/shared/ui';
+import { PhoneJourney, PhoneJourneyProvider } from '@/widgets/phone-journey';
 import { SiteHeader } from '@/widgets/site-header';
 import { SiteFooter } from '@/widgets/site-footer';
 import { ELEMENT_IDS, URLS } from '@/shared/config';
@@ -91,11 +92,14 @@ export default async function LocaleLayout({ children, params }: TProps) {
       <body>
         <NextIntlClientProvider>
           <LenisProvider>
-            <SkipLink>{tCommon('skipToContent')}</SkipLink>
-            <SiteHeader />
-            <main id={ELEMENT_IDS.main}>{children}</main>
-            <SiteFooter />
-            <JsonLd data={organizationLd} />
+            <PhoneJourneyProvider>
+              <SkipLink>{tCommon('skipToContent')}</SkipLink>
+              <SiteHeader />
+              <main id={ELEMENT_IDS.main}>{children}</main>
+              <SiteFooter />
+              <JsonLd data={organizationLd} />
+              <PhoneJourney />
+            </PhoneJourneyProvider>
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

@@ -2,17 +2,22 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
 import { buildBotUrl } from '@/shared/model/utils';
+import type { TPhoneMessage } from '@/entities/phone-mockup';
 import { HomePhonePreview } from './HomePhonePreview';
 import { HeroBgParallax } from './HeroBgParallax';
+import { HeroPhoneSlot } from './HeroPhoneSlot';
 import { HeroTitle } from './HeroTitle';
 import { ANCHORS } from '@/shared/config';
 
 export const HomeHero = async () => {
   const t = await getTranslations('HomePage.hero');
+  const phoneT = await getTranslations('HomePage.hero.phonePreview');
   const locale = await getLocale();
 
   const eyebrowItems = getList<string>(t, 'eyebrow.items');
   const metaPoints = getList<string>(t, 'metaPoints');
+  const phoneMessages = getList<TPhoneMessage>(phoneT, 'messages');
+  const phoneBotName = phoneT('botName');
 
   return (
     <header id={ANCHORS.hero} className="relative overflow-hidden px-5 py-14 md:px-6 md:py-20 lg:pb-24">
@@ -70,7 +75,10 @@ export const HomeHero = async () => {
 
           {/* Right column — phone preview */}
           <div className="relative flex justify-center lg:justify-end">
-            <HomePhonePreview />
+            <HeroPhoneSlot
+              inlineMobile={<HomePhonePreview />}
+              desktopContent={{ botName: phoneBotName, messages: phoneMessages }}
+            />
           </div>
         </div>
       </Container>
