@@ -4,6 +4,7 @@ import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
 import { buildBotUrl } from '@/shared/model/utils';
 import { HomePhonePreview } from './HomePhonePreview';
 import { HeroBgParallax } from './HeroBgParallax';
+import { HeroTitle } from './HeroTitle';
 import { ANCHORS } from '@/shared/config';
 
 export const HomeHero = async () => {
@@ -33,13 +34,11 @@ export const HomeHero = async () => {
             </span>
 
             {/* H1 */}
-            <h1
-              className="h-display-hero mt-4 mb-5 font-extrabold leading-[1.03] tracking-[-0.025em] text-ink"
-            >
-              {t('title.before')}
-              <span className="accent-underline">{t('title.accent')}</span>
-              {t('title.after')}
-            </h1>
+            <HeroTitle
+              before={t('title.before')}
+              accent={t('title.accent')}
+              after={t('title.after')}
+            />
 
             {/* Description */}
             <p className="mb-7 max-w-140 text-lg leading-[1.55] text-muted">
