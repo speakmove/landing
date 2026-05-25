@@ -241,7 +241,7 @@
               "href": "/cookies"
             },
             {
-              "label": "Disclaimer",
+              "label": "Відмова від відповідальності",
               "href": "/disclaimer"
             }
           ]
@@ -1152,12 +1152,12 @@
   },
   "DisclaimerPage": {
     "meta": {
-      "title": "Disclaimer",
+      "title": "Відмова від відповідальності",
       "effectiveDate": "21 травня 2026",
       "lastUpdated": "21 травня 2026",
       "intro": "Обмеження сервісу, AI-точність і де SpeakMove **не підходить**.",
       "description": "SpeakMove disclaimer: AI може помилятися, сервіс не замінює GP, юриста, репетитора чи сертифіковану сертифікацію. Тільки для осіб 18+.",
-      "title_meta": "Disclaimer · SpeakMove"
+      "title_meta": "Відмова від відповідальності · SpeakMove"
     },
     "sections": [
       {

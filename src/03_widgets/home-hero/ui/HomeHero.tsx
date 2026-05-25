@@ -15,12 +15,12 @@ export const HomeHero = async () => {
   const metaPoints = getList<string>(t, 'metaPoints');
 
   return (
-    <header id={ANCHORS.hero} className="relative overflow-hidden px-5 py-14 md:px-6 md:py-20 lg:pb-24">
+    <header id={ANCHORS.hero} className="relative overflow-hidden px-5 pt-8 pb-14 md:px-6 md:pt-10 md:pb-20 lg:pb-24">
       <HeroBgParallax />
       <div className="hero-ambient-blob" aria-hidden="true" />
 
       <Container className="relative z-10 px-0">
-        <div className="mt-4 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+        <div className="mt-4 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
           {/* Left column */}
           <div>
             {/* Eyebrow chip */}
@@ -69,7 +69,7 @@ export const HomeHero = async () => {
           </div>
 
           {/* Right column — phone preview */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center lg:justify-start">
             <HomePhonePreview />
           </div>
         </div>

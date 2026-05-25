@@ -82,7 +82,7 @@ export const PricingCard = ({
 
         {subprice ? <p className="mt-2 m-0 text-13 text-faint">{subprice}</p> : null}
         {subtitle ? (
-          <p className="mt-4 m-0 max-w-lg text-pretty text-15-5 leading-relaxed text-muted">
+          <p className="mt-7 m-0 max-w-lg text-pretty text-15-5 leading-relaxed text-muted">
             {subtitle}
           </p>
         ) : null}
@@ -90,8 +90,8 @@ export const PricingCard = ({
 
       <ul
         className={cn(
-          'mt-7 m-0 list-none p-0',
-          isWide ? 'grid grid-cols-1 gap-2.5 text-left sm:grid-cols-2' : 'space-y-3',
+          'mt-8 m-0 list-none p-0',
+          isWide ? 'grid grid-cols-1 gap-3 text-left sm:grid-cols-2' : 'space-y-3.5',
         )}
       >
         {features.map((feature, idx) => (
@@ -114,7 +114,7 @@ export const PricingCard = ({
 
       <div
         className={cn(
-          'mt-7 flex flex-col items-center gap-3',
+          'mt-8 flex flex-col items-center gap-3',
           isWide ? 'sm:flex-row' : 'w-full',
         )}
       >
@@ -126,7 +126,7 @@ export const PricingCard = ({
 
       <p
         className={cn(
-          'mt-6 m-0 text-10 md:text-12 text-muted',
+          'mt-7 m-0 text-10 md:text-12 text-muted',
           isWide ? '' : 'text-center',
         )}
       >

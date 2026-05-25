@@ -51,7 +51,7 @@ export const PageHero = async ({ namespace, decoration }: TProps) => {
 
           {stats.length > 0 ? (
             <ul
-              className="mx-auto mt-7 grid w-full max-w-2xl list-none grid-cols-3 gap-4 p-0 sm:gap-6"
+              className="mx-auto mt-7 flex w-full max-w-2xl list-none flex-wrap justify-center gap-x-10 gap-y-5 p-0 sm:gap-x-14"
               aria-label={tCommon('aria.statsGrid')}
             >
               {stats.map((stat) => (
