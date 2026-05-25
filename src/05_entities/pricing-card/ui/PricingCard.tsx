@@ -90,7 +90,7 @@ export const PricingCard = ({
 
       <ul
         className={cn(
-          'mt-8 m-0 list-none p-0',
+          'mt-10 m-0 list-none p-0',
           isWide ? 'grid grid-cols-1 gap-3 text-left sm:grid-cols-2' : 'space-y-3.5',
         )}
       >
@@ -126,7 +126,7 @@ export const PricingCard = ({
 
       <p
         className={cn(
-          'mt-7 m-0 text-10 md:text-12 text-muted',
+          'mt-10 m-0 text-10 md:text-12 text-muted',
           isWide ? '' : 'text-center',
         )}
       >

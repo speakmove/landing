@@ -34,7 +34,7 @@ export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProp
             {t('cta')}
           </ButtonLink>
 
-          <div className="mt-4 text-10 md:text-12 text-muted">{t('meta')}</div>
+          <div className="mt-7 text-10 md:text-12 text-muted">{t('meta')}</div>
         </div>
       </Container>
     </Section>
