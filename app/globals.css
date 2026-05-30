@@ -91,6 +91,9 @@
   --dur-reveal: 700ms;
   --dur-hover: 220ms;
   --radius-cap: 52px;
+  /* FinalCta full-bleed emerald gradient stops */
+  --color-cta-bleed-from: #063f2e;
+  --color-cta-bleed-to: #0a6b4f;
 }
 
 :root {
@@ -961,4 +964,58 @@
   .glow-breathe {
     animation: glow-breathe 4.5s ease-in-out infinite;
   }
+}
+
+/* ============================================================
+   Full-bleed section break-out + wave cap
+   Kept outside @layer components so these rules beat any
+   Tailwind utility that might conflict (Tailwind v4 layer trap).
+   ============================================================ */
+
+/*
+ * Full viewport-width breakout without causing horizontal scroll.
+ * Uses margin-inline negative trick relative to the viewport.
+ * `position: relative` is required so the wave-cap child positions
+ * against this element, not a distant ancestor.
+ */
+.section-full-bleed {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* Founders variant: solid ink-navy */
+.section-bleed-founders {
+  background: var(--color-ink);
+  color: #fff;
+}
+
+/* CTA variant: emerald gradient (spec: #063f2e → #0a6b4f) */
+.section-bleed-cta {
+  background: linear-gradient(160deg, var(--color-cta-bleed-from) 0%, var(--color-cta-bleed-to) 100%);
+  color: #fff;
+}
+
+/*
+ * Wave cap wrapper — absolutely positioned at the top of the full-bleed
+ * section, pulled up by 1px to eliminate the 1px seam between the upper
+ * section's background and the wave's fill color.
+ */
+.section-wave-cap {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  /* height driven by --radius-cap token (52px) */
+  height: var(--radius-cap);
+  pointer-events: none;
+  line-height: 0;
+}
+
+/* SVG stretches 100% wide, full height of the cap container */
+.section-wave-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
