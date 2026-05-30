@@ -932,3 +932,33 @@
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
+
+/* ---------- VoiceWave icon — equalizer bar pulse ---------- */
+@keyframes voicewave-pulse {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .voicewave-bar {
+    transform-origin: center;
+    animation: voicewave-pulse 1.3s ease-in-out infinite;
+  }
+  .voicewave-bar[data-i="1"],
+  .voicewave-bar[data-i="3"],
+  .voicewave-bar[data-i="5"] {
+    animation-delay: 0.15s;
+  }
+}
+
+/* ---------- Glow breathe — ambient emerald halo pulse ---------- */
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.55; transform: translateX(-50%) scale(0.92); }
+  50%       { opacity: 1;    transform: translateX(-50%) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .glow-breathe {
+    animation: glow-breathe 4.5s ease-in-out infinite;
+  }
+}
