@@ -920,6 +920,49 @@
 
 }
 
+/* ---------- Header nav link — underline that grows from the left ----------
+   Kept outside @layer components so the ::after pseudo-element is never
+   overridden by Tailwind utilities (Tailwind v4 layer trap).
+   Active state (.nav-link--active) keeps the underline persistent.
+   Hover-grow effect is gated behind @media(hover:hover) to skip touch devices.
+   Both effects respect prefers-reduced-motion.
+   -------------------------------------------------------------------- */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.26s var(--ease-out-soft, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+/* Active route: underline always visible */
+.nav-link--active::after {
+  transform: scaleX(1);
+}
+
+/* Hover grow — only on pointer devices */
+@media (hover: hover) {
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Respect reduced-motion — instant underline, no animation */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after {
+    transition: none;
+  }
+}
+
 /* ---------- FAQ details container (unlayered so it beats Tailwind utilities) ---------- */
 .faq-details {
   border: 1px solid var(--color-line);
