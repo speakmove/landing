@@ -1,5 +1,6 @@
 export { Icon } from './Icon';
 export { ArrowRightIcon } from './ArrowRight';
+export { GlobeIcon } from './GlobeIcon';
 export { BatteryIcon } from './Battery';
 export { BubbleTail } from './BubbleTail';
 export { BurgerIcon } from './Burger';
@@ -28,5 +29,7 @@ export { TelegramIcon } from './Telegram';
 export { ThreadsIcon } from './Threads';
 export { TikTokIcon } from './TikTok';
 export { UserPlusIcon } from './UserPlus';
+export { VoiceWave } from './VoiceWave';
+export { WaveDivider } from './WaveDivider';
 export { WaveformBars } from './WaveformBars';
 export { YouTubeIcon } from './YouTube';

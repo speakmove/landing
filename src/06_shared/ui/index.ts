@@ -16,6 +16,7 @@ export {
   DoubleCheckIcon,
   EditIcon,
   ExportIcon,
+  GlobeIcon,
   Icon,
   InstagramIcon,
   LockIcon,
@@ -33,6 +34,8 @@ export {
   ThreadsIcon,
   TikTokIcon,
   UserPlusIcon,
+  VoiceWave,
+  WaveDivider,
   WaveformBars,
   YouTubeIcon,
 } from './Icon';
