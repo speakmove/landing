@@ -21,14 +21,15 @@ export const HeroBgParallax = () => {
     target: ref,
     offset: ['start start', 'end start'],
   });
-  const gridY = useTransform(scrollYProgress, [0, 1], [0, 140]);
+  // Slide the grid lines within their fixed masked window (no edge reveal).
+  const gridShift = useTransform(scrollYProgress, [0, 1], ['0px', '140px']);
 
   return (
     <div ref={ref} aria-hidden="true" className="hero-parallax-root">
       <div className="hero-bg-grid" />
       <motion.div
         className="hero-grid-lines"
-        style={reduce ? undefined : { y: gridY }}
+        style={reduce ? undefined : { backgroundPositionY: gridShift }}
       />
       <div className="hero-ambient-blob" />
     </div>
