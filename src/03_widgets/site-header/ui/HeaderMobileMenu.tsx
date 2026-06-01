@@ -17,7 +17,7 @@ import {
   TikTokIcon,
   YouTubeIcon,
 } from '@/shared/ui';
-import { LocaleSwitch } from '@/features/locale-switch';
+import { LocaleSegmented } from '@/features/locale-switch';
 import { ActiveLink } from '@/shared/ui';
 import { ANCHORS, PATHS } from '@/shared/config';
 import { getList } from '@/shared/model/libs/i18n/get-list';
@@ -143,7 +143,7 @@ export const HeaderMobileMenu = () => {
                   </ul>
 
                   <div className="mt-8 flex justify-center">
-                    <LocaleSwitch size="lg" />
+                    <LocaleSegmented size="lg" />
                   </div>
 
                   {socialLinks.length > 0 ? (

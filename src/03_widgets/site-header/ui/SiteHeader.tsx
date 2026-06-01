@@ -15,10 +15,10 @@ export const SiteHeader = async () => {
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-white/75 px-5 backdrop-blur-xl backdrop-saturate-[1.6] md:px-6">
       <Container>
-        {/* 3-column grid: logo LEFT · nav CENTER · right cluster RIGHT
-            The middle column is 1fr so it absorbs remaining space and
-            the nav inside it can be truly centred regardless of side widths. */}
-        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center">
+        {/* Mobile: flex justify-between (logo left, burger right).
+            Desktop lg+: 3-col grid — logo LEFT · nav CENTER · right cluster RIGHT.
+            The middle 1fr column lets the nav be truly centred regardless of side widths. */}
+        <div className="flex h-16 items-center justify-between lg:grid lg:grid-cols-[auto_1fr_auto]">
           {/* Left: logo */}
           <Link
             href={PATHS.home}
