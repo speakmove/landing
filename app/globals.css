@@ -599,17 +599,24 @@
       ),
       linear-gradient(180deg, #ffffff 0%, var(--color-surface-warm) 100%);
   }
-  .hero-bg-grid::before {
-    content: '';
+  /* Grid lines as a SEPARATE layer so they scroll-parallax independently of the
+     static base gradient. Extended beyond hero top/bottom so vertical drift
+     never reveals a hard edge inside the masked window. */
+  .hero-grid-lines {
     position: absolute;
-    inset: 0;
+    left: 0;
+    right: 0;
+    top: -140px;
+    bottom: -140px;
+    z-index: -1;
+    pointer-events: none;
     background-image:
-      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 48px 48px;
-    /* grid reads strongest at the BOTTOM of the hero, fading upward */
-    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 32%, transparent 82%);
-    mask-image: linear-gradient(to top, #000 0%, #000 32%, transparent 82%);
+      linear-gradient(to right, rgba(11, 18, 32, 0.09) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 18, 32, 0.09) 1px, transparent 1px);
+    background-size: 46px 46px;
+    /* strongest at the bottom of the hero, fading upward */
+    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 42%, transparent 88%);
+    mask-image: linear-gradient(to top, #000 0%, #000 42%, transparent 88%);
   }
 
   /* ---------- Hero ambient blob — static primary-color cloud (desktop only) ---------- */
