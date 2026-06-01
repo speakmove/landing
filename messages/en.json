@@ -16,7 +16,12 @@
         "ru": "RU",
         "uk": "UA",
         "en": "EN",
-        "ariaLabel": "Change language"
+        "ruLabel": "Русский",
+        "ukLabel": "Українська",
+        "enLabel": "English",
+        "ariaLabel": "Change language",
+        "openMenu": "Open language menu",
+        "closeMenu": "Close language menu"
       },
       "mobile": {
         "followHeading": "Follow us"

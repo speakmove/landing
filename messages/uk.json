@@ -16,7 +16,12 @@
         "ru": "RU",
         "uk": "UA",
         "en": "EN",
-        "ariaLabel": "Змінити мову"
+        "ruLabel": "Русский",
+        "ukLabel": "Українська",
+        "enLabel": "English",
+        "ariaLabel": "Змінити мову",
+        "openMenu": "Відкрити меню мов",
+        "closeMenu": "Закрити меню мов"
       },
       "mobile": {
         "followHeading": "Соціальні мережі"
