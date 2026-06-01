@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/shared/model/libs/i18n/navigation';
 import { routing } from '@/shared/model/libs/i18n/routing';
 import { cn } from '@/shared/model/libs/cn';
-import { GlobeIcon } from '@/shared/ui';
+import { ChevronDownIcon, GlobeIcon } from '@/shared/ui';
 import { useDropdown } from '../model/hooks/useDropdown';
 
 type TLocaleCode = (typeof routing.locales)[number];
@@ -77,21 +77,14 @@ export const LocaleSwitch = ({ size = 'md' }: TProps = {}) => {
       >
         <GlobeIcon size={isLg ? 16 : 14} className="text-muted" />
         <span className="font-mono tracking-wide">{t(current)}</span>
-        <motion.svg
-          width={isLg ? 14 : 12}
-          height={isLg ? 14 : 12}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="var(--color-primary)"
-          strokeWidth={2.5}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+        <motion.span
+          className="inline-flex text-primary"
           aria-hidden
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={caretTransition}
         >
-          <path d="M6 9l6 6 6-6" />
-        </motion.svg>
+          <ChevronDownIcon size={isLg ? 14 : 12} />
+        </motion.span>
       </button>
 
       <AnimatePresence>
