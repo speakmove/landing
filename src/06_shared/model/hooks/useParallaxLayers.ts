@@ -52,7 +52,7 @@ type TParallaxLayersReturn = {
 const SPRING: SpringOptions = { stiffness: 80, damping: 20, mass: 0.8 };
 
 /** Maximum translation in px at depth = 1. */
-const CURSOR_MAX = 40;
+const CURSOR_MAX = 48;
 
 /**
  * Drives multi-layer parallax from either the cursor (desktop, pointer: fine)
@@ -102,30 +102,32 @@ export function useParallaxLayers(): TParallaxLayersReturn {
     };
   }, []);
 
-  // Attach pointermove/leave listeners to the target element.
+  // Attach pointermove listener to window so it fires even when the target
+  // element has `pointer-events: none`.  Normalized offset is still computed
+  // relative to ref.current's bounding rect so the "center" tracks the hero.
+  // When the cursor moves above the hero (ny < -1) we reset toward zero.
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
     const handleMove = (e: PointerEvent) => {
       if (reducedRef.current || coarseRef.current) return;
+      const el = ref.current;
+      if (!el) return;
       const rect = el.getBoundingClientRect();
-      cursorNX.set((e.clientX - rect.left) / rect.width - 0.5);
-      cursorNY.set((e.clientY - rect.top) / rect.height - 0.5);
-    };
-
-    const handleLeave = () => {
-      if (!coarseRef.current) {
+      const nx = (e.clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.clientY - rect.top) / rect.height - 0.5;
+      // Reset smoothly when the pointer is far outside the hero vertically
+      // (e.g. user moved to a nav element above the fold).
+      if (ny < -1) {
         cursorNX.set(0);
         cursorNY.set(0);
+        return;
       }
+      cursorNX.set(nx);
+      cursorNY.set(ny);
     };
 
-    el.addEventListener('pointermove', handleMove);
-    el.addEventListener('pointerleave', handleLeave);
+    window.addEventListener('pointermove', handleMove);
     return () => {
-      el.removeEventListener('pointermove', handleMove);
-      el.removeEventListener('pointerleave', handleLeave);
+      window.removeEventListener('pointermove', handleMove);
     };
   }, [cursorNX, cursorNY]);
 
