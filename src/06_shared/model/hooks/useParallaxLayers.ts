@@ -81,6 +81,7 @@ export function useParallaxLayers(): TParallaxLayersReturn {
   const coarseRef = useRef(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const mqReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const mqCoarse = window.matchMedia('(pointer: coarse)');
 
@@ -107,6 +108,7 @@ export function useParallaxLayers(): TParallaxLayersReturn {
   // relative to ref.current's bounding rect so the "center" tracks the hero.
   // When the cursor moves above the hero (ny < -1) we reset toward zero.
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const handleMove = (e: PointerEvent) => {
       if (reducedRef.current || coarseRef.current) return;
       const el = ref.current;

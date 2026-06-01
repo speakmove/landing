@@ -34,7 +34,7 @@ const WAVEFORM_BARS_TALL = [6, 14, 9, 18, 12, 16, 8, 15, 10] as const;
 export const HeroBgParallax = () => {
   const { ref, layer } = useParallaxLayers();
 
-  const gridLayer = layer(0.08);
+  const gridLayer = layer(0.16);
   const iconLayer1 = layer(0.22);
   const iconLayer2 = layer(0.18);
   const iconLayer3 = layer(0.15);

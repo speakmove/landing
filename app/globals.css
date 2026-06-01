@@ -607,8 +607,9 @@
       linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 48px 48px;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
-    mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
+    /* grid reads strongest at the BOTTOM of the hero, fading upward */
+    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 32%, transparent 82%);
+    mask-image: linear-gradient(to top, #000 0%, #000 32%, transparent 82%);
   }
 
   /* ---------- Hero ambient blob — static primary-color cloud (desktop only) ---------- */
