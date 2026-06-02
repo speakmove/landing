@@ -1,37 +1,20 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 
-/**
- * Hero background layer — decorative only, aria-hidden.
- *
- * Static base = soft radial gradients + ambient emerald blob (`.hero-bg-grid`).
- * On top, a separate grid-lines layer (`.hero-grid-lines`, emphasized toward the
- * bottom) drifts vertically on SCROLL for a clearly visible depth parallax: as
- * the hero scrolls away the grid slides down ~140px relative to the page.
- *
- * Reduced-motion → grid is fully static.
- */
 export const HeroBgParallax = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
+  const shouldReduce = useReducedMotion();
+  const { scrollY } = useScroll();
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  });
-  // Slide the grid lines within their fixed masked window (no edge reveal).
-  const gridShift = useTransform(scrollYProgress, [0, 1], ['0px', '140px']);
+  const y = useTransform(scrollY, [0, 800], [0, 320]);
+  const opacity = useTransform(scrollY, [0, 800], [1, 0.4]);
+  const scale = useTransform(scrollY, [0, 800], [1, 1.15]);
 
   return (
-    <div ref={ref} aria-hidden="true" className="hero-parallax-root">
-      <div className="hero-bg-grid" />
-      <motion.div
-        className="hero-grid-lines"
-        style={reduce ? undefined : { backgroundPositionY: gridShift }}
-      />
-      <div className="hero-ambient-blob" />
-    </div>
+    <motion.div
+      aria-hidden="true"
+      className="hero-bg-grid"
+      style={shouldReduce ? undefined : { y, opacity, scale }}
+    />
   );
 };

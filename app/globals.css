@@ -599,23 +599,16 @@
       ),
       linear-gradient(180deg, #ffffff 0%, var(--color-surface-warm) 100%);
   }
-  /* Grid lines as a SEPARATE layer so they scroll-parallax independently of the
-     static base gradient. Extended beyond hero top/bottom so vertical drift
-     never reveals a hard edge inside the masked window. */
-  /* Fixed-box grid lines; parallax is done by shifting background-position-y on
-     scroll (lines slide within the masked window — no edge reveal, mask stays put). */
-  .hero-grid-lines {
+  .hero-bg-grid::before {
+    content: '';
     position: absolute;
     inset: 0;
-    z-index: -1;
-    pointer-events: none;
     background-image:
-      linear-gradient(to right, rgba(11, 18, 32, 0.09) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(11, 18, 32, 0.09) 1px, transparent 1px);
-    background-size: 46px 46px;
-    /* strongest at the bottom of the hero, fading upward */
-    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 40%, transparent 88%);
-    mask-image: linear-gradient(to top, #000 0%, #000 40%, transparent 88%);
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, #000 40%, transparent 80%);
   }
 
   /* ---------- Hero ambient blob — static primary-color cloud (desktop only) ---------- */
@@ -1070,72 +1063,3 @@
   height: 100%;
 }
 
-/* ---------- Hero parallax background (A3) ----------
- *
- * Intentionally outside @layer components so these rules override any
- * Tailwind utilities applied alongside them (Tailwind v4 layer ordering).
- *
- * .hero-parallax-root  — absolute inset-0 wrapper; z-index below content
- * .hero-icon-pos       — base absolute + pointer-events: none for each icon
- * .hero-icon-pos--N    — per-icon deterministic position
- * .hero-icon-faint-N   — opacity levels (6 / 7 / 8 %)
- * .hero-icon-rotate-N  — deterministic rotation
- */
-.hero-parallax-root {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-/* Override the original hero-bg-grid z-index: -1 so it sits inside the root */
-.hero-parallax-root .hero-bg-grid {
-  z-index: 0;
-}
-
-.hero-icon-pos {
-  position: absolute;
-  pointer-events: none;
-  color: var(--color-primary);
-}
-
-/* Icon 1 — VoiceWave, top-left corner area */
-.hero-icon-pos--1 {
-  top: 8%;
-  left: 4%;
-}
-
-/* Icon 2 — Mic, right-center area */
-.hero-icon-pos--2 {
-  top: 38%;
-  right: 7%;
-  left: auto;
-}
-
-/* Icon 3 — MessageCircle, lower-left */
-.hero-icon-pos--3 {
-  bottom: 16%;
-  left: 9%;
-}
-
-/* Icon 4 — WaveformBars, top-right */
-.hero-icon-pos--4 {
-  top: 12%;
-  right: 18%;
-  left: auto;
-}
-
-/* Opacity levels — named to avoid arbitrary Tailwind values */
-.hero-icon-faint-a { opacity: 0.20; }
-.hero-icon-faint-b { opacity: 0.16; }
-.hero-icon-faint-c { opacity: 0.14; }
-
-/*
- * Deterministic rotations — use CSS `rotate` (individual transform property)
- * instead of `transform: rotate()` so framer-motion's x/y transforms
- * compose correctly without overriding the rotation.
- */
-.hero-icon-rotate-1 { rotate: -12deg; }
-.hero-icon-rotate-2 { rotate: 8deg; }
-.hero-icon-rotate-3 { rotate: -6deg; }
-.hero-icon-rotate-4 { rotate: 15deg; }
