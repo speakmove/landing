@@ -94,6 +94,9 @@
   /* FinalCta full-bleed emerald gradient stops */
   --color-cta-bleed-from: #063f2e;
   --color-cta-bleed-to: #0a6b4f;
+  /* 3-D tilt rig tokens */
+  --tilt-perspective: 900px;
+  --tilt-card-z: 40px;
 }
 
 :root {
@@ -306,6 +309,22 @@
     .phone-preview-wrap--compact .phone-preview-inner {
       transform: scale(0.8205);
     }
+  }
+  /* ---- 3-D tilt rig ---- */
+  /*
+   * Outer wrapper: establishes perspective context.
+   * Must NOT have transform set here — the motion.div inside handles rotateX/Y.
+   */
+  .tilt-rig-outer {
+    perspective: var(--tilt-perspective);
+  }
+  /*
+   * Inner wrapper: the actual 3-D stage. transform-style: preserve-3d lets
+   * children (the side-cards) use translateZ to float above the phone.
+   * framer-motion drives rotateX / rotateY via MotionValues on this element.
+   */
+  .tilt-rig-inner {
+    transform-style: preserve-3d;
   }
   .phone-screen {
     top: 1.6%;
