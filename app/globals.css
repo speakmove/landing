@@ -97,6 +97,8 @@
   /* 3-D tilt rig tokens */
   --tilt-perspective: 900px;
   --tilt-card-z: 40px;
+  /* Extra hit-area padding around the phone for the tilt rig (~40 px halo) */
+  --tilt-halo: 40px;
 }
 
 :root {
@@ -317,6 +319,15 @@
    */
   .tilt-rig-outer {
     perspective: var(--tilt-perspective);
+    /*
+     * Invisible halo: ~40 px transparent padding extends the pointer-event
+     * hit area beyond the phone edges so the tilt activates as the cursor
+     * approaches — not only when it's directly over the phone.
+     * The compensating negative margin collapses the extra space so the phone
+     * stays in exactly the same visual position in the layout.
+     */
+    padding: var(--tilt-halo);
+    margin: calc(-1 * var(--tilt-halo));
   }
   /*
    * Inner wrapper: the actual 3-D stage. transform-style: preserve-3d lets

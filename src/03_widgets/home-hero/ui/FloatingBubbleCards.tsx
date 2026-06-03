@@ -1,5 +1,6 @@
 'use client';
 
+import { useSyncExternalStore } from 'react';
 import { useReducedMotion, motion } from 'framer-motion';
 import { CheckIcon, MicIcon } from '@/shared/ui';
 import type { TPhoneFloatBubble } from '@/entities/phone-mockup';
@@ -9,7 +10,19 @@ type TProps = {
   bubbles: TPhoneFloatBubble[];
 };
 
-const POSITIONS = ['absolute -left-7 top-32', 'absolute -right-6 bottom-15'] as const;
+/**
+ * Desktop positions (unchanged).
+ * Card 0 = left side, Card 1 = right side.
+ */
+const POSITIONS_DESKTOP = ['absolute -left-7 top-32', 'absolute -right-6 bottom-15'] as const;
+
+/**
+ * Mobile positions: nudged further toward screen edges.
+ * Card 0 shifts a bit more left (-left-10), Card 1 a bit more right (-right-9).
+ * Uses native Tailwind scale — no arbitrary values.
+ */
+const POSITIONS_MOBILE = ['absolute -left-10 top-32', 'absolute -right-9 bottom-15'] as const;
+
 const ICON_BG = [
   'bg-gold-pale text-gold-mid',
   'bg-primary-pale text-primary-ink',
@@ -55,25 +68,66 @@ const DRIFT_CONFIG = [
 const CARD_Z = 40;
 
 /**
+ * On mobile, cards fly in sequentially when they scroll into view.
+ * Each card has a per-card base delay so they don't pop simultaneously.
+ */
+const MOBILE_SCROLL_DELAY = [0, 0.18] as const;
+
+/**
+ * Detects coarse-pointer (touch / mobile) devices post-mount only via
+ * useSyncExternalStore so SSR snapshot (false) and client snapshot diverge
+ * only after hydration — no hydration mismatch, no cascading setState calls.
+ */
+function useIsMobilePointer(): boolean {
+  return useSyncExternalStore(
+    // subscribe: call callback whenever the media query changes
+    (callback) => {
+      if (typeof window === 'undefined') return () => undefined;
+      const mq = window.matchMedia('(pointer: coarse)');
+      mq.addEventListener('change', callback);
+      return () => mq.removeEventListener('change', callback);
+    },
+    // getSnapshot: client-side current value
+    () => (typeof window !== 'undefined' ? window.matchMedia('(pointer: coarse)').matches : false),
+    // getServerSnapshot: always false on SSR → matches initial render → no mismatch
+    () => false,
+  );
+}
+
+/**
  * Decorative cards floating beside the phone frame.
- * On page load each card flies in from its side and lands at its resting
- * rotation, then drifts gently forever at that same angle — no snap.
  *
- * reduced-motion: cards appear at rest immediately, no drift.
+ * Desktop (fine pointer):
+ *   Both cards fly in on page load and then drift gently forever.
+ *
+ * Mobile (coarse pointer):
+ *   Each card flies in when it scrolls into view (whileInView), one-by-one
+ *   (card 0 first, then card 1 via a per-card delay). Same fly-in → rest →
+ *   drift motion so there is no jerk at the handoff point. Positions are
+ *   nudged further toward the screen edges for better spacing.
+ *
+ * reduced-motion: cards appear at rest immediately, no fly-in or drift.
  */
 export const FloatingBubbleCards = ({ bubbles }: TProps) => {
   const shouldReduce = useReducedMotion();
+  const isMobile = useIsMobilePointer();
 
   return (
     <>
       {bubbles.map((bubble, idx) => {
-        const position = POSITIONS[idx] ?? POSITIONS[0];
+        const positionDesktop = POSITIONS_DESKTOP[idx] ?? POSITIONS_DESKTOP[0];
+        const positionMobile = POSITIONS_MOBILE[idx] ?? POSITIONS_MOBILE[0];
+        // isMobile is false on SSR / first render → desktop position used,
+        // which matches SSR output → no hydration mismatch.
+        const position = isMobile ? positionMobile : positionDesktop;
+
         const bgClass = ICON_BG[idx] ?? ICON_BG[0];
         const Icon = idx === 0 ? MicIcon : CheckIcon;
         const restRotate = REST_ROTATE[idx] ?? 0;
         const drift = DRIFT_CONFIG[idx] ?? DRIFT_CONFIG[0];
         const flyInX = FLY_IN_X[idx] ?? FLY_IN_X[0];
         const flyInRotate = FLY_IN_ROTATE[idx] ?? FLY_IN_ROTATE[0];
+        const mobileDelay = MOBILE_SCROLL_DELAY[idx] ?? 0;
 
         if (shouldReduce) {
           return (
@@ -96,6 +150,84 @@ export const FloatingBubbleCards = ({ bubbles }: TProps) => {
           );
         }
 
+        /**
+         * Mobile path: fly-in triggered by scroll-into-view (whileInView).
+         * Cards animate sequentially via per-card mobileDelay offset.
+         * The initial/animate/transition contract is identical to desktop,
+         * preserving the no-jerk guarantee: fly-in ends at REST_ROTATE[i]
+         * which is also drift keyframes[0].
+         */
+        if (isMobile) {
+          return (
+            <motion.div
+              key={bubble.title}
+              className={cn(
+                position,
+                'z-20 flex items-center gap-2.5 rounded-2xl border border-line bg-white px-3.5 py-2.5 shadow-(--shadow-mid)',
+              )}
+              style={{ z: CARD_Z }}
+              initial={{
+                x: flyInX,
+                rotate: flyInRotate,
+                opacity: 0,
+                scale: 0.85,
+              }}
+              /**
+               * whileInView: card flies in when its bounding box enters the
+               * viewport. `once: true` means it fires exactly once.
+               * `amount: 0.3` requires 30 % of the card to be visible before
+               * the fly-in starts (avoids premature trigger just past the fold).
+               */
+              whileInView={{
+                x: 0,
+                rotate: drift.rotateKeyframes,
+                opacity: 1,
+                scale: 1,
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                x: {
+                  type: 'spring',
+                  stiffness: 90,
+                  damping: 18,
+                  mass: 0.9,
+                  delay: mobileDelay,
+                },
+                opacity: {
+                  duration: 0.4,
+                  delay: mobileDelay,
+                  ease: 'easeOut',
+                },
+                scale: {
+                  type: 'spring',
+                  stiffness: 90,
+                  damping: 18,
+                  mass: 0.9,
+                  delay: mobileDelay,
+                },
+                /**
+                 * Rotate: same tween + repeat contract as desktop.
+                 * fly-in goes from flyInRotate → drift.rotateKeyframes[0],
+                 * then loops the keyframe sequence forever without a jump.
+                 */
+                rotate: {
+                  times: [0, 0.3, 0.55, 0.8, 1],
+                  duration: drift.duration,
+                  ease: 'easeInOut',
+                  repeat: Infinity,
+                  repeatType: 'loop',
+                  delay: mobileDelay,
+                },
+              }}
+            >
+              <CardContent bubble={bubble} Icon={Icon} bgClass={bgClass} />
+            </motion.div>
+          );
+        }
+
+        /**
+         * Desktop path: both cards fly in on page load (original behavior).
+         */
         return (
           <motion.div
             key={bubble.title}
