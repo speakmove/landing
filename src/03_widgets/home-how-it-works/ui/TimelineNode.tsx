@@ -28,7 +28,7 @@ const LAYOUT: Record<
   },
   vertical: {
     li: 'relative flex flex-col',
-    circle: 'absolute -left-11 top-0',
+    circle: 'absolute -left-12 top-0',
     heading: '',
     badge: 'self-start',
   },

@@ -99,6 +99,8 @@
   --tilt-card-z: 40px;
   /* Extra hit-area padding around the phone for the tilt rig (~40 px halo) */
   --tilt-halo: 40px;
+  /* iOS-wheel picker row height — all rows identical so there is no layout shift */
+  --wheel-row-h: 6rem;
 }
 
 :root {
@@ -108,6 +110,9 @@
 @media (max-width: 767px) {
   :root {
     --header-height: 56px;
+    /* Wheel row on mobile — fits the horizontally-laid-out row (number + 3
+       single-line texts + padding) without clipping. */
+    --wheel-row-h: 5.5rem;
   }
 }
 
@@ -1025,6 +1030,107 @@
   .voicewave-bar[data-i="5"] {
     animation-delay: 0.15s;
   }
+}
+
+/* ---------- Scenarios wheel — iOS-picker ----------
+   All rules outside @layer components so Tailwind utilities cannot
+   override them (Tailwind v4 layer-ordering rule).
+   Sizes use @theme tokens; no arbitrary values.
+   ------------------------------------------------------------------ */
+
+/*
+ * Outer wrapper: perspective context for rotateX tilt.
+ * position: relative lets the selection-band overlay be absolutely placed.
+ */
+.scenarios-wheel-outer {
+  position: relative;
+  perspective: var(--tilt-perspective);
+}
+
+/*
+ * Selection band — decorative hairlines bracketing the centre slot.
+ * Absolutely positioned so it floats over the scroll container and
+ * never scrolls with the rows. Top/bottom offset = 2 × row-h.
+ */
+.scenarios-wheel-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--wheel-row-h);
+  height: var(--wheel-row-h);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/*
+ * Scroll container — the actual iOS-picker viewport.
+ * Height = 5 visible rows.
+ * overscroll-behavior: contain is critical: it prevents wheel scroll
+ * from leaking to the page while the user is spinning the picker.
+ * Mask fades top/bottom rows like a native iOS wheel.
+ * Scrollbar hidden (both standard and WebKit).
+ */
+.scenarios-wheel-scroll {
+  height: calc(var(--wheel-row-h) * 3);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 18%,
+    #000 82%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 18%,
+    #000 82%,
+    transparent
+  );
+}
+.scenarios-wheel-scroll::-webkit-scrollbar {
+  display: none;
+}
+/*
+ * Contain overscroll ONLY for the infinite-loop (mouse) variant.
+ * `data-lenis-prevent` is set on the container only when looping; on touch it is
+ * absent, so scroll escapes to the page at the list edges (no trap).
+ */
+.scenarios-wheel-scroll[data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/*
+ * Spacer — 2 rows tall. One at the top and one at the bottom of the list.
+ * They let the first and last items snap to the centre slot.
+ */
+.scenarios-wheel-spacer {
+  height: var(--wheel-row-h);
+  flex-shrink: 0;
+}
+
+/*
+ * Each row item wrapper — fixed height + snap alignment.
+ * The height matches --wheel-row-h so every row occupies exactly the same
+ * vertical slot; hook line only changes opacity (no layout shift).
+ */
+.scenarios-wheel-item {
+  height: var(--wheel-row-h);
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+/*
+ * Row anchor element — transform-style: preserve-3d for rotateX tilt.
+ * `perspective` lives on .scenarios-wheel-outer above.
+ */
+.scenarios-wheel-row {
+  transform-style: preserve-3d;
+  height: 100%;
 }
 
 /* ---------- Glow breathe — ambient emerald halo pulse ---------- */

@@ -1,22 +1,35 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getList } from '@/shared/model/libs/i18n/get-list';
-import { ArrowRightIcon, Container, Section, SectionHead } from '@/shared/ui';
+import { Container, Section, SectionHead } from '@/shared/ui';
 import { buildBotUrl } from '@/shared/model/utils';
 import { ANCHORS } from '@/shared/config';
+import { ScenariosWheel } from '@/features/scenario-wheel';
+import type { TScenarioRowProps } from '@/features/scenario-wheel';
+import type { TScenarioCard } from '../model/types';
 
-type TCard = {
-  id: string;
-  title: string;
-  aiRole: string;
-  hook: string;
-  duration: string;
-};
-
+/**
+ * HomeScenariosGrid — RSC.
+ *
+ * Fetches translations + locale, builds serialisable row props (including
+ * pre-built bot URLs), then delegates rendering to the `ScenariosWheel`
+ * client island. This keeps data-fetching in the server layer and
+ * animation code in the client layer (feature slice).
+ */
 export const HomeScenariosGrid = async () => {
   const t = await getTranslations('HomePage.scenariosGrid');
   const locale = await getLocale();
-  const cards = getList<TCard>(t, 'cards');
+  const cards = getList<TScenarioCard>(t, 'cards');
   const ctaLabel = t('ctaLabel');
+
+  const rows: TScenarioRowProps[] = cards.map((card, index) => ({
+    number: String(index + 1).padStart(2, '0'),
+    title: card.title,
+    aiRole: card.aiRole,
+    hook: card.hook,
+    duration: card.duration,
+    href: buildBotUrl(locale, card.id),
+    ariaLabel: `${ctaLabel} — ${card.title}`,
+  }));
 
   return (
     <Section
@@ -32,34 +45,7 @@ export const HomeScenariosGrid = async () => {
           subtitle={t('subtitle')}
         />
 
-        <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map((card) => (
-            <li key={card.id} className="contents">
-              <a
-                href={buildBotUrl(locale, card.id)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card-hover group relative flex h-full flex-col rounded-card border border-line bg-white p-5 shadow-(--shadow-soft) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                aria-label={`${ctaLabel} — ${card.title}`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="m-0 text-lg font-bold tracking-tight text-ink">
-                    {card.title}
-                  </h3>
-                  <span className="shrink-0 rounded-full bg-surface px-2 py-0.5 font-mono text-mini font-semibold text-muted">
-                    {card.duration}
-                  </span>
-                </div>
-                <p className="m-0 mt-1.5 text-13 font-medium text-primary">{card.aiRole}</p>
-                <p className="m-0 mt-3 flex-1 text-14-5 leading-relaxed text-muted">{card.hook}</p>
-                <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-[gap] group-hover:gap-2">
-                  {ctaLabel}
-                  <ArrowRightIcon size={14} />
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <ScenariosWheel rows={rows} />
       </Container>
     </Section>
   );

@@ -12,9 +12,9 @@ export function HowItWorksTimelineMobile({ steps }: TProps) {
   return (
     <div className="relative">
       {/* Vertical progress line */}
-      <div className="absolute top-0 bottom-0 left-10 w-px bg-line" aria-hidden="true" />
+      <div className="absolute top-0 bottom-0 left-5 w-px bg-line" aria-hidden="true" />
 
-      <ol className="relative list-none space-y-8 p-0 pl-16">
+      <ol className="relative list-none space-y-8 p-0 pl-12">
         {steps.map((step, idx) => (
           <TimelineNode
             key={step.num}
