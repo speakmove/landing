@@ -33,7 +33,7 @@ export const HomeAdvantages = async () => {
     <Section
       id={ANCHORS.advantages}
       ariaLabelledBy="advantages-heading"
-      className="bg-surface py-16 md:py-22"
+      className="py-16 md:py-22"
     >
       <Container>
         <SectionHead

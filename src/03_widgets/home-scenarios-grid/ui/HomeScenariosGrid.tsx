@@ -35,6 +35,7 @@ export const HomeScenariosGrid = async () => {
     <Section
       id={ANCHORS.scenarios}
       ariaLabelledBy="scenarios-grid-heading"
+      tone="soft"
       className="py-14 md:py-20"
     >
       <Container>
