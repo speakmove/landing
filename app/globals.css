@@ -84,7 +84,6 @@
 
   /* ---- redesign tokens ---- */
   /* Soft band bg for section rhythm — reuse --color-surface (#f7f8f5); no duplicate */
-  /* Founders full-bleed dark bg = ink navy — reuse --color-ink (#0b1220); no duplicate */
   --color-glow-emerald: #5be0a8;
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1161,12 +1160,6 @@
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-}
-
-/* Founders variant: solid ink-navy */
-.section-bleed-founders {
-  background: var(--color-ink);
-  color: #fff;
 }
 
 /* CTA variant: emerald gradient (spec: #063f2e → #0a6b4f) */

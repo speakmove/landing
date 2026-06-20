@@ -37,14 +37,16 @@ export const VARIANT_BY_ID: Record<string, TAdvantageTileVariant> = {
 export const TILE_CARD_CLASS: Record<TAdvantageTileVariant, string> = {
   anchor:
     'bg-primary-ink text-white border-transparent shadow-(--shadow-deep)',
-  gold: 'bg-gold-pale border-gold text-ink shadow-(--shadow-soft)',
+  // "Price" tile — white like the rest; gold lives only in the icon accent.
+  gold: 'bg-white border-line text-ink shadow-(--shadow-soft)',
   default: 'bg-white border-line text-ink shadow-(--shadow-soft)',
 };
 
 /** Icon badge bg/text per variant. */
 export const TILE_ICON_CLASS: Record<TAdvantageTileVariant, string> = {
   anchor: 'bg-primary text-white',
-  gold: 'bg-gold-accent text-ink',
+  // Price tile icon matches the other tiles (emerald) — no gold accent.
+  gold: 'bg-primary-pale text-primary',
   default: 'bg-primary-pale text-primary',
 };
 

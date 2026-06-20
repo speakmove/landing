@@ -3,7 +3,7 @@ import { cn } from '@/shared/model/libs/cn';
 import { Container } from '@/shared/ui/Container';
 import { WaveDivider } from '@/shared/ui/Icon';
 
-type TBleed = 'founders' | 'cta';
+type TBleed = 'cta';
 
 type TProps = PropsWithChildren<{
   bleed: TBleed;
@@ -22,7 +22,6 @@ type TProps = PropsWithChildren<{
 }>;
 
 const BLEED_CLASS: Record<TBleed, string> = {
-  founders: 'section-bleed-founders',
   cta: 'section-bleed-cta',
 };
 
@@ -45,7 +44,7 @@ export const FullBleedSection = ({
         <WaveDivider fill={waveColor} className="section-wave-svg" />
       </div>
 
-      <Container className="py-14 md:py-20">{children}</Container>
+      <Container className="px-5 py-14 md:px-6 md:py-20">{children}</Container>
     </section>
   );
 };
