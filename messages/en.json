@@ -400,7 +400,32 @@
       "footnote": "No card · Cancel in one click or via support",
       "perDay": "£0.33",
       "perDayUnit": "/ day",
-      "perMonth": "= £9.90 per month"
+      "perMonth": "= £9.90 per month",
+      "priceToggle": {
+        "modes": [
+          {
+            "id": "month",
+            "label": "per month",
+            "amount": "£9.90",
+            "unit": "/mo",
+            "value": 9.9
+          },
+          {
+            "id": "day",
+            "label": "per day",
+            "amount": "£0.33",
+            "unit": "/day",
+            "value": 0.33
+          },
+          {
+            "id": "coffee",
+            "label": "vs coffee",
+            "amount": "1",
+            "unit": "latte a day",
+            "value": 1
+          }
+        ]
+      }
     }
   },
   "HowItWorksPage": {

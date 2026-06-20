@@ -17,6 +17,11 @@ export type TPricingCardData = {
 };
 
 export type TPricingCardVariant = {
-  /** `compact` = narrow plan card on /pricing. `wide` = home teaser with bigger padding and a 2-col feature grid. */
-  size?: 'compact' | 'wide';
+  /**
+   * `compact` = narrow plan card on /pricing.
+   * `wide` = home teaser with bigger padding and a 2-col feature grid.
+   * `split` = raised accent card: emerald left panel (badge + price slot + CTA
+   *           + footnote) and white "what's included" right panel.
+   */
+  size?: 'compact' | 'wide' | 'split';
 };

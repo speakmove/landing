@@ -400,7 +400,32 @@
       "footnote": "Без картки · Скасування одним кліком або через техпідтримку",
       "perDay": "£0.33",
       "perDayUnit": "/ день",
-      "perMonth": "= £9.90 на місяць"
+      "perMonth": "= £9.90 на місяць",
+      "priceToggle": {
+        "modes": [
+          {
+            "id": "month",
+            "label": "на місяць",
+            "amount": "£9.90",
+            "unit": "/міс",
+            "value": 9.9
+          },
+          {
+            "id": "day",
+            "label": "на день",
+            "amount": "£0.33",
+            "unit": "/день",
+            "value": 0.33
+          },
+          {
+            "id": "coffee",
+            "label": "vs кава",
+            "amount": "1",
+            "unit": "лате/день",
+            "value": 1
+          }
+        ]
+      }
     }
   },
   "HowItWorksPage": {

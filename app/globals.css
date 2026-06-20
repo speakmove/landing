@@ -1201,3 +1201,31 @@
   grid-auto-rows: auto;
 }
 
+/*
+ * Split pricing card — emerald left panel (spec §3.7).
+ * Reuses the FinalCta emerald gradient stops. Kept outside @layer components
+ * so it can host the white-on-emerald CTA variant without utility conflicts.
+ */
+.pricing-split-panel {
+  background: linear-gradient(160deg, var(--color-cta-bleed-from) 0%, var(--color-cta-bleed-to) 100%);
+}
+
+/*
+ * White CTA button for the emerald panel: white pill, emerald-ink label.
+ * Composes with `.btn`/`.btn-lg` for sizing; overrides only the colours.
+ * Outside @layer components so it beats `.btn-primary`-style utilities.
+ */
+.btn-on-emerald {
+  background: #fff;
+  color: var(--color-primary-ink);
+  box-shadow: 0 1px 2px rgba(6, 63, 46, 0.25), 0 8px 20px rgba(6, 63, 46, 0.22);
+}
+.btn-on-emerald:hover:not(:disabled) {
+  background: var(--color-primary-pale);
+  transform: translateY(-1px);
+}
+.btn-on-emerald:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
