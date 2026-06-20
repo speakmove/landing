@@ -1199,3 +1199,12 @@
   height: 100%;
 }
 
+/*
+ * Bento grid: asymmetric advantages layout.
+ * Rows hug their content (auto) so width-varied tiles don't get vertical voids.
+ * Placed outside @layer components so it wins over any utility conflicts.
+ */
+.bento-grid {
+  grid-auto-rows: auto;
+}
+
