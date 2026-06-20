@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getList, getObject } from '@/shared/model/libs/i18n/get-list';
-import { Container, Reveal, Section } from '@/shared/ui';
+import { Container, Section } from '@/shared/ui';
 import { ANCHORS } from '@/shared/config';
 import { buildBotUrl } from '@/shared/model/utils';
 import { PricingCard } from '@/entities/pricing-card';
@@ -19,23 +19,21 @@ export const HomePricingCard = async () => {
   return (
     <Section id={ANCHORS.pricing} ariaLabelledBy="pricing-card-heading" className="py-12 md:py-16">
       <Container>
-        <Reveal variant="rise">
-          <PricingCard
-            size="split"
-            titleId="pricing-card-heading"
-            badge={t('badge')}
-            title={t('title')}
-            subtitle={t('subtitle')}
-            perDay={t('perDay')}
-            perDayUnit={t('perDayUnit')}
-            perMonth={t('perMonth')}
-            features={features}
-            primaryCtaLabel={t('cta')}
-            primaryCtaHref={buildBotUrl(locale)}
-            footnote={t('footnote')}
-            priceSlot={<PriceToggle modes={modes} defaultMode="day" />}
-          />
-        </Reveal>
+        <PricingCard
+          size="split"
+          titleId="pricing-card-heading"
+          badge={t('badge')}
+          title={t('title')}
+          subtitle={t('subtitle')}
+          perDay={t('perDay')}
+          perDayUnit={t('perDayUnit')}
+          perMonth={t('perMonth')}
+          features={features}
+          primaryCtaLabel={t('cta')}
+          primaryCtaHref={buildBotUrl(locale)}
+          footnote={t('footnote')}
+          priceSlot={<PriceToggle modes={modes} defaultMode="day" />}
+        />
       </Container>
     </Section>
   );

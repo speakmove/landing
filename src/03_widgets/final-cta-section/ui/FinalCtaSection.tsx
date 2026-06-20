@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { ButtonLink, Container, Section } from '@/shared/ui';
+import { ButtonLink, FullBleedSection, Reveal, VoiceWave } from '@/shared/ui';
 import { ANCHORS } from '@/shared/config';
 import { buildBotUrl } from '@/shared/model/utils';
 
@@ -13,30 +13,46 @@ export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProp
   const locale = await getLocale();
 
   return (
-    <Section
+    <FullBleedSection
+      bleed="cta"
       id={ANCHORS.cta}
       ariaLabelledBy="final-cta-heading"
-      className="py-16 md:py-22"
     >
-      <Container>
-        <div className="final-panel px-6 py-14 text-center sm:px-12 sm:py-16">
+      <div className="relative">
+        {/* Ambient emerald glow behind the wave + heading (decor) */}
+        <div className="finalcta-glow glow-breathe" aria-hidden="true" />
+
+        {/* Content reveals on scroll-in, like the section headings elsewhere. */}
+        <Reveal
+          variant="rise"
+          className="relative mx-auto flex max-w-160 flex-col items-center text-center"
+        >
+          {/* Voice waveform — light on the dark emerald bg (decor) */}
+          <VoiceWave className="finalcta-wave mb-7" aria-hidden="true" />
+
           <h2
             id="final-cta-heading"
-            className="h-display-section mx-0 mb-3.5 font-extrabold leading-[1.1] tracking-[-0.025em] text-ink"
+            className="mb-3.5 font-extrabold leading-[1.1] tracking-[-0.025em] text-white h-display-section"
           >
             {t('title')}
           </h2>
-          <p className="mx-auto mb-7 max-w-140 text-17 leading-relaxed text-muted">
+
+          <p className="mx-auto mb-7 max-w-140 text-17 leading-relaxed text-white/70">
             {t('subtitle')}
           </p>
 
-          <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
+          <ButtonLink
+            href={buildBotUrl(locale)}
+            variant="primary"
+            size="lg"
+            className="btn-on-emerald"
+          >
             {t('cta')}
           </ButtonLink>
 
-          <div className="mt-7 text-10 md:text-12 text-muted">{t('meta')}</div>
-        </div>
-      </Container>
-    </Section>
+          <div className="mt-7 text-10 md:text-12 text-white/70">{t('meta')}</div>
+        </Reveal>
+      </div>
+    </FullBleedSection>
   );
 };

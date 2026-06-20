@@ -93,6 +93,11 @@
   /* FinalCta full-bleed emerald gradient stops */
   --color-cta-bleed-from: #063f2e;
   --color-cta-bleed-to: #0a6b4f;
+  /* FinalCta ambient glow halo */
+  --finalcta-glow-size: 480px;
+  --finalcta-glow-blur: 70px;
+  /* FinalCta voice-wave size */
+  --finalcta-wave-w: 100px;
   /* 3-D tilt rig tokens */
   --tilt-perspective: 900px;
   --tilt-card-z: 40px;
@@ -112,6 +117,11 @@
     /* Wheel row on mobile — fits the horizontally-laid-out row (number + 3
        single-line texts + padding) without clipping. */
     --wheel-row-h: 5.5rem;
+    /* Smaller, calmer voice wave on mobile. */
+    --finalcta-wave-w: 60px;
+    /* Smaller glow halo on mobile so it doesn't overflow the viewport. */
+    --finalcta-glow-size: 260px;
+    --finalcta-glow-blur: 48px;
   }
 }
 
@@ -1142,6 +1152,37 @@
   .glow-breathe {
     animation: glow-breathe 4.5s ease-in-out infinite;
   }
+}
+
+/* ---------- FinalCta — ambient emerald glow halo ----------
+   Kept outside @layer components so it beats any Tailwind utility.
+   Decorative only (aria-hidden in JSX). Sits behind the wave/heading.
+   Uses tokens; the .glow-breathe class above drives the optional pulse
+   (gated by prefers-reduced-motion: no-preference, so static otherwise).
+   ---------------------------------------------------------- */
+.finalcta-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--finalcta-glow-size);
+  height: var(--finalcta-glow-size);
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    var(--color-glow-emerald) 0%,
+    color-mix(in oklab, var(--color-glow-emerald) 40%, transparent) 35%,
+    transparent 70%
+  );
+  filter: blur(var(--finalcta-glow-blur));
+  opacity: 0.55;
+}
+
+/* FinalCta voice-wave sizing — light emerald-glow color on dark emerald bg */
+.finalcta-wave {
+  width: var(--finalcta-wave-w);
+  height: auto;
+  color: var(--color-glow-emerald);
 }
 
 /* ============================================================
