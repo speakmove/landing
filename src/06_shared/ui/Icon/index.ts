@@ -20,6 +20,8 @@ export { LogoMark } from './LogoMark';
 export { MapPinIcon } from './MapPin';
 export { MessageCircleIcon } from './MessageCircle';
 export { MicIcon } from './Mic';
+export { MinusIcon } from './Minus';
+export { PartialIcon } from './Partial';
 export { PaperclipIcon } from './Paperclip';
 export { PlayIcon } from './Play';
 export { ShieldIcon } from './Shield';

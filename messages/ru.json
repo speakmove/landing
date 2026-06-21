@@ -807,7 +807,50 @@
           "emphasis": true
         }
       ],
-      "closingLine": "Это не лучше репетитора и не лучше Speak. Это другое — функциональная тренировка на конкретные ситуации жизни в UK. Когда тебе нужно позвонить landlord или сходить к GP — репетитор не поможет в момент. Тут — поможет."
+      "closingLine": "Это не лучше репетитора и не лучше Speak. Это другое — функциональная тренировка на конкретные ситуации жизни в UK. Когда тебе нужно позвонить landlord или сходить к GP — репетитор не поможет в момент. Тут — поможет.",
+      "matrix": {
+        "title": "Сравнение: репетитор, Speak app и SpeakMove",
+        "criterionLabel": "Критерий",
+        "columns": ["Репетитор", "Speak app", "SpeakMove"],
+        "columnsShort": ["Реп.", "Speak", "Мы"],
+        "markLabels": {
+          "yes": "Да",
+          "no": "Нет",
+          "partial": "Частично"
+        },
+        "rows": [
+          {
+            "criterion": "UK-бытовые сценарии (council tax, GP, landlord)",
+            "kind": "mark",
+            "values": ["no", "no", "yes"]
+          },
+          {
+            "criterion": "Голосовая практика",
+            "kind": "mark",
+            "values": ["yes", "yes", "yes"]
+          },
+          {
+            "criterion": "Доступно 24/7, в любой момент",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Фидбек на родном (RU/UK)",
+            "kind": "mark",
+            "values": ["partial", "no", "yes"]
+          },
+          {
+            "criterion": "Без записи и расписания",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Цена в месяц",
+            "kind": "price",
+            "values": ["£60–80", "£14", "£9.90"]
+          }
+        ]
+      }
     },
     "trustStrip": {
       "items": [

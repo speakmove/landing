@@ -807,7 +807,50 @@
           "emphasis": true
         }
       ],
-      "closingLine": "We're not better than a tutor, and not better than Speak. We're different — functional practice on the specific situations of UK life. When you need to call your landlord or visit the GP, a tutor can't help in the moment. We can."
+      "closingLine": "We're not better than a tutor, and not better than Speak. We're different — functional practice on the specific situations of UK life. When you need to call your landlord or visit the GP, a tutor can't help in the moment. We can.",
+      "matrix": {
+        "title": "Comparison: tutor, Speak app and SpeakMove",
+        "criterionLabel": "Criterion",
+        "columns": ["Tutor", "Speak app", "SpeakMove"],
+        "columnsShort": ["Tutor", "Speak", "Us"],
+        "markLabels": {
+          "yes": "Yes",
+          "no": "No",
+          "partial": "Partial"
+        },
+        "rows": [
+          {
+            "criterion": "UK everyday scenarios (council tax, GP, landlord)",
+            "kind": "mark",
+            "values": ["no", "no", "yes"]
+          },
+          {
+            "criterion": "Voice practice",
+            "kind": "mark",
+            "values": ["yes", "yes", "yes"]
+          },
+          {
+            "criterion": "Available 24/7, any moment",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Feedback in your language (RU/UK)",
+            "kind": "mark",
+            "values": ["partial", "no", "yes"]
+          },
+          {
+            "criterion": "No booking or schedule",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Price per month",
+            "kind": "price",
+            "values": ["£60–80", "£14", "£9.90"]
+          }
+        ]
+      }
     },
     "trustStrip": {
       "items": [

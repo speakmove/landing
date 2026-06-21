@@ -807,7 +807,50 @@
           "emphasis": true
         }
       ],
-      "closingLine": "Це не краще за репетитора і не краще за Speak. Це інше — функціональне тренування на конкретні ситуації життя в UK. Коли тобі треба зателефонувати landlord або піти до GP — репетитор не допоможе в момент. Тут — допоможе."
+      "closingLine": "Це не краще за репетитора і не краще за Speak. Це інше — функціональне тренування на конкретні ситуації життя в UK. Коли тобі треба зателефонувати landlord або піти до GP — репетитор не допоможе в момент. Тут — допоможе.",
+      "matrix": {
+        "title": "Порівняння: репетитор, Speak app і SpeakMove",
+        "criterionLabel": "Критерій",
+        "columns": ["Репетитор", "Speak app", "SpeakMove"],
+        "columnsShort": ["Реп.", "Speak", "Ми"],
+        "markLabels": {
+          "yes": "Так",
+          "no": "Ні",
+          "partial": "Частково"
+        },
+        "rows": [
+          {
+            "criterion": "UK-побутові сценарії (council tax, GP, landlord)",
+            "kind": "mark",
+            "values": ["no", "no", "yes"]
+          },
+          {
+            "criterion": "Голосова практика",
+            "kind": "mark",
+            "values": ["yes", "yes", "yes"]
+          },
+          {
+            "criterion": "Доступно 24/7, будь-якої миті",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Фідбек рідною (RU/UK)",
+            "kind": "mark",
+            "values": ["partial", "no", "yes"]
+          },
+          {
+            "criterion": "Без запису та розкладу",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Ціна на місяць",
+            "kind": "price",
+            "values": ["£60–80", "£14", "£9.90"]
+          }
+        ]
+      }
     },
     "trustStrip": {
       "items": [
