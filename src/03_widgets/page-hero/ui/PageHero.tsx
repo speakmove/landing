@@ -3,6 +3,8 @@ import { cn } from '@/shared/model/libs/cn';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { Container } from '@/shared/ui';
 import { HeroWaveformDecoration } from './HeroWaveformDecoration';
+import { PageHeroTitle } from './PageHeroTitle';
+import { StatPills } from './StatPills';
 
 type TStat = {
   value: string;
@@ -39,33 +41,14 @@ export const PageHero = async ({ namespace, decoration }: TProps) => {
         <div className="relative z-10 mx-auto max-w-190">
           <div className="section-eyebrow !mb-0">{t('crumb')}</div>
 
-          <h1
-            className="h-display-page my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink"
-          >
-            {t('title')}
-          </h1>
+          <PageHeroTitle title={t('title')} />
 
           <p className="mx-auto max-w-160 text-pretty text-lg text-muted">
             {t('description')}
           </p>
 
           {stats.length > 0 ? (
-            <ul
-              className="mx-auto mt-7 flex w-full max-w-2xl list-none flex-wrap justify-center gap-x-10 gap-y-5 p-0 sm:gap-x-14"
-              aria-label={tCommon('aria.statsGrid')}
-            >
-              {stats.map((stat) => (
-                <li
-                  key={stat.label}
-                  className="min-w-0 border-l-2 border-primary px-4 text-left sm:px-5"
-                >
-                  <div className="font-mono text-2xl font-extrabold tracking-[-0.01em] text-primary-ink">
-                    {stat.value}
-                  </div>
-                  <div className="mt-0.5 text-13 text-muted">{stat.label}</div>
-                </li>
-              ))}
-            </ul>
+            <StatPills stats={stats} ariaLabel={tCommon('aria.statsGrid')} />
           ) : null}
         </div>
       </Container>
