@@ -85,6 +85,11 @@
   /* ---- redesign tokens ---- */
   /* Soft band bg for section rhythm — reuse --color-surface (#f7f8f5); no duplicate */
   --color-glow-emerald: #5be0a8;
+  /* Distinct emerald steps for the unit-economics donut + legend swatches.
+     Lighter rungs than --color-primary / primary-hover so all 5 cost segments
+     stay distinguishable side-by-side. */
+  --color-emerald-400: #34d399;
+  --color-emerald-300: #6ee7b7;
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --dur-reveal: 700ms;
@@ -1268,5 +1273,74 @@
 .btn-on-emerald:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
+}
+
+/* ============================================================
+   PricingUnitEconomics — donut (ring) chart of the £9.90 split
+   Kept outside @layer components so the fixed conic-gradient and the
+   ring "hole" mask beat any Tailwind utility (v4 layer trap).
+   Data is fixed (£9.90 split), so the segment angles are hard-coded:
+     STT      0.50  →   0     – 18.18deg
+     LLM      0.50  →  18.18  – 36.36deg
+     TTS      3.50  →  36.36  – 163.64deg  (largest cost, mid emerald)
+     Payment  0.40  → 163.64  – 178.18deg
+     Hosting  0.20  → 178.18  – 185.45deg
+     Margin   4.80  → 185.45  – 360deg     (GOLD accent)
+   Swatch colours in the legend use the SAME tokens (see component).
+   The donut itself is decorative (aria-hidden); the real numbers live
+   in the legend + expandable table for screen readers.
+   ============================================================ */
+.ue-donut {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin-inline: auto;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-primary-ink) 0deg 18.18deg,
+    var(--color-primary) 18.18deg 36.36deg,
+    var(--color-primary-hover) 36.36deg 163.64deg,
+    var(--color-emerald-400) 163.64deg 178.18deg,
+    var(--color-emerald-300) 178.18deg 185.45deg,
+    var(--color-gold-accent) 185.45deg 360deg
+  );
+  /* Donut hole: knock out the centre with a radial mask so the section
+     background shows through (works on any backdrop, no solid centre disc). */
+  -webkit-mask: radial-gradient(circle at center, transparent 58%, #000 58.5%);
+  mask: radial-gradient(circle at center, transparent 58%, #000 58.5%);
+}
+
+@media (min-width: 640px) {
+  .ue-donut {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Centre label sits in a sibling overlay (the mask above would clip a child),
+   absolutely centred over the ring. */
+.ue-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+}
+.ue-donut-total {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+}
+@media (min-width: 640px) {
+  .ue-donut-total {
+    font-size: 2.4rem;
+  }
 }
 
