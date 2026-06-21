@@ -14,7 +14,7 @@ export const PrivacyFeatureGrid = async () => {
     <Section
       id={ANCHORS.privacy}
       ariaLabelledBy="privacy-heading"
-      className="bg-surface py-12 md:py-16"
+      className="py-12 md:py-16"
     >
       <Container>
         <SectionHead

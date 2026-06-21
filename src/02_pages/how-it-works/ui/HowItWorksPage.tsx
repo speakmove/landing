@@ -49,7 +49,8 @@ export const HowItWorksPage = async () => {
       <FlowSectionWithPhone />
       <PrivacyFeatureGrid />
       <FaqSection namespace="HowItWorksPage.faq" />
-      <FinalCtaSection namespace="HowItWorksPage.finalCta" />
+      {/* FAQ above is the soft band → wave cap matches it (no seam). */}
+      <FinalCtaSection namespace="HowItWorksPage.finalCta" waveColor="#f7f8f5" />
       <JsonLd data={breadcrumbLd} />
       <JsonLd data={howToLd} />
       <JsonLd data={speakableLd} />

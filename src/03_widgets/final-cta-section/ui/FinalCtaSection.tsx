@@ -47,10 +47,6 @@ export const FinalCtaSection = async ({
             {t('title')}
           </h2>
 
-          <p className="mx-auto mb-7 max-w-140 text-17 leading-relaxed text-white/70">
-            {t('subtitle')}
-          </p>
-
           <ButtonLink
             href={buildBotUrl(locale)}
             variant="primary"
