@@ -144,10 +144,12 @@ export const SplitTextReveal = ({
           const chunks = splitIntoChunks(seg.text);
 
           const content = chunks.map((chunk, ci) => {
-            // Whitespace token — render as plain space span, not animated.
+            // Whitespace token — render as a plain space span, not animated.
+            // `whitespace-pre` (NOT inline-block) so the leading/trailing space
+            // keeps its width — inline-block would trim it to zero.
             if (chunk.trim().length === 0) {
               return (
-                <span key={`s${si}-c${ci}-space`} className="inline-block">
+                <span key={`s${si}-c${ci}-space`} className="whitespace-pre">
                   {chunk}
                 </span>
               );

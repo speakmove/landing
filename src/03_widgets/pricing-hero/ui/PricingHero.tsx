@@ -4,11 +4,14 @@ import { env } from '@/shared/model/libs/env';
 import { routing } from '@/shared/model/libs/i18n/routing';
 import { buildBotUrl } from '@/shared/model/utils';
 import { buildSoftwareApplicationLd } from '@/shared/model/libs/jsonld';
+import { PricingHeroTitle } from './PricingHeroTitle';
 
 /**
- * /pricing hero with a per-day price reframe.
- * Big display "£0.33 / day" anchors visual attention; the real monthly
- * price sits underneath as a smaller equality so nothing is hidden.
+ * /pricing hero — offer-focused, letter-reveal H1.
+ *
+ * The H1 animates in letter-by-letter (blur → clear) via SplitTextReveal,
+ * with the price clause accented. The per-day price reframe and the
+ * risk-reversal footnote now live inside the pricing card, not here.
  *
  * Emits a Product (SoftwareApplication) + Offer JSON-LD block so search
  * engines and AI assistants can surface the price + free trial directly.
@@ -45,33 +48,16 @@ export const PricingHero = async () => {
         <div className="relative z-10 mx-auto max-w-190">
           <div className="section-eyebrow !mb-0">{t('crumb')}</div>
 
-          <h1 className="h-display-page my-3 font-extrabold leading-[1.08] tracking-tight text-balance text-ink">
-            {t('title')}
-          </h1>
+          <PricingHeroTitle title={t('title')} />
 
           <p className="mx-auto max-w-160 text-pretty text-lg text-muted">
             {t('description')}
           </p>
 
-          <div className="mt-10 flex flex-col items-center md:mt-12">
-            <div className="inline-flex items-baseline gap-3">
-              <span className="h-display-price font-extrabold tracking-tight text-primary-ink">
-                {t('perDay')}
-              </span>
-              <span className="text-2xl font-semibold text-muted md:text-3xl">
-                {t('perDayUnit')}
-              </span>
-            </div>
-            <p className="mt-3 m-0 font-mono text-15 text-muted">
-              {t('perMonth')}
-            </p>
-          </div>
-
-          <div className="mt-8 flex flex-col items-center gap-3 md:mt-10">
+          <div className="mt-8 flex flex-col items-center md:mt-10">
             <ButtonLink href={botUrl} variant="primary" size="lg">
               {t('cta')}
             </ButtonLink>
-            <p className="mt-3 m-0 text-12-5 text-muted">{t('ctaFootnote')}</p>
           </div>
         </div>
       </Container>
