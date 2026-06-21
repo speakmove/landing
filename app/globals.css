@@ -1289,8 +1289,25 @@
    Swatch colours in the legend use the SAME tokens (see component).
    The donut itself is decorative (aria-hidden); the real numbers live
    in the legend + expandable table for screen readers.
+
+   DRAW-IN ANIMATION (variant A — segments sweep clockwise from 12 o'clock):
+   `--ue-reveal` is an angle (0deg → 360deg) driven per-frame from JS via
+   `ref.style.setProperty('--ue-reveal', …)`. The ring's visible arc is the
+   intersection of two masks:
+     1. the donut "hole" radial mask (transparent centre);
+     2. a conic mask opaque from −90deg (12 o'clock) up to `--ue-reveal`.
+   Registering `--ue-reveal` as a typed <angle> custom property keeps it a real
+   animatable angle (and lets it interpolate smoothly if ever transitioned).
+   Default 360deg → full ring (no-JS / reduced-motion / SSR all show complete).
    ============================================================ */
+@property --ue-reveal {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 360deg;
+}
+
 .ue-donut {
+  --ue-reveal: 360deg;
   position: relative;
   width: 240px;
   height: 240px;
@@ -1304,10 +1321,17 @@
     var(--color-emerald-300) 178.18deg 185.45deg,
     var(--color-gold-accent) 185.45deg 360deg
   );
-  /* Donut hole: knock out the centre with a radial mask so the section
-     background shows through (works on any backdrop, no solid centre disc). */
-  -webkit-mask: radial-gradient(circle at center, transparent 58%, #000 58.5%);
-  mask: radial-gradient(circle at center, transparent 58%, #000 58.5%);
+  /* Donut hole (radial, transparent centre) intersected with a clockwise
+     conic reveal from 12 o'clock. mask-composite: intersect = show a pixel
+     only where BOTH masks are opaque → a growing ring arc. */
+  -webkit-mask:
+    radial-gradient(circle at center, transparent 58%, #000 58.5%),
+    conic-gradient(from -90deg, #000 var(--ue-reveal), transparent 0);
+  -webkit-mask-composite: source-in;
+  mask:
+    radial-gradient(circle at center, transparent 58%, #000 58.5%),
+    conic-gradient(from -90deg, #000 var(--ue-reveal), transparent 0);
+  mask-composite: intersect;
 }
 
 @media (min-width: 640px) {

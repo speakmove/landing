@@ -18,7 +18,7 @@ export const PricingTrustStrip = async () => {
   const items = getList<string>(t, 'items');
 
   return (
-    <Section className="px-5 pt-0 pb-6 md:px-6 md:pt-0 md:pb-8">
+    <Section tone='white' className="px-5 pt-0 pb-6 md:px-6 md:pt-0 md:pb-8">
       <Container>
         <ul
           className="m-0 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 list-none p-0"

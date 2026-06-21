@@ -5,9 +5,18 @@ import { buildBotUrl } from '@/shared/model/utils';
 
 type TProps = {
   namespace?: string;
+  /**
+   * Fill colour of the wave cap at the top of the section — should match the
+   * background of the section directly above on each page so the wave reads as
+   * that section dipping into the emerald block (no seam). Defaults to white.
+   */
+  waveColor?: string;
 };
 
-export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProps) => {
+export const FinalCtaSection = async ({
+  namespace = 'HomePage.finalCta',
+  waveColor,
+}: TProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const t = await getTranslations(namespace as any);
   const locale = await getLocale();
@@ -17,6 +26,7 @@ export const FinalCtaSection = async ({ namespace = 'HomePage.finalCta' }: TProp
       bleed="cta"
       id={ANCHORS.cta}
       ariaLabelledBy="final-cta-heading"
+      waveColor={waveColor}
     >
       <div className="relative">
         {/* Ambient emerald glow behind the wave + heading (decor) */}
