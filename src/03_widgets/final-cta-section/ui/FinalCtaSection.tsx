@@ -42,7 +42,7 @@ export const FinalCtaSection = async ({
 
           <h2
             id="final-cta-heading"
-            className="mb-3.5 font-extrabold leading-[1.1] tracking-[-0.025em] text-white h-display-section"
+            className="mb-4 font-extrabold leading-[1.1] tracking-[-0.025em] text-white h-display-section"
           >
             {t('title')}
           </h2>

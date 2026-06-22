@@ -22,7 +22,8 @@ export const FaqSection = async ({ namespace }: TProps) => {
     <Section
       id={ANCHORS.faq}
       ariaLabelledBy="faq-heading"
-      className="bg-surface py-12 md:py-20"
+      className="py-12 md:py-20"
+      tone="white"
     >
       <Container>
         <SectionHead
@@ -32,10 +33,10 @@ export const FaqSection = async ({ namespace }: TProps) => {
           subtitle={t('subtitle')}
         />
 
-        <p className="-mt-6 mb-8 text-center text-sm text-muted">
+        <p className="text-muted -mt-6 mb-8 text-center text-sm">
           <a
             href={`mailto:${t('contactEmail')}`}
-            className="text-primary underline decoration-dotted underline-offset-4 hover:decoration-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="text-primary focus-visible:outline-primary underline decoration-dotted underline-offset-4 hover:decoration-solid focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             {t('contactEmail')}
           </a>

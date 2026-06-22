@@ -162,7 +162,6 @@
     },
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
-      "subtitle": "2 minutes to start. 15 minutes for the first session. Then up to you.",
       "cta": "Open in Telegram",
       "meta": "7 days free · No card · Cancel in one click or via support"
     },
@@ -571,7 +570,6 @@
     },
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
-      "subtitle": "2 minutes to start. 15 minutes for the first session.",
       "cta": "Open in Telegram",
       "meta": "7 days free · No card · Cancel in one click or via support"
     },
@@ -717,7 +715,6 @@
     },
     "finalCta": {
       "title": "7 days free. No card.",
-      "subtitle": "If it doesn't land, just don't subscribe. No card on file, nothing will be charged.",
       "cta": "Start free",
       "meta": "No card · Cancel in one click or via support"
     },

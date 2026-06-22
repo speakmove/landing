@@ -132,7 +132,9 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* No CSS smooth-scroll: it animated the scroll-reset on cross-page
+       navigation (slow scroll-up). In-page anchors scroll smoothly via Lenis
+       (desktop); route changes jump to top instantly (see LenisProvider). */
     scroll-padding-top: 4rem;
   }
   body {

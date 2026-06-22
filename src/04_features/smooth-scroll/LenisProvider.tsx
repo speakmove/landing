@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import type { PropsWithChildren } from 'react';
 import Lenis from 'lenis';
+import { usePathname } from '@/shared/model/libs/i18n/navigation';
 
 const DESKTOP_QUERY = '(min-width: 1024px)';
 const REDUCED_QUERY = '(prefers-reduced-motion: reduce)';
@@ -15,6 +16,9 @@ const readHeaderHeight = (): number => {
 };
 
 export const LenisProvider = ({ children }: PropsWithChildren) => {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
   useEffect(() => {
     // MQ state is sampled once at mount. Resize/reduced-motion changes mid-session do
     // not toggle Lenis — acceptable for a landing page.
@@ -27,6 +31,7 @@ export const LenisProvider = ({ children }: PropsWithChildren) => {
       duration: 1.2,
       smoothWheel: true,
     });
+    lenisRef.current = lenis;
 
     let rafId = 0;
     const raf = (time: number) => {
@@ -56,8 +61,20 @@ export const LenisProvider = ({ children }: PropsWithChildren) => {
       cancelAnimationFrame(rafId);
       document.removeEventListener('click', handleAnchorClick);
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
+
+  // On cross-page navigation jump to the top INSTANTLY (no smooth scroll-up).
+  // Lenis would otherwise ease the scroll-reset; force an immediate jump.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
 
   return <>{children}</>;
 };

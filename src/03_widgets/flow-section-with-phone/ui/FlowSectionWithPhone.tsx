@@ -13,7 +13,12 @@ export const FlowSectionWithPhone = async () => {
   const steps = getList<TStep>(t, 'steps');
 
   return (
-    <Section id={ANCHORS.flow} ariaLabelledBy="flow-heading" tone="soft" className="py-12 md:py-16">
+    <Section
+      id={ANCHORS.flow}
+      ariaLabelledBy="flow-heading"
+      tone="white"
+      className="py-12 md:py-16"
+    >
       <Container>
         <SectionHead
           kicker={t('kicker')}
