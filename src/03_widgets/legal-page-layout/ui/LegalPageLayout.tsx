@@ -60,7 +60,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
           <LegalToc items={tocItems} ariaLabel={tCommon('navSections')} />
         </aside>
 
-        <div className="text-15-5 leading-relaxed">
+        <div className="max-w-2xl text-15-5 leading-relaxed">
           {sections.map((section) => (
             <section
               key={section.id}
@@ -70,7 +70,7 @@ export const LegalPageLayout = async ({ namespace }: TProps) => {
             >
               <h2
                 id={`${section.id}-heading`}
-                className="mt-8 mb-4 text-[24px] font-extrabold leading-[1.2] tracking-[-0.015em] text-ink first:mt-0"
+                className="mt-8 mb-4 text-2xl font-extrabold leading-snug tracking-[-0.015em] text-ink first:mt-0"
               >
                 {section.heading}
               </h2>
