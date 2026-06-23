@@ -1,17 +1,12 @@
 import { URLS } from '@/shared/config';
 
 /**
- * Build a Telegram bot deep-link.
+ * Build a Telegram bot link with locale and optional topic as query params.
  *
- * The `start` payload encodes locale and optional topic id, separated by `_`
- * (Telegram allows only `[A-Za-z0-9_]` in start payloads, so locale codes like
- * `ru`/`uk`/`en` and topic ids must already conform). The bot parses the payload
- * on first `/start` to set the user's language and jump straight into the topic.
- *
- * Examples: `?start=lang_ru`, `?start=lang_uk_landlord`.
+ * Examples: `?lang=ru`, `?lang=uk&topic=landlord`.
  */
 export const buildBotUrl = (locale: string, topicId?: string): string => {
-  const parts = ['lang', locale];
-  if (topicId) parts.push(topicId);
-  return `${URLS.telegramBot}?start=${encodeURIComponent(parts.join('_'))}`;
+  const params = new URLSearchParams({ lang: locale });
+  if (topicId) params.set('topic', topicId);
+  return `${URLS.telegramBot}?${params.toString()}`;
 };
