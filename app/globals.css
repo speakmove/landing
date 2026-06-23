@@ -1370,3 +1370,42 @@
   }
 }
 
+
+/* ============================================================
+   Bottom progressive-blur strip (scroll-blur widget).
+   Outside @layer components so utilities can't override it.
+   Degrades to nothing without backdrop-filter; off under reduced-motion.
+   ============================================================ */
+.scroll-blur {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  height: 110px;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  /* Faint white fade so the strip reads even over plain backgrounds, where
+     backdrop-blur alone is nearly invisible. */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.55), transparent);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .scroll-blur {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    /* Stronger toward the very bottom, fading to none upward. */
+    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 45%, transparent 100%);
+    mask-image: linear-gradient(to top, #000 0%, #000 45%, transparent 100%);
+  }
+}
+
+.scroll-blur[data-visible='true'] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-blur {
+    display: none;
+  }
+}
