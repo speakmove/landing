@@ -98,9 +98,8 @@ export const LocaleSwitch = ({ size = 'md' }: TProps = {}) => {
             animate="visible"
             exit="exit"
             transition={menuTransition}
-            style={{ transformOrigin: 'top right' }}
             className={cn(
-              'absolute right-0 top-full z-50 mt-1.5 overflow-hidden rounded-xl border border-line bg-white shadow-md',
+              'absolute right-0 top-full z-50 mt-1.5 origin-top-right overflow-hidden rounded-xl border border-line bg-white shadow-md',
               isLg ? 'min-w-40' : 'min-w-36',
             )}
           >
