@@ -157,11 +157,6 @@
   }
 }
 
-@keyframes shimmer-sweep {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(200%); }
-}
-
 @keyframes hero-waveform-pulse {
   0%, 100% { transform: scaleY(0.55); }
   50%      { transform: scaleY(1.45); }
@@ -181,42 +176,6 @@
 }
 
 @layer components {
-  /* ---------- Shimmer sweep — light highlight on primary CTA hover ---------- */
-  /*
-   * Applied directly on the button element so ::before renders above
-   * the button's own background-color (not behind a wrapper's child).
-   */
-  .shimmer-cta {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .shimmer-cta::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      105deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.32) 50%,
-      transparent 60%
-    );
-    transform: translateX(-100%);
-    pointer-events: none;
-  }
-
-  @media (hover: hover) {
-    .shimmer-cta:hover::before {
-      animation: shimmer-sweep 1.2s ease-in-out;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .shimmer-cta::before {
-      animation: none !important;
-    }
-  }
-
   /* ---------- Scenarios sticky scroll region ---------- */
   /*
    * `calc(100vh + 1600px)` gives exactly 200px of effective scroll per card
