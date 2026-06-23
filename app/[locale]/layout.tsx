@@ -90,12 +90,14 @@ export default async function LocaleLayout({ children, params }: TProps) {
 
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body>
+      <body className="flex min-h-svh flex-col">
         <NextIntlClientProvider>
           <LenisProvider>
             <SkipLink>{tCommon('skipToContent')}</SkipLink>
             <SiteHeader />
-            <main id={ELEMENT_IDS.main}>{children}</main>
+            <main id={ELEMENT_IDS.main} className="flex min-w-0 flex-1 flex-col">
+              {children}
+            </main>
             <SiteFooter />
             <ScrollBlur />
             <JsonLd data={organizationLd} />

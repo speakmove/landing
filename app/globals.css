@@ -778,10 +778,7 @@
     font-weight: 900;
     letter-spacing: -0.06em;
     line-height: 0.85;
-    background: linear-gradient(180deg, var(--color-primary-pale) 0%, var(--color-surface-warm) 60%, transparent 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgba(58, 150, 93, 0.06);
     pointer-events: none;
     user-select: none;
     z-index: 0;
@@ -958,6 +955,27 @@
 
   /* ---------- 404 background ---------- */
   .not-found-bg {
+    background:
+      radial-gradient(900px 460px at 50% -120px, var(--color-primary-pale) 0%, transparent 60%),
+      #fff;
+  }
+
+  /*
+   * Centred error/404 shell. Fills the flex-1 <main> (the body is a flex
+   * column min-h-svh with a sticky footer), so it always covers the screen
+   * without a header-height hack. Shared by NotFoundPage + ErrorPage.
+   */
+  .error-screen {
+    /* Grows to fill the flex-column <main> (sticky-footer layout) and centres
+       its content — no viewport/header math. */
+    flex: 1 1 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4rem 1.25rem;
+    text-align: center;
     background:
       radial-gradient(900px 460px at 50% -120px, var(--color-primary-pale) 0%, transparent 60%),
       #fff;
