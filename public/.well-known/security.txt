@@ -1,0 +1,6 @@
+# SpeakMove security contact (RFC 9116)
+# If you have discovered a security issue, please email the address below.
+
+Contact: mailto:hi@speakmove.app
+Expires: 2027-05-21T00:00:00.000Z
+Preferred-Languages: en, ru, uk

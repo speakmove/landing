@@ -1,0 +1,46 @@
+# SpeakMove
+
+> SpeakMove is a Telegram bot for English speaking practice, built for Russian and Ukrainian speaking immigrants in the United Kingdom. It trains spoken English through AI-driven voice dialogue on eight real UK life scenarios — phone calls with the landlord, GP appointments, work-coach meetings at Jobcentre, job interviews, parents' evenings, calls to banks and government, small talk with colleagues, and pharmacy / Boots visits.
+
+## What SpeakMove does
+
+- Voice-only practice (no text drills). The user records voice messages, the bot replies with a real British accent.
+- Feedback in the user's native language (Russian or Ukrainian) — corrections, grammar tips, vocabulary in plain language.
+- All inside Telegram: no app to install, no signup form. `/start` and go.
+- Sessions are 10–15 minutes. The bot remembers context between sessions and can continue a previous conversation.
+
+## Pricing
+
+- One plan: £9.90 / month (about £0.33 / day).
+- 7-day free trial, no card required (15 minutes of speaking per day across the trial — up to 105 minutes total).
+- Paid plan: 15 minutes of voice conversation per day, limit resets every 24 hours at midnight UTC.
+- Cancel in one click via Telegram settings or by emailing support.
+- Transparent unit economics are published on the site: of the £9.90, roughly £5.10 covers AI infrastructure (speech recognition, language model, voice synthesis), payment processing and hosting; the remainder funds development and support.
+
+## Who it's for
+
+- Russian- or Ukrainian-speaking immigrants living in the UK.
+- People whose written English is functional but whose spoken English is the bottleneck — avoiding GP appointments, asking a partner to call the landlord, going quiet at work-coach meetings.
+- Adults across professions (care workers, IT, students, retail, restaurants, academics).
+
+## Scenarios
+
+1. Phone call with landlord — broken heating, the tap, rent increase.
+2. GP appointment — describe symptoms, ask for a referral.
+3. Job interview — tell me about yourself, your experience, why this role.
+4. Small talk with a colleague — weekend plans, weather, sport.
+5. Call to bank or government — HMRC, council tax, DWP, lost card.
+6. Parents evening — your child's progress, what to improve, how to help at home.
+7. Work coach at Jobcentre — Universal Credit weekly check-in, what you searched, which applications.
+8. Pharmacy / Boots visit — pick up a prescription, ask about OTC for a cold or headache, check medication interactions.
+
+## Stages and status
+
+- Currently V0 — early version. Operated as a UK sole trader (Dmytro Fenko, trading as SpeakMove, ICO registration ZC141876). Formal entity may change to a UK Ltd after the V0 validation; existing users are notified in advance.
+
+## Operator and contact
+
+- Operator: Dmytro Fenko, UK sole trader, trading as SpeakMove. Address for service of documents: Weston-super-Mare, UK, BS23 1RH.
+- Data controller: registered with the UK Information Commissioner's Office (ICO), registration number ZC141876.
+- Contact: hi@speakmove.app
+- Telegram: https://t.me/speakmove_bot

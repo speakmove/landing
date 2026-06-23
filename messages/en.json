@@ -1,0 +1,1423 @@
+{
+  "HomePage": {
+    "meta": {
+      "title": "SpeakMove — Speaking practice for UK immigrants",
+      "description": "Train the conversations you avoid: landlord, GP, work coach, school, bank, interview. By voice, inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial without a card."
+    },
+    "nav": {
+      "brand": "SpeakMove",
+      "cta": "Open the bot",
+      "links": {
+        "howItWorks": "How it works",
+        "advantages": "What's inside",
+        "pricing": "Pricing"
+      },
+      "langToggle": {
+        "ru": "RU",
+        "uk": "UA",
+        "en": "EN",
+        "ruLabel": "Русский",
+        "ukLabel": "Українська",
+        "enLabel": "English",
+        "ariaLabel": "Change language",
+        "openMenu": "Open language menu",
+        "closeMenu": "Close language menu"
+      },
+      "mobile": {
+        "followHeading": "Follow us"
+      }
+    },
+    "hero": {
+      "eyebrow": {
+        "items": [
+          "8 UK scenarios",
+          "15 min a day",
+          "Feedback in RU / UA"
+        ]
+      },
+      "title": {
+        "before": "",
+        "accent": "The conversations",
+        "after": " you avoid in English."
+      },
+      "description": "An AI partner that plays landlord, GP, work coach or HR. Voice dialogues in Telegram. Feedback in Russian or Ukrainian.",
+      "ctas": {
+        "primary": "Try it free",
+        "secondary": "How it works"
+      },
+      "metaPoints": [
+        "7 days free",
+        "No card required",
+        "Cancel in one click"
+      ],
+      "phonePreview": {
+        "botName": "SpeakMove",
+        "botStatus": "Recording audio…",
+        "botStatuses": [
+          "Recording audio…",
+          "Processing…",
+          "Replying"
+        ],
+        "coinBalance": "",
+        "today": "Today",
+        "inputPlaceholder": "Message",
+        "micLabel": "Record voice message",
+        "unreadCount": 2,
+        "messages": [
+          {
+            "from": "bot",
+            "kind": "voice",
+            "duration": "0:04",
+            "text": "Hello, Riverside Surgery. How can I help you today?"
+          },
+          {
+            "from": "me",
+            "kind": "voice",
+            "duration": "0:08",
+            "text": "Hi, I'd like to book an appointment. My back has been hurting for a week."
+          },
+          {
+            "from": "bot",
+            "kind": "voice",
+            "duration": "0:03",
+            "text": "Of course. Is the pain getting worse, or staying the same?"
+          },
+          {
+            "from": "me",
+            "kind": "voice",
+            "duration": "0:05",
+            "text": "It's a bit worse in the mornings."
+          }
+        ],
+        "floatBubbles": [
+          {
+            "title": "AI partner",
+            "subtitle": "Real British accent"
+          },
+          {
+            "title": "Feedback in your language",
+            "subtitle": "Clear what to fix"
+          }
+        ]
+      }
+    },
+    "advantages": {
+      "kicker": "What's inside",
+      "title": "Not Duolingo. Not Speak. Not a tutor.",
+      "subtitle": "Functional practice on the specific situations of UK life — not general 'English'.",
+      "tiles": [
+        {
+          "id": "voice",
+          "title": "Voice, not text",
+          "description": "Speaking is your weak point, so the whole product is voice. The bot speaks in a British accent, you reply by voice."
+        },
+        {
+          "id": "uk-scenarios",
+          "title": "8 UK life scenarios",
+          "description": "Landlord, GP, work coach, your child's school, bank, job interview, small talk, pharmacy. The conversations that actually happen to an immigrant in the UK."
+        },
+        {
+          "id": "native-feedback",
+          "title": "Feedback in your native language",
+          "description": "The bot explains the mistake in Russian or Ukrainian — clear what to fix and why."
+        },
+        {
+          "id": "in-telegram",
+          "title": "Right inside Telegram",
+          "description": "No app, no signup form. Open the bot — and speak. 2 minutes to start."
+        },
+        {
+          "id": "honest-pricing",
+          "title": "Transparent pricing",
+          "description": "£9.90 per month. 7 days free, no card. Cancel anytime in one click or via support."
+        }
+      ]
+    },
+    "howItWorks": {
+      "kicker": "How you practise",
+      "title": "Four steps. 15 minutes. Right inside Telegram.",
+      "subtitle": "The cycle repeats 5–8 times per session. No grades, no stress, no 'right answers'.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Pick a scenario",
+          "description": "From 8 UK life situations, pick what's burning right now — landlord, GP, work coach, school."
+        },
+        {
+          "num": "2",
+          "title": "Listen to a voice message",
+          "description": "The bot sends a phrase in English at real British pace. Replay as many times as you like."
+        },
+        {
+          "num": "3",
+          "title": "Reply by voice",
+          "description": "Your pace, with mistakes — that's normal. Nobody is grading you."
+        },
+        {
+          "num": "4",
+          "title": "Get feedback in your language",
+          "description": "Within 5–10 seconds — a short correction in Russian or Ukrainian. Then the dialogue continues."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Open the bot. Try one scenario.",
+      "cta": "Open in Telegram",
+      "meta": "7 days free · No card · Cancel in one click or via support"
+    },
+    "footer": {
+      "brand": "SpeakMove",
+      "tagline": "Voice English practice on UK scenarios. V0 — early version. Direct line to me in Telegram.",
+      "copyright": "© 2026 Dmytro Fenko, trading as SpeakMove.",
+      "legalEntity": "Operator: Dmytro Fenko, UK sole trader, trading as SpeakMove. Registered with the UK Information Commissioner's Office (ICO) as a data controller, registration number ZC141876 (verify at ico.org.uk). Contact: hi@speakmove.app.",
+      "researchNotice": "SpeakMove is currently V0 (early version). Depending on V0 test results the legal form may change (UK Ltd) — we'll notify by email or in TG in advance.",
+      "socialTitle": "We're on social",
+      "socialLinks": [
+        {
+          "id": "telegram",
+          "label": "Telegram",
+          "ariaLabel": "Open the SpeakMove Telegram channel",
+          "href": "https://t.me/speakmove"
+        },
+        {
+          "id": "instagram",
+          "label": "Instagram",
+          "ariaLabel": "Open SpeakMove Instagram",
+          "href": "https://instagram.com/speakmove"
+        },
+        {
+          "id": "tiktok",
+          "label": "TikTok",
+          "ariaLabel": "Open SpeakMove TikTok",
+          "href": "https://tiktok.com/@speakmove"
+        },
+        {
+          "id": "youtube",
+          "label": "YouTube",
+          "ariaLabel": "Open SpeakMove YouTube channel",
+          "href": "https://youtube.com/@speakmove"
+        }
+      ],
+      "columns": [
+        {
+          "title": "Product",
+          "links": [
+            {
+              "label": "How it works",
+              "href": "/how-it-works"
+            },
+            {
+              "label": "Pricing",
+              "href": "/pricing"
+            },
+            {
+              "label": "Open in Telegram",
+              "href": "https://t.me/speakmove_bot"
+            }
+          ]
+        },
+        {
+          "title": "Contact",
+          "links": [
+            {
+              "label": "hi@speakmove.app",
+              "href": "mailto:hi@speakmove.app"
+            },
+            {
+              "label": "Telegram channel",
+              "href": "https://t.me/speakmove"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "links": [
+            {
+              "label": "Privacy",
+              "href": "/privacy"
+            },
+            {
+              "label": "Terms",
+              "href": "/terms"
+            },
+            {
+              "label": "Cookies",
+              "href": "/cookies"
+            },
+            {
+              "label": "Disclaimer",
+              "href": "/disclaimer"
+            }
+          ]
+        }
+      ],
+      "badges": [
+        {
+          "label": "ICO ZC141876 · UK"
+        },
+        {
+          "label": "GDPR-compliant"
+        }
+      ]
+    },
+    "painMirror": {
+      "eyebrow": "Sound familiar?",
+      "heading": "Situations you keep avoiding",
+      "lines": [
+        {
+          "text": "You put off the GP appointment because you don't know how to describe the symptoms.",
+          "scenarioId": "gp",
+          "scenarioLabel": "GP appointment"
+        },
+        {
+          "text": "You cross the street when a neighbour wants to chat about the weather.",
+          "scenarioId": "smalltalk",
+          "scenarioLabel": "Small talk"
+        },
+        {
+          "text": "In a job interview you give shorter answers than you could — afraid you'll trip over a phrase.",
+          "scenarioId": "interview",
+          "scenarioLabel": "Job interview"
+        },
+        {
+          "text": "You stay quiet in a work coach meeting and nod, even when you don't understand.",
+          "scenarioId": "workcoach",
+          "scenarioLabel": "Work coach"
+        }
+      ],
+      "bridge": "It's not your character. It's a skill you can train. 15 minutes a day, by voice, on the situations that actually happen to you.",
+      "botReply": "We train this exactly — pick where to start",
+      "timeLabels": [
+        "today · 14:02",
+        "today · 14:05",
+        "today · 14:07",
+        "today · 14:10"
+      ]
+    },
+    "scenariosGrid": {
+      "kicker": "8 situations",
+      "title": "Practise the conversations that actually happen to an immigrant in the UK.",
+      "subtitle": "Every scenario is its own topic in the bot. Tap one — and it opens straight on that topic.",
+      "ctaLabel": "Practise",
+      "cards": [
+        {
+          "id": "landlord",
+          "title": "Phone call with landlord",
+          "aiRole": "AI = landlord",
+          "hook": "Call about broken heating, the tap, or a rent increase.",
+          "duration": "8 min"
+        },
+        {
+          "id": "gp",
+          "title": "GP appointment",
+          "aiRole": "AI = GP receptionist or GP",
+          "hook": "Describe symptoms, ask for a referral, answer questions.",
+          "duration": "10 min"
+        },
+        {
+          "id": "interview",
+          "title": "Job interview",
+          "aiRole": "AI = HR recruiter",
+          "hook": "Tell me about yourself, your experience, why this role.",
+          "duration": "15 min"
+        },
+        {
+          "id": "smalltalk",
+          "title": "Small talk with a colleague",
+          "aiRole": "AI = colleague in the kitchen",
+          "hook": "Weekend plans, weather, sport — the stuff you stay quiet about.",
+          "duration": "8 min"
+        },
+        {
+          "id": "official",
+          "title": "Call to bank or government",
+          "aiRole": "AI = customer service",
+          "hook": "HMRC, council tax, DWP, lost card — formal calls with security checks.",
+          "duration": "10 min"
+        },
+        {
+          "id": "school",
+          "title": "Parents evening",
+          "aiRole": "AI = your child's teacher",
+          "hook": "Talk about your child's progress, what to improve, how to help at home.",
+          "duration": "10 min"
+        },
+        {
+          "id": "workcoach",
+          "title": "Work coach at Jobcentre",
+          "aiRole": "AI = Universal Credit work coach",
+          "hook": "What you searched, which applications — without risk of sanctions.",
+          "duration": "12 min"
+        },
+        {
+          "id": "pharmacy",
+          "title": "Pharmacy / Boots visit",
+          "aiRole": "AI = pharmacist at Boots",
+          "hook": "Pick up a prescription, ask about OTC for a cold or headache, check interactions.",
+          "duration": "8 min"
+        }
+      ]
+    },
+    "founders": {
+      "kicker": "Who's building this",
+      "title": "We're Dima and Katya. Same pain as you.",
+      "subtitle": "We trained with a tutor too. On lessons it went fine. With real British speakers — another story.",
+      "ctaLabel": "Message on Telegram",
+      "cards": [
+        {
+          "id": "dima",
+          "name": "Dima",
+          "role": "Co-founder · building the product",
+          "initials": "D",
+          "story": "Moved to the UK in 2022. Spent a year with a tutor — conversations flowed in lessons, it felt fine. But a real Brit speaks at a different pace, with a different accent, and doesn't wait for you to think. I still get lost when the speaker changes — you get used to one person, then you're back to zero with the next. That's why I'm building SpeakMove.",
+          "telegramHandle": "@dmitry",
+          "telegramUrl": "https://t.me/senkoner"
+        },
+        {
+          "id": "katya",
+          "name": "Katya",
+          "role": "Co-founder · growth and community",
+          "initials": "K",
+          "story": "Moved to the UK in 2022 with Dima. With my tutor I spoke freely, felt I was progressing. Then I went to a parents evening — the teacher spoke faster, I lost the thread, kept asking her to repeat, and felt embarrassed. With every new British person it's as if I'm starting from scratch.",
+          "telegramHandle": "@katerina",
+          "telegramUrl": "https://t.me/katerynafenko"
+        }
+      ]
+    },
+    "pricingCard": {
+      "badge": "Pro",
+      "title": "Less than a coffee a day.",
+      "subtitle": "7 days free, no card. 15 minutes of voice practice per day.",
+      "features": [
+        "15 minutes of voice conversation per day",
+        "All 8 UK scenarios",
+        "Feedback in Russian or Ukrainian",
+        "Cancel anytime in one click"
+      ],
+      "cta": "Open the bot",
+      "seeDetailsLabel": "See details and FAQ",
+      "footnote": "No card · Cancel in one click or via support",
+      "perDay": "£0.33",
+      "perDayUnit": "/ day",
+      "perMonth": "= £9.90 per month",
+      "priceToggle": {
+        "modes": [
+          {
+            "id": "month",
+            "label": "per month",
+            "amount": "£9.90",
+            "unit": "/mo",
+            "value": 9.9
+          },
+          {
+            "id": "day",
+            "label": "per day",
+            "amount": "£0.33",
+            "unit": "/day",
+            "value": 0.33
+          },
+          {
+            "id": "coffee",
+            "label": "vs coffee",
+            "amount": "1",
+            "unit": "latte a day",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "HowItWorksPage": {
+    "meta": {
+      "title": "How SpeakMove works — Voice training on UK scenarios",
+      "description": "How a SpeakMove session works: 15 minutes of voice conversation a day on UK scenarios — landlord, GP, work coach. British accent, feedback in your native language, AI coach in Telegram."
+    },
+    "hero": {
+      "crumb": "How it works",
+      "title": "English speaking practice — 15 minutes by voice. On UK scenarios.",
+      "description": "Real British accent. Feedback in your language. Right inside Telegram.",
+      "stats": [
+        {
+          "value": "7",
+          "label": "UK life scenarios"
+        },
+        {
+          "value": "15",
+          "label": "minutes a day"
+        },
+        {
+          "value": "RU / UA",
+          "label": "feedback in your language"
+        }
+      ]
+    },
+    "flow": {
+      "kicker": "Inside a session",
+      "title": "One cycle is two minutes. A session is 5–8 cycles.",
+      "subtitle": "You won't learn the language in one session. But in 30 sessions you'll notice one or two specific situations have stopped scaring you.",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Open the bot",
+          "description": "`/start` → you're in SpeakMove. No app, no signup form — everything inside Telegram."
+        },
+        {
+          "num": "2",
+          "title": "Choose — new topic or continue the last one",
+          "description": "New topic: pick from a menu of 8 scenarios (GP, landlord, work coach, pharmacy, …). Or pick up where you left off — the bot remembers your last conversation."
+        },
+        {
+          "num": "3",
+          "title": "The bot sets the context",
+          "description": "\"You're at GP reception. Goal: book an appointment for your back pain.\" You know who you are, where you are and why."
+        },
+        {
+          "num": "4",
+          "title": "The bot sends a voice message",
+          "description": "An English phrase, real pace, real British accent. Replay as many times as you like."
+        },
+        {
+          "num": "5",
+          "title": "You record a reply",
+          "description": "By voice, in English. With mistakes — that's normal. Your pace, nobody's rushing you."
+        },
+        {
+          "num": "6",
+          "title": "Feedback in your language + next line",
+          "description": "A short correction in Russian or Ukrainian (1–2 lines), then the bot continues the dialogue."
+        }
+      ],
+      "phonePreview": {
+        "botName": "SpeakMove",
+        "botStatus": "Landlord call · in conversation",
+        "today": "Today",
+        "inputPlaceholder": "Message",
+        "micLabel": "Record voice message",
+        "unreadCount": 1,
+        "messages": [
+          {
+            "from": "bot",
+            "kind": "voice",
+            "duration": "0:05",
+            "text": "Hi, this is Mark from Bayswater Property. You said you have an issue with the boiler?"
+          },
+          {
+            "from": "me",
+            "kind": "voice",
+            "duration": "0:07",
+            "text": "Yes, my boiler is not working since two days. We have no hot water."
+          },
+          {
+            "from": "bot",
+            "kind": "text",
+            "text": "**Well done!** They would understand you — that is the main thing. Small grammar tweak: ~~since two days~~ → **for two days**. Use `for` with durations."
+          },
+          {
+            "from": "bot",
+            "kind": "text",
+            "text": "Try again with the right form 👇"
+          },
+          {
+            "from": "me",
+            "kind": "voice",
+            "duration": "0:06",
+            "text": "My boiler has been broken for two days."
+          },
+          {
+            "from": "bot",
+            "kind": "text",
+            "text": "Great 👌 Sounds natural."
+          }
+        ]
+      }
+    },
+    "privacy": {
+      "kicker": "How time is counted",
+      "title": "Transparent — how 15 minutes works.",
+      "subtitle": "No hidden rules. No 'fair use' in small print.",
+      "cards": [
+        {
+          "id": "voice-time",
+          "title": "Time counts only when you speak",
+          "description": "Listening to the bot doesn't count. Re-recording a phrase doesn't count either. No surprises."
+        },
+        {
+          "id": "weekly-limit",
+          "title": "Free trial — 15 minutes per day × 7 days",
+          "description": "15 minutes of speaking every day — up to 105 minutes of practice across the trial. On Pro it's the same 15 minutes per day, limit resets every 24 hours."
+        },
+        {
+          "id": "pause",
+          "title": "Pause on the fly",
+          "description": "If you stop mid-session, the timer stops. You'll continue tomorrow, minutes won't burn."
+        },
+        {
+          "id": "voice-storage",
+          "title": "Voice recordings deleted in 24h",
+          "description": "Audio is transcribed and deleted. The transcript is kept for your progress — you can delete it in /settings."
+        },
+        {
+          "id": "gdpr",
+          "title": "GDPR-compliant",
+          "description": "Data isn't shared with third parties. Full deletion on request — one email to hi@speakmove.app."
+        },
+        {
+          "id": "v0-honesty",
+          "title": "This is V0",
+          "description": "Early version. Not every scenario is perfectly polished, bugs are possible. Direct line to me in TG — message me, I'll fix it."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Open the bot. Try one scenario.",
+      "cta": "Open in Telegram",
+      "meta": "7 days free · No card · Cancel in one click or via support"
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "How it works — the details",
+      "subtitle": "Technical and practical questions. Don't see yours? Message me.",
+      "contactEmail": "hi@speakmove.app",
+      "items": [
+        {
+          "id": "accent",
+          "question": "What accent does the bot use?",
+          "answer": "British. Neutral RP, no regional dialects. To help you get used to different voices, the bot varies intonation between scenarios."
+        },
+        {
+          "id": "level",
+          "question": "What if my English is really weak?",
+          "answer": "Scenarios adapt to your level: the bot speaks slower, simplifies phrases, gives you more pauses. You can start with one scenario (say, GP) and take your time."
+        },
+        {
+          "id": "understand",
+          "question": "What if the bot doesn't understand me?",
+          "answer": "You'll see the transcript of what was recognised — you can replay and re-record. Recognition handles accents, but if a phrase is unclear, the easiest fix is to re-record calmly."
+        },
+        {
+          "id": "replay",
+          "question": "How many times can I replay a voice message?",
+          "answer": "As many as you want. Replays don't count against your minutes — they aren't counted at all."
+        },
+        {
+          "id": "pause",
+          "question": "Can I pause mid-session?",
+          "answer": "Yes. Close the bot — the timer stops. Open it tomorrow — you continue from the same spot. The bot remembers the context of your last conversation."
+        },
+        {
+          "id": "british-vs-american",
+          "question": "British or American English?",
+          "answer": "British — because we're about UK scenarios. Feedback uses UK forms ('flat' not 'apartment', 'GP' not 'family doctor', 'queue' not 'line')."
+        },
+        {
+          "id": "minute-counted",
+          "question": "What counts as a minute?",
+          "answer": "Only the time when **you speak** into the mic. Listening to the bot — doesn't count. Replaying — doesn't count. Transcript and feedback — don't count. Just your speaking time."
+        },
+        {
+          "id": "without-telegram",
+          "question": "Can I use it without Telegram?",
+          "answer": "Not right now. The service runs only through the Telegram bot. A web version is on the table after the V0 test, if there are paying users."
+        },
+        {
+          "id": "history",
+          "question": "Can I go back to old conversations?",
+          "answer": "Yes. `/history` lists your most recent sessions with all your voice messages and the bot's feedback. You can replay and track progress."
+        },
+        {
+          "id": "beginners",
+          "question": "Is this suitable for beginners?",
+          "answer": "Depends on your level. If you've never spoken English at all, take a basic grammar course first. If you can put together a simple sentence, SpeakMove will help you build into confident conversation."
+        }
+      ]
+    }
+  },
+  "PricingPage": {
+    "meta": {
+      "title": "SpeakMove pricing — £9.90/mo, 7 days free, no card",
+      "description": "One plan: £9.90/mo or £0.33/day. 7-day free trial, no card. 15 minutes of voice practice per day across 8 UK life scenarios. Transparent unit economics, 10-question FAQ."
+    },
+    "hero": {
+      "crumb": "Pricing",
+      "title": "£9.90 a month — less than a coffee a day.",
+      "description": "One plan. 7 days free, no card. Cancel in one click.",
+      "perDay": "£0.33",
+      "perDayUnit": "/ day",
+      "perMonth": "= £9.90 per month",
+      "cta": "Start free",
+      "ctaFootnote": "No card · Cancel in one click or via support"
+    },
+    "structuredData": {
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Telegram",
+      "price": "9.90",
+      "priceCurrency": "GBP",
+      "unitText": "MON",
+      "areaServed": "GB"
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Common questions",
+      "subtitle": "Don't see yours? Message me, I'll reply personally.",
+      "contactEmail": "hi@speakmove.app",
+      "items": [
+        {
+          "id": "free-trial",
+          "question": "What's the 7-day free trial without a card?",
+          "answer": "7 days of access to all 8 scenarios × 15 minutes of voice conversation per day (up to 105 minutes of practice in total). No card to add. When the trial ends, just don't buy a subscription."
+        },
+        {
+          "id": "minutes",
+          "question": "How are 15 minutes a day counted?",
+          "answer": "Only the time **you speak**. Listening to the bot doesn't count. Re-recording a phrase doesn't count either. The limit resets every 24 hours at midnight."
+        },
+        {
+          "id": "feedback-language",
+          "question": "What language is the feedback in?",
+          "answer": "Russian or Ukrainian — you choose when you first launch the bot. You can change it in /settings."
+        },
+        {
+          "id": "cancel",
+          "question": "How do I cancel?",
+          "answer": "In **one click** in Telegram settings. Or message support — I'll reply personally."
+        },
+        {
+          "id": "refund",
+          "question": "What if I don't like it after 3 days of the trial?",
+          "answer": "Just don't subscribe. No card on file, nothing will be charged. Feel free to message me what didn't work — it matters."
+        },
+        {
+          "id": "currency",
+          "question": "Supported currencies?",
+          "answer": "Charged in GBP via Stripe. Stripe converts automatically from your card — works with EU and UK cards."
+        },
+        {
+          "id": "voice-security",
+          "question": "How are voice recordings secured?",
+          "answer": "Recordings are transcribed and **deleted within 24 hours**. We keep the transcript for your progress — you can delete it in /settings."
+        },
+        {
+          "id": "data",
+          "question": "What about my data?",
+          "answer": "GDPR-compliant. We don't share with third parties. Delete request — one email to hi@speakmove.app."
+        },
+        {
+          "id": "accent",
+          "question": "Does the bot understand a Slavic accent in English?",
+          "answer": "Yes. Trained across many accents. If something is mis-transcribed, you'll see the transcript and can replay."
+        },
+        {
+          "id": "v0",
+          "question": "This is V0 — what does that mean?",
+          "answer": "Early version. Not every scenario is perfectly polished, bugs are possible. Direct line to me — message in TG and I'll fix it."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "7 days free. No card.",
+      "cta": "Start free",
+      "meta": "No card · Cancel in one click or via support"
+    },
+    "plan": {
+      "badge": "Pro",
+      "name": "One plan for everything",
+      "perDay": "£0.33",
+      "perDayUnit": "/ day",
+      "perMonth": "= £9.90 per month",
+      "subprice": "No hidden charges",
+      "features": [
+        "15 minutes of voice conversation per day",
+        "All 8 UK life scenarios",
+        "British accent in voice replies",
+        "Feedback in Russian or Ukrainian",
+        "Pause on the fly — step away, timer stops",
+        "Cancel anytime in one click"
+      ],
+      "cta": "Start free",
+      "footnote": "No card · Cancel in Telegram settings or via support",
+      "priceToggle": {
+        "modes": [
+          { "id": "month", "label": "per month", "amount": "£9.90", "unit": "/mo", "value": 9.9 },
+          { "id": "day", "label": "per day", "amount": "£0.33", "unit": "/day", "value": 0.33 },
+          { "id": "coffee", "label": "vs coffee", "amount": "1", "unit": "latte a day", "value": 1 }
+        ]
+      }
+    },
+    "unitEconomics": {
+      "kicker": "Transparent",
+      "title": "Where your £9.90 goes.",
+      "subtitle": "Not marketing speak, not investor premium. Honest breakdown.",
+      "currency": "£",
+      "rows": [
+        {
+          "label": "Recognising your speech",
+          "amount": "0.50"
+        },
+        {
+          "label": "AI partner + feedback generation",
+          "amount": "0.50"
+        },
+        {
+          "label": "British voice synthesis for replies",
+          "amount": "3.50"
+        },
+        {
+          "label": "Payment processing",
+          "amount": "0.40"
+        },
+        {
+          "label": "Hosting and infrastructure",
+          "amount": "0.20"
+        }
+      ],
+      "costTotal": {
+        "label": "Cost",
+        "amount": "5.10"
+      },
+      "margin": {
+        "label": "What's left (for development + my time)",
+        "amount": "4.80"
+      },
+      "bottomLine": "At full usage of 15 minutes per day about £4.80 goes to us — for development, support, my time and a buffer for V0 mistakes. If you don't speak every day, the margin is higher. Numbers shown at peak usage, without cache savings or volume discounts."
+    },
+    "comparison": {
+      "kicker": "Compare",
+      "title": "Why £9.90 is a fair price for speaking practice.",
+      "blocks": [
+        {
+          "id": "tutor",
+          "name": "Tutor",
+          "price": "£15-20/hr",
+          "note": "4 sessions a month = £60-80. High quality, but only at scheduled times."
+        },
+        {
+          "id": "speak",
+          "name": "Speak app",
+          "price": "£14/mo",
+          "note": "General AI conversation. Won't teach you \"council tax\" or \"claimant commitment\"."
+        },
+        {
+          "id": "speakmove",
+          "name": "SpeakMove",
+          "price": "£9.90/mo",
+          "note": "8× cheaper than a tutor, half of Speak. UK scenarios only, voice only.",
+          "emphasis": true
+        }
+      ],
+      "closingLine": "We're not better than a tutor, and not better than Speak. We're different — functional practice on the specific situations of UK life. When you need to call your landlord or visit the GP, a tutor can't help in the moment. We can.",
+      "matrix": {
+        "title": "Comparison: tutor, Speak app and SpeakMove",
+        "criterionLabel": "Criterion",
+        "columns": ["Tutor", "Speak app", "SpeakMove"],
+        "columnsShort": ["Tutor", "Speak", "Us"],
+        "markLabels": {
+          "yes": "Yes",
+          "no": "No",
+          "partial": "Partial"
+        },
+        "rows": [
+          {
+            "criterion": "UK everyday scenarios (council tax, GP, landlord)",
+            "kind": "mark",
+            "values": ["no", "no", "yes"]
+          },
+          {
+            "criterion": "Voice practice",
+            "kind": "mark",
+            "values": ["yes", "yes", "yes"]
+          },
+          {
+            "criterion": "Available 24/7, any moment",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Feedback in your language (RU/UK)",
+            "kind": "mark",
+            "values": ["partial", "no", "yes"]
+          },
+          {
+            "criterion": "No booking or schedule",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Price per month",
+            "kind": "price",
+            "values": ["£60–80", "£14", "£9.90"]
+          }
+        ]
+      }
+    },
+    "trustStrip": {
+      "items": [
+        "7 days free",
+        "No card",
+        "Cancel in one click",
+        "GDPR-compliant"
+      ],
+      "ariaLabel": "Guarantees and benefits"
+    }
+  },
+  "NotFoundPage": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "Maybe the link is outdated or we've moved the page. Head back to the home page, or open the bot directly.",
+    "ctas": {
+      "primary": "Back to home",
+      "secondary": "Open the bot in Telegram"
+    },
+    "suggestions": {
+      "title": "You might be looking for:",
+      "links": [
+        {
+          "label": "How it works",
+          "href": "/how-it-works"
+        },
+        {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        {
+          "label": "Open the bot",
+          "href": "https://t.me/speakmove_bot"
+        }
+      ]
+    },
+    "meta": {
+      "title": "Page not found · SpeakMove",
+      "description": "Page not found. The link may be outdated. Head back to the SpeakMove home page.",
+      "robots": "noindex, follow"
+    }
+  },
+  "PrivacyPage": {
+    "meta": {
+      "title": "Privacy policy",
+      "effectiveDate": "19 May 2026",
+      "lastUpdated": "19 May 2026",
+      "intro": "What we store, why, and how you can delete your data.",
+      "description": "SpeakMove privacy policy: what data we store, why, who processes it and how you can delete it. GDPR-compliant.",
+      "title_meta": "Privacy policy · SpeakMove"
+    },
+    "sections": [
+      {
+        "id": "controller",
+        "heading": "Who is the data controller",
+        "body": [
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address for service of documents: Weston-super-Mare, UK, BS23 1RH.",
+          "Registered with the UK Information Commissioner's Office (ICO) as a data controller. Registration number **ZC141876** — verify at ico.org.uk.",
+          "Data contact: **hi@speakmove.app**."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "heading": "Who can use the service",
+        "body": [
+          "SpeakMove is intended **for users aged 18 and over only**. The bot's scenarios (landlord call, GP, work coach, bank, job interview) are adult life situations.",
+          "By using the service you confirm you are **18 or over**. If we discover data was collected from a minor — we'll delete it and block the account."
+        ]
+      },
+      {
+        "id": "biometric",
+        "heading": "Voice recordings and biometric data",
+        "body": [
+          "Voice recordings are technically classified as **biometric data** under GDPR Art. 4(14). Important things to know:",
+          {
+            "type": "list",
+            "items": [
+              "Voice is used **only for speech-to-text recognition**. It is not used to identify you by your voice",
+              "Recordings are **deleted within 24 hours** after transcription",
+              "Voice **is not used** to train third-party AI models",
+              "Voice **is not shared** with third parties except the transcription sub-processor (see below)",
+              "You can **withdraw consent** at any time — cancelling the subscription stops voice processing"
+            ]
+          },
+          "Legal basis for voice processing: **performance of contract** (Art. 6(1)(b)) + **explicit consent** to speech processing (Art. 9(2)(a)) collected on first bot launch."
+        ]
+      },
+      {
+        "id": "what",
+        "heading": "What we store",
+        "body": [
+          "SpeakMove is a Telegram bot for practising spoken English. We keep a minimal data set:",
+          {
+            "type": "list",
+            "items": [
+              "**Telegram ID** — to link your account to your subscription and progress",
+              "**Feedback language** (Russian or Ukrainian) — picked on first launch",
+              "**Voice recordings of your replies** — processed and **deleted within 24 hours**",
+              "**Text transcripts** of your speech — kept for progress and session history, you can delete them in `/settings`",
+              "**Subscription status** — managed via Stripe (subscription id, paid_until)"
+            ]
+          },
+          "We **don't ask** for your name, surname, address, date of birth or other personal details."
+        ]
+      },
+      {
+        "id": "purpose",
+        "heading": "Why we store it",
+        "body": [
+          "To deliver the service: hold the conversation, give you feedback in your native language, track progress, bill the subscription.",
+          "**Legal basis** (GDPR Art. 6): performance of a contract (subscription service) and legitimate interest (operational support of the service)."
+        ]
+      },
+      {
+        "id": "processors",
+        "heading": "Sub-processors",
+        "body": [
+          "Parts of your data flow through external providers so the service can work:",
+          {
+            "type": "list",
+            "items": [
+              "**Stripe** — subscription payment processing (UK, GDPR-compliant)",
+              "**AI provider for speech recognition** — your voice is transcribed to text for downstream processing",
+              "**AI provider for reply generation** — the transcript text is used to generate feedback and the bot's replies",
+              "**AI provider for speech synthesis** — generates the bot's English voice reply",
+              "**Telegram** — the messenger you interact with the bot through",
+              "**EU hosting provider** — for application logic and the database"
+            ]
+          },
+          "All sub-processors are GDPR-compliant and do not use your data to train their own models. A full vendor list is available on request — write to hi@speakmove.app."
+        ]
+      },
+      {
+        "id": "retention",
+        "heading": "How long we keep it",
+        "body": [
+          {
+            "type": "list",
+            "items": [
+              "**Voice recordings**: up to 24 hours after receipt. Used only for transcription, deleted automatically",
+              "**Text transcripts**: until you delete them in `/settings`",
+              "**Telegram ID and subscription status**: while the account is active + 30 days after cancellation",
+              "**Billing history (Stripe)**: 7 years — required by UK tax law"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rights",
+        "heading": "Your rights",
+        "body": [
+          "Under GDPR (Art. 15–22) you have the rights to:",
+          {
+            "type": "list",
+            "items": [
+              "**Access** — get a copy of all your data",
+              "**Rectification** — ask us to correct inaccurate data",
+              "**Erasure** — ask us to delete all your data (right to be forgotten)",
+              "**Portability** — receive your data in a machine-readable format",
+              "**Restriction** — ask us to restrict processing",
+              "**Objection** — object to certain types of processing"
+            ]
+          },
+          "To exercise any of these — email **hi@speakmove.app**. We'll respond within 30 days (usually within 48 hours).",
+          "If you believe we're breaching GDPR — you can complain to the **UK ICO**: ico.org.uk/make-a-complaint."
+        ]
+      },
+      {
+        "id": "international",
+        "heading": "Data transfers outside UK/EU",
+        "body": [
+          "Some sub-processors (for example AI providers) may process data in the US or other jurisdictions. Transfers are protected by **Standard Contractual Clauses (SCCs)** or UK/EU adequacy decisions."
+        ]
+      },
+      {
+        "id": "changes",
+        "heading": "Changes to this policy",
+        "body": [
+          "If the policy changes, we'll update the \"Last updated\" date at the top of this page. For material changes — notification via the Telegram bot or email.",
+          "SpeakMove is currently V0 (early version). If V0 testing leads to a different legal structure (UK Ltd), we'll notify in advance."
+        ]
+      },
+      {
+        "id": "contact",
+        "heading": "Contact",
+        "body": [
+          "Any privacy questions: **hi@speakmove.app**.",
+          "Or directly on Telegram: **@dmitriy**."
+        ]
+      }
+    ]
+  },
+  "TermsPage": {
+    "meta": {
+      "title": "Terms of use",
+      "effectiveDate": "19 May 2026",
+      "lastUpdated": "19 May 2026",
+      "intro": "The agreement between you and SpeakMove. Short, and without legal jargon where possible.",
+      "description": "SpeakMove terms of use: what we provide, £9.90/mo subscription, cancellation, limits, liability. UK sole trader Dmytro Fenko.",
+      "title_meta": "Terms of use · SpeakMove"
+    },
+    "sections": [
+      {
+        "id": "operator",
+        "heading": "Who runs the service",
+        "body": [
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address: Weston-super-Mare, UK, BS23 1RH.",
+          "Registered with UK ICO as a data controller (ZC141876). Contact: **hi@speakmove.app**."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "heading": "Who can use the service (18+)",
+        "body": [
+          "SpeakMove is intended **for users aged 18 and over only**. By using the service you confirm you are 18 or over.",
+          "If we discover that a minor is using an account — we'll block access and delete the data. See also the \"Who can use the service\" section in the [Privacy Policy](/privacy)."
+        ]
+      },
+      {
+        "id": "service",
+        "heading": "What we provide",
+        "body": [
+          "SpeakMove is a Telegram bot that trains your spoken English by voice on the specific situations of a UK immigrant's life (call to landlord, GP, work coach, job interview, etc.).",
+          "The service runs through the Telegram bot **@SpeakMoveBot**. The speakmove.app website is marketing, not the entry point to the service."
+        ]
+      },
+      {
+        "id": "subscription",
+        "heading": "Subscription and payment",
+        "body": [
+          {
+            "type": "list",
+            "items": [
+              "**Free trial**: 7 days of access + 15 minutes of voice practice. No card needed. If the trial ends, just don't subscribe",
+              "**Pro subscription**: £9.90 per month via Stripe. Includes 15 minutes of voice conversation per day and all 8 scenarios",
+              "Limit resets every 24 hours at 00:00 UTC",
+              "Price is in GBP. Stripe converts automatically from your card"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cancel",
+        "heading": "Cancellation and refunds",
+        "body": [
+          "Cancel in one click in Telegram settings, or via **hi@speakmove.app**.",
+          "After cancellation, access is kept until the end of the paid period. Pro-rata refunds are not offered — that's what the **7-day free trial without a card** is for, so you can confirm the service fits."
+        ]
+      },
+      {
+        "id": "acceptable",
+        "heading": "Acceptable use",
+        "body": [
+          "By using SpeakMove you agree:",
+          {
+            "type": "list",
+            "items": [
+              "**Not to use** the service via automated scripts, bots or emulators",
+              "**Not to attempt** to reproduce or extract the AI logic or voice content for commercial purposes",
+              "**Not to publish** reproduced bot content as your own product",
+              "**Not to use** the service for harassment, spam or illegal activity"
+            ]
+          },
+          "Breach can lead to access being blocked without a refund."
+        ]
+      },
+      {
+        "id": "availability",
+        "heading": "Service availability",
+        "body": [
+          "SpeakMove is currently **V0 (early version)**. We do our best to keep the service running but **don't offer an SLA**. Downtime, bugs and scenario changes are possible.",
+          "If something breaks — message **@dmitriy** on Telegram. We aim to reply within 24 hours."
+        ]
+      },
+      {
+        "id": "ip",
+        "heading": "Intellectual property",
+        "body": [
+          "The prompts, scenarios, bot voice content, code and site design are owned by Dmytro Fenko (SpeakMove).",
+          "**Your voice recordings and transcripts remain yours.** We use them only to deliver the service (see Privacy Policy). We don't use your data to train models."
+        ]
+      },
+      {
+        "id": "liability",
+        "heading": "Liability",
+        "body": [
+          "SpeakMove is an educational tool. **We don't guarantee** that you'll speak fluently after using it — that depends on your practice and many factors.",
+          "**Do not use SpeakMove as a substitute** for a tutor with feedback, a GP in medical situations, a lawyer in legal matters, or a work coach in real meetings.",
+          "Our maximum liability is limited to the subscription amount you paid in the past 12 months."
+        ]
+      },
+      {
+        "id": "law",
+        "heading": "Governing law",
+        "body": [
+          "This agreement is governed by the laws of **England & Wales**. Disputes — in the courts of **England & Wales**.",
+          "If you are a consumer in the EU/UK, nothing in this agreement removes rights you have under your country's law."
+        ]
+      },
+      {
+        "id": "changes",
+        "heading": "Changes to these terms",
+        "body": [
+          "If the terms change, we'll update the \"Last updated\" date and send notification through the Telegram bot. Material changes take effect 14 days after notification."
+        ]
+      }
+    ]
+  },
+  "CookiesPage": {
+    "meta": {
+      "title": "Cookies policy",
+      "effectiveDate": "19 May 2026",
+      "lastUpdated": "19 May 2026",
+      "intro": "Which cookies the landing page uses, and how to turn them off.",
+      "description": "Cookies on speakmove.app: only essentials for the site to work. Analytics and marketing cookies are opt-in. PECR + GDPR compliant.",
+      "title_meta": "Cookies policy · SpeakMove"
+    },
+    "sections": [
+      {
+        "id": "scope",
+        "heading": "Scope",
+        "body": [
+          "This policy applies **only to the speakmove.app landing page**. The service itself runs inside Telegram, which has its own cookies — see the Telegram Privacy Policy.",
+          "**Telegram cookies aren't ours.** We don't control them and have no access to them."
+        ]
+      },
+      {
+        "id": "essential",
+        "heading": "Essential cookies (always on)",
+        "body": [
+          "The site doesn't work without these:",
+          {
+            "type": "list",
+            "items": [
+              "**Language preference** (`NEXT_LOCALE`) — remembers your chosen language (RU / UA / EN)",
+              "**Cookie consent state** (`speakmove_cookie_consent`) — remembers your consent choice so the banner isn't shown again"
+            ]
+          },
+          "Retention: up to one year. Not shared with third parties."
+        ]
+      },
+      {
+        "id": "analytics",
+        "heading": "Analytics and marketing (opt-in)",
+        "body": [
+          "**Right now in V0 we don't use any analytics or marketing cookies.** No Google Analytics, no Meta Pixel, no TikTok Pixel — yet.",
+          "When we add them, they will **only load after explicit consent** via the cookie banner. Until consent — no tracking scripts on the page."
+        ]
+      },
+      {
+        "id": "withdraw",
+        "heading": "Withdrawing consent",
+        "body": [
+          "Currently there's nothing to withdraw, but once analytics cookies exist:",
+          {
+            "type": "list",
+            "items": [
+              "Clear site cookies in your browser settings — on next visit the cookie banner will reappear",
+              "You can also set browser-level Do Not Track — we respect it"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compliance",
+        "heading": "PECR and GDPR",
+        "body": [
+          "Under **UK PECR** and the **EU ePrivacy Directive**, non-essential cookies require explicit opt-in. We follow this.",
+          "Under **GDPR** your consent is granular (by category), revocable (you can withdraw), informed (we explain why)."
+        ]
+      },
+      {
+        "id": "contact",
+        "heading": "Questions",
+        "body": [
+          "For cookies, analytics or your rights: **hi@speakmove.app**."
+        ]
+      }
+    ]
+  },
+  "DisclaimerPage": {
+    "meta": {
+      "title": "Disclaimer",
+      "effectiveDate": "21 May 2026",
+      "lastUpdated": "21 May 2026",
+      "intro": "Service limits, AI accuracy, and where SpeakMove **doesn't fit**.",
+      "description": "SpeakMove disclaimer: AI can be wrong, the service does not replace a GP, lawyer, tutor or certification. 18+ only.",
+      "title_meta": "Disclaimer · SpeakMove"
+    },
+    "sections": [
+      {
+        "id": "what",
+        "heading": "What this page is",
+        "body": [
+          "This page is a short and honest warning about **what SpeakMove does not do**. If you plan to use the service for critical things (medical, legal, immigration paperwork) — read this before subscribing."
+        ]
+      },
+      {
+        "id": "ai-accuracy",
+        "heading": "AI can be wrong",
+        "body": [
+          "The SpeakMove bot runs on AI (large language model + speech recognition + speech synthesis). AI is **not perfect**:",
+          {
+            "type": "list",
+            "items": [
+              "The bot may give an **incorrect grammar correction** — especially in rare or complex constructions",
+              "The bot may **mis-recognise your accent** — especially with background noise or a weak microphone signal",
+              "The bot may give **inaccurate advice** about UK realities (council tax, immigration rules, employment law)",
+              "The AI voice is **not identical to a real British speaker** — it's a close but synthetic approximation"
+            ]
+          },
+          "**Verify critical information** against primary sources — UK Government (gov.uk), Citizens Advice, NHS, your actual landlord/employer."
+        ]
+      },
+      {
+        "id": "not-replacement",
+        "heading": "SpeakMove **does not replace**",
+        "body": [
+          "SpeakMove is a **conversation practice tool**. It does not replace:",
+          {
+            "type": "list",
+            "items": [
+              "**A tutor** giving real feedback on your speech, mistakes and progress",
+              "**A GP** in medical situations — if you have serious symptoms, call NHS 111 or see a GP",
+              "**A lawyer** for legal matters — immigration, contracts, disputes",
+              "**An immigration adviser** (UK OISC-registered) — for visa, ILR, citizenship",
+              "**A certification** (IELTS, Cambridge ESOL, Trinity GESE) — SpeakMove does not issue certificates and is not CEFR-aligned"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "voice-data",
+        "heading": "Voice data",
+        "body": [
+          "Your voice is **technically biometric data** under GDPR Art. 4(14). SpeakMove:",
+          {
+            "type": "list",
+            "items": [
+              "Uses voice **only for speech recognition** (speech-to-text)",
+              "**Deletes voice within 24 hours** after transcription",
+              "**Does not use** voice to train AI models",
+              "**Does not identify** you by your voice"
+            ]
+          },
+          "Details — in the [Privacy Policy](/privacy)."
+        ]
+      },
+      {
+        "id": "age",
+        "heading": "18+ only",
+        "body": [
+          "SpeakMove is **not intended for minors**. Scenarios (landlord call, GP, work coach, bank, job interview) are adult life situations.",
+          "If you are a parent and discovered a minor using the service — email **hi@speakmove.app** and we'll delete the data."
+        ]
+      },
+      {
+        "id": "no-guarantee",
+        "heading": "We do not guarantee results",
+        "body": [
+          "**We do not guarantee** that after using SpeakMove you will:",
+          {
+            "type": "list",
+            "items": [
+              "Speak fluently",
+              "Pass IELTS / a job interview",
+              "Get a visa / ILR / citizenship",
+              "Resolve your problem with a landlord / GP / DWP"
+            ]
+          },
+          "The result depends on **your practice, motivation and dozens of other factors**. The service is just a tool."
+        ]
+      },
+      {
+        "id": "liability",
+        "heading": "Liability limit",
+        "body": [
+          "SpeakMove's maximum liability is the subscription amount you paid in the last 12 months. We are not liable for:",
+          {
+            "type": "list",
+            "items": [
+              "Decisions you made based on AI advice",
+              "Mistakes in your real conversations with landlord/GP/employer",
+              "Stress, anxiety or other emotional impact from using the service",
+              "Downtime, bugs, V0-instabilities"
+            ]
+          },
+          "Details — in the [Terms of Use](/terms)."
+        ]
+      },
+      {
+        "id": "contact",
+        "heading": "Questions",
+        "body": [
+          "If anything is unclear — write to **hi@speakmove.app** or on Telegram **@dmitriy**."
+        ]
+      }
+    ]
+  },
+  "MetaGlobal": {
+    "siteName": "SpeakMove",
+    "tagline": "Speaking practice for real UK life situations",
+    "defaultTitle": "SpeakMove — Speaking practice for UK immigrants",
+    "titleTemplate": "%s · SpeakMove",
+    "defaultDescription": "Voice AI partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial, no card required.",
+    "defaultKeywords": [
+      "speakmove",
+      "english speaking practice UK",
+      "english speaking practice online",
+      "conversational english practice",
+      "how to improve spoken english",
+      "english voice practice online",
+      "english for immigrants UK",
+      "telegram english bot",
+      "voice english practice",
+      "english for GP appointment",
+      "job interview english UK",
+      "work coach english practice",
+      "phone english practice",
+      "AI conversation partner english",
+      "british accent practice",
+      "english for care workers",
+      "speaking practice UK",
+      "english tutor alternative"
+    ],
+    "author": "SpeakMove Team",
+    "contactEmail": "hi@speakmove.app",
+    "telegramBot": "@SpeakMoveBot",
+    "ogImage": "/og/speakmove-og.png",
+    "ogImageAlt": "SpeakMove — Speaking practice for UK immigrants",
+    "twitterCard": "summary_large_image",
+    "twitterHandle": "@speakmove",
+    "themeColor": "#047857",
+    "locale": "en",
+    "cookies": {
+      "title": "We use cookies",
+      "description": "Essential cookies are always on — the site doesn't work without them. Analytics, functional and marketing cookies are loaded only if you allow them. You can withdraw consent at any time.",
+      "accept": "Accept all",
+      "decline": "Essentials only",
+      "settings": "Customise",
+      "policyLinkLabel": "Cookies policy",
+      "policyLinkHref": "/cookies",
+      "privacyLinkLabel": "Privacy policy",
+      "privacyLinkHref": "/privacy"
+    }
+  },
+  "Common": {
+    "skipToContent": "Skip to content",
+    "error": {
+      "title": "Something went wrong",
+      "lead": "We're looking into it. Try refreshing the page.",
+      "cta": "Refresh"
+    },
+    "aria": {
+      "privacyFeatures": "Security and privacy features",
+      "faqList": "Frequently asked questions",
+      "statsGrid": "Key metrics",
+      "cefrLevels": "CEFR levels",
+      "flowSteps": "User journey steps",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "menu": "Menu",
+      "primary": "Primary navigation",
+      "tasks": "Tasks"
+    },
+    "navSections": "Sections",
+    "effectiveLabel": "Effective:",
+    "lastUpdatedLabel": "Last updated:",
+    "breadcrumb": {
+      "home": "Home"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+import { getTranslations } from 'next-intl/server';
+import { getList, getObject } from '@/shared/model/libs/i18n/get-list';
+import { Container, InlineMarkdown } from '@/shared/ui';
+import { LegalToc } from '@/widgets/legal-toc';
+
+type TLegalSection = {
+  id: string;
+  heading: string;
+  body: Array<string | { type: 'list'; items: string[] }>;
+};
+
+type TLegalMeta = {
+  title: string;
+  effectiveDate: string;
+  lastUpdated: string;
+  intro: string;
+};
+
+type TProps = {
+  namespace: 'PrivacyPage' | 'TermsPage' | 'CookiesPage' | 'DisclaimerPage';
+};
+
+export const LegalPageLayout = async ({ namespace }: TProps) => {
+  const t = await getTranslations(namespace as never);
+  const tCommon = await getTranslations('Common');
+  const meta = getObject<TLegalMeta>(t, 'meta');
+  const sections = getList<TLegalSection>(t, 'sections');
+
+  if (!meta) return null;
+
+  const tocItems = sections.map((s) => ({ id: s.id, heading: s.heading }));
+
+  return (
+    <Container className="px-5 md:px-6">
+      <header className="border-b border-line py-12">
+        <h1
+          className="h-display-legal mb-3 font-extrabold leading-[1.1] tracking-tight text-ink"
+        >
+          {meta.title}
+        </h1>
+        <p className="m-0 text-base text-muted">{meta.intro}</p>
+        <div className="mt-3 font-mono text-13 text-faint">
+          <span>
+            {tCommon('effectiveLabel')} {meta.effectiveDate}
+          </span>
+          <span aria-hidden="true"> · </span>
+          <span>
+            {tCommon('lastUpdatedLabel')} {meta.lastUpdated}
+          </span>
+        </div>
+      </header>
+
+      <div className="grid items-start gap-12 py-12 lg:grid-cols-[220px_1fr]">
+        <aside
+          className="hidden text-13-5 lg:sticky lg:top-[88px] lg:block"
+        >
+          <h2 className="m-0 mb-3 text-mini font-bold uppercase tracking-[0.08em] text-faint">
+            {tCommon('navSections')}
+          </h2>
+          <LegalToc items={tocItems} ariaLabel={tCommon('navSections')} />
+        </aside>
+
+        <div className="max-w-2xl text-15-5 leading-relaxed">
+          {sections.map((section) => (
+            <section
+              key={section.id}
+              id={section.id}
+              aria-labelledby={`${section.id}-heading`}
+              className="mb-8 last:mb-0"
+            >
+              <h2
+                id={`${section.id}-heading`}
+                className="mt-8 mb-4 text-2xl font-extrabold leading-snug tracking-[-0.015em] text-ink first:mt-0"
+              >
+                {section.heading}
+              </h2>
+              {section.body.map((block, idx) => {
+                if (typeof block === 'string') {
+                  return (
+                    <p key={`${section.id}-p-${idx}`} className="mb-5 text-muted">
+                      <InlineMarkdown text={block} />
+                    </p>
+                  );
+                }
+                if (block && typeof block === 'object' && block.type === 'list') {
+                  return (
+                    <ul
+                      key={`${section.id}-ul-${idx}`}
+                      className="mb-5 list-disc pl-6 text-muted"
+                    >
+                      {block.items.map((item, j) => (
+                        <li key={`${section.id}-li-${idx}-${j}`} className="mb-2">
+                          <InlineMarkdown text={item} />
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+                return null;
+              })}
+            </section>
+          ))}
+        </div>
+      </div>
+    </Container>
+  );
+};

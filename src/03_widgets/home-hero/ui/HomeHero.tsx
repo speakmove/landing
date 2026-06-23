@@ -1,0 +1,79 @@
+import { getLocale, getTranslations } from 'next-intl/server';
+import { getList } from '@/shared/model/libs/i18n/get-list';
+import { ButtonLink, Container, CheckIcon, ArrowRightIcon } from '@/shared/ui';
+import { buildBotUrl } from '@/shared/model/utils';
+import { HomePhonePreview } from './HomePhonePreview';
+import { HeroBgParallax } from './HeroBgParallax';
+import { HeroTitle } from './HeroTitle';
+import { ANCHORS } from '@/shared/config';
+
+export const HomeHero = async () => {
+  const t = await getTranslations('HomePage.hero');
+  const locale = await getLocale();
+
+  const eyebrowItems = getList<string>(t, 'eyebrow.items');
+  const metaPoints = getList<string>(t, 'metaPoints');
+
+  return (
+    <header id={ANCHORS.hero} className="relative overflow-hidden px-5 pt-8 pb-14 md:px-6 md:pt-10 md:pb-20 lg:pb-24">
+      <HeroBgParallax />
+      <div className="hero-ambient-blob" aria-hidden="true" />
+
+      <Container className="relative z-10 px-0">
+        <div className="mt-4 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+          {/* Left column */}
+          <div>
+            {/* Eyebrow chip */}
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/85 px-3.5 py-1.5 text-10 font-semibold text-muted shadow-(--shadow-soft) md:text-13">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_20%,transparent)]" />
+              {eyebrowItems.map((item, idx) => (
+                <span key={item} className="inline-flex items-center gap-2.5">
+                  {idx > 0 ? <span className="text-line-strong">·</span> : null}
+                  {item}
+                </span>
+              ))}
+            </span>
+
+            {/* H1 */}
+            <HeroTitle
+              before={t('title.before')}
+              accent={t('title.accent')}
+              after={t('title.after')}
+            />
+
+            {/* Description */}
+            <p className="mb-7 max-w-140 text-lg leading-[1.55] text-muted">
+              {t('description')}
+            </p>
+
+            {/* CTAs */}
+            <div className="mb-8 flex flex-wrap gap-3">
+              <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
+                {t('ctas.primary')}
+                <ArrowRightIcon size={16} />
+              </ButtonLink>
+              <ButtonLink href={`/#${ANCHORS.howItWorks}`} variant="outline" size="lg">
+                {t('ctas.secondary')}
+              </ButtonLink>
+            </div>
+
+            {/* Meta points */}
+            <div className="flex flex-wrap gap-5 text-13-5 text-muted">
+              {metaPoints.map((point) => (
+                <span key={point} className="inline-flex items-center gap-1.5 font-medium">
+                  <CheckIcon size={14} className="text-primary shrink-0" strokeWidth={3} />
+                  {point}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Right column — phone preview */}
+          <div className="relative flex justify-center lg:justify-start">
+            <HomePhonePreview />
+          </div>
+        </div>
+      </Container>
+    </header>
+  );
+};
