@@ -8,6 +8,12 @@ import type { TPricingCardData, TPricingCardVariant } from '../model/types';
 type TProps = TPricingCardData & TPricingCardVariant & {
   /** id for aria-labelledby on the wrapping section/article. */
   titleId?: string;
+  /**
+   * Interactive price control rendered in the emerald panel of the `split`
+   * variant. Composed at the widget level (e.g. `<PriceToggle />`) so the
+   * entity stays free of feature-layer imports. Ignored by other sizes.
+   */
+  priceSlot?: ReactNode;
 };
 
 /**
@@ -35,7 +41,24 @@ export const PricingCard = ({
   footnote,
   size = 'compact',
   titleId,
+  priceSlot,
 }: TProps) => {
+  if (size === 'split') {
+    return (
+      <SplitPricingCard
+        badge={badge}
+        title={title}
+        subtitle={subtitle}
+        features={features}
+        primaryCtaLabel={primaryCtaLabel}
+        primaryCtaHref={primaryCtaHref}
+        footnote={footnote}
+        titleId={titleId}
+        priceSlot={priceSlot}
+      />
+    );
+  }
+
   const isWide = size === 'wide';
 
   return (
@@ -136,17 +159,96 @@ export const PricingCard = ({
   );
 };
 
+const SplitPricingCard = ({
+  badge,
+  title,
+  subtitle,
+  features,
+  primaryCtaLabel,
+  primaryCtaHref,
+  footnote,
+  titleId,
+  priceSlot,
+}: Pick<
+  TProps,
+  | 'badge'
+  | 'title'
+  | 'subtitle'
+  | 'features'
+  | 'primaryCtaLabel'
+  | 'primaryCtaHref'
+  | 'footnote'
+  | 'titleId'
+  | 'priceSlot'
+>) => (
+  <article
+    className="mx-auto -mt-6 grid max-w-4xl overflow-hidden rounded-card-lg shadow-(--shadow-deep) md:grid-cols-2"
+    aria-labelledby={titleId}
+  >
+    {/* Left — emerald panel: badge → price toggle → CTA → risk line. */}
+    <div className="pricing-split-panel flex flex-col justify-center gap-1 p-7 text-white md:p-10">
+      <span className="inline-flex w-fit items-center rounded-full bg-white/15 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-white">
+        {badge}
+      </span>
+      <h2
+        id={titleId}
+        className="mt-4 m-0 text-balance text-2xl font-extrabold tracking-tight text-white md:text-3xl"
+      >
+        {title}
+      </h2>
+
+      <div className="mt-5">{priceSlot}</div>
+
+      <PrimaryCta href={primaryCtaHref} fullWidth onEmerald>
+        {primaryCtaLabel}
+      </PrimaryCta>
+
+      <p className="mt-4 m-0 text-12 text-white/70">{footnote}</p>
+    </div>
+
+    {/* Right — white "what's included" panel. */}
+    <div className="flex flex-col justify-center bg-white p-7 md:p-10">
+      {subtitle ? (
+        <p className="m-0 text-pretty text-15-5 font-semibold leading-relaxed text-ink">
+          {subtitle}
+        </p>
+      ) : null}
+      <ul className="mt-5 m-0 list-none space-y-3.5 p-0">
+        {features.map((feature, idx) => (
+          <li
+            key={`${idx}-${feature.slice(0, 24)}`}
+            className="flex items-start gap-2.5 text-14-5 leading-snug text-ink"
+          >
+            <CheckIcon
+              size={18}
+              strokeWidth={3}
+              className="mt-0.5 shrink-0 text-primary"
+            />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+);
+
 const PrimaryCta = ({
   href,
   fullWidth,
+  onEmerald = false,
   children,
 }: {
   href: string;
   fullWidth: boolean;
+  onEmerald?: boolean;
   children: ReactNode;
 }) => {
   if (!isSafeHref(href)) return null;
-  const className = cn('btn btn-primary btn-lg', fullWidth && 'w-full');
+  const className = cn(
+    'btn btn-lg',
+    onEmerald ? 'btn-on-emerald mt-6' : 'btn-primary',
+    fullWidth && 'w-full',
+  );
   if (isExternalHref(href)) {
     return (
       <a

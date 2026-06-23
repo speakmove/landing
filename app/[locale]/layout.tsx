@@ -9,6 +9,7 @@ import { JsonLd, SkipLink } from '@/shared/ui';
 import { LenisProvider } from '@/features/smooth-scroll';
 import { SiteHeader } from '@/widgets/site-header';
 import { SiteFooter } from '@/widgets/site-footer';
+import { ScrollBlur } from '@/widgets/scroll-blur';
 import { ELEMENT_IDS, URLS } from '@/shared/config';
 import { env } from '@/shared/model/libs/env';
 import { buildOrganizationLd } from '@/shared/model/libs/jsonld';
@@ -89,13 +90,16 @@ export default async function LocaleLayout({ children, params }: TProps) {
 
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body>
+      <body className="flex min-h-svh flex-col">
         <NextIntlClientProvider>
           <LenisProvider>
             <SkipLink>{tCommon('skipToContent')}</SkipLink>
             <SiteHeader />
-            <main id={ELEMENT_IDS.main}>{children}</main>
+            <main id={ELEMENT_IDS.main} className="flex min-w-0 flex-1 flex-col">
+              {children}
+            </main>
             <SiteFooter />
+            <ScrollBlur />
             <JsonLd data={organizationLd} />
           </LenisProvider>
         </NextIntlClientProvider>

@@ -9,3 +9,5 @@ export type TAdvantageTile = {
   description: string;
   badge?: TAdvantageTileBadge;
 };
+
+export type TAdvantageTileVariant = 'anchor' | 'gold' | 'default';

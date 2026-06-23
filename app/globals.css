@@ -81,6 +81,35 @@
 
   /* Phone-frame side-button color */
   --color-phone-dark: #1d1d1f;
+
+  /* ---- redesign tokens ---- */
+  /* Soft band bg for section rhythm — reuse --color-surface (#f7f8f5); no duplicate */
+  --color-glow-emerald: #5be0a8;
+  /* Distinct emerald steps for the unit-economics donut + legend swatches.
+     Lighter rungs than --color-primary / primary-hover so all 5 cost segments
+     stay distinguishable side-by-side. */
+  --color-emerald-400: #34d399;
+  --color-emerald-300: #6ee7b7;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-reveal: 700ms;
+  --dur-hover: 220ms;
+  --radius-cap: 52px;
+  /* FinalCta full-bleed emerald gradient stops */
+  --color-cta-bleed-from: #063f2e;
+  --color-cta-bleed-to: #0a6b4f;
+  /* FinalCta ambient glow halo */
+  --finalcta-glow-size: 480px;
+  --finalcta-glow-blur: 70px;
+  /* FinalCta voice-wave size */
+  --finalcta-wave-w: 100px;
+  /* 3-D tilt rig tokens */
+  --tilt-perspective: 900px;
+  --tilt-card-z: 40px;
+  /* Extra hit-area padding around the phone for the tilt rig (~40 px halo) */
+  --tilt-halo: 40px;
+  /* iOS-wheel picker row height — all rows identical so there is no layout shift */
+  --wheel-row-h: 6rem;
 }
 
 :root {
@@ -90,12 +119,22 @@
 @media (max-width: 767px) {
   :root {
     --header-height: 56px;
+    /* Wheel row on mobile — fits the horizontally-laid-out row (number + 3
+       single-line texts + padding) without clipping. */
+    --wheel-row-h: 5.5rem;
+    /* Smaller, calmer voice wave on mobile. */
+    --finalcta-wave-w: 60px;
+    /* Smaller glow halo on mobile so it doesn't overflow the viewport. */
+    --finalcta-glow-size: 260px;
+    --finalcta-glow-blur: 48px;
   }
 }
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* No CSS smooth-scroll: it animated the scroll-reset on cross-page
+       navigation (slow scroll-up). In-page anchors scroll smoothly via Lenis
+       (desktop); route changes jump to top instantly (see LenisProvider). */
     scroll-padding-top: 4rem;
   }
   body {
@@ -118,11 +157,6 @@
   }
 }
 
-@keyframes shimmer-sweep {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(200%); }
-}
-
 @keyframes hero-waveform-pulse {
   0%, 100% { transform: scaleY(0.55); }
   50%      { transform: scaleY(1.45); }
@@ -142,42 +176,6 @@
 }
 
 @layer components {
-  /* ---------- Shimmer sweep — light highlight on primary CTA hover ---------- */
-  /*
-   * Applied directly on the button element so ::before renders above
-   * the button's own background-color (not behind a wrapper's child).
-   */
-  .shimmer-cta {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .shimmer-cta::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      105deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.32) 50%,
-      transparent 60%
-    );
-    transform: translateX(-100%);
-    pointer-events: none;
-  }
-
-  @media (hover: hover) {
-    .shimmer-cta:hover::before {
-      animation: shimmer-sweep 1.2s ease-in-out;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .shimmer-cta::before {
-      animation: none !important;
-    }
-  }
-
   /* ---------- Scenarios sticky scroll region ---------- */
   /*
    * `calc(100vh + 1600px)` gives exactly 200px of effective scroll per card
@@ -293,6 +291,31 @@
     .phone-preview-wrap--compact .phone-preview-inner {
       transform: scale(0.8205);
     }
+  }
+  /* ---- 3-D tilt rig ---- */
+  /*
+   * Outer wrapper: establishes perspective context.
+   * Must NOT have transform set here — the motion.div inside handles rotateX/Y.
+   */
+  .tilt-rig-outer {
+    perspective: var(--tilt-perspective);
+    /*
+     * Invisible halo: ~40 px transparent padding extends the pointer-event
+     * hit area beyond the phone edges so the tilt activates as the cursor
+     * approaches — not only when it's directly over the phone.
+     * The compensating negative margin collapses the extra space so the phone
+     * stays in exactly the same visual position in the layout.
+     */
+    padding: var(--tilt-halo);
+    margin: calc(-1 * var(--tilt-halo));
+  }
+  /*
+   * Inner wrapper: the actual 3-D stage. transform-style: preserve-3d lets
+   * children (the side-cards) use translateZ to float above the phone.
+   * framer-motion drives rotateX / rotateY via MotionValues on this element.
+   */
+  .tilt-rig-inner {
+    transform-style: preserve-3d;
   }
   .phone-screen {
     top: 1.6%;
@@ -491,30 +514,63 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+  /* Primary CTA: filled by default; ghost on hover (fill → transparent,
+     border + text stay). 2px border always so there's no size shift. */
   .btn-primary {
     background: var(--color-primary);
     color: #fff;
+    border: 2px solid var(--color-primary);
     box-shadow: 0 1px 2px rgba(4, 120, 87, 0.2), 0 8px 20px rgba(4, 120, 87, 0.18);
   }
-  .btn-primary:hover:not(:disabled) {
-    background: var(--color-primary-hover);
-    transform: translateY(-1px);
+  @media (hover: hover) {
+    .btn-primary:hover:not(:disabled) {
+      background: transparent;
+      color: var(--color-primary);
+      box-shadow: none;
+    }
   }
+  /* Secondary/outline: fills with primary + white text on hover. */
   .btn-outline {
     background: rgba(255, 255, 255, 0.6);
     color: var(--color-ink);
     border: 1px solid var(--color-line-strong);
   }
-  .btn-outline:hover:not(:disabled) {
-    background: #fff;
-    border-color: var(--color-line-stronger);
+  @media (hover: hover) {
+    .btn-outline:hover:not(:disabled) {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #fff;
+    }
   }
+  /* Tertiary/text: underline grows from the left on hover. */
   .btn-ghost {
+    position: relative;
     color: var(--color-muted);
     padding: 10px 14px;
   }
-  .btn-ghost:hover:not(:disabled) {
-    color: var(--color-ink);
+  .btn-ghost::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 6px;
+    height: 2px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms var(--ease-out-soft);
+  }
+  @media (hover: hover) {
+    .btn-ghost:hover:not(:disabled) {
+      color: var(--color-ink);
+    }
+    .btn-ghost:hover:not(:disabled)::after {
+      transform: scaleX(1);
+    }
+  }
+  /* Press feedback. */
+  .btn:active:not(:disabled) {
+    transform: scale(0.98);
   }
   .btn-sm {
     padding: 9px 16px;
@@ -681,10 +737,7 @@
     font-weight: 900;
     letter-spacing: -0.06em;
     line-height: 0.85;
-    background: linear-gradient(180deg, var(--color-primary-pale) 0%, var(--color-surface-warm) 60%, transparent 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgba(58, 150, 93, 0.06);
     pointer-events: none;
     user-select: none;
     z-index: 0;
@@ -719,12 +772,14 @@
 
   /* ---------- Hover-lift card ---------- */
   .card-hover {
-    transition: transform 150ms ease-out, box-shadow 150ms, border-color 150ms;
+    transition: transform 180ms ease-out, box-shadow 180ms, border-color 180ms;
   }
-  .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-mid);
-    border-color: color-mix(in oklab, var(--color-primary) 25%, var(--color-line));
+  @media (hover: hover) {
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-deep);
+      border-color: color-mix(in oklab, var(--color-primary) 35%, var(--color-line));
+    }
   }
 
   /* ---------- FAQ details/summary reset ---------- */
@@ -864,6 +919,27 @@
       #fff;
   }
 
+  /*
+   * Centred error/404 shell. Fills the flex-1 <main> (the body is a flex
+   * column min-h-svh with a sticky footer), so it always covers the screen
+   * without a header-height hack. Shared by NotFoundPage + ErrorPage.
+   */
+  .error-screen {
+    /* Grows to fill the flex-column <main> (sticky-footer layout) and centres
+       its content — no viewport/header math. */
+    flex: 1 1 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4rem 1.25rem;
+    text-align: center;
+    background:
+      radial-gradient(900px 460px at 50% -120px, var(--color-primary-pale) 0%, transparent 60%),
+      #fff;
+  }
+
   /* ---------- Flow step vertical connector (between step circles) ---------- */
   .flow-step-line {
     background: linear-gradient(
@@ -907,6 +983,49 @@
 
 }
 
+/* ---------- Header nav link — underline that grows from the left ----------
+   Kept outside @layer components so the ::after pseudo-element is never
+   overridden by Tailwind utilities (Tailwind v4 layer trap).
+   Active state (.nav-link--active) keeps the underline persistent.
+   Hover-grow effect is gated behind @media(hover:hover) to skip touch devices.
+   Both effects respect prefers-reduced-motion.
+   -------------------------------------------------------------------- */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.26s var(--ease-out-soft, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+/* Active route: underline always visible */
+.nav-link--active::after {
+  transform: scaleX(1);
+}
+
+/* Hover grow — only on pointer devices */
+@media (hover: hover) {
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Respect reduced-motion — instant underline, no animation */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after {
+    transition: none;
+  }
+}
+
 /* ---------- FAQ details container (unlayered so it beats Tailwind utilities) ---------- */
 .faq-details {
   border: 1px solid var(--color-line);
@@ -921,4 +1040,384 @@
 .hero-waveform-mask {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* ---------- VoiceWave icon — equalizer bar pulse ---------- */
+@keyframes voicewave-pulse {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .voicewave-bar {
+    transform-origin: center;
+    animation: voicewave-pulse 1.3s ease-in-out infinite;
+  }
+  .voicewave-bar[data-i="1"],
+  .voicewave-bar[data-i="3"],
+  .voicewave-bar[data-i="5"] {
+    animation-delay: 0.15s;
+  }
+}
+
+/* ---------- Scenarios wheel — iOS-picker ----------
+   All rules outside @layer components so Tailwind utilities cannot
+   override them (Tailwind v4 layer-ordering rule).
+   Sizes use @theme tokens; no arbitrary values.
+   ------------------------------------------------------------------ */
+
+/*
+ * Outer wrapper: perspective context for rotateX tilt.
+ * position: relative lets the selection-band overlay be absolutely placed.
+ */
+.scenarios-wheel-outer {
+  position: relative;
+  perspective: var(--tilt-perspective);
+}
+
+/*
+ * Selection band — decorative hairlines bracketing the centre slot.
+ * Absolutely positioned so it floats over the scroll container and
+ * never scrolls with the rows. Top/bottom offset = 2 × row-h.
+ */
+.scenarios-wheel-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--wheel-row-h);
+  height: var(--wheel-row-h);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/*
+ * Scroll container — the actual iOS-picker viewport.
+ * Height = 5 visible rows.
+ * overscroll-behavior: contain is critical: it prevents wheel scroll
+ * from leaking to the page while the user is spinning the picker.
+ * Mask fades top/bottom rows like a native iOS wheel.
+ * Scrollbar hidden (both standard and WebKit).
+ */
+.scenarios-wheel-scroll {
+  height: calc(var(--wheel-row-h) * 3);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 18%,
+    #000 82%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 18%,
+    #000 82%,
+    transparent
+  );
+}
+.scenarios-wheel-scroll::-webkit-scrollbar {
+  display: none;
+}
+/*
+ * Contain overscroll ONLY for the infinite-loop (mouse) variant.
+ * `data-lenis-prevent` is set on the container only when looping; on touch it is
+ * absent, so scroll escapes to the page at the list edges (no trap).
+ */
+.scenarios-wheel-scroll[data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/*
+ * Spacer — 2 rows tall. One at the top and one at the bottom of the list.
+ * They let the first and last items snap to the centre slot.
+ */
+.scenarios-wheel-spacer {
+  height: var(--wheel-row-h);
+  flex-shrink: 0;
+}
+
+/*
+ * Each row item wrapper — fixed height + snap alignment.
+ * The height matches --wheel-row-h so every row occupies exactly the same
+ * vertical slot; hook line only changes opacity (no layout shift).
+ */
+.scenarios-wheel-item {
+  height: var(--wheel-row-h);
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+/*
+ * Row anchor element — transform-style: preserve-3d for rotateX tilt.
+ * `perspective` lives on .scenarios-wheel-outer above.
+ */
+.scenarios-wheel-row {
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+/* ---------- Glow breathe — ambient emerald halo pulse ---------- */
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.55; transform: translateX(-50%) scale(0.92); }
+  50%       { opacity: 1;    transform: translateX(-50%) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .glow-breathe {
+    animation: glow-breathe 4.5s ease-in-out infinite;
+  }
+}
+
+/* ---------- FinalCta — ambient emerald glow halo ----------
+   Kept outside @layer components so it beats any Tailwind utility.
+   Decorative only (aria-hidden in JSX). Sits behind the wave/heading.
+   Uses tokens; the .glow-breathe class above drives the optional pulse
+   (gated by prefers-reduced-motion: no-preference, so static otherwise).
+   ---------------------------------------------------------- */
+.finalcta-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--finalcta-glow-size);
+  height: var(--finalcta-glow-size);
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    var(--color-glow-emerald) 0%,
+    color-mix(in oklab, var(--color-glow-emerald) 40%, transparent) 35%,
+    transparent 70%
+  );
+  filter: blur(var(--finalcta-glow-blur));
+  opacity: 0.55;
+}
+
+/* FinalCta voice-wave sizing — light emerald-glow color on dark emerald bg */
+.finalcta-wave {
+  width: var(--finalcta-wave-w);
+  height: auto;
+  color: var(--color-glow-emerald);
+}
+
+/* ============================================================
+   Full-bleed section break-out + wave cap
+   Kept outside @layer components so these rules beat any
+   Tailwind utility that might conflict (Tailwind v4 layer trap).
+   ============================================================ */
+
+/*
+ * Full viewport-width breakout without causing horizontal scroll.
+ * Uses margin-inline negative trick relative to the viewport.
+ * `position: relative` is required so the wave-cap child positions
+ * against this element, not a distant ancestor.
+ */
+.section-full-bleed {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* CTA variant: emerald gradient (spec: #063f2e → #0a6b4f) */
+.section-bleed-cta {
+  background: linear-gradient(160deg, var(--color-cta-bleed-from) 0%, var(--color-cta-bleed-to) 100%);
+  color: #fff;
+}
+
+/*
+ * Wave cap wrapper — absolutely positioned at the top of the full-bleed
+ * section, pulled up by 1px to eliminate the 1px seam between the upper
+ * section's background and the wave's fill color.
+ */
+.section-wave-cap {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  /* height driven by --radius-cap token (52px) */
+  height: var(--radius-cap);
+  pointer-events: none;
+  line-height: 0;
+}
+
+/* SVG stretches 100% wide, full height of the cap container */
+.section-wave-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * Bento grid: asymmetric advantages layout.
+ * Rows hug their content (auto) so width-varied tiles don't get vertical voids.
+ * Placed outside @layer components so it wins over any utility conflicts.
+ */
+.bento-grid {
+  grid-auto-rows: auto;
+}
+
+/*
+ * Split pricing card — emerald left panel (spec §3.7).
+ * Reuses the FinalCta emerald gradient stops. Kept outside @layer components
+ * so it can host the white-on-emerald CTA variant without utility conflicts.
+ */
+.pricing-split-panel {
+  background: linear-gradient(160deg, var(--color-cta-bleed-from) 0%, var(--color-cta-bleed-to) 100%);
+}
+
+/*
+ * White CTA button for the emerald panel: white pill, emerald-ink label.
+ * Composes with `.btn`/`.btn-lg` for sizing; overrides only the colours.
+ * Outside @layer components so it beats `.btn-primary`-style utilities.
+ */
+.btn-on-emerald {
+  background: #fff;
+  color: var(--color-primary-ink);
+  box-shadow: 0 1px 2px rgba(6, 63, 46, 0.25), 0 8px 20px rgba(6, 63, 46, 0.22);
+}
+.btn-on-emerald:hover:not(:disabled) {
+  background: var(--color-primary-pale);
+  transform: translateY(-1px);
+}
+.btn-on-emerald:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   PricingUnitEconomics — donut (ring) chart of the £9.90 split
+   Kept outside @layer components so the fixed conic-gradient and the
+   ring "hole" mask beat any Tailwind utility (v4 layer trap).
+   Data is fixed (£9.90 split), so the segment angles are hard-coded:
+     STT      0.50  →   0     – 18.18deg
+     LLM      0.50  →  18.18  – 36.36deg
+     TTS      3.50  →  36.36  – 163.64deg  (largest cost, mid emerald)
+     Payment  0.40  → 163.64  – 178.18deg
+     Hosting  0.20  → 178.18  – 185.45deg
+     Margin   4.80  → 185.45  – 360deg     (GOLD accent)
+   Swatch colours in the legend use the SAME tokens (see component).
+   The donut itself is decorative (aria-hidden); the real numbers live
+   in the legend + expandable table for screen readers.
+
+   DRAW-IN ANIMATION (variant A — segments sweep clockwise from 12 o'clock):
+   `--ue-reveal` is an angle (0deg → 360deg) driven per-frame from JS via
+   `ref.style.setProperty('--ue-reveal', …)`. The ring's visible arc is the
+   intersection of two masks:
+     1. the donut "hole" radial mask (transparent centre);
+     2. a conic mask opaque from −90deg (12 o'clock) up to `--ue-reveal`.
+   Registering `--ue-reveal` as a typed <angle> custom property keeps it a real
+   animatable angle (and lets it interpolate smoothly if ever transitioned).
+   Default 360deg → full ring (no-JS / reduced-motion / SSR all show complete).
+   ============================================================ */
+@property --ue-reveal {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 360deg;
+}
+
+.ue-donut {
+  --ue-reveal: 360deg;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin-inline: auto;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-primary-ink) 0deg 18.18deg,
+    var(--color-primary) 18.18deg 36.36deg,
+    var(--color-primary-hover) 36.36deg 163.64deg,
+    var(--color-emerald-400) 163.64deg 178.18deg,
+    var(--color-emerald-300) 178.18deg 185.45deg,
+    var(--color-gold-accent) 185.45deg 360deg
+  );
+  /* Donut hole (radial, transparent centre) intersected with a clockwise
+     conic reveal from 12 o'clock. mask-composite: intersect = show a pixel
+     only where BOTH masks are opaque → a growing ring arc. */
+  -webkit-mask:
+    radial-gradient(circle at center, transparent 58%, #000 58.5%),
+    conic-gradient(from -90deg, #000 var(--ue-reveal), transparent 0);
+  -webkit-mask-composite: source-in;
+  mask:
+    radial-gradient(circle at center, transparent 58%, #000 58.5%),
+    conic-gradient(from -90deg, #000 var(--ue-reveal), transparent 0);
+  mask-composite: intersect;
+}
+
+@media (min-width: 640px) {
+  .ue-donut {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Centre label sits in a sibling overlay (the mask above would clip a child),
+   absolutely centred over the ring. */
+.ue-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+}
+.ue-donut-total {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+}
+@media (min-width: 640px) {
+  .ue-donut-total {
+    font-size: 2.4rem;
+  }
+}
+
+
+/* ============================================================
+   Bottom progressive-blur strip (scroll-blur widget).
+   Outside @layer components so utilities can't override it.
+   Degrades to nothing without backdrop-filter; off under reduced-motion.
+   ============================================================ */
+.scroll-blur {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  height: 110px;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  /* Faint white fade so the strip reads even over plain backgrounds, where
+     backdrop-blur alone is nearly invisible. */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.55), transparent);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .scroll-blur {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    /* Stronger toward the very bottom, fading to none upward. */
+    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 45%, transparent 100%);
+    mask-image: linear-gradient(to top, #000 0%, #000 45%, transparent 100%);
+  }
+}
+
+.scroll-blur[data-visible='true'] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-blur {
+    display: none;
+  }
 }

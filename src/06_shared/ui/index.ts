@@ -16,6 +16,7 @@ export {
   DoubleCheckIcon,
   EditIcon,
   ExportIcon,
+  GlobeIcon,
   Icon,
   InstagramIcon,
   LockIcon,
@@ -24,7 +25,9 @@ export {
   MapPinIcon,
   MessageCircleIcon,
   MicIcon,
+  MinusIcon,
   PaperclipIcon,
+  PartialIcon,
   PlayIcon,
   ShieldIcon,
   SignalBarsIcon,
@@ -33,6 +36,8 @@ export {
   ThreadsIcon,
   TikTokIcon,
   UserPlusIcon,
+  VoiceWave,
+  WaveDivider,
   WaveformBars,
   YouTubeIcon,
 } from './Icon';
@@ -40,6 +45,9 @@ export { InlineMarkdown } from './InlineMarkdown';
 export { JsonLd } from './JsonLd';
 export { MOTION_DURATION, MOTION_EASE } from './motion';
 export { Portal } from './Portal';
-export { Section, SectionHead } from './Section';
+export { Reveal, RevealItem } from './Reveal';
+export { FullBleedSection, Section, SectionHead } from './Section';
 export { SkipLink } from './SkipLink';
+export { SplitTextReveal } from './SplitTextReveal';
+export type { TSegment } from './SplitTextReveal';
 export { VisuallyHidden } from './VisuallyHidden';

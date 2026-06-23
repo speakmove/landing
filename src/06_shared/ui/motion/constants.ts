@@ -18,3 +18,26 @@ export const MOTION_EASE = {
   inOut: [0.65, 0, 0.35, 1] as const, // S-curve, calm
   spring: [0.34, 1.56, 0.64, 1] as const, // light bounce
 } as const;
+
+/** Reveal duration (seconds) — used by the Reveal component and scroll-triggered widgets. */
+export const DUR_REVEAL = 0.7;
+
+/** Stagger delay between children in a staggered reveal container. */
+export const STAGGER_CHILDREN = 0.08;
+
+/**
+ * Framer-motion variants for scroll/mount reveal animations.
+ * Pass to `variants` on a `motion.*` element; drive with `initial="hidden"` + `animate/whileInView="show"`.
+ *
+ * Eases reuse MOTION_EASE values — no duplication.
+ */
+export const REVEAL = {
+  rise: {
+    hidden: { opacity: 0, y: 36 },
+    show: { opacity: 1, y: 0 },
+  },
+  scaleUp: {
+    hidden: { opacity: 0, scale: 0.9 },
+    show: { opacity: 1, scale: 1 },
+  },
+} as const;

@@ -32,7 +32,8 @@ export const PricingPage = async () => {
       <PricingUnitEconomics />
       <PricingComparisonContext />
       <FaqSection namespace="PricingPage.faq" />
-      <FinalCtaSection namespace="PricingPage.finalCta" />
+      {/* FAQ above is the soft band → wave cap matches it (no seam). */}
+      <FinalCtaSection namespace="PricingPage.finalCta" waveColor="#f7f8f5" />
       <JsonLd data={breadcrumbLd} />
       <JsonLd data={speakableLd} />
     </>

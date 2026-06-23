@@ -1,2 +1,3 @@
 export { AdvantageTile } from './ui/AdvantageTile';
-export type { TAdvantageTile } from './model/types';
+export { VARIANT_BY_ID } from './model/maps';
+export type { TAdvantageTile, TAdvantageTileVariant } from './model/types';

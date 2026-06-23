@@ -15,7 +15,11 @@ export const SiteHeader = async () => {
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-white/75 px-5 backdrop-blur-xl backdrop-saturate-[1.6] md:px-6">
       <Container>
-        <div className="flex h-16 items-center gap-6">
+        {/* Mobile: flex justify-between (logo left, burger right).
+            Desktop lg+: 3-col grid — logo LEFT · nav CENTER · right cluster RIGHT.
+            The middle 1fr column lets the nav be truly centred regardless of side widths. */}
+        <div className="flex h-16 items-center justify-between lg:grid lg:grid-cols-[auto_1fr_auto]">
+          {/* Left: logo */}
           <Link
             href={PATHS.home}
             aria-label={t('brand')}
@@ -24,20 +28,22 @@ export const SiteHeader = async () => {
             <Logo />
           </Link>
 
+          {/* Centre: desktop nav (hidden on mobile) */}
           <HeaderNav />
 
-          <div className="flex-1" />
+          {/* Right: locale switch + CTA + mobile burger */}
+          <div className="flex items-center gap-3">
+            <div className="hidden items-center gap-3 lg:flex">
+              <LocaleSwitch />
+            </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
-            <LocaleSwitch />
+            <ButtonLink href={buildBotUrl(locale)} size="sm" className="hidden lg:inline-flex">
+              {t('cta')}
+              <ArrowRightIcon size={14} />
+            </ButtonLink>
+
+            <HeaderMobileMenu />
           </div>
-
-          <ButtonLink href={buildBotUrl(locale)} size="sm" className="hidden lg:inline-flex">
-            {t('cta')}
-            <ArrowRightIcon size={14} />
-          </ButtonLink>
-
-          <HeaderMobileMenu />
         </div>
       </Container>
     </header>

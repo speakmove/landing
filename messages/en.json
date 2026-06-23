@@ -16,7 +16,12 @@
         "ru": "RU",
         "uk": "UA",
         "en": "EN",
-        "ariaLabel": "Change language"
+        "ruLabel": "Русский",
+        "ukLabel": "Українська",
+        "enLabel": "English",
+        "ariaLabel": "Change language",
+        "openMenu": "Open language menu",
+        "closeMenu": "Close language menu"
       },
       "mobile": {
         "followHeading": "Follow us"
@@ -157,7 +162,6 @@
     },
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
-      "subtitle": "2 minutes to start. 15 minutes for the first session. Then up to you.",
       "cta": "Open in Telegram",
       "meta": "7 days free · No card · Cancel in one click or via support"
     },
@@ -258,6 +262,7 @@
     },
     "painMirror": {
       "eyebrow": "Sound familiar?",
+      "heading": "Situations you keep avoiding",
       "lines": [
         {
           "text": "You put off the GP appointment because you don't know how to describe the symptoms.",
@@ -394,7 +399,32 @@
       "footnote": "No card · Cancel in one click or via support",
       "perDay": "£0.33",
       "perDayUnit": "/ day",
-      "perMonth": "= £9.90 per month"
+      "perMonth": "= £9.90 per month",
+      "priceToggle": {
+        "modes": [
+          {
+            "id": "month",
+            "label": "per month",
+            "amount": "£9.90",
+            "unit": "/mo",
+            "value": 9.9
+          },
+          {
+            "id": "day",
+            "label": "per day",
+            "amount": "£0.33",
+            "unit": "/day",
+            "value": 0.33
+          },
+          {
+            "id": "coffee",
+            "label": "vs coffee",
+            "amount": "1",
+            "unit": "latte a day",
+            "value": 1
+          }
+        ]
+      }
     }
   },
   "HowItWorksPage": {
@@ -540,7 +570,6 @@
     },
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
-      "subtitle": "2 minutes to start. 15 minutes for the first session.",
       "cta": "Open in Telegram",
       "meta": "7 days free · No card · Cancel in one click or via support"
     },
@@ -686,7 +715,6 @@
     },
     "finalCta": {
       "title": "7 days free. No card.",
-      "subtitle": "If it doesn't land, just don't subscribe. No card on file, nothing will be charged.",
       "cta": "Start free",
       "meta": "No card · Cancel in one click or via support"
     },
@@ -706,7 +734,14 @@
         "Cancel anytime in one click"
       ],
       "cta": "Start free",
-      "footnote": "No card · Cancel in Telegram settings or via support"
+      "footnote": "No card · Cancel in Telegram settings or via support",
+      "priceToggle": {
+        "modes": [
+          { "id": "month", "label": "per month", "amount": "£9.90", "unit": "/mo", "value": 9.9 },
+          { "id": "day", "label": "per day", "amount": "£0.33", "unit": "/day", "value": 0.33 },
+          { "id": "coffee", "label": "vs coffee", "amount": "1", "unit": "latte a day", "value": 1 }
+        ]
+      }
     },
     "unitEconomics": {
       "kicker": "Transparent",
@@ -769,7 +804,50 @@
           "emphasis": true
         }
       ],
-      "closingLine": "We're not better than a tutor, and not better than Speak. We're different — functional practice on the specific situations of UK life. When you need to call your landlord or visit the GP, a tutor can't help in the moment. We can."
+      "closingLine": "We're not better than a tutor, and not better than Speak. We're different — functional practice on the specific situations of UK life. When you need to call your landlord or visit the GP, a tutor can't help in the moment. We can.",
+      "matrix": {
+        "title": "Comparison: tutor, Speak app and SpeakMove",
+        "criterionLabel": "Criterion",
+        "columns": ["Tutor", "Speak app", "SpeakMove"],
+        "columnsShort": ["Tutor", "Speak", "Us"],
+        "markLabels": {
+          "yes": "Yes",
+          "no": "No",
+          "partial": "Partial"
+        },
+        "rows": [
+          {
+            "criterion": "UK everyday scenarios (council tax, GP, landlord)",
+            "kind": "mark",
+            "values": ["no", "no", "yes"]
+          },
+          {
+            "criterion": "Voice practice",
+            "kind": "mark",
+            "values": ["yes", "yes", "yes"]
+          },
+          {
+            "criterion": "Available 24/7, any moment",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Feedback in your language (RU/UK)",
+            "kind": "mark",
+            "values": ["partial", "no", "yes"]
+          },
+          {
+            "criterion": "No booking or schedule",
+            "kind": "mark",
+            "values": ["no", "yes", "yes"]
+          },
+          {
+            "criterion": "Price per month",
+            "kind": "price",
+            "values": ["£60–80", "£14", "£9.90"]
+          }
+        ]
+      }
     },
     "trustStrip": {
       "items": [
