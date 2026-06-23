@@ -35,7 +35,7 @@ export const FooterNav = async () => {
                   {isExternal(item.href) ? (
                     <a
                       href={item.href}
-                      className="transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      className="transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       rel="noopener noreferrer"
                     >
                       {item.label}
@@ -43,7 +43,7 @@ export const FooterNav = async () => {
                   ) : (
                     <ActiveLink
                       href={item.href}
-                      className="transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      className="transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       activeClassName="text-primary font-semibold"
                     >
                       {item.label}

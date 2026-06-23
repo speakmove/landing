@@ -555,30 +555,63 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+  /* Primary CTA: filled by default; ghost on hover (fill → transparent,
+     border + text stay). 2px border always so there's no size shift. */
   .btn-primary {
     background: var(--color-primary);
     color: #fff;
+    border: 2px solid var(--color-primary);
     box-shadow: 0 1px 2px rgba(4, 120, 87, 0.2), 0 8px 20px rgba(4, 120, 87, 0.18);
   }
-  .btn-primary:hover:not(:disabled) {
-    background: var(--color-primary-hover);
-    transform: translateY(-1px);
+  @media (hover: hover) {
+    .btn-primary:hover:not(:disabled) {
+      background: transparent;
+      color: var(--color-primary);
+      box-shadow: none;
+    }
   }
+  /* Secondary/outline: fills with primary + white text on hover. */
   .btn-outline {
     background: rgba(255, 255, 255, 0.6);
     color: var(--color-ink);
     border: 1px solid var(--color-line-strong);
   }
-  .btn-outline:hover:not(:disabled) {
-    background: #fff;
-    border-color: var(--color-line-stronger);
+  @media (hover: hover) {
+    .btn-outline:hover:not(:disabled) {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #fff;
+    }
   }
+  /* Tertiary/text: underline grows from the left on hover. */
   .btn-ghost {
+    position: relative;
     color: var(--color-muted);
     padding: 10px 14px;
   }
-  .btn-ghost:hover:not(:disabled) {
-    color: var(--color-ink);
+  .btn-ghost::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 6px;
+    height: 2px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms var(--ease-out-soft);
+  }
+  @media (hover: hover) {
+    .btn-ghost:hover:not(:disabled) {
+      color: var(--color-ink);
+    }
+    .btn-ghost:hover:not(:disabled)::after {
+      transform: scaleX(1);
+    }
+  }
+  /* Press feedback. */
+  .btn:active:not(:disabled) {
+    transform: scale(0.98);
   }
   .btn-sm {
     padding: 9px 16px;
@@ -783,12 +816,14 @@
 
   /* ---------- Hover-lift card ---------- */
   .card-hover {
-    transition: transform 150ms ease-out, box-shadow 150ms, border-color 150ms;
+    transition: transform 180ms ease-out, box-shadow 180ms, border-color 180ms;
   }
-  .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-mid);
-    border-color: color-mix(in oklab, var(--color-primary) 25%, var(--color-line));
+  @media (hover: hover) {
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-deep);
+      border-color: color-mix(in oklab, var(--color-primary) 35%, var(--color-line));
+    }
   }
 
   /* ---------- FAQ details/summary reset ---------- */
