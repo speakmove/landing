@@ -25,7 +25,7 @@ export const HomeHero = async () => {
           <div>
             {/* Eyebrow chip */}
             <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/85 px-3.5 py-1.5 text-10 font-semibold text-muted shadow-(--shadow-soft) md:text-13">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-primary)_20%,transparent)]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-primary ring-4 ring-primary/20" />
               {eyebrowItems.map((item, idx) => (
                 <span key={item} className="inline-flex items-center gap-2.5">
                   {idx > 0 ? <span className="text-line-strong">·</span> : null}

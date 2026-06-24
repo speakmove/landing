@@ -7,6 +7,15 @@ const withNextIntl = createNextIntlPlugin('./src/06_shared/model/libs/i18n/reque
 const isDev = env.NODE_ENV !== 'production';
 const isIndexable = env.NEXT_PUBLIC_INDEXABLE;
 
+if (!isIndexable) {
+  // Printed on every `next build`/`next dev` so a missing env var on a
+  // production deploy is visible in the build log, not just discovered
+  // later as "site isn't indexing and nobody knows why".
+  console.warn(
+    '\n⚠️  NEXT_PUBLIC_INDEXABLE is not "true" — this build ships noindex/nofollow headers, an empty sitemap.xml and a disallow-all robots.txt.\n   If this is the production deploy, set NEXT_PUBLIC_INDEXABLE=true before building.\n',
+  );
+}
+
 /**
  * Content Security Policy.
  *

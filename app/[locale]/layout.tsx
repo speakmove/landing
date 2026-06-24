@@ -46,6 +46,7 @@ export async function generateMetadata({
       template: t('titleTemplate'),
     },
     description: t('defaultDescription'),
+    keywords: t.raw('defaultKeywords'),
     robots: env.NEXT_PUBLIC_INDEXABLE
       ? undefined
       : { index: false, follow: false, googleBot: { index: false, follow: false } },

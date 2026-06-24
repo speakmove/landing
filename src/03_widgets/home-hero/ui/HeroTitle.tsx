@@ -41,7 +41,7 @@ export const HeroTitle = ({ before, accent, after, className }: TProps) => {
   return (
     <h1
       className={cn(
-        'h-display-hero mt-4 mb-5 font-extrabold leading-[1.03] tracking-[-0.025em] text-ink',
+        'h-display-hero mt-4 mb-5 font-extrabold text-ink',
         className,
       )}
       aria-label={fullText}

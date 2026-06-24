@@ -7,6 +7,7 @@ import type { TScenarioRowProps } from '../model/types';
 
 type TProps = {
   rows: TScenarioRowProps[];
+  ariaLabel: string;
 };
 
 /**
@@ -23,7 +24,7 @@ type TProps = {
  * `data-lenis-prevent` keeps the wheel scrollable under Lenis on desktop;
  * on mobile Lenis is off so the attribute is harmless.
  */
-export function ScenariosWheel({ rows }: TProps) {
+export function ScenariosWheel({ rows, ariaLabel }: TProps) {
   const {
     containerRef,
     shouldReduce,
@@ -37,7 +38,7 @@ export function ScenariosWheel({ rows }: TProps) {
   // ── Reduced-motion: flat static list ─────────────────────────────────────
   if (shouldReduce) {
     return (
-      <ul className="m-0 list-none p-0">
+      <ul className="m-0 list-none p-0" aria-label={ariaLabel}>
         {rows.map((row) => (
           <ScenarioRowStatic key={row.href} {...row} />
         ))}
@@ -52,7 +53,7 @@ export function ScenariosWheel({ rows }: TProps) {
         ref={containerRef}
         className="scenarios-wheel-scroll"
         role="listbox"
-        aria-label="Scenarios"
+        aria-label={ariaLabel}
         data-lenis-prevent
       >
         <ul className="m-0 list-none p-0">

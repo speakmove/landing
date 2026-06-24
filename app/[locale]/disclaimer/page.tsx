@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: TProps): Promise<Metadata> {
     routing.locales.map((l) => [l, `/${l}/disclaimer`]),
   );
   return {
-    title: t('title'),
+    title: t('title_meta'),
     description: t('description'),
     alternates: { canonical: `/${locale}/disclaimer`, languages },
   };
