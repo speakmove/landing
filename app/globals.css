@@ -23,6 +23,14 @@
   --shadow-mid: 0 4px 10px rgba(10, 22, 18, 0.05), 0 12px 32px rgba(10, 22, 18, 0.06);
   --shadow-deep: 0 10px 30px rgba(10, 22, 18, 0.08), 0 30px 60px rgba(10, 22, 18, 0.08);
 
+  /* Letter-spacing step between Tailwind's default tracking-wider (0.05em)
+     and tracking-widest (0.1em); used by mono-caps labels (e.g. pain-mirror chat). */
+  --tracking-loose: 0.08em;
+  /* Chat-bubble max-width as a fraction of the row, not a fixed px/rem size —
+     kept as named tokens instead of `max-w-[85%]` arbitraries. */
+  --width-bubble-me: 85%;
+  --width-bubble-bot: 90%;
+
   /* Telegram-style phone mockup tokens (used only inside home-phone-preview widget) */
   --color-tg-bubble-me: #dbf3c9;
   --color-tg-bubble-me-ink: #0c1f04;
@@ -793,6 +801,8 @@
   /* ---------- Fluid display headings (replaces inline `style={{fontSize: clamp(...) }}`) ---------- */
   .h-display-hero {
     font-size: clamp(2.2rem, 5.2vw, 4.1rem);
+    line-height: 1.03;
+    letter-spacing: -0.025em;
   }
   .h-display-price {
     font-size: clamp(4rem, 12vw, 8rem);
@@ -1391,15 +1401,24 @@
 .scroll-blur {
   position: fixed;
   inset-inline: 0;
+  /* On mobile the sticky-cta widget pins a CTA bar to the very bottom —
+     lift the blur strip above it so it stays visible instead of being
+     covered by the bar's opaque background. Desktop has no sticky bar. */
   bottom: 0;
   height: 110px;
   z-index: 30;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, bottom 0.25s ease;
   /* Faint white fade so the strip reads even over plain backgrounds, where
      backdrop-blur alone is nearly invisible. */
   background: linear-gradient(to top, rgba(255, 255, 255, 0.55), transparent);
+}
+
+@media (max-width: 767.98px) {
+  .scroll-blur {
+    bottom: var(--sticky-cta-height, 0px);
+  }
 }
 
 @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
@@ -1420,4 +1439,20 @@
   .scroll-blur {
     display: none;
   }
+}
+
+/* ============================================================
+   Fixed bottom CTA bar (sticky-cta widget, mobile only).
+   Outside @layer components so utilities can't override the
+   transform/opacity that drive the show/hide transition.
+   ============================================================ */
+.sticky-cta-bar {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.sticky-cta-bar[data-visible='true'] {
+  transform: translateY(0);
+  opacity: 1;
 }

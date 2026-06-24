@@ -19,12 +19,7 @@ export const FaqSection = async ({ namespace }: TProps) => {
   const faqLd = items.length > 0 ? buildFaqLd(items) : null;
 
   return (
-    <Section
-      id={ANCHORS.faq}
-      ariaLabelledBy="faq-heading"
-      className="py-12 md:py-20"
-      tone="white"
-    >
+    <Section id={ANCHORS.faq} ariaLabelledBy="faq-heading" className="py-12 md:py-20" tone="soft">
       <Container>
         <SectionHead
           kicker={t('kicker')}

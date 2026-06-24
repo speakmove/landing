@@ -4,6 +4,7 @@ import { FlowSectionWithPhone } from '@/widgets/flow-section-with-phone';
 import { PrivacyFeatureGrid } from '@/widgets/privacy-feature-grid';
 import { FaqSection } from '@/widgets/faq-section';
 import { FinalCtaSection } from '@/widgets/final-cta-section';
+import { StickyCta } from '@/widgets/sticky-cta';
 import { JsonLd } from '@/shared/ui';
 import {
   buildBreadcrumbLd,
@@ -50,6 +51,7 @@ export const HowItWorksPage = async () => {
       <PrivacyFeatureGrid />
       <FaqSection namespace="HowItWorksPage.faq" />
       <FinalCtaSection namespace="HowItWorksPage.finalCta" />
+      <StickyCta />
       <JsonLd data={breadcrumbLd} />
       <JsonLd data={howToLd} />
       <JsonLd data={speakableLd} />

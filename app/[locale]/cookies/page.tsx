@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: TProps): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'CookiesPage.meta' });
   const languages = Object.fromEntries(routing.locales.map((l) => [l, `/${l}/cookies`]));
   return {
-    title: t('title'),
+    title: t('title_meta'),
     alternates: { canonical: `/${locale}/cookies`, languages },
   };
 }

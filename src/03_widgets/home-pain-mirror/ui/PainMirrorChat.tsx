@@ -82,7 +82,7 @@ const MeBubble = ({ text, timeLabel, driftIdx, shouldReduce }: TMeBubbleProps) =
       viewport={BUBBLE_VIEWPORT}
     >
       <motion.div
-        className="relative max-w-[85%] rounded-2xl rounded-br-md bg-tg-bubble-me px-4 py-3 shadow-(--shadow-soft)"
+        className="relative max-w-(--width-bubble-me) rounded-2xl rounded-br-md bg-tg-bubble-me px-4 py-3 shadow-(--shadow-soft)"
         /**
          * Static floating tilt (parящий вид) — no idle drift.
          * framer-motion `style` with a literal rotate is the allowed
@@ -120,7 +120,7 @@ const BotBubble = ({ botReply, lines, chipHrefs, shouldReduce }: TBotBubbleProps
       viewport={BUBBLE_VIEWPORT}
     >
       <motion.div
-        className="relative max-w-[90%] rounded-2xl rounded-bl-md border border-primary/30 bg-primary px-4 py-4 shadow-(--shadow-mid)"
+        className="relative max-w-(--width-bubble-bot) rounded-2xl rounded-bl-md border border-primary/30 bg-primary px-4 py-4 shadow-(--shadow-mid)"
         style={{ rotate: restRotate }}
         {...(!shouldReduce && {
           animate: {
@@ -192,7 +192,7 @@ export const PainMirrorChat = ({
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: DUR_REVEAL, ease: EASE }}
       >
-        <p className="m-0 font-mono text-sm font-semibold uppercase tracking-[0.08em] text-primary">
+        <p className="m-0 font-mono text-sm font-semibold uppercase tracking-(--tracking-loose) text-primary">
           {eyebrow}
         </p>
         <h2

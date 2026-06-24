@@ -44,6 +44,27 @@ export const buildOrganizationLd = ({
 });
 
 /* -------------------------------------------------------------------------
+ * WebSite — site-root identity for Google Sitelinks attribution, applied
+ * once on the home page.
+ * ------------------------------------------------------------------------- */
+
+type TWebSiteInput = {
+  name: string;
+  url: string;
+  description: string;
+  inLanguage: readonly string[];
+};
+
+export const buildWebSiteLd = ({ name, url, description, inLanguage }: TWebSiteInput) => ({
+  '@context': SCHEMA_CONTEXT,
+  '@type': 'WebSite',
+  name,
+  url,
+  description,
+  inLanguage,
+});
+
+/* -------------------------------------------------------------------------
  * SoftwareApplication + Offer — applied on /pricing for Google rich results
  * and AI assistants surfacing pricing + free trial.
  * ------------------------------------------------------------------------- */

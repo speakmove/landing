@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: TProps): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'TermsPage.meta' });
   const languages = Object.fromEntries(routing.locales.map((l) => [l, `/${l}/terms`]));
   return {
-    title: t('title'),
+    title: t('title_meta'),
     alternates: { canonical: `/${locale}/terms`, languages },
   };
 }
