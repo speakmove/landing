@@ -40,7 +40,7 @@
         "accent": "The conversations",
         "after": " you avoid in English."
       },
-      "description": "An AI partner that plays landlord, GP, work coach or HR. Voice dialogues in Telegram. Feedback in Russian or Ukrainian.",
+      "description": "A partner in Telegram that speaks like a real Brit — landlord, GP, work coach, HR. By voice. Make as many mistakes as you need, no one is judging. 7-day free trial, no card required.",
       "ctas": {
         "primary": "Try it free",
         "secondary": "How it works"
@@ -92,7 +92,7 @@
         ],
         "floatBubbles": [
           {
-            "title": "AI partner",
+            "title": "Live partner",
             "subtitle": "Real British accent"
           },
           {
@@ -105,7 +105,7 @@
     "advantages": {
       "kicker": "What's inside",
       "title": "Not Duolingo. Not Speak. Not a tutor.",
-      "subtitle": "Functional practice on the specific situations of UK life — not general 'English'.",
+      "subtitle": "A tutor is £60-80/mo and only by appointment. Practise the specific calls — landlord, GP, work coach — when you need them, 24/7, for £9.90/mo.",
       "tiles": [
         {
           "id": "voice",
@@ -798,7 +798,7 @@
           "amount": "0.50"
         },
         {
-          "label": "AI partner + feedback generation",
+          "label": "Partner + feedback generation",
           "amount": "0.50"
         },
         {
@@ -1396,7 +1396,7 @@
     "tagline": "Speaking practice for real UK life situations",
     "defaultTitle": "SpeakMove — Speaking practice for UK immigrants",
     "titleTemplate": "%s · SpeakMove",
-    "defaultDescription": "Voice AI partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial, no card required.",
+    "defaultDescription": "A voice partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial, no card required.",
     "defaultKeywords": [
       "speakmove",
       "english speaking practice UK",
