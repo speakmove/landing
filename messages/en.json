@@ -1441,7 +1441,11 @@
     "error": {
       "title": "Something went wrong",
       "lead": "We're looking into it. Try refreshing the page.",
-      "cta": "Refresh"
+      "cta": "Refresh",
+      "ctas": {
+        "home": "Back to home",
+        "emailLead": "Or email us directly:"
+      }
     },
     "aria": {
       "privacyFeatures": "Security and privacy features",
