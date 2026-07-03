@@ -27,7 +27,7 @@ export const HomeScenariosGrid = async () => {
     aiRole: card.aiRole,
     hook: card.hook,
     duration: card.duration,
-    href: buildBotUrl(locale, card.id),
+    href: buildBotUrl(locale, 'landing-scenarios', card.id),
     ariaLabel: `${ctaLabel} — ${card.title}`,
   }));
 

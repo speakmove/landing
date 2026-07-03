@@ -26,7 +26,7 @@ export const NotFoundPage = async () => {
             {t('ctas.primary')}
           </ButtonLink>
           <a
-            href={buildBotUrl(locale)}
+            href={buildBotUrl(locale, 'landing-404')}
             rel="noopener noreferrer"
             className="btn btn-outline btn-lg"
           >

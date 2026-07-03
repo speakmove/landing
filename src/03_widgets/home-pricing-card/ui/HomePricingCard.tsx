@@ -30,7 +30,7 @@ export const HomePricingCard = async () => {
           perMonth={t('perMonth')}
           features={features}
           primaryCtaLabel={t('cta')}
-          primaryCtaHref={buildBotUrl(locale)}
+          primaryCtaHref={buildBotUrl(locale, 'landing-pricing-card')}
           footnote={t('footnote')}
           priceSlot={<PriceToggle modes={modes} defaultMode="day" />}
         />
