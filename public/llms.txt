@@ -40,7 +40,7 @@
 
 ## Operator and contact
 
-- Operator: Dmytro Fenko, UK sole trader, trading as SpeakMove. Address for service of documents: Weston-super-Mare, UK, BS23 1RH.
+- Operator: Dmytro Fenko, UK sole trader, trading as SpeakMove. Address for service of documents: Weston-super-Mare, UK.
 - Data controller: registered with the UK Information Commissioner's Office (ICO), registration number ZC141876.
 - Contact: hi@speakmove.app
 - Telegram: https://t.me/speakmove_bot

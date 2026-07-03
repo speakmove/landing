@@ -948,7 +948,7 @@
         "id": "controller",
         "heading": "Хто контролер даних",
         "body": [
-          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адреса для service of documents: Weston-super-Mare, UK, BS23 1RH.",
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адреса для service of documents: Weston-super-Mare, UK.",
           "Зареєстрований у UK Information Commissioner's Office (ICO) як data controller. Реєстраційний номер **ZC141876** — перевірити можна на ico.org.uk.",
           "Контакт з питань даних: **hi@speakmove.app**."
         ]
@@ -1079,7 +1079,7 @@
         "heading": "Контакт",
         "body": [
           "З будь-яких питань конфіденційності: **hi@speakmove.app**.",
-          "Або прямо в Telegram творцю: **@dmitriy**."
+          "Або прямо в Telegram творцю: **@senkoner**."
         ]
       }
     ]
@@ -1098,7 +1098,7 @@
         "id": "operator",
         "heading": "Хто оператор сервісу",
         "body": [
-          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адреса: Weston-super-Mare, UK, BS23 1RH.",
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адреса: Weston-super-Mare, UK.",
           "Зареєстрований у UK ICO як data controller (ZC141876). Контакт: **hi@speakmove.app**."
         ]
       },
@@ -1115,7 +1115,7 @@
         "heading": "Що ми надаємо",
         "body": [
           "SpeakMove — Telegram-бот, який тренує розмовну англійську голосом на конкретні сценарії життя іммігранта в UK (дзвінок landlord, GP, work coach, job interview тощо).",
-          "Сервіс працює через Telegram-бота **@SpeakMoveBot**. Сайт speakmove.app — це маркетинг, а не точка входу в сервіс."
+          "Сервіс працює через Telegram-бота **@speakmove_bot**. Сайт speakmove.app — це маркетинг, а не точка входу в сервіс."
         ]
       },
       {
@@ -1163,7 +1163,7 @@
         "heading": "Доступність сервісу",
         "body": [
           "SpeakMove зараз — **V0 (рання версія)**. Ми намагаємось тримати сервіс працюючим, але **не даємо SLA**. Можливі перебої, баги, зміни у сценаріях.",
-          "Якщо щось зламалось — пиши **@dmitriy** в Telegram. Намагаємось відповідати протягом 24 годин."
+          "Якщо щось зламалось — пиши **@senkoner** в Telegram. Намагаємось відповідати протягом 24 годин."
         ]
       },
       {
@@ -1386,7 +1386,7 @@
         "id": "contact",
         "heading": "Питання",
         "body": [
-          "Якщо щось незрозуміло — пиши на **hi@speakmove.app** або в Telegram **@dmitriy**."
+          "Якщо щось незрозуміло — пиши на **hi@speakmove.app** або в Telegram **@senkoner**."
         ]
       }
     ]
@@ -1418,7 +1418,7 @@
     ],
     "author": "SpeakMove Team",
     "contactEmail": "hi@speakmove.app",
-    "telegramBot": "@SpeakMoveBot",
+    "telegramBot": "@speakmove_bot",
     "ogImage": "/og/speakmove-og.png",
     "ogImageAlt": "SpeakMove — розмовна англійська для UK-іммігрантів",
     "twitterCard": "summary_large_image",
