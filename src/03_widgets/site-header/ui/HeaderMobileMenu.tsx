@@ -178,7 +178,7 @@ export const HeaderMobileMenu = () => {
                 {/* CTA */}
                 <div className="border-t border-line p-5">
                   <ButtonLink
-                    href={buildBotUrl(locale)}
+                    href={buildBotUrl(locale, 'landing-mobile-menu')}
                     onClick={close}
                     variant="primary"
                     size="lg"

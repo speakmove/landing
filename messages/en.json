@@ -948,7 +948,7 @@
         "id": "controller",
         "heading": "Who is the data controller",
         "body": [
-          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address for service of documents: Weston-super-Mare, UK, BS23 1RH.",
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address for service of documents: Weston-super-Mare, UK.",
           "Registered with the UK Information Commissioner's Office (ICO) as a data controller. Registration number **ZC141876** — verify at ico.org.uk.",
           "Data contact: **hi@speakmove.app**."
         ]
@@ -1078,8 +1078,7 @@
         "id": "contact",
         "heading": "Contact",
         "body": [
-          "Any privacy questions: **hi@speakmove.app**.",
-          "Or directly on Telegram: **@dmitriy**."
+          "Any privacy questions: **hi@speakmove.app**."
         ]
       }
     ]
@@ -1098,7 +1097,7 @@
         "id": "operator",
         "heading": "Who runs the service",
         "body": [
-          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address: Weston-super-Mare, UK, BS23 1RH.",
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Address: Weston-super-Mare, UK.",
           "Registered with UK ICO as a data controller (ZC141876). Contact: **hi@speakmove.app**."
         ]
       },
@@ -1115,7 +1114,7 @@
         "heading": "What we provide",
         "body": [
           "SpeakMove is a Telegram bot that trains your spoken English by voice on the specific situations of a UK immigrant's life (call to landlord, GP, work coach, job interview, etc.).",
-          "The service runs through the Telegram bot **@SpeakMoveBot**. The speakmove.app website is marketing, not the entry point to the service."
+          "The service runs through the Telegram bot **@speakmove_bot**. The speakmove.app website is marketing, not the entry point to the service."
         ]
       },
       {
@@ -1162,8 +1161,7 @@
         "id": "availability",
         "heading": "Service availability",
         "body": [
-          "SpeakMove is currently **V0 (early version)**. We do our best to keep the service running but **don't offer an SLA**. Downtime, bugs and scenario changes are possible.",
-          "If something breaks — message **@dmitriy** on Telegram. We aim to reply within 24 hours."
+          "SpeakMove is currently **V0 (early version)**. We do our best to keep the service running but **don't offer an SLA**. Downtime, bugs and scenario changes are possible."
         ]
       },
       {
@@ -1386,7 +1384,7 @@
         "id": "contact",
         "heading": "Questions",
         "body": [
-          "If anything is unclear — write to **hi@speakmove.app** or on Telegram **@dmitriy**."
+          "If anything is unclear — write to **hi@speakmove.app**."
         ]
       }
     ]
@@ -1419,7 +1417,7 @@
     ],
     "author": "SpeakMove Team",
     "contactEmail": "hi@speakmove.app",
-    "telegramBot": "@SpeakMoveBot",
+    "telegramBot": "@speakmove_bot",
     "ogImage": "/og/speakmove-og.png",
     "ogImageAlt": "SpeakMove — Speaking practice for UK immigrants",
     "twitterCard": "summary_large_image",

@@ -48,7 +48,7 @@ export const FinalCtaSection = async ({
           </h2>
 
           <ButtonLink
-            href={buildBotUrl(locale)}
+            href={buildBotUrl(locale, 'landing-final-cta')}
             variant="primary"
             size="lg"
             className="btn-on-emerald"

@@ -24,7 +24,7 @@ export const HomePainMirror = async () => {
   const timeLabels = getList<string>(t, 'timeLabels');
 
   // Pre-build bot URLs on the server so the client island is pure presentational.
-  const chipHrefs = lines.map((line) => buildBotUrl(locale, line.scenarioId));
+  const chipHrefs = lines.map((line) => buildBotUrl(locale, 'landing-pain-mirror', line.scenarioId));
 
   return (
     <Section
