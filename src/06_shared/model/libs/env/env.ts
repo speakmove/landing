@@ -14,11 +14,16 @@ export const env = createEnv({
       .enum(['true', 'false'])
       .default('false')
       .transform((v) => v === 'true'),
+    NEXT_PUBLIC_DEV_MODE: z
+      .enum(['true', 'false'])
+      .default('false')
+      .transform((v) => v === 'true'),
   },
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     NEXT_PUBLIC_INDEXABLE: process.env.NEXT_PUBLIC_INDEXABLE,
+    NEXT_PUBLIC_DEV_MODE: process.env.NEXT_PUBLIC_DEV_MODE,
   },
   emptyStringAsUndefined: true,
 });

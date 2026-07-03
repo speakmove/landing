@@ -13,7 +13,7 @@ coverage/
 .turbo/
 next-env.d.ts
 tsconfig.tsbuildinfo
-.claude/settings.local.json
+.claude/
 
 # Superpowers brainstorm artifacts
 .superpowers/
