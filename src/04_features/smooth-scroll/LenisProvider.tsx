@@ -25,34 +25,52 @@ export const LenisProvider = ({ children }: PropsWithChildren) => {
     if (typeof window === 'undefined') return;
     const isDesktop = window.matchMedia(DESKTOP_QUERY).matches;
     const isReduced = window.matchMedia(REDUCED_QUERY).matches;
-    if (!isDesktop || isReduced) return;
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      smoothWheel: true,
-    });
-    lenisRef.current = lenis;
-
+    // Lenis only drives the desktop wheel-smoothing feel. Mobile/reduced-motion
+    // still need same-page anchor clicks (header nav, mobile menu) to scroll —
+    // they just fall back to the browser's native smooth/instant scrollTo below.
+    let lenis: Lenis | null = null;
     let rafId = 0;
-    const raf = (time: number) => {
-      lenis.raf(time);
+
+    if (isDesktop && !isReduced) {
+      lenis = new Lenis({
+        duration: 1.2,
+        smoothWheel: true,
+      });
+      lenisRef.current = lenis;
+
+      const raf = (time: number) => {
+        lenis?.raf(time);
+        rafId = requestAnimationFrame(raf);
+      };
       rafId = requestAnimationFrame(raf);
-    };
-    rafId = requestAnimationFrame(raf);
+    }
 
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target;
       if (!(target instanceof HTMLElement)) return;
-      const anchor = target.closest('a[href^="#"]');
+      const anchor = target.closest('a[href*="#"]');
       if (!(anchor instanceof HTMLAnchorElement)) return;
       const href = anchor.getAttribute('href');
-      if (!href || href === '#') return;
-      const id = href.slice(1);
+      if (!href) return;
+      // Locale-aware `Link` renders same-page anchors as `/ru#advantages`
+      // (no leading bare `#`), so match the id after the LAST `#` rather
+      // than requiring the href to start with one.
+      const id = href.slice(href.lastIndexOf('#') + 1);
+      if (!id) return;
       const el = document.getElementById(id);
+      // Element missing means the anchor points at a section on another
+      // page (e.g. clicked from /pricing) — let Next.js navigate there
+      // normally instead of swallowing the click.
       if (!el) return;
       e.preventDefault();
       const offset = -readHeaderHeight();
-      lenis.scrollTo(el, { offset });
+      if (lenis) {
+        lenis.scrollTo(el, { offset });
+        return;
+      }
+      const top = el.getBoundingClientRect().top + window.scrollY + offset;
+      window.scrollTo({ top, behavior: isReduced ? 'auto' : 'smooth' });
     };
 
     document.addEventListener('click', handleAnchorClick);
@@ -60,7 +78,7 @@ export const LenisProvider = ({ children }: PropsWithChildren) => {
     return () => {
       cancelAnimationFrame(rafId);
       document.removeEventListener('click', handleAnchorClick);
-      lenis.destroy();
+      lenis?.destroy();
       lenisRef.current = null;
     };
   }, []);

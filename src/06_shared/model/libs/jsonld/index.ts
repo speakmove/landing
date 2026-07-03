@@ -1,5 +1,6 @@
 export {
   buildOrganizationLd,
+  buildWebSiteLd,
   buildSoftwareApplicationLd,
   buildFaqLd,
   buildBreadcrumbLd,

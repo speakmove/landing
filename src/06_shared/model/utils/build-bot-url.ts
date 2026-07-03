@@ -1,7 +1,7 @@
 import { URLS } from '@/shared/config';
 
 /**
- * Build a Telegram bot deep-link.
+ * Build a Telegram bot link with locale and optional topic as query params.
  *
  * The `start` payload encodes `key-value` pairs joined by `_` (Telegram allows
  * only `[A-Za-z0-9_]`, so keys/values must already conform). The bot only acts

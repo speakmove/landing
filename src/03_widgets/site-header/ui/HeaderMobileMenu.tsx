@@ -75,7 +75,7 @@ export const HeaderMobileMenu = () => {
         aria-expanded={open}
         aria-controls="mobile-menu"
         onClick={openMenu}
-        className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full text-ink transition hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:hidden"
+        className="inline-flex h-11 w-11 flex-none items-center justify-center rounded-full text-ink transition hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:hidden"
       >
         <BurgerIcon size={22} />
       </button>
@@ -117,7 +117,7 @@ export const HeaderMobileMenu = () => {
                     type="button"
                     aria-label={tCommon('aria.closeMenu')}
                     onClick={close}
-                    className="-mr-3 inline-flex h-10 w-10 items-center justify-center rounded-full text-ink transition hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="-mr-3 inline-flex h-11 w-11 items-center justify-center rounded-full text-ink transition hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     <CloseIcon size={22} />
                   </button>

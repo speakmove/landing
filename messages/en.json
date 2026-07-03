@@ -2,11 +2,11 @@
   "HomePage": {
     "meta": {
       "title": "SpeakMove — Speaking practice for UK immigrants",
-      "description": "Train the conversations you avoid: landlord, GP, work coach, school, bank, interview. By voice, inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial without a card."
+      "description": "Train the conversations you avoid: landlord, GP, work coach, school, interview. By voice, inside Telegram. 15 min a day, £9.90/mo, 7-day trial, no card."
     },
     "nav": {
       "brand": "SpeakMove",
-      "cta": "Open the bot",
+      "cta": "Try it free",
       "links": {
         "howItWorks": "How it works",
         "advantages": "What's inside",
@@ -40,12 +40,13 @@
         "accent": "The conversations",
         "after": " you avoid in English."
       },
-      "description": "An AI partner that plays landlord, GP, work coach or HR. Voice dialogues in Telegram. Feedback in Russian or Ukrainian.",
+      "description": "A partner in Telegram that speaks like a real Brit — landlord, GP, work coach, HR. By voice. Make as many mistakes as you need, no one is judging. 7-day free trial, no card required.",
       "ctas": {
         "primary": "Try it free",
         "secondary": "How it works"
       },
       "metaPoints": [
+        "£9.90/mo",
         "7 days free",
         "No card required",
         "Cancel in one click"
@@ -91,7 +92,7 @@
         ],
         "floatBubbles": [
           {
-            "title": "AI partner",
+            "title": "Live partner",
             "subtitle": "Real British accent"
           },
           {
@@ -104,7 +105,7 @@
     "advantages": {
       "kicker": "What's inside",
       "title": "Not Duolingo. Not Speak. Not a tutor.",
-      "subtitle": "Functional practice on the specific situations of UK life — not general 'English'.",
+      "subtitle": "A tutor is £60-80/mo and only by appointment. Practise the specific calls — landlord, GP, work coach — when you need them, 24/7, for £9.90/mo.",
       "tiles": [
         {
           "id": "voice",
@@ -129,7 +130,7 @@
         {
           "id": "honest-pricing",
           "title": "Transparent pricing",
-          "description": "£9.90 per month. 7 days free, no card. Cancel anytime in one click or via support."
+          "description": "£9.90 per month. 7 days free, no card. Cancel anytime in one click in Telegram settings."
         }
       ]
     },
@@ -162,8 +163,8 @@
     },
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
-      "cta": "Open in Telegram",
-      "meta": "7 days free · No card · Cancel in one click or via support"
+      "cta": "Try it free",
+      "meta": "7 days free · No card · Cancel in one click in Telegram settings"
     },
     "footer": {
       "brand": "SpeakMove",
@@ -370,8 +371,8 @@
           "role": "Co-founder · building the product",
           "initials": "D",
           "story": "Moved to the UK in 2022. Spent a year with a tutor — conversations flowed in lessons, it felt fine. But a real Brit speaks at a different pace, with a different accent, and doesn't wait for you to think. I still get lost when the speaker changes — you get used to one person, then you're back to zero with the next. That's why I'm building SpeakMove.",
-          "telegramHandle": "@dmitriy",
-          "telegramUrl": "https://t.me/dmitriy"
+          "telegramHandle": "@dmitry",
+          "telegramUrl": "https://t.me/senkoner"
         },
         {
           "id": "katya",
@@ -379,8 +380,8 @@
           "role": "Co-founder · growth and community",
           "initials": "K",
           "story": "Moved to the UK in 2022 with Dima. With my tutor I spoke freely, felt I was progressing. Then I went to a parents evening — the teacher spoke faster, I lost the thread, kept asking her to repeat, and felt embarrassed. With every new British person it's as if I'm starting from scratch.",
-          "telegramHandle": "@katya",
-          "telegramUrl": "https://t.me/katya"
+          "telegramHandle": "@katerina",
+          "telegramUrl": "https://t.me/katerynafenko"
         }
       ]
     },
@@ -394,9 +395,9 @@
         "Feedback in Russian or Ukrainian",
         "Cancel anytime in one click"
       ],
-      "cta": "Open the bot",
+      "cta": "Try it free",
       "seeDetailsLabel": "See details and FAQ",
-      "footnote": "No card · Cancel in one click or via support",
+      "footnote": "No card · Cancel in one click in Telegram settings",
       "perDay": "£0.33",
       "perDayUnit": "/ day",
       "perMonth": "= £9.90 per month",
@@ -425,12 +426,45 @@
           }
         ]
       }
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Before you start",
+      "subtitle": "Quick answers to the main questions. Full details are on the pricing page.",
+      "contactEmail": "hi@speakmove.app",
+      "items": [
+        {
+          "id": "free-trial",
+          "question": "What's the 7-day free trial without a card?",
+          "answer": "7 days of access to all 8 scenarios × 15 minutes of voice conversation per day (up to 105 minutes of practice in total). No card to add. When the trial ends, just don't buy a subscription."
+        },
+        {
+          "id": "minutes",
+          "question": "How are 15 minutes a day counted?",
+          "answer": "Only the time **you speak**. Listening to the bot doesn't count. Re-recording a phrase doesn't count either. The limit resets every 24 hours at midnight."
+        },
+        {
+          "id": "cancel",
+          "question": "How do I cancel?",
+          "answer": "In **one click** in Telegram settings. Or message support — I'll reply personally."
+        },
+        {
+          "id": "voice-security",
+          "question": "How are voice recordings secured?",
+          "answer": "Recordings are transcribed and **deleted within 24 hours**. We keep the transcript for your progress — you can delete it in /settings."
+        },
+        {
+          "id": "accent",
+          "question": "Does the bot understand a Slavic accent in English?",
+          "answer": "Yes. Trained across many accents. If something is mis-transcribed, you'll see the transcript and can replay."
+        }
+      ]
     }
   },
   "HowItWorksPage": {
     "meta": {
       "title": "How SpeakMove works — Voice training on UK scenarios",
-      "description": "How a SpeakMove session works: 15 minutes of voice conversation a day on UK scenarios — landlord, GP, work coach. British accent, feedback in your native language, AI coach in Telegram."
+      "description": "How a SpeakMove session works: 15 minutes of voice practice a day on UK scenarios — landlord, GP, work coach. British accent, feedback in your language."
     },
     "hero": {
       "crumb": "How it works",
@@ -438,7 +472,7 @@
       "description": "Real British accent. Feedback in your language. Right inside Telegram.",
       "stats": [
         {
-          "value": "7",
+          "value": "8",
           "label": "UK life scenarios"
         },
         {
@@ -570,8 +604,8 @@
     },
     "finalCta": {
       "title": "Open the bot. Try one scenario.",
-      "cta": "Open in Telegram",
-      "meta": "7 days free · No card · Cancel in one click or via support"
+      "cta": "Try it free",
+      "meta": "7 days free · No card · Cancel in one click in Telegram settings"
     },
     "faq": {
       "kicker": "FAQ",
@@ -580,14 +614,24 @@
       "contactEmail": "hi@speakmove.app",
       "items": [
         {
-          "id": "accent",
-          "question": "What accent does the bot use?",
-          "answer": "British. Neutral RP, no regional dialects. To help you get used to different voices, the bot varies intonation between scenarios."
+          "id": "beginners",
+          "question": "Is this suitable for beginners?",
+          "answer": "Depends on your level. If you've never spoken English at all, take a basic grammar course first. If you can put together a simple sentence, SpeakMove will help you build into confident conversation."
         },
         {
           "id": "level",
           "question": "What if my English is really weak?",
           "answer": "Scenarios adapt to your level: the bot speaks slower, simplifies phrases, gives you more pauses. You can start with one scenario (say, GP) and take your time."
+        },
+        {
+          "id": "without-telegram",
+          "question": "Can I use it without Telegram?",
+          "answer": "Not right now. The service runs only through the Telegram bot. A web version is on the table after the V0 test, if there are paying users."
+        },
+        {
+          "id": "accent",
+          "question": "What accent does the bot use — British or American?",
+          "answer": "British, neutral RP, no regional dialects — we're about UK scenarios. Feedback uses UK forms ('flat' not 'apartment', 'GP' not 'family doctor', 'queue' not 'line'). To help you get used to different voices, the bot varies intonation between scenarios."
         },
         {
           "id": "understand",
@@ -600,34 +644,19 @@
           "answer": "As many as you want. Replays don't count against your minutes — they aren't counted at all."
         },
         {
-          "id": "pause",
-          "question": "Can I pause mid-session?",
-          "answer": "Yes. Close the bot — the timer stops. Open it tomorrow — you continue from the same spot. The bot remembers the context of your last conversation."
-        },
-        {
-          "id": "british-vs-american",
-          "question": "British or American English?",
-          "answer": "British — because we're about UK scenarios. Feedback uses UK forms ('flat' not 'apartment', 'GP' not 'family doctor', 'queue' not 'line')."
-        },
-        {
           "id": "minute-counted",
           "question": "What counts as a minute?",
           "answer": "Only the time when **you speak** into the mic. Listening to the bot — doesn't count. Replaying — doesn't count. Transcript and feedback — don't count. Just your speaking time."
         },
         {
-          "id": "without-telegram",
-          "question": "Can I use it without Telegram?",
-          "answer": "Not right now. The service runs only through the Telegram bot. A web version is on the table after the V0 test, if there are paying users."
+          "id": "pause",
+          "question": "Can I pause mid-session?",
+          "answer": "Yes. Close the bot — the timer stops. Open it tomorrow — you continue from the same spot. The bot remembers the context of your last conversation."
         },
         {
           "id": "history",
           "question": "Can I go back to old conversations?",
           "answer": "Yes. `/history` lists your most recent sessions with all your voice messages and the bot's feedback. You can replay and track progress."
-        },
-        {
-          "id": "beginners",
-          "question": "Is this suitable for beginners?",
-          "answer": "Depends on your level. If you've never spoken English at all, take a basic grammar course first. If you can put together a simple sentence, SpeakMove will help you build into confident conversation."
         }
       ]
     }
@@ -644,8 +673,8 @@
       "perDay": "£0.33",
       "perDayUnit": "/ day",
       "perMonth": "= £9.90 per month",
-      "cta": "Start free",
-      "ctaFootnote": "No card · Cancel in one click or via support"
+      "cta": "Try it free",
+      "ctaFootnote": "No card · Cancel in one click in Telegram settings"
     },
     "structuredData": {
       "applicationCategory": "EducationalApplication",
@@ -677,19 +706,34 @@
           "answer": "Russian or Ukrainian — you choose when you first launch the bot. You can change it in /settings."
         },
         {
+          "id": "comparison",
+          "question": "How is this different from a tutor or the Speak app?",
+          "answer": "A tutor costs 8x more and is only available by appointment. Speak app is general conversational AI — it doesn't teach words like \"council tax\" or \"claimant commitment\". SpeakMove is just the specific UK scenarios, voice only. See the full comparison above."
+        },
+        {
           "id": "cancel",
           "question": "How do I cancel?",
           "answer": "In **one click** in Telegram settings. Or message support — I'll reply personally."
         },
         {
+          "id": "progress-after-cancel",
+          "question": "What happens to my conversation history if I cancel?",
+          "answer": "Your `/history` is kept for **30 days** after cancellation — if you come back, your progress is still there. It's deleted automatically after 30 days."
+        },
+        {
           "id": "refund",
-          "question": "What if I don't like it after 3 days of the trial?",
+          "question": "What if I don't like it after the 7-day trial?",
           "answer": "Just don't subscribe. No card on file, nothing will be charged. Feel free to message me what didn't work — it matters."
         },
         {
           "id": "currency",
           "question": "Supported currencies?",
           "answer": "Charged in GBP via Stripe. Stripe converts automatically from your card — works with EU and UK cards."
+        },
+        {
+          "id": "cards-ru-ua",
+          "question": "Will a Russian or Ukrainian-issued card work?",
+          "answer": "Cards issued by Russian banks haven't worked for paying foreign services since 2022 — that's a restriction by the card networks themselves (Visa and Mastercard suspended operations in Russia), not a website block, so a VPN won't help. Ukrainian-issued cards work fine with Stripe."
         },
         {
           "id": "voice-security",
@@ -715,8 +759,8 @@
     },
     "finalCta": {
       "title": "7 days free. No card.",
-      "cta": "Start free",
-      "meta": "No card · Cancel in one click or via support"
+      "cta": "Try it free",
+      "meta": "No card · Cancel in one click in Telegram settings"
     },
     "plan": {
       "badge": "Pro",
@@ -733,8 +777,8 @@
         "Pause on the fly — step away, timer stops",
         "Cancel anytime in one click"
       ],
-      "cta": "Start free",
-      "footnote": "No card · Cancel in Telegram settings or via support",
+      "cta": "Try it free",
+      "footnote": "No card · Cancel in one click in Telegram settings",
       "priceToggle": {
         "modes": [
           { "id": "month", "label": "per month", "amount": "£9.90", "unit": "/mo", "value": 9.9 },
@@ -754,7 +798,7 @@
           "amount": "0.50"
         },
         {
-          "label": "AI partner + feedback generation",
+          "label": "Partner + feedback generation",
           "amount": "0.50"
         },
         {
@@ -1352,7 +1396,7 @@
     "tagline": "Speaking practice for real UK life situations",
     "defaultTitle": "SpeakMove — Speaking practice for UK immigrants",
     "titleTemplate": "%s · SpeakMove",
-    "defaultDescription": "Voice AI partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial, no card required.",
+    "defaultDescription": "A voice partner trains you on the calls you dread: landlord, GP, work coach, school, bank, job interview. Right inside Telegram. 15 minutes a day. £9.90/mo, 7-day free trial, no card required.",
     "defaultKeywords": [
       "speakmove",
       "english speaking practice UK",
@@ -1407,6 +1451,7 @@
       "statsGrid": "Key metrics",
       "cefrLevels": "CEFR levels",
       "flowSteps": "User journey steps",
+      "scenariosList": "Scenarios list",
       "openMenu": "Open menu",
       "closeMenu": "Close menu",
       "menu": "Menu",

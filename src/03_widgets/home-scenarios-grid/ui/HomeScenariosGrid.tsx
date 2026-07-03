@@ -17,6 +17,7 @@ import type { TScenarioCard } from '../model/types';
  */
 export const HomeScenariosGrid = async () => {
   const t = await getTranslations('HomePage.scenariosGrid');
+  const tCommon = await getTranslations('Common');
   const locale = await getLocale();
   const cards = getList<TScenarioCard>(t, 'cards');
   const ctaLabel = t('ctaLabel');
@@ -46,7 +47,7 @@ export const HomeScenariosGrid = async () => {
           subtitle={t('subtitle')}
         />
 
-        <ScenariosWheel rows={rows} />
+        <ScenariosWheel rows={rows} ariaLabel={tCommon('aria.scenariosList')} />
       </Container>
     </Section>
   );
