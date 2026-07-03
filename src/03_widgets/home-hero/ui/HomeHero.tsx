@@ -48,7 +48,7 @@ export const HomeHero = async () => {
 
             {/* CTAs */}
             <div className="mb-8 flex flex-wrap gap-3">
-              <ButtonLink href={buildBotUrl(locale)} variant="primary" size="lg">
+              <ButtonLink href={buildBotUrl(locale, 'landing-hero')} variant="primary" size="lg">
                 {t('ctas.primary')}
                 <ArrowRightIcon size={16} />
               </ButtonLink>

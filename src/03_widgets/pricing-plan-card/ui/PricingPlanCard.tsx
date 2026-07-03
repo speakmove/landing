@@ -28,7 +28,7 @@ export const PricingPlanCard = async () => {
           perMonth={t('perMonth')}
           features={features}
           primaryCtaLabel={t('cta')}
-          primaryCtaHref={buildBotUrl(locale)}
+          primaryCtaHref={buildBotUrl(locale, 'landing-pricing-plan')}
           footnote={t('footnote')}
           priceSlot={<PriceToggle modes={modes} defaultMode="day" />}
         />

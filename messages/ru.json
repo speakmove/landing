@@ -40,7 +40,7 @@
         "accent": "Разговоры",
         "after": ", которых ты избегаешь по-английски."
       },
-      "description": "AI-собеседник говорит как landlord, GP, work coach или HR. Голосовые диалоги в Telegram. Фидбек на русском или украинском.",
+      "description": "Собеседник в Telegram говорит как живой британец — landlord, GP, work coach, HR. Голосом. Ошибаешься сколько нужно, никто не оценивает. 7 дней бесплатно, без карты.",
       "ctas": {
         "primary": "Попробовать бесплатно",
         "secondary": "Как работает"
@@ -92,7 +92,7 @@
         ],
         "floatBubbles": [
           {
-            "title": "AI-собеседник",
+            "title": "Живой собеседник",
             "subtitle": "Реальный британский акцент"
           },
           {
@@ -105,7 +105,7 @@
     "advantages": {
       "kicker": "Что внутри",
       "title": "Не Duolingo, не Speak, не репетитор.",
-      "subtitle": "Функциональная тренировка на конкретные ситуации жизни в UK — а не общий «английский».",
+      "subtitle": "Репетитор — £60-80/мес и только по записи. Тренируешь конкретные звонки — landlord, GP, work coach — когда нужно тебе, 24/7, за £9.90/мес.",
       "tiles": [
         {
           "id": "voice",
@@ -464,7 +464,7 @@
   "HowItWorksPage": {
     "meta": {
       "title": "Как работает SpeakMove — голосовая тренировка на UK-сценарии",
-      "description": "Как устроена сессия в SpeakMove: 15 минут voice-разговора в день на UK-сценарии — landlord, GP, work coach. Британский акцент, фидбек на родном языке, AI-коуч в Telegram."
+      "description": "Как устроена сессия в SpeakMove: 15 минут voice-разговора в день на UK-сценарии — landlord, GP, work coach. Британский акцент, фидбек на родном языке, коуч-собеседник в Telegram."
     },
     "hero": {
       "crumb": "Как работает",
@@ -798,7 +798,7 @@
           "amount": "0.50"
         },
         {
-          "label": "AI-собеседник + генерация фидбека",
+          "label": "Собеседник + генерация фидбека",
           "amount": "0.50"
         },
         {
@@ -948,7 +948,7 @@
         "id": "controller",
         "heading": "Кто контроллер данных",
         "body": [
-          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адрес для service of documents: Weston-super-Mare, UK, BS23 1RH.",
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адрес для service of documents: Weston-super-Mare, UK.",
           "Зарегистрирован в UK Information Commissioner's Office (ICO) как data controller. Регистрационный номер **ZC141876** — проверить можно на ico.org.uk.",
           "Контакт по вопросам данных: **hi@speakmove.app**."
         ]
@@ -1079,7 +1079,7 @@
         "heading": "Контакт",
         "body": [
           "По любым вопросам конфиденциальности: **hi@speakmove.app**.",
-          "Или прямо в Telegram создателю: **@dmitriy**."
+          "Или прямо в Telegram создателю: **@senkoner**."
         ]
       }
     ]
@@ -1098,7 +1098,7 @@
         "id": "operator",
         "heading": "Кто оператор сервиса",
         "body": [
-          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адрес: Weston-super-Mare, UK, BS23 1RH.",
+          "**Dmytro Fenko**, UK sole trader, trading as **SpeakMove**. Адрес: Weston-super-Mare, UK.",
           "Зарегистрирован в UK ICO как data controller (ZC141876). Контакт: **hi@speakmove.app**."
         ]
       },
@@ -1115,7 +1115,7 @@
         "heading": "Что мы предоставляем",
         "body": [
           "SpeakMove — Telegram-бот, который тренирует разговорный английский голосом на конкретные сценарии жизни иммигранта в UK (звонок landlord, GP, work coach, job interview и др.).",
-          "Сервис работает через Telegram-бота **@SpeakMoveBot**. Веб-сайт speakmove.app — это маркетинг, а не точка входа в сервис."
+          "Сервис работает через Telegram-бота **@speakmove_bot**. Веб-сайт speakmove.app — это маркетинг, а не точка входа в сервис."
         ]
       },
       {
@@ -1163,7 +1163,7 @@
         "heading": "Доступность сервиса",
         "body": [
           "SpeakMove сейчас — **V0 (ранняя версия)**. Мы стараемся держать сервис работающим, но **не даём SLA**. Возможны перебои, баги, изменения в сценариях.",
-          "Если что-то сломалось — пиши **@dmitriy** в Telegram. Стараемся отвечать в течение 24 часов."
+          "Если что-то сломалось — пиши **@senkoner** в Telegram. Стараемся отвечать в течение 24 часов."
         ]
       },
       {
@@ -1386,7 +1386,7 @@
         "id": "contact",
         "heading": "Вопросы",
         "body": [
-          "Если что-то непонятно — пиши на **hi@speakmove.app** или в Telegram **@dmitriy**."
+          "Если что-то непонятно — пиши на **hi@speakmove.app** или в Telegram **@senkoner**."
         ]
       }
     ]
@@ -1396,7 +1396,7 @@
     "tagline": "Тренируй разговорный английский на реальные UK-сценарии",
     "defaultTitle": "SpeakMove — разговорный английский для UK-иммигрантов",
     "titleTemplate": "%s · SpeakMove",
-    "defaultDescription": "AI-собеседник тренирует тебя голосом на реальные звонки: landlord, GP, work coach, школа, банк, job interview. Прямо в Telegram. 15 минут в день. £9.90/мес, 7 дней бесплатно без карты.",
+    "defaultDescription": "Собеседник-британец тренирует тебя голосом на реальные звонки: landlord, GP, work coach, школа, банк, job interview. Прямо в Telegram. 15 минут в день. £9.90/мес, 7 дней бесплатно без карты.",
     "defaultKeywords": [
       "speakmove",
       "разговорный английский UK",
@@ -1418,7 +1418,7 @@
     ],
     "author": "SpeakMove Team",
     "contactEmail": "hi@speakmove.app",
-    "telegramBot": "@SpeakMoveBot",
+    "telegramBot": "@speakmove_bot",
     "ogImage": "/og/speakmove-og.png",
     "ogImageAlt": "SpeakMove — разговорный английский для UK-иммигрантов",
     "twitterCard": "summary_large_image",

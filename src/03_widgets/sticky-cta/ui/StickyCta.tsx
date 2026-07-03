@@ -6,5 +6,5 @@ export const StickyCta = async () => {
   const t = await getTranslations('HomePage.nav');
   const locale = await getLocale();
 
-  return <StickyCtaBar ctaLabel={t('cta')} ctaHref={buildBotUrl(locale)} />;
+  return <StickyCtaBar ctaLabel={t('cta')} ctaHref={buildBotUrl(locale, 'landing-sticky-cta')} />;
 };

@@ -37,7 +37,7 @@ export const SiteHeader = async () => {
               <LocaleSwitch />
             </div>
 
-            <ButtonLink href={buildBotUrl(locale)} size="sm" className="hidden lg:inline-flex">
+            <ButtonLink href={buildBotUrl(locale, 'landing-header')} size="sm" className="hidden lg:inline-flex">
               {t('cta')}
               <ArrowRightIcon size={14} />
             </ButtonLink>

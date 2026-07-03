@@ -21,7 +21,7 @@ export const PricingHero = async () => {
   const tSd = await getTranslations('PricingPage.structuredData');
   const tMeta = await getTranslations('MetaGlobal');
   const locale = await getLocale();
-  const botUrl = buildBotUrl(locale);
+  const botUrl = buildBotUrl(locale, 'landing-pricing-hero');
 
   const siteUrl = env.NEXT_PUBLIC_SITE_URL;
   const productLd = buildSoftwareApplicationLd({
