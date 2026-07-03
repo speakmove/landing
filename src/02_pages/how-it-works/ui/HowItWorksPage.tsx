@@ -50,7 +50,7 @@ export const HowItWorksPage = async () => {
       <FlowSectionWithPhone />
       <PrivacyFeatureGrid />
       <FaqSection namespace="HowItWorksPage.faq" />
-      <FinalCtaSection namespace="HowItWorksPage.finalCta" />
+      <FinalCtaSection namespace="HowItWorksPage.finalCta" waveColor="#f7f8f5" />
       <StickyCta />
       <JsonLd data={breadcrumbLd} />
       <JsonLd data={howToLd} />
