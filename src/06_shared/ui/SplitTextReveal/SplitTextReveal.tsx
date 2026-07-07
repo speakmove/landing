@@ -145,11 +145,14 @@ export const SplitTextReveal = ({
 
           const content = chunks.map((chunk, ci) => {
             // Whitespace token — render as a plain space span, not animated.
-            // `whitespace-pre` (NOT inline-block) so the leading/trailing space
-            // keeps its width — inline-block would trim it to zero.
+            // `whitespace-break-spaces` (NOT inline-block, NOT plain `pre`) so the
+            // leading/trailing space keeps its width but the browser can still wrap
+            // right after it — plain `pre` disables wrapping at the space itself,
+            // pushing it to the start of the next line instead. `\n` chars still
+            // force a hard break, same as `pre`.
             if (chunk.trim().length === 0) {
               return (
-                <span key={`s${si}-c${ci}-space`} className="whitespace-pre">
+                <span key={`s${si}-c${ci}-space`} className="whitespace-break-spaces">
                   {chunk}
                 </span>
               );
