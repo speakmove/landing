@@ -14,14 +14,14 @@ type TProps = {
  * Desktop positions (unchanged).
  * Card 0 = left side, Card 1 = right side.
  */
-const POSITIONS_DESKTOP = ['absolute -left-7 top-32', 'absolute -right-6 bottom-15'] as const;
+const POSITIONS_DESKTOP = ['absolute -left-7 top-32', 'absolute -right-6 top-50'] as const;
 
 /**
  * Mobile positions: nudged further toward screen edges.
  * Card 0 shifts a bit more left (-left-10), Card 1 a bit more right (-right-9).
  * Uses native Tailwind scale — no arbitrary values.
  */
-const POSITIONS_MOBILE = ['absolute -left-10 top-32', 'absolute -right-9 bottom-15'] as const;
+const POSITIONS_MOBILE = ['absolute -left-10 top-22', 'absolute -right-9 top-38'] as const;
 
 const ICON_BG = [
   'bg-gold-pale text-gold-mid',
@@ -163,7 +163,7 @@ export const FloatingBubbleCards = ({ bubbles }: TProps) => {
               key={bubble.title}
               className={cn(
                 position,
-                'z-20 flex items-center gap-2.5 rounded-2xl border border-line bg-white px-3.5 py-2.5 shadow-(--shadow-mid)',
+                'z-20 flex items-center gap-2.5 rounded-xl border border-line bg-white px-2.5 py-1.5 shadow-(--shadow-mid)',
               )}
               style={{ z: CARD_Z }}
               initial={{
@@ -329,8 +329,8 @@ const CardContent = ({ bubble, Icon, bgClass }: TCardContentProps) => (
       <Icon size={14} />
     </span>
     <div>
-      <div className="text-13 font-bold">{bubble.title}</div>
-      <div className="text-11-5 text-muted">{bubble.subtitle}</div>
+      <div className="text-12 md:text-13 font-bold">{bubble.title}</div>
+      <div className="text-10 md:text-11-5 text-muted">{bubble.subtitle}</div>
     </div>
   </>
 );
