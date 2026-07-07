@@ -175,28 +175,22 @@
       "socialTitle": "We're on social",
       "socialLinks": [
         {
-          "id": "telegram",
-          "label": "Telegram",
-          "ariaLabel": "Open the SpeakMove Telegram channel",
-          "href": "https://t.me/speakmove"
-        },
-        {
           "id": "instagram",
           "label": "Instagram",
           "ariaLabel": "Open SpeakMove Instagram",
-          "href": "https://instagram.com/speakmove"
+          "href": "https://www.instagram.com/speakmove_official/"
         },
         {
-          "id": "tiktok",
-          "label": "TikTok",
-          "ariaLabel": "Open SpeakMove TikTok",
-          "href": "https://tiktok.com/@speakmove"
+          "id": "linkedin",
+          "label": "LinkedIn",
+          "ariaLabel": "Open SpeakMove LinkedIn",
+          "href": "https://www.linkedin.com/company/speakmove/about/"
         },
         {
-          "id": "youtube",
-          "label": "YouTube",
-          "ariaLabel": "Open SpeakMove YouTube channel",
-          "href": "https://youtube.com/@speakmove"
+          "id": "threads",
+          "label": "Threads",
+          "ariaLabel": "Open SpeakMove Threads",
+          "href": "https://www.threads.com/@speakmove_official"
         }
       ],
       "columns": [

@@ -19,6 +19,7 @@ export {
   GlobeIcon,
   Icon,
   InstagramIcon,
+  LinkedinIcon,
   LockIcon,
   LogoHorizontal,
   LogoMark,
@@ -34,12 +35,10 @@ export {
   StickerTabIcon,
   TelegramIcon,
   ThreadsIcon,
-  TikTokIcon,
   UserPlusIcon,
   VoiceWave,
   WaveDivider,
   WaveformBars,
-  YouTubeIcon,
 } from './Icon';
 export { InlineMarkdown } from './InlineMarkdown';
 export { JsonLd } from './JsonLd';

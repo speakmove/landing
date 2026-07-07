@@ -178,25 +178,25 @@
           "id": "telegram",
           "label": "Telegram",
           "ariaLabel": "Відкрити Telegram-канал SpeakMove",
-          "href": "https://t.me/speakmove"
+          "href": "https://t.me/speakmove_ua"
         },
         {
           "id": "instagram",
           "label": "Instagram",
           "ariaLabel": "Відкрити Instagram SpeakMove",
-          "href": "https://instagram.com/speakmove"
+          "href": "https://www.instagram.com/speakmove_ua/"
         },
         {
-          "id": "tiktok",
-          "label": "TikTok",
-          "ariaLabel": "Відкрити TikTok SpeakMove",
-          "href": "https://tiktok.com/@speakmove"
+          "id": "linkedin",
+          "label": "LinkedIn",
+          "ariaLabel": "Відкрити LinkedIn SpeakMove",
+          "href": "https://www.linkedin.com/company/speakmove/about/"
         },
         {
-          "id": "youtube",
-          "label": "YouTube",
-          "ariaLabel": "Відкрити YouTube-канал SpeakMove",
-          "href": "https://youtube.com/@speakmove"
+          "id": "threads",
+          "label": "Threads",
+          "ariaLabel": "Відкрити Threads SpeakMove",
+          "href": "https://www.threads.com/@speakmove_ua"
         }
       ],
       "columns": [

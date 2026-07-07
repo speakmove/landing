@@ -2,7 +2,7 @@ import type { ReactElement } from 'react';
 import { getList } from '@/shared/model/libs/i18n/get-list';
 import { isSafeHref } from '@/shared/model/utils';
 import { getTranslations } from 'next-intl/server';
-import { InstagramIcon, TelegramIcon, ThreadsIcon, TikTokIcon } from '@/shared/ui';
+import { InstagramIcon, LinkedinIcon, TelegramIcon, ThreadsIcon } from '@/shared/ui';
 
 type TSocialLink = {
   id: string;
@@ -14,7 +14,7 @@ type TSocialLink = {
 const ICONS: Record<string, ReactElement> = {
   instagram: <InstagramIcon size={24} />,
   telegram: <TelegramIcon size={24} />,
-  tiktok: <TikTokIcon size={24} />,
+  linkedin: <LinkedinIcon size={24} />,
   threads: <ThreadsIcon size={24} />,
 };
 

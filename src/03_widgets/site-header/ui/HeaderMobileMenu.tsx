@@ -10,12 +10,11 @@ import {
   ChevronDownIcon,
   CloseIcon,
   InstagramIcon,
+  LinkedinIcon,
   LogoHorizontal,
   Portal,
   TelegramIcon,
   ThreadsIcon,
-  TikTokIcon,
-  YouTubeIcon,
 } from '@/shared/ui';
 import { LocaleSegmented } from '@/features/locale-switch';
 import { ActiveLink } from '@/shared/ui';
@@ -42,9 +41,8 @@ const NAV_ITEMS: TNavItem[] = [
 const SOCIAL_ICONS: Record<string, ReactElement> = {
   instagram: <InstagramIcon size={20} />,
   telegram: <TelegramIcon size={20} />,
-  tiktok: <TikTokIcon size={20} />,
+  linkedin: <LinkedinIcon size={20} />,
   threads: <ThreadsIcon size={20} />,
-  youtube: <YouTubeIcon size={20} />,
 };
 
 /** Easing from shared MOTION_EASE.out — inline to keep this file self-contained. */

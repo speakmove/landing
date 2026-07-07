@@ -184,19 +184,19 @@
           "id": "instagram",
           "label": "Instagram",
           "ariaLabel": "Открыть Instagram SpeakMove",
-          "href": "https://instagram.com/speakmove"
+          "href": "https://www.instagram.com/speak.move/"
         },
         {
-          "id": "tiktok",
-          "label": "TikTok",
-          "ariaLabel": "Открыть TikTok SpeakMove",
-          "href": "https://tiktok.com/@speakmove"
+          "id": "linkedin",
+          "label": "LinkedIn",
+          "ariaLabel": "Открыть LinkedIn SpeakMove",
+          "href": "https://www.linkedin.com/company/speakmove/about/"
         },
         {
-          "id": "youtube",
-          "label": "YouTube",
-          "ariaLabel": "Открыть YouTube-канал SpeakMove",
-          "href": "https://youtube.com/@speakmove"
+          "id": "threads",
+          "label": "Threads",
+          "ariaLabel": "Открыть Threads SpeakMove",
+          "href": "https://www.threads.com/@speak.move"
         }
       ],
       "columns": [
